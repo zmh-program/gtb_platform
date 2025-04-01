@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import puppeteer from 'puppeteer';
 import { StatsDisplay } from '@/components/stats-display';
+import { getPlayerStats } from '@/lib/hypixel';
 
 export async function POST(request: Request) {
   try {
@@ -14,21 +15,13 @@ export async function POST(request: Request) {
       );
     }
 
-    // Fetch stats data
-    const statsResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/stats`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, api_key: apiKey }),
-    });
+    // Directly fetch stats using the same logic as the stats API
+    const statsData = await getPlayerStats(username, apiKey);
 
-    const statsData = await statsResponse.json();
-
-    if (!statsResponse.ok) {
+    if (!statsData.success) {
       return NextResponse.json(
         { error: statsData.error || 'Failed to fetch stats' },
-        { status: statsResponse.status }
+        { status: 400 }
       );
     }
 
