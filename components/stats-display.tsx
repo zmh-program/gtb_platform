@@ -1,43 +1,29 @@
 import { Card } from "@/components/ui/card";
+import { PlayerObjectStats } from "@/lib/hypixel";
 
-interface StatsDisplayProps {
-  stats: {
-    displayname: string;
-    userLanguage?: string;
-    stats?: {
-      BuildBattle?: {
-        score?: number;
-        games_played?: number;
-        wins?: number;
-        coins?: number;
-        total_votes?: number;
-        wins_solo_normal?: number;
-        solo_most_points?: number;
-        wins_teams_normal?: number;
-        teams_most_points?: number;
-        wins_pro_mode?: number;
-        wins_guess_the_build?: number;
-        correct_guesses?: number;
-        wins_speed_builders?: number;
-      };
-    };
-  };
-}
+export function StatsDisplay({
+  stats,
+  displayname,
+  userLanguage,
+}: PlayerObjectStats) {
+  const bbStats = stats?.BuildBattle || {};
 
-export function StatsDisplay({ stats }: StatsDisplayProps) {
-  const bbStats = stats.stats?.BuildBattle || {};
-  
-  const winPercentage = bbStats.games_played && bbStats.games_played > 0 && bbStats.wins
-    ? ((bbStats.wins / bbStats.games_played) * 100).toFixed(2)
-    : 0;
+  const winPercentage =
+    bbStats.games_played && bbStats.games_played > 0 && bbStats.wins
+      ? ((bbStats.wins / bbStats.games_played) * 100).toFixed(2)
+      : 0;
 
-  const averagePoint = bbStats.score && bbStats.games_played && bbStats.games_played > 0
-    ? (bbStats.score / bbStats.games_played).toFixed(2)
-    : 0;
+  const averagePoint =
+    bbStats.score && bbStats.games_played && bbStats.games_played > 0
+      ? (bbStats.score / bbStats.games_played).toFixed(2)
+      : 0;
 
-  const cwValue = bbStats.correct_guesses && bbStats.wins_guess_the_build && bbStats.wins_guess_the_build > 0
-    ? (bbStats.correct_guesses / bbStats.wins_guess_the_build).toFixed(2)
-    : 0;
+  const cwValue =
+    bbStats.correct_guesses &&
+    bbStats.wins_guess_the_build &&
+    bbStats.wins_guess_the_build > 0
+      ? (bbStats.correct_guesses / bbStats.wins_guess_the_build).toFixed(2)
+      : 0;
 
   const bbTotalWins =
     (bbStats.wins_solo_normal || 0) +
@@ -62,7 +48,7 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <h2 className="text-xl font-bold">{stats.displayname}</h2>
+          <h2 className="text-xl font-bold">{displayname}</h2>
         </div>
         {mainMode && (
           <span className="text-sm font-medium bg-primary/10 text-primary px-2 py-1 rounded">
@@ -79,7 +65,7 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
             </div>
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Language</span>
-              <span>{stats.userLanguage || "N/A"}</span>
+              <span>{userLanguage || "N/A"}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Total Games</span>
@@ -179,4 +165,4 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
       </div>
     </div>
   );
-} 
+}

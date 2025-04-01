@@ -4,7 +4,14 @@ import { useState, useEffect, useMemo, Suspense } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Search, User, Key, AlertCircle, Loader2, Download } from "lucide-react";
+import {
+  Search,
+  User,
+  Key,
+  AlertCircle,
+  Loader2,
+  Download,
+} from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useSearchParams, useRouter } from "next/navigation";
 
@@ -27,9 +34,7 @@ function StatsDisplay({ stats }: { stats: any }) {
   useEffect(() => {
     async function fetchAvatars() {
       try {
-        const response = await fetch(
-          `/api/avatar/${stats.displayname}`,
-        );
+        const response = await fetch(`/api/avatar/${stats.displayname}`);
         const data = await response.json();
         if (data.allUrls) {
           setAvatarUrls(data.allUrls);
@@ -95,7 +100,9 @@ function StatsDisplay({ stats }: { stats: any }) {
               />
             </div>
           )}
-          <h2 className="text-xl font-bold break-all whitespace-pre-wrap">{stats.displayname}</h2>
+          <h2 className="text-xl font-bold break-all whitespace-pre-wrap">
+            {stats.displayname}
+          </h2>
         </div>
         {mainMode && (
           <span className="text-sm font-medium bg-primary/10 text-primary px-2 py-1 rounded">
@@ -313,7 +320,7 @@ function StatsContent() {
 
   async function downloadStatsImage() {
     if (!stats || !apiKey) return;
-    
+
     setDownloadLoading(true);
     try {
       const response = await fetch("/api/stats_img", {
@@ -341,7 +348,9 @@ function StatsContent() {
       window.URL.revokeObjectURL(url);
       document.body.removeChild(a);
     } catch (error) {
-      setError(error instanceof Error ? error.message : "Failed to download image");
+      setError(
+        error instanceof Error ? error.message : "Failed to download image",
+      );
     } finally {
       setDownloadLoading(false);
     }
@@ -395,7 +404,7 @@ function StatsContent() {
                 {loading ? "Searching..." : "Search"}
               </Button>
               {stats && (
-                <Button 
+                <Button
                   onClick={downloadStatsImage}
                   disabled={downloadLoading}
                   variant="outline"

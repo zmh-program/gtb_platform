@@ -1,7 +1,7 @@
-import { NextResponse } from 'next/server';
-import puppeteer from 'puppeteer';
-import { StatsDisplay } from '@/components/stats-display';
-import { getPlayerStats } from '@/lib/hypixel';
+import { NextResponse } from "next/server";
+import puppeteer from "puppeteer";
+import { StatsDisplay } from "@/components/stats-display";
+import { getPlayerStats } from "@/lib/hypixel";
 
 export async function POST(request: Request) {
   try {
@@ -10,29 +10,29 @@ export async function POST(request: Request) {
 
     if (!username || !apiKey) {
       return NextResponse.json(
-        { error: 'Username and API key are required' },
-        { status: 400 }
+        { error: "Username and API key are required" },
+        { status: 400 },
       );
     }
 
     // Directly fetch stats using the same logic as the stats API
     const statsData = await getPlayerStats(username, apiKey);
 
-    if (!statsData.success) {
+    if (!statsData.success || !statsData.player) {
       return NextResponse.json(
-        { error: statsData.error || 'Failed to fetch stats' },
-        { status: 400 }
+        { error: statsData.error || "Failed to fetch stats" },
+        { status: 400 },
       );
     }
 
     // Launch browser
     const browser = await puppeteer.launch({
       headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
     });
 
     const page = await browser.newPage();
-    
+
     // Set viewport
     await page.setViewport({
       width: 800,
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
 
     // Set dark mode
     await page.evaluateOnNewDocument(() => {
-      document.documentElement.classList.add('dark');
+      document.documentElement.classList.add("dark");
     });
 
     // Render the component
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
         </head>
         <body>
           <div class="container">
-            ${StatsDisplay({ stats: statsData.player })}
+            ${StatsDisplay(statsData.player)}
           </div>
         </body>
       </html>
@@ -74,11 +74,11 @@ export async function POST(request: Request) {
     await page.setContent(html);
 
     // Wait for images to load
-    await page.waitForSelector('img');
+    await page.waitForSelector("img");
 
     // Take screenshot
     const screenshot = await page.screenshot({
-      type: 'png',
+      type: "png",
       fullPage: true,
     });
 
@@ -87,15 +87,15 @@ export async function POST(request: Request) {
     // Return the image
     return new NextResponse(screenshot, {
       headers: {
-        'Content-Type': 'image/png',
-        'Cache-Control': 'public, max-age=3600',
+        "Content-Type": "image/png",
+        "Cache-Control": "public, max-age=3600",
       },
     });
   } catch (error) {
-    console.error('Error generating stats image:', error);
+    console.error("Error generating stats image:", error);
     return NextResponse.json(
-      { error: 'Failed to generate stats image' },
-      { status: 500 }
+      { error: "Failed to generate stats image" },
+      { status: 500 },
     );
   }
-} 
+}
