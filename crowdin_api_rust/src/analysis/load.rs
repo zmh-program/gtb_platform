@@ -1,0 +1,139 @@
+use crate::analysis::types::{
+    AnalysisInputs, AnalysisPaths, Config, SourceTheme, SourceTranslation,
+};
+use crate::common::paths::RepoPaths;
+use anyhow::{bail, Context, Result};
+use std::collections::{HashMap, HashSet};
+use std::env;
+use std::fs;
+use std::path::{Path, PathBuf};
+
+fn read_json_file<T: for<'de> serde::Deserialize<'de>>(path: &Path) -> Result<T> {
+    let text = fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
+    serde_json::from_str(&text).with_context(|| format!("failed to parse JSON {}", path.display()))
+}
+
+pub fn resolve_analysis_paths(
+    repo: &RepoPaths,
+    out_dir: Option<&Path>,
+) -> Result<AnalysisPaths> {
+    let source_input = repo.crowdin_api_dir.join("result").join("source.json");
+    let (output_translations, output_versions) = if let Some(out_dir) = out_dir {
+        let cwd = env::current_dir().context("failed to read current dir")?;
+        let base = if out_dir.is_absolute() {
+            out_dir.to_path_buf()
+        } else {
+            cwd.join(out_dir)
+        };
+        (base.join("translations-data.json"), base.join("versions.json"))
+    } else if let Ok(translations_path) = env::var("GTB_RUST_OUTPUT_TRANSLATIONS") {
+        let translations = PathBuf::from(translations_path);
+        let versions = env::var("GTB_RUST_OUTPUT_VERSIONS")
+            .map(PathBuf::from)
+            .unwrap_or_else(|_| repo.repo_root.join("lib").join("source").join("versions.json"));
+        (translations, versions)
+    } else {
+        (
+            repo.repo_root.join("lib").join("source").join("translations-data.json"),
+            repo.repo_root.join("lib").join("source").join("versions.json"),
+        )
+    };
+
+    Ok(AnalysisPaths {
+        source_input,
+        output_translations,
+        output_versions,
+    })
+}
+
+fn read_config(crowdin_api_dir: &Path) -> Result<Config> {
+    read_json_file(&crowdin_api_dir.join("conf").join("config.json"))
+}
+
+fn read_themes(crowdin_api_dir: &Path) -> Result<HashSet<String>> {
+    let themes: Vec<String> = read_json_file(&crowdin_api_dir.join("conf").join("themes.json"))?;
+    Ok(themes.into_iter().map(|t| t.to_lowercase()).collect())
+}
+
+fn read_excluded_themes(crowdin_api_dir: &Path) -> Result<HashSet<String>> {
+    let items: Vec<String> = read_json_file(&crowdin_api_dir.join("conf").join("exclude.json"))?;
+    Ok(items.into_iter().collect())
+}
+
+fn read_completions(crowdin_api_dir: &Path) -> Result<HashMap<String, Vec<String>>> {
+    read_json_file(&crowdin_api_dir.join("conf").join("completions.json"))
+}
+
+fn read_polyfill(crowdin_api_dir: &Path) -> Result<HashMap<String, HashMap<String, String>>> {
+    read_json_file(&crowdin_api_dir.join("conf").join("polyfill.json"))
+}
+
+fn read_source(path: &Path) -> Result<Vec<SourceTheme>> {
+    read_json_file(path)
+}
+
+fn mix_completions(theme: &SourceTheme, completions: &HashMap<String, Vec<String>>) -> SourceTheme {
+    for (completion, themes) in completions {
+        if themes.iter().any(|t| t == &theme.theme) {
+            let mut translations = Vec::with_capacity(theme.translations.len() + 1);
+            translations.push(SourceTranslation {
+                id: "-1".to_string(),
+                text: Some(completion.clone()),
+                language_id: "-1".to_string(),
+                is_approved: true,
+                approved_at: Some(String::new()),
+                approved_by: Some(String::new()),
+            });
+            translations.extend(theme.translations.clone());
+            return SourceTheme {
+                id: theme.id.clone(),
+                theme: theme.theme.clone(),
+                translations,
+            };
+        }
+    }
+    theme.clone()
+}
+
+fn filter_and_mix_translations(
+    raw: Vec<SourceTheme>,
+    themes_whitelist: &HashSet<String>,
+    excluded_themes: &HashSet<String>,
+    completions: &HashMap<String, Vec<String>>,
+) -> Vec<SourceTheme> {
+    let mut out: Vec<SourceTheme> = raw
+        .iter()
+        .filter(|t| themes_whitelist.contains(&t.theme.to_lowercase()) && !excluded_themes.contains(&t.theme))
+        .map(|t| mix_completions(t, completions))
+        .collect();
+    out.sort_by(|a, b| a.theme.to_lowercase().cmp(&b.theme.to_lowercase()));
+    out
+}
+
+pub fn load_inputs(repo: &RepoPaths, paths: &AnalysisPaths) -> Result<AnalysisInputs> {
+    if !paths.source_input.exists() {
+        bail!(
+            "Missing source crawl file: {} (run crawler first)",
+            paths.source_input.display()
+        );
+    }
+
+    let config = read_config(&repo.crowdin_api_dir)?;
+    let themes_whitelist = read_themes(&repo.crowdin_api_dir)?;
+    let excluded_themes = read_excluded_themes(&repo.crowdin_api_dir)?;
+    let completions = read_completions(&repo.crowdin_api_dir)?;
+    let polyfill = read_polyfill(&repo.crowdin_api_dir)?;
+    let raw = read_source(&paths.source_input)?;
+    let all_translations =
+        filter_and_mix_translations(raw, &themes_whitelist, &excluded_themes, &completions);
+
+    Ok(AnalysisInputs {
+        config,
+        themes_whitelist,
+        excluded_themes,
+        completions,
+        polyfill,
+        all_translations,
+    })
+}
+
