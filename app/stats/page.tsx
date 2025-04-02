@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, Suspense } from "react";
+import { useState, useEffect, Suspense, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,221 +14,15 @@ import {
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useSearchParams, useRouter } from "next/navigation";
+import { toJpeg } from "html-to-image";
+import { StatsDisplay } from "../components/stats-display";
+import { useTheme } from "next-themes";
 
 function ErrorMessage({ message }: { message: string }) {
   return (
     <div className="flex items-center mt-4 gap-2 p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
       <AlertCircle className="h-4 w-4" />
       {message}
-    </div>
-  );
-}
-
-function StatsDisplay({ stats }: { stats: any }) {
-  const bbStats = stats.stats?.BuildBattle || {};
-  const [avatarUrls, setAvatarUrls] = useState<{
-    head: string;
-    body: string;
-  } | null>(null);
-
-  useEffect(() => {
-    async function fetchAvatars() {
-      try {
-        const response = await fetch(`/api/avatar/${stats.displayname}`);
-        const data = await response.json();
-        if (data.allUrls) {
-          setAvatarUrls(data.allUrls);
-        }
-      } catch (error) {
-        console.error("Failed to fetch avatars:", error);
-      }
-    }
-    fetchAvatars();
-  }, [stats.displayname]);
-
-  const winPercentage = useMemo(() => {
-    if (!bbStats.games_played || bbStats.games_played === 0) return 0;
-    return ((bbStats.wins / bbStats.games_played) * 100).toFixed(2);
-  }, [bbStats.games_played, bbStats.wins]);
-
-  const averagePoint = useMemo(() => {
-    if (!bbStats.score || !bbStats.games_played || bbStats.games_played === 0)
-      return 0;
-    return (bbStats.score / bbStats.games_played).toFixed(2);
-  }, [bbStats.score, bbStats.games_played]);
-
-  const cwValue = useMemo(() => {
-    if (!bbStats.correct_guesses || bbStats.correct_guesses === 0) return 0;
-    return (bbStats.correct_guesses / bbStats.wins_guess_the_build).toFixed(2);
-  }, [bbStats.correct_guesses, bbStats.wins_guess_the_build]);
-
-  // const acwValue = useMemo(() => {
-  //   if (Number(cwValue) === 0) return 0;
-  //   return (Number(averagePoint) / Number(cwValue)).toFixed(2);
-  // }, [bbStats.correct_guesses, bbStats.games_played]);
-
-  const bbTotalWins =
-    (bbStats.wins_solo_normal || 0) +
-    (bbStats.wins_teams_normal || 0) +
-    (bbStats.wins_pro_mode || 0);
-  const gtbTotalWins = bbStats.wins_guess_the_build || 0;
-  const spbTotalWins = bbStats.wins_speed_builders || 0;
-
-  const mainMode = useMemo(() => {
-    const modes = [
-      { name: "BB", wins: bbTotalWins },
-      { name: "GTB", wins: gtbTotalWins },
-      { name: "SPB", wins: spbTotalWins },
-    ];
-    const topMode = modes.reduce((prev, current) =>
-      prev.wins > current.wins ? prev : current,
-    );
-    return topMode.wins > 0 ? topMode.name : null;
-  }, [bbTotalWins, gtbTotalWins, spbTotalWins]);
-
-  return (
-    <div className="space-y-4">
-      <div className="flex flex-col sm:flex-row items-center justify-between">
-        <div className="flex items-center gap-3">
-          {avatarUrls && (
-            <div className="flex items-center flex-shrink-0">
-              <img
-                src={avatarUrls.head}
-                alt={`${stats.displayname}'s head`}
-                className="w-8 h-8 rounded-md flex-shrink-0"
-                loading="lazy"
-              />
-            </div>
-          )}
-          <h2 className="text-xl font-bold break-all whitespace-pre-wrap">
-            {stats.displayname}
-          </h2>
-        </div>
-        {mainMode && (
-          <span className="text-sm font-medium bg-primary/10 text-primary px-2 py-1 rounded">
-            {mainMode} MAIN
-          </span>
-        )}
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <Card className="p-3 space-y-1.5">
-          <div className="text-sm space-y-1.5 flex flex-col h-full">
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Total Score</span>
-              <span>{bbStats.score?.toLocaleString() || 0}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Language</span>
-              <span>{stats.userLanguage || "N/A"}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Total Games</span>
-              <span>{bbStats.games_played?.toLocaleString() || 0}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Total Wins</span>
-              <span>{bbStats.wins?.toLocaleString() || 0}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Win Rate</span>
-              <span>{winPercentage}%</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Average Score</span>
-              <span>{averagePoint}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Coins</span>
-              <span>{bbStats.coins?.toLocaleString() || 0}</span>
-            </div>
-            {/* <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Emblem Icon</span>
-              <span>{bbStats.emblem?.selected_icon || "N/A"}</span>
-            </div> */}
-
-            <div className="flex-grow" />
-            <img
-              src={avatarUrls?.body}
-              alt={`${stats.displayname}'s body`}
-              className="w-16 mx-auto pb-2"
-              loading="lazy"
-            />
-          </div>
-        </Card>
-
-        <div className="space-y-3">
-          <Card className="p-3">
-            <h3 className="text-sm font-medium flex items-center mb-1.5">
-              <span className="bg-secondary px-1.5 py-0.5 rounded text-xs mr-2">
-                BB
-              </span>
-              Build Battle
-            </h3>
-            <div className="space-y-1.5">
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Total Votes</span>
-                <span>{bbStats.total_votes?.toLocaleString() || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Solo Wins</span>
-                <span>{bbStats.wins_solo_normal || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Solo Most Points</span>
-                <span>{bbStats.solo_most_points || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Team Wins</span>
-                <span>{bbStats.wins_teams_normal || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Team Most Points</span>
-                <span>{bbStats.teams_most_points || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Pro Wins</span>
-                <span>{bbStats.wins_pro_mode || 0}</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-3">
-            <h3 className="text-sm font-medium flex items-center mb-1.5">
-              <span className="bg-secondary px-1.5 py-0.5 rounded text-xs mr-2">
-                GTB
-              </span>
-              Guess The Build
-            </h3>
-            <div className="space-y-1.5">
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Wins</span>
-                <span>{bbStats.wins_guess_the_build || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">Correct Guesses</span>
-                <span>{bbStats.correct_guesses?.toLocaleString() || 0}</span>
-              </div>
-              <div className="flex justify-between items-center text-sm">
-                <span className="text-muted-foreground">C/W</span>
-                <span>{cwValue}</span>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="p-3">
-            <h3 className="text-sm font-medium flex items-center mb-1.5">
-              <span className="bg-secondary px-1.5 py-0.5 rounded text-xs mr-2">
-                SPB
-              </span>
-              Speed Builders
-            </h3>
-            <div className="flex justify-between items-center text-sm">
-              <span className="text-muted-foreground">Wins</span>
-              <span>{bbStats.wins_speed_builders || 0}</span>
-            </div>
-          </Card>
-        </div>
-      </div>
     </div>
   );
 }
@@ -242,6 +36,8 @@ function StatsContent() {
   const [downloadLoading, setDownloadLoading] = useState(false);
   const searchParams = useSearchParams();
   const router = useRouter();
+  const statsRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (apiKey || username) return;
@@ -319,7 +115,44 @@ function StatsContent() {
   }
 
   async function downloadStatsImage() {
-    // TODO: Implement stats image download
+    if (!statsRef.current) return;
+
+    setDownloadLoading(true);
+    try {
+      const isDark =
+        theme === "dark" ||
+        (theme === "system" &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
+      const originalStyle = statsRef.current.style.cssText;
+      statsRef.current.style.backgroundColor = isDark
+        ? "rgb(5, 5, 5)"
+        : "rgb(250, 250, 250)";
+
+      const dataUrl = await toJpeg(statsRef.current, {
+        quality: 1.0,
+        pixelRatio: 2,
+        skipAutoScale: true,
+      });
+
+      // Restore original styles
+      statsRef.current.style.cssText = originalStyle;
+
+      const link = document.createElement("a");
+      link.href = dataUrl;
+      link.download = `${stats.player.displayname}_stats.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Failed to download stats image:", error);
+      setError(
+        error instanceof Error
+          ? error.message
+          : "Failed to download stats image. Please try again.",
+      );
+    } finally {
+      setDownloadLoading(false);
+    }
   }
 
   return (
@@ -390,8 +223,10 @@ function StatsContent() {
 
         {/* Stats Card */}
         {stats && (
-          <Card className="p-6 bg-background/95 rounded-lg w-full">
-            <StatsDisplay stats={stats.player} />
+          <Card className="p-0 bg-background/95 rounded-lg w-full">
+            <div ref={statsRef} className="p-6">
+              <StatsDisplay stats={stats.player} />
+            </div>
           </Card>
         )}
       </main>
