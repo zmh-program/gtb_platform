@@ -319,41 +319,7 @@ function StatsContent() {
   }
 
   async function downloadStatsImage() {
-    if (!stats || !apiKey) return;
-
-    setDownloadLoading(true);
-    try {
-      const response = await fetch("/api/stats_img", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username,
-          apiKey: apiKey,
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to generate image");
-      }
-
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${username}-stats.png`;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    } catch (error) {
-      setError(
-        error instanceof Error ? error.message : "Failed to download image",
-      );
-    } finally {
-      setDownloadLoading(false);
-    }
+    // TODO: Implement stats image download
   }
 
   return (
