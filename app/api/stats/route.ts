@@ -4,14 +4,11 @@ import { getHypixelStats } from "@/lib/api/get_hypixel_stats";
 
 export const revalidate = 120;
 
-interface RequestBody {
-  username: string;
-  api_key: string;
-}
-
-export async function POST(request: Request) {
+export async function GET(request: Request) {
   try {
-    const { username, api_key }: RequestBody = await request.json();
+    const { searchParams } = new URL(request.url);
+    const username = searchParams.get("username");
+    const api_key = searchParams.get("api_key");
 
     if (!username) {
       return NextResponse.json(
@@ -20,7 +17,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = api_key.trim() || process.env.HYPIXEL_API_KEY;
+    const apiKey = api_key?.trim() || process.env.HYPIXEL_API_KEY;
 
     if (!apiKey) {
       return NextResponse.json(

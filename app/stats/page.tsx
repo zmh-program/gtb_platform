@@ -72,16 +72,15 @@ function StatsContent() {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/stats", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `/api/stats?username=${usernameToSearch}&api_key=${apiKeyToUse}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         },
-        body: JSON.stringify({
-          username: usernameToSearch,
-          api_key: apiKeyToUse,
-        }),
-      });
+      );
 
       const data = await response.json();
 

@@ -96,6 +96,9 @@ async function getUUIDFromPlayerRaw(username: string): Promise<string> {
     // Try Ashcon API first
     return await getAshconUUID(username);
   } catch (error) {
+    console.warn(
+      `Ashcon API failed: ${error instanceof Error ? error.message : "Unknown error"}`,
+    );
     // If Ashcon fails, fallback to Mojang API
     return await getMojangUUID(username);
   }
