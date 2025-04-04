@@ -137,11 +137,13 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       const shortcuts = state.enableShortcut
         ? getShortcut(formattedAnswer)
         : [];
-      state.enableShortcut &&
+
+      if (state.enableShortcut) {
         console.debug(
           `[shortcuts] get shortcuts for ${formattedAnswer}`,
           shortcuts,
         );
+      }
 
       const newAnswers: string[] = [];
       const remainingAnswers = (state.matchedAnswers || []).filter(
