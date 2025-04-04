@@ -37,11 +37,13 @@ async function getAshconUUID(username: string): Promise<string> {
     if (!response.ok) {
       throw new Error(`Ashcon API returned ${response.status}`);
     }
-    
+
     const data: AshconResponse = await response.json();
     return formatUUID(data.uuid);
   } catch (error) {
-    console.warn(`Ashcon API failed: ${error instanceof Error ? error.message : "Unknown error"}`);
+    console.warn(
+      `Ashcon API failed: ${error instanceof Error ? error.message : "Unknown error"}`,
+    );
     throw error; // Propagate error to try Mojang API
   }
 }

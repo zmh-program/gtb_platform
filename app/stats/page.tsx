@@ -21,8 +21,8 @@ import Link from "next/link";
 
 function ErrorMessage({ message }: { message: string }) {
   return (
-    <div className="flex items-center mt-4 gap-2 p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md">
-      <AlertCircle className="h-4 w-4" />
+    <div className="flex items-center mt-4 gap-2 p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md break-all">
+      <AlertCircle className="h-4 w-4 shrink-0" />
       {message}
     </div>
   );
