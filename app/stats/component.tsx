@@ -231,7 +231,7 @@ export function StatsContent() {
           href="/"
           className="mt-4 text-sm text-muted-foreground hover:underline"
         >
-          GTB HINTTEST
+          GTB HINTEST
         </Link>
       </main>
     </div>

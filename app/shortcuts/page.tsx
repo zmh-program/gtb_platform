@@ -15,8 +15,9 @@ export default function ShortcutsPage() {
         </h1>
         <Card className="p-6 bg-background/95 rounded-lg w-full">
           <ShortcutsEditor />
-        </Card>
-        <Card className="p-6 bg-background/95 rounded-lg w-full mt-4">
+
+          <hr className="my-6" />
+
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">Built-in Shortcuts</h2>
             <p className="text-sm text-muted-foreground">

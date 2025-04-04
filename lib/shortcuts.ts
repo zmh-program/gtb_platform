@@ -1,5 +1,4 @@
-export const RAW_SHORTCUTS = `
-# Shortcut_List_Part1 (A-Chi)
+export const RAW_SHORTCUTS = `# Shortcut_List_Part1 (A-Chi)
 klaxon = Air Horn
 luftskip = Airship, Blimp
 budik/wekker = Alarm Clock
@@ -1032,8 +1031,7 @@ late = Yacht
 gultegelvag = Yellow Brick Road
 laurt = Yoghurt
 zip = Zipper
-zombiapokalypsi = Zombie Apocalypse
-`;
+zombiapokalypsi = Zombie Apocalypse`;
 
 function parseShortcuts(rawShortcuts: string) {
   return Object.fromEntries(

@@ -1,6 +1,9 @@
-# GTB HINTTEST Project
+<div align="center">
+  <img src="app/favicon.ico" alt="GTB HINT TEST Logo" width="64" height="64" />
+  <h1>GTB HINTEST Project</h1>
+</div>
 
-GTB HINTTEST Project is a comprehensive training and statistics platform for Hypixel Build Battle players, featuring two main components:
+GTB HINTEST Project is a comprehensive training and statistics platform for Hypixel Build Battle players, featuring two main components:
 
 ## GTB Word Hint Training [👉 Here](https://gtb.zmh.me)
 

@@ -9,6 +9,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { CirclePlay, Eye, RotateCcw, Lamp, Trophy } from "lucide-react";
 import { getLocalStorage, setLocalStorage } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const RANKS = [
   { name: "Rookie", threshold: 0 },
@@ -64,6 +65,7 @@ type GameState = {
   showAllAnswers: boolean;
   timeLeft: number;
   score: number;
+  enableShortcut: boolean;
 };
 
 function includesAnswer(checkingAnswer: string, anwsersList: string[]) {
@@ -73,9 +75,13 @@ function includesAnswer(checkingAnswer: string, anwsersList: string[]) {
 }
 
 type GameAction =
-  | { type: "START_GAME"; payload: { point: number; hintLength: number } }
+  | {
+      type: "START_GAME";
+      payload: { point: number; hintLength: number; enableShortcut: boolean };
+    }
   | { type: "SET_POINT"; payload: number }
   | { type: "SET_HINT_LENGTH"; payload: number }
+  | { type: "SET_ENABLE_SHORTCUT"; payload: boolean }
   | { type: "SUBMIT_ANSWER"; payload: string }
   | { type: "CHECK_ANSWER" }
   | { type: "SHOW_ALL_ANSWERS" }
@@ -98,6 +104,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         ...state,
         point: action.payload.point,
         hintLength: action.payload.hintLength,
+        enableShortcut: action.payload.enableShortcut,
         status: "playing",
         hint,
         matchedAnswers,
@@ -114,6 +121,9 @@ function gameReducer(state: GameState, action: GameAction): GameState {
     case "SET_HINT_LENGTH":
       setLocalStorage("hint_length", action.payload.toString());
       return { ...state, hintLength: action.payload };
+    case "SET_ENABLE_SHORTCUT":
+      setLocalStorage("enable_shortcut", action.payload.toString());
+      return { ...state, enableShortcut: action.payload };
     case "SUBMIT_ANSWER":
       return { ...state, answer: action.payload };
     case "CHECK_ANSWER": {
@@ -229,6 +239,7 @@ const initialState: GameState = {
   showAllAnswers: false,
   timeLeft: 90,
   score: parseInt(getLocalStorage("score") || "0"),
+  enableShortcut: true,
 };
 
 export default function HintTest() {
@@ -236,6 +247,9 @@ export default function HintTest() {
   const [point, setPoint] = useState(getLocalStorage("point") || "1");
   const [hintLength, setHintLength] = useState(
     getLocalStorage("hint_length") || "2",
+  );
+  const [enableShortcut, setEnableShortcut] = useState(
+    getLocalStorage("enable_shortcut") !== "false",
   );
 
   useEffect(() => {
@@ -391,6 +405,28 @@ export default function HintTest() {
           />
         </div>
 
+        <div className="space-y-2">
+          <div className="flex items-center space-x-2">
+            <Checkbox
+              id="enable-shortcut"
+              checked={enableShortcut}
+              onCheckedChange={(checked) => {
+                setEnableShortcut(checked as boolean);
+                dispatch({
+                  type: "SET_ENABLE_SHORTCUT",
+                  payload: checked as boolean,
+                });
+              }}
+            />
+            <Label
+              htmlFor="enable-shortcut"
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Enable SC/MW
+            </Label>
+          </div>
+        </div>
+
         <div className="flex flex-col space-y-2.5">
           <Button
             size="lg"
@@ -401,6 +437,7 @@ export default function HintTest() {
                 payload: {
                   point: parseInt(point) || 1,
                   hintLength: parseInt(hintLength) || 2,
+                  enableShortcut: !!enableShortcut,
                 },
               });
             }}
