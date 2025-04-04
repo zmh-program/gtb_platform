@@ -49,8 +49,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json(statsResponse.data, {
       headers: {
-        'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=60'
-      }
+        "Cache-Control": "public, s-maxage=120, stale-while-revalidate=60",
+      },
     });
   } catch (error) {
     console.error("Stats API error:", error);

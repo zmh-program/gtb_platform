@@ -79,7 +79,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
           </h2>
         </div>
         {mainMode && (
-          <span className="text-sm font-medium bg-primary/10 text-primary px-2 py-1 rounded">
+          <span className="text-sm font-medium bg-primary/10 text-primary px-2 py-1 mt-1.5 sm:mt-0 rounded">
             {mainMode} MAIN
           </span>
         )}
