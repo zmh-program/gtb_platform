@@ -17,6 +17,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { toJpeg } from "html-to-image";
 import { StatsDisplay } from "../components/stats-display";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 function ErrorMessage({ message }: { message: string }) {
   return (
@@ -51,10 +52,7 @@ function StatsContent() {
     const urlUsername = searchParams.get("u");
     if (urlUsername) {
       setUsername(urlUsername);
-      // If we have both username and API key, trigger search
-      if (savedApiKey) {
-        fetchStats(urlUsername, savedApiKey);
-      }
+      fetchStats(urlUsername, savedApiKey || "");
     }
   }, [searchParams]);
 
@@ -64,8 +62,8 @@ function StatsContent() {
   ) {
     usernameToSearch = usernameToSearch.trim();
     apiKeyToUse = apiKeyToUse.trim();
-    if (!usernameToSearch || !apiKeyToUse) {
-      setError("Please enter both username and API key");
+    if (!usernameToSearch) {
+      setError("Please enter a username");
       return;
     }
 
@@ -157,8 +155,8 @@ function StatsContent() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col row-start-2 items-center w-full max-w-xl space-y-6">
-        <h1 className="text-2xl font-bold mb-2.5">
+      <main className="flex flex-col row-start-2 items-center w-full max-w-xl space-y-3">
+        <h1 className="text-2xl font-bold mb-0.5">
           Build Battle Stats
           <ThemeSwitcher />
         </h1>
@@ -182,7 +180,7 @@ function StatsContent() {
                 <Input
                   className="pl-8"
                   type="password"
-                  placeholder="Hypixel API key"
+                  placeholder="[Optional] Hypixel API key"
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && fetchStats()}
@@ -192,7 +190,7 @@ function StatsContent() {
             <div className="flex gap-2">
               <Button
                 onClick={() => fetchStats()}
-                disabled={loading}
+                disabled={loading || !username}
                 className="flex-1"
               >
                 {loading ? (
@@ -229,6 +227,13 @@ function StatsContent() {
             </div>
           </Card>
         )}
+
+        <Link
+          href="/"
+          className="mt-4 text-sm text-muted-foreground hover:underline"
+        >
+          GTB HINTTEST
+        </Link>
       </main>
     </div>
   );

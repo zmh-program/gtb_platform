@@ -23,7 +23,15 @@ async function getMojangUUID(username: string): Promise<string> {
     headers: { Accept: "application/json" },
   });
 
-  const mojangData: MojangResponse = await mojangRes.json();
+  let mojangData: MojangResponse;
+  try {
+    mojangData = await mojangRes.json();
+  } catch (error) {
+    const responseText = await mojangRes.text();
+    throw new Error(
+      `Failed to parse Mojang API response: ${error instanceof Error ? error.message : "Unknown error"}. Response: ${responseText}`,
+    );
+  }
 
   if (mojangData.errorMessage) {
     // include  Couldn't find any profile with name

@@ -18,7 +18,9 @@ export async function POST(request: Request) {
       );
     }
 
-    if (!api_key) {
+    const apiKey = process.env.HYPIXEL_API_KEY || api_key;
+
+    if (!apiKey) {
       return NextResponse.json(
         { error: "Hypixel API key is required" },
         { status: 400 },
@@ -35,7 +37,7 @@ export async function POST(request: Request) {
     }
 
     // Get Hypixel stats using UUID
-    const statsResponse = await getHypixelStats(uuidResponse.id, api_key);
+    const statsResponse = await getHypixelStats(uuidResponse.id, apiKey);
     if (statsResponse.error) {
       return NextResponse.json(
         { error: statsResponse.error },
