@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GTB_HINTTEST
 
-## Getting Started
+GTB_HINTTEST is a comprehensive training and statistics platform for Hypixel Build Battle players, featuring two main components:
 
-First, run the development server:
+## GTB Word Hint Training
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+An interactive training program designed to help players improve their Guess The Build (GTB) skills:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Practice with 1-3pt wordhints similar to actual gameplay
+- Multiple valid answers per hint to enhance creative thinking
+- Score tracking system with progressive ranks (Rookie → Talented → Pro → Master)
+- Challenge yourself to identify all possible answers to succeed
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build Battle Statistics Dashboard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A detailed analytics tool for tracking your Build Battle Stats:
 
-## Learn More
+- Comprehensive statistics across all game modes (Solo, Teams, Pro, GTB, SPB)
+- Easy sharing via unique URLs (**https://gtb.zmh.me/stats?u=<player_name>**)
+- Screenshot and save your stats with one click
+- Dark/Light theme support
+- Mobile-friendly responsive design
 
-To learn more about Next.js, take a look at the following resources:
+### Deploy with Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzmh-program%2Fgtb_hinttest)
