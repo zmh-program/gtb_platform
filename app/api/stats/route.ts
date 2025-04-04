@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { getUUIDFromPlayer } from "@/lib/api/get_uuid_from_player";
 import { getHypixelStats } from "@/lib/api/get_hypixel_stats";
 
+export const revalidate = 120;
+
 interface RequestBody {
   username: string;
   api_key: string;
@@ -18,7 +20,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.HYPIXEL_API_KEY || api_key;
+    const apiKey = api_key.trim() || process.env.HYPIXEL_API_KEY;
 
     if (!apiKey) {
       return NextResponse.json(
@@ -45,7 +47,11 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.json(statsResponse.data);
+    return NextResponse.json(statsResponse.data, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=60'
+      }
+    });
   } catch (error) {
     console.error("Stats API error:", error);
     return NextResponse.json(
