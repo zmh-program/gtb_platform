@@ -15,7 +15,7 @@ import {
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useSearchParams, useRouter } from "next/navigation";
 import { toJpeg } from "html-to-image";
-import { StatsDisplay } from "../components/stats-display";
+import { StatsDisplay } from "./stats-display";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 

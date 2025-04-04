@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import HintTest from "@/components/hint-test";
+import HintTest from "./hint-test";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import Link from "next/link";
 
