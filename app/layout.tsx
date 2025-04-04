@@ -16,8 +16,27 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "GTB HINTTEST_",
-  description: "GTB HINTTEST PRACTICE",
+  title: "Hypixel GTB Hint Practice",
+  description:
+    "Interactive wordhint training platform for Hypixel Guess The Build players - Practice GTB word hints and track your stats across all game modes. Features hint training, stats dashboard, and mobile-friendly design.",
+  openGraph: {
+    title: "Hypixel GTB Hint Practice",
+    description:
+      "Interactive wordhint training platform for Hypixel Guess The Build players - Practice GTB word hints and track your stats across all game modes. Features hint training, stats dashboard, and mobile-friendly design.",
+    url: "https://gtb.zmh.me",
+    type: "website",
+  },
+  keywords: [
+    "Hypixel",
+    "Build Battle",
+    "Hint Practice",
+    "Stats Dashboard",
+    "GTB",
+    "SPB",
+    "Pro",
+    "Teams",
+    "Solo",
+  ],
 };
 
 export default function RootLayout({
