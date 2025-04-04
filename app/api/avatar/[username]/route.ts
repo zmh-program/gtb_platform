@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+export const revalidate = 3600;
+
 export async function GET(
   request: Request,
   { params }: { params: { username: string } },
@@ -49,10 +51,19 @@ export async function GET(
       body: `https://crafatar.com/renders/body/${uuid}?size=${size}&overlay=true`,
     };
 
-    return NextResponse.json({
-      avatarUrl: urls[type as keyof typeof urls] || urls.head,
-      allUrls: urls,
-    });
+    return NextResponse.json(
+      {
+        avatarUrl: urls[type as keyof typeof urls] || urls.head,
+        allUrls: urls,
+      },
+      {
+        headers: {
+          "Cache-Control":
+            "public, max-age=3600, s-maxage=3600, stale-while-revalidate=1800", // vercel cache
+          Expires: new Date(Date.now() + 3600 * 1000).toUTCString(), // browser cache
+        },
+      },
+    );
   } catch (error) {
     console.error("Avatar API error:", error);
     return NextResponse.json(
