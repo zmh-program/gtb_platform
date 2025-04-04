@@ -45,9 +45,10 @@ export default function ShortcutsEditor() {
 
       <Textarea
         value={shortcuts}
-        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
-          setShortcuts(e.target.value)
-        }
+        onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
+          setShortcuts(e.target.value);
+          saveLocalShortcut(e.target.value);
+        }}
         placeholder={`Enter your custom shortcuts...
 
 e.g.

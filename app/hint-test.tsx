@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { CirclePlay, Eye, RotateCcw, Lamp, Trophy } from "lucide-react";
+import { CirclePlay, Eye, RotateCcw, Lamp, Trophy, Wrench } from "lucide-react";
 import { getLocalStorage, setLocalStorage } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
-
+import Link from "next/link";
+import { getShortcut } from "@/lib/shortcuts";
 const RANKS = [
   { name: "Rookie", threshold: 0 },
   { name: "Apprentice", threshold: 100 },
@@ -133,15 +134,32 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         return { ...state, answer: "" };
       }
 
-      if (
-        !includesAnswer(formattedAnswer, state.matchedAnswers || []) ||
-        includesAnswer(formattedAnswer, state.foundAnswers)
-      ) {
+      const shortcuts = state.enableShortcut
+        ? getShortcut(formattedAnswer)
+        : [];
+      state.enableShortcut &&
+        console.debug(
+          `[shortcuts] get shortcuts for ${formattedAnswer}`,
+          shortcuts,
+        );
+
+      const newAnswers: string[] = [];
+      const remainingAnswers = (state.matchedAnswers || []).filter(
+        (answer) => !state.foundAnswers.includes(answer),
+      );
+
+      for (const answer of remainingAnswers) {
+        if (answer === formattedAnswer || shortcuts?.includes(answer)) {
+          newAnswers.push(answer);
+        }
+      }
+
+      if (newAnswers.length === 0) {
         toast.error("Answer is incorrect");
         return { ...state, answer: "" };
       }
 
-      const newFoundAnswers = [...state.foundAnswers, formattedAnswer];
+      const newFoundAnswers = [...state.foundAnswers, ...newAnswers];
       const isComplete =
         newFoundAnswers.length === (state.matchedAnswers?.length || 0);
 
@@ -162,10 +180,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       }
 
       toast.success(
-        "Answer is correct! Current progress: " +
-          newFoundAnswers.length +
-          "/" +
-          (state.matchedAnswers?.length || 0),
+        `Answer is correct! Current progress: ${newFoundAnswers.length}/${state.matchedAnswers?.length || 0}`,
       );
       return {
         ...state,
@@ -406,6 +421,7 @@ export default function HintTest() {
         </div>
 
         <div className="space-y-2">
+          <Label className="text-base font-semibold">Additional Options</Label>
           <div className="flex items-center space-x-2">
             <Checkbox
               id="enable-shortcut"
@@ -420,10 +436,13 @@ export default function HintTest() {
             />
             <Label
               htmlFor="enable-shortcut"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="text-sm font-medium leading-none cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              Enable SC/MW
+              Enable Shortcuts & Multiword
             </Label>
+            <Link href="/shortcuts" className="ml-auto group">
+              <Wrench className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+            </Link>
           </div>
         </div>
 
