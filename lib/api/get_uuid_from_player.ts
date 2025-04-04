@@ -39,7 +39,7 @@ async function getAshconUUID(username: string): Promise<string> {
     }
 
     const data: AshconResponse = await response.json();
-    return formatUUID(data.uuid);
+    return data.uuid;
   } catch (error) {
     console.warn(
       `Ashcon API failed: ${error instanceof Error ? error.message : "Unknown error"}`,
