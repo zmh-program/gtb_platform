@@ -24,10 +24,10 @@ async function getMojangUUID(username: string): Promise<string> {
   });
 
   let mojangData: MojangResponse;
+  const responseText = await mojangRes.text();
   try {
-    mojangData = await mojangRes.json();
+    mojangData = JSON.parse(responseText);
   } catch (error) {
-    const responseText = await mojangRes.text();
     throw new Error(
       `Failed to parse Mojang API response: ${error instanceof Error ? error.message : "Unknown error"}. Response: ${responseText}`,
     );
