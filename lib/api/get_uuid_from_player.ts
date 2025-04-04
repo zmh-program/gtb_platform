@@ -1,7 +1,20 @@
+const ASHCON_API_URL = "https://api.ashcon.app/mojang/v2/user";
 const MOJANG_API_URL = "https://api.mojang.com/users/profiles/minecraft";
 const UUID_REGEX =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const UUID_REGEX_NATIVE = /^[0-9a-f]{32}$/i;
+
+interface AshconResponse {
+  uuid: string;
+  username: string;
+  username_history: Array<{ username: string; changed_at?: string }>;
+  textures: {
+    skin: { url: string };
+    cape?: { url: string };
+  };
+  created_at: string;
+  raw_id: string;
+}
 
 interface MojangResponse {
   id: string;
@@ -16,6 +29,21 @@ interface UUIDResponse {
 
 function formatUUID(uuid: string): string {
   return `${uuid.slice(0, 8)}-${uuid.slice(8, 12)}-${uuid.slice(12, 16)}-${uuid.slice(16, 20)}-${uuid.slice(20)}`;
+}
+
+async function getAshconUUID(username: string): Promise<string> {
+  try {
+    const response = await fetch(`${ASHCON_API_URL}/${username}`);
+    if (!response.ok) {
+      throw new Error(`Ashcon API returned ${response.status}`);
+    }
+    
+    const data: AshconResponse = await response.json();
+    return formatUUID(data.uuid);
+  } catch (error) {
+    console.warn(`Ashcon API failed: ${error instanceof Error ? error.message : "Unknown error"}`);
+    throw error; // Propagate error to try Mojang API
+  }
 }
 
 async function getMojangUUID(username: string): Promise<string> {
@@ -62,7 +90,13 @@ async function getUUIDFromPlayerRaw(username: string): Promise<string> {
     return username;
   }
 
-  return await getMojangUUID(username);
+  try {
+    // Try Ashcon API first
+    return await getAshconUUID(username);
+  } catch (error) {
+    // If Ashcon fails, fallback to Mojang API
+    return await getMojangUUID(username);
+  }
 }
 
 export async function getUUIDFromPlayer(
