@@ -38,13 +38,6 @@ export default function ShortcutsPage() {
           >
             Back to Home
           </Link>
-          <span className="text-sm text-muted-foreground">|</span>
-          <Link
-            href="/stats"
-            className="text-sm text-muted-foreground hover:underline"
-          >
-            Build Battle Stats
-          </Link>
         </div>
       </main>
     </div>

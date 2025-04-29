@@ -39,7 +39,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   da: "Danish",
 
   de: "German",
-  en: "English",
+  en: "Pirate English",
   es: "Spanish",
   fi: "Finnish",
   fr: "French",
