@@ -15,7 +15,7 @@ export default function Home() {
         <Card className="p-2 bg-background/95 rounded-lg md:min-w-[400px]">
           <HintTest />
         </Card>
-        
+
         <div className="w-full md:min-w-[400px] mt-8 space-y-4">
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
             <Link href="/stats" className="block">
@@ -25,15 +25,19 @@ export default function Home() {
                     <BarChartIcon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Build Battle Statistic Tracker</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Track and analyze your build battle stats</p>
+                    <h3 className="font-medium">
+                      Build Battle Statistic Tracker
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Track and analyze your build battle stats
+                    </p>
                   </div>
                 </div>
                 <ArrowRightIcon className="h-4 w-4 text-muted-foreground" />
               </div>
             </Link>
           </Card>
-          
+
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
             <Link href="/themes" className="block">
               <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
@@ -43,7 +47,9 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-medium">GTB Theme Search Tool</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Search GTB themes, translations, and more</p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Search GTB themes, translations, and more
+                    </p>
                   </div>
                 </div>
                 <ArrowRightIcon className="h-4 w-4 text-muted-foreground" />

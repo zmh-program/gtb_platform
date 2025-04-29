@@ -9,37 +9,37 @@ export type Multiword = {
 export type Translation = {
   translation: string;
   is_approved: boolean;
-  approved_at: string;
+  approved_at: string | null;
 };
 
 export type TranslationItem = {
   id: number;
   theme: string;
-  shortcut?: string;
+  shortcut?: string | null;
   multiwords?: Multiword[];
   translations: {
-    cs: Translation;
-    da: Translation;
-    de: Translation;
-    en: Translation;
-    es: Translation;
-    fi: Translation;
-    fr: Translation;
-    hu: Translation;
-    it: Translation;
-    ja: Translation;
-    ko: Translation;
-    nl: Translation;
-    no: Translation;
-    pl: Translation;
-    pt: Translation;
-    ro: Translation;
-    ru: Translation;
-    sv: Translation;
-    tr: Translation;
-    uk: Translation;
-    zh_cn: Translation;
-    zh_tw: Translation;
+    cs?: Translation;
+    da?: Translation;
+    de?: Translation;
+    en?: Translation;
+    es?: Translation;
+    fi?: Translation;
+    fr?: Translation;
+    hu?: Translation;
+    it?: Translation;
+    ja?: Translation;
+    ko?: Translation;
+    nl?: Translation;
+    no?: Translation;
+    pl?: Translation;
+    pt?: Translation;
+    ro?: Translation;
+    ru?: Translation;
+    sv?: Translation;
+    tr?: Translation;
+    uk?: Translation;
+    zh_cn?: Translation;
+    zh_tw?: Translation;
   };
 };
 
@@ -195403,36 +195403,36 @@ const ALL_TRANSLATIONS: TranslationItem[] = [
  */
 export function removeAccents(inputStr: string): string {
   // Check for Korean characters
-  const hasKorean = inputStr.split('').some(c => {
-      const code = c.charCodeAt(0);
-      return code >= 0xAC00 && code <= 0xD7A3; // Korean character range
+  const hasKorean = inputStr.split("").some((c) => {
+    const code = c.charCodeAt(0);
+    return code >= 0xac00 && code <= 0xd7a3; // Korean character range
   });
 
   // Check for Japanese characters
-  const hasJapanese = inputStr.split('').some(c => {
-      const code = c.charCodeAt(0);
-      return (
-          (code >= 0x3040 && code <= 0x30FF) || // Hiragana and Katakana
-          (code >= 0x4E00 && code <= 0x9FFF)    // Kanji
-      );
+  const hasJapanese = inputStr.split("").some((c) => {
+    const code = c.charCodeAt(0);
+    return (
+      (code >= 0x3040 && code <= 0x30ff) || // Hiragana and Katakana
+      (code >= 0x4e00 && code <= 0x9fff) // Kanji
+    );
   });
 
   // Return original string if it contains Korean or Japanese
   if (hasKorean || hasJapanese) {
-      return inputStr;
+    return inputStr;
   }
 
   // Replace specific characters
   let result = inputStr
-      .replace(/ı/g, 'i')
-      .replace(/ł/g, 'l')
-      .replace(/Ł/g, 'l');
+    .replace(/ı/g, "i")
+    .replace(/ł/g, "l")
+    .replace(/Ł/g, "l");
 
   // Remove diacritical marks
-  result = result.normalize('NFKD').replace(/[\u0300-\u036f]/g, '');
+  result = result.normalize("NFKD").replace(/[\u0300-\u036f]/g, "");
 
   return result;
-} 
+}
 
 /**
  * Formats a theme string by normalizing it (lowercase, trim, remove spaces)
@@ -195454,7 +195454,10 @@ export function isMatch(a: string, b: string, exact: boolean): boolean {
   return exact ? a === b : a.includes(b);
 }
 
-export function searchTranslations(query: string, exact: boolean = false): TranslationItem[] {
+export function searchTranslations(
+  query: string,
+  exact: boolean = false,
+): TranslationItem[] {
   if (!query) return [];
 
   const normalizedQuery = formatTheme(query);
@@ -195468,7 +195471,7 @@ export function searchTranslations(query: string, exact: boolean = false): Trans
 
     // If exact matching is required, only check translations if theme didn't match
     return Object.values(item.translations).some((translation) =>
-      isMatch(formatTheme(translation.translation), normalizedQuery, exact)
+      isMatch(formatTheme(translation.translation), normalizedQuery, exact),
     );
   });
 
@@ -195476,20 +195479,28 @@ export function searchTranslations(query: string, exact: boolean = false): Trans
   return matchingItems.sort((a, b) => {
     const aNormalizedTheme = formatTheme(a.theme);
     const bNormalizedTheme = formatTheme(b.theme);
-    
+
     // Exact theme match gets highest priority
-    if (aNormalizedTheme === normalizedQuery && bNormalizedTheme !== normalizedQuery) return -1;
-    if (bNormalizedTheme === normalizedQuery && aNormalizedTheme !== normalizedQuery) return 1;
-    
+    if (
+      aNormalizedTheme === normalizedQuery &&
+      bNormalizedTheme !== normalizedQuery
+    )
+      return -1;
+    if (
+      bNormalizedTheme === normalizedQuery &&
+      aNormalizedTheme !== normalizedQuery
+    )
+      return 1;
+
     // Partial theme match gets second priority (only relevant for non-exact searches)
     if (!exact) {
       const aThemeIncludes = aNormalizedTheme.includes(normalizedQuery);
       const bThemeIncludes = bNormalizedTheme.includes(normalizedQuery);
-      
+
       if (aThemeIncludes && !bThemeIncludes) return -1;
       if (bThemeIncludes && !aThemeIncludes) return 1;
     }
-    
+
     // Alphabetical sorting for equal priority matches
     return a.theme.localeCompare(b.theme);
   });

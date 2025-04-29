@@ -1,15 +1,34 @@
 "use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { searchTranslations, removeAccents, type TranslationItem, LAST_UPDATED } from "@/lib/translations";
+import { useEffect, useState, Suspense } from "react";
+import {
+  searchTranslations,
+  removeAccents,
+  type TranslationItem,
+  LAST_UPDATED,
+} from "@/lib/translations";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Search, Globe, ChevronDown, ChevronRight, Copy, BarChartIcon, Clapperboard, ArrowRight, LinkIcon } from "lucide-react";
+import {
+  Search,
+  Globe,
+  ChevronDown,
+  ChevronRight,
+  Copy,
+  BarChartIcon,
+  Clapperboard,
+  ArrowRight,
+  LinkIcon,
+} from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import { toast } from "sonner";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
@@ -18,8 +37,8 @@ import Link from "next/link";
 const LANGUAGE_NAMES: Record<string, string> = {
   cs: "Czech",
   da: "Danish",
-  
-  de: "German", 
+
+  de: "German",
   en: "English",
   es: "Spanish",
   fi: "Finnish",
@@ -38,10 +57,18 @@ const LANGUAGE_NAMES: Record<string, string> = {
   tr: "Turkish",
   uk: "Ukrainian",
   zh_cn: "Chinese Simplified",
-  zh_tw: "Chinese Traditional"
+  zh_tw: "Chinese Traditional",
 };
 
 export default function ThemesPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ThemesPageContent />
+    </Suspense>
+  );
+}
+
+function ThemesPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState(
@@ -49,8 +76,12 @@ export default function ThemesPage() {
   );
   const [inputValue, setInputValue] = useState(searchQuery);
   const [results, setResults] = useState<TranslationItem[]>([]);
-  const [openMultiwords, setOpenMultiwords] = useState<Record<string, boolean>>({});
-  const [exactMatch, setExactMatch] = useState(searchParams.get("exact") === "true");
+  const [openMultiwords, setOpenMultiwords] = useState<Record<string, boolean>>(
+    {},
+  );
+  const [exactMatch, setExactMatch] = useState(
+    searchParams.get("exact") === "true",
+  );
   const [requestTime, setRequestTime] = useState<number | null>(null);
 
   useEffect(() => {
@@ -80,13 +111,13 @@ export default function ThemesPage() {
     } else {
       params.delete("theme");
     }
-    
+
     if (exactMatch) {
       params.set("exact", "true");
     } else {
       params.delete("exact");
     }
-    
+
     router.push(`/themes?${params.toString()}`);
   };
 
@@ -94,18 +125,25 @@ export default function ThemesPage() {
     if (!query) return text;
     const normalizedQuery = removeAccents(query);
     const normalizedText = removeAccents(text);
-    const regex = new RegExp(`(${normalizedQuery})`, 'gi');
+    const regex = new RegExp(`(${normalizedQuery})`, "gi");
     const parts = normalizedText.split(regex);
-    
+
     // Track position in original text to extract corresponding substrings
     let pos = 0;
     return parts.map((part, i) => {
       const originalPart = text.substring(pos, pos + part.length);
       pos += part.length;
-      
-      return regex.test(part) ? 
-        <mark key={i} className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5">{originalPart}</mark> : 
-        originalPart;
+
+      return regex.test(part) ? (
+        <mark
+          key={i}
+          className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5"
+        >
+          {originalPart}
+        </mark>
+      ) : (
+        originalPart
+      );
     });
   };
 
@@ -113,12 +151,15 @@ export default function ThemesPage() {
     try {
       // Modern clipboard API
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(() => {
-          toast.success("Copied to clipboard");
-        }).catch(() => {
-          // Fallback for browsers where clipboard API fails
-          fallbackCopyTextToClipboard(text);
-        });
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            toast.success("Copied to clipboard");
+          })
+          .catch(() => {
+            // Fallback for browsers where clipboard API fails
+            fallbackCopyTextToClipboard(text);
+          });
       } else {
         // Fallback for browsers without clipboard API
         fallbackCopyTextToClipboard(text);
@@ -133,16 +174,16 @@ export default function ThemesPage() {
   const fallbackCopyTextToClipboard = (text: string) => {
     const textArea = document.createElement("textarea");
     textArea.value = text;
-    
+
     // Make the textarea out of viewport
     textArea.style.position = "fixed";
     textArea.style.left = "-999999px";
     textArea.style.top = "-999999px";
-    
+
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    
+
     try {
       const successful = document.execCommand("copy");
       if (successful) {
@@ -154,7 +195,7 @@ export default function ThemesPage() {
       console.error("Fallback: Oops, unable to copy", err);
       toast.error("Failed to copy to clipboard");
     }
-    
+
     document.body.removeChild(textArea);
   };
 
@@ -181,9 +222,9 @@ export default function ThemesPage() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Switch 
-                  id="exact-match" 
-                  checked={exactMatch} 
+                <Switch
+                  id="exact-match"
+                  checked={exactMatch}
                   onCheckedChange={setExactMatch}
                 />
                 <Label htmlFor="exact-match" className="text-sm cursor-pointer">
@@ -204,12 +245,17 @@ export default function ThemesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           {results.map((item, index) => (
-            <Card key={index} className="w-full shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+            <Card
+              key={index}
+              className="w-full shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
+            >
               <CardHeader className="p-4 bg-muted/50 border-b">
                 <CardTitle className="text-lg font-medium flex items-center justify-between">
-                  <span className="truncate mr-2">{highlightMatch(item.theme, searchQuery)}</span>
+                  <span className="truncate mr-2">
+                    {highlightMatch(item.theme, searchQuery)}
+                  </span>
                   <div className="flex items-center gap-2">
-                    <button 
+                    <button
                       onClick={() => handleCopy(item.theme)}
                       className="p-1 rounded-full hover:bg-muted/50 transition-colors"
                       aria-label="Copy theme"
@@ -217,29 +263,34 @@ export default function ThemesPage() {
                       <Copy className="h-3.5 w-3.5 text-muted-foreground" />
                     </button>
                     {item.shortcut && (
-                      <Badge variant="secondary" className="text-xs whitespace-nowrap">
+                      <Badge
+                        variant="secondary"
+                        className="text-xs whitespace-nowrap"
+                      >
                         {item.shortcut}
                       </Badge>
                     )}
                   </div>
                 </CardTitle>
               </CardHeader>
-              
-              <Collapsible 
+
+              <Collapsible
                 className="bg-muted/30 border-b"
                 open={openMultiwords[`item-${index}`]}
                 defaultOpen={false}
                 onOpenChange={(open) => {
-                  setOpenMultiwords(prev => ({
+                  setOpenMultiwords((prev) => ({
                     ...prev,
-                    [`item-${index}`]: open
+                    [`item-${index}`]: open,
                   }));
                 }}
               >
                 <CollapsibleTrigger className="flex items-center justify-between w-full p-3 hover:bg-muted/50 transition-colors">
                   <div className="flex items-center gap-2">
                     <LinkIcon className="h-3.5 w-3.5 text-muted-foreground" />
-                    <span className="text-xs font-medium text-muted-foreground">Multiwords</span>
+                    <span className="text-xs font-medium text-muted-foreground">
+                      Multiwords
+                    </span>
                     <Badge variant="outline" className="ml-2 text-xs">
                       {item.multiwords?.length || 0}
                     </Badge>
@@ -256,8 +307,10 @@ export default function ThemesPage() {
                       {item.multiwords.map((multiword, idx) => (
                         <div key={idx} className="pl-5">
                           <div className="text-sm font-medium flex items-center">
-                            <span className="mr-2">{highlightMatch(multiword.multiword, searchQuery)}</span>
-                            <button 
+                            <span className="mr-2">
+                              {highlightMatch(multiword.multiword, searchQuery)}
+                            </span>
+                            <button
                               onClick={() => handleCopy(multiword.multiword)}
                               className="p-1 rounded-full hover:bg-muted/50 transition-colors"
                               aria-label="Copy multiword"
@@ -267,11 +320,23 @@ export default function ThemesPage() {
                           </div>
                           <div className="pl-3 mt-1 space-y-1">
                             {multiword.occurrences.map((occurrence, occIdx) => (
-                              <div key={occIdx} className="text-xs text-muted-foreground flex items-center gap-1">
-                                <span className="text-muted-foreground/70">•</span>
-                                <span>{highlightMatch(occurrence.theme, searchQuery)}</span>
-                                <span className="text-muted-foreground/70">({occurrence.reference})</span>
-                                <button 
+                              <div
+                                key={occIdx}
+                                className="text-xs text-muted-foreground flex items-center gap-1"
+                              >
+                                <span className="text-muted-foreground/70">
+                                  •
+                                </span>
+                                <span>
+                                  {highlightMatch(
+                                    occurrence.theme,
+                                    searchQuery,
+                                  )}
+                                </span>
+                                <span className="text-muted-foreground/70">
+                                  ({occurrence.reference})
+                                </span>
+                                <button
                                   onClick={() => handleCopy(occurrence.theme)}
                                   className="p-0.5 rounded-full hover:bg-muted/50 transition-colors ml-1"
                                   aria-label="Copy theme occurrence"
@@ -291,12 +356,12 @@ export default function ThemesPage() {
                   )}
                 </CollapsibleContent>
               </Collapsible>
-              
+
               <CardContent className="p-0">
                 <div className="divide-y">
                   {Object.entries(item.translations).map(([lang, trans]) => (
-                    <div 
-                      key={lang} 
+                    <div
+                      key={lang}
                       className="flex items-center p-3 hover:bg-muted/30 transition-colors"
                     >
                       <div className="flex items-center gap-2 min-w-[130px]">
@@ -310,7 +375,7 @@ export default function ThemesPage() {
                       <span className="text-sm font-medium ml-auto mr-1">
                         {highlightMatch(trans.translation, searchQuery)}
                       </span>
-                      <button 
+                      <button
                         onClick={() => handleCopy(trans.translation)}
                         className="p-1 rounded-full hover:bg-muted/50 transition-colors"
                         aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
@@ -328,7 +393,8 @@ export default function ThemesPage() {
         {searchQuery.length >= 2 && results.length === 0 && (
           <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
             <p className="text-center text-muted-foreground">
-              No themes found matching "{searchQuery}"{exactMatch && " (exact match)"}
+              No themes found matching {searchQuery}
+              {exactMatch && " (exact match)"}
             </p>
           </Card>
         )}
@@ -340,15 +406,15 @@ export default function ThemesPage() {
             </p>
           </Card>
         )}
-        
-        <div className="w-full text-center text-xs text-muted-foreground mt-6!">
+
+        <div className="w-full text-center text-xs text-muted-foreground pt-2">
           {requestTime !== null && (
             <p>Request Time: {requestTime.toFixed(2)}ms</p>
           )}
           <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
         </div>
 
-        <div className="w-full mt-8 space-y-4">
+        <div className="w-full pt-8 space-y-4">
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
             <Link href="/" className="block">
               <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
@@ -358,14 +424,16 @@ export default function ThemesPage() {
                   </div>
                   <div>
                     <h3 className="font-medium">GTB Wordhint Training</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Practice guessing themes from word hints</p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Practice guessing themes from word hints
+                    </p>
                   </div>
                 </div>
                 <ArrowRight className="h-4 w-4 text-muted-foreground" />
               </div>
             </Link>
           </Card>
-          
+
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
             <Link href="/stats" className="block">
               <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
@@ -374,8 +442,12 @@ export default function ThemesPage() {
                     <BarChartIcon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium">Build Battle Statistic Tracker</h3>
-                    <p className="text-sm text-muted-foreground mt-1">Track and analyze your build battle stats</p>
+                    <h3 className="font-medium">
+                      Build Battle Statistic Tracker
+                    </h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Track and analyze your build battle stats
+                    </p>
                   </div>
                 </div>
                 <ArrowRight className="h-4 w-4 text-muted-foreground" />

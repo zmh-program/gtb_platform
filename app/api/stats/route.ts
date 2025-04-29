@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getUUIDFromPlayer } from "@/lib/api/get_uuid_from_player";
 import { getHypixelStats } from "@/lib/api/get_hypixel_stats";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 120;
 
 export async function GET(request: Request) {

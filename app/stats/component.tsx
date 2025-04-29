@@ -229,41 +229,45 @@ export function StatsContent() {
           </Card>
         )}
 
-      <div className="w-full mt-8 space-y-4">
-        <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
-          <Link href="/" className="block">
-            <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-primary/10 rounded-full">
-                  <Clapperboard className="h-5 w-5 text-primary" />
+        <div className="w-full mt-8 space-y-4">
+          <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
+            <Link href="/" className="block">
+              <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-full">
+                    <Clapperboard className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">GTB Wordhint Training</h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Practice guessing themes from word hints
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-medium">GTB Wordhint Training</h3>
-                  <p className="text-sm text-muted-foreground mt-1">Practice guessing themes from word hints</p>
-                </div>
+                <ArrowRight className="h-4 w-4 text-muted-foreground" />
               </div>
-              <ArrowRight className="h-4 w-4 text-muted-foreground" />
-            </div>
-          </Link>
-        </Card>
-        
-        <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
-          <Link href="/themes" className="block">
-            <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
-              <div className="flex items-center gap-3">
-                <div className="p-2 bg-primary/10 rounded-full">
-                  <Search className="h-5 w-5 text-primary" />
+            </Link>
+          </Card>
+
+          <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
+            <Link href="/themes" className="block">
+              <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-primary/10 rounded-full">
+                    <Search className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-medium">GTB Theme Search Tool</h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Search GTB themes, translations, and more
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-medium">GTB Theme Search Tool</h3>
-                  <p className="text-sm text-muted-foreground mt-1">Search GTB themes, translations, and more</p>
-                </div>
+                <ArrowRight className="h-4 w-4 text-muted-foreground" />
               </div>
-              <ArrowRight className="h-4 w-4 text-muted-foreground" />
-            </div>
-          </Link>
-        </Card>
-      </div>
+            </Link>
+          </Card>
+        </div>
       </main>
     </div>
   );
