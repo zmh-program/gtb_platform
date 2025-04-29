@@ -362,7 +362,7 @@ function ThemesPageContent() {
                   {Object.entries(item.translations).map(([lang, trans]) => (
                     <div
                       key={lang}
-                      className="flex items-center p-3 hover:bg-muted/30 transition-colors"
+                      className="flex flex-wrap items-center p-3 hover:bg-muted/30 transition-colors"
                     >
                       <div className="flex items-center gap-2 min-w-[130px]">
                         <div className="rounded-full p-1">
@@ -372,16 +372,25 @@ function ThemesPageContent() {
                           {LANGUAGE_NAMES[lang]}
                         </span>
                       </div>
-                      <span className="text-sm font-medium ml-auto mr-1">
-                        {highlightMatch(trans.translation, searchQuery)}
-                      </span>
-                      <button
-                        onClick={() => handleCopy(trans.translation)}
-                        className="p-1 rounded-full hover:bg-muted/50 transition-colors"
-                        aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
-                      >
-                        <Copy className="h-3.5 w-3.5 text-muted-foreground" />
-                      </button>
+                      <div className="flex flex-wrap items-center gap-1 ml-auto">
+                        <div className="flex items-center">
+                          <span className="text-sm font-medium mr-1">
+                            {highlightMatch(trans.translation, searchQuery)}
+                          </span>
+                          <button
+                            onClick={() => handleCopy(trans.translation)}
+                            className="p-1 rounded-full hover:bg-muted/50 transition-colors"
+                            aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
+                          >
+                            <Copy className="h-3.5 w-3.5 text-muted-foreground" />
+                          </button>
+                        </div>
+                        {!trans.is_approved && (
+                          <Badge variant="outline" className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap">
+                            Not Approved
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
