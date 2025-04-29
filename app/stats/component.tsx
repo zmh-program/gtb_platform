@@ -11,6 +11,8 @@ import {
   AlertCircle,
   Loader2,
   Download,
+  ArrowRight,
+  Clapperboard,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -154,9 +156,9 @@ export function StatsContent() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col row-start-2 items-center w-full max-w-xl space-y-3">
-        <h1 className="text-2xl font-bold mb-0.5">
-          Build Battle Stats
+      <main className="flex flex-col row-start-2 items-center w-full max-w-xl space-y-4">
+        <h1 className="text-2xl font-bold mb-2.5 flex items-center gap-2">
+          Build Battle Statistic Tracker
           <ThemeSwitcher />
         </h1>
 
@@ -220,19 +222,48 @@ export function StatsContent() {
 
         {/* Stats Card */}
         {stats && (
-          <Card className="p-0 bg-background/95 rounded-lg w-full">
+          <Card className="bg-background/95 rounded-lg w-full overflow-hidden">
             <div ref={statsRef} className="p-6">
               <StatsDisplay stats={stats.player} />
             </div>
           </Card>
         )}
 
-        <Link
-          href="/"
-          className="mt-4 text-sm text-muted-foreground hover:underline"
-        >
-          GTB HINTEST
-        </Link>
+      <div className="w-full mt-8 space-y-4">
+        <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
+          <Link href="/" className="block">
+            <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-primary/10 rounded-full">
+                  <Clapperboard className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium">GTB Wordhint Training</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Practice guessing themes from word hints</p>
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </Link>
+        </Card>
+        
+        <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
+          <Link href="/themes" className="block">
+            <div className="flex items-center justify-between p-4 hover:bg-muted/50 rounded-md transition-colors">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-primary/10 rounded-full">
+                  <Search className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-medium">GTB Theme Search Tool</h3>
+                  <p className="text-sm text-muted-foreground mt-1">Search GTB themes, translations, and more</p>
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 text-muted-foreground" />
+            </div>
+          </Link>
+        </Card>
+      </div>
       </main>
     </div>
   );
