@@ -1,11 +1,11 @@
 <div align="center">
   <img src="app/favicon.ico" alt="GTB HINT TEST Logo" width="64" height="64" />
-  <h1>GTB HINTEST Project</h1>
+  <h1>GTB Platform</h1>
 </div>
 
-GTB HINTEST Project is a comprehensive training and statistics platform for Hypixel Build Battle players, featuring two main components:
+GTB Platform is a comprehensive training and statistics platform for Hypixel Guess The Build players, featuring three main components:
 
-## GTB Word Hint Training [👉 Here](https://gtb.zmh.me)
+## `1` GTB Word Hint Training [👉 Here](https://gtb.zmh.me)
 
 An interactive training program designed to help players improve their Guess The Build (GTB) skills:
 
@@ -15,7 +15,7 @@ An interactive training program designed to help players improve their Guess The
 - Score tracking system with progressive ranks (e.g. Rookie → Talented → Pro → Master)
 - Challenge yourself to identify all possible answers to succeed
 
-## Build Battle Statistics Dashboard [👉 Here](https://gtb.zmh.me/stats)
+## `2` Build Battle Statistics Dashboard [👉 Here](https://gtb.zmh.me/stats)
 
 A detailed analytics tool for tracking your Build Battle Stats:
 
@@ -24,6 +24,16 @@ A detailed analytics tool for tracking your Build Battle Stats:
 - Screenshot and save your stats with one click
 - Dark/Light theme support
 - Mobile-friendly responsive design
+
+## `3` GTB Theme Search Engine [👉 Here](https://gtb.zmh.me/themes)
+
+A powerful search engine sourced from the official Hypixel Crowdin database:
+
+- Support for 24 languages with cross-language search capabilities
+- Smart character handling that converts accented characters to ASCII (e.g., searching "podwoda" will match and highlight "Pod wodą")
+- Toggle between fuzzy and exact matching search modes
+- Keyword highlighting with integrated shortcut (SC) and multiword (MW) data lookup
+- Advanced features for theme exploration and discovery
 
 ### Self Hosted
 

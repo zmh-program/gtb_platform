@@ -73,12 +73,13 @@ function getHint(sample: string, hintLength: number) {
     }
   }
 
-  return hint;
+  return hint.toLowerCase().trim();
 }
 
 function getMatchedAnswer(hint: string, data: string[]) {
   // Filter answers that match the hint pattern
-  return data.filter((answer) => {
+  return data.filter((raw_answer) => {
+    const answer = raw_answer.toLowerCase().trim();
     // Return false if lengths don't match
     if (answer.length !== hint.length) return false;
 

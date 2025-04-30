@@ -29,7 +29,7 @@ export default function Home() {
                       Build Battle Statistic Tracker
                     </h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      Track and analyze your build battle stats
+                      Track and analyze your Build Battle statistics
                     </p>
                   </div>
                 </div>

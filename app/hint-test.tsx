@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { getShortcut } from "@/lib/shortcuts";
+import { TranslationItem } from "@/lib/source/types";
 
 function getStructure(hint: string | undefined) {
   if (!hint) return "";
@@ -26,6 +27,7 @@ type GameState = {
   hintLength: number;
   hint?: string;
   matchedAnswers?: string[];
+  matchedThemes?: TranslationItem[];
   moreHints?: Record<string, string>;
   answer: string;
   foundAnswers: string[];
@@ -131,7 +133,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         newFoundAnswers.length === (state.matchedAnswers?.length || 0);
 
       if (isComplete) {
-        const newScore = state.score + 1;
+        const newScore = state.score + state.point;
         setLocalStorage("score", newScore.toString());
         toast.success(
           `Congratulations! You earned a point! Total score: ${newScore}`,
@@ -246,108 +248,162 @@ export default function HintTest() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="space-y-6 p-6 max-w-md mx-auto"
+        className="space-y-8 p-6 w-full max-w-3xl mx-auto"
       >
-        <div className="space-y-3">
-          <Label className="text-base font-semibold">Select Theme Point</Label>
-          <RadioGroup
-            value={point}
-            onValueChange={(value) => setPoint(value)}
-            className="grid gap-2"
-          >
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="1" id="point-1" />
-              <Label
-                htmlFor="point-1"
-                className="font-medium cursor-pointer text-sm"
-              >
-                1 Point Theme (≤5 letters)
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="space-y-6">
+            <div className="space-y-4">
+              <Label className="text-base font-semibold">
+                Theme Difficulty
               </Label>
+              <RadioGroup value={point} className="grid gap-3">
+                {[
+                  { value: "1", label: "Easy (≤5 letters)", id: "point-1" },
+                  { value: "2", label: "Medium (6-8 letters)", id: "point-2" },
+                  { value: "3", label: "Hard (≥9 letters)", id: "point-3" },
+                ].map((option) => (
+                  <div
+                    key={option.id}
+                    onClick={() => setPoint(option.value)}
+                    className="flex items-center space-x-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors cursor-pointer"
+                  >
+                    <RadioGroupItem value={option.value} id={option.id} />
+                    <Label
+                      htmlFor={option.id}
+                      className="font-medium cursor-pointer text-sm w-full"
+                    >
+                      {option.label}
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
             </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="2" id="point-2" />
-              <Label
-                htmlFor="point-2"
-                className="font-medium cursor-pointer text-sm"
-              >
-                2 Point Theme (6-8 letters)
-              </Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem value="3" id="point-3" />
-              <Label
-                htmlFor="point-3"
-                className="font-medium cursor-pointer text-sm"
-              >
-                3 Point Theme (≥9 letters)
-              </Label>
-            </div>
-          </RadioGroup>
-        </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="hint-length" className="text-base font-semibold">
-            Initial Given Hint Length
-          </Label>
-          <Input
-            id="hint-length"
-            value={hintLength}
-            onChange={(e) => setHintLength(e.target.value)}
-            className="h-10"
-          />
-        </div>
+            <div className="space-y-3">
+              <Label htmlFor="hint-length" className="text-base font-semibold">
+                Initial Hint Length
+              </Label>
+              <Input
+                id="hint-length"
+                type="number"
+                min="1"
+                max="5"
+                value={hintLength}
+                onChange={(e) =>
+                  setHintLength(e.target.value.replace(/[^0-9]/g, ""))
+                }
+                className="h-10"
+              />
+              <p className="text-xs text-muted-foreground">
+                How many characters to reveal initially (1-5 recommended)
+              </p>
+            </div>
 
-        <div className="space-y-2">
-          <Label className="text-base font-semibold">Additional Options</Label>
-          <div className="flex items-center space-x-2">
-            <Checkbox
-              id="enable-shortcut"
-              checked={enableShortcut}
-              onCheckedChange={(checked) => {
-                setEnableShortcut(checked as boolean);
-                dispatch({
-                  type: "SET_ENABLE_SHORTCUT",
-                  payload: checked as boolean,
-                });
-              }}
-            />
-            <Label
-              htmlFor="enable-shortcut"
-              className="text-sm font-medium leading-none cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              Custom Shortcuts & Multiword
-            </Label>
-            <Link href="/shortcuts" className="ml-auto group">
-              <Wrench className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
-            </Link>
+            <div className="space-y-3">
+              <Label className="text-base font-semibold">Game Options</Label>
+              <div className="flex items-center space-x-2 p-3 rounded-md border border-border">
+                <Checkbox
+                  id="enable-shortcut"
+                  checked={enableShortcut}
+                  onCheckedChange={(checked) => {
+                    setEnableShortcut(checked as boolean);
+                    dispatch({
+                      type: "SET_ENABLE_SHORTCUT",
+                      payload: checked as boolean,
+                    });
+                  }}
+                />
+                <div className="flex-1">
+                  <Label
+                    htmlFor="enable-shortcut"
+                    className="text-sm font-medium cursor-pointer"
+                  >
+                    Enable Shortcuts
+                  </Label>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Allow custom shortcuts and multi-word answers
+                  </p>
+                </div>
+                <Link href="/shortcuts" className="group">
+                  <Wrench className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div className="flex flex-col space-y-2.5">
-          <Button
-            size="lg"
-            className="w-full"
-            onClick={() => {
-              dispatch({
-                type: "START_GAME",
-                payload: {
-                  point: parseInt(point) || 1,
-                  hintLength: parseInt(hintLength) || 2,
-                  enableShortcut: !!enableShortcut,
-                },
-              });
-            }}
-          >
-            <CirclePlay className="w-4 h-4 mr-2" />
-            Start Game
-          </Button>
+          <div className="flex flex-col justify-between h-full">
+            <div className="p-6 rounded-lg bg-gradient-to-br from-background to-muted/50 border border-border shadow-sm space-y-5">
+              <h3 className="text-lg font-semibold flex items-center gap-2">
+                <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Eye className="w-3.5 h-3.5 text-primary" />
+                </div>
+                How to Play
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3.5">
+                  <div className="w-6 h-6 rounded-full bg-primary/5 flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+                    <span className="text-xs font-bold text-primary">1</span>
+                  </div>
+                  <div className="text-sm leading-tight">
+                    Find all words matching the given hint within{" "}
+                    <span className="font-medium text-primary/90">
+                      90 seconds
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3.5">
+                  <div className="w-6 h-6 rounded-full bg-primary/5 flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+                    <span className="text-xs font-bold text-primary">2</span>
+                  </div>
+                  <div className="text-sm leading-tight">
+                    Higher difficulty themes earn{" "}
+                    <span className="font-medium text-primary/90">
+                      more points
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3.5">
+                  <div className="w-6 h-6 rounded-full bg-primary/5 flex items-center justify-center mt-0.5 flex-shrink-0 shadow-sm">
+                    <span className="text-xs font-bold text-primary">3</span>
+                  </div>
+                  <div className="text-sm leading-tight">
+                    Use{" "}
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-muted rounded text-xs font-medium">
+                      <Lamp className="w-3 h-3" /> hint
+                    </span>{" "}
+                    buttons to reveal more letters when stuck
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-          <Button variant="outline" size="lg" className="w-full" asChild>
-            <Link href="/rank">
-              <Trophy className="w-4 h-4 mr-2" />
-              View Rank
-            </Link>
-          </Button>
+            <div className="mt-auto space-y-3">
+              <Button
+                size="md"
+                className="w-full text-base"
+                onClick={() => {
+                  dispatch({
+                    type: "START_GAME",
+                    payload: {
+                      point: parseInt(point) || 1,
+                      hintLength: parseInt(hintLength) || 2,
+                      enableShortcut: !!enableShortcut,
+                    },
+                  });
+                }}
+              >
+                <CirclePlay className="w-5 h-5 mr-2" />
+                Start Game
+              </Button>
+
+              <Button variant="outline" size="md" className="w-full" asChild>
+                <Link href="/rank">
+                  <Trophy className="w-5 h-5 mr-2" />
+                  Leaderboard
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </motion.div>
     );
@@ -358,7 +414,7 @@ export default function HintTest() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="space-y-6 p-6 max-w-md mx-auto"
+        className="space-y-6 p-6 w-full mx-auto"
       >
         <motion.div
           initial={{ scale: 0.9 }}
@@ -433,7 +489,7 @@ export default function HintTest() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="space-y-6 p-6 max-w-md mx-auto"
+        className="space-y-6 p-6 w-full mx-auto"
       >
         <motion.div
           initial={{ scale: 0.9 }}
@@ -486,7 +542,7 @@ export default function HintTest() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="space-y-6 p-6 max-w-md mx-auto"
+      className="space-y-6 p-6 w-full mx-auto"
     >
       <div className="flex justify-between items-center">
         <div className="text-sm font-medium"></div>
