@@ -11,7 +11,7 @@ import { getLocalStorage, setLocalStorage } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
-import { getShortcut } from "@/lib/shortcuts";
+import { getShortcut } from "@/lib/custom_shortcuts";
 const RANKS = [
   { name: "Rookie", threshold: 0 },
   { name: "Apprentice", threshold: 100 },

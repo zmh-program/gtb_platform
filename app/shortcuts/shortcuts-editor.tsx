@@ -3,7 +3,10 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { getRawLocalShortcuts, saveLocalShortcut } from "@/lib/shortcuts";
+import {
+  getRawLocalShortcuts,
+  saveLocalShortcut,
+} from "@/lib/custom_shortcuts";
 import { toast } from "sonner";
 
 export default function ShortcutsEditor() {
@@ -38,8 +41,7 @@ export default function ShortcutsEditor() {
       <div className="space-y-2">
         <h2 className="text-lg font-semibold">Custom Shortcuts</h2>
         <p className="text-sm text-muted-foreground">
-          Add your custom sc/mw in the format (shortcut = value1, value2,
-          value3)
+          Add your custom shortcuts and multiwords.
         </p>
       </div>
 
@@ -54,11 +56,6 @@ export default function ShortcutsEditor() {
 e.g.
 Tavle = Blackboard, Whiteboard
 Kwal = Jellyfish
-Sperky = Jewellery
-Puzzle = Puzzle, Jigsaw
-Behani = Jogging
-Ju = Juice
-Hopprep = Jump Rope
           `}
         className="min-h-[400px] text-sm"
       />

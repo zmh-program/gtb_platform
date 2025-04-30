@@ -104,23 +104,23 @@ function ThemesPageContent() {
     const query = searchParams.get("theme") || "";
     const exact = searchParams.get("exact") === "true";
     const page = parseInt(searchParams.get("page") || "1", 10);
-    
+
     setSearchQuery(query);
     setInputValue(query);
     setExactMatch(exact);
     setCurrentPage(page);
-    
+
     if (query.length >= 1) {
       const startTime = performance.now();
       const allResults = searchTranslations(query, exact);
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
-      
+
       // Paginate results
       const paginatedResults = allResults.slice(
         (page - 1) * ITEMS_PER_PAGE,
-        page * ITEMS_PER_PAGE
+        page * ITEMS_PER_PAGE,
       );
-      
+
       setResults(paginatedResults);
       const endTime = performance.now();
       setRequestTime(endTime - startTime);
@@ -242,7 +242,7 @@ function ThemesPageContent() {
   const renderPaginationItems = () => {
     const items = [];
     const maxVisiblePages = 5;
-    
+
     // Always show first page
     items.push(
       <PaginationItem key="first">
@@ -252,22 +252,22 @@ function ThemesPageContent() {
         >
           1
         </PaginationLink>
-      </PaginationItem>
+      </PaginationItem>,
     );
-    
+
     // Calculate range of visible pages
     let startPage = Math.max(2, currentPage - Math.floor(maxVisiblePages / 2));
     let endPage = Math.min(totalPages - 1, startPage + maxVisiblePages - 3);
-    
+
     // Adjust if we're near the beginning
     if (startPage > 2) {
       items.push(
         <PaginationItem key="ellipsis-start">
           <PaginationEllipsis />
-        </PaginationItem>
+        </PaginationItem>,
       );
     }
-    
+
     // Add middle pages
     for (let i = startPage; i <= endPage; i++) {
       items.push(
@@ -278,19 +278,19 @@ function ThemesPageContent() {
           >
             {i}
           </PaginationLink>
-        </PaginationItem>
+        </PaginationItem>,
       );
     }
-    
+
     // Add ellipsis if needed
     if (endPage < totalPages - 1) {
       items.push(
         <PaginationItem key="ellipsis-end">
           <PaginationEllipsis />
-        </PaginationItem>
+        </PaginationItem>,
       );
     }
-    
+
     // Always show last page if there's more than one page
     if (totalPages > 1) {
       items.push(
@@ -301,10 +301,10 @@ function ThemesPageContent() {
           >
             {totalPages}
           </PaginationLink>
-        </PaginationItem>
+        </PaginationItem>,
       );
     }
-    
+
     return items;
   };
 
@@ -495,7 +495,10 @@ function ThemesPageContent() {
                           </button>
                         </div>
                         {!trans.is_approved && (
-                          <Badge variant="outline" className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap">
+                          <Badge
+                            variant="outline"
+                            className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap"
+                          >
                             Not Approved
                           </Badge>
                         )}
@@ -530,17 +533,28 @@ function ThemesPageContent() {
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious
-                  onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
-                  className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                  onClick={() =>
+                    currentPage > 1 && handlePageChange(currentPage - 1)
+                  }
+                  className={
+                    currentPage === 1 ? "pointer-events-none opacity-50" : ""
+                  }
                 />
               </PaginationItem>
-              
+
               {renderPaginationItems()}
-              
+
               <PaginationItem>
                 <PaginationNext
-                  onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
-                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                  onClick={() =>
+                    currentPage < totalPages &&
+                    handlePageChange(currentPage + 1)
+                  }
+                  className={
+                    currentPage === totalPages
+                      ? "pointer-events-none opacity-50"
+                      : ""
+                  }
                 />
               </PaginationItem>
             </PaginationContent>
@@ -549,11 +563,12 @@ function ThemesPageContent() {
 
         <div className="w-full text-center text-xs text-muted-foreground pt-2">
           {requestTime !== null && (
-            <p>Request Time: {requestTime.toFixed(2)}ms ({results.length} results)</p>
+            <p>
+              Request Time: {requestTime.toFixed(2)}ms ({results.length}{" "}
+              results)
+            </p>
           )}
-          <p>
-            Crowdin Translation Database Last Updated: {LAST_UPDATED}
-          </p>
+          <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
         </div>
 
         <div className="w-full pt-8 space-y-4">
