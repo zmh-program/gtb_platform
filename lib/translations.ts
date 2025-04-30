@@ -47,6 +47,25 @@ export function formatTheme(theme: string): string {
   return removeAccents(theme).toLowerCase().trim().replace(/\s+/g, "");
 }
 
+export function isWorkTheme(word: string, theme?: TranslationItem): boolean {
+  if (!theme) return false;
+
+  const wordFormatted = formatTheme(word);
+  const wordFormattedSuf = wordFormatted.endsWith("s")
+    ? wordFormatted.slice(0, -1)
+    : wordFormatted;
+  const worksFormatted = [
+    formatTheme(theme.theme),
+    ...Object.values(theme.translations).map((translation) =>
+      formatTheme(translation.translation),
+    ),
+  ];
+
+  return (
+    worksFormatted.includes(wordFormatted) ||
+    worksFormatted.includes(wordFormattedSuf)
+  );
+}
 /**
  * Checks if two strings match based on exact match preference
  * @param a First string (already formatted)

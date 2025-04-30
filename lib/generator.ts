@@ -121,8 +121,8 @@ export function generateHintTest(
 
   return {
     hint,
-    matchedAnswers,
     matchedThemes,
+    matchedAnswers: matchedAnswers.map((item) => item.toLowerCase().trim()),
   };
 }
 

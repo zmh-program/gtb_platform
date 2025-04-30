@@ -6,12 +6,21 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { CirclePlay, Eye, RotateCcw, Lamp, Trophy, Wrench } from "lucide-react";
+import {
+  CirclePlay,
+  Eye,
+  RotateCcw,
+  Lamp,
+  Trophy,
+  Wrench,
+  ExternalLink,
+} from "lucide-react";
 import { getLocalStorage, setLocalStorage } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { getShortcut } from "@/lib/shortcuts";
+import { isWorkTheme } from "@/lib/translations";
 import { TranslationItem } from "@/lib/source/types";
 
 function getStructure(hint: string | undefined) {
@@ -63,7 +72,7 @@ type GameAction =
 function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
     case "START_GAME": {
-      const { hint, matchedAnswers } = generateHintTest(
+      const { hint, matchedAnswers, matchedThemes } = generateHintTest(
         action.payload.point,
         action.payload.hintLength,
       );
@@ -76,6 +85,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         status: "playing",
         hint,
         matchedAnswers,
+        matchedThemes,
         moreHints: {},
         answer: "",
         foundAnswers: [],
@@ -95,21 +105,16 @@ function gameReducer(state: GameState, action: GameAction): GameState {
     case "SUBMIT_ANSWER":
       return { ...state, answer: action.payload };
     case "CHECK_ANSWER": {
-      const formattedAnswer = state.answer.trim().toLowerCase();
+      const userAnswer = state.answer.trim().toLowerCase();
 
-      if (formattedAnswer.length === 0) {
+      if (userAnswer.length === 0) {
         return { ...state, answer: "" };
       }
 
-      const shortcuts = state.enableShortcut
-        ? getShortcut(formattedAnswer)
-        : [];
+      const shortcuts = state.enableShortcut ? getShortcut(userAnswer) : [];
 
       if (state.enableShortcut) {
-        console.debug(
-          `[shortcuts] get shortcuts for ${formattedAnswer}`,
-          shortcuts,
-        );
+        console.debug(`[shortcuts] get shortcuts for ${userAnswer}`, shortcuts);
       }
 
       const newAnswers: string[] = [];
@@ -118,7 +123,17 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       );
 
       for (const answer of remainingAnswers) {
-        if (answer === formattedAnswer || shortcuts?.includes(answer)) {
+        const theme = state.matchedThemes?.find(
+          (theme) =>
+            theme.theme.toLowerCase().trim() === answer.toLowerCase().trim(),
+        );
+        console.log(theme);
+
+        if (
+          answer === userAnswer ||
+          shortcuts?.includes(answer) ||
+          isWorkTheme(userAnswer, theme)
+        ) {
           newAnswers.push(answer);
         }
       }
@@ -136,7 +151,9 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         const newScore = state.score + state.point;
         setLocalStorage("score", newScore.toString());
         toast.success(
-          `Congratulations! You earned a point! Total score: ${newScore}`,
+          `Congratulations! You earned ${state.point} point${
+            state.point > 1 ? "s" : ""
+          }! Total score: ${newScore}`,
         );
         return {
           ...state,
@@ -446,7 +463,14 @@ export default function HintTest() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   className="px-2.5 py-1 bg-green-100 text-green-800 rounded-full text-sm"
                 >
-                  {answer}
+                  <Link
+                    href={`/themes?theme=${encodeURIComponent(answer)}&exact=true`}
+                    target="_blank"
+                    className="flex items-center"
+                  >
+                    <span>{answer}</span>
+                    <ExternalLink className="w-3 h-3 ml-1" />
+                  </Link>
                 </motion.span>
               ))}
             </AnimatePresence>
@@ -466,7 +490,14 @@ export default function HintTest() {
                     exit={{ opacity: 0, scale: 0.8 }}
                     className="px-2.5 py-1 bg-red-100 text-red-800 rounded-full text-sm"
                   >
-                    {answer}
+                    <Link
+                      href={`/themes?theme=${encodeURIComponent(answer)}&exact=true`}
+                      target="_blank"
+                      className="flex items-center"
+                    >
+                      <span>{answer}</span>
+                      <ExternalLink className="w-3 h-3 ml-1" />
+                    </Link>
                   </motion.span>
                 ))}
             </AnimatePresence>
@@ -520,7 +551,14 @@ export default function HintTest() {
                   exit={{ opacity: 0, scale: 0.8 }}
                   className="px-2.5 py-1 bg-green-100 text-green-800 rounded-full text-sm"
                 >
-                  {answer}
+                  <Link
+                    href={`/themes?theme=${encodeURIComponent(answer)}&exact=true`}
+                    target="_blank"
+                    className="flex items-center"
+                  >
+                    <span>{answer}</span>
+                    <ExternalLink className="w-3 h-3 ml-1" />
+                  </Link>
                 </motion.span>
               ))}
             </AnimatePresence>

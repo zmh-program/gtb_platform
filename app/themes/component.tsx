@@ -75,6 +75,7 @@ export default function ThemesPageContent() {
   );
   const [inputValue, setInputValue] = useState(searchQuery);
   const [results, setResults] = useState<TranslationItem[]>([]);
+  const [isEmptyResults, setIsEmptyResults] = useState(false);
   const [openMultiwords, setOpenMultiwords] = useState<Record<string, boolean>>(
     {},
   );
@@ -86,6 +87,7 @@ export default function ThemesPageContent() {
     parseInt(searchParams.get("page") || "1", 10),
   );
   const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const query = searchParams.get("theme") || "";
@@ -96,8 +98,10 @@ export default function ThemesPageContent() {
     setInputValue(query);
     setExactMatch(exact);
     setCurrentPage(page);
+    setIsEmptyResults(false);
 
     if (query.length >= 1) {
+      setIsLoading(true);
       const startTime = performance.now();
       const allResults = searchTranslations(query, exact);
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
@@ -109,8 +113,10 @@ export default function ThemesPageContent() {
       );
 
       setResults(paginatedResults);
+      setIsEmptyResults(paginatedResults.length === 0);
       const endTime = performance.now();
       setRequestTime(endTime - startTime);
+      setIsLoading(false);
     } else {
       setResults([]);
       setRequestTime(null);
@@ -501,11 +507,11 @@ export default function ThemesPageContent() {
           ))}
         </div>
 
-        {searchQuery.length >= 1 && results.length === 0 && (
+        {isEmptyResults && (
           <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
             <p className="text-center text-muted-foreground">
-              No themes found matching {searchQuery}
-              {exactMatch && " (exact match)"}
+              {`No themes found matching ${searchQuery}
+              ${exactMatch ? " (exact match)" : ""}`}
             </p>
           </Card>
         )}
