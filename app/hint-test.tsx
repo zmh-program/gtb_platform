@@ -318,13 +318,13 @@ export default function HintTest() {
                     htmlFor="enable-shortcut"
                     className="text-sm font-medium cursor-pointer"
                   >
-                    Enable Shortcuts
+                    Custom Shortcuts
                   </Label>
                   <p className="text-xs text-muted-foreground mt-1">
                     Allow custom shortcuts and multi-word answers
                   </p>
                 </div>
-                <Link href="/shortcuts" className="group">
+                <Link href="/shortcuts" className="group pr-1">
                   <Wrench className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
                 </Link>
               </div>

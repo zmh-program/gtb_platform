@@ -17,7 +17,6 @@ import {
   Clapperboard,
   ArrowRight,
   LinkIcon,
-  ChevronLeft,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import {
