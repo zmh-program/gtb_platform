@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="app/favicon.ico" alt="GTB PLATFORM Logo" width="64" height="64" />
+  <img src="app/favicon.ico" alt="GTB PLATFORM Logo" width="80" height="80" />
   <h1>GTB Platform</h1>
 </div>
 
