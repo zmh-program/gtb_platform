@@ -12,40 +12,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { getShortcut } from "@/lib/shortcuts";
-const RANKS = [
-  { name: "Rookie", threshold: 0 },
-  { name: "Apprentice", threshold: 100 },
-  { name: "Skilled", threshold: 250 },
-  { name: "Talented", threshold: 500 },
-  { name: "Professional", threshold: 1000 },
-  { name: "Artisan", threshold: 2000 },
-  { name: "Expert", threshold: 3000 },
-  { name: "Master", threshold: 5000 },
-  { name: "Legend", threshold: 10000 },
-  { name: "Grandmaster", threshold: 20000 },
-];
-
-function getRank(score: number) {
-  for (let i = RANKS.length - 1; i >= 0; i--) {
-    if (score >= RANKS[i].threshold) {
-      return {
-        current: RANKS[i],
-        next: RANKS[i + 1],
-        progress:
-          i < RANKS.length - 1
-            ? ((score - RANKS[i].threshold) /
-                (RANKS[i + 1].threshold - RANKS[i].threshold)) *
-              100
-            : 100,
-      };
-    }
-  }
-  return {
-    current: RANKS[0],
-    next: RANKS[1],
-    progress: (score / RANKS[1].threshold) * 100,
-  };
-}
 
 function getStructure(hint: string | undefined) {
   if (!hint) return "";
@@ -55,7 +21,7 @@ function getStructure(hint: string | undefined) {
 }
 
 type GameState = {
-  status: "start" | "playing" | "won" | "timeout" | "stats";
+  status: "start" | "playing" | "won" | "timeout";
   point: number;
   hintLength: number;
   hint?: string;
@@ -90,8 +56,7 @@ type GameAction =
   | { type: "GET_MORE_HINT"; payload: string }
   | { type: "GET_ALL_HINTS" }
   | { type: "TICK_TIMER" }
-  | { type: "TIMEOUT" }
-  | { type: "SHOW_STATS" };
+  | { type: "TIMEOUT" };
 
 function gameReducer(state: GameState, action: GameAction): GameState {
   switch (action.type) {
@@ -168,9 +133,8 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       if (isComplete) {
         const newScore = state.score + 1;
         setLocalStorage("score", newScore.toString());
-        const rank = getRank(newScore);
         toast.success(
-          `Congratulations! You earned a point! Total score: ${newScore} (${rank.current.name})`,
+          `Congratulations! You earned a point! Total score: ${newScore}`,
         );
         return {
           ...state,
@@ -238,8 +202,6 @@ function gameReducer(state: GameState, action: GameAction): GameState {
     }
     case "SHOW_ALL_ANSWERS":
       return { ...state, showAllAnswers: true };
-    case "SHOW_STATS":
-      return { ...state, status: "stats" };
     case "RESET_GAME":
       return { ...initialState, score: state.score };
     default:
@@ -279,94 +241,7 @@ export default function HintTest() {
     return () => clearInterval(timer);
   }, [state.status, state.timeLeft]);
 
-  if (state.status === "stats") {
-    const { current, next, progress } = getRank(state.score);
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="space-y-5 p-4 max-w-md mx-auto"
-      >
-        <div className="text-center space-y-1">
-          <div className="flex items-center justify-center gap-2">
-            <Trophy className="w-5 h-5 text-amber-500" />
-            <h2 className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-              {current.name}
-            </h2>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            Score: {state.score.toLocaleString()}
-          </p>
-        </div>
-
-        {next && (
-          <div className="space-y-1.5 bg-muted/30 p-3 rounded-lg border border-border/50">
-            <div className="flex justify-between text-xs font-medium">
-              <span className="text-primary/80">{current.name}</span>
-              <span className="text-muted-foreground">{next.name}</span>
-            </div>
-            <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                className="h-full bg-gradient-to-r from-primary/80 to-primary"
-              />
-            </div>
-            <p className="text-xs text-center text-muted-foreground mt-1">
-              <span className="font-medium text-primary">
-                {Math.round(next.threshold - state.score).toLocaleString()}
-              </span>{" "}
-              points until next rank
-            </p>
-          </div>
-        )}
-
-        <div className="space-y-2">
-          <h3 className="text-sm font-semibold flex items-center gap-1.5">
-            <Lamp className="w-3.5 h-3.5 text-amber-400" />
-            Rank Progression
-          </h3>
-          <div className="grid grid-cols-2 gap-1.5 pr-1">
-            {RANKS.map((rank) => (
-              <motion.div
-                key={rank.name}
-                whileHover={{ scale: 1.02 }}
-                className={`p-2 rounded-md border text-xs ${
-                  rank.name === current.name
-                    ? "bg-primary/10 border-primary shadow-sm"
-                    : "bg-muted/30 border-border/50 hover:bg-muted/50 transition-colors"
-                }`}
-              >
-                <div className="flex flex-col">
-                  <span
-                    className={`font-medium ${rank.name === current.name ? "text-primary" : ""}`}
-                  >
-                    {rank.name}
-                  </span>
-                  <span className="text-muted-foreground text-[10px]">
-                    {rank.threshold.toLocaleString()}+ pts
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        <Button
-          size="sm"
-          className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 transition-all duration-300 shadow-md"
-          onClick={() => dispatch({ type: "RESET_GAME" })}
-        >
-          <CirclePlay className="w-3.5 h-3.5 mr-1.5" />
-          Back to Game
-        </Button>
-      </motion.div>
-    );
-  }
-
   if (state.status === "start") {
-    const { current } = getRank(state.score);
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -467,24 +342,12 @@ export default function HintTest() {
             Start Game
           </Button>
 
-          <Button
-            variant="outline"
-            size="lg"
-            className="w-full"
-            onClick={() => dispatch({ type: "SHOW_STATS" })}
-          >
-            <Trophy className="w-4 h-4 mr-2" />
-            View Stats
+          <Button variant="outline" size="lg" className="w-full" asChild>
+            <Link href="/rank">
+              <Trophy className="w-4 h-4 mr-2" />
+              View Rank
+            </Link>
           </Button>
-        </div>
-
-        <div className="text-center">
-          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
-            Total Score: {state.score}
-            <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary">
-              {current.name}
-            </span>
-          </p>
         </div>
       </motion.div>
     );

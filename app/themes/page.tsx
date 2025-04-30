@@ -253,7 +253,10 @@ function ThemesPageContent() {
     );
 
     // Calculate range of visible pages
-    const startPage = Math.max(2, currentPage - Math.floor(maxVisiblePages / 2));
+    const startPage = Math.max(
+      2,
+      currentPage - Math.floor(maxVisiblePages / 2),
+    );
     const endPage = Math.min(totalPages - 1, startPage + maxVisiblePages - 3);
 
     // Adjust if we're near the beginning
