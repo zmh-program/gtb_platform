@@ -46,7 +46,7 @@ export default function Home() {
                     <PaletteIcon className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium">GTB Theme Search Tool</h3>
+                    <h3 className="font-medium">GTB Theme Search Engine</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Search GTB themes, translations, and more
                     </p>

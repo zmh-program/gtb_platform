@@ -22,6 +22,7 @@ import {
   Clapperboard,
   ArrowRight,
   LinkIcon,
+  ChevronLeft,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import {
@@ -33,6 +34,15 @@ import { toast } from "sonner";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 
 const LANGUAGE_NAMES: Record<string, string> = {
   cs: "Czech",
@@ -60,9 +70,11 @@ const LANGUAGE_NAMES: Record<string, string> = {
   zh_tw: "Chinese Traditional",
 };
 
+const ITEMS_PER_PAGE = 50;
+
 export default function ThemesPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <ThemesPageContent />
     </Suspense>
   );
@@ -83,26 +95,44 @@ function ThemesPageContent() {
     searchParams.get("exact") === "true",
   );
   const [requestTime, setRequestTime] = useState<number | null>(null);
+  const [currentPage, setCurrentPage] = useState(
+    parseInt(searchParams.get("page") || "1", 10),
+  );
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const query = searchParams.get("theme") || "";
     const exact = searchParams.get("exact") === "true";
+    const page = parseInt(searchParams.get("page") || "1", 10);
+    
     setSearchQuery(query);
     setInputValue(query);
     setExactMatch(exact);
-    if (query.length >= 2) {
+    setCurrentPage(page);
+    
+    if (query.length >= 1) {
       const startTime = performance.now();
-      setResults(searchTranslations(query, exact));
+      const allResults = searchTranslations(query, exact);
+      setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
+      
+      // Paginate results
+      const paginatedResults = allResults.slice(
+        (page - 1) * ITEMS_PER_PAGE,
+        page * ITEMS_PER_PAGE
+      );
+      
+      setResults(paginatedResults);
       const endTime = performance.now();
       setRequestTime(endTime - startTime);
     } else {
       setResults([]);
       setRequestTime(null);
+      setTotalPages(1);
     }
   }, [searchParams]);
 
   const handleSearch = () => {
-    if (inputValue.length < 2) {
+    if (inputValue.trim().length < 1) {
       return;
     }
     const params = new URLSearchParams(searchParams);
@@ -118,6 +148,15 @@ function ThemesPageContent() {
       params.delete("exact");
     }
 
+    // Reset to page 1 when performing a new search
+    params.set("page", "1");
+
+    router.push(`/themes?${params.toString()}`);
+  };
+
+  const handlePageChange = (page: number) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", page.toString());
     router.push(`/themes?${params.toString()}`);
   };
 
@@ -199,11 +238,81 @@ function ThemesPageContent() {
     document.body.removeChild(textArea);
   };
 
+  // Generate pagination items
+  const renderPaginationItems = () => {
+    const items = [];
+    const maxVisiblePages = 5;
+    
+    // Always show first page
+    items.push(
+      <PaginationItem key="first">
+        <PaginationLink
+          onClick={() => handlePageChange(1)}
+          isActive={currentPage === 1}
+        >
+          1
+        </PaginationLink>
+      </PaginationItem>
+    );
+    
+    // Calculate range of visible pages
+    let startPage = Math.max(2, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages - 1, startPage + maxVisiblePages - 3);
+    
+    // Adjust if we're near the beginning
+    if (startPage > 2) {
+      items.push(
+        <PaginationItem key="ellipsis-start">
+          <PaginationEllipsis />
+        </PaginationItem>
+      );
+    }
+    
+    // Add middle pages
+    for (let i = startPage; i <= endPage; i++) {
+      items.push(
+        <PaginationItem key={i}>
+          <PaginationLink
+            onClick={() => handlePageChange(i)}
+            isActive={currentPage === i}
+          >
+            {i}
+          </PaginationLink>
+        </PaginationItem>
+      );
+    }
+    
+    // Add ellipsis if needed
+    if (endPage < totalPages - 1) {
+      items.push(
+        <PaginationItem key="ellipsis-end">
+          <PaginationEllipsis />
+        </PaginationItem>
+      );
+    }
+    
+    // Always show last page if there's more than one page
+    if (totalPages > 1) {
+      items.push(
+        <PaginationItem key="last">
+          <PaginationLink
+            onClick={() => handlePageChange(totalPages)}
+            isActive={currentPage === totalPages}
+          >
+            {totalPages}
+          </PaginationLink>
+        </PaginationItem>
+      );
+    }
+    
+    return items;
+  };
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col row-start-2 items-center w-full max-w-3xl space-y-3">
         <h1 className="text-2xl font-bold mb-0.5">
-          GTB Theme Search Tool
+          GTB Theme Search Engine
           <ThemeSwitcher />
         </h1>
 
@@ -213,7 +322,7 @@ function ThemesPageContent() {
               <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Enter at least 2 characters to search themes..."
+                placeholder="Enter your search query to find themes..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -233,7 +342,7 @@ function ThemesPageContent() {
               </div>
               <Button
                 onClick={handleSearch}
-                disabled={inputValue.length < 2}
+                disabled={inputValue.trim().length < 1}
                 className="w-auto"
               >
                 <Search className="h-4 w-4 mr-2" />
@@ -399,7 +508,7 @@ function ThemesPageContent() {
           ))}
         </div>
 
-        {searchQuery.length >= 2 && results.length === 0 && (
+        {searchQuery.length >= 1 && results.length === 0 && (
           <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
             <p className="text-center text-muted-foreground">
               No themes found matching {searchQuery}
@@ -408,19 +517,43 @@ function ThemesPageContent() {
           </Card>
         )}
 
-        {(!searchQuery || searchQuery.length < 2) && (
+        {(!searchQuery || searchQuery.length < 1) && (
           <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
             <p className="text-center text-muted-foreground">
-              Enter at least 2 characters to search themes
+              Enter your search query to find themes
             </p>
           </Card>
         )}
 
+        {totalPages > 1 && (
+          <Pagination className="mt-4">
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious
+                  onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+              
+              {renderPaginationItems()}
+              
+              <PaginationItem>
+                <PaginationNext
+                  onClick={() => currentPage < totalPages && handlePageChange(currentPage + 1)}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        )}
+
         <div className="w-full text-center text-xs text-muted-foreground pt-2">
           {requestTime !== null && (
-            <p>Request Time: {requestTime.toFixed(2)}ms</p>
+            <p>Request Time: {requestTime.toFixed(2)}ms ({results.length} results)</p>
           )}
-          <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
+          <p>
+            Crowdin Translation Database Last Updated: {LAST_UPDATED}
+          </p>
         </div>
 
         <div className="w-full pt-8 space-y-4">
