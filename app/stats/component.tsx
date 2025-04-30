@@ -156,8 +156,8 @@ export function StatsContent() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col row-start-2 items-center w-full max-w-xl space-y-4">
-        <h1 className="text-2xl font-bold mb-2.5 flex items-center gap-2">
+      <main className="flex flex-col row-start-2 items-center w-full max-w-2xl space-y-4">
+        <h1 className="text-xl sm:text-2xl font-bold mb-2.5 flex items-center gap-2 text-center">
           Build Battle Statistic Tracker
           <ThemeSwitcher />
         </h1>

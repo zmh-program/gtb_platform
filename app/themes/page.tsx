@@ -2,12 +2,7 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState, Suspense } from "react";
-import {
-  searchTranslations,
-  removeAccents,
-  type TranslationItem,
-  LAST_UPDATED,
-} from "@/lib/translations";
+import { searchTranslations, removeAccents } from "@/lib/translations";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -43,6 +38,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { TranslationItem } from "@/lib/source/types";
+import { LAST_UPDATED } from "@/lib/source/source";
 
 const LANGUAGE_NAMES: Record<string, string> = {
   cs: "Czech",
@@ -256,8 +253,8 @@ function ThemesPageContent() {
     );
 
     // Calculate range of visible pages
-    let startPage = Math.max(2, currentPage - Math.floor(maxVisiblePages / 2));
-    let endPage = Math.min(totalPages - 1, startPage + maxVisiblePages - 3);
+    const startPage = Math.max(2, currentPage - Math.floor(maxVisiblePages / 2));
+    const endPage = Math.min(totalPages - 1, startPage + maxVisiblePages - 3);
 
     // Adjust if we're near the beginning
     if (startPage > 2) {
@@ -310,8 +307,8 @@ function ThemesPageContent() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col row-start-2 items-center w-full max-w-3xl space-y-3">
-        <h1 className="text-2xl font-bold mb-0.5">
+      <main className="flex flex-col row-start-2 items-center w-full max-w-2xl space-y-3">
+        <h1 className="text-xl sm:text-2xl font-bold mb-0.5 flex items-center gap-2">
           GTB Theme Search Engine
           <ThemeSwitcher />
         </h1>

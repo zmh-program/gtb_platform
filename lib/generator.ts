@@ -1,16 +1,37 @@
-import { RAW_DATA } from "./data";
+import { ALL_TRANSLATIONS } from "./source/source";
+import { TranslationItem } from "./source/types";
 
-function filterDataPoints(point: number) {
+function getThemesByLangCode(lang_code: string): {
+  item: TranslationItem;
+  translation: string;
+}[] {
+  return ALL_TRANSLATIONS.map((item) => {
+    const translation =
+      lang_code === "en"
+        ? item.theme
+        : item.translations?.[lang_code as keyof typeof item.translations]
+            ?.translation || item.theme;
+    return {
+      item,
+      translation,
+    };
+  });
+}
+
+function filterDataPoints(point: number, lang_code?: string) {
   // <=5 letter is 1 point theme
   // 6-8 letter is 2 point theme
   // >=9 letter is 3 point theme
 
+  const themes = getThemesByLangCode(lang_code || "en");
   if (point === 1) {
-    return RAW_DATA.filter((item) => item.length <= 5);
+    return themes.filter((item) => item.translation.length <= 5);
   } else if (point === 2) {
-    return RAW_DATA.filter((item) => item.length >= 6 && item.length <= 8);
+    return themes.filter(
+      (item) => item.translation.length >= 6 && item.translation.length <= 8,
+    );
   } else if (point === 3) {
-    return RAW_DATA.filter((item) => item.length >= 9);
+    return themes.filter((item) => item.translation.length >= 9);
   }
 
   return [];
@@ -80,24 +101,27 @@ function getMatchedAnswer(hint: string, data: string[]) {
   });
 }
 
-export function generateHintTest(point: number, hint_length: number) {
-  const data = filterDataPoints(point);
-  const sample = createSampleTheme(data);
+export function generateHintTest(
+  point: number,
+  hint_length: number,
+  lang_code?: string,
+) {
+  const data = filterDataPoints(point, lang_code);
+  const translations = data.map((item) => item.translation);
+  const themes = data.map((item) => item.item);
+
+  const sample = createSampleTheme(translations);
 
   const hint = getHint(sample, hint_length);
-  const matchedAnswers = getMatchedAnswer(hint, data);
-
-  console.debug(
-    `[hint test] generated random hint (${point} pt themes, ${hint_length} hint length)\n`,
-    "hint: ",
-    hint,
-    "\nmatched answers: ",
-    matchedAnswers,
+  const matchedAnswers = getMatchedAnswer(hint, translations);
+  const matchedThemes = themes.filter((theme) =>
+    matchedAnswers.includes(theme.theme),
   );
 
   return {
     hint,
     matchedAnswers,
+    matchedThemes,
   };
 }
 

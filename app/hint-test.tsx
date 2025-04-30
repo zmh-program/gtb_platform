@@ -11,7 +11,7 @@ import { getLocalStorage, setLocalStorage } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
-import { getShortcut } from "@/lib/custom_shortcuts";
+import { getShortcut } from "@/lib/shortcuts";
 const RANKS = [
   { name: "Rookie", threshold: 0 },
   { name: "Apprentice", threshold: 100 },
@@ -440,7 +440,7 @@ export default function HintTest() {
               htmlFor="enable-shortcut"
               className="text-sm font-medium leading-none cursor-pointer peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              Enable Shortcuts & Multiword
+              Custom Shortcuts & Multiword
             </Label>
             <Link href="/shortcuts" className="ml-auto group">
               <Wrench className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />

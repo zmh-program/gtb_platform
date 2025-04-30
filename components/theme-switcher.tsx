@@ -27,7 +27,7 @@ export function ThemeSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-1 border border-background dark:border-border rounded-full bg-muted/40 p-1 backdrop-blur-sm transition-all absolute top-2 right-2 md:top-4 md:right-4 lg:relative lg:top-0 lg:right-0 lg:ml-2">
+    <div className="flex items-center gap-1 border border-background w-fit dark:border-border rounded-full bg-muted/40 p-1 backdrop-blur-sm transition-all absolute top-2 right-2 md:top-4 md:right-4 lg:relative lg:top-0 lg:right-0 lg:ml-2">
       <TooltipProvider delayDuration={300}>
         <Tooltip>
           <TooltipTrigger asChild>
