@@ -394,7 +394,7 @@ export default function HintTest() {
               </ul>
             </div>
 
-            <div className="mt-auto space-y-3">
+            <div className="mt-auto space-y-3 pt-3">
               <Button
                 size="md"
                 className="w-full text-base"
