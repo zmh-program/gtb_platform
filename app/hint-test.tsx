@@ -22,6 +22,52 @@ import Link from "next/link";
 import { getShortcut } from "@/lib/shortcuts";
 import { isWorkTheme } from "@/lib/translations";
 import { TranslationItem } from "@/lib/source/types";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+
+type LanguageOption = {
+  label: string;
+  native?: string;
+  badge?: string;
+};
+
+const languageOptions: Record<string, LanguageOption> = {
+  default: { label: "English", badge: "Recommended" },
+  zh_cn: { label: "Chinese Simplified", native: "简体中文" },
+  zh_tw: { label: "Chinese Traditional", native: "繁體中文" },
+  ru: { label: "Russian", native: "Русский" },
+  ja: { label: "Japanese", native: "日本語" },
+  ko: { label: "Korean", native: "한국어" },
+  en: { label: "Pirate English", native: "Pirate English" },
+  de: { label: "German", native: "Deutsch" },
+  es: { label: "Spanish", native: "Español" },
+  fi: { label: "Finnish", native: "Suomi" },
+  fr: { label: "French", native: "Français" },
+  hu: { label: "Hungarian", native: "Magyar" },
+  it: { label: "Italian", native: "Italiano" },
+  nl: { label: "Dutch", native: "Nederlands" },
+  no: { label: "Norwegian", native: "Norsk" },
+  pl: { label: "Polish", native: "Polski" },
+  pt: { label: "Portuguese", native: "Português" },
+  ro: { label: "Romanian", native: "Română" },
+  sv: { label: "Swedish", native: "Svenska" },
+  tr: { label: "Turkish", native: "Türkçe" },
+  uk: { label: "Ukrainian", native: "Українська" },
+  cs: { label: "Czech", native: "Čeština" },
+  da: { label: "Danish", native: "Dansk" },
+};
 
 function getStructure(hint: string | undefined) {
   if (!hint) return "";
@@ -44,6 +90,7 @@ type GameState = {
   timeLeft: number;
   score: number;
   enableShortcut: boolean;
+  language: string;
 };
 
 function includesAnswer(checkingAnswer: string, anwsersList: string[]) {
@@ -55,11 +102,17 @@ function includesAnswer(checkingAnswer: string, anwsersList: string[]) {
 type GameAction =
   | {
       type: "START_GAME";
-      payload: { point: number; hintLength: number; enableShortcut: boolean };
+      payload: {
+        point: number;
+        hintLength: number;
+        enableShortcut: boolean;
+        language: string;
+      };
     }
   | { type: "SET_POINT"; payload: number }
   | { type: "SET_HINT_LENGTH"; payload: number }
   | { type: "SET_ENABLE_SHORTCUT"; payload: boolean }
+  | { type: "SET_LANGUAGE"; payload: string }
   | { type: "SUBMIT_ANSWER"; payload: string }
   | { type: "CHECK_ANSWER" }
   | { type: "SHOW_ALL_ANSWERS" }
@@ -75,6 +128,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       const { hint, matchedAnswers, matchedThemes } = generateHintTest(
         action.payload.point,
         action.payload.hintLength,
+        action.payload.language,
       );
 
       return {
@@ -82,6 +136,7 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         point: action.payload.point,
         hintLength: action.payload.hintLength,
         enableShortcut: action.payload.enableShortcut,
+        language: action.payload.language,
         status: "playing",
         hint,
         matchedAnswers,
@@ -102,6 +157,9 @@ function gameReducer(state: GameState, action: GameAction): GameState {
     case "SET_ENABLE_SHORTCUT":
       setLocalStorage("enable_shortcut", action.payload.toString());
       return { ...state, enableShortcut: action.payload };
+    case "SET_LANGUAGE":
+      setLocalStorage("language", action.payload);
+      return { ...state, language: action.payload };
     case "SUBMIT_ANSWER":
       return { ...state, answer: action.payload };
     case "CHECK_ANSWER": {
@@ -123,16 +181,22 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       );
 
       for (const answer of remainingAnswers) {
-        const theme = state.matchedThemes?.find(
+        const themes = state.matchedThemes?.filter(
           (theme) =>
-            theme.theme.toLowerCase().trim() === answer.toLowerCase().trim(),
+            (state.language === "default"
+              ? theme.theme
+              : theme.translations?.[
+                  state.language as keyof typeof theme.translations
+                ]?.translation || theme.theme
+            )
+              .toLowerCase()
+              .trim() === answer.toLowerCase().trim(),
         );
-        console.log(theme);
 
         if (
           answer === userAnswer ||
           shortcuts?.includes(answer) ||
-          isWorkTheme(userAnswer, theme)
+          themes?.some((theme) => isWorkTheme(userAnswer, theme))
         ) {
           newAnswers.push(answer);
         }
@@ -238,6 +302,7 @@ const initialState: GameState = {
   timeLeft: 90,
   score: parseInt(getLocalStorage("score") || "0"),
   enableShortcut: true,
+  language: getLocalStorage("language") || "default",
 };
 
 export default function HintTest() {
@@ -248,6 +313,9 @@ export default function HintTest() {
   );
   const [enableShortcut, setEnableShortcut] = useState(
     getLocalStorage("enable_shortcut") !== "false",
+  );
+  const [language, setLanguage] = useState(
+    getLocalStorage("language") || "default",
   );
 
   useEffect(() => {
@@ -270,9 +338,25 @@ export default function HintTest() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-6">
             <div className="space-y-4">
-              <Label className="text-base font-semibold">
-                Theme Difficulty
-              </Label>
+              <div className="flex items-center gap-2">
+                <Label className="text-base font-semibold">
+                  Theme Difficulty
+                </Label>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center cursor-help">
+                        <span className="text-xs">?</span>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-xs">
+                        Select the difficulty level of themes to practice with
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <RadioGroup value={point} className="grid gap-3">
                 {[
                   { value: "1", label: "Easy (≤5 letters)", id: "point-1" },
@@ -297,9 +381,28 @@ export default function HintTest() {
             </div>
 
             <div className="space-y-3">
-              <Label htmlFor="hint-length" className="text-base font-semibold">
-                Initial Hint Length
-              </Label>
+              <div className="flex items-center gap-2">
+                <Label
+                  htmlFor="hint-length"
+                  className="text-base font-semibold"
+                >
+                  Initial Hint Length
+                </Label>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center cursor-help">
+                        <span className="text-xs">?</span>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-xs">
+                        Number of characters revealed at the start of the game
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <Input
                 id="hint-length"
                 type="number"
@@ -307,7 +410,11 @@ export default function HintTest() {
                 max="5"
                 value={hintLength}
                 onChange={(e) =>
-                  setHintLength(e.target.value.replace(/[^0-9]/g, ""))
+                  setHintLength(
+                    e.target.value.replace(/[^0-9]/g, "") === "0"
+                      ? "1"
+                      : e.target.value.replace(/[^0-9]/g, ""),
+                  )
                 }
                 className="h-10"
               />
@@ -317,7 +424,23 @@ export default function HintTest() {
             </div>
 
             <div className="space-y-3">
-              <Label className="text-base font-semibold">Game Options</Label>
+              <div className="flex items-center gap-2">
+                <Label className="text-base font-semibold">Game Options</Label>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center cursor-help">
+                        <span className="text-xs">?</span>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-xs">
+                        Additional settings to customize your game experience
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
               <div className="flex items-center space-x-2 p-3 rounded-md border border-border">
                 <Checkbox
                   id="enable-shortcut"
@@ -349,6 +472,58 @@ export default function HintTest() {
           </div>
 
           <div className="flex flex-col justify-between h-full">
+            <div className="space-y-3 mb-3">
+              <div className="flex items-center gap-2">
+                <Label className="text-base font-semibold">Language</Label>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center cursor-help">
+                        <span className="text-xs">?</span>
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="text-xs">
+                        Select the language you want to practice with
+                      </p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </div>
+              <Select
+                value={language}
+                onValueChange={(value) => {
+                  setLanguage(value);
+                  dispatch({ type: "SET_LANGUAGE", payload: value });
+                }}
+              >
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select language" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Object.entries(languageOptions).map(
+                    ([value, { label, native, badge }]) => (
+                      <SelectItem key={value} value={value}>
+                        <div className="flex items-center space-x-1.5">
+                          <span>{label}</span>
+                          {native && (
+                            <span className="text-xs text-muted-foreground">
+                              ({native})
+                            </span>
+                          )}
+                          {badge && (
+                            <span className="ml-auto px-1.5 py-0.5 text-xs rounded-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500 font-medium">
+                              {badge}
+                            </span>
+                          )}
+                        </div>
+                      </SelectItem>
+                    ),
+                  )}
+                </SelectContent>
+              </Select>
+            </div>
+
             <div className="p-6 rounded-lg bg-gradient-to-br from-background to-muted/50 border border-border shadow-sm space-y-5">
               <h3 className="text-lg font-semibold flex items-center gap-2">
                 <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -373,10 +548,11 @@ export default function HintTest() {
                     <span className="text-xs font-bold text-primary">2</span>
                   </div>
                   <div className="text-sm leading-tight">
-                    Higher difficulty themes earn{" "}
-                    <span className="font-medium text-primary/90">
-                      more points
-                    </span>
+                    Use{" "}
+                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-muted rounded text-xs font-medium">
+                      <Lamp className="w-3 h-3" /> hint
+                    </span>{" "}
+                    buttons to reveal more letters when stuck
                   </div>
                 </li>
                 <li className="flex items-start gap-3.5">
@@ -384,11 +560,10 @@ export default function HintTest() {
                     <span className="text-xs font-bold text-primary">3</span>
                   </div>
                   <div className="text-sm leading-tight">
-                    Use{" "}
-                    <span className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-muted rounded text-xs font-medium">
-                      <Lamp className="w-3 h-3" /> hint
-                    </span>{" "}
-                    buttons to reveal more letters when stuck
+                    Higher difficulty themes earn{" "}
+                    <span className="font-medium text-primary/90">
+                      more points
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -405,6 +580,7 @@ export default function HintTest() {
                       point: parseInt(point) || 1,
                       hintLength: parseInt(hintLength) || 2,
                       enableShortcut: !!enableShortcut,
+                      language: language,
                     },
                   });
                 }}
@@ -583,7 +759,18 @@ export default function HintTest() {
       className="space-y-6 p-6 w-full mx-auto"
     >
       <div className="flex justify-between items-center">
-        <div className="text-sm font-medium"></div>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="outline" className="cursor-pointer select-none">
+                {languageOptions[state.language]?.label || "English"}
+              </Badge>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-xs">Current language for themes</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
         <div className="relative w-10 h-10">
           <svg className="w-full h-full -rotate-90">
             <circle
@@ -633,9 +820,14 @@ export default function HintTest() {
       </motion.div>
       <div className="space-y-2">
         <div className="flex justify-between items-center">
-          <Label className="text-base font-semibold">
-            Found Answers ({state.foundAnswers.length}/
-            {state.matchedAnswers?.length})
+          <Label className="text-base font-semibold flex items-center gap-1.5">
+            <span>Found Answers</span>
+            <Badge
+              variant="secondary"
+              className="px-2 py-0.5 h-auto text-xs font-medium rounded-full"
+            >
+              {state.foundAnswers.length}/{state.matchedAnswers?.length}
+            </Badge>
           </Label>
           <Button
             size="icon"

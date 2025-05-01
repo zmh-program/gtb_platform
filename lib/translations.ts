@@ -54,6 +54,8 @@ export function isWorkTheme(word: string, theme?: TranslationItem): boolean {
   const wordFormattedSuf = wordFormatted.endsWith("s")
     ? wordFormatted.slice(0, -1)
     : wordFormatted;
+  const wordFormattedAddSuf = wordFormatted + "s";
+
   const worksFormatted = [
     formatTheme(theme.theme),
     ...Object.values(theme.translations).map((translation) =>
@@ -63,7 +65,8 @@ export function isWorkTheme(word: string, theme?: TranslationItem): boolean {
 
   return (
     worksFormatted.includes(wordFormatted) ||
-    worksFormatted.includes(wordFormattedSuf)
+    worksFormatted.includes(wordFormattedSuf) ||
+    worksFormatted.includes(wordFormattedAddSuf)
   );
 }
 /**

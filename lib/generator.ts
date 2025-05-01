@@ -7,7 +7,7 @@ function getThemesByLangCode(lang_code: string): {
 }[] {
   return ALL_TRANSLATIONS.map((item) => {
     const translation =
-      lang_code === "en"
+      lang_code === "default"
         ? item.theme
         : item.translations?.[lang_code as keyof typeof item.translations]
             ?.translation || item.theme;
@@ -23,7 +23,7 @@ function filterDataPoints(point: number, lang_code?: string) {
   // 6-8 letter is 2 point theme
   // >=9 letter is 3 point theme
 
-  const themes = getThemesByLangCode(lang_code || "en");
+  const themes = getThemesByLangCode(lang_code || "default");
   if (point === 1) {
     return themes.filter((item) => item.translation.length <= 5);
   } else if (point === 2) {
@@ -102,6 +102,10 @@ function getMatchedAnswer(hint: string, data: string[]) {
   });
 }
 
+function removeDuplicates<T>(arr: T[]): T[] {
+  return Array.from(new Set(arr));
+}
+
 export function generateHintTest(
   point: number,
   hint_length: number,
@@ -114,9 +118,16 @@ export function generateHintTest(
   const sample = createSampleTheme(translations);
 
   const hint = getHint(sample, hint_length);
-  const matchedAnswers = getMatchedAnswer(hint, translations);
+  const matchedAnswers = removeDuplicates<string>(
+    getMatchedAnswer(hint, translations),
+  );
   const matchedThemes = themes.filter((theme) =>
-    matchedAnswers.includes(theme.theme),
+    matchedAnswers.includes(
+      lang_code === "default"
+        ? theme.theme
+        : theme.translations?.[lang_code as keyof typeof theme.translations]
+            ?.translation || theme.theme,
+    ),
   );
 
   return {
