@@ -40,5 +40,6 @@ export type TranslationItem = {
     uk?: Translation;
     zh_cn?: Translation;
     zh_tw?: Translation;
+    co?: Translation;
   };
 };
