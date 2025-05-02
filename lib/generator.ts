@@ -110,6 +110,7 @@ export function generateHintTest(
   point: number,
   hint_length: number,
   lang_code?: string,
+  _iterations: number = 0,
 ) {
   const data = filterDataPoints(point, lang_code);
   const translations = data.map((item) => item.translation);
@@ -130,6 +131,10 @@ export function generateHintTest(
     ),
   );
 
+  if (matchedAnswers.length > 25 && Math.random() > 0.25 && _iterations < 5) {
+    // Regenerate with a different hint with a 75% chance if there are too many matches (25+)
+    return generateHintTest(point, hint_length, lang_code, _iterations + 1);
+  }
   return {
     hint,
     matchedThemes,
