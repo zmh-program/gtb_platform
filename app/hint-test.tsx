@@ -365,7 +365,10 @@ export default function HintTest() {
                 ].map((option) => (
                   <div
                     key={option.id}
-                    onClick={() => setPoint(option.value)}
+                    onClick={() => {
+                      setPoint(option.value);
+                      setLocalStorage("point", option.value);
+                    }}
                     className="flex items-center space-x-3 p-3 rounded-md border border-border hover:bg-muted/50 transition-colors cursor-pointer"
                   >
                     <RadioGroupItem value={option.value} id={option.id} />
@@ -409,13 +412,14 @@ export default function HintTest() {
                 min="1"
                 max="5"
                 value={hintLength}
-                onChange={(e) =>
+                onChange={(e) => {
                   setHintLength(
                     e.target.value.replace(/[^0-9]/g, "") === "0"
                       ? "1"
                       : e.target.value.replace(/[^0-9]/g, ""),
-                  )
-                }
+                  );
+                  setLocalStorage("hint_length", e.target.value);
+                }}
                 className="h-10"
               />
               <p className="text-xs text-muted-foreground">
