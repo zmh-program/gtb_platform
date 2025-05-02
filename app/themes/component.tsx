@@ -63,6 +63,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   uk: "Ukrainian",
   zh_cn: "Chinese Simplified",
   zh_tw: "Chinese Traditional",
+  co: "Complement",
 };
 
 const ITEMS_PER_PAGE = 50;
