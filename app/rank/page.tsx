@@ -10,6 +10,7 @@ import {
   Crown,
   Shield,
   Zap,
+  AlertCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn, getLocalStorage } from "@/lib/utils";
@@ -229,6 +230,13 @@ export default function RankPage() {
           <ThemeSwitcher />
         </div>
         <div className="bg-background/95 dark:bg-background/95 rounded-lg w-full shadow-sm border border-border dark:border-border backdrop-blur-sm overflow-hidden">
+          <div className="p-3 text-xs text-muted-foreground bg-muted/30 border-b border-border">
+            <p className="flex items-center gap-1.5">
+              <AlertCircle className="w-3.5 h-3.5" />
+              Scores are stored locally in your browser and are not shared with
+              any server (clearing site data may reset your score to zero).
+            </p>
+          </div>
           <RankContent />
         </div>
       </main>

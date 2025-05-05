@@ -79,7 +79,8 @@ function ShortcutsEditor() {
           <span className="font-bold">{TOTAL_THEMES}</span> themes and{" "}
           <span className="font-bold">{TOTAL_TRANSLATIONS}</span> translations (
           <span className="font-bold">
-            including unapproved crowdin translations
+            including unapproved crowdin translations and more extensive
+            conversion algorithms
           </span>{" "}
           that may not be available in the actual game).
         </AlertDescription>

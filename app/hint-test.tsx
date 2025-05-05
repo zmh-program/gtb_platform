@@ -212,7 +212,12 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         newFoundAnswers.length === (state.matchedAnswers?.length || 0);
 
       if (isComplete) {
-        const newScore = state.score + state.point;
+        const currentScore = parseInt(getLocalStorage("score") || "0");
+        console.debug(
+          `[score] current score: ${currentScore}, add ${state.point}`,
+        );
+
+        const newScore = currentScore + state.point;
         setLocalStorage("score", newScore.toString());
         toast.success(
           `Congratulations! You earned ${state.point} point${
