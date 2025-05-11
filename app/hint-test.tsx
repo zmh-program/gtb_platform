@@ -61,6 +61,7 @@ const languageOptions: Record<string, LanguageOption> = {
   no: { label: "Norwegian", native: "Norsk" },
   pl: { label: "Polish", native: "Polski" },
   pt: { label: "Portuguese", native: "Português" },
+  ptbr: { label: "Portuguese, Brazilian", native: "Português do Brasil" },
   ro: { label: "Romanian", native: "Română" },
   sv: { label: "Swedish", native: "Svenska" },
   tr: { label: "Turkish", native: "Türkçe" },

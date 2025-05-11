@@ -33,6 +33,7 @@ export type TranslationItem = {
     no?: Translation;
     pl?: Translation;
     pt?: Translation;
+    ptbr?: Translation;
     ro?: Translation;
     ru?: Translation;
     sv?: Translation;

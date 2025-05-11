@@ -98,6 +98,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-07-16T02:50:08-04:00",
       },
       pt: {
+        translation: "Corneta / Buzina de ar",
+        is_approved: true,
+        approved_at: "2019-03-26T15:49:16-04:00",
+      },
+      ptbr: {
         translation: "Corneta",
         is_approved: true,
         approved_at: "2018-11-11T15:31:25-05:00",
@@ -216,6 +221,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:42:26-04:00",
       },
       pt: {
+        translation: "Aeroporto",
+        is_approved: true,
+        approved_at: "2019-03-25T17:13:09-04:00",
+      },
+      ptbr: {
         translation: "Aeroporto",
         is_approved: true,
         approved_at: "2019-06-17T15:12:38-04:00",
@@ -506,6 +516,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dirigível",
         is_approved: true,
+        approved_at: "2019-03-26T15:49:24-04:00",
+      },
+      ptbr: {
+        translation: "Dirigível",
+        is_approved: true,
         approved_at: "2018-11-11T15:31:28-05:00",
       },
       ro: {
@@ -624,6 +639,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Despertador",
         is_approved: true,
+        approved_at: "2019-08-23T18:59:45-04:00",
+      },
+      ptbr: {
+        translation: "Despertador",
+        is_approved: true,
         approved_at: "2018-03-31T09:56:30-04:00",
       },
       ro: {
@@ -740,6 +760,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:42:28-04:00",
       },
       pt: {
+        translation: "Ambulância",
+        is_approved: true,
+        approved_at: "2019-03-25T17:14:00-04:00",
+      },
+      ptbr: {
         translation: "Ambulância",
         is_approved: true,
         approved_at: "2018-03-09T16:44:01-05:00",
@@ -882,6 +907,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Âncora",
         is_approved: true,
+        approved_at: "2019-03-26T15:51:26-04:00",
+      },
+      ptbr: {
+        translation: "Âncora",
+        is_approved: true,
         approved_at: "2018-03-31T09:56:48-04:00",
       },
       ro: {
@@ -998,6 +1028,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:40:08-04:00",
       },
       pt: {
+        translation: "Anjo",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:08-04:00",
+      },
+      ptbr: {
         translation: "Anjo",
         is_approved: true,
         approved_at: "2018-03-09T16:44:02-05:00",
@@ -1118,6 +1153,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Animal",
         is_approved: true,
+        approved_at: "2020-02-27T18:10:03-05:00",
+      },
+      ptbr: {
+        translation: "Animal",
+        is_approved: true,
         approved_at: "2019-07-22T20:12:09-04:00",
       },
       ro: {
@@ -1236,6 +1276,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Formiga",
         is_approved: true,
+        approved_at: "2019-03-26T15:52:00-04:00",
+      },
+      ptbr: {
+        translation: "Formiga",
+        is_approved: true,
         approved_at: "2018-03-31T09:56:54-04:00",
       },
       ro: {
@@ -1349,6 +1394,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Antivírus",
         is_approved: true,
+        approved_at: "2024-10-27T10:50:14-04:00",
+      },
+      ptbr: {
+        translation: "Antivírus",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:30-04:00",
       },
       ro: {
@@ -1460,6 +1510,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:27:37-04:00",
       },
       pt: {
+        translation: "Bigorna",
+        is_approved: true,
+        approved_at: "2020-01-15T19:13:11-05:00",
+      },
+      ptbr: {
         translation: "Bigorna",
         is_approved: true,
         approved_at: "2019-07-25T10:35:37-04:00",
@@ -1578,6 +1633,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-18T15:00:35-04:00",
       },
       pt: {
+        translation: "Apocalypse",
+        is_approved: true,
+        approved_at: "2025-03-03T06:31:27-05:00",
+      },
+      ptbr: {
         translation: "Apocalipse",
         is_approved: true,
         approved_at: "2019-09-20T15:47:12-04:00",
@@ -1739,6 +1799,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Maçã",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:10-04:00",
+      },
+      ptbr: {
+        translation: "Maçã",
+        is_approved: true,
         approved_at: "2019-08-28T11:50:46-04:00",
       },
       ro: {
@@ -1855,6 +1920,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:04-04:00",
       },
       pt: {
+        translation: "Tarte de maçã",
+        is_approved: true,
+        approved_at: "2019-03-26T15:53:20-04:00",
+      },
+      ptbr: {
         translation: "Torta de maçã",
         is_approved: true,
         approved_at: "2018-03-31T09:57:19-04:00",
@@ -1973,6 +2043,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:05-04:00",
       },
       pt: {
+        translation: "Macieira",
+        is_approved: true,
+        approved_at: "2019-03-26T15:53:29-04:00",
+      },
+      ptbr: {
         translation: "Macieira",
         is_approved: true,
         approved_at: "2018-11-11T15:31:30-05:00",
@@ -2158,6 +2233,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-13T03:59:52-04:00",
       },
       pt: {
+        translation: "Aquarium",
+        is_approved: true,
+        approved_at: "2020-05-04T13:20:24-04:00",
+      },
+      ptbr: {
         translation: "Aquário",
         is_approved: true,
         approved_at: "2023-08-14T16:18:51-04:00",
@@ -2278,6 +2358,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arcade",
         is_approved: true,
+        approved_at: "2019-04-04T15:53:18-04:00",
+      },
+      ptbr: {
+        translation: "Arcade",
+        is_approved: true,
         approved_at: "2018-03-04T14:05:25-05:00",
       },
       ro: {
@@ -2396,6 +2481,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arqueiro",
         is_approved: true,
+        approved_at: "2019-03-25T17:18:52-04:00",
+      },
+      ptbr: {
+        translation: "Arqueiro",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:13-05:00",
       },
       ro: {
@@ -2502,6 +2592,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-04-05T05:00:28-04:00",
       },
       pt: {
+        translation: "Ártico",
+        is_approved: true,
+        approved_at: "2025-04-04T06:43:03-04:00",
+      },
+      ptbr: {
         translation: "Ártico",
         is_approved: true,
         approved_at: "2025-04-10T10:41:34-04:00",
@@ -2615,6 +2710,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T16:21:31-04:00",
       },
       pt: {
+        translation: "Armadura",
+        is_approved: true,
+        approved_at: "2020-10-13T15:47:36-04:00",
+      },
+      ptbr: {
         translation: "Armaduras",
         is_approved: true,
         approved_at: "2021-10-17T16:19:10-04:00",
@@ -2747,6 +2847,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T10:05:25-04:00",
       },
       pt: {
+        translation: "Exército",
+        is_approved: true,
+        approved_at: "2019-03-26T15:55:54-04:00",
+      },
+      ptbr: {
         translation: "Exército",
         is_approved: true,
         approved_at: "2018-03-31T09:57:40-04:00",
@@ -2907,6 +3012,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Flecha",
         is_approved: true,
+        approved_at: "2020-01-15T19:16:16-05:00",
+      },
+      ptbr: {
+        translation: "Flecha",
+        is_approved: true,
         approved_at: "2019-08-31T23:30:32-04:00",
       },
       ro: {
@@ -3039,6 +3149,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arte",
         is_approved: true,
+        approved_at: "2019-03-26T15:56:02-04:00",
+      },
+      ptbr: {
+        translation: "Arte",
+        is_approved: true,
         approved_at: "2018-03-31T09:57:41-04:00",
       },
       ro: {
@@ -3155,6 +3270,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-18T14:49:22-04:00",
       },
       pt: {
+        translation: "Astronauta",
+        is_approved: true,
+        approved_at: "2021-08-13T18:53:55-04:00",
+      },
+      ptbr: {
         translation: "Astronauta",
         is_approved: true,
         approved_at: "2018-03-31T09:57:43-04:00",
@@ -3275,6 +3395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Atmosfera",
         is_approved: true,
+        approved_at: "2019-03-26T15:56:08-04:00",
+      },
+      ptbr: {
+        translation: "Atmosfera",
+        is_approved: true,
         approved_at: "2018-03-31T09:57:44-04:00",
       },
       ro: {
@@ -3393,6 +3518,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Átomo",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:00-04:00",
+      },
+      ptbr: {
+        translation: "Átomo",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:31-04:00",
       },
       ro: {
@@ -3504,6 +3634,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:16-04:00",
       },
       pt: {
+        translation: "Austrália",
+        is_approved: true,
+        approved_at: "2019-03-26T15:56:13-04:00",
+      },
+      ptbr: {
         translation: "Austrália",
         is_approved: true,
         approved_at: "2018-03-31T09:57:44-04:00",
@@ -3622,6 +3757,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:24-04:00",
       },
       pt: {
+        translation: "Outono",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:13-04:00",
+      },
+      ptbr: {
         translation: "Outono",
         is_approved: true,
         approved_at: "2018-03-09T16:44:15-05:00",
@@ -3756,6 +3896,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Abacate",
         is_approved: true,
+        approved_at: "2019-03-26T15:56:28-04:00",
+      },
+      ptbr: {
+        translation: "Abacate",
+        is_approved: true,
         approved_at: "2018-11-11T15:31:35-05:00",
       },
       ro: {
@@ -3886,6 +4031,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:17-04:00",
       },
       pt: {
+        translation: "Prémio",
+        is_approved: true,
+        approved_at: "2019-03-26T15:56:30-04:00",
+      },
+      ptbr: {
         translation: "Prêmio",
         is_approved: true,
         approved_at: "2018-11-11T15:31:36-05:00",
@@ -4020,6 +4170,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Machado",
         is_approved: true,
+        approved_at: "2020-01-27T17:03:35-05:00",
+      },
+      ptbr: {
+        translation: "Machado",
+        is_approved: true,
         approved_at: "2018-03-31T09:57:51-04:00",
       },
       ro: {
@@ -4136,6 +4291,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:02:16-05:00",
       },
       pt: {
+        translation: "Axolote",
+        is_approved: true,
+        approved_at: "2025-02-26T16:59:56-05:00",
+      },
+      ptbr: {
         translation: "Axolote",
         is_approved: true,
         approved_at: "2025-01-30T14:42:07-05:00",
@@ -4315,6 +4475,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:18-04:00",
       },
       pt: {
+        translation: "Bebé",
+        is_approved: true,
+        approved_at: "2019-03-26T15:56:53-04:00",
+      },
+      ptbr: {
         translation: "Bebê",
         is_approved: true,
         approved_at: "2018-03-31T09:57:52-04:00",
@@ -4435,6 +4600,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mortal para trás",
         is_approved: true,
+        approved_at: "2019-03-26T15:57:47-04:00",
+      },
+      ptbr: {
+        translation: "Mortal para trás",
+        is_approved: true,
         approved_at: "2022-05-06T21:42:19-04:00",
       },
       ro: {
@@ -4551,6 +4721,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:20-04:00",
       },
       pt: {
+        translation: "Mochila",
+        is_approved: true,
+        approved_at: "2019-03-26T15:57:35-04:00",
+      },
+      ptbr: {
         translation: "Mochila",
         is_approved: true,
         approved_at: "2018-11-11T15:31:39-05:00",
@@ -4671,6 +4846,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bacon",
         is_approved: true,
+        approved_at: "2019-03-25T17:19:15-04:00",
+      },
+      ptbr: {
+        translation: "Bacon",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:18-05:00",
       },
       ro: {
@@ -4787,6 +4967,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:21-04:00",
       },
       pt: {
+        translation: "Emblema",
+        is_approved: true,
+        approved_at: "2019-03-26T15:58:20-04:00",
+      },
+      ptbr: {
         translation: "Insígnia",
         is_approved: true,
         approved_at: "2018-11-11T15:31:40-05:00",
@@ -4996,6 +5181,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-08T12:03:52-04:00",
       },
       pt: {
+        translation: "Sacola / Mala",
+        is_approved: true,
+        approved_at: "2019-03-26T15:59:00-04:00",
+      },
+      ptbr: {
         translation: "Mala",
         is_approved: true,
         approved_at: "2018-03-25T17:26:46-04:00",
@@ -5130,6 +5320,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Baguete",
         is_approved: true,
+        approved_at: "2019-03-26T15:59:12-04:00",
+      },
+      ptbr: {
+        translation: "Baguete",
+        is_approved: true,
         approved_at: "2018-11-11T15:31:43-05:00",
       },
       ro: {
@@ -5262,6 +5457,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Padaria",
         is_approved: true,
+        approved_at: "2019-03-26T15:59:25-04:00",
+      },
+      ptbr: {
+        translation: "Padaria",
+        is_approved: true,
         approved_at: "2018-03-31T09:58:00-04:00",
       },
       ro: {
@@ -5383,6 +5583,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:26-04:00",
       },
       pt: {
+        translation: "Careca",
+        is_approved: true,
+        approved_at: "2019-03-26T16:00:02-04:00",
+      },
+      ptbr: {
         translation: "Careca",
         is_approved: true,
         approved_at: "2018-11-11T15:31:45-05:00",
@@ -5517,6 +5722,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balão",
         is_approved: true,
+        approved_at: "2020-04-26T09:07:52-04:00",
+      },
+      ptbr: {
+        translation: "Balão",
+        is_approved: true,
         approved_at: "2018-03-31T09:58:03-04:00",
       },
       ro: {
@@ -5633,6 +5843,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:37-04:00",
       },
       pt: {
+        translation: "Bambu",
+        is_approved: true,
+        approved_at: "2019-03-26T16:00:07-04:00",
+      },
+      ptbr: {
         translation: "Bambu",
         is_approved: true,
         approved_at: "2018-11-11T15:31:46-05:00",
@@ -5789,6 +6004,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Banda",
         is_approved: true,
+        approved_at: "2019-03-26T16:02:16-04:00",
+      },
+      ptbr: {
+        translation: "Banda",
+        is_approved: true,
         approved_at: "2018-11-11T15:30:46-05:00",
       },
       ro: {
@@ -5905,6 +6125,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:41-04:00",
       },
       pt: {
+        translation: "Ligadura / Penso",
+        is_approved: true,
+        approved_at: "2019-03-26T16:03:02-04:00",
+      },
+      ptbr: {
         translation: "Bandagem",
         is_approved: true,
         approved_at: "2018-11-11T15:31:49-05:00",
@@ -6023,6 +6248,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:46-04:00",
       },
       pt: {
+        translation: "Banjo",
+        is_approved: true,
+        approved_at: "2019-03-26T16:03:12-04:00",
+      },
+      ptbr: {
         translation: "Banjo",
         is_approved: true,
         approved_at: "2018-11-11T15:31:51-05:00",
@@ -6186,6 +6416,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:55:47-04:00",
       },
       pt: {
+        translation: "Banco",
+        is_approved: true,
+        approved_at: "2020-10-13T17:47:01-04:00",
+      },
+      ptbr: {
         translation: "Banco",
         is_approved: true,
         approved_at: "2019-07-22T20:20:32-04:00",
@@ -6357,6 +6592,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:37:06-04:00",
       },
       pt: {
+        translation: "Estandarte",
+        is_approved: true,
+        approved_at: "2020-12-02T11:20:33-05:00",
+      },
+      ptbr: {
         translation: "Estandarte",
         is_approved: true,
         approved_at: "2022-04-19T14:29:01-04:00",
@@ -6539,6 +6779,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bar",
         is_approved: true,
+        approved_at: "2019-03-29T16:02:37-04:00",
+      },
+      ptbr: {
+        translation: "Bar",
+        is_approved: true,
         approved_at: "2019-06-04T21:31:00-04:00",
       },
       ro: {
@@ -6660,6 +6905,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:53-04:00",
       },
       pt: {
+        translation: "Barbecue / Churrasco",
+        is_approved: true,
+        approved_at: "2019-03-26T16:04:49-04:00",
+      },
+      ptbr: {
         translation: "Churrasco",
         is_approved: true,
         approved_at: "2018-11-11T15:32:01-05:00",
@@ -6778,6 +7028,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:57-04:00",
       },
       pt: {
+        translation: "Código de barras",
+        is_approved: true,
+        approved_at: "2019-03-26T16:04:59-04:00",
+      },
+      ptbr: {
         translation: "Código de barra",
         is_approved: true,
         approved_at: "2022-05-12T07:19:32-04:00",
@@ -6968,6 +7223,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Celeiro",
         is_approved: true,
+        approved_at: "2020-10-13T17:47:00-04:00",
+      },
+      ptbr: {
+        translation: "Celeiro",
+        is_approved: true,
         approved_at: "2019-08-19T10:12:25-04:00",
       },
       ro: {
@@ -7084,6 +7344,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:36:59-04:00",
       },
       pt: {
+        translation: "Barril",
+        is_approved: true,
+        approved_at: "2019-03-26T16:05:02-04:00",
+      },
+      ptbr: {
         translation: "Barril",
         is_approved: true,
         approved_at: "2018-11-11T15:32:11-05:00",
@@ -7218,6 +7483,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Barreira",
         is_approved: true,
+        approved_at: "2019-11-13T19:08:41-05:00",
+      },
+      ptbr: {
+        translation: "Barreira",
+        is_approved: true,
         approved_at: "2018-11-17T20:40:18-05:00",
       },
       ro: {
@@ -7334,6 +7604,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-07-24T17:08:16-04:00",
       },
       pt: {
+        translation: "Basebol",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:17-04:00",
+      },
+      ptbr: {
         translation: "Beisebol",
         is_approved: true,
         approved_at: "2019-08-08T16:39:53-04:00",
@@ -7452,6 +7727,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-07-24T17:09:11-04:00",
       },
       pt: {
+        translation: "Campo de basebol",
+        is_approved: true,
+        approved_at: "2019-03-26T16:07:09-04:00",
+      },
+      ptbr: {
         translation: "Campo de beisebol",
         is_approved: true,
         approved_at: "2019-08-08T16:39:46-04:00",
@@ -7565,6 +7845,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:02-05:00",
       },
       pt: {
+        translation: "Luva de basebol",
+        is_approved: true,
+        approved_at: "2025-02-26T16:59:57-05:00",
+      },
+      ptbr: {
         translation: "Luva de beisebol",
         is_approved: true,
         approved_at: "2025-02-01T13:08:10-05:00",
@@ -7707,6 +7992,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cesta",
         is_approved: true,
+        approved_at: "2021-05-10T17:11:47-04:00",
+      },
+      ptbr: {
+        translation: "Cesta",
+        is_approved: true,
         approved_at: "2018-11-11T15:32:38-05:00",
       },
       ro: {
@@ -7823,6 +8113,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:40:41-04:00",
       },
       pt: {
+        translation: "Basquetebol",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:18-04:00",
+      },
+      ptbr: {
         translation: "Basquete",
         is_approved: true,
         approved_at: "2019-09-28T17:03:34-04:00",
@@ -7941,6 +8236,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:37:10-04:00",
       },
       pt: {
+        translation: "Campo de basquetebol",
+        is_approved: true,
+        approved_at: "2019-03-26T16:08:21-04:00",
+      },
+      ptbr: {
         translation: "Quadra de basquete",
         is_approved: true,
         approved_at: "2019-08-08T16:40:21-04:00",
@@ -8054,6 +8354,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:04-05:00",
       },
       pt: {
+        translation: "Bastião",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:14-05:00",
+      },
+      ptbr: {
         translation: "Bastião",
         is_approved: true,
         approved_at: "2025-01-30T14:42:10-05:00",
@@ -8181,6 +8486,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:19:38-04:00",
       },
       pt: {
+        translation: "Morcego",
+        is_approved: true,
+        approved_at: "2020-05-14T19:24:02-04:00",
+      },
+      ptbr: {
         translation: "Morcego",
         is_approved: true,
         approved_at: "2019-08-28T11:50:25-04:00",
@@ -8472,6 +8782,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:36-04:00",
       },
       pt: {
+        translation: "Banheira",
+        is_approved: true,
+        approved_at: "2021-05-20T18:26:09-04:00",
+      },
+      ptbr: {
         translation: "Banho",
         is_approved: true,
         approved_at: "2018-03-25T17:26:59-04:00",
@@ -8668,6 +8983,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:37:25-04:00",
       },
       pt: {
+        translation: "Casa de banho",
+        is_approved: true,
+        approved_at: "2019-03-26T16:09:38-04:00",
+      },
+      ptbr: {
         translation: "Banheiro",
         is_approved: true,
         approved_at: "2018-11-14T14:08:03-05:00",
@@ -8800,6 +9120,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:56:41-04:00",
       },
       pt: {
+        translation: "Bateria / Pilha",
+        is_approved: true,
+        approved_at: "2019-03-26T16:11:25-04:00",
+      },
+      ptbr: {
         translation: "Bateria",
         is_approved: true,
         approved_at: "2018-03-09T16:44:35-05:00",
@@ -8918,6 +9243,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:37:30-04:00",
       },
       pt: {
+        translation: "Navio de batalha",
+        is_approved: true,
+        approved_at: "2019-03-26T16:12:41-04:00",
+      },
+      ptbr: {
         translation: "Navio de guerra",
         is_approved: true,
         approved_at: "2018-11-14T14:08:13-05:00",
@@ -9038,6 +9368,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Praia",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:21-04:00",
+      },
+      ptbr: {
+        translation: "Praia",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:36-05:00",
       },
       ro: {
@@ -9156,6 +9491,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bola de praia",
         is_approved: true,
+        approved_at: "2021-05-20T18:32:01-04:00",
+      },
+      ptbr: {
+        translation: "Bola de praia",
+        is_approved: true,
         approved_at: "2019-08-08T16:40:38-04:00",
       },
       ro: {
@@ -9272,6 +9612,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T11:24:27-04:00",
       },
       pt: {
+        translation: "Festa na praia",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:26-04:00",
+      },
+      ptbr: {
         translation: "Festa na praia",
         is_approved: true,
         approved_at: "2023-08-14T16:44:56-04:00",
@@ -9436,6 +9781,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gorro",
         is_approved: true,
+        approved_at: "2019-03-26T16:14:16-04:00",
+      },
+      ptbr: {
+        translation: "Gorro",
+        is_approved: true,
         approved_at: "2018-11-14T14:08:41-05:00",
       },
       ro: {
@@ -9552,6 +9902,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:05-04:00",
       },
       pt: {
+        translation: "Feijões",
+        is_approved: true,
+        approved_at: "2019-03-26T16:14:19-04:00",
+      },
+      ptbr: {
         translation: "Feijões",
         is_approved: true,
         approved_at: "2018-11-14T09:42:35-05:00",
@@ -9716,6 +10071,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Urso",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:22-04:00",
+      },
+      ptbr: {
+        translation: "Urso",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:38-05:00",
       },
       ro: {
@@ -9861,6 +10221,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Barba",
         is_approved: true,
+        approved_at: "2019-03-26T16:14:25-04:00",
+      },
+      ptbr: {
+        translation: "Barba",
+        is_approved: true,
         approved_at: "2018-11-14T14:08:43-05:00",
       },
       ro: {
@@ -9977,6 +10342,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-06-13T14:56:06-04:00",
       },
       pt: {
+        translation: "Casto",
+        is_approved: true,
+        approved_at: "2020-02-18T18:12:13-05:00",
+      },
+      ptbr: {
         translation: "Castor",
         is_approved: true,
         approved_at: "2019-11-04T07:28:57-05:00",
@@ -10097,6 +10467,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bed Wars",
         is_approved: true,
+        approved_at: "2019-04-04T17:10:59-04:00",
+      },
+      ptbr: {
+        translation: "Bed Wars",
+        is_approved: true,
         approved_at: "2018-09-14T12:35:28-04:00",
       },
       ro: {
@@ -10213,6 +10588,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:10-04:00",
       },
       pt: {
+        translation: "Horas de dormir",
+        is_approved: true,
+        approved_at: "2019-03-26T16:14:40-04:00",
+      },
+      ptbr: {
         translation: "Hora de dormir",
         is_approved: true,
         approved_at: "2018-11-14T14:36:03-05:00",
@@ -10331,6 +10711,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:41:10-04:00",
       },
       pt: {
+        translation: "Abelha",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:23-04:00",
+      },
+      ptbr: {
         translation: "Abelha",
         is_approved: true,
         approved_at: "2018-03-09T16:44:44-05:00",
@@ -10504,6 +10889,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bife",
         is_approved: true,
+        approved_at: "2019-03-26T16:14:45-04:00",
+      },
+      ptbr: {
+        translation: "Bife",
+        is_approved: true,
         approved_at: "2019-09-09T14:20:38-04:00",
       },
       ro: {
@@ -10647,6 +11037,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:15-04:00",
       },
       pt: {
+        translation: "Colmeia",
+        is_approved: true,
+        approved_at: "2019-03-26T16:14:47-04:00",
+      },
+      ptbr: {
         translation: "Colmeia",
         is_approved: true,
         approved_at: "2018-11-14T14:36:07-05:00",
@@ -10846,6 +11241,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Besouro",
         is_approved: true,
+        approved_at: "2019-03-26T16:14:51-04:00",
+      },
+      ptbr: {
+        translation: "Besouro",
+        is_approved: true,
         approved_at: "2018-11-14T14:36:08-05:00",
       },
       ro: {
@@ -10982,6 +11382,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sino",
         is_approved: true,
+        approved_at: "2019-03-26T16:14:53-04:00",
+      },
+      ptbr: {
+        translation: "Sino",
+        is_approved: true,
         approved_at: "2018-11-11T15:31:01-05:00",
       },
       ro: {
@@ -11098,6 +11503,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:45:46-04:00",
       },
       pt: {
+        translation: "Pimento",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:06-04:00",
+      },
+      ptbr: {
         translation: "Pimentão",
         is_approved: true,
         approved_at: "2024-10-05T12:31:05-04:00",
@@ -11229,6 +11639,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-08T12:11:07-04:00",
       },
       pt: {
+        translation: "Cinto",
+        is_approved: true,
+        approved_at: "2019-03-26T16:14:55-04:00",
+      },
+      ptbr: {
         translation: "Cinto",
         is_approved: true,
         approved_at: "2018-03-25T17:27:00-04:00",
@@ -11411,6 +11826,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Banco",
         is_approved: true,
+        approved_at: "2020-12-18T17:16:02-05:00",
+      },
+      ptbr: {
+        translation: "Banco",
+        is_approved: true,
         approved_at: "2018-11-14T14:36:12-05:00",
       },
       ro: {
@@ -11567,6 +11987,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:55-04:00",
       },
       pt: {
+        translation: "Frutos silvestres",
+        is_approved: true,
+        approved_at: "2019-03-26T16:15:40-04:00",
+      },
+      ptbr: {
         translation: "Bagas",
         is_approved: true,
         approved_at: "2018-11-14T14:36:35-05:00",
@@ -11906,6 +12331,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bicicleta",
         is_approved: true,
+        approved_at: "2019-03-25T17:21:38-04:00",
+      },
+      ptbr: {
+        translation: "Bicicleta",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:45-05:00",
       },
       ro: {
@@ -12036,6 +12466,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:29-04:00",
       },
       pt: {
+        translation: "Pé Grande",
+        is_approved: true,
+        approved_at: "2019-03-26T16:16:11-04:00",
+      },
+      ptbr: {
         translation: "Pé grande",
         is_approved: true,
         approved_at: "2022-05-06T21:42:54-04:00",
@@ -12367,6 +12802,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bicicleta",
         is_approved: true,
+        approved_at: "2019-03-26T16:16:14-04:00",
+      },
+      ptbr: {
+        translation: "Bicicleta",
+        is_approved: true,
         approved_at: "2018-11-14T09:44:13-05:00",
       },
       ro: {
@@ -12478,6 +12918,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T16:14:27-04:00",
       },
       pt: {
+        translation: "Ciclovia",
+        is_approved: true,
+        approved_at: "2024-10-27T10:49:48-04:00",
+      },
+      ptbr: {
         translation: "Ciclovia",
         is_approved: true,
         approved_at: "2024-10-05T12:31:15-04:00",
@@ -12807,6 +13252,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lixo",
         is_approved: true,
+        approved_at: "2021-07-12T15:57:56-04:00",
+      },
+      ptbr: {
+        translation: "Lixo",
+        is_approved: true,
         approved_at: "2019-06-23T10:04:12-04:00",
       },
       ro: {
@@ -12925,6 +13375,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bingo",
         is_approved: true,
+        approved_at: "2019-03-26T16:17:11-04:00",
+      },
+      ptbr: {
+        translation: "Bingo",
+        is_approved: true,
         approved_at: "2018-11-14T14:37:34-05:00",
       },
       ro: {
@@ -13041,6 +13496,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:24-05:00",
       },
       pt: {
+        translation: "Binóculos",
+        is_approved: true,
+        approved_at: "2019-03-26T16:17:13-04:00",
+      },
+      ptbr: {
         translation: "Binóculos",
         is_approved: true,
         approved_at: "2018-11-14T14:37:36-05:00",
@@ -13175,6 +13635,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pássaro",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:25-04:00",
+      },
+      ptbr: {
+        translation: "Pássaro",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:47-05:00",
       },
       ro: {
@@ -13291,6 +13756,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:38:31-04:00",
       },
       pt: {
+        translation: "Fonte de pássaros",
+        is_approved: true,
+        approved_at: "2024-11-06T09:39:09-05:00",
+      },
+      ptbr: {
         translation: "Banheira de pássaro",
         is_approved: true,
         approved_at: "2024-10-06T16:32:34-04:00",
@@ -13404,6 +13874,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-04T20:19:15-04:00",
       },
       pt: {
+        translation: "Bird Cage",
+        is_approved: true,
+        approved_at: "2023-09-18T14:36:03-04:00",
+      },
+      ptbr: {
         translation: "Gaiola de pássaros",
         is_approved: true,
         approved_at: "2024-10-04T12:08:32-04:00",
@@ -13536,6 +14011,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:06-05:00",
       },
       pt: {
+        translation: "Casa de pássaros",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:15-05:00",
+      },
+      ptbr: {
         translation: "Casa de pássaro",
         is_approved: true,
         approved_at: "2025-02-01T13:08:12-05:00",
@@ -13663,6 +14143,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T10:15:03-04:00",
       },
       pt: {
+        translation: "Ninho",
+        is_approved: true,
+        approved_at: "2019-03-26T16:18:25-04:00",
+      },
+      ptbr: {
         translation: "Ninho de pássaro",
         is_approved: true,
         approved_at: "2023-08-24T13:45:29-04:00",
@@ -13783,6 +14268,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Aniversário",
         is_approved: true,
+        approved_at: "2019-03-26T16:20:19-04:00",
+      },
+      ptbr: {
+        translation: "Aniversário",
+        is_approved: true,
         approved_at: "2018-11-14T09:44:14-05:00",
       },
       ro: {
@@ -13899,6 +14389,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T10:15:20-04:00",
       },
       pt: {
+        translation: "Festa de aniversário",
+        is_approved: true,
+        approved_at: "2019-03-26T16:20:26-04:00",
+      },
+      ptbr: {
         translation: "Festa de aniversário",
         is_approved: true,
         approved_at: "2019-08-08T16:41:57-04:00",
@@ -14180,6 +14675,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Biscoito",
         is_approved: true,
+        approved_at: "2019-03-26T16:20:29-04:00",
+      },
+      ptbr: {
+        translation: "Biscoito",
+        is_approved: true,
         approved_at: "2018-11-14T14:39:37-05:00",
       },
       ro: {
@@ -14310,6 +14810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:48:39-04:00",
       },
       pt: {
+        translation: "Bisonte",
+        is_approved: true,
+        approved_at: "2024-10-27T10:49:59-04:00",
+      },
+      ptbr: {
         translation: "Bisão",
         is_approved: true,
         approved_at: "2024-10-04T12:08:34-04:00",
@@ -14423,6 +14928,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-11-03T05:54:06-05:00",
       },
       pt: {
+        translation: "Buraco negro",
+        is_approved: true,
+        approved_at: "2020-06-16T17:15:34-04:00",
+      },
+      ptbr: {
         translation: "Buraco negro",
         is_approved: true,
         approved_at: "2019-08-08T16:42:04-04:00",
@@ -14568,6 +15078,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-28T07:06:05-04:00",
       },
       pt: {
+        translation: "Ardósia",
+        is_approved: true,
+        approved_at: "2019-03-26T16:20:38-04:00",
+      },
+      ptbr: {
         translation: "Quadro negro",
         is_approved: true,
         approved_at: "2022-05-06T21:43:05-04:00",
@@ -14686,6 +15201,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-09T09:35:58-04:00",
       },
       pt: {
+        translation: "Ferreiro",
+        is_approved: true,
+        approved_at: "2020-01-30T18:01:15-05:00",
+      },
+      ptbr: {
         translation: "Ferreiro",
         is_approved: true,
         approved_at: "2019-09-08T07:51:29-04:00",
@@ -14854,6 +15374,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cobertor",
         is_approved: true,
+        approved_at: "2019-03-26T16:20:40-04:00",
+      },
+      ptbr: {
+        translation: "Cobertor",
+        is_approved: true,
         approved_at: "2018-11-11T15:33:13-05:00",
       },
       ro: {
@@ -14972,6 +15497,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Blaze",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:28-04:00",
+      },
+      ptbr: {
+        translation: "Blaze",
+        is_approved: true,
         approved_at: "2018-03-09T16:44:56-05:00",
       },
       ro: {
@@ -15088,6 +15618,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:41-04:00",
       },
       pt: {
+        translation: "Batedeira",
+        is_approved: true,
+        approved_at: "2019-03-26T16:28:28-04:00",
+      },
+      ptbr: {
         translation: "Liquidificador",
         is_approved: true,
         approved_at: "2018-11-11T15:33:14-05:00",
@@ -15378,6 +15913,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dirigível",
         is_approved: true,
+        approved_at: "2019-03-26T16:28:35-04:00",
+      },
+      ptbr: {
+        translation: "Dirigível",
+        is_approved: true,
         approved_at: "2018-11-11T15:33:24-05:00",
       },
       ro: {
@@ -15508,6 +16048,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:42:42-04:00",
       },
       pt: {
+        translation: "Nevão",
+        is_approved: true,
+        approved_at: "2019-03-25T17:22:23-04:00",
+      },
+      ptbr: {
         translation: "Nevasca",
         is_approved: true,
         approved_at: "2018-09-11T21:15:47-04:00",
@@ -15628,6 +16173,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Blocos",
         is_approved: true,
+        approved_at: "2019-08-28T11:58:53-04:00",
+      },
+      ptbr: {
+        translation: "Blocos",
+        is_approved: true,
         approved_at: "2024-10-19T17:12:08-04:00",
       },
       ro: {
@@ -15741,6 +16291,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Projeto",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:25-05:00",
+      },
+      ptbr: {
+        translation: "Projeto",
+        is_approved: true,
         approved_at: "2025-02-01T13:08:16-05:00",
       },
       ro: {
@@ -15852,6 +16407,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T10:17:30-04:00",
       },
       pt: {
+        translation: "Jogo de tabuleiro",
+        is_approved: true,
+        approved_at: "2019-03-26T16:28:58-04:00",
+      },
+      ptbr: {
         translation: "Jogo de tabuleiro",
         is_approved: true,
         approved_at: "2022-05-06T21:43:22-04:00",
@@ -16081,6 +16641,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Barco",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:33-04:00",
+      },
+      ptbr: {
+        translation: "Barco",
+        is_approved: true,
         approved_at: "2021-10-17T20:10:56-04:00",
       },
       ro: {
@@ -16197,6 +16762,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:47:07-04:00",
       },
       pt: {
+        translation: "Bomba",
+        is_approved: true,
+        approved_at: "2020-03-01T11:49:47-05:00",
+      },
+      ptbr: {
         translation: "Bomba",
         is_approved: true,
         approved_at: "2019-08-05T12:30:06-04:00",
@@ -16357,6 +16927,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Osso",
         is_approved: true,
+        approved_at: "2020-01-16T19:08:51-05:00",
+      },
+      ptbr: {
+        translation: "Osso",
+        is_approved: true,
         approved_at: "2018-11-17T20:40:23-05:00",
       },
       ro: {
@@ -16487,6 +17062,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:24:36-04:00",
       },
       pt: {
+        translation: "Livro",
+        is_approved: true,
+        approved_at: "2020-01-15T19:17:56-05:00",
+      },
+      ptbr: {
         translation: "Livro",
         is_approved: true,
         approved_at: "2018-11-14T09:44:16-05:00",
@@ -16647,6 +17227,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estante de livros",
         is_approved: true,
+        approved_at: "2019-03-26T16:29:22-04:00",
+      },
+      ptbr: {
+        translation: "Estante de livros",
+        is_approved: true,
         approved_at: "2022-04-15T09:48:23-04:00",
       },
       ro: {
@@ -16777,6 +17362,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:56-04:00",
       },
       pt: {
+        translation: "Marcador de páginas",
+        is_approved: true,
+        approved_at: "2019-03-26T16:29:43-04:00",
+      },
+      ptbr: {
         translation: "Marca-páginas",
         is_approved: true,
         approved_at: "2023-08-24T13:46:56-04:00",
@@ -16924,6 +17514,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Livraria",
         is_approved: true,
+        approved_at: "2019-03-26T16:29:52-04:00",
+      },
+      ptbr: {
+        translation: "Livraria",
+        is_approved: true,
         approved_at: "2019-08-08T16:42:22-04:00",
       },
       ro: {
@@ -17040,6 +17635,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:58-04:00",
       },
       pt: {
+        translation: "Bumerangue",
+        is_approved: true,
+        approved_at: "2024-08-11T19:36:03-04:00",
+      },
+      ptbr: {
         translation: "Bumerangue",
         is_approved: true,
         approved_at: "2018-11-11T15:33:37-05:00",
@@ -17239,6 +17839,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Botas",
         is_approved: true,
+        approved_at: "2019-04-29T07:10:39-04:00",
+      },
+      ptbr: {
+        translation: "Botas",
+        is_approved: true,
         approved_at: "2018-03-04T15:01:15-05:00",
       },
       ro: {
@@ -17369,6 +17974,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:00:59-04:00",
       },
       pt: {
+        translation: "Orla",
+        is_approved: true,
+        approved_at: "2020-04-13T16:21:45-04:00",
+      },
+      ptbr: {
         translation: "Borda",
         is_approved: true,
         approved_at: "2018-11-11T15:33:39-05:00",
@@ -17516,6 +18126,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Garrafa",
         is_approved: true,
+        approved_at: "2019-03-26T16:30:46-04:00",
+      },
+      ptbr: {
+        translation: "Garrafa",
+        is_approved: true,
         approved_at: "2018-11-11T15:33:40-05:00",
       },
       ro: {
@@ -17632,6 +18247,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-07-18T15:51:42-04:00",
       },
       pt: {
+        translation: "Castelo insuflável",
+        is_approved: true,
+        approved_at: "2019-03-26T16:31:04-04:00",
+      },
+      ptbr: {
         translation: "Castelo inflável",
         is_approved: true,
         approved_at: "2022-04-16T10:59:23-04:00",
@@ -17750,6 +18370,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T10:18:58-04:00",
       },
       pt: {
+        translation: "Arco e flecha",
+        is_approved: true,
+        approved_at: "2019-03-26T16:31:09-04:00",
+      },
+      ptbr: {
         translation: "Arco e flecha",
         is_approved: true,
         approved_at: "2019-08-08T16:43:13-04:00",
@@ -17921,6 +18546,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:42:50-04:00",
       },
       pt: {
+        translation: "Laçarote",
+        is_approved: true,
+        approved_at: "2019-03-25T17:25:44-04:00",
+      },
+      ptbr: {
         translation: "Gravata borboleta",
         is_approved: true,
         approved_at: "2019-12-13T11:19:11-05:00",
@@ -18094,6 +18724,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tigela",
         is_approved: true,
+        approved_at: "2019-11-13T19:09:36-05:00",
+      },
+      ptbr: {
+        translation: "Tigela",
+        is_approved: true,
         approved_at: "2019-08-31T23:30:42-04:00",
       },
       ro: {
@@ -18250,6 +18885,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:29-04:00",
       },
       pt: {
+        translation: "Bowling",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:35-04:00",
+      },
+      ptbr: {
         translation: "Boliche",
         is_approved: true,
         approved_at: "2018-09-11T21:18:27-04:00",
@@ -18395,6 +19035,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-08T12:15:19-04:00",
       },
       pt: {
+        translation: "Bola de bowling",
+        is_approved: true,
+        approved_at: "2019-03-26T16:31:28-04:00",
+      },
+      ptbr: {
         translation: "Bola de boliche",
         is_approved: true,
         approved_at: "2019-08-08T16:43:23-04:00",
@@ -18513,6 +19158,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-08T12:15:40-04:00",
       },
       pt: {
+        translation: "Pino de bowling",
+        is_approved: true,
+        approved_at: "2019-03-26T16:31:30-04:00",
+      },
+      ptbr: {
         translation: "Pino de boliche",
         is_approved: true,
         approved_at: "2019-08-08T16:43:27-04:00",
@@ -18633,6 +19283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caixa de chocolates",
         is_approved: true,
+        approved_at: "2019-03-26T16:31:43-04:00",
+      },
+      ptbr: {
+        translation: "Caixa de chocolates",
+        is_approved: true,
         approved_at: "2018-11-17T20:40:51-05:00",
       },
       ro: {
@@ -18751,6 +19406,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ringue de boxe",
         is_approved: true,
+        approved_at: "2019-03-26T16:32:05-04:00",
+      },
+      ptbr: {
+        translation: "Ringue de boxe",
+        is_approved: true,
         approved_at: "2019-08-08T16:43:46-04:00",
       },
       ro: {
@@ -18867,6 +19527,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:03-04:00",
       },
       pt: {
+        translation: "Rapaz",
+        is_approved: true,
+        approved_at: "2019-03-26T16:32:07-04:00",
+      },
+      ptbr: {
         translation: "Menino",
         is_approved: true,
         approved_at: "2018-03-25T17:26:38-04:00",
@@ -18985,6 +19650,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:04-04:00",
       },
       pt: {
+        translation: "Bracelete",
+        is_approved: true,
+        approved_at: "2019-03-26T16:32:09-04:00",
+      },
+      ptbr: {
         translation: "Pulseira",
         is_approved: true,
         approved_at: "2018-11-17T20:41:21-05:00",
@@ -19103,6 +19773,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:05-04:00",
       },
       pt: {
+        translation: "Cérebro",
+        is_approved: true,
+        approved_at: "2019-03-26T16:32:11-04:00",
+      },
+      ptbr: {
         translation: "Cérebro",
         is_approved: true,
         approved_at: "2018-11-17T21:16:48-05:00",
@@ -19235,6 +19910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:37-04:00",
       },
       pt: {
+        translation: "Pequeno-almoço",
+        is_approved: true,
+        approved_at: "2019-03-26T16:32:36-04:00",
+      },
+      ptbr: {
         translation: "Café da manhã",
         is_approved: true,
         approved_at: "2018-11-14T14:39:56-05:00",
@@ -19355,6 +20035,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tijolo",
         is_approved: true,
+        approved_at: "2019-11-13T18:50:56-05:00",
+      },
+      ptbr: {
+        translation: "Tijolo",
+        is_approved: true,
         approved_at: "2019-09-04T09:42:46-04:00",
       },
       ro: {
@@ -19473,6 +20158,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ponte",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:38-04:00",
+      },
+      ptbr: {
+        translation: "Ponte",
+        is_approved: true,
         approved_at: "2018-11-11T15:31:20-05:00",
       },
       ro: {
@@ -19589,6 +20279,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:17-04:00",
       },
       pt: {
+        translation: "Brócolos",
+        is_approved: true,
+        approved_at: "2019-03-26T16:33:49-04:00",
+      },
+      ptbr: {
         translation: "Brócolis",
         is_approved: true,
         approved_at: "2018-11-14T14:40:02-05:00",
@@ -19707,6 +20402,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:29-05:00",
       },
       pt: {
+        translation: "Partir",
+        is_approved: true,
+        approved_at: "2019-09-06T06:31:03-04:00",
+      },
+      ptbr: {
         translation: "Quebrado",
         is_approved: true,
         approved_at: "2018-11-14T14:40:04-05:00",
@@ -19839,6 +20539,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:22-04:00",
       },
       pt: {
+        translation: "Vassoura",
+        is_approved: true,
+        approved_at: "2019-03-26T16:34:17-04:00",
+      },
+      ptbr: {
         translation: "Vassoura",
         is_approved: true,
         approved_at: "2018-11-14T14:40:05-05:00",
@@ -20036,6 +20741,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:41:24-04:00",
       },
       pt: {
+        translation: "Escova",
+        is_approved: true,
+        approved_at: "2019-03-26T16:34:21-04:00",
+      },
+      ptbr: {
         translation: "Moita",
         is_approved: true,
         approved_at: "2018-11-14T14:40:29-05:00",
@@ -20170,6 +20880,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bolhas",
         is_approved: true,
+        approved_at: "2019-08-23T19:00:42-04:00",
+      },
+      ptbr: {
+        translation: "Bolhas",
+        is_approved: true,
         approved_at: "2018-11-14T14:40:37-05:00",
       },
       ro: {
@@ -20286,6 +21001,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:42:10-04:00",
       },
       pt: {
+        translation: "Buffet",
+        is_approved: true,
+        approved_at: "2019-03-26T16:35:00-04:00",
+      },
+      ptbr: {
         translation: "Bufê",
         is_approved: true,
         approved_at: "2023-08-14T16:35:48-04:00",
@@ -20563,6 +21283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Inseto",
         is_approved: true,
+        approved_at: "2019-03-26T16:36:24-04:00",
+      },
+      ptbr: {
+        translation: "Inseto",
+        is_approved: true,
         approved_at: "2018-11-14T14:40:47-05:00",
       },
       ro: {
@@ -20679,6 +21404,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T11:17:06-04:00",
       },
       pt: {
+        translation: "Build Battle",
+        is_approved: true,
+        approved_at: "2019-04-04T17:08:18-04:00",
+      },
+      ptbr: {
         translation: "Build Battle",
         is_approved: true,
         approved_at: "2018-09-14T12:32:37-04:00",
@@ -20839,6 +21569,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Construção",
         is_approved: true,
+        approved_at: "2021-05-20T18:28:24-04:00",
+      },
+      ptbr: {
+        translation: "Construção",
+        is_approved: true,
         approved_at: "2018-11-14T14:41:18-05:00",
       },
       ro: {
@@ -20971,6 +21706,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Touro",
         is_approved: true,
+        approved_at: "2019-03-26T16:36:51-04:00",
+      },
+      ptbr: {
+        translation: "Touro",
+        is_approved: true,
         approved_at: "2018-11-14T14:41:22-05:00",
       },
       ro: {
@@ -21087,6 +21827,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-09T10:01:16-04:00",
       },
       pt: {
+        translation: "Exterminador",
+        is_approved: true,
+        approved_at: "2020-03-08T12:03:09-04:00",
+      },
+      ptbr: {
         translation: "Raivoso",
         is_approved: true,
         approved_at: "2019-11-22T09:11:13-05:00",
@@ -21207,6 +21952,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Zangão",
         is_approved: true,
+        approved_at: "2019-03-28T11:11:34-04:00",
+      },
+      ptbr: {
+        translation: "Zangão",
+        is_approved: true,
         approved_at: "2023-08-24T15:55:53-04:00",
       },
       ro: {
@@ -21323,6 +22073,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-15T15:34:31-05:00",
       },
       pt: {
+        translation: "Carrinhos de choque",
+        is_approved: true,
+        approved_at: "2020-03-20T21:03:48-04:00",
+      },
+      ptbr: {
         translation: "Carrinho bate-bate",
         is_approved: true,
         approved_at: "2019-07-29T10:41:15-04:00",
@@ -21441,6 +22196,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-03-04T12:20:47-05:00",
       },
       pt: {
+        translation: "Beliche",
+        is_approved: true,
+        approved_at: "2019-03-26T16:38:15-04:00",
+      },
+      ptbr: {
         translation: "Beliche",
         is_approved: true,
         approved_at: "2018-11-14T14:41:51-05:00",
@@ -21568,6 +22328,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:09-05:00",
       },
       pt: {
+        translation: "Bunker",
+        is_approved: true,
+        approved_at: "2025-02-26T16:59:59-05:00",
+      },
+      ptbr: {
         translation: "Bunker",
         is_approved: true,
         approved_at: "2025-01-30T14:42:11-05:00",
@@ -21799,6 +22564,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-30T12:10:00-04:00",
       },
       pt: {
+        translation: "Coelhinho",
+        is_approved: true,
+        approved_at: "2020-03-23T08:40:45-04:00",
+      },
+      ptbr: {
         translation: "Coelho",
         is_approved: true,
         approved_at: "2018-11-14T14:41:52-05:00",
@@ -21999,6 +22769,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hambúrguer",
         is_approved: true,
+        approved_at: "2019-03-26T16:38:17-04:00",
+      },
+      ptbr: {
+        translation: "Hambúrguer",
+        is_approved: true,
         approved_at: "2018-11-20T19:59:55-05:00",
       },
       ro: {
@@ -22115,6 +22890,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-09-02T15:10:13-04:00",
       },
       pt: {
+        translation: "Paragem de autocarro",
+        is_approved: true,
+        approved_at: "2019-03-26T16:38:31-04:00",
+      },
+      ptbr: {
         translation: "Parada de ônibus",
         is_approved: true,
         approved_at: "2018-11-17T21:17:24-05:00",
@@ -22249,6 +23029,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arbusto",
         is_approved: true,
+        approved_at: "2019-03-26T16:38:34-04:00",
+      },
+      ptbr: {
+        translation: "Arbusto",
+        is_approved: true,
         approved_at: "2018-11-17T21:17:26-05:00",
       },
       ro: {
@@ -22379,6 +23164,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:42:44-04:00",
       },
       pt: {
+        translation: "Manteiga",
+        is_approved: true,
+        approved_at: "2019-03-26T16:39:25-04:00",
+      },
+      ptbr: {
         translation: "Manteiga",
         is_approved: true,
         approved_at: "2018-11-17T21:19:37-05:00",
@@ -22539,6 +23329,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Borboleta",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:43-04:00",
+      },
+      ptbr: {
+        translation: "Borboleta",
+        is_approved: true,
         approved_at: "2018-03-09T16:45:15-05:00",
       },
       ro: {
@@ -22669,6 +23464,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:21:53-04:00",
       },
       pt: {
+        translation: "Botão",
+        is_approved: true,
+        approved_at: "2020-01-16T18:08:37-05:00",
+      },
+      ptbr: {
         translation: "Botão",
         is_approved: true,
         approved_at: "2019-08-08T16:12:57-04:00",
@@ -22909,6 +23709,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Táxi",
         is_approved: true,
+        approved_at: "2019-03-26T16:40:02-04:00",
+      },
+      ptbr: {
+        translation: "Táxi",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:52-04:00",
       },
       ro: {
@@ -23039,6 +23844,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:42:54-04:00",
       },
       pt: {
+        translation: "Repolho",
+        is_approved: true,
+        approved_at: "2019-09-06T06:37:43-04:00",
+      },
+      ptbr: {
         translation: "Repolho",
         is_approved: true,
         approved_at: "2018-11-20T19:59:57-05:00",
@@ -23260,6 +24070,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:32-05:00",
       },
       pt: {
+        translation: "Cabana",
+        is_approved: true,
+        approved_at: "2020-02-03T19:33:39-05:00",
+      },
+      ptbr: {
         translation: "Cabine",
         is_approved: true,
         approved_at: "2018-11-20T20:01:23-05:00",
@@ -23474,6 +24289,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-08T12:19:27-04:00",
       },
       pt: {
+        translation: "Armário",
+        is_approved: true,
+        approved_at: "2019-09-06T06:38:03-04:00",
+      },
+      ptbr: {
         translation: "Gabinete",
         is_approved: true,
         approved_at: "2018-11-20T20:01:24-05:00",
@@ -23661,6 +24481,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cabo",
         is_approved: true,
+        approved_at: "2019-09-06T06:38:09-04:00",
+      },
+      ptbr: {
+        translation: "Cabo",
+        is_approved: true,
         approved_at: "2018-11-20T20:01:25-05:00",
       },
       ro: {
@@ -23777,6 +24602,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T03:59:11-04:00",
       },
       pt: {
+        translation: "Cacto",
+        is_approved: true,
+        approved_at: "2020-01-16T18:08:43-05:00",
+      },
+      ptbr: {
         translation: "Cacto",
         is_approved: true,
         approved_at: "2019-09-08T12:31:38-04:00",
@@ -23935,6 +24765,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:46-04:00",
       },
       pt: {
+        translation: "Jaula",
+        is_approved: true,
+        approved_at: "2021-04-14T16:20:17-04:00",
+      },
+      ptbr: {
         translation: "Jaula",
         is_approved: true,
         approved_at: "2018-11-20T20:01:28-05:00",
@@ -24125,6 +24960,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bolo",
         is_approved: true,
+        approved_at: "2020-01-16T19:08:54-05:00",
+      },
+      ptbr: {
+        translation: "Bolo",
+        is_approved: true,
         approved_at: "2019-08-28T12:06:12-04:00",
       },
       ro: {
@@ -24241,6 +25081,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:57:10-04:00",
       },
       pt: {
+        translation: "Calculadora",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:45-04:00",
+      },
+      ptbr: {
         translation: "Calculadora",
         is_approved: true,
         approved_at: "2018-03-09T16:45:11-05:00",
@@ -24361,6 +25206,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Calendário",
         is_approved: true,
+        approved_at: "2023-08-17T07:59:27-04:00",
+      },
+      ptbr: {
+        translation: "Calendário",
+        is_approved: true,
         approved_at: "2018-11-20T20:01:31-05:00",
       },
       ro: {
@@ -24477,6 +25327,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:57:13-04:00",
       },
       pt: {
+        translation: "Camelo",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:46-04:00",
+      },
+      ptbr: {
         translation: "Camelo",
         is_approved: true,
         approved_at: "2018-09-11T21:19:41-04:00",
@@ -24610,6 +25465,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:30-04:00",
       },
       pt: {
+        translation: "Câmara",
+        is_approved: true,
+        approved_at: "2019-03-25T17:28:59-04:00",
+      },
+      ptbr: {
         translation: "Câmera",
         is_approved: true,
         approved_at: "2018-09-11T21:19:44-04:00",
@@ -24735,6 +25595,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Camuflagem",
         is_approved: true,
+        approved_at: "2020-03-20T21:58:34-04:00",
+      },
+      ptbr: {
+        translation: "Camuflagem",
+        is_approved: true,
         approved_at: "2018-11-22T20:55:56-05:00",
       },
       ro: {
@@ -24853,6 +25718,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fogueira",
         is_approved: true,
+        approved_at: "2019-03-25T17:29:05-04:00",
+      },
+      ptbr: {
+        translation: "Fogueira",
+        is_approved: true,
         approved_at: "2018-09-11T21:19:47-04:00",
       },
       ro: {
@@ -24969,6 +25839,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:01:10-04:00",
       },
       pt: {
+        translation: "Parque de campismo",
+        is_approved: true,
+        approved_at: "2019-09-06T06:39:06-04:00",
+      },
+      ptbr: {
         translation: "Parque de acampamentos",
         is_approved: true,
         approved_at: "2019-08-08T16:44:45-04:00",
@@ -25220,6 +26095,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lata",
         is_approved: true,
+        approved_at: "2019-03-28T11:12:17-04:00",
+      },
+      ptbr: {
+        translation: "Lata",
+        is_approved: true,
         approved_at: "2018-11-22T20:56:58-05:00",
       },
       ro: {
@@ -25336,6 +26216,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:01:11-04:00",
       },
       pt: {
+        translation: "Canadá",
+        is_approved: true,
+        approved_at: "2019-03-26T20:03:19-04:00",
+      },
+      ptbr: {
         translation: "Canadá",
         is_approved: true,
         approved_at: "2018-11-22T20:57:02-05:00",
@@ -25484,6 +26369,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Canal",
         is_approved: true,
+        approved_at: "2019-09-06T06:39:21-04:00",
+      },
+      ptbr: {
+        translation: "Canal",
+        is_approved: true,
         approved_at: "2018-11-22T20:57:07-05:00",
       },
       ro: {
@@ -25600,6 +26490,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:43:09-04:00",
       },
       pt: {
+        translation: "Vela",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:49-04:00",
+      },
+      ptbr: {
         translation: "Vela",
         is_approved: true,
         approved_at: "2018-09-11T21:20:16-04:00",
@@ -25732,6 +26627,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:20-04:00",
       },
       pt: {
+        translation: "Rebuçado",
+        is_approved: true,
+        approved_at: "2019-03-25T17:29:48-04:00",
+      },
+      ptbr: {
         translation: "Doce",
         is_approved: true,
         approved_at: "2023-08-24T13:18:55-04:00",
@@ -25864,6 +26764,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-02-08T19:10:56-05:00",
       },
       pt: {
+        translation: "Bengala doce",
+        is_approved: true,
+        approved_at: "2020-07-08T09:47:35-04:00",
+      },
+      ptbr: {
         translation: "Bastão doce",
         is_approved: true,
         approved_at: "2022-04-13T08:18:14-04:00",
@@ -26054,6 +26959,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bengala",
         is_approved: true,
+        approved_at: "2019-03-28T11:13:01-04:00",
+      },
+      ptbr: {
+        translation: "Bengala",
+        is_approved: true,
         approved_at: "2018-11-22T20:59:32-05:00",
       },
       ro: {
@@ -26197,6 +27107,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:21-04:00",
       },
       pt: {
+        translation: "Canhão",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:51-04:00",
+      },
+      ptbr: {
         translation: "Canhão",
         is_approved: true,
         approved_at: "2018-09-11T21:20:23-04:00",
@@ -26347,6 +27262,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:01:25-04:00",
       },
       pt: {
+        translation: "Canoa",
+        is_approved: true,
+        approved_at: "2019-03-28T11:13:16-04:00",
+      },
+      ptbr: {
         translation: "Canoa",
         is_approved: true,
         approved_at: "2018-11-22T21:01:02-05:00",
@@ -26591,6 +27511,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:01:26-04:00",
       },
       pt: {
+        translation: "Boné",
+        is_approved: true,
+        approved_at: "2019-03-28T11:13:37-04:00",
+      },
+      ptbr: {
         translation: "Boné",
         is_approved: true,
         approved_at: "2018-11-22T21:01:08-05:00",
@@ -26893,6 +27818,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Capa",
         is_approved: true,
+        approved_at: "2019-03-28T11:13:48-04:00",
+      },
+      ptbr: {
+        translation: "Capa",
+        is_approved: true,
         approved_at: "2018-11-22T21:01:10-05:00",
       },
       ro: {
@@ -27004,6 +27934,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:10-05:00",
       },
       pt: {
+        translation: "Capivara",
+        is_approved: true,
+        approved_at: "2024-09-06T10:55:50-04:00",
+      },
+      ptbr: {
         translation: "Capivara",
         is_approved: true,
         approved_at: "2024-06-09T09:54:13-04:00",
@@ -27133,6 +28068,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carro",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:51-04:00",
+      },
+      ptbr: {
+        translation: "Carro",
+        is_approved: true,
         approved_at: "2018-09-11T21:20:30-04:00",
       },
       ro: {
@@ -27249,6 +28189,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:01:28-04:00",
       },
       pt: {
+        translation: "Lavagem de carros",
+        is_approved: true,
+        approved_at: "2019-03-28T11:14:05-04:00",
+      },
+      ptbr: {
         translation: "Lava-jato",
         is_approved: true,
         approved_at: "2019-08-08T16:45:42-04:00",
@@ -27369,6 +28314,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jogos de cartas",
         is_approved: true,
+        approved_at: "2023-01-31T09:32:21-05:00",
+      },
+      ptbr: {
+        translation: "Jogos de cartas",
+        is_approved: true,
         approved_at: "2023-01-29T13:47:53-05:00",
       },
       ro: {
@@ -27485,6 +28435,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-10-11T13:55:38-04:00",
       },
       pt: {
+        translation: "Caixa de cartão",
+        is_approved: true,
+        approved_at: "2019-03-28T11:14:22-04:00",
+      },
+      ptbr: {
         translation: "Caixa de papelão",
         is_approved: true,
         approved_at: "2019-08-08T16:45:53-04:00",
@@ -27603,6 +28558,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:41-04:00",
       },
       pt: {
+        translation: "Caraíbas",
+        is_approved: true,
+        approved_at: "2019-03-28T11:15:04-04:00",
+      },
+      ptbr: {
         translation: "Caribenho",
         is_approved: true,
         approved_at: "2018-11-22T21:04:30-05:00",
@@ -27723,6 +28683,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carnaval",
         is_approved: true,
+        approved_at: "2019-03-28T11:15:02-04:00",
+      },
+      ptbr: {
+        translation: "Carnaval",
+        is_approved: true,
         approved_at: "2018-11-22T21:04:33-05:00",
       },
       ro: {
@@ -27839,6 +28804,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:02:32-05:00",
       },
       pt: {
+        translation: "Artesão",
+        is_approved: true,
+        approved_at: "2019-08-18T10:21:49-04:00",
+      },
+      ptbr: {
         translation: "Carpinteiro",
         is_approved: true,
         approved_at: "2019-06-23T09:49:20-04:00",
@@ -28189,6 +29159,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tapete",
         is_approved: true,
+        approved_at: "2020-01-16T18:24:34-05:00",
+      },
+      ptbr: {
+        translation: "Tapete",
+        is_approved: true,
         approved_at: "2019-09-08T08:50:55-04:00",
       },
       ro: {
@@ -28431,6 +29406,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:35-05:00",
       },
       pt: {
+        translation: "Carroça",
+        is_approved: true,
+        approved_at: "2019-03-28T11:15:27-04:00",
+      },
+      ptbr: {
         translation: "Carruagem",
         is_approved: true,
         approved_at: "2018-11-22T21:05:47-05:00",
@@ -28565,6 +29545,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cenoura",
         is_approved: true,
+        approved_at: "2020-01-10T18:30:37-05:00",
+      },
+      ptbr: {
+        translation: "Cenoura",
+        is_approved: true,
         approved_at: "2019-08-28T11:53:18-04:00",
       },
       ro: {
@@ -28681,6 +29666,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T14:02:08-04:00",
       },
       pt: {
+        translation: "Desenho animado",
+        is_approved: true,
+        approved_at: "2019-09-06T06:42:08-04:00",
+      },
+      ptbr: {
         translation: "Desenho animado",
         is_approved: true,
         approved_at: "2019-08-08T16:46:03-04:00",
@@ -28841,6 +29831,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dinheiro",
         is_approved: true,
+        approved_at: "2019-03-28T11:16:00-04:00",
+      },
+      ptbr: {
+        translation: "Dinheiro",
+        is_approved: true,
         approved_at: "2018-11-22T21:07:31-05:00",
       },
       ro: {
@@ -28957,6 +29952,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:42-04:00",
       },
       pt: {
+        translation: "Operador de caixa",
+        is_approved: true,
+        approved_at: "2019-03-28T20:28:31-04:00",
+      },
+      ptbr: {
         translation: "Operador de caixa",
         is_approved: true,
         approved_at: "2019-08-08T16:46:21-04:00",
@@ -29147,6 +30147,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Castelo",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:53-04:00",
+      },
+      ptbr: {
+        translation: "Castelo",
+        is_approved: true,
         approved_at: "2018-09-11T21:20:57-04:00",
       },
       ro: {
@@ -29292,6 +30297,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gato",
         is_approved: true,
+        approved_at: "2019-03-25T17:30:18-04:00",
+      },
+      ptbr: {
+        translation: "Gato",
+        is_approved: true,
         approved_at: "2021-10-23T07:32:45-04:00",
       },
       ro: {
@@ -29408,6 +30418,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:50-04:00",
       },
       pt: {
+        translation: "Catacumba",
+        is_approved: true,
+        approved_at: "2019-03-28T20:28:47-04:00",
+      },
+      ptbr: {
         translation: "Catacumba",
         is_approved: true,
         approved_at: "2018-11-22T21:19:17-05:00",
@@ -29528,6 +30543,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Catapulta",
         is_approved: true,
+        approved_at: "2019-03-28T11:16:20-04:00",
+      },
+      ptbr: {
+        translation: "Catapulta",
+        is_approved: true,
         approved_at: "2018-11-22T21:22:44-05:00",
       },
       ro: {
@@ -29644,6 +30664,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:38:51-04:00",
       },
       pt: {
+        translation: "Lagarta",
+        is_approved: true,
+        approved_at: "2019-03-28T11:16:23-04:00",
+      },
+      ptbr: {
         translation: "Lagarta",
         is_approved: true,
         approved_at: "2018-11-22T21:22:46-05:00",
@@ -29778,6 +30803,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caverna",
         is_approved: true,
+        approved_at: "2019-03-28T11:16:33-04:00",
+      },
+      ptbr: {
+        translation: "Caverna",
+        is_approved: true,
         approved_at: "2018-11-22T21:22:49-05:00",
       },
       ro: {
@@ -29894,6 +30924,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-06-11T05:21:42-04:00",
       },
       pt: {
+        translation: "Ventilador de teto",
+        is_approved: true,
+        approved_at: "2019-09-06T06:42:46-04:00",
+      },
+      ptbr: {
         translation: "Ventilador de teto",
         is_approved: true,
         approved_at: "2018-11-22T21:23:44-05:00",
@@ -30026,6 +31061,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:39:00-04:00",
       },
       pt: {
+        translation: "Celebração",
+        is_approved: true,
+        approved_at: "2019-03-28T11:16:44-04:00",
+      },
+      ptbr: {
         translation: "Celebração",
         is_approved: true,
         approved_at: "2018-11-22T21:23:56-05:00",
@@ -30199,6 +31239,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Célula",
         is_approved: true,
+        approved_at: "2019-03-28T20:30:58-04:00",
+      },
+      ptbr: {
+        translation: "Célula",
+        is_approved: true,
         approved_at: "2018-11-22T21:25:05-05:00",
       },
       ro: {
@@ -30312,6 +31357,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Betoneira",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:03-05:00",
+      },
+      ptbr: {
+        translation: "Betoneira",
+        is_approved: true,
         approved_at: "2025-01-30T14:43:02-05:00",
       },
       ro: {
@@ -30423,6 +31473,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:22-04:00",
       },
       pt: {
+        translation: "Centauro",
+        is_approved: true,
+        approved_at: "2019-07-21T14:06:57-04:00",
+      },
+      ptbr: {
         translation: "Centauro",
         is_approved: true,
         approved_at: "2018-09-11T21:21:04-04:00",
@@ -30555,6 +31610,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:39:29-04:00",
       },
       pt: {
+        translation: "Cereais",
+        is_approved: true,
+        approved_at: "2019-03-28T11:16:54-04:00",
+      },
+      ptbr: {
         translation: "Cereal",
         is_approved: true,
         approved_at: "2018-11-22T21:25:17-05:00",
@@ -30673,6 +31733,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:38:53-04:00",
       },
       pt: {
+        translation: "Caixa de cereais",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:09-04:00",
+      },
+      ptbr: {
         translation: "Caixa de cereal",
         is_approved: true,
         approved_at: "2024-10-04T12:08:34-04:00",
@@ -30813,6 +31878,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:39:32-04:00",
       },
       pt: {
+        translation: "Correntes",
+        is_approved: true,
+        approved_at: "2019-03-28T11:16:59-04:00",
+      },
+      ptbr: {
         translation: "Corrente",
         is_approved: true,
         approved_at: "2018-11-22T21:25:18-05:00",
@@ -30931,6 +32001,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:39:32-04:00",
       },
       pt: {
+        translation: "Motosserra",
+        is_approved: true,
+        approved_at: "2019-03-28T11:17:01-04:00",
+      },
+      ptbr: {
         translation: "Motosserra",
         is_approved: true,
         approved_at: "2018-11-22T21:25:26-05:00",
@@ -31078,6 +32153,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cadeira",
         is_approved: true,
+        approved_at: "2019-03-28T11:17:03-04:00",
+      },
+      ptbr: {
+        translation: "Cadeira",
+        is_approved: true,
         approved_at: "2018-11-23T11:29:43-05:00",
       },
       ro: {
@@ -31210,6 +32290,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Giz",
         is_approved: true,
+        approved_at: "2019-03-28T11:17:07-04:00",
+      },
+      ptbr: {
+        translation: "Giz",
+        is_approved: true,
         approved_at: "2018-11-23T11:29:48-05:00",
       },
       ro: {
@@ -31326,6 +32411,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:23:08-04:00",
       },
       pt: {
+        translation: "Candelabro",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:11-04:00",
+      },
+      ptbr: {
         translation: "Lustre",
         is_approved: true,
         approved_at: "2024-10-05T12:31:33-04:00",
@@ -31439,6 +32529,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:38-05:00",
       },
       pt: {
+        translation: "Tabuleiro de xadrez",
+        is_approved: true,
+        approved_at: "2019-03-28T11:17:49-04:00",
+      },
+      ptbr: {
         translation: "Tabuleiro de damas",
         is_approved: true,
         approved_at: "2018-11-23T11:29:55-05:00",
@@ -31573,6 +32668,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Queijo",
         is_approved: true,
+        approved_at: "2019-07-21T14:06:58-04:00",
+      },
+      ptbr: {
+        translation: "Queijo",
+        is_approved: true,
         approved_at: "2018-09-11T21:21:16-04:00",
       },
       ro: {
@@ -31689,6 +32789,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:03:14-05:00",
       },
       pt: {
+        translation: "Cheeseburger",
+        is_approved: true,
+        approved_at: "2021-05-20T18:31:59-04:00",
+      },
+      ptbr: {
         translation: "Hambúrguer de queijo",
         is_approved: true,
         approved_at: "2022-04-16T09:10:34-04:00",
@@ -31807,6 +32912,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:44:00-04:00",
       },
       pt: {
+        translation: "Cheesecake",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:32-04:00",
+      },
+      ptbr: {
         translation: "Bolo de queijo",
         is_approved: true,
         approved_at: "2019-08-08T16:47:04-04:00",
@@ -32066,6 +33176,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chefe",
         is_approved: true,
+        approved_at: "2019-03-25T17:31:54-04:00",
+      },
+      ptbr: {
+        translation: "Chefe",
+        is_approved: true,
         approved_at: "2019-08-08T17:22:38-04:00",
       },
       ro: {
@@ -32182,6 +33297,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T11:24:30-04:00",
       },
       pt: {
+        translation: "Chapéu de cozinheiro",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:39-04:00",
+      },
+      ptbr: {
         translation: "Chapéu de cozinheiro",
         is_approved: true,
         approved_at: "2023-08-14T16:54:27-04:00",
@@ -32302,6 +33422,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Xadrez",
         is_approved: true,
+        approved_at: "2019-03-25T17:31:47-04:00",
+      },
+      ptbr: {
+        translation: "Xadrez",
+        is_approved: true,
         approved_at: "2018-09-11T21:21:22-04:00",
       },
       ro: {
@@ -32418,6 +33543,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:39:54-04:00",
       },
       pt: {
+        translation: "Castanha",
+        is_approved: true,
+        approved_at: "2019-03-28T11:18:42-04:00",
+      },
+      ptbr: {
         translation: "Castanho",
         is_approved: true,
         approved_at: "2019-10-01T20:53:41-04:00",
@@ -32536,6 +33666,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-28T04:57:57-04:00",
       },
       pt: {
+        translation: "Peitoral",
+        is_approved: true,
+        approved_at: "2019-04-29T07:12:44-04:00",
+      },
+      ptbr: {
         translation: "Peitoral",
         is_approved: true,
         approved_at: "2018-03-04T15:01:18-05:00",
@@ -32752,6 +33887,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Galinha",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:02-04:00",
+      },
+      ptbr: {
+        translation: "Galinha",
+        is_approved: true,
         approved_at: "2018-09-11T21:21:23-04:00",
       },
       ro: {
@@ -32868,6 +34008,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:05-04:00",
       },
       pt: {
+        translation: "Nugget de frango",
+        is_approved: true,
+        approved_at: "2019-03-28T11:19:05-04:00",
+      },
+      ptbr: {
         translation: "Nugget de frango",
         is_approved: true,
         approved_at: "2018-11-23T12:42:26-05:00",
@@ -33000,6 +34145,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:10-04:00",
       },
       pt: {
+        translation: "Chili",
+        is_approved: true,
+        approved_at: "2021-08-19T09:16:54-04:00",
+      },
+      ptbr: {
         translation: "Pimenta",
         is_approved: true,
         approved_at: "2019-06-04T21:24:38-04:00",
@@ -33147,6 +34297,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chaminé",
         is_approved: true,
+        approved_at: "2019-03-28T11:20:03-04:00",
+      },
+      ptbr: {
+        translation: "Chaminé",
+        is_approved: true,
         approved_at: "2019-06-04T21:24:39-04:00",
       },
       ro: {
@@ -33290,6 +34445,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:13-04:00",
       },
       pt: {
+        translation: "China",
+        is_approved: true,
+        approved_at: "2019-03-28T11:20:04-04:00",
+      },
+      ptbr: {
         translation: "China",
         is_approved: true,
         approved_at: "2019-06-04T21:24:40-04:00",
@@ -33458,6 +34618,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:18-04:00",
       },
       pt: {
+        translation: "Chip eletrónico",
+        is_approved: true,
+        approved_at: "2019-09-06T09:25:05-04:00",
+      },
+      ptbr: {
         translation: "Chip",
         is_approved: true,
         approved_at: "2023-08-24T14:16:09-04:00",
@@ -33578,6 +34743,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chocolate",
         is_approved: true,
+        approved_at: "2020-03-23T08:41:02-04:00",
+      },
+      ptbr: {
+        translation: "Chocolate",
+        is_approved: true,
         approved_at: "2018-11-11T15:34:18-05:00",
       },
       ro: {
@@ -33694,6 +34864,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:44:01-04:00",
       },
       pt: {
+        translation: "Bolo de chocolate",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:40-04:00",
+      },
+      ptbr: {
         translation: "Bolo de chocolate",
         is_approved: true,
         approved_at: "2022-04-15T14:29:00-04:00",
@@ -33839,6 +35014,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:37-04:00",
       },
       pt: {
+        translation: "Bolacha",
+        is_approved: true,
+        approved_at: "2024-08-24T13:16:17-04:00",
+      },
+      ptbr: {
         translation: "Biscoito com gotas de chocolate",
         is_approved: true,
         approved_at: "2019-06-04T21:24:45-04:00",
@@ -33959,6 +35139,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fábrica de chocolate",
         is_approved: true,
+        approved_at: "2019-03-28T11:20:33-04:00",
+      },
+      ptbr: {
+        translation: "Fábrica de chocolate",
+        is_approved: true,
         approved_at: "2019-06-04T21:24:47-04:00",
       },
       ro: {
@@ -34077,6 +35262,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Leite achocolatado",
         is_approved: true,
+        approved_at: "2019-03-28T11:20:50-04:00",
+      },
+      ptbr: {
+        translation: "Leite achocolatado",
+        is_approved: true,
         approved_at: "2019-06-04T21:24:48-04:00",
       },
       ro: {
@@ -34193,6 +35383,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:40:43-04:00",
       },
       pt: {
+        translation: "Pauzinhos chineses",
+        is_approved: true,
+        approved_at: "2019-09-06T09:26:39-04:00",
+      },
+      ptbr: {
         translation: "Hashi",
         is_approved: true,
         approved_at: "2019-06-04T21:24:49-04:00",
@@ -34366,6 +35561,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Natal",
         is_approved: true,
+        approved_at: "2019-03-28T11:21:33-04:00",
+      },
+      ptbr: {
+        translation: "Natal",
+        is_approved: true,
         approved_at: "2019-06-04T21:24:50-04:00",
       },
       ro: {
@@ -34496,6 +35696,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:46:45-04:00",
       },
       pt: {
+        translation: "Igreja",
+        is_approved: true,
+        approved_at: "2019-03-28T11:21:35-04:00",
+      },
+      ptbr: {
         translation: "Igreja",
         is_approved: true,
         approved_at: "2019-06-04T21:24:51-04:00",
@@ -34748,6 +35953,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cinema",
         is_approved: true,
+        approved_at: "2019-03-25T17:32:05-04:00",
+      },
+      ptbr: {
+        translation: "Cinema",
+        is_approved: true,
         approved_at: "2018-09-11T21:21:36-04:00",
       },
       ro: {
@@ -34901,6 +36111,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Círculo",
         is_approved: true,
+        approved_at: "2020-03-01T11:49:49-05:00",
+      },
+      ptbr: {
+        translation: "Círculo",
+        is_approved: true,
         approved_at: "2019-08-05T12:30:08-04:00",
       },
       ro: {
@@ -35017,6 +36232,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:44:01-04:00",
       },
       pt: {
+        translation: "Circo",
+        is_approved: true,
+        approved_at: "2019-03-28T11:21:41-04:00",
+      },
+      ptbr: {
         translation: "Circo",
         is_approved: true,
         approved_at: "2019-06-04T21:36:10-04:00",
@@ -35175,6 +36395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:46:58-04:00",
       },
       pt: {
+        translation: "Amêijoa",
+        is_approved: true,
+        approved_at: "2019-03-28T11:21:48-04:00",
+      },
+      ptbr: {
         translation: "Molusco",
         is_approved: true,
         approved_at: "2019-06-04T21:36:13-04:00",
@@ -35293,6 +36518,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:47:07-04:00",
       },
       pt: {
+        translation: "Aplausos",
+        is_approved: true,
+        approved_at: "2019-03-28T11:21:54-04:00",
+      },
+      ptbr: {
         translation: "Aplauso",
         is_approved: true,
         approved_at: "2019-06-04T21:36:14-04:00",
@@ -35411,6 +36641,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-07T10:42:26-04:00",
       },
       pt: {
+        translation: "Classe",
+        is_approved: true,
+        approved_at: "2020-11-21T18:27:52-05:00",
+      },
+      ptbr: {
         translation: "Classe",
         is_approved: true,
         approved_at: "2019-08-16T18:16:38-04:00",
@@ -35571,6 +36806,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Garras",
         is_approved: true,
+        approved_at: "2019-09-01T11:09:12-04:00",
+      },
+      ptbr: {
+        translation: "Garras",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:18-04:00",
       },
       ro: {
@@ -35716,6 +36956,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Argila",
         is_approved: true,
+        approved_at: "2020-01-15T19:17:48-05:00",
+      },
+      ptbr: {
+        translation: "Argila",
+        is_approved: true,
         approved_at: "2019-09-09T13:23:42-04:00",
       },
       ro: {
@@ -35832,6 +37077,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-10-15T10:29:24-04:00",
       },
       pt: {
+        translation: "Penhasco",
+        is_approved: true,
+        approved_at: "2019-03-28T11:22:17-04:00",
+      },
+      ptbr: {
         translation: "Penhasco",
         is_approved: true,
         approved_at: "2019-06-04T21:36:21-04:00",
@@ -36042,6 +37292,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:47:14-04:00",
       },
       pt: {
+        translation: "Escalar",
+        is_approved: true,
+        approved_at: "2019-03-28T11:22:20-04:00",
+      },
+      ptbr: {
         translation: "Escalada",
         is_approved: true,
         approved_at: "2019-06-04T21:36:23-04:00",
@@ -36355,6 +37610,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-22T11:30:41-04:00",
       },
       pt: {
+        translation: "Manto",
+        is_approved: true,
+        approved_at: "2020-01-17T09:04:46-05:00",
+      },
+      ptbr: {
         translation: "Capa",
         is_approved: true,
         approved_at: "2019-06-04T21:36:27-04:00",
@@ -36616,6 +37876,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:44:03-04:00",
       },
       pt: {
+        translation: "Relógio",
+        is_approved: true,
+        approved_at: "2019-03-25T17:32:22-04:00",
+      },
+      ptbr: {
         translation: "Relógio",
         is_approved: true,
         approved_at: "2019-06-04T21:36:28-04:00",
@@ -36897,6 +38162,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Armário",
         is_approved: true,
+        approved_at: "2019-03-28T11:22:53-04:00",
+      },
+      ptbr: {
+        translation: "Armário",
+        is_approved: true,
         approved_at: "2019-06-04T21:36:43-04:00",
       },
       ro: {
@@ -37013,6 +38283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T14:03:19-04:00",
       },
       pt: {
+        translation: "Nuvens",
+        is_approved: true,
+        approved_at: "2020-04-30T21:25:40-04:00",
+      },
+      ptbr: {
         translation: "Nuvens",
         is_approved: true,
         approved_at: "2019-06-04T21:36:44-04:00",
@@ -37145,6 +38420,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:30-04:00",
       },
       pt: {
+        translation: "Trevo",
+        is_approved: true,
+        approved_at: "2019-03-25T17:32:40-04:00",
+      },
+      ptbr: {
         translation: "Trevo",
         is_approved: true,
         approved_at: "2018-09-11T21:22:26-04:00",
@@ -37283,6 +38563,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Palhaço",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:05-04:00",
+      },
+      ptbr: {
+        translation: "Palhaço",
+        is_approved: true,
         approved_at: "2018-09-11T21:22:27-04:00",
       },
       ro: {
@@ -37399,6 +38684,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:47:37-04:00",
       },
       pt: {
+        translation: "Peixe-palhaço",
+        is_approved: true,
+        approved_at: "2019-03-28T11:23:01-04:00",
+      },
+      ptbr: {
         translation: "Peixe-palhaço",
         is_approved: true,
         approved_at: "2018-11-22T21:25:29-05:00",
@@ -37615,6 +38905,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casaco",
         is_approved: true,
+        approved_at: "2019-03-28T11:23:03-04:00",
+      },
+      ptbr: {
+        translation: "Casaco",
+        is_approved: true,
         approved_at: "2018-11-22T21:26:54-05:00",
       },
       ro: {
@@ -37736,6 +39031,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:47:41-04:00",
       },
       pt: {
+        translation: "Cabide",
+        is_approved: true,
+        approved_at: "2019-03-28T11:23:07-04:00",
+      },
+      ptbr: {
         translation: "Cabide",
         is_approved: true,
         approved_at: "2018-11-22T21:26:56-05:00",
@@ -38164,6 +39464,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Teia de aranha",
         is_approved: true,
+        approved_at: "2019-03-28T11:23:14-04:00",
+      },
+      ptbr: {
+        translation: "Teia de aranha",
+        is_approved: true,
         approved_at: "2022-04-15T10:49:37-04:00",
       },
       ro: {
@@ -38296,6 +39601,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Barata",
         is_approved: true,
+        approved_at: "2019-03-25T17:34:35-04:00",
+      },
+      ptbr: {
+        translation: "Barata",
+        is_approved: true,
         approved_at: "2018-09-11T21:22:47-04:00",
       },
       ro: {
@@ -38412,6 +39722,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:33-04:00",
       },
       pt: {
+        translation: "Coco",
+        is_approved: true,
+        approved_at: "2019-03-25T17:35:03-04:00",
+      },
+      ptbr: {
         translation: "Coco",
         is_approved: true,
         approved_at: "2018-09-11T21:22:49-04:00",
@@ -38559,6 +39874,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casulo",
         is_approved: true,
+        approved_at: "2019-03-28T11:23:25-04:00",
+      },
+      ptbr: {
+        translation: "Casulo",
+        is_approved: true,
         approved_at: "2018-11-22T21:27:01-05:00",
       },
       ro: {
@@ -38691,6 +40011,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Café",
         is_approved: true,
+        approved_at: "2019-03-28T11:23:26-04:00",
+      },
+      ptbr: {
+        translation: "Café",
+        is_approved: true,
         approved_at: "2018-11-22T21:27:02-05:00",
       },
       ro: {
@@ -38807,6 +40132,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T11:07:48-04:00",
       },
       pt: {
+        translation: "Máquina de café",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:42-04:00",
+      },
+      ptbr: {
         translation: "Cafeteira",
         is_approved: true,
         approved_at: "2023-08-14T16:46:07-04:00",
@@ -38947,6 +40277,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:18-05:00",
       },
       pt: {
+        translation: "Cafetaria",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:26-05:00",
+      },
+      ptbr: {
         translation: "Cafeteria",
         is_approved: true,
         approved_at: "2025-01-30T14:42:43-05:00",
@@ -39060,6 +40395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:47:49-04:00",
       },
       pt: {
+        translation: "Caixão",
+        is_approved: true,
+        approved_at: "2019-03-28T11:23:39-04:00",
+      },
+      ptbr: {
         translation: "Caixão",
         is_approved: true,
         approved_at: "2018-11-22T21:28:22-05:00",
@@ -39209,6 +40549,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-09T14:20:41-04:00",
       },
       pt: {
+        translation: "Moeda",
+        is_approved: true,
+        approved_at: "2019-11-02T08:14:54-04:00",
+      },
+      ptbr: {
         translation: "Moeda",
         is_approved: true,
         approved_at: "2023-08-14T16:36:11-04:00",
@@ -39369,6 +40714,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lápis de cor",
         is_approved: true,
+        approved_at: "2019-03-28T11:24:03-04:00",
+      },
+      ptbr: {
+        translation: "Lápis de cor",
+        is_approved: true,
         approved_at: "2018-11-22T21:51:13-05:00",
       },
       ro: {
@@ -39485,6 +40835,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:19:26-04:00",
       },
       pt: {
+        translation: "Coliseu",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:12-04:00",
+      },
+      ptbr: {
         translation: "Coliseu",
         is_approved: true,
         approved_at: "2019-09-09T19:26:45-04:00",
@@ -39645,6 +41000,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pente",
         is_approved: true,
+        approved_at: "2019-03-28T11:24:08-04:00",
+      },
+      ptbr: {
+        translation: "Pente",
+        is_approved: true,
         approved_at: "2018-11-22T21:51:28-05:00",
       },
       ro: {
@@ -39778,6 +41138,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cometa",
         is_approved: true,
+        approved_at: "2019-03-28T11:24:11-04:00",
+      },
+      ptbr: {
+        translation: "Cometa",
+        is_approved: true,
         approved_at: "2018-11-22T21:51:32-05:00",
       },
       ro: {
@@ -39894,6 +41259,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:32:05-04:00",
       },
       pt: {
+        translation: "Bússola",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:07-04:00",
+      },
+      ptbr: {
         translation: "Bússola",
         is_approved: true,
         approved_at: "2018-09-11T21:22:52-04:00",
@@ -40014,6 +41384,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Computador",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:08-04:00",
+      },
+      ptbr: {
+        translation: "Computador",
+        is_approved: true,
         approved_at: "2018-09-11T21:22:53-04:00",
       },
       ro: {
@@ -40130,6 +41505,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:34-04:00",
       },
       pt: {
+        translation: "Concerto",
+        is_approved: true,
+        approved_at: "2019-03-25T17:35:20-04:00",
+      },
+      ptbr: {
         translation: "Concerto",
         is_approved: true,
         approved_at: "2018-09-11T21:23:16-04:00",
@@ -40290,6 +41670,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Construção",
         is_approved: true,
+        approved_at: "2019-03-28T11:25:17-04:00",
+      },
+      ptbr: {
+        translation: "Construção",
+        is_approved: true,
         approved_at: "2018-11-22T21:52:19-05:00",
       },
       ro: {
@@ -40447,6 +41832,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:36-04:00",
       },
       pt: {
+        translation: "Comando",
+        is_approved: true,
+        approved_at: "2019-03-25T17:35:36-04:00",
+      },
+      ptbr: {
         translation: "Controle",
         is_approved: true,
         approved_at: "2018-09-11T21:22:58-04:00",
@@ -40579,6 +41969,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:48:38-04:00",
       },
       pt: {
+        translation: "Esteira transportadora",
+        is_approved: true,
+        approved_at: "2020-04-17T14:53:02-04:00",
+      },
+      ptbr: {
         translation: "Esteira transportadora",
         is_approved: true,
         approved_at: "2018-11-22T22:01:49-05:00",
@@ -40862,6 +42257,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:49:05-04:00",
       },
       pt: {
+        translation: "Cozinhar",
+        is_approved: true,
+        approved_at: "2019-03-28T11:25:29-04:00",
+      },
+      ptbr: {
         translation: "Cozinhar",
         is_approved: true,
         approved_at: "2018-11-22T22:01:53-05:00",
@@ -41167,6 +42567,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:37-04:00",
       },
       pt: {
+        translation: "Bolacha",
+        is_approved: true,
+        approved_at: "2019-03-25T17:35:48-04:00",
+      },
+      ptbr: {
         translation: "Biscoito",
         is_approved: true,
         approved_at: "2019-08-28T11:53:59-04:00",
@@ -41331,6 +42736,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cozinheiro",
         is_approved: true,
+        approved_at: "2024-09-21T09:36:08-04:00",
+      },
+      ptbr: {
+        translation: "Cozinheiro",
+        is_approved: true,
         approved_at: "2019-09-30T10:28:59-04:00",
       },
       ro: {
@@ -41447,6 +42857,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T15:58:35-04:00",
       },
       pt: {
+        translation: "Coral",
+        is_approved: true,
+        approved_at: "2020-06-05T07:01:27-04:00",
+      },
+      ptbr: {
         translation: "Coral",
         is_approved: true,
         approved_at: "2019-06-22T22:24:54-04:00",
@@ -41581,6 +42996,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Milho",
         is_approved: true,
+        approved_at: "2019-03-28T11:26:07-04:00",
+      },
+      ptbr: {
+        translation: "Milho",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:19-04:00",
       },
       ro: {
@@ -41712,6 +43132,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:15-04:00",
       },
       pt: {
+        translation: "Cachorro de milho",
+        is_approved: true,
+        approved_at: "2020-04-17T15:08:06-04:00",
+      },
+      ptbr: {
         translation: "Salsicha empanada",
         is_approved: true,
         approved_at: "2023-08-24T14:22:11-04:00",
@@ -41897,6 +43322,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:16-04:00",
       },
       pt: {
+        translation: "Esquina",
+        is_approved: true,
+        approved_at: "2020-02-03T19:23:06-05:00",
+      },
+      ptbr: {
         translation: "Canto",
         is_approved: true,
         approved_at: "2018-11-22T22:06:01-05:00",
@@ -42029,6 +43459,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:51-04:00",
       },
       pt: {
+        translation: "Algodão doce",
+        is_approved: true,
+        approved_at: "2019-04-06T08:44:14-04:00",
+      },
+      ptbr: {
         translation: "Algodão doce",
         is_approved: true,
         approved_at: "2022-04-14T10:17:29-04:00",
@@ -42261,6 +43696,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sofá",
         is_approved: true,
+        approved_at: "2019-04-06T08:44:16-04:00",
+      },
+      ptbr: {
+        translation: "Sofá",
+        is_approved: true,
         approved_at: "2018-11-22T22:07:07-05:00",
       },
       ro: {
@@ -42406,6 +43846,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vaca",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:10-04:00",
+      },
+      ptbr: {
+        translation: "Vaca",
+        is_approved: true,
         approved_at: "2018-09-11T21:23:23-04:00",
       },
       ro: {
@@ -42522,6 +43967,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:51-04:00",
       },
       pt: {
+        translation: "Chocalho",
+        is_approved: true,
+        approved_at: "2019-04-06T08:44:34-04:00",
+      },
+      ptbr: {
         translation: "Sino de vaca",
         is_approved: true,
         approved_at: "2022-05-06T21:53:49-04:00",
@@ -42654,6 +44104,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:38-04:00",
       },
       pt: {
+        translation: "Cowboy",
+        is_approved: true,
+        approved_at: "2019-03-25T17:35:57-04:00",
+      },
+      ptbr: {
         translation: "Vaqueiro",
         is_approved: true,
         approved_at: "2021-01-31T15:24:39-05:00",
@@ -42772,6 +44227,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:52-04:00",
       },
       pt: {
+        translation: "Chapéu de cowboy",
+        is_approved: true,
+        approved_at: "2019-04-06T08:44:38-04:00",
+      },
+      ptbr: {
         translation: "Chapéu de vaqueiro",
         is_approved: true,
         approved_at: "2022-04-10T10:53:23-04:00",
@@ -42890,6 +44350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:34-04:00",
       },
       pt: {
+        translation: "Caranguejo",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:12-04:00",
+      },
+      ptbr: {
         translation: "Caranguejo",
         is_approved: true,
         approved_at: "2018-09-11T21:23:28-04:00",
@@ -43035,6 +44500,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-06T04:15:39-04:00",
       },
       pt: {
+        translation: "Mesa de trabalho",
+        is_approved: true,
+        approved_at: "2020-01-16T17:42:49-05:00",
+      },
+      ptbr: {
         translation: "Bancada de trabalho",
         is_approved: true,
         approved_at: "2022-04-15T10:56:56-04:00",
@@ -43180,6 +44650,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:43:59-04:00",
       },
       pt: {
+        translation: "Grua",
+        is_approved: true,
+        approved_at: "2019-04-06T08:44:43-04:00",
+      },
+      ptbr: {
         translation: "Guindaste",
         is_approved: true,
         approved_at: "2019-06-04T21:37:12-04:00",
@@ -43314,6 +44789,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caixa",
         is_approved: true,
+        approved_at: "2019-04-06T08:44:53-04:00",
+      },
+      ptbr: {
+        translation: "Caixa",
+        is_approved: true,
         approved_at: "2019-06-04T21:37:13-04:00",
       },
       ro: {
@@ -43430,6 +44910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-18T15:50:29-04:00",
       },
       pt: {
+        translation: "Cratera",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:51-04:00",
+      },
+      ptbr: {
         translation: "Cratera",
         is_approved: true,
         approved_at: "2019-11-13T14:06:28-05:00",
@@ -43614,6 +45099,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:46-04:00",
       },
       pt: {
+        translation: "Lápis de cera",
+        is_approved: true,
+        approved_at: "2021-05-20T18:27:30-04:00",
+      },
+      ptbr: {
         translation: "Giz de cera",
         is_approved: true,
         approved_at: "2019-06-04T21:37:20-04:00",
@@ -43739,6 +45229,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cartão de crédito",
         is_approved: true,
+        approved_at: "2019-04-06T08:45:01-04:00",
+      },
+      ptbr: {
+        translation: "Cartão de crédito",
+        is_approved: true,
         approved_at: "2022-05-06T21:54:01-04:00",
       },
       ro: {
@@ -43855,6 +45350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:57:53-04:00",
       },
       pt: {
+        translation: "Creeper",
+        is_approved: true,
+        approved_at: "2019-08-27T21:37:47-04:00",
+      },
+      ptbr: {
         translation: "Creeper",
         is_approved: true,
         approved_at: "2019-06-22T19:26:40-04:00",
@@ -43975,6 +45475,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Berço",
         is_approved: true,
+        approved_at: "2019-04-06T08:45:24-04:00",
+      },
+      ptbr: {
+        translation: "Berço",
+        is_approved: true,
         approved_at: "2019-06-04T21:37:33-04:00",
       },
       ro: {
@@ -44091,6 +45596,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-11-12T04:48:40-05:00",
       },
       pt: {
+        translation: "Grilo",
+        is_approved: true,
+        approved_at: "2020-02-17T16:25:21-05:00",
+      },
+      ptbr: {
         translation: "Críquete",
         is_approved: true,
         approved_at: "2019-10-16T20:48:30-04:00",
@@ -44238,6 +45748,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Criminoso",
         is_approved: true,
+        approved_at: "2021-06-22T18:11:24-04:00",
+      },
+      ptbr: {
+        translation: "Criminoso",
+        is_approved: true,
         approved_at: "2019-06-04T21:37:35-04:00",
       },
       ro: {
@@ -44356,6 +45871,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Crocodilo",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:16-04:00",
+      },
+      ptbr: {
+        translation: "Crocodilo",
+        is_approved: true,
         approved_at: "2018-09-11T21:23:38-04:00",
       },
       ro: {
@@ -44472,6 +45992,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:44:47-04:00",
       },
       pt: {
+        translation: "Besta",
+        is_approved: true,
+        approved_at: "2019-04-06T08:46:25-04:00",
+      },
+      ptbr: {
         translation: "Balestra",
         is_approved: true,
         approved_at: "2021-05-08T17:20:08-04:00",
@@ -44604,6 +46129,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:44:48-04:00",
       },
       pt: {
+        translation: "Passadeira",
+        is_approved: true,
+        approved_at: "2019-09-01T11:11:26-04:00",
+      },
+      ptbr: {
         translation: "Faixa de pedestres",
         is_approved: true,
         approved_at: "2022-05-06T21:55:05-04:00",
@@ -44724,6 +46254,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Corvo",
         is_approved: true,
+        approved_at: "2019-04-06T08:46:56-04:00",
+      },
+      ptbr: {
+        translation: "Corvo",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:20-04:00",
       },
       ro: {
@@ -44842,6 +46377,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pé de cabra",
         is_approved: true,
+        approved_at: "2019-04-06T08:46:58-04:00",
+      },
+      ptbr: {
+        translation: "Pé de cabra",
+        is_approved: true,
         approved_at: "2022-05-06T21:55:19-04:00",
       },
       ro: {
@@ -44958,6 +46498,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T09:07:29-04:00",
       },
       pt: {
+        translation: "Coroa",
+        is_approved: true,
+        approved_at: "2019-03-25T17:37:05-04:00",
+      },
+      ptbr: {
         translation: "Coroa",
         is_approved: true,
         approved_at: "2018-09-11T21:23:40-04:00",
@@ -45081,6 +46626,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:04:36-05:00",
       },
       pt: {
+        translation: "Cruise Ship",
+        is_approved: true,
+        approved_at: "2019-04-22T15:09:12-04:00",
+      },
+      ptbr: {
         translation: "Navio de cruzeiro",
         is_approved: true,
         approved_at: "2023-08-14T16:18:05-04:00",
@@ -45199,6 +46749,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:44:54-04:00",
       },
       pt: {
+        translation: "Chorar",
+        is_approved: true,
+        approved_at: "2019-04-06T08:47:13-04:00",
+      },
+      ptbr: {
         translation: "Choro",
         is_approved: true,
         approved_at: "2019-06-04T21:38:06-04:00",
@@ -45319,6 +46874,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cristal",
         is_approved: true,
+        approved_at: "2020-03-26T18:34:04-04:00",
+      },
+      ptbr: {
+        translation: "Cristal",
+        is_approved: true,
         approved_at: "2019-06-04T21:38:08-04:00",
       },
       ro: {
@@ -45435,6 +46995,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:44:55-04:00",
       },
       pt: {
+        translation: "Bola de cristal",
+        is_approved: true,
+        approved_at: "2019-04-06T08:47:24-04:00",
+      },
+      ptbr: {
         translation: "Bola de cristal",
         is_approved: true,
         approved_at: "2022-05-06T21:55:39-04:00",
@@ -45608,6 +47173,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cubo",
         is_approved: true,
+        approved_at: "2019-04-06T08:47:25-04:00",
+      },
+      ptbr: {
+        translation: "Cubo",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:21-04:00",
       },
       ro: {
@@ -45764,6 +47334,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:45:52-04:00",
       },
       pt: {
+        translation: "Copo",
+        is_approved: true,
+        approved_at: "2019-04-06T08:47:42-04:00",
+      },
+      ptbr: {
         translation: "Copo",
         is_approved: true,
         approved_at: "2018-03-25T17:26:39-04:00",
@@ -45936,6 +47511,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:35-04:00",
       },
       pt: {
+        translation: "Cupcake / Bolinho",
+        is_approved: true,
+        approved_at: "2019-03-25T18:36:02-04:00",
+      },
+      ptbr: {
         translation: "Cupcake",
         is_approved: true,
         approved_at: "2018-09-11T21:23:43-04:00",
@@ -46070,6 +47650,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cortina",
         is_approved: true,
+        approved_at: "2019-04-06T08:48:20-04:00",
+      },
+      ptbr: {
+        translation: "Cortina",
+        is_approved: true,
         approved_at: "2019-06-04T21:38:27-04:00",
       },
       ro: {
@@ -46186,6 +47771,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:03:44-04:00",
       },
       pt: {
+        translation: "Tábua de cortar",
+        is_approved: true,
+        approved_at: "2024-11-06T09:39:13-05:00",
+      },
+      ptbr: {
         translation: "Tábua de corte",
         is_approved: true,
         approved_at: "2024-10-04T12:08:36-04:00",
@@ -46320,6 +47910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ciborgue",
         is_approved: true,
+        approved_at: "2019-08-23T11:19:38-04:00",
+      },
+      ptbr: {
+        translation: "Ciborgue",
+        is_approved: true,
         approved_at: "2022-05-01T18:52:47-04:00",
       },
       ro: {
@@ -46436,6 +48031,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:42-04:00",
       },
       pt: {
+        translation: "Ciclope",
+        is_approved: true,
+        approved_at: "2019-03-25T17:37:13-04:00",
+      },
+      ptbr: {
         translation: "Ciclope",
         is_approved: true,
         approved_at: "2018-09-11T21:23:45-04:00",
@@ -46626,6 +48226,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pai",
         is_approved: true,
+        approved_at: "2019-04-06T08:48:58-04:00",
+      },
+      ptbr: {
+        translation: "Pai",
+        is_approved: true,
         approved_at: "2019-06-04T21:25:08-04:00",
       },
       ro: {
@@ -46742,6 +48347,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:46:15-04:00",
       },
       pt: {
+        translation: "Narciso",
+        is_approved: true,
+        approved_at: "2019-04-06T08:49:12-04:00",
+      },
+      ptbr: {
         translation: "Narciso-amarelo",
         is_approved: true,
         approved_at: "2019-07-26T21:05:08-04:00",
@@ -46902,6 +48512,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Adaga",
         is_approved: true,
+        approved_at: "2019-04-06T08:49:38-04:00",
+      },
+      ptbr: {
+        translation: "Adaga",
+        is_approved: true,
         approved_at: "2021-04-29T07:55:26-04:00",
       },
       ro: {
@@ -47018,6 +48633,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-26T06:59:05-05:00",
       },
       pt: {
+        translation: "Encontro",
+        is_approved: true,
+        approved_at: "2020-02-07T17:43:19-05:00",
+      },
+      ptbr: {
         translation: "Encontro",
         is_approved: true,
         approved_at: "2019-09-17T22:26:50-04:00",
@@ -47182,6 +48802,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dia",
         is_approved: true,
+        approved_at: "2023-08-17T07:59:54-04:00",
+      },
+      ptbr: {
+        translation: "Dia",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:06-04:00",
       },
       ro: {
@@ -47300,6 +48925,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Árvore morta",
         is_approved: true,
+        approved_at: "2019-04-06T08:50:21-04:00",
+      },
+      ptbr: {
+        translation: "Árvore morta",
+        is_approved: true,
         approved_at: "2022-05-06T21:56:20-04:00",
       },
       ro: {
@@ -47416,6 +49046,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T03:59:42-04:00",
       },
       pt: {
+        translation: "Veado",
+        is_approved: true,
+        approved_at: "2019-04-06T08:50:46-04:00",
+      },
+      ptbr: {
         translation: "Veado",
         is_approved: true,
         approved_at: "2019-06-04T21:43:12-04:00",
@@ -47561,6 +49196,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:45-04:00",
       },
       pt: {
+        translation: "Demónio",
+        is_approved: true,
+        approved_at: "2019-04-06T08:50:47-04:00",
+      },
+      ptbr: {
         translation: "Demônio",
         is_approved: true,
         approved_at: "2019-06-04T21:43:13-04:00",
@@ -47679,6 +49319,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:12:13-04:00",
       },
       pt: {
+        translation: "Dentista",
+        is_approved: true,
+        approved_at: "2019-04-06T08:50:48-04:00",
+      },
+      ptbr: {
         translation: "Dentista",
         is_approved: true,
         approved_at: "2019-06-04T21:43:14-04:00",
@@ -47811,6 +49456,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:39-04:00",
       },
       pt: {
+        translation: "Deserto",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:19-04:00",
+      },
+      ptbr: {
         translation: "Deserto",
         is_approved: true,
         approved_at: "2018-09-11T21:23:54-04:00",
@@ -48060,6 +49710,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:58:16-04:00",
       },
       pt: {
+        translation: "Secretária",
+        is_approved: true,
+        approved_at: "2019-03-25T17:39:38-04:00",
+      },
+      ptbr: {
         translation: "Mesa",
         is_approved: true,
         approved_at: "2018-09-11T21:23:57-04:00",
@@ -48192,6 +49847,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:13:05-04:00",
       },
       pt: {
+        translation: "Sobremesa",
+        is_approved: true,
+        approved_at: "2019-04-06T08:51:41-04:00",
+      },
+      ptbr: {
         translation: "Sobremesa",
         is_approved: true,
         approved_at: "2019-06-04T21:43:19-04:00",
@@ -48339,6 +49999,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Diabo",
         is_approved: true,
+        approved_at: "2019-04-06T08:51:43-04:00",
+      },
+      ptbr: {
+        translation: "Diabo",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:20-04:00",
       },
       ro: {
@@ -48471,6 +50136,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Diamante",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:20-04:00",
+      },
+      ptbr: {
+        translation: "Diamante",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:21-04:00",
       },
       ro: {
@@ -48587,6 +50257,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-23T07:22:27-05:00",
       },
       pt: {
+        translation: "Anel de diamantes",
+        is_approved: true,
+        approved_at: "2019-04-06T08:52:00-04:00",
+      },
+      ptbr: {
         translation: "Anel de diamante",
         is_approved: true,
         approved_at: "2022-05-06T21:56:54-04:00",
@@ -48747,6 +50422,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dado",
         is_approved: true,
+        approved_at: "2019-04-06T08:52:02-04:00",
+      },
+      ptbr: {
+        translation: "Dado",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:23-04:00",
       },
       ro: {
@@ -48905,6 +50585,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jantar",
         is_approved: true,
+        approved_at: "2019-04-06T08:52:18-04:00",
+      },
+      ptbr: {
+        translation: "Jantar",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:27-04:00",
       },
       ro: {
@@ -49023,6 +50708,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dinossauro",
         is_approved: true,
+        approved_at: "2020-04-30T13:24:41-04:00",
+      },
+      ptbr: {
+        translation: "Dinossauro",
+        is_approved: true,
         approved_at: "2018-09-11T21:24:15-04:00",
       },
       ro: {
@@ -49136,6 +50826,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Diploma",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:04-05:00",
+      },
+      ptbr: {
+        translation: "Diploma",
+        is_approved: true,
         approved_at: "2025-01-30T14:42:12-05:00",
       },
       ro: {
@@ -49247,6 +50942,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:05-04:00",
       },
       pt: {
+        translation: "Casa de terra",
+        is_approved: true,
+        approved_at: "2019-04-06T08:53:26-04:00",
+      },
+      ptbr: {
         translation: "Casa de terra",
         is_approved: true,
         approved_at: "2023-08-24T14:24:54-04:00",
@@ -49365,6 +51065,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-01-02T16:34:15-05:00",
       },
       pt: {
+        translation: "Disco",
+        is_approved: true,
+        approved_at: "2020-05-14T19:32:28-04:00",
+      },
+      ptbr: {
         translation: "Discoteca",
         is_approved: true,
         approved_at: "2019-08-08T16:49:20-04:00",
@@ -49483,6 +51188,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:09-04:00",
       },
       pt: {
+        translation: "Bola de espelhos",
+        is_approved: true,
+        approved_at: "2019-04-06T09:49:50-04:00",
+      },
+      ptbr: {
         translation: "Bola de disco",
         is_approved: true,
         approved_at: "2019-06-04T21:43:43-04:00",
@@ -49729,6 +51439,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prato",
         is_approved: true,
+        approved_at: "2019-04-06T08:53:54-04:00",
+      },
+      ptbr: {
+        translation: "Prato",
+        is_approved: true,
         approved_at: "2019-06-04T21:43:45-04:00",
       },
       ro: {
@@ -49845,6 +51560,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-05-21T08:25:41-04:00",
       },
       pt: {
+        translation: "Máquina de lava-louça",
+        is_approved: true,
+        approved_at: "2019-09-01T11:12:56-04:00",
+      },
+      ptbr: {
         translation: "Lava-louças",
         is_approved: true,
         approved_at: "2023-08-24T14:25:46-04:00",
@@ -49977,6 +51697,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T14:38:41-04:00",
       },
       pt: {
+        translation: "Distribuidor",
+        is_approved: true,
+        approved_at: "2020-01-15T19:10:07-05:00",
+      },
+      ptbr: {
         translation: "Ejetor",
         is_approved: true,
         approved_at: "2019-06-04T21:43:48-04:00",
@@ -50124,6 +51849,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prancha de mergulho",
         is_approved: true,
+        approved_at: "2019-09-01T11:13:28-04:00",
+      },
+      ptbr: {
+        translation: "Prancha de mergulho",
+        is_approved: true,
         approved_at: "2019-07-26T21:05:18-04:00",
       },
       ro: {
@@ -50240,6 +51970,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-08T18:46:12-04:00",
       },
       pt: {
+        translation: "ADN",
+        is_approved: true,
+        approved_at: "2020-03-13T08:26:06-04:00",
+      },
+      ptbr: {
         translation: "DNA",
         is_approved: true,
         approved_at: "2019-05-31T14:39:08-04:00",
@@ -50411,6 +52146,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:24-05:00",
       },
       pt: {
+        translation: "Docas",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:28-05:00",
+      },
+      ptbr: {
         translation: "Doca",
         is_approved: true,
         approved_at: "2025-01-30T14:42:13-05:00",
@@ -50524,6 +52264,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:43-04:00",
       },
       pt: {
+        translation: "Doutor",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:26-04:00",
+      },
+      ptbr: {
         translation: "Doutor",
         is_approved: true,
         approved_at: "2018-09-11T21:24:27-04:00",
@@ -50642,6 +52387,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:27-04:00",
       },
       pt: {
+        translation: "Jogo do mata",
+        is_approved: true,
+        approved_at: "2019-04-06T09:50:04-04:00",
+      },
+      ptbr: {
         translation: "Queimada",
         is_approved: true,
         approved_at: "2019-07-01T09:56:40-04:00",
@@ -50804,6 +52554,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:44:36-04:00",
       },
       pt: {
+        translation: "Cão",
+        is_approved: true,
+        approved_at: "2019-03-25T17:44:35-04:00",
+      },
+      ptbr: {
         translation: "Cachorro",
         is_approved: true,
         approved_at: "2018-09-11T21:24:29-04:00",
@@ -50922,6 +52677,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:28-04:00",
       },
       pt: {
+        translation: "Coleira",
+        is_approved: true,
+        approved_at: "2019-04-06T09:50:17-04:00",
+      },
+      ptbr: {
         translation: "Coleira",
         is_approved: true,
         approved_at: "2019-07-26T20:51:16-04:00",
@@ -51069,6 +52829,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Boneca",
         is_approved: true,
+        approved_at: "2019-04-06T09:50:37-04:00",
+      },
+      ptbr: {
+        translation: "Boneca",
+        is_approved: true,
         approved_at: "2019-06-07T23:01:45-04:00",
       },
       ro: {
@@ -51187,6 +52952,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dólar",
         is_approved: true,
+        approved_at: "2019-04-06T09:50:38-04:00",
+      },
+      ptbr: {
+        translation: "Dólar",
+        is_approved: true,
         approved_at: "2019-06-07T23:01:42-04:00",
       },
       ro: {
@@ -51303,6 +53073,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:46-04:00",
       },
       pt: {
+        translation: "Casa de bonecas",
+        is_approved: true,
+        approved_at: "2019-04-06T09:50:40-04:00",
+      },
+      ptbr: {
         translation: "Casa de boneca",
         is_approved: true,
         approved_at: "2019-06-07T23:01:39-04:00",
@@ -51423,6 +53198,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Golfinho",
         is_approved: true,
+        approved_at: "2019-03-25T17:45:14-04:00",
+      },
+      ptbr: {
+        translation: "Golfinho",
+        is_approved: true,
         approved_at: "2018-09-11T21:24:31-04:00",
       },
       ro: {
@@ -51539,6 +53319,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T13:55:54-04:00",
       },
       pt: {
+        translation: "Dominó",
+        is_approved: true,
+        approved_at: "2021-01-27T12:52:30-05:00",
+      },
+      ptbr: {
         translation: "Dominó",
         is_approved: true,
         approved_at: "2019-06-07T23:02:15-04:00",
@@ -51673,6 +53458,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Burro",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:28-04:00",
+      },
+      ptbr: {
+        translation: "Burro",
+        is_approved: true,
         approved_at: "2019-06-22T19:30:32-04:00",
       },
       ro: {
@@ -51789,6 +53579,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:56-04:00",
       },
       pt: {
+        translation: "Donut",
+        is_approved: true,
+        approved_at: "2019-04-06T09:50:48-04:00",
+      },
+      ptbr: {
         translation: "Donut",
         is_approved: true,
         approved_at: "2023-08-24T14:29:12-04:00",
@@ -51949,6 +53744,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Porta",
         is_approved: true,
+        approved_at: "2019-04-06T09:50:49-04:00",
+      },
+      ptbr: {
+        translation: "Porta",
+        is_approved: true,
         approved_at: "2022-05-12T08:29:10-04:00",
       },
       ro: {
@@ -52065,6 +53865,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T11:11:31-04:00",
       },
       pt: {
+        translation: "Maçaneta",
+        is_approved: true,
+        approved_at: "2023-08-17T07:59:55-04:00",
+      },
+      ptbr: {
         translation: "Maçaneta",
         is_approved: true,
         approved_at: "2023-08-14T16:46:01-04:00",
@@ -52381,6 +54186,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pomba",
         is_approved: true,
+        approved_at: "2019-03-25T17:46:19-04:00",
+      },
+      ptbr: {
+        translation: "Pomba",
+        is_approved: true,
         approved_at: "2018-09-11T21:24:44-04:00",
       },
       ro: {
@@ -52526,6 +54336,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dragão",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:29-04:00",
+      },
+      ptbr: {
+        translation: "Dragão",
+        is_approved: true,
         approved_at: "2018-09-11T21:28:18-04:00",
       },
       ro: {
@@ -52642,6 +54457,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:44:42-04:00",
       },
       pt: {
+        translation: "Ovo do dragão",
+        is_approved: true,
+        approved_at: "2019-11-13T18:57:14-05:00",
+      },
+      ptbr: {
         translation: "Ovo de dragão",
         is_approved: true,
         approved_at: "2022-04-15T20:41:34-04:00",
@@ -52760,6 +54580,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:14:58-04:00",
       },
       pt: {
+        translation: "Libelinha",
+        is_approved: true,
+        approved_at: "2019-04-06T09:51:12-04:00",
+      },
+      ptbr: {
         translation: "Libélula",
         is_approved: true,
         approved_at: "2019-06-04T21:38:36-04:00",
@@ -52892,6 +54717,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:15:56-04:00",
       },
       pt: {
+        translation: "Desenho",
+        is_approved: true,
+        approved_at: "2019-04-06T09:51:14-04:00",
+      },
+      ptbr: {
         translation: "Desenhar",
         is_approved: true,
         approved_at: "2019-06-04T21:38:38-04:00",
@@ -53026,6 +54856,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vestido",
         is_approved: true,
+        approved_at: "2019-03-25T17:46:28-04:00",
+      },
+      ptbr: {
+        translation: "Vestido",
+        is_approved: true,
         approved_at: "2018-09-12T13:21:49-04:00",
       },
       ro: {
@@ -53156,6 +54991,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:16:18-04:00",
       },
       pt: {
+        translation: "Bebida",
+        is_approved: true,
+        approved_at: "2024-03-26T10:49:45-04:00",
+      },
+      ptbr: {
         translation: "Bebida",
         is_approved: true,
         approved_at: "2019-06-04T21:38:44-04:00",
@@ -53311,6 +55151,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Garagem",
         is_approved: true,
+        approved_at: "2020-02-03T19:25:15-05:00",
+      },
+      ptbr: {
+        translation: "Garagem",
+        is_approved: true,
         approved_at: "2019-06-04T21:38:52-04:00",
       },
       ro: {
@@ -53441,6 +55286,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:47-04:00",
       },
       pt: {
+        translation: "Tambor",
+        is_approved: true,
+        approved_at: "2019-04-06T09:52:33-04:00",
+      },
+      ptbr: {
         translation: "Tambor",
         is_approved: true,
         approved_at: "2019-06-04T21:39:05-04:00",
@@ -53575,6 +55425,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Baquetas",
         is_approved: true,
+        approved_at: "2019-04-06T09:52:40-04:00",
+      },
+      ptbr: {
+        translation: "Baquetas",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:07-04:00",
       },
       ro: {
@@ -53691,6 +55546,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:21:33-04:00",
       },
       pt: {
+        translation: "Duck",
+        is_approved: true,
+        approved_at: "2020-12-26T14:30:07-05:00",
+      },
+      ptbr: {
         translation: "Pato",
         is_approved: true,
         approved_at: "2023-08-14T16:36:50-04:00",
@@ -53809,6 +55669,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:16:38-04:00",
       },
       pt: {
+        translation: "Haltere",
+        is_approved: true,
+        approved_at: "2019-04-06T09:53:03-04:00",
+      },
+      ptbr: {
         translation: "Peso",
         is_approved: true,
         approved_at: "2019-07-26T20:51:44-04:00",
@@ -53943,6 +55808,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Masmorra",
         is_approved: true,
+        approved_at: "2019-03-25T17:48:29-04:00",
+      },
+      ptbr: {
+        translation: "Masmorra",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:21-04:00",
       },
       ro: {
@@ -54059,6 +55929,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:16:44-04:00",
       },
       pt: {
+        translation: "DVD",
+        is_approved: true,
+        approved_at: "2019-04-06T09:53:16-04:00",
+      },
+      ptbr: {
         translation: "DVD",
         is_approved: true,
         approved_at: "2018-03-23T11:18:18-04:00",
@@ -54217,6 +56092,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:58:39-04:00",
       },
       pt: {
+        translation: "Anão",
+        is_approved: true,
+        approved_at: "2019-03-25T17:48:31-04:00",
+      },
+      ptbr: {
         translation: "Anão",
         is_approved: true,
         approved_at: "2018-09-12T13:25:36-04:00",
@@ -54415,6 +56295,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:50:42-04:00",
       },
       pt: {
+        translation: "TNT",
+        is_approved: true,
+        approved_at: "2020-07-01T07:56:49-04:00",
+      },
+      ptbr: {
         translation: "Dinamite",
         is_approved: true,
         approved_at: "2019-06-04T21:39:24-04:00",
@@ -54575,6 +56460,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Águia",
         is_approved: true,
+        approved_at: "2019-04-06T09:53:20-04:00",
+      },
+      ptbr: {
+        translation: "Águia",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:25-04:00",
       },
       ro: {
@@ -54705,6 +56595,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:49:14-04:00",
       },
       pt: {
+        translation: "Orelha",
+        is_approved: true,
+        approved_at: "2019-04-06T09:53:21-04:00",
+      },
+      ptbr: {
         translation: "Ouvido",
         is_approved: true,
         approved_at: "2018-03-25T17:26:53-04:00",
@@ -54823,6 +56718,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:10:37-05:00",
       },
       pt: {
+        translation: "Brincos",
+        is_approved: true,
+        approved_at: "2019-04-06T09:53:31-04:00",
+      },
+      ptbr: {
         translation: "Brinco",
         is_approved: true,
         approved_at: "2019-06-04T21:39:27-04:00",
@@ -54994,6 +56894,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:58:41-04:00",
       },
       pt: {
+        translation: "Planeta Terra",
+        is_approved: true,
+        approved_at: "2019-03-25T17:48:45-04:00",
+      },
+      ptbr: {
         translation: "Terra",
         is_approved: true,
         approved_at: "2018-09-12T13:25:43-04:00",
@@ -55114,6 +57019,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Páscoa",
         is_approved: true,
+        approved_at: "2019-03-25T17:48:54-04:00",
+      },
+      ptbr: {
+        translation: "Páscoa",
+        is_approved: true,
         approved_at: "2018-09-12T13:25:52-04:00",
       },
       ro: {
@@ -55230,6 +57140,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:30-04:00",
       },
       pt: {
+        translation: "Coelho da Páscoa",
+        is_approved: true,
+        approved_at: "2021-05-10T17:10:58-04:00",
+      },
+      ptbr: {
         translation: "Coelhinho da Páscoa",
         is_approved: true,
         approved_at: "2018-11-11T15:34:19-05:00",
@@ -55348,6 +57263,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:30-04:00",
       },
       pt: {
+        translation: "Ovo da Páscoa",
+        is_approved: true,
+        approved_at: "2019-12-04T19:04:39-05:00",
+      },
+      ptbr: {
         translation: "Ovo de Páscoa",
         is_approved: true,
         approved_at: "2018-11-11T15:34:21-05:00",
@@ -55468,6 +57388,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Enguia",
         is_approved: true,
+        approved_at: "2019-04-06T09:54:05-04:00",
+      },
+      ptbr: {
+        translation: "Enguia",
+        is_approved: true,
         approved_at: "2019-08-09T10:13:49-04:00",
       },
       ro: {
@@ -55584,6 +57509,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:51:55-04:00",
       },
       pt: {
+        translation: "Berinjela",
+        is_approved: true,
+        approved_at: "2019-04-06T09:54:07-04:00",
+      },
+      ptbr: {
         translation: "Berinjela",
         is_approved: true,
         approved_at: "2019-06-07T23:02:44-04:00",
@@ -55704,6 +57634,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ovos",
         is_approved: true,
+        approved_at: "2019-12-04T19:03:50-05:00",
+      },
+      ptbr: {
+        translation: "Ovos",
+        is_approved: true,
         approved_at: "2019-09-03T10:44:30-04:00",
       },
       ro: {
@@ -55820,6 +57755,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:45:01-04:00",
       },
       pt: {
+        translation: "Egito",
+        is_approved: true,
+        approved_at: "2019-04-13T21:04:46-04:00",
+      },
+      ptbr: {
         translation: "Egito",
         is_approved: true,
         approved_at: "2018-09-12T13:26:26-04:00",
@@ -55940,6 +57880,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cotovelo",
         is_approved: true,
+        approved_at: "2019-04-06T09:54:25-04:00",
+      },
+      ptbr: {
+        translation: "Cotovelo",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:44-04:00",
       },
       ro: {
@@ -56058,6 +58003,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Elefante",
         is_approved: true,
+        approved_at: "2024-03-26T10:50:15-04:00",
+      },
+      ptbr: {
+        translation: "Elefante",
+        is_approved: true,
         approved_at: "2023-08-14T16:21:17-04:00",
       },
       ro: {
@@ -56174,6 +58124,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:15-04:00",
       },
       pt: {
+        translation: "Elevador",
+        is_approved: true,
+        approved_at: "2019-04-06T09:54:29-04:00",
+      },
+      ptbr: {
         translation: "Elevador",
         is_approved: true,
         approved_at: "2019-06-04T21:39:48-04:00",
@@ -56325,6 +58280,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Elfo",
         is_approved: true,
+        approved_at: "2020-03-20T11:24:41-04:00",
+      },
+      ptbr: {
+        translation: "Elfo",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:49-04:00",
       },
       ro: {
@@ -56441,6 +58401,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:29-04:00",
       },
       pt: {
+        translation: "esmeralda",
+        is_approved: true,
+        approved_at: "2021-07-26T20:22:24-04:00",
+      },
+      ptbr: {
         translation: "Esmeralda",
         is_approved: true,
         approved_at: "2023-12-17T11:50:07-05:00",
@@ -56575,6 +58540,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Emoji",
         is_approved: true,
+        approved_at: "2019-04-06T09:54:36-04:00",
+      },
+      ptbr: {
+        translation: "Emoji",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:55-04:00",
       },
       ro: {
@@ -56693,6 +58663,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Encantar",
         is_approved: true,
+        approved_at: "2020-06-16T16:16:28-04:00",
+      },
+      ptbr: {
+        translation: "Encantar",
+        is_approved: true,
         approved_at: "2019-06-04T21:39:57-04:00",
       },
       ro: {
@@ -56809,6 +58784,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T11:28:37-04:00",
       },
       pt: {
+        translation: "Dragão do Ender",
+        is_approved: true,
+        approved_at: "2021-01-25T10:31:27-05:00",
+      },
+      ptbr: {
         translation: "Dragão Ender",
         is_approved: true,
         approved_at: "2022-06-20T15:50:27-04:00",
@@ -56927,6 +58907,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:58:54-04:00",
       },
       pt: {
+        translation: "Enderman",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:35-04:00",
+      },
+      ptbr: {
         translation: "Enderman",
         is_approved: true,
         approved_at: "2019-08-28T11:50:28-04:00",
@@ -57061,6 +59046,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Inglaterra",
         is_approved: true,
+        approved_at: "2019-04-06T09:55:01-04:00",
+      },
+      ptbr: {
+        translation: "Inglaterra",
+        is_approved: true,
         approved_at: "2019-06-04T21:40:04-04:00",
       },
       ro: {
@@ -57179,6 +59169,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Envelope",
         is_approved: true,
+        approved_at: "2019-04-06T09:55:18-04:00",
+      },
+      ptbr: {
+        translation: "Envelope",
+        is_approved: true,
         approved_at: "2019-06-04T21:40:05-04:00",
       },
       ro: {
@@ -57295,6 +59290,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:27-04:00",
       },
       pt: {
+        translation: "Ambiente",
+        is_approved: true,
+        approved_at: "2019-04-06T09:55:27-04:00",
+      },
+      ptbr: {
         translation: "Meio ambiente",
         is_approved: true,
         approved_at: "2022-05-06T21:58:36-04:00",
@@ -57485,6 +59485,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Borracha",
         is_approved: true,
+        approved_at: "2020-03-01T11:49:07-05:00",
+      },
+      ptbr: {
+        translation: "Borracha",
+        is_approved: true,
         approved_at: "2019-08-05T12:30:05-04:00",
       },
       ro: {
@@ -57601,6 +59606,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:36-04:00",
       },
       pt: {
+        translation: "Escada rolante",
+        is_approved: true,
+        approved_at: "2019-04-06T09:55:52-04:00",
+      },
+      ptbr: {
         translation: "Escada rolante",
         is_approved: true,
         approved_at: "2019-06-07T23:03:23-04:00",
@@ -57721,6 +59731,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Europa",
         is_approved: true,
+        approved_at: "2019-04-06T09:56:00-04:00",
+      },
+      ptbr: {
+        translation: "Europa",
+        is_approved: true,
         approved_at: "2019-06-04T21:45:41-04:00",
       },
       ro: {
@@ -57839,6 +59854,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Saída",
         is_approved: true,
+        approved_at: "2019-04-06T09:56:13-04:00",
+      },
+      ptbr: {
+        translation: "Saída",
+        is_approved: true,
         approved_at: "2019-06-07T23:03:49-04:00",
       },
       ro: {
@@ -57955,6 +59975,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:50-04:00",
       },
       pt: {
+        translation: "Experimentar",
+        is_approved: true,
+        approved_at: "2019-04-06T09:56:24-04:00",
+      },
+      ptbr: {
         translation: "Experimento",
         is_approved: true,
         approved_at: "2019-06-07T23:03:52-04:00",
@@ -58073,6 +60098,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:44:54-04:00",
       },
       pt: {
+        translation: "Explosão",
+        is_approved: true,
+        approved_at: "2019-04-06T09:56:25-04:00",
+      },
+      ptbr: {
         translation: "Explosão",
         is_approved: true,
         approved_at: "2019-06-07T23:03:57-04:00",
@@ -58211,6 +60241,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Olho",
         is_approved: true,
+        approved_at: "2019-08-23T11:19:41-04:00",
+      },
+      ptbr: {
+        translation: "Olho",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:40-04:00",
       },
       ro: {
@@ -58345,6 +60380,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:52-04:00",
       },
       pt: {
+        translation: "Pala",
+        is_approved: true,
+        approved_at: "2020-12-18T17:23:11-05:00",
+      },
+      ptbr: {
         translation: "Tapa-olho",
         is_approved: true,
         approved_at: "2022-05-06T21:58:54-04:00",
@@ -58463,6 +60503,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:52:55-04:00",
       },
       pt: {
+        translation: "Sobrancelha",
+        is_approved: true,
+        approved_at: "2019-04-06T09:57:18-04:00",
+      },
+      ptbr: {
         translation: "Sobrancelha",
         is_approved: true,
         approved_at: "2019-07-26T20:52:18-04:00",
@@ -58612,6 +60657,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T14:08:02-04:00",
       },
       pt: {
+        translation: "Cara",
+        is_approved: true,
+        approved_at: "2020-04-30T21:22:31-04:00",
+      },
+      ptbr: {
         translation: "Rosto",
         is_approved: true,
         approved_at: "2019-06-07T23:04:40-04:00",
@@ -58730,6 +60780,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T02:53:01-04:00",
       },
       pt: {
+        translation: "Fábrica",
+        is_approved: true,
+        approved_at: "2019-04-06T09:57:23-04:00",
+      },
+      ptbr: {
         translation: "Fábrica",
         is_approved: true,
         approved_at: "2019-06-04T21:45:36-04:00",
@@ -58862,6 +60917,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:21:42-04:00",
       },
       pt: {
+        translation: "Feira",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:14-04:00",
+      },
+      ptbr: {
         translation: "Justo",
         is_approved: true,
         approved_at: "2019-08-23T20:49:43-04:00",
@@ -59017,6 +61077,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fada",
         is_approved: true,
+        approved_at: "2020-02-22T08:52:44-05:00",
+      },
+      ptbr: {
+        translation: "Fada",
+        is_approved: true,
         approved_at: "2019-06-07T23:27:43-04:00",
       },
       ro: {
@@ -59149,6 +61214,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Família",
         is_approved: true,
+        approved_at: "2021-04-14T16:21:32-04:00",
+      },
+      ptbr: {
+        translation: "Família",
+        is_approved: true,
         approved_at: "2019-06-04T21:45:49-04:00",
       },
       ro: {
@@ -59279,6 +61349,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:49:47-04:00",
       },
       pt: {
+        translation: "Ventoinha",
+        is_approved: true,
+        approved_at: "2019-03-25T17:51:44-04:00",
+      },
+      ptbr: {
         translation: "Ventilador",
         is_approved: true,
         approved_at: "2018-09-12T13:27:40-04:00",
@@ -59424,6 +61499,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:49:49-04:00",
       },
       pt: {
+        translation: "Dente canino",
+        is_approved: true,
+        approved_at: "2021-07-23T16:41:37-04:00",
+      },
+      ptbr: {
         translation: "Presas",
         is_approved: true,
         approved_at: "2023-08-24T14:33:20-04:00",
@@ -59556,6 +61636,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:59:00-04:00",
       },
       pt: {
+        translation: "Quinta",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:38-04:00",
+      },
+      ptbr: {
         translation: "Fazenda",
         is_approved: true,
         approved_at: "2018-11-11T15:34:22-05:00",
@@ -59671,6 +61756,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Desfile de moda",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:29-05:00",
+      },
+      ptbr: {
+        translation: "Desfile de moda",
+        is_approved: true,
         approved_at: "2025-02-01T13:08:20-05:00",
       },
       ro: {
@@ -59782,6 +61872,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:11:58-04:00",
       },
       pt: {
+        translation: "Comida rápida",
+        is_approved: true,
+        approved_at: "2019-09-08T17:59:12-04:00",
+      },
+      ptbr: {
         translation: "Fast food",
         is_approved: true,
         approved_at: "2023-08-14T16:37:13-04:00",
@@ -59914,6 +62009,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-26T04:01:19-04:00",
       },
       pt: {
+        translation: "Gordura",
+        is_approved: true,
+        approved_at: "2020-03-08T11:39:52-04:00",
+      },
+      ptbr: {
         translation: "Gordura",
         is_approved: true,
         approved_at: "2020-03-08T09:11:40-04:00",
@@ -60050,6 +62150,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:11:33-05:00",
       },
       pt: {
+        translation: "Pés",
+        is_approved: true,
+        approved_at: "2019-04-06T09:58:55-04:00",
+      },
+      ptbr: {
         translation: "Pés",
         is_approved: true,
         approved_at: "2018-03-25T17:27:02-04:00",
@@ -60210,6 +62315,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cerca",
         is_approved: true,
+        approved_at: "2020-01-16T18:10:30-05:00",
+      },
+      ptbr: {
+        translation: "Cerca",
+        is_approved: true,
         approved_at: "2019-08-31T23:25:25-04:00",
       },
       ro: {
@@ -60326,6 +62436,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:19:25-04:00",
       },
       pt: {
+        translation: "Roda-gigante",
+        is_approved: true,
+        approved_at: "2020-03-20T21:04:23-04:00",
+      },
+      ptbr: {
         translation: "Roda-gigante",
         is_approved: true,
         approved_at: "2022-05-28T08:57:31-04:00",
@@ -60460,6 +62575,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Festival",
         is_approved: true,
+        approved_at: "2019-04-06T10:00:40-04:00",
+      },
+      ptbr: {
+        translation: "Festival",
+        is_approved: true,
         approved_at: "2019-06-07T23:05:44-04:00",
       },
       ro: {
@@ -60590,6 +62710,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:17-04:00",
       },
       pt: {
+        translation: "Campo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:01:22-04:00",
+      },
+      ptbr: {
         translation: "Campo",
         is_approved: true,
         approved_at: "2019-06-07T23:06:38-04:00",
@@ -60763,6 +62888,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Barbatana",
         is_approved: true,
+        approved_at: "2019-04-06T10:02:13-04:00",
+      },
+      ptbr: {
+        translation: "Barbatana",
+        is_approved: true,
         approved_at: "2019-07-26T21:07:27-04:00",
       },
       ro: {
@@ -60908,6 +63038,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dedo",
         is_approved: true,
+        approved_at: "2019-04-06T10:02:16-04:00",
+      },
+      ptbr: {
+        translation: "Dedo",
+        is_approved: true,
         approved_at: "2019-06-07T23:29:13-04:00",
       },
       ro: {
@@ -61024,6 +63159,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:24-04:00",
       },
       pt: {
+        translation: "Meta",
+        is_approved: true,
+        approved_at: "2019-09-08T17:59:06-04:00",
+      },
+      ptbr: {
         translation: "Linha de chegada",
         is_approved: true,
         approved_at: "2019-06-07T23:29:15-04:00",
@@ -61158,6 +63298,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fogo",
         is_approved: true,
+        approved_at: "2020-06-12T15:51:04-04:00",
+      },
+      ptbr: {
+        translation: "Fogo",
+        is_approved: true,
         approved_at: "2019-09-03T10:44:43-04:00",
       },
       ro: {
@@ -61274,6 +63419,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-08-02T05:31:34-04:00",
       },
       pt: {
+        translation: "Camião dos bombeiros",
+        is_approved: true,
+        approved_at: "2019-04-06T15:52:57-04:00",
+      },
+      ptbr: {
         translation: "Caminhão dos bombeiros",
         is_approved: true,
         approved_at: "2022-05-28T08:57:56-04:00",
@@ -61392,6 +63542,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-07-18T15:51:48-04:00",
       },
       pt: {
+        translation: "Extintor de incêndios",
+        is_approved: true,
+        approved_at: "2019-04-06T10:02:54-04:00",
+      },
+      ptbr: {
         translation: "Extintor de incêndio",
         is_approved: true,
         approved_at: "2019-06-07T23:29:33-04:00",
@@ -61512,6 +63667,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bola de fogo",
         is_approved: true,
+        approved_at: "2020-01-26T14:47:35-05:00",
+      },
+      ptbr: {
+        translation: "Bola de fogo",
+        is_approved: true,
         approved_at: "2022-04-09T10:37:38-04:00",
       },
       ro: {
@@ -61628,6 +63788,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:30-04:00",
       },
       pt: {
+        translation: "Pirilampo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:04:23-04:00",
+      },
+      ptbr: {
         translation: "Vaga-lume",
         is_approved: true,
         approved_at: "2022-05-03T20:10:08-04:00",
@@ -61760,6 +63925,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T19:49:36-05:00",
       },
       pt: {
+        translation: "Fireplace",
+        is_approved: true,
+        approved_at: "2022-12-12T16:55:48-05:00",
+      },
+      ptbr: {
         translation: "Lareira",
         is_approved: true,
         approved_at: "2023-08-14T16:37:33-04:00",
@@ -61880,6 +64050,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fogos de artifício",
         is_approved: true,
+        approved_at: "2019-03-25T18:37:30-04:00",
+      },
+      ptbr: {
+        translation: "Fogos de artifício",
+        is_approved: true,
         approved_at: "2022-04-13T08:01:26-04:00",
       },
       ro: {
@@ -61996,6 +64171,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:34-04:00",
       },
       pt: {
+        translation: "Primeiros socorros",
+        is_approved: true,
+        approved_at: "2019-04-06T10:04:44-04:00",
+      },
+      ptbr: {
         translation: "Primeiros socorros",
         is_approved: true,
         approved_at: "2019-06-07T23:29:54-04:00",
@@ -62128,6 +64308,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:45:28-04:00",
       },
       pt: {
+        translation: "Peixe",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:43-04:00",
+      },
+      ptbr: {
         translation: "Peixe",
         is_approved: true,
         approved_at: "2018-09-12T13:29:58-04:00",
@@ -62313,6 +64498,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T15:57:09-04:00",
       },
       pt: {
+        translation: "Aquário",
+        is_approved: true,
+        approved_at: "2020-06-29T07:31:53-04:00",
+      },
+      ptbr: {
         translation: "Bacia de peixes",
         is_approved: true,
         approved_at: "2019-08-20T21:45:28-04:00",
@@ -62447,6 +64637,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pescador",
         is_approved: true,
+        approved_at: "2020-01-16T08:44:47-05:00",
+      },
+      ptbr: {
+        translation: "Pescador",
+        is_approved: true,
         approved_at: "2019-11-21T11:32:24-05:00",
       },
       ro: {
@@ -62577,6 +64772,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:49:51-04:00",
       },
       pt: {
+        translation: "Pescar",
+        is_approved: true,
+        approved_at: "2019-03-25T17:53:09-04:00",
+      },
+      ptbr: {
         translation: "Pesca",
         is_approved: true,
         approved_at: "2018-09-12T13:30:04-04:00",
@@ -62709,6 +64909,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:57-04:00",
       },
       pt: {
+        translation: "Punho / Murro",
+        is_approved: true,
+        approved_at: "2019-04-06T10:05:09-04:00",
+      },
+      ptbr: {
         translation: "Punho",
         is_approved: true,
         approved_at: "2019-07-26T20:54:07-04:00",
@@ -62882,6 +65087,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bandeiras",
         is_approved: true,
+        approved_at: "2019-04-06T10:05:11-04:00",
+      },
+      ptbr: {
+        translation: "Bandeiras",
+        is_approved: true,
         approved_at: "2019-06-07T23:31:14-04:00",
       },
       ro: {
@@ -62998,6 +65208,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:59-04:00",
       },
       pt: {
+        translation: "Flamingo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:05:15-04:00",
+      },
+      ptbr: {
         translation: "Flamingo",
         is_approved: true,
         approved_at: "2019-06-07T23:31:19-04:00",
@@ -63134,6 +65349,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:00-04:00",
       },
       pt: {
+        translation: "Sinalizador",
+        is_approved: true,
+        approved_at: "2020-02-07T17:47:41-05:00",
+      },
+      ptbr: {
         translation: "Sinalizador",
         is_approved: true,
         approved_at: "2019-06-07T23:31:27-04:00",
@@ -63293,6 +65513,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:01-04:00",
       },
       pt: {
+        translation: "Lanterna",
+        is_approved: true,
+        approved_at: "2019-04-06T10:05:25-04:00",
+      },
+      ptbr: {
         translation: "Lanterna",
         is_approved: true,
         approved_at: "2019-06-07T23:09:59-04:00",
@@ -63477,6 +65702,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:07-04:00",
       },
       pt: {
+        translation: "Pinball",
+        is_approved: true,
+        approved_at: "2020-12-18T17:26:01-05:00",
+      },
+      ptbr: {
         translation: "Nadadeira",
         is_approved: true,
         approved_at: "2023-08-24T14:35:23-04:00",
@@ -63595,6 +65825,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:08-04:00",
       },
       pt: {
+        translation: "Ilha flutuante",
+        is_approved: true,
+        approved_at: "2019-04-06T10:06:27-04:00",
+      },
+      ptbr: {
         translation: "Ilha flutuante",
         is_approved: true,
         approved_at: "2022-05-06T21:59:44-04:00",
@@ -63731,6 +65966,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:09-04:00",
       },
       pt: {
+        translation: "Inundação",
+        is_approved: true,
+        approved_at: "2019-04-06T10:06:29-04:00",
+      },
+      ptbr: {
         translation: "Enchente",
         is_approved: true,
         approved_at: "2019-06-07T23:09:39-04:00",
@@ -63864,6 +66104,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:11-04:00",
       },
       pt: {
+        translation: "Chão",
+        is_approved: true,
+        approved_at: "2020-04-06T18:02:47-04:00",
+      },
+      ptbr: {
         translation: "Piso",
         is_approved: true,
         approved_at: "2019-06-07T23:09:34-04:00",
@@ -63982,6 +66227,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:14-04:00",
       },
       pt: {
+        translation: "Vaso de flores",
+        is_approved: true,
+        approved_at: "2019-04-06T10:06:47-04:00",
+      },
+      ptbr: {
         translation: "Vaso de flor",
         is_approved: true,
         approved_at: "2022-04-15T11:23:04-04:00",
@@ -64100,6 +66350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:16-04:00",
       },
       pt: {
+        translation: "Flores",
+        is_approved: true,
+        approved_at: "2019-04-06T10:06:49-04:00",
+      },
+      ptbr: {
         translation: "Flores",
         is_approved: true,
         approved_at: "2019-06-07T23:09:14-04:00",
@@ -64247,6 +66502,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Flauta",
         is_approved: true,
+        approved_at: "2019-04-06T10:06:50-04:00",
+      },
+      ptbr: {
+        translation: "Flauta",
+        is_approved: true,
         approved_at: "2019-07-26T20:54:19-04:00",
       },
       ro: {
@@ -64379,6 +66639,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Voo",
         is_approved: true,
+        approved_at: "2021-02-07T16:51:05-05:00",
+      },
+      ptbr: {
+        translation: "Voo",
+        is_approved: true,
         approved_at: "2019-06-22T18:46:43-04:00",
       },
       ro: {
@@ -64495,6 +66760,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:50-04:00",
       },
       pt: {
+        translation: "Porco voador",
+        is_approved: true,
+        approved_at: "2019-04-06T10:07:11-04:00",
+      },
+      ptbr: {
         translation: "Porco voador",
         is_approved: true,
         approved_at: "2022-05-06T21:59:54-04:00",
@@ -64655,6 +66925,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pasta",
         is_approved: true,
+        approved_at: "2019-09-01T11:17:58-04:00",
+      },
+      ptbr: {
+        translation: "Pasta",
+        is_approved: true,
         approved_at: "2019-06-07T23:08:28-04:00",
       },
       ro: {
@@ -64785,6 +67060,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:35:03-04:00",
       },
       pt: {
+        translation: "Alimentos",
+        is_approved: true,
+        approved_at: "2021-04-15T06:03:51-04:00",
+      },
+      ptbr: {
         translation: "Alimentos",
         is_approved: true,
         approved_at: "2019-06-23T09:59:38-04:00",
@@ -65014,6 +67294,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T15:58:01-05:00",
       },
       pt: {
+        translation: "Football",
+        is_approved: true,
+        approved_at: "2021-07-03T08:07:25-04:00",
+      },
+      ptbr: {
         translation: "Futebol americano",
         is_approved: true,
         approved_at: "2023-08-14T16:21:52-04:00",
@@ -65132,6 +67417,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T15:58:03-05:00",
       },
       pt: {
+        translation: "Campo de futebol",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:29-05:00",
+      },
+      ptbr: {
         translation: "Campo de futebol americano",
         is_approved: true,
         approved_at: "2025-01-30T14:42:14-05:00",
@@ -65240,6 +67530,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T15:58:04-05:00",
       },
       pt: {
+        translation: "Capacete de râguebi",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:31-05:00",
+      },
+      ptbr: {
         translation: "Capacete de futebol americano",
         is_approved: true,
         approved_at: "2025-01-30T14:42:15-05:00",
@@ -65353,6 +67648,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:10-04:00",
       },
       pt: {
+        translation: "Pegada",
+        is_approved: true,
+        approved_at: "2019-04-06T10:07:45-04:00",
+      },
+      ptbr: {
         translation: "Pegada",
         is_approved: true,
         approved_at: "2019-07-26T20:54:26-04:00",
@@ -65526,6 +67826,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Testa",
         is_approved: true,
+        approved_at: "2019-04-06T10:08:00-04:00",
+      },
+      ptbr: {
+        translation: "Testa",
+        is_approved: true,
         approved_at: "2019-07-26T20:54:34-04:00",
       },
       ro: {
@@ -65684,6 +67989,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Floresta",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:45-04:00",
+      },
+      ptbr: {
+        translation: "Floresta",
+        is_approved: true,
         approved_at: "2018-09-12T13:30:36-04:00",
       },
       ro: {
@@ -65800,6 +68110,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:16:57-04:00",
       },
       pt: {
+        translation: "Incêndio florestal",
+        is_approved: true,
+        approved_at: "2019-04-06T10:08:03-04:00",
+      },
+      ptbr: {
         translation: "Incêndio florestal",
         is_approved: true,
         approved_at: "2022-05-06T22:00:06-04:00",
@@ -66014,6 +68329,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:13-04:00",
       },
       pt: {
+        translation: "Fortress",
+        is_approved: true,
+        approved_at: "2022-08-17T13:55:37-04:00",
+      },
+      ptbr: {
         translation: "Fortaleza",
         is_approved: true,
         approved_at: "2023-08-14T16:37:46-04:00",
@@ -66132,6 +68452,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:13:21-05:00",
       },
       pt: {
+        translation: "Bolinho da sorte",
+        is_approved: true,
+        approved_at: "2019-04-06T10:08:19-04:00",
+      },
+      ptbr: {
         translation: "Biscoito da sorte",
         is_approved: true,
         approved_at: "2022-04-14T08:21:07-04:00",
@@ -66250,6 +68575,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:16-04:00",
       },
       pt: {
+        translation: "Fossil",
+        is_approved: true,
+        approved_at: "2020-05-04T19:57:06-04:00",
+      },
+      ptbr: {
         translation: "Fóssil",
         is_approved: true,
         approved_at: "2023-08-14T16:37:57-04:00",
@@ -66397,6 +68727,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fonte",
         is_approved: true,
+        approved_at: "2019-04-06T10:08:22-04:00",
+      },
+      ptbr: {
+        translation: "Fonte",
+        is_approved: true,
         approved_at: "2019-06-07T23:10:41-04:00",
       },
       ro: {
@@ -66513,6 +68848,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:45-04:00",
       },
       pt: {
+        translation: "Raposa",
+        is_approved: true,
+        approved_at: "2019-04-06T10:08:25-04:00",
+      },
+      ptbr: {
         translation: "Raposa",
         is_approved: true,
         approved_at: "2019-06-07T23:10:53-04:00",
@@ -66692,6 +69032,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:48-04:00",
       },
       pt: {
+        translation: "Moldura",
+        is_approved: true,
+        approved_at: "2021-07-12T11:12:13-04:00",
+      },
+      ptbr: {
         translation: "Quadro",
         is_approved: true,
         approved_at: "2019-06-07T23:11:03-04:00",
@@ -66810,6 +69155,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:18:59-04:00",
       },
       pt: {
+        translation: "Frankenstein",
+        is_approved: true,
+        approved_at: "2020-03-20T11:16:55-04:00",
+      },
+      ptbr: {
         translation: "Frankenstein",
         is_approved: true,
         approved_at: "2019-06-07T23:10:58-04:00",
@@ -66990,6 +69340,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:52-04:00",
       },
       pt: {
+        translation: "Batatas fritas",
+        is_approved: true,
+        approved_at: "2019-04-06T10:08:50-04:00",
+      },
+      ptbr: {
         translation: "Batata frita",
         is_approved: true,
         approved_at: "2022-04-15T10:18:47-04:00",
@@ -67369,6 +69724,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:54-04:00",
       },
       pt: {
+        translation: "Frigorífico",
+        is_approved: true,
+        approved_at: "2019-04-06T10:08:51-04:00",
+      },
+      ptbr: {
         translation: "Geladeira",
         is_approved: true,
         approved_at: "2019-06-07T23:11:14-04:00",
@@ -67487,6 +69847,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:17:59-04:00",
       },
       pt: {
+        translation: "Frisbee",
+        is_approved: true,
+        approved_at: "2019-04-16T13:31:25-04:00",
+      },
+      ptbr: {
         translation: "Frisbee",
         is_approved: true,
         approved_at: "2019-06-07T23:11:17-04:00",
@@ -67636,6 +70001,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:21-04:00",
       },
       pt: {
+        translation: "Frog",
+        is_approved: true,
+        approved_at: "2020-12-26T14:29:52-05:00",
+      },
+      ptbr: {
         translation: "Sapo",
         is_approved: true,
         approved_at: "2023-08-14T16:38:06-04:00",
@@ -67756,6 +70126,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Franzir",
         is_approved: true,
+        approved_at: "2020-02-07T17:50:02-05:00",
+      },
+      ptbr: {
+        translation: "Franzir",
+        is_approved: true,
         approved_at: "2024-11-04T12:45:48-05:00",
       },
       ro: {
@@ -67872,6 +70247,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-01-14T11:22:58-05:00",
       },
       pt: {
+        translation: "Frozen",
+        is_approved: true,
+        approved_at: "2023-02-05T10:30:33-05:00",
+      },
+      ptbr: {
         translation: "Congelado",
         is_approved: true,
         approved_at: "2023-08-25T06:25:13-04:00",
@@ -67992,6 +70372,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fruta",
         is_approved: true,
+        approved_at: "2019-04-06T10:09:39-04:00",
+      },
+      ptbr: {
+        translation: "Fruta",
+        is_approved: true,
         approved_at: "2019-06-07T23:11:40-04:00",
       },
       ro: {
@@ -68108,6 +70493,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:32-04:00",
       },
       pt: {
+        translation: "Cesto de frutas",
+        is_approved: true,
+        approved_at: "2019-04-06T10:09:40-04:00",
+      },
+      ptbr: {
         translation: "Cesta de frutas",
         is_approved: true,
         approved_at: "2019-06-07T23:11:46-04:00",
@@ -68221,6 +70611,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:28-05:00",
       },
       pt: {
+        translation: "Ponche de frutas",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:32-05:00",
+      },
+      ptbr: {
         translation: "Ponche de frutas",
         is_approved: true,
         approved_at: "2025-02-02T08:50:35-05:00",
@@ -68454,6 +70849,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Frigideira",
         is_approved: true,
+        approved_at: "2019-04-06T10:09:43-04:00",
+      },
+      ptbr: {
+        translation: "Frigideira",
+        is_approved: true,
         approved_at: "2019-06-07T23:12:04-04:00",
       },
       ro: {
@@ -68570,6 +70970,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:36-04:00",
       },
       pt: {
+        translation: "Brownie",
+        is_approved: true,
+        approved_at: "2019-04-06T10:10:31-04:00",
+      },
+      ptbr: {
         translation: "Fudge",
         is_approved: true,
         approved_at: "2023-08-24T14:37:44-04:00",
@@ -68702,6 +71107,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:40-04:00",
       },
       pt: {
+        translation: "Pêlo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:11:02-04:00",
+      },
+      ptbr: {
         translation: "Pelo",
         is_approved: true,
         approved_at: "2025-02-02T08:24:23-05:00",
@@ -68944,6 +71354,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fornalha",
         is_approved: true,
+        approved_at: "2020-01-16T17:49:06-05:00",
+      },
+      ptbr: {
+        translation: "Fornalha",
+        is_approved: true,
         approved_at: "2019-09-24T13:24:06-04:00",
       },
       ro: {
@@ -69060,6 +71475,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:35:04-04:00",
       },
       pt: {
+        translation: "Mobília",
+        is_approved: true,
+        approved_at: "2020-12-30T13:34:04-05:00",
+      },
+      ptbr: {
         translation: "Mobília",
         is_approved: true,
         approved_at: "2019-06-23T09:59:39-04:00",
@@ -69194,6 +71614,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Galáxia",
         is_approved: true,
+        approved_at: "2019-03-25T17:55:27-04:00",
+      },
+      ptbr: {
+        translation: "Galáxia",
+        is_approved: true,
         approved_at: "2018-09-12T13:32:32-04:00",
       },
       ro: {
@@ -69310,6 +71735,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-08-04T09:54:15-04:00",
       },
       pt: {
+        translation: "Galeria",
+        is_approved: true,
+        approved_at: "2020-03-20T20:45:55-04:00",
+      },
+      ptbr: {
         translation: "Galeria",
         is_approved: true,
         approved_at: "2019-08-07T17:46:07-04:00",
@@ -69470,6 +71900,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jogo",
         is_approved: true,
+        approved_at: "2020-03-22T14:08:43-04:00",
+      },
+      ptbr: {
+        translation: "Jogo",
+        is_approved: true,
         approved_at: "2019-06-07T23:12:34-04:00",
       },
       ro: {
@@ -69614,6 +72049,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:46-04:00",
       },
       pt: {
+        translation: "Comando para jogos",
+        is_approved: true,
+        approved_at: "2019-09-01T11:18:16-04:00",
+      },
+      ptbr: {
         translation: "Controle de jogos",
         is_approved: true,
         approved_at: "2019-09-05T16:59:43-04:00",
@@ -69732,6 +72172,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:47-04:00",
       },
       pt: {
+        translation: "Cadeira gaming",
+        is_approved: true,
+        approved_at: "2019-04-06T10:11:35-04:00",
+      },
+      ptbr: {
         translation: "Cadeira gamer",
         is_approved: true,
         approved_at: "2022-05-06T22:00:51-04:00",
@@ -69864,6 +72309,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:48-04:00",
       },
       pt: {
+        translation: "Garagem",
+        is_approved: true,
+        approved_at: "2019-04-06T10:11:53-04:00",
+      },
+      ptbr: {
         translation: "Garagem",
         is_approved: true,
         approved_at: "2019-06-07T23:12:44-04:00",
@@ -70201,6 +72651,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:50-04:00",
       },
       pt: {
+        translation: "Caixote do lixo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:11:59-04:00",
+      },
+      ptbr: {
         translation: "Lixeira",
         is_approved: true,
         approved_at: "2019-06-07T23:12:52-04:00",
@@ -70319,6 +72774,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:18:57-04:00",
       },
       pt: {
+        translation: "Camião do lixo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:12:01-04:00",
+      },
+      ptbr: {
         translation: "Caminhão de lixo",
         is_approved: true,
         approved_at: "2019-09-05T17:00:21-04:00",
@@ -70439,6 +72899,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jardim",
         is_approved: true,
+        approved_at: "2019-03-25T17:55:29-04:00",
+      },
+      ptbr: {
+        translation: "Jardim",
+        is_approved: true,
         approved_at: "2018-09-12T13:32:35-04:00",
       },
       ro: {
@@ -70555,6 +73020,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:19:02-04:00",
       },
       pt: {
+        translation: "Pão de alho",
+        is_approved: true,
+        approved_at: "2019-04-06T10:12:47-04:00",
+      },
+      ptbr: {
         translation: "Pão de alho",
         is_approved: true,
         approved_at: "2019-07-26T20:57:12-04:00",
@@ -70771,6 +73241,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Portões",
         is_approved: true,
+        approved_at: "2019-09-01T11:18:53-04:00",
+      },
+      ptbr: {
+        translation: "Portões",
+        is_approved: true,
         approved_at: "2019-06-07T23:32:46-04:00",
       },
       ro: {
@@ -70931,6 +73406,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:21-04:00",
       },
       pt: {
+        translation: "Génio",
+        is_approved: true,
+        approved_at: "2019-03-25T17:55:54-04:00",
+      },
+      ptbr: {
         translation: "Gênio",
         is_approved: true,
         approved_at: "2018-09-12T13:33:12-04:00",
@@ -71063,6 +73543,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:19:32-04:00",
       },
       pt: {
+        translation: "Lâmparina mágica",
+        is_approved: true,
+        approved_at: "2019-04-06T10:13:29-04:00",
+      },
+      ptbr: {
         translation: "Lâmpada do gênio",
         is_approved: true,
         approved_at: "2022-05-06T22:01:57-04:00",
@@ -71181,6 +73666,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:23-04:00",
       },
       pt: {
+        translation: "Ghast",
+        is_approved: true,
+        approved_at: "2019-03-25T17:55:56-04:00",
+      },
+      ptbr: {
         translation: "Ghast",
         is_approved: true,
         approved_at: "2018-09-12T13:33:22-04:00",
@@ -71313,6 +73803,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:25-04:00",
       },
       pt: {
+        translation: "Gigante",
+        is_approved: true,
+        approved_at: "2019-03-25T17:56:08-04:00",
+      },
+      ptbr: {
         translation: "Gigante",
         is_approved: true,
         approved_at: "2018-09-12T13:33:30-04:00",
@@ -71608,6 +74103,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Presente",
         is_approved: true,
+        approved_at: "2019-08-25T09:41:08-04:00",
+      },
+      ptbr: {
+        translation: "Presente",
+        is_approved: true,
         approved_at: "2019-08-20T10:57:00-04:00",
       },
       ro: {
@@ -71724,6 +74224,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-12-09T09:43:41-05:00",
       },
       pt: {
+        translation: "Homem-bolacha",
+        is_approved: true,
+        approved_at: "2024-08-24T10:09:39-04:00",
+      },
+      ptbr: {
         translation: "Homem-biscoito",
         is_approved: true,
         approved_at: "2022-04-13T08:44:26-04:00",
@@ -71842,6 +74347,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:59:44-04:00",
       },
       pt: {
+        translation: "Girafa",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:51-04:00",
+      },
+      ptbr: {
         translation: "Girafa",
         is_approved: true,
         approved_at: "2018-09-12T13:33:35-04:00",
@@ -71978,6 +74488,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:30:05-04:00",
       },
       pt: {
+        translation: "Rapariga",
+        is_approved: true,
+        approved_at: "2019-04-06T10:14:46-04:00",
+      },
+      ptbr: {
         translation: "Menina",
         is_approved: true,
         approved_at: "2018-03-25T17:27:04-04:00",
@@ -72138,6 +74653,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vidro",
         is_approved: true,
+        approved_at: "2020-01-15T19:09:42-05:00",
+      },
+      ptbr: {
+        translation: "Vidro",
+        is_approved: true,
         approved_at: "2019-08-31T23:20:29-04:00",
       },
       ro: {
@@ -72254,6 +74774,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:44-05:00",
       },
       pt: {
+        translation: "Copo de leite",
+        is_approved: true,
+        approved_at: "2019-04-06T10:15:02-04:00",
+      },
+      ptbr: {
         translation: "Copo de leite",
         is_approved: true,
         approved_at: "2019-07-01T09:55:08-04:00",
@@ -72440,6 +74965,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Óculos",
         is_approved: true,
+        approved_at: "2019-04-06T10:15:12-04:00",
+      },
+      ptbr: {
+        translation: "Óculos",
+        is_approved: true,
         approved_at: "2019-07-01T09:55:12-04:00",
       },
       ro: {
@@ -72615,6 +75145,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Globo",
         is_approved: true,
+        approved_at: "2020-04-30T21:22:44-04:00",
+      },
+      ptbr: {
+        translation: "Globo",
+        is_approved: true,
         approved_at: "2019-07-01T09:55:13-04:00",
       },
       ro: {
@@ -72760,6 +75295,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Luvas",
         is_approved: true,
+        approved_at: "2019-04-06T10:15:45-04:00",
+      },
+      ptbr: {
+        translation: "Luvas",
+        is_approved: true,
         approved_at: "2019-07-01T09:55:14-04:00",
       },
       ro: {
@@ -72890,6 +75430,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-15T15:43:01-05:00",
       },
       pt: {
+        translation: "Tubo de cola",
+        is_approved: true,
+        approved_at: "2019-04-06T15:54:47-04:00",
+      },
+      ptbr: {
         translation: "Cola",
         is_approved: true,
         approved_at: "2019-07-01T09:55:16-04:00",
@@ -73048,6 +75593,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:30:13-04:00",
       },
       pt: {
+        translation: "Gnomo",
+        is_approved: true,
+        approved_at: "2019-04-06T10:16:22-04:00",
+      },
+      ptbr: {
         translation: "Gnomo",
         is_approved: true,
         approved_at: "2019-07-01T09:55:17-04:00",
@@ -73251,6 +75801,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ponto",
         is_approved: true,
+        approved_at: "2023-04-06T08:44:35-04:00",
+      },
+      ptbr: {
+        translation: "Ponto",
+        is_approved: true,
         approved_at: "2019-09-18T11:52:16-04:00",
       },
       ro: {
@@ -73394,6 +75949,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-15T15:43:02-05:00",
       },
       pt: {
+        translation: "Guarda-redes",
+        is_approved: true,
+        approved_at: "2019-04-06T15:55:20-04:00",
+      },
+      ptbr: {
         translation: "Goleiro",
         is_approved: true,
         approved_at: "2019-07-01T15:34:08-04:00",
@@ -73526,6 +76086,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:30:22-04:00",
       },
       pt: {
+        translation: "Cabra",
+        is_approved: true,
+        approved_at: "2019-04-06T15:55:22-04:00",
+      },
+      ptbr: {
         translation: "Cabra",
         is_approved: true,
         approved_at: "2018-03-25T17:27:05-04:00",
@@ -73673,6 +76238,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Goblin",
         is_approved: true,
+        approved_at: "2019-09-01T11:19:16-04:00",
+      },
+      ptbr: {
+        translation: "Goblin",
+        is_approved: true,
         approved_at: "2019-06-07T23:34:56-04:00",
       },
       ro: {
@@ -73789,6 +76359,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T13:59:51-04:00",
       },
       pt: {
+        translation: "Godzilla",
+        is_approved: true,
+        approved_at: "2019-04-06T15:56:28-04:00",
+      },
+      ptbr: {
         translation: "Godzilla",
         is_approved: true,
         approved_at: "2019-06-07T23:34:53-04:00",
@@ -73975,6 +76550,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Óculos de proteção",
         is_approved: true,
+        approved_at: "2020-02-03T19:25:25-05:00",
+      },
+      ptbr: {
+        translation: "Óculos de proteção",
+        is_approved: true,
         approved_at: "2023-08-24T14:42:22-04:00",
       },
       ro: {
@@ -74091,6 +76671,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:59:41-04:00",
       },
       pt: {
+        translation: "Ouro",
+        is_approved: true,
+        approved_at: "2019-03-25T17:56:15-04:00",
+      },
+      ptbr: {
         translation: "Ouro",
         is_approved: true,
         approved_at: "2018-09-12T13:33:39-04:00",
@@ -74211,6 +76796,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Medalha de ouro",
         is_approved: true,
+        approved_at: "2019-04-06T15:56:36-04:00",
+      },
+      ptbr: {
+        translation: "Medalha de ouro",
+        is_approved: true,
         approved_at: "2019-09-07T13:13:16-04:00",
       },
       ro: {
@@ -74327,6 +76917,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:47:52-04:00",
       },
       pt: {
+        translation: "Mina de ouro",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:16-04:00",
+      },
+      ptbr: {
         translation: "Mina de ouro",
         is_approved: true,
         approved_at: "2022-04-25T21:44:52-04:00",
@@ -74447,6 +77042,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Anel de ouro",
         is_approved: true,
+        approved_at: "2019-04-06T15:56:47-04:00",
+      },
+      ptbr: {
+        translation: "Anel de ouro",
+        is_approved: true,
         approved_at: "2019-09-07T13:13:11-04:00",
       },
       ro: {
@@ -74565,6 +77165,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Maçã dourada",
         is_approved: true,
+        approved_at: "2019-11-13T19:14:13-05:00",
+      },
+      ptbr: {
+        translation: "Maçã dourada",
+        is_approved: true,
         approved_at: "2022-05-20T06:29:00-04:00",
       },
       ro: {
@@ -74681,6 +77286,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T15:59:43-04:00",
       },
       pt: {
+        translation: "Peixinho dourado",
+        is_approved: true,
+        approved_at: "2019-03-25T18:38:59-04:00",
+      },
+      ptbr: {
         translation: "Peixe dourado",
         is_approved: true,
         approved_at: "2019-08-08T17:23:50-04:00",
@@ -74815,6 +77425,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Golem",
         is_approved: true,
+        approved_at: "2019-09-15T19:31:40-04:00",
+      },
+      ptbr: {
+        translation: "Golem",
+        is_approved: true,
         approved_at: "2019-08-28T11:50:27-04:00",
       },
       ro: {
@@ -74933,6 +77548,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bola de golfe",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:16-04:00",
+      },
+      ptbr: {
+        translation: "Bola de golfe",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:38-04:00",
       },
       ro: {
@@ -75044,6 +77664,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:30:44-04:00",
       },
       pt: {
+        translation: "Carrinho de golfe",
+        is_approved: true,
+        approved_at: "2019-04-06T15:56:58-04:00",
+      },
+      ptbr: {
         translation: "Carrinho de golfe",
         is_approved: true,
         approved_at: "2019-06-07T23:13:05-04:00",
@@ -75164,6 +77789,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Taco de golfe",
         is_approved: true,
+        approved_at: "2020-03-13T08:11:38-04:00",
+      },
+      ptbr: {
+        translation: "Taco de golfe",
+        is_approved: true,
         approved_at: "2023-08-24T13:33:32-04:00",
       },
       ro: {
@@ -75280,6 +77910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:30:52-04:00",
       },
       pt: {
+        translation: "Campo de golfe",
+        is_approved: true,
+        approved_at: "2019-04-06T15:57:04-04:00",
+      },
+      ptbr: {
         translation: "Campo de golfe",
         is_approved: true,
         approved_at: "2025-02-20T05:31:26-05:00",
@@ -75414,6 +78049,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ganso",
         is_approved: true,
+        approved_at: "2019-04-06T15:57:29-04:00",
+      },
+      ptbr: {
+        translation: "Ganso",
+        is_approved: true,
         approved_at: "2019-07-26T20:57:38-04:00",
       },
       ro: {
@@ -75530,6 +78170,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:22-04:00",
       },
       pt: {
+        translation: "Gorilla",
+        is_approved: true,
+        approved_at: "2020-12-26T14:30:49-05:00",
+      },
+      ptbr: {
         translation: "Gorila",
         is_approved: true,
         approved_at: "2023-08-14T16:38:17-04:00",
@@ -75650,6 +78295,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Uvas",
         is_approved: true,
+        approved_at: "2023-08-17T08:00:18-04:00",
+      },
+      ptbr: {
+        translation: "Uvas",
+        is_approved: true,
         approved_at: "2019-06-07T23:35:23-04:00",
       },
       ro: {
@@ -75766,6 +78416,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:51:58-05:00",
       },
       pt: {
+        translation: "Gráfico",
+        is_approved: true,
+        approved_at: "2019-04-06T15:58:27-04:00",
+      },
+      ptbr: {
         translation: "Gráfico",
         is_approved: true,
         approved_at: "2019-06-07T23:35:26-04:00",
@@ -75898,6 +78553,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:43:56-04:00",
       },
       pt: {
+        translation: "Gancho-arpão",
+        is_approved: true,
+        approved_at: "2020-07-06T08:01:41-04:00",
+      },
+      ptbr: {
         translation: "Arpão",
         is_approved: true,
         approved_at: "2021-10-29T07:37:02-04:00",
@@ -76016,6 +78676,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:27-04:00",
       },
       pt: {
+        translation: "Gafanhoto",
+        is_approved: true,
+        approved_at: "2019-03-25T17:56:34-04:00",
+      },
+      ptbr: {
         translation: "Gafanhoto",
         is_approved: true,
         approved_at: "2018-09-12T13:34:03-04:00",
@@ -76161,6 +78826,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:23:48-04:00",
       },
       pt: {
+        translation: "Gravilha",
+        is_approved: true,
+        approved_at: "2020-01-15T19:07:38-05:00",
+      },
+      ptbr: {
         translation: "Cascalho",
         is_approved: true,
         approved_at: "2019-06-07T23:15:09-04:00",
@@ -76279,6 +78949,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:55:52-04:00",
       },
       pt: {
+        translation: "Cemitério",
+        is_approved: true,
+        approved_at: "2020-10-13T17:46:56-04:00",
+      },
+      ptbr: {
         translation: "Cemitério",
         is_approved: true,
         approved_at: "2019-08-07T19:52:48-04:00",
@@ -76411,6 +79086,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:08-05:00",
       },
       pt: {
+        translation: "Grã-Bretanha",
+        is_approved: true,
+        approved_at: "2019-04-06T15:59:07-04:00",
+      },
+      ptbr: {
         translation: "Grã Bretanha",
         is_approved: true,
         approved_at: "2019-06-07T23:35:53-04:00",
@@ -76529,6 +79209,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:24-04:00",
       },
       pt: {
+        translation: "Verde",
+        is_approved: true,
+        approved_at: "2019-04-06T15:59:09-04:00",
+      },
+      ptbr: {
         translation: "Verde",
         is_approved: true,
         approved_at: "2019-06-03T20:42:55-04:00",
@@ -76676,6 +79361,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estufa",
         is_approved: true,
+        approved_at: "2019-04-16T18:42:41-04:00",
+      },
+      ptbr: {
+        translation: "Estufa",
+        is_approved: true,
         approved_at: "2019-06-07T23:15:24-04:00",
       },
       ro: {
@@ -76787,6 +79477,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:34-05:00",
       },
       pt: {
+        translation: "Grifo",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:33-05:00",
+      },
+      ptbr: {
         translation: "Grifo",
         is_approved: true,
         approved_at: "2025-02-01T13:08:26-05:00",
@@ -77033,6 +79728,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ceifador",
         is_approved: true,
+        approved_at: "2022-01-07T14:25:15-05:00",
+      },
+      ptbr: {
+        translation: "Ceifador",
+        is_approved: true,
         approved_at: "2021-01-12T18:32:56-05:00",
       },
       ro: {
@@ -77151,6 +79851,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Guardião",
         is_approved: true,
+        approved_at: "2019-09-01T11:21:09-04:00",
+      },
+      ptbr: {
+        translation: "Guardião",
+        is_approved: true,
         approved_at: "2019-11-21T11:47:06-05:00",
       },
       ro: {
@@ -77267,6 +79972,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:00-04:00",
       },
       pt: {
+        translation: "Guitarra",
+        is_approved: true,
+        approved_at: "2019-07-21T14:07:53-04:00",
+      },
+      ptbr: {
         translation: "Guitarra",
         is_approved: true,
         approved_at: "2018-09-12T13:34:07-04:00",
@@ -77494,6 +80204,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:31:52-04:00",
       },
       pt: {
+        translation: "Pastilha elástica",
+        is_approved: true,
+        approved_at: "2019-04-06T15:59:59-04:00",
+      },
+      ptbr: {
         translation: "Chiclete",
         is_approved: true,
         approved_at: "2019-06-07T23:15:35-04:00",
@@ -77652,6 +80367,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:21:42-04:00",
       },
       pt: {
+        translation: "Pastilha elástica",
+        is_approved: true,
+        approved_at: "2020-03-20T11:19:33-04:00",
+      },
+      ptbr: {
         translation: "Bola de chiclete",
         is_approved: true,
         approved_at: "2019-06-07T23:15:42-04:00",
@@ -77788,6 +80508,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:01-04:00",
       },
       pt: {
+        translation: "Ginásio",
+        is_approved: true,
+        approved_at: "2020-03-13T10:56:14-04:00",
+      },
+      ptbr: {
         translation: "Ginásio",
         is_approved: true,
         approved_at: "2020-03-28T14:57:29-04:00",
@@ -77948,6 +80673,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cabelo",
         is_approved: true,
+        approved_at: "2019-04-06T16:00:32-04:00",
+      },
+      ptbr: {
+        translation: "Cabelo",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:05-04:00",
       },
       ro: {
@@ -78078,6 +80808,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:27-04:00",
       },
       pt: {
+        translation: "Tiara",
+        is_approved: true,
+        approved_at: "2020-06-05T07:34:47-04:00",
+      },
+      ptbr: {
         translation: "Tiara",
         is_approved: true,
         approved_at: "2019-07-26T21:09:41-04:00",
@@ -78262,6 +80997,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:29-04:00",
       },
       pt: {
+        translation: "Escova",
+        is_approved: true,
+        approved_at: "2019-04-06T16:01:01-04:00",
+      },
+      ptbr: {
         translation: "Escova de cabelo",
         is_approved: true,
         approved_at: "2019-07-26T20:58:06-04:00",
@@ -78382,6 +81122,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Corte de cabelo",
         is_approved: true,
+        approved_at: "2019-04-06T16:01:03-04:00",
+      },
+      ptbr: {
+        translation: "Corte de cabelo",
+        is_approved: true,
         approved_at: "2019-07-01T09:55:46-04:00",
       },
       ro: {
@@ -78498,6 +81243,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:21:41-04:00",
       },
       pt: {
+        translation: "Halloween",
+        is_approved: true,
+        approved_at: "2020-10-10T19:46:56-04:00",
+      },
+      ptbr: {
         translation: "Halloween",
         is_approved: true,
         approved_at: "2019-06-07T23:16:41-04:00",
@@ -78630,6 +81380,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:15:47-05:00",
       },
       pt: {
+        translation: "Hall de entrada",
+        is_approved: true,
+        approved_at: "2020-02-03T19:27:29-05:00",
+      },
+      ptbr: {
         translation: "Corredor",
         is_approved: true,
         approved_at: "2019-07-26T20:58:44-04:00",
@@ -78750,6 +81505,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Auréola",
         is_approved: true,
+        approved_at: "2019-04-06T16:01:49-04:00",
+      },
+      ptbr: {
+        translation: "Auréola",
+        is_approved: true,
         approved_at: "2019-09-17T20:57:20-04:00",
       },
       ro: {
@@ -78866,6 +81626,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:57:17-04:00",
       },
       pt: {
+        translation: "Fiambre",
+        is_approved: true,
+        approved_at: "2021-08-01T07:01:11-04:00",
+      },
+      ptbr: {
         translation: "Presunto",
         is_approved: true,
         approved_at: "2019-06-23T10:05:00-04:00",
@@ -79066,6 +81831,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hambúrguer",
         is_approved: true,
+        approved_at: "2021-07-12T15:58:41-04:00",
+      },
+      ptbr: {
+        translation: "Hambúrguer",
+        is_approved: true,
         approved_at: "2019-06-07T23:16:57-04:00",
       },
       ro: {
@@ -79184,6 +81954,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Martelo",
         is_approved: true,
+        approved_at: "2023-08-17T07:55:58-04:00",
+      },
+      ptbr: {
+        translation: "Martelo",
+        is_approved: true,
         approved_at: "2019-06-07T23:16:59-04:00",
       },
       ro: {
@@ -79300,6 +82075,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:22:02-04:00",
       },
       pt: {
+        translation: "Cama de rede",
+        is_approved: true,
+        approved_at: "2019-04-06T16:02:14-04:00",
+      },
+      ptbr: {
         translation: "Rede de descanso",
         is_approved: true,
         approved_at: "2023-08-24T14:43:59-04:00",
@@ -79418,6 +82198,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:22:04-04:00",
       },
       pt: {
+        translation: "Hamster",
+        is_approved: true,
+        approved_at: "2019-04-06T16:02:47-04:00",
+      },
+      ptbr: {
         translation: "Hamster",
         is_approved: true,
         approved_at: "2019-06-07T23:17:06-04:00",
@@ -79619,6 +82404,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:22:06-04:00",
       },
       pt: {
+        translation: "Pochete",
+        is_approved: true,
+        approved_at: "2019-04-06T16:03:03-04:00",
+      },
+      ptbr: {
         translation: "Bolsa de mão",
         is_approved: true,
         approved_at: "2019-06-07T23:17:38-04:00",
@@ -79739,6 +82529,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Algemas",
         is_approved: true,
+        approved_at: "2019-04-06T16:03:05-04:00",
+      },
+      ptbr: {
+        translation: "Algemas",
+        is_approved: true,
         approved_at: "2019-07-26T21:00:52-04:00",
       },
       ro: {
@@ -79855,6 +82650,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:22:11-04:00",
       },
       pt: {
+        translation: "Cumprimento",
+        is_approved: true,
+        approved_at: "2019-04-06T16:03:19-04:00",
+      },
+      ptbr: {
         translation: "Aperto de mão",
         is_approved: true,
         approved_at: "2019-07-01T09:56:07-04:00",
@@ -79973,6 +82773,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:22:12-04:00",
       },
       pt: {
+        translation: "Fazer o pino",
+        is_approved: true,
+        approved_at: "2020-02-07T17:50:20-05:00",
+      },
+      ptbr: {
         translation: "Bananeira",
         is_approved: true,
         approved_at: "2022-05-03T20:08:11-04:00",
@@ -80093,6 +82898,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Asa-delta",
         is_approved: true,
+        approved_at: "2023-01-31T09:32:23-05:00",
+      },
+      ptbr: {
+        translation: "Asa-delta",
+        is_approved: true,
         approved_at: "2023-01-29T13:50:27-05:00",
       },
       ro: {
@@ -80209,6 +83019,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T19:36:05-05:00",
       },
       pt: {
+        translation: "Contente",
+        is_approved: true,
+        approved_at: "2024-03-26T10:51:32-04:00",
+      },
+      ptbr: {
         translation: "Feliz",
         is_approved: true,
         approved_at: "2023-08-14T16:22:06-04:00",
@@ -80358,6 +83173,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:10-04:00",
       },
       pt: {
+        translation: "Cais",
+        is_approved: true,
+        approved_at: "2019-04-06T16:04:16-04:00",
+      },
+      ptbr: {
         translation: "Porto",
         is_approved: true,
         approved_at: "2019-07-26T21:02:18-04:00",
@@ -80505,6 +83325,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Capacete",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:18-04:00",
+      },
+      ptbr: {
+        translation: "Capacete",
+        is_approved: true,
         approved_at: "2024-10-06T11:18:18-04:00",
       },
       ro: {
@@ -80616,6 +83441,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:17-05:00",
       },
       pt: {
+        translation: "Harpa",
+        is_approved: true,
+        approved_at: "2019-04-06T16:04:19-04:00",
+      },
+      ptbr: {
         translation: "Harpa",
         is_approved: true,
         approved_at: "2019-07-01T10:04:06-04:00",
@@ -80797,6 +83627,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chapéu",
         is_approved: true,
+        approved_at: "2020-04-26T10:04:25-04:00",
+      },
+      ptbr: {
+        translation: "Chapéu",
+        is_approved: true,
         approved_at: "2019-07-11T15:12:58-04:00",
       },
       ro: {
@@ -80953,6 +83788,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-08-12T14:28:09-04:00",
       },
       pt: {
+        translation: "Feno",
+        is_approved: true,
+        approved_at: "2021-08-16T11:36:35-04:00",
+      },
+      ptbr: {
         translation: "Feno",
         is_approved: true,
         approved_at: "2019-08-28T11:53:55-04:00",
@@ -81126,6 +83966,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cabeça",
         is_approved: true,
+        approved_at: "2020-01-15T19:13:10-05:00",
+      },
+      ptbr: {
+        translation: "Cabeça",
+        is_approved: true,
         approved_at: "2019-07-01T09:59:34-04:00",
       },
       ro: {
@@ -81256,6 +84101,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:19-05:00",
       },
       pt: {
+        translation: "Bandana",
+        is_approved: true,
+        approved_at: "2019-04-06T16:04:40-04:00",
+      },
+      ptbr: {
         translation: "Bandana",
         is_approved: true,
         approved_at: "2019-08-29T17:24:26-04:00",
@@ -81492,6 +84342,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:15-04:00",
       },
       pt: {
+        translation: "Auscultadores",
+        is_approved: true,
+        approved_at: "2019-04-06T16:04:44-04:00",
+      },
+      ptbr: {
         translation: "Fones de ouvido",
         is_approved: true,
         approved_at: "2019-07-01T10:04:35-04:00",
@@ -81730,6 +84585,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Headset",
         is_approved: true,
+        approved_at: "2019-03-25T17:57:16-04:00",
+      },
+      ptbr: {
+        translation: "Headset",
+        is_approved: true,
         approved_at: "2018-09-11T21:24:55-04:00",
       },
       ro: {
@@ -81846,6 +84706,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:51:18-04:00",
       },
       pt: {
+        translation: "Coração",
+        is_approved: true,
+        approved_at: "2019-11-19T18:21:50-05:00",
+      },
+      ptbr: {
         translation: "Coração",
         is_approved: true,
         approved_at: "2019-07-01T10:04:29-04:00",
@@ -82006,6 +84871,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arbusto",
         is_approved: true,
+        approved_at: "2020-02-03T19:28:14-05:00",
+      },
+      ptbr: {
+        translation: "Arbusto",
+        is_approved: true,
         approved_at: "2019-07-01T09:59:40-04:00",
       },
       ro: {
@@ -82122,6 +84992,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:20-04:00",
       },
       pt: {
+        translation: "Ouriço-cacheiro",
+        is_approved: true,
+        approved_at: "2019-04-06T16:05:17-04:00",
+      },
+      ptbr: {
         translation: "Ouriço",
         is_approved: true,
         approved_at: "2019-07-26T21:02:42-04:00",
@@ -82242,6 +85117,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Helicóptero",
         is_approved: true,
+        approved_at: "2019-07-21T14:07:56-04:00",
+      },
+      ptbr: {
+        translation: "Helicóptero",
+        is_approved: true,
         approved_at: "2018-09-11T21:24:57-04:00",
       },
       ro: {
@@ -82358,6 +85238,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:21-04:00",
       },
       pt: {
+        translation: "Heliporto",
+        is_approved: true,
+        approved_at: "2019-09-01T11:22:12-04:00",
+      },
+      ptbr: {
         translation: "Heliporto",
         is_approved: true,
         approved_at: "2019-07-26T21:02:51-04:00",
@@ -82520,6 +85405,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-28T04:58:08-04:00",
       },
       pt: {
+        translation: "Capacete",
+        is_approved: true,
+        approved_at: "2019-04-29T07:17:28-04:00",
+      },
+      ptbr: {
         translation: "Capacete",
         is_approved: true,
         approved_at: "2018-03-04T15:01:08-05:00",
@@ -82719,6 +85609,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Galinha",
         is_approved: true,
+        approved_at: "2019-04-06T16:05:39-04:00",
+      },
+      ptbr: {
+        translation: "Galinha",
+        is_approved: true,
         approved_at: "2019-07-26T21:03:00-04:00",
       },
       ro: {
@@ -82835,6 +85730,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:35-04:00",
       },
       pt: {
+        translation: "Herói",
+        is_approved: true,
+        approved_at: "2019-03-25T17:57:55-04:00",
+      },
+      ptbr: {
         translation: "Herói",
         is_approved: true,
         approved_at: "2018-09-11T21:25:02-04:00",
@@ -82955,6 +85855,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hexágono",
         is_approved: true,
+        approved_at: "2019-04-06T16:05:48-04:00",
+      },
+      ptbr: {
+        translation: "Hexágono",
+        is_approved: true,
         approved_at: "2019-07-01T09:56:12-04:00",
       },
       ro: {
@@ -83071,6 +85976,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:16:41-05:00",
       },
       pt: {
+        translation: "Hide and Seek",
+        is_approved: true,
+        approved_at: "2019-08-18T17:55:39-04:00",
+      },
+      ptbr: {
         translation: "Esconde-esconde",
         is_approved: true,
         approved_at: "2023-08-14T16:56:35-04:00",
@@ -83189,6 +86099,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:36-04:00",
       },
       pt: {
+        translation: "Saltos-altos",
+        is_approved: true,
+        approved_at: "2019-04-06T16:06:24-04:00",
+      },
+      ptbr: {
         translation: "Salto-alto",
         is_approved: true,
         approved_at: "2019-07-26T21:03:11-04:00",
@@ -83329,6 +86244,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:26-05:00",
       },
       pt: {
+        translation: "Auto-estrada",
+        is_approved: true,
+        approved_at: "2019-04-06T16:06:40-04:00",
+      },
+      ptbr: {
         translation: "Rodovia",
         is_approved: true,
         approved_at: "2019-07-01T09:56:17-04:00",
@@ -83447,6 +86367,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:38-04:00",
       },
       pt: {
+        translation: "Colina / Montes",
+        is_approved: true,
+        approved_at: "2019-03-25T18:39:50-04:00",
+      },
+      ptbr: {
         translation: "Colina",
         is_approved: true,
         approved_at: "2018-09-11T21:25:15-04:00",
@@ -83572,6 +86497,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hipopótamo",
         is_approved: true,
+        approved_at: "2019-04-06T16:06:42-04:00",
+      },
+      ptbr: {
+        translation: "Hipopótamo",
+        is_approved: true,
         approved_at: "2019-06-07T23:17:50-04:00",
       },
       ro: {
@@ -83690,6 +86620,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hóquei",
         is_approved: true,
+        approved_at: "2019-03-25T17:58:39-04:00",
+      },
+      ptbr: {
+        translation: "Hóquei",
+        is_approved: true,
         approved_at: "2018-09-11T21:25:22-04:00",
       },
       ro: {
@@ -83806,6 +86741,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:42-04:00",
       },
       pt: {
+        translation: "Ringue de hóquei",
+        is_approved: true,
+        approved_at: "2019-04-06T16:06:51-04:00",
+      },
+      ptbr: {
         translation: "Pista de hóquei",
         is_approved: true,
         approved_at: "2019-09-05T16:36:37-04:00",
@@ -84044,6 +86984,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Suíno",
         is_approved: true,
+        approved_at: "2019-04-06T16:07:45-04:00",
+      },
+      ptbr: {
+        translation: "Suíno",
+        is_approved: true,
         approved_at: "2019-06-07T23:18:04-04:00",
       },
       ro: {
@@ -84208,6 +87153,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:34:44-04:00",
       },
       pt: {
+        translation: "Buraco",
+        is_approved: true,
+        approved_at: "2019-04-06T16:07:34-04:00",
+      },
+      ptbr: {
         translation: "Buraco",
         is_approved: true,
         approved_at: "2019-06-07T23:18:07-04:00",
@@ -84407,6 +87357,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Natal",
         is_approved: true,
+        approved_at: "2020-12-11T13:23:51-05:00",
+      },
+      ptbr: {
+        translation: "Natal",
+        is_approved: true,
         approved_at: "2021-10-20T15:51:42-04:00",
       },
       ro: {
@@ -84523,6 +87478,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:18:22-05:00",
       },
       pt: {
+        translation: "Holiday Lights",
+        is_approved: true,
+        approved_at: "2019-04-06T16:07:54-04:00",
+      },
+      ptbr: {
         translation: "Luzes de Natal",
         is_approved: true,
         approved_at: "2023-08-24T14:49:28-04:00",
@@ -84643,6 +87603,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Letreiro de Hollywood",
         is_approved: true,
+        approved_at: "2019-04-06T16:08:00-04:00",
+      },
+      ptbr: {
+        translation: "Letreiro de Hollywood",
+        is_approved: true,
         approved_at: "2019-06-07T23:18:33-04:00",
       },
       ro: {
@@ -84759,6 +87724,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:41-04:00",
       },
       pt: {
+        translation: "Trabalhos de casa",
+        is_approved: true,
+        approved_at: "2019-03-25T18:40:01-04:00",
+      },
+      ptbr: {
         translation: "Lição de casa",
         is_approved: true,
         approved_at: "2019-08-08T17:24:15-04:00",
@@ -84891,6 +87861,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:28-05:00",
       },
       pt: {
+        translation: "Mel",
+        is_approved: true,
+        approved_at: "2019-04-06T16:08:05-04:00",
+      },
+      ptbr: {
         translation: "Mel",
         is_approved: true,
         approved_at: "2019-06-07T23:18:47-04:00",
@@ -85038,6 +88013,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Favo de mel",
         is_approved: true,
+        approved_at: "2019-04-06T16:08:20-04:00",
+      },
+      ptbr: {
+        translation: "Favo de mel",
+        is_approved: true,
         approved_at: "2023-08-24T14:49:50-04:00",
       },
       ro: {
@@ -85181,6 +88161,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:29-05:00",
       },
       pt: {
+        translation: "Gancho",
+        is_approved: true,
+        approved_at: "2019-04-06T16:08:24-04:00",
+      },
+      ptbr: {
         translation: "Gancho",
         is_approved: true,
         approved_at: "2019-06-07T23:19:11-04:00",
@@ -85353,6 +88338,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:50:42-04:00",
       },
       pt: {
+        translation: "Chifres / Cornos",
+        is_approved: true,
+        approved_at: "2019-03-25T18:40:11-04:00",
+      },
+      ptbr: {
         translation: "Chifre",
         is_approved: true,
         approved_at: "2018-09-11T21:25:44-04:00",
@@ -85487,6 +88477,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cavalo",
         is_approved: true,
+        approved_at: "2020-01-16T19:14:34-05:00",
+      },
+      ptbr: {
+        translation: "Cavalo",
+        is_approved: true,
         approved_at: "2019-06-22T20:12:39-04:00",
       },
       ro: {
@@ -85603,6 +88598,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-12-16T11:52:30-05:00",
       },
       pt: {
+        translation: "Corrida de cavalos",
+        is_approved: true,
+        approved_at: "2019-04-06T16:08:29-04:00",
+      },
+      ptbr: {
         translation: "Corrida de cavalos",
         is_approved: true,
         approved_at: "2019-06-07T23:19:28-04:00",
@@ -85723,6 +88723,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hospital",
         is_approved: true,
+        approved_at: "2019-03-25T17:59:16-04:00",
+      },
+      ptbr: {
+        translation: "Hospital",
+        is_approved: true,
         approved_at: "2018-09-11T21:25:45-04:00",
       },
       ro: {
@@ -85841,6 +88846,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balão de ar quente",
         is_approved: true,
+        approved_at: "2019-03-25T18:40:25-04:00",
+      },
+      ptbr: {
+        translation: "Balão de ar quente",
+        is_approved: true,
         approved_at: "2019-08-08T16:49:50-04:00",
       },
       ro: {
@@ -85957,6 +88967,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:35:05-04:00",
       },
       pt: {
+        translation: "Chocolate quente",
+        is_approved: true,
+        approved_at: "2019-04-06T16:09:08-04:00",
+      },
+      ptbr: {
         translation: "Chocolate quente",
         is_approved: true,
         approved_at: "2023-08-24T13:28:32-04:00",
@@ -86090,6 +89105,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:22:04-04:00",
       },
       pt: {
+        translation: "Cachorro-quente",
+        is_approved: true,
+        approved_at: "2020-03-20T11:37:05-04:00",
+      },
+      ptbr: {
         translation: "Cachorro-quente",
         is_approved: true,
         approved_at: "2022-05-07T10:41:19-04:00",
@@ -86239,6 +89259,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:19:01-05:00",
       },
       pt: {
+        translation: "Jacúzi",
+        is_approved: true,
+        approved_at: "2019-04-06T16:09:56-04:00",
+      },
+      ptbr: {
         translation: "Banheira",
         is_approved: true,
         approved_at: "2019-09-19T15:50:03-04:00",
@@ -86373,6 +89398,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hotel",
         is_approved: true,
+        approved_at: "2020-03-20T20:45:25-04:00",
+      },
+      ptbr: {
+        translation: "Hotel",
+        is_approved: true,
         approved_at: "2019-06-07T23:19:42-04:00",
       },
       ro: {
@@ -86505,6 +89535,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ampulheta",
         is_approved: true,
+        approved_at: "2019-03-25T17:59:33-04:00",
+      },
+      ptbr: {
+        translation: "Ampulheta",
+        is_approved: true,
         approved_at: "2018-09-11T21:26:16-04:00",
       },
       ro: {
@@ -86623,6 +89658,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casa",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:08-04:00",
+      },
+      ptbr: {
+        translation: "Casa",
+        is_approved: true,
         approved_at: "2024-08-24T08:22:00-04:00",
       },
       ro: {
@@ -86739,6 +89779,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:35:25-04:00",
       },
       pt: {
+        translation: "Hula Hoop",
+        is_approved: true,
+        approved_at: "2020-04-17T15:24:45-04:00",
+      },
+      ptbr: {
         translation: "Bambolê",
         is_approved: true,
         approved_at: "2019-07-26T21:03:20-04:00",
@@ -86857,6 +89902,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:18-04:00",
       },
       pt: {
+        translation: "Hunger Games",
+        is_approved: true,
+        approved_at: "2019-03-25T17:59:39-04:00",
+      },
+      ptbr: {
         translation: "Jogos vorazes",
         is_approved: true,
         approved_at: "2022-04-16T09:29:46-04:00",
@@ -86975,6 +90025,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:35:29-04:00",
       },
       pt: {
+        translation: "Caçador",
+        is_approved: true,
+        approved_at: "2019-04-06T16:10:26-04:00",
+      },
+      ptbr: {
         translation: "Caçador",
         is_approved: true,
         approved_at: "2019-06-07T23:20:14-04:00",
@@ -87120,6 +90175,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:35:43-04:00",
       },
       pt: {
+        translation: "Corrida de obstáculos",
+        is_approved: true,
+        approved_at: "2019-09-01T11:22:44-04:00",
+      },
+      ptbr: {
         translation: "Obstáculos",
         is_approved: true,
         approved_at: "2019-09-05T17:02:47-04:00",
@@ -87238,6 +90298,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:19-04:00",
       },
       pt: {
+        translation: "Furacão",
+        is_approved: true,
+        approved_at: "2019-03-25T17:59:50-04:00",
+      },
+      ptbr: {
         translation: "Furacão",
         is_approved: true,
         approved_at: "2018-09-11T21:26:21-04:00",
@@ -87539,6 +90604,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cabana",
         is_approved: true,
+        approved_at: "2019-04-06T16:10:57-04:00",
+      },
+      ptbr: {
+        translation: "Cabana",
+        is_approved: true,
         approved_at: "2019-07-26T21:03:40-04:00",
       },
       ro: {
@@ -87655,6 +90725,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-15T09:56:32-04:00",
       },
       pt: {
+        translation: "Hypixel",
+        is_approved: true,
+        approved_at: "2020-04-27T14:36:14-04:00",
+      },
+      ptbr: {
         translation: "Hypixel",
         is_approved: true,
         approved_at: "2019-06-12T09:22:13-04:00",
@@ -87775,6 +90850,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hipnotizar",
         is_approved: true,
+        approved_at: "2019-04-06T16:11:13-04:00",
+      },
+      ptbr: {
+        translation: "Hipnotizar",
+        is_approved: true,
         approved_at: "2019-06-07T23:20:48-04:00",
       },
       ro: {
@@ -87891,6 +90971,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:36-05:00",
       },
       pt: {
+        translation: "Idade do Gelo",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:34-05:00",
+      },
+      ptbr: {
         translation: "Era do Gelo",
         is_approved: true,
         approved_at: "2025-02-02T08:50:37-05:00",
@@ -88020,6 +91105,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balde de gelo",
         is_approved: true,
+        approved_at: "2019-04-06T16:11:15-04:00",
+      },
+      ptbr: {
+        translation: "Balde de gelo",
+        is_approved: true,
         approved_at: "2019-09-08T10:35:27-04:00",
       },
       ro: {
@@ -88136,6 +91226,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:11-04:00",
       },
       pt: {
+        translation: "Castelo de gelo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:11:22-04:00",
+      },
+      ptbr: {
         translation: "Castelo de gelo",
         is_approved: true,
         approved_at: "2022-04-15T09:56:17-04:00",
@@ -88281,6 +91376,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:54-04:00",
       },
       pt: {
+        translation: "Gelado",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:10-04:00",
+      },
+      ptbr: {
         translation: "Sorvete",
         is_approved: true,
         approved_at: "2018-09-11T21:26:28-04:00",
@@ -88399,6 +91499,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:22:06-04:00",
       },
       pt: {
+        translation: "Cone de gelado",
+        is_approved: true,
+        approved_at: "2020-03-20T11:37:09-04:00",
+      },
+      ptbr: {
         translation: "Casquinha de sorvete",
         is_approved: true,
         approved_at: "2019-06-07T23:21:29-04:00",
@@ -88517,6 +91622,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-15T12:28:07-04:00",
       },
       pt: {
+        translation: "Carrinha dos gelados",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:51-04:00",
+      },
+      ptbr: {
         translation: "Caminhão de sorvete",
         is_approved: true,
         approved_at: "2024-10-04T12:08:40-04:00",
@@ -88644,6 +91754,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T09:55:24-04:00",
       },
       pt: {
+        translation: "Cubo de gelo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:11:36-04:00",
+      },
+      ptbr: {
         translation: "Cubo de gelo",
         is_approved: true,
         approved_at: "2022-04-15T09:56:21-04:00",
@@ -88789,6 +91904,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:15-04:00",
       },
       pt: {
+        translation: "Patins de gelo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:11:42-04:00",
+      },
+      ptbr: {
         translation: "Patins de gelo",
         is_approved: true,
         approved_at: "2022-04-15T09:56:24-04:00",
@@ -88947,6 +92067,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:16-04:00",
       },
       pt: {
+        translation: "Estalactite",
+        is_approved: true,
+        approved_at: "2019-04-06T16:12:17-04:00",
+      },
+      ptbr: {
         translation: "Pico de gelo",
         is_approved: true,
         approved_at: "2023-08-24T14:51:58-04:00",
@@ -89065,6 +92190,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:22-04:00",
       },
       pt: {
+        translation: "Icebergue",
+        is_approved: true,
+        approved_at: "2019-03-25T18:00:27-04:00",
+      },
+      ptbr: {
         translation: "Iceberg",
         is_approved: true,
         approved_at: "2018-09-11T21:26:31-04:00",
@@ -89223,6 +92353,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:18-04:00",
       },
       pt: {
+        translation: "Estalactite",
+        is_approved: true,
+        approved_at: "2019-04-06T16:12:27-04:00",
+      },
+      ptbr: {
         translation: "Sincelo",
         is_approved: true,
         approved_at: "2023-08-24T14:51:25-04:00",
@@ -89370,6 +92505,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gelado",
         is_approved: true,
+        approved_at: "2019-04-06T16:12:36-04:00",
+      },
+      ptbr: {
+        translation: "Gelado",
+        is_approved: true,
         approved_at: "2019-07-01T09:56:19-04:00",
       },
       ro: {
@@ -89488,6 +92628,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Iglu",
         is_approved: true,
+        approved_at: "2019-04-06T16:12:45-04:00",
+      },
+      ptbr: {
+        translation: "Iglu",
+        is_approved: true,
         approved_at: "2019-06-07T23:21:43-04:00",
       },
       ro: {
@@ -89604,6 +92749,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T16:42:51-04:00",
       },
       pt: {
+        translation: "Illusion",
+        is_approved: true,
+        approved_at: "2023-09-18T14:35:57-04:00",
+      },
+      ptbr: {
         translation: "Ilusão",
         is_approved: true,
         approved_at: "2024-10-04T12:08:12-04:00",
@@ -89741,6 +92891,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:37-04:00",
       },
       pt: {
+        translation: "Tinta",
+        is_approved: true,
+        approved_at: "2019-04-06T16:12:47-04:00",
+      },
+      ptbr: {
         translation: "Tinta",
         is_approved: true,
         approved_at: "2019-06-07T23:21:47-04:00",
@@ -89953,6 +93108,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Inseto",
         is_approved: true,
+        approved_at: "2019-04-06T16:12:48-04:00",
+      },
+      ptbr: {
+        translation: "Inseto",
+        is_approved: true,
         approved_at: "2019-07-01T09:59:48-04:00",
       },
       ro: {
@@ -90069,6 +93229,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:39-04:00",
       },
       pt: {
+        translation: "Instrumento",
+        is_approved: true,
+        approved_at: "2019-04-06T16:12:49-04:00",
+      },
+      ptbr: {
         translation: "Instrumento",
         is_approved: true,
         approved_at: "2019-06-07T23:22:46-04:00",
@@ -90201,6 +93366,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:40-04:00",
       },
       pt: {
+        translation: "ferro",
+        is_approved: true,
+        approved_at: "2021-07-26T19:54:27-04:00",
+      },
+      ptbr: {
         translation: "Ferro",
         is_approved: true,
         approved_at: "2023-12-17T11:44:06-05:00",
@@ -90319,6 +93489,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:41-04:00",
       },
       pt: {
+        translation: "Tábua de passar",
+        is_approved: true,
+        approved_at: "2019-04-06T16:12:54-04:00",
+      },
+      ptbr: {
         translation: "Tábua de passar",
         is_approved: true,
         approved_at: "2019-09-07T12:47:38-04:00",
@@ -90451,6 +93626,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:33-04:00",
       },
       pt: {
+        translation: "Ilha",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:12-04:00",
+      },
+      ptbr: {
         translation: "Ilha",
         is_approved: true,
         approved_at: "2018-09-11T21:26:53-04:00",
@@ -90622,6 +93802,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:43-04:00",
       },
       pt: {
+        translation: "Casaco",
+        is_approved: true,
+        approved_at: "2019-04-06T16:13:00-04:00",
+      },
+      ptbr: {
         translation: "Jaqueta",
         is_approved: true,
         approved_at: "2019-06-07T23:23:15-04:00",
@@ -90964,6 +94149,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prisão",
         is_approved: true,
+        approved_at: "2019-04-06T16:13:05-04:00",
+      },
+      ptbr: {
+        translation: "Prisão",
+        is_approved: true,
         approved_at: "2019-06-07T23:23:17-04:00",
       },
       ro: {
@@ -91075,6 +94265,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:39-05:00",
       },
       pt: {
+        translation: "Porteiro",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:46-05:00",
+      },
+      ptbr: {
         translation: "Zelador",
         is_approved: true,
         approved_at: "2025-01-30T14:42:34-05:00",
@@ -91188,6 +94383,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:45-04:00",
       },
       pt: {
+        translation: "Japão",
+        is_approved: true,
+        approved_at: "2019-04-06T16:13:06-04:00",
+      },
+      ptbr: {
         translation: "Japão",
         is_approved: true,
         approved_at: "2018-03-23T11:19:44-04:00",
@@ -91359,6 +94559,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:46-04:00",
       },
       pt: {
+        translation: "Jarro / Pote",
+        is_approved: true,
+        approved_at: "2019-04-06T16:13:13-04:00",
+      },
+      ptbr: {
         translation: "Pote",
         is_approved: true,
         approved_at: "2019-06-07T23:23:20-04:00",
@@ -91477,6 +94682,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:48-04:00",
       },
       pt: {
+        translation: "Calças de ganga",
+        is_approved: true,
+        approved_at: "2019-04-06T16:13:40-04:00",
+      },
+      ptbr: {
         translation: "Calças jeans",
         is_approved: true,
         approved_at: "2023-08-24T14:54:13-04:00",
@@ -91609,6 +94819,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:48-04:00",
       },
       pt: {
+        translation: "Gelatina",
+        is_approved: true,
+        approved_at: "2019-04-06T16:13:42-04:00",
+      },
+      ptbr: {
         translation: "Geleia",
         is_approved: true,
         approved_at: "2019-06-07T23:23:26-04:00",
@@ -91727,6 +94942,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:49-04:00",
       },
       pt: {
+        translation: "Gomas",
+        is_approved: true,
+        approved_at: "2019-04-16T19:05:42-04:00",
+      },
+      ptbr: {
         translation: "Jujuba",
         is_approved: true,
         approved_at: "2019-06-07T23:23:32-04:00",
@@ -91845,6 +95065,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:37-04:00",
       },
       pt: {
+        translation: "Alforreca",
+        is_approved: true,
+        approved_at: "2019-04-06T16:14:01-04:00",
+      },
+      ptbr: {
         translation: "Água-viva",
         is_approved: true,
         approved_at: "2019-06-07T23:23:48-04:00",
@@ -91977,6 +95202,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:51-04:00",
       },
       pt: {
+        translation: "Moto d'agua",
+        is_approved: true,
+        approved_at: "2019-04-06T16:14:07-04:00",
+      },
+      ptbr: {
         translation: "Jet ski",
         is_approved: true,
         approved_at: "2023-08-14T16:57:02-04:00",
@@ -92097,6 +95327,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jetpack",
         is_approved: true,
+        approved_at: "2019-04-06T16:14:08-04:00",
+      },
+      ptbr: {
+        translation: "Jetpack",
+        is_approved: true,
         approved_at: "2019-06-07T23:23:57-04:00",
       },
       ro: {
@@ -92213,6 +95448,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:32:54-04:00",
       },
       pt: {
+        translation: "Joalheria",
+        is_approved: true,
+        approved_at: "2019-04-06T16:14:22-04:00",
+      },
+      ptbr: {
         translation: "Joalheria",
         is_approved: true,
         approved_at: "2019-06-07T23:24:13-04:00",
@@ -92465,6 +95705,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Quebra-cabeças",
         is_approved: true,
+        approved_at: "2019-04-06T16:14:24-04:00",
+      },
+      ptbr: {
+        translation: "Quebra-cabeças",
+        is_approved: true,
         approved_at: "2019-06-07T23:24:25-04:00",
       },
       ro: {
@@ -92608,6 +95853,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:28-04:00",
       },
       pt: {
+        translation: "Jogging",
+        is_approved: true,
+        approved_at: "2019-04-06T16:14:47-04:00",
+      },
+      ptbr: {
         translation: "Corrida",
         is_approved: true,
         approved_at: "2019-07-01T09:59:50-04:00",
@@ -92728,6 +95978,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Joystick",
         is_approved: true,
+        approved_at: "2019-04-06T16:14:52-04:00",
+      },
+      ptbr: {
+        translation: "Joystick",
+        is_approved: true,
         approved_at: "2019-06-07T23:24:35-04:00",
       },
       ro: {
@@ -92844,6 +96099,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:52-04:00",
       },
       pt: {
+        translation: "Malabarismo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:15:08-04:00",
+      },
+      ptbr: {
         translation: "Malabarismo",
         is_approved: true,
         approved_at: "2019-07-01T09:59:53-04:00",
@@ -92977,6 +96237,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:53-04:00",
       },
       pt: {
+        translation: "Sumo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:15:26-04:00",
+      },
+      ptbr: {
         translation: "Suco",
         is_approved: true,
         approved_at: "2019-06-07T23:24:50-04:00",
@@ -93095,6 +96360,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:54-04:00",
       },
       pt: {
+        translation: "Saltar à corda",
+        is_approved: true,
+        approved_at: "2019-04-06T16:15:28-04:00",
+      },
+      ptbr: {
         translation: "Corda de pular",
         is_approved: true,
         approved_at: "2019-07-26T21:10:12-04:00",
@@ -93213,6 +96483,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:56-04:00",
       },
       pt: {
+        translation: "Saltar",
+        is_approved: true,
+        approved_at: "2019-04-06T16:15:29-04:00",
+      },
+      ptbr: {
         translation: "Pulando",
         is_approved: true,
         approved_at: "2019-06-07T23:25:00-04:00",
@@ -93347,6 +96622,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Selva",
         is_approved: true,
+        approved_at: "2019-03-25T18:05:31-04:00",
+      },
+      ptbr: {
+        translation: "Selva",
+        is_approved: true,
         approved_at: "2019-06-07T23:25:04-04:00",
       },
       ro: {
@@ -93465,6 +96745,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Canguru",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:14-04:00",
+      },
+      ptbr: {
+        translation: "Canguru",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:00-04:00",
       },
       ro: {
@@ -93581,6 +96866,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-08-11T04:57:50-04:00",
       },
       pt: {
+        translation: "Karaoke",
+        is_approved: true,
+        approved_at: "2020-01-11T18:17:43-05:00",
+      },
+      ptbr: {
         translation: "Karaokê",
         is_approved: true,
         approved_at: "2019-07-11T23:04:24-04:00",
@@ -93699,6 +96989,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:56-04:00",
       },
       pt: {
+        translation: "Karaté",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:15-04:00",
+      },
+      ptbr: {
         translation: "Karatê",
         is_approved: true,
         approved_at: "2019-06-07T23:25:09-04:00",
@@ -93853,6 +97148,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:58-04:00",
       },
       pt: {
+        translation: "Caiaque",
+        is_approved: true,
+        approved_at: "2019-04-06T16:16:00-04:00",
+      },
+      ptbr: {
         translation: "Caiaque",
         is_approved: true,
         approved_at: "2019-06-07T23:25:36-04:00",
@@ -94065,6 +97365,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Alga",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:39-04:00",
+      },
+      ptbr: {
+        translation: "Alga",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:41-04:00",
       },
       ro: {
@@ -94203,6 +97508,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:33:59-04:00",
       },
       pt: {
+        translation: "Casota",
+        is_approved: true,
+        approved_at: "2019-04-06T16:16:13-04:00",
+      },
+      ptbr: {
         translation: "Casinha de cachorro",
         is_approved: true,
         approved_at: "2019-07-26T21:10:36-04:00",
@@ -94391,6 +97701,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ketchup",
         is_approved: true,
+        approved_at: "2019-04-06T16:16:23-04:00",
+      },
+      ptbr: {
+        translation: "Ketchup",
+        is_approved: true,
         approved_at: "2019-06-07T23:25:55-04:00",
       },
       ro: {
@@ -94536,6 +97851,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chaleira",
         is_approved: true,
+        approved_at: "2019-04-06T16:16:26-04:00",
+      },
+      ptbr: {
+        translation: "Chaleira",
+        is_approved: true,
         approved_at: "2019-07-26T21:10:44-04:00",
       },
       ro: {
@@ -94654,6 +97974,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chave",
         is_approved: true,
+        approved_at: "2019-04-06T16:16:27-04:00",
+      },
+      ptbr: {
+        translation: "Chave",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:40-04:00",
       },
       ro: {
@@ -94770,6 +98095,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:00:03-04:00",
       },
       pt: {
+        translation: "Teclado",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:16-04:00",
+      },
+      ptbr: {
         translation: "Teclado",
         is_approved: true,
         approved_at: "2018-09-11T21:27:04-04:00",
@@ -94956,6 +98286,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Criança",
         is_approved: true,
+        approved_at: "2019-04-06T16:16:53-04:00",
+      },
+      ptbr: {
+        translation: "Criança",
+        is_approved: true,
         approved_at: "2019-06-07T23:26:08-04:00",
       },
       ro: {
@@ -95086,6 +98421,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:47:58-04:00",
       },
       pt: {
+        translation: "Rei",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:17-04:00",
+      },
+      ptbr: {
         translation: "Rei",
         is_approved: true,
         approved_at: "2018-09-11T21:27:06-04:00",
@@ -95244,6 +98584,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:19-04:00",
       },
       pt: {
+        translation: "Beijo",
+        is_approved: true,
+        approved_at: "2019-04-06T16:17:01-04:00",
+      },
+      ptbr: {
         translation: "Beijo",
         is_approved: true,
         approved_at: "2018-03-25T17:27:07-04:00",
@@ -95421,6 +98766,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cozinha",
         is_approved: true,
+        approved_at: "2019-04-06T16:17:02-04:00",
+      },
+      ptbr: {
+        translation: "Cozinha",
+        is_approved: true,
         approved_at: "2019-06-07T23:26:12-04:00",
       },
       ro: {
@@ -95578,6 +98928,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:34-04:00",
       },
       pt: {
+        translation: "Papagaio de papel",
+        is_approved: true,
+        approved_at: "2019-03-25T18:42:05-04:00",
+      },
+      ptbr: {
         translation: "Pipa",
         is_approved: true,
         approved_at: "2018-09-11T21:27:10-04:00",
@@ -95712,6 +99067,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gatinho",
         is_approved: true,
+        approved_at: "2019-03-25T18:06:13-04:00",
+      },
+      ptbr: {
+        translation: "Gatinho",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:12-04:00",
       },
       ro: {
@@ -95844,6 +99204,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Kiwi",
         is_approved: true,
+        approved_at: "2020-08-04T06:30:27-04:00",
+      },
+      ptbr: {
+        translation: "Kiwi",
+        is_approved: true,
         approved_at: "2019-06-07T23:26:27-04:00",
       },
       ro: {
@@ -95960,6 +99325,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:26-04:00",
       },
       pt: {
+        translation: "Joelho",
+        is_approved: true,
+        approved_at: "2019-04-06T16:17:15-04:00",
+      },
+      ptbr: {
         translation: "Joelho",
         is_approved: true,
         approved_at: "2018-03-25T17:27:24-04:00",
@@ -96107,6 +99477,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Faca",
         is_approved: true,
+        approved_at: "2019-11-22T21:57:57-05:00",
+      },
+      ptbr: {
+        translation: "Faca",
+        is_approved: true,
         approved_at: "2019-08-05T12:33:52-04:00",
       },
       ro: {
@@ -96225,6 +99600,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cavaleiro",
         is_approved: true,
+        approved_at: "2019-03-25T18:06:15-04:00",
+      },
+      ptbr: {
+        translation: "Cavaleiro",
+        is_approved: true,
         approved_at: "2019-06-07T23:26:31-04:00",
       },
       ro: {
@@ -96341,6 +99721,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:38-04:00",
       },
       pt: {
+        translation: "Coala",
+        is_approved: true,
+        approved_at: "2019-04-06T16:17:26-04:00",
+      },
+      ptbr: {
         translation: "Coala",
         is_approved: true,
         approved_at: "2019-07-01T10:00:15-04:00",
@@ -96501,6 +99886,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Etiqueta",
         is_approved: true,
+        approved_at: "2019-04-06T16:17:30-04:00",
+      },
+      ptbr: {
+        translation: "Etiqueta",
+        is_approved: true,
         approved_at: "2019-07-26T21:11:46-04:00",
       },
       ro: {
@@ -96617,6 +100007,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-09T11:39:43-05:00",
       },
       pt: {
+        translation: "Laboratory",
+        is_approved: true,
+        approved_at: "2021-07-12T13:37:59-04:00",
+      },
+      ptbr: {
         translation: "Laboratório",
         is_approved: true,
         approved_at: "2023-08-14T16:34:48-04:00",
@@ -96829,6 +100224,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Escada de mão",
         is_approved: true,
+        approved_at: "2020-01-16T17:55:26-05:00",
+      },
+      ptbr: {
+        translation: "Escada de mão",
+        is_approved: true,
         approved_at: "2022-04-15T10:58:48-04:00",
       },
       ro: {
@@ -96945,6 +100345,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:00:40-04:00",
       },
       pt: {
+        translation: "Joaninha",
+        is_approved: true,
+        approved_at: "2019-04-06T16:18:15-04:00",
+      },
+      ptbr: {
         translation: "Joaninha",
         is_approved: true,
         approved_at: "2019-06-07T23:00:54-04:00",
@@ -97105,6 +100510,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lago",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:19-04:00",
+      },
+      ptbr: {
+        translation: "Lago",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:17-04:00",
       },
       ro: {
@@ -97248,6 +100658,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:43-04:00",
       },
       pt: {
+        translation: "Cordeiro",
+        is_approved: true,
+        approved_at: "2019-04-06T16:18:19-04:00",
+      },
+      ptbr: {
         translation: "Cordeiro",
         is_approved: true,
         approved_at: "2019-07-26T21:11:56-04:00",
@@ -97406,6 +100821,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:00:47-04:00",
       },
       pt: {
+        translation: "Lâmpada",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:20-04:00",
+      },
+      ptbr: {
         translation: "Lâmpada",
         is_approved: true,
         approved_at: "2018-09-11T21:27:19-04:00",
@@ -97579,6 +100999,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Poste de luz",
         is_approved: true,
+        approved_at: "2019-04-06T16:18:25-04:00",
+      },
+      ptbr: {
+        translation: "Poste de luz",
+        is_approved: true,
         approved_at: "2022-05-07T08:38:29-04:00",
       },
       ro: {
@@ -97709,6 +101134,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:48-04:00",
       },
       pt: {
+        translation: "Abajur",
+        is_approved: true,
+        approved_at: "2019-04-06T16:18:43-04:00",
+      },
+      ptbr: {
         translation: "Abajur",
         is_approved: true,
         approved_at: "2019-07-01T10:09:42-04:00",
@@ -97883,6 +101313,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lanterna",
         is_approved: true,
+        approved_at: "2019-03-25T18:06:25-04:00",
+      },
+      ptbr: {
+        translation: "Lanterna",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:21-04:00",
       },
       ro: {
@@ -97999,6 +101434,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:39:52-04:00",
       },
       pt: {
+        translation: "Portátil",
+        is_approved: true,
+        approved_at: "2019-04-06T16:21:19-04:00",
+      },
+      ptbr: {
         translation: "Notebook",
         is_approved: true,
         approved_at: "2019-07-01T10:04:53-04:00",
@@ -98119,6 +101559,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Laser",
         is_approved: true,
+        approved_at: "2019-04-06T16:18:59-04:00",
+      },
+      ptbr: {
+        translation: "Laser",
+        is_approved: true,
         approved_at: "2018-03-23T11:19:47-04:00",
       },
       ro: {
@@ -98235,6 +101680,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:40:01-04:00",
       },
       pt: {
+        translation: "Cesto da roupa",
+        is_approved: true,
+        approved_at: "2019-04-06T16:19:19-04:00",
+      },
+      ptbr: {
         translation: "Cesto de roupas",
         is_approved: true,
         approved_at: "2023-08-24T14:58:25-04:00",
@@ -98383,6 +101833,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lava",
         is_approved: true,
+        approved_at: "2020-01-15T19:07:13-05:00",
+      },
+      ptbr: {
+        translation: "Lava",
+        is_approved: true,
         approved_at: "2019-07-01T10:04:56-04:00",
       },
       ro: {
@@ -98501,6 +101956,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balde de lava",
         is_approved: true,
+        approved_at: "2019-11-13T19:15:16-05:00",
+      },
+      ptbr: {
+        translation: "Balde de lava",
+        is_approved: true,
         approved_at: "2022-04-15T12:44:12-04:00",
       },
       ro: {
@@ -98614,6 +102074,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lâmpada de lava",
         is_approved: true,
+        approved_at: "2024-10-27T10:47:54-04:00",
+      },
+      ptbr: {
+        translation: "Lâmpada de lava",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:18-04:00",
       },
       ro: {
@@ -98720,6 +102185,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:42-05:00",
       },
       pt: {
+        translation: "Jogos ao ar livre",
+        is_approved: true,
+        approved_at: "2025-02-26T17:01:04-05:00",
+      },
+      ptbr: {
         translation: "Jogos de grama",
         is_approved: true,
         approved_at: "2025-02-02T09:12:42-05:00",
@@ -98833,6 +102303,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:40:02-04:00",
       },
       pt: {
+        translation: "Corta-relva",
+        is_approved: true,
+        approved_at: "2019-04-06T16:19:44-04:00",
+      },
+      ptbr: {
         translation: "Cortador de grama",
         is_approved: true,
         approved_at: "2019-07-03T09:42:56-04:00",
@@ -98965,6 +102440,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:24-04:00",
       },
       pt: {
+        translation: "Advogado",
+        is_approved: true,
+        approved_at: "2019-04-06T16:19:46-04:00",
+      },
+      ptbr: {
         translation: "Advogado",
         is_approved: true,
         approved_at: "2019-07-26T21:16:23-04:00",
@@ -99228,6 +102708,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Folha",
         is_approved: true,
+        approved_at: "2019-04-06T16:19:52-04:00",
+      },
+      ptbr: {
+        translation: "Folha",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:09-04:00",
       },
       ro: {
@@ -99344,6 +102829,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:32-04:00",
       },
       pt: {
+        translation: "Teto a gotejar",
+        is_approved: true,
+        approved_at: "2020-06-03T09:32:18-04:00",
+      },
+      ptbr: {
         translation: "Infiltração de água",
         is_approved: true,
         approved_at: "2019-07-26T21:16:45-04:00",
@@ -99462,6 +102952,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T15:34:21-04:00",
       },
       pt: {
+        translation: "Couro",
+        is_approved: true,
+        approved_at: "2020-05-27T09:05:59-04:00",
+      },
+      ptbr: {
         translation: "Couro",
         is_approved: true,
         approved_at: "2019-06-22T21:28:05-04:00",
@@ -99669,6 +103164,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Folhas",
         is_approved: true,
+        approved_at: "2019-04-06T16:20:07-04:00",
+      },
+      ptbr: {
+        translation: "Folhas",
+        is_approved: true,
         approved_at: "2019-07-01T10:09:51-04:00",
       },
       ro: {
@@ -99780,6 +103280,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: null,
       },
       pt: {
+        translation: "Sala de aulas",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:48-05:00",
+      },
+      ptbr: {
         translation: "Sala de aula",
         is_approved: true,
         approved_at: "2025-02-02T09:12:50-05:00",
@@ -99893,6 +103398,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:37-04:00",
       },
       pt: {
+        translation: "Legend of Zelda",
+        is_approved: true,
+        approved_at: "2019-04-06T16:20:13-04:00",
+      },
+      ptbr: {
         translation: "Legend of Zelda",
         is_approved: true,
         approved_at: "2022-05-07T08:39:14-04:00",
@@ -100025,6 +103535,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:48:01-04:00",
       },
       pt: {
+        translation: "Limão",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:19-04:00",
+      },
+      ptbr: {
         translation: "Limão",
         is_approved: true,
         approved_at: "2019-07-01T10:05:10-04:00",
@@ -100160,6 +103675,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Limonada",
         is_approved: true,
+        approved_at: "2019-04-06T16:20:23-04:00",
+      },
+      ptbr: {
+        translation: "Limonada",
+        is_approved: true,
         approved_at: "2019-07-01T10:05:12-04:00",
       },
       ro: {
@@ -100276,6 +103796,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:39-04:00",
       },
       pt: {
+        translation: "Banca de limonada",
+        is_approved: true,
+        approved_at: "2019-04-06T16:20:31-04:00",
+      },
+      ptbr: {
         translation: "Barraca de limonada",
         is_approved: true,
         approved_at: "2022-05-07T08:39:42-04:00",
@@ -100438,6 +103963,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:39-04:00",
       },
       pt: {
+        translation: "Duende",
+        is_approved: true,
+        approved_at: "2019-04-06T16:20:33-04:00",
+      },
+      ptbr: {
         translation: "Duende",
         is_approved: true,
         approved_at: "2019-07-26T21:16:54-04:00",
@@ -100613,6 +104143,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:41-04:00",
       },
       pt: {
+        translation: "Carta",
+        is_approved: true,
+        approved_at: "2019-04-06T16:20:46-04:00",
+      },
+      ptbr: {
         translation: "Carta",
         is_approved: true,
         approved_at: "2019-07-01T10:09:54-04:00",
@@ -100812,6 +104347,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Alface",
         is_approved: true,
+        approved_at: "2023-03-07T17:45:45-05:00",
+      },
+      ptbr: {
+        translation: "Alface",
+        is_approved: true,
         approved_at: "2019-06-23T10:04:51-04:00",
       },
       ro: {
@@ -100928,6 +104468,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T15:34:23-04:00",
       },
       pt: {
+        translation: "Bibliotecário",
+        is_approved: true,
+        approved_at: "2016-12-17T16:36:22-05:00",
+      },
+      ptbr: {
         translation: "Bibliotecário",
         is_approved: true,
         approved_at: "2018-09-08T11:53:24-04:00",
@@ -101088,6 +104633,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Biblioteca",
         is_approved: true,
+        approved_at: "2019-03-25T18:06:33-04:00",
+      },
+      ptbr: {
+        translation: "Biblioteca",
+        is_approved: true,
         approved_at: "2019-09-11T13:56:45-04:00",
       },
       ro: {
@@ -101204,6 +104754,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:45-04:00",
       },
       pt: {
+        translation: "Colete salva-vidas",
+        is_approved: true,
+        approved_at: "2019-04-06T16:21:29-04:00",
+      },
+      ptbr: {
         translation: "Colete salva-vidas",
         is_approved: true,
         approved_at: "2019-07-26T21:17:04-04:00",
@@ -101364,6 +104919,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Leve",
         is_approved: true,
+        approved_at: "2023-11-27T16:29:43-05:00",
+      },
+      ptbr: {
+        translation: "Leve",
+        is_approved: true,
         approved_at: "2019-09-11T15:18:16-04:00",
       },
       ro: {
@@ -101507,6 +105067,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-07-15T12:46:11-04:00",
       },
       pt: {
+        translation: "Interruptor da luz",
+        is_approved: true,
+        approved_at: "2019-04-06T16:21:32-04:00",
+      },
+      ptbr: {
         translation: "Interruptor",
         is_approved: true,
         approved_at: "2019-07-26T21:17:12-04:00",
@@ -101641,6 +105206,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lâmpada",
         is_approved: true,
+        approved_at: "2019-04-06T16:21:39-04:00",
+      },
+      ptbr: {
+        translation: "Lâmpada",
+        is_approved: true,
         approved_at: "2019-07-02T09:21:32-04:00",
       },
       ro: {
@@ -101757,6 +105327,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:26:03-04:00",
       },
       pt: {
+        translation: "Farol",
+        is_approved: true,
+        approved_at: "2024-03-26T10:52:12-04:00",
+      },
+      ptbr: {
         translation: "Farol",
         is_approved: true,
         approved_at: "2023-08-14T16:32:43-04:00",
@@ -101889,6 +105464,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-09-15T10:57:52-04:00",
       },
       pt: {
+        translation: "Relâmpago",
+        is_approved: true,
+        approved_at: "2020-01-16T19:17:43-05:00",
+      },
+      ptbr: {
         translation: "Raio",
         is_approved: true,
         approved_at: "2024-06-12T17:23:59-04:00",
@@ -102009,6 +105589,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sabre de luz",
         is_approved: true,
+        approved_at: "2019-04-06T16:22:25-04:00",
+      },
+      ptbr: {
+        translation: "Sabre de luz",
+        is_approved: true,
         approved_at: "2019-07-01T10:02:30-04:00",
       },
       ro: {
@@ -102125,6 +105710,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:07-04:00",
       },
       pt: {
+        translation: "Nenúfar",
+        is_approved: true,
+        approved_at: "2019-04-06T16:22:26-04:00",
+      },
+      ptbr: {
         translation: "Vitória-régia",
         is_approved: true,
         approved_at: "2019-09-08T12:27:15-04:00",
@@ -102257,6 +105847,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:21:20-05:00",
       },
       pt: {
+        translation: "Verde-lima",
+        is_approved: true,
+        approved_at: "2019-11-14T18:31:37-05:00",
+      },
+      ptbr: {
         translation: "Limão",
         is_approved: true,
         approved_at: "2023-08-14T17:20:16-04:00",
@@ -102430,6 +106025,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Linha",
         is_approved: true,
+        approved_at: "2020-03-01T11:49:49-05:00",
+      },
+      ptbr: {
+        translation: "Linha",
+        is_approved: true,
         approved_at: "2019-08-05T12:30:09-04:00",
       },
       ro: {
@@ -102546,6 +106146,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:46-04:00",
       },
       pt: {
+        translation: "Leão",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:23-04:00",
+      },
+      ptbr: {
         translation: "Leão",
         is_approved: true,
         approved_at: "2018-09-11T21:27:28-04:00",
@@ -102680,6 +106285,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lábios",
         is_approved: true,
+        approved_at: "2019-04-06T16:22:59-04:00",
+      },
+      ptbr: {
+        translation: "Lábios",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:10-04:00",
       },
       ro: {
@@ -102796,6 +106406,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:11-04:00",
       },
       pt: {
+        translation: "Batom",
+        is_approved: true,
+        approved_at: "2019-04-06T16:23:01-04:00",
+      },
+      ptbr: {
         translation: "Batom",
         is_approved: true,
         approved_at: "2019-07-26T21:19:16-04:00",
@@ -103081,6 +106696,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lixo",
         is_approved: true,
+        approved_at: "2019-04-06T16:23:21-04:00",
+      },
+      ptbr: {
+        translation: "Lixo",
+        is_approved: true,
         approved_at: "2019-07-26T21:19:28-04:00",
       },
       ro: {
@@ -103230,6 +106850,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sala de estar",
         is_approved: true,
+        approved_at: "2019-04-06T16:23:23-04:00",
+      },
+      ptbr: {
+        translation: "Sala de estar",
+        is_approved: true,
         approved_at: "2019-07-01T15:30:23-04:00",
       },
       ro: {
@@ -103346,6 +106971,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:46:52-04:00",
       },
       pt: {
+        translation: "Lagartixa",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:26-04:00",
+      },
+      ptbr: {
         translation: "Lagarto",
         is_approved: true,
         approved_at: "2019-07-01T10:02:38-04:00",
@@ -103479,6 +107109,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:16-04:00",
       },
       pt: {
+        translation: "Lama",
+        is_approved: true,
+        approved_at: "2020-12-18T17:28:58-05:00",
+      },
+      ptbr: {
         translation: "Lhama",
         is_approved: true,
         approved_at: "2019-07-01T10:02:58-04:00",
@@ -103597,6 +107232,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:18-04:00",
       },
       pt: {
+        translation: "Pão de forma",
+        is_approved: true,
+        approved_at: "2019-04-06T16:23:35-04:00",
+      },
+      ptbr: {
         translation: "Pão de forma",
         is_approved: true,
         approved_at: "2019-07-26T21:19:56-04:00",
@@ -103735,6 +107375,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lobby",
         is_approved: true,
+        approved_at: "2020-04-07T18:00:18-04:00",
+      },
+      ptbr: {
+        translation: "Lobby",
+        is_approved: true,
         approved_at: "2024-10-05T12:35:19-04:00",
       },
       ro: {
@@ -103853,6 +107498,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lagosta",
         is_approved: true,
+        approved_at: "2019-03-25T18:08:00-04:00",
+      },
+      ptbr: {
+        translation: "Lagosta",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:32-04:00",
       },
       ro: {
@@ -103969,6 +107619,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:20-04:00",
       },
       pt: {
+        translation: "Monstro do Lago Ness",
+        is_approved: true,
+        approved_at: "2021-02-10T16:30:00-05:00",
+      },
+      ptbr: {
         translation: "Monstro do Lago Ness",
         is_approved: true,
         approved_at: "2023-08-24T15:00:02-04:00",
@@ -104155,6 +107810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fechadura",
         is_approved: true,
+        approved_at: "2019-04-16T19:05:24-04:00",
+      },
+      ptbr: {
+        translation: "Fechadura",
+        is_approved: true,
         approved_at: "2019-07-29T09:58:42-04:00",
       },
       ro: {
@@ -104285,6 +107945,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:37:41-04:00",
       },
       pt: {
+        translation: "Fechadura",
+        is_approved: true,
+        approved_at: "2019-09-08T18:00:36-04:00",
+      },
+      ptbr: {
         translation: "Gazua",
         is_approved: true,
         approved_at: "2023-08-24T15:01:50-04:00",
@@ -104430,6 +108095,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:53:41-04:00",
       },
       pt: {
+        translation: "Tronco",
+        is_approved: true,
+        approved_at: "2020-08-17T08:44:52-04:00",
+      },
+      ptbr: {
         translation: "Tronco",
         is_approved: true,
         approved_at: "2019-07-22T20:19:56-04:00",
@@ -104598,6 +108268,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cabana de madeira",
         is_approved: true,
+        approved_at: "2019-04-06T17:00:19-04:00",
+      },
+      ptbr: {
+        translation: "Cabana de madeira",
+        is_approved: true,
         approved_at: "2019-07-26T21:21:33-04:00",
       },
       ro: {
@@ -104728,6 +108403,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:38:10-04:00",
       },
       pt: {
+        translation: "Chupa-chupa",
+        is_approved: true,
+        approved_at: "2019-04-06T17:00:21-04:00",
+      },
+      ptbr: {
         translation: "Pirulito",
         is_approved: true,
         approved_at: "2019-07-26T21:21:40-04:00",
@@ -104848,6 +108528,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Londres",
         is_approved: true,
+        approved_at: "2019-04-06T17:00:22-04:00",
+      },
+      ptbr: {
+        translation: "Londres",
+        is_approved: true,
         approved_at: "2019-07-01T10:03:10-04:00",
       },
       ro: {
@@ -104964,6 +108649,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-15T12:29:04-04:00",
       },
       pt: {
+        translation: "Lucky Block",
+        is_approved: true,
+        approved_at: "2022-08-28T15:58:32-04:00",
+      },
+      ptbr: {
         translation: "Lucky Block",
         is_approved: true,
         approved_at: "2022-08-14T21:28:55-04:00",
@@ -105084,6 +108774,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bagagem",
         is_approved: true,
+        approved_at: "2019-04-06T17:00:24-04:00",
+      },
+      ptbr: {
+        translation: "Bagagem",
+        is_approved: true,
         approved_at: "2019-07-01T15:31:41-04:00",
       },
       ro: {
@@ -105200,6 +108895,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:27:45-04:00",
       },
       pt: {
+        translation: "Lenhador",
+        is_approved: true,
+        approved_at: "2020-06-15T10:41:02-04:00",
+      },
+      ptbr: {
         translation: "Lenhador",
         is_approved: true,
         approved_at: "2019-07-01T10:03:14-04:00",
@@ -105347,6 +109047,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Almoço",
         is_approved: true,
+        approved_at: "2019-03-25T18:08:02-04:00",
+      },
+      ptbr: {
+        translation: "Almoço",
+        is_approved: true,
         approved_at: "2018-09-11T21:27:34-04:00",
       },
       ro: {
@@ -105463,6 +109168,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T19:36:40-05:00",
       },
       pt: {
+        translation: "Lancheira",
+        is_approved: true,
+        approved_at: "2019-04-06T17:00:40-04:00",
+      },
+      ptbr: {
         translation: "Lancheira",
         is_approved: true,
         approved_at: "2019-07-01T15:31:45-04:00",
@@ -105595,6 +109305,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-10-26T15:30:08-04:00",
       },
       pt: {
+        translation: "Máquina",
+        is_approved: true,
+        approved_at: "2019-04-06T17:00:43-04:00",
+      },
+      ptbr: {
         translation: "Máquina",
         is_approved: true,
         approved_at: "2019-07-01T10:03:19-04:00",
@@ -105759,6 +109474,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Revista",
         is_approved: true,
+        approved_at: "2019-04-06T17:01:14-04:00",
+      },
+      ptbr: {
+        translation: "Revista",
+        is_approved: true,
         approved_at: "2019-07-01T15:31:52-04:00",
       },
       ro: {
@@ -105889,6 +109609,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T15:17:00-04:00",
       },
       pt: {
+        translation: "Magia",
+        is_approved: true,
+        approved_at: "2020-03-10T14:54:42-04:00",
+      },
+      ptbr: {
         translation: "Mágica",
         is_approved: true,
         approved_at: "2019-10-31T11:10:02-04:00",
@@ -106007,6 +109732,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:38:38-04:00",
       },
       pt: {
+        translation: "Tapete mágico",
+        is_approved: true,
+        approved_at: "2019-04-06T17:01:18-04:00",
+      },
+      ptbr: {
         translation: "Tapete mágico",
         is_approved: true,
         approved_at: "2022-04-14T08:45:25-04:00",
@@ -106139,6 +109869,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-09-14T10:28:49-04:00",
       },
       pt: {
+        translation: "Chapéu de mágico",
+        is_approved: true,
+        approved_at: "2020-06-15T13:29:35-04:00",
+      },
+      ptbr: {
         translation: "Chapéu de mágico",
         is_approved: true,
         approved_at: "2022-04-10T10:53:29-04:00",
@@ -106364,6 +110099,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Varinha mágica",
         is_approved: true,
+        approved_at: "2019-04-06T17:01:24-04:00",
+      },
+      ptbr: {
+        translation: "Varinha mágica",
+        is_approved: true,
         approved_at: "2019-07-01T10:03:39-04:00",
       },
       ro: {
@@ -106535,6 +110275,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mágico",
         is_approved: true,
+        approved_at: "2019-09-15T14:29:22-04:00",
+      },
+      ptbr: {
+        translation: "Mágico",
+        is_approved: true,
         approved_at: "2019-11-21T11:54:45-05:00",
       },
       ro: {
@@ -106651,6 +110396,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:45-04:00",
       },
       pt: {
+        translation: "Cubo de Magma",
+        is_approved: true,
+        approved_at: "2019-03-25T18:08:04-04:00",
+      },
+      ptbr: {
         translation: "Cubo de magma",
         is_approved: true,
         approved_at: "2022-04-14T12:34:34-04:00",
@@ -106769,6 +110519,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:47:13-04:00",
       },
       pt: {
+        translation: "Íman",
+        is_approved: true,
+        approved_at: "2023-08-17T07:56:01-04:00",
+      },
+      ptbr: {
         translation: "Ímã",
         is_approved: true,
         approved_at: "2019-07-01T10:03:43-04:00",
@@ -106887,6 +110642,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:38:47-04:00",
       },
       pt: {
+        translation: "Lupa",
+        is_approved: true,
+        approved_at: "2019-04-06T17:01:39-04:00",
+      },
+      ptbr: {
         translation: "Lupa",
         is_approved: true,
         approved_at: "2019-07-03T09:43:14-04:00",
@@ -107090,6 +110850,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Correio",
         is_approved: true,
+        approved_at: "2019-04-06T17:01:40-04:00",
+      },
+      ptbr: {
+        translation: "Correio",
+        is_approved: true,
         approved_at: "2019-07-01T10:03:47-04:00",
       },
       ro: {
@@ -107206,6 +110971,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:47-04:00",
       },
       pt: {
+        translation: "Caixa de correio",
+        is_approved: true,
+        approved_at: "2019-03-25T18:42:28-04:00",
+      },
+      ptbr: {
         translation: "Caixa de correio",
         is_approved: true,
         approved_at: "2022-04-16T09:57:11-04:00",
@@ -107326,6 +111096,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carteiro",
         is_approved: true,
+        approved_at: "2019-04-06T17:01:44-04:00",
+      },
+      ptbr: {
+        translation: "Carteiro",
+        is_approved: true,
         approved_at: "2019-07-01T10:05:32-04:00",
       },
       ro: {
@@ -107442,6 +111217,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:38:53-04:00",
       },
       pt: {
+        translation: "Maquilhagem",
+        is_approved: true,
+        approved_at: "2019-04-06T17:01:49-04:00",
+      },
+      ptbr: {
         translation: "Maquiagem",
         is_approved: true,
         approved_at: "2019-07-01T10:10:20-04:00",
@@ -107576,6 +111356,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mamute",
         is_approved: true,
+        approved_at: "2021-08-14T20:54:19-04:00",
+      },
+      ptbr: {
+        translation: "Mamute",
+        is_approved: true,
         approved_at: "2019-09-20T15:44:22-04:00",
       },
       ro: {
@@ -107692,6 +111477,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:19:43-04:00",
       },
       pt: {
+        translation: "Manequim",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:40-04:00",
+      },
+      ptbr: {
         translation: "Manequim",
         is_approved: true,
         approved_at: "2024-10-04T12:08:43-04:00",
@@ -107862,6 +111652,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:49-04:00",
       },
       pt: {
+        translation: "Mansão",
+        is_approved: true,
+        approved_at: "2019-03-25T18:08:09-04:00",
+      },
+      ptbr: {
         translation: "Mansão",
         is_approved: true,
         approved_at: "2018-09-11T21:27:43-04:00",
@@ -108035,6 +111830,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mapa",
         is_approved: true,
+        approved_at: "2020-01-16T19:09:11-05:00",
+      },
+      ptbr: {
+        translation: "Mapa",
+        is_approved: true,
         approved_at: "2019-07-01T10:05:34-04:00",
       },
       ro: {
@@ -108165,6 +111965,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-08-02T05:31:44-04:00",
       },
       pt: {
+        translation: "Berlindes",
+        is_approved: true,
+        approved_at: "2019-04-06T17:01:57-04:00",
+      },
+      ptbr: {
         translation: "Bola de gude",
         is_approved: true,
         approved_at: "2022-05-07T08:40:05-04:00",
@@ -108299,6 +112104,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Marcador",
         is_approved: true,
+        approved_at: "2019-04-06T17:02:37-04:00",
+      },
+      ptbr: {
+        translation: "Marcador",
+        is_approved: true,
         approved_at: "2019-07-01T10:05:46-04:00",
       },
       ro: {
@@ -108429,6 +112239,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:07-04:00",
       },
       pt: {
+        translation: "Mercado",
+        is_approved: true,
+        approved_at: "2019-04-06T17:02:49-04:00",
+      },
+      ptbr: {
         translation: "Mercado",
         is_approved: true,
         approved_at: "2019-07-01T10:05:47-04:00",
@@ -108564,6 +112379,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Marte",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:28-04:00",
+      },
+      ptbr: {
+        translation: "Marte",
+        is_approved: true,
         approved_at: "2018-09-12T13:35:22-04:00",
       },
       ro: {
@@ -108694,6 +112514,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:08-04:00",
       },
       pt: {
+        translation: "Marshmallow",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:00-04:00",
+      },
+      ptbr: {
         translation: "Marshmallow",
         is_approved: true,
         approved_at: "2019-07-01T10:05:49-04:00",
@@ -108828,6 +112653,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Máscara",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:10-04:00",
+      },
+      ptbr: {
+        translation: "Máscara",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:18-04:00",
       },
       ro: {
@@ -108944,6 +112774,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:10-04:00",
       },
       pt: {
+        translation: "Fósforo",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:11-04:00",
+      },
+      ptbr: {
         translation: "Fósforo",
         is_approved: true,
         approved_at: "2019-07-26T21:22:13-04:00",
@@ -109069,6 +112904,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Matemática",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:14-04:00",
+      },
+      ptbr: {
+        translation: "Matemática",
+        is_approved: true,
         approved_at: "2019-07-01T10:06:16-04:00",
       },
       ro: {
@@ -109185,6 +113025,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:33-04:00",
       },
       pt: {
+        translation: "Colchão",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:19-04:00",
+      },
+      ptbr: {
         translation: "Colchão",
         is_approved: true,
         approved_at: "2019-07-26T21:22:20-04:00",
@@ -109305,6 +113150,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Maionese",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:20-04:00",
+      },
+      ptbr: {
+        translation: "Maionese",
+        is_approved: true,
         approved_at: "2019-07-26T21:22:22-04:00",
       },
       ro: {
@@ -109421,6 +113271,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-09T14:34:20-04:00",
       },
       pt: {
+        translation: "Labirinto",
+        is_approved: true,
+        approved_at: "2019-10-30T19:44:56-04:00",
+      },
+      ptbr: {
         translation: "Labirinto",
         is_approved: true,
         approved_at: "2019-08-16T18:27:36-04:00",
@@ -109570,6 +113425,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:03:46-05:00",
       },
       pt: {
+        translation: "Prado",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:49-05:00",
+      },
+      ptbr: {
         translation: "Pradaria",
         is_approved: true,
         approved_at: "2025-02-02T19:52:13-05:00",
@@ -109714,6 +113574,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:35-04:00",
       },
       pt: {
+        translation: "Medida",
+        is_approved: true,
+        approved_at: "2019-09-08T18:01:08-04:00",
+      },
+      ptbr: {
         translation: "Medições",
         is_approved: true,
         approved_at: "2019-07-26T21:22:40-04:00",
@@ -109834,6 +113699,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Almôndega",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:26-04:00",
+      },
+      ptbr: {
+        translation: "Almôndega",
+        is_approved: true,
         approved_at: "2019-07-29T09:46:57-04:00",
       },
       ro: {
@@ -109950,6 +113820,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:45-04:00",
       },
       pt: {
+        translation: "Mecânico",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:27-04:00",
+      },
+      ptbr: {
         translation: "Mecânica",
         is_approved: true,
         approved_at: "2019-07-01T15:42:23-04:00",
@@ -110070,6 +113945,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casa medieval",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:33-04:00",
+      },
+      ptbr: {
+        translation: "Casa medieval",
+        is_approved: true,
         approved_at: "2022-05-07T08:41:09-04:00",
       },
       ro: {
@@ -110186,6 +114066,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:47-04:00",
       },
       pt: {
+        translation: "Reunião",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:38-04:00",
+      },
+      ptbr: {
         translation: "Reunião",
         is_approved: true,
         approved_at: "2019-07-29T09:47:05-04:00",
@@ -110324,6 +114209,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sereia",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:30-04:00",
+      },
+      ptbr: {
+        translation: "Sereia",
+        is_approved: true,
         approved_at: "2018-11-11T15:34:26-05:00",
       },
       ro: {
@@ -110440,6 +114330,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:47:50-04:00",
       },
       pt: {
+        translation: "Meteorito",
+        is_approved: true,
+        approved_at: "2019-04-06T17:03:52-04:00",
+      },
+      ptbr: {
         translation: "Meteorito",
         is_approved: true,
         approved_at: "2019-07-01T10:06:29-04:00",
@@ -110560,6 +114455,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "México",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:54-04:00",
+      },
+      ptbr: {
+        translation: "México",
+        is_approved: true,
         approved_at: "2019-07-01T10:06:31-04:00",
       },
       ro: {
@@ -110676,6 +114576,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:43:56-04:00",
       },
       pt: {
+        translation: "Microfone",
+        is_approved: true,
+        approved_at: "2019-03-25T18:09:16-04:00",
+      },
+      ptbr: {
         translation: "Microfone",
         is_approved: true,
         approved_at: "2018-09-12T13:35:58-04:00",
@@ -110796,6 +114701,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Microondas",
         is_approved: true,
+        approved_at: "2019-04-06T17:03:57-04:00",
+      },
+      ptbr: {
+        translation: "Microondas",
+        is_approved: true,
         approved_at: "2019-07-01T10:06:34-04:00",
       },
       ro: {
@@ -110912,6 +114822,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:44:11-04:00",
       },
       pt: {
+        translation: "Batido / Milkshake",
+        is_approved: true,
+        approved_at: "2019-03-25T18:42:51-04:00",
+      },
+      ptbr: {
         translation: "Milkshake",
         is_approved: true,
         approved_at: "2018-09-12T13:36:00-04:00",
@@ -111044,6 +114959,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:32:46-04:00",
       },
       pt: {
+        translation: "Via Láctea",
+        is_approved: true,
+        approved_at: "2022-05-07T09:02:56-04:00",
+      },
+      ptbr: {
         translation: "Via Láctea",
         is_approved: true,
         approved_at: "2018-09-12T13:36:03-04:00",
@@ -111204,6 +115124,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mina",
         is_approved: true,
+        approved_at: "2019-04-06T17:04:09-04:00",
+      },
+      ptbr: {
+        translation: "Mina",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:12-04:00",
       },
       ro: {
@@ -111362,6 +115287,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carrinho de mina",
         is_approved: true,
+        approved_at: "2019-11-13T19:15:28-05:00",
+      },
+      ptbr: {
+        translation: "Carrinho de mina",
+        is_approved: true,
         approved_at: "2022-04-13T14:02:53-04:00",
       },
       ro: {
@@ -111480,6 +115410,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Minecraft",
         is_approved: true,
+        approved_at: "2019-03-25T18:09:39-04:00",
+      },
+      ptbr: {
+        translation: "Minecraft",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:06-04:00",
       },
       ro: {
@@ -111596,6 +115531,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:44:17-04:00",
       },
       pt: {
+        translation: "Mineiro",
+        is_approved: true,
+        approved_at: "2019-03-25T18:09:41-04:00",
+      },
+      ptbr: {
         translation: "Minerador",
         is_approved: true,
         approved_at: "2018-09-12T13:36:09-04:00",
@@ -111730,6 +115670,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mina abandonada",
         is_approved: true,
+        approved_at: "2019-04-06T17:04:29-04:00",
+      },
+      ptbr: {
+        translation: "Mina abandonada",
+        is_approved: true,
         approved_at: "2019-07-01T10:06:52-04:00",
       },
       ro: {
@@ -111846,6 +115791,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:48:33-04:00",
       },
       pt: {
+        translation: "Minigolfe",
+        is_approved: true,
+        approved_at: "2019-04-06T17:05:03-04:00",
+      },
+      ptbr: {
         translation: "Minigolfe",
         is_approved: true,
         approved_at: "2022-09-13T16:20:57-04:00",
@@ -111980,6 +115930,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mineração",
         is_approved: true,
+        approved_at: "2020-02-22T08:32:58-05:00",
+      },
+      ptbr: {
+        translation: "Mineração",
+        is_approved: true,
         approved_at: "2019-07-01T10:07:05-04:00",
       },
       ro: {
@@ -112098,6 +116053,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Minotauro",
         is_approved: true,
+        approved_at: "2019-03-25T18:09:56-04:00",
+      },
+      ptbr: {
+        translation: "Minotauro",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:15-04:00",
       },
       ro: {
@@ -112214,6 +116174,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:47:01-04:00",
       },
       pt: {
+        translation: "Espelho",
+        is_approved: true,
+        approved_at: "2019-04-06T17:05:14-04:00",
+      },
+      ptbr: {
         translation: "Espelho",
         is_approved: true,
         approved_at: "2019-07-01T10:07:07-04:00",
@@ -112408,6 +116373,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Míssil",
         is_approved: true,
+        approved_at: "2019-04-06T17:05:15-04:00",
+      },
+      ptbr: {
+        translation: "Míssil",
+        is_approved: true,
         approved_at: "2019-07-01T15:32:59-04:00",
       },
       ro: {
@@ -112553,6 +116523,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Luvas",
         is_approved: true,
+        approved_at: "2019-04-06T17:05:19-04:00",
+      },
+      ptbr: {
+        translation: "Luvas",
+        is_approved: true,
         approved_at: "2019-07-29T09:47:25-04:00",
       },
       ro: {
@@ -112669,6 +116644,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:48:56-04:00",
       },
       pt: {
+        translation: "Fosso",
+        is_approved: true,
+        approved_at: "2019-09-08T18:02:06-04:00",
+      },
+      ptbr: {
         translation: "Fosso",
         is_approved: true,
         approved_at: "2019-07-29T09:47:39-04:00",
@@ -112789,6 +116769,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arte moderna",
         is_approved: true,
+        approved_at: "2019-04-06T17:05:51-04:00",
+      },
+      ptbr: {
+        translation: "Arte moderna",
+        is_approved: true,
         approved_at: "2022-05-07T08:41:22-04:00",
       },
       ro: {
@@ -112905,6 +116890,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:01-04:00",
       },
       pt: {
+        translation: "Casa moderna",
+        is_approved: true,
+        approved_at: "2019-04-06T17:05:56-04:00",
+      },
+      ptbr: {
         translation: "Casa moderna",
         is_approved: true,
         approved_at: "2022-05-07T08:41:44-04:00",
@@ -113043,6 +117033,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Toupeira",
         is_approved: true,
+        approved_at: "2019-04-06T17:05:58-04:00",
+      },
+      ptbr: {
+        translation: "Toupeira",
+        is_approved: true,
         approved_at: "2019-07-01T10:10:37-04:00",
       },
       ro: {
@@ -113173,6 +117168,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:14-04:00",
       },
       pt: {
+        translation: "Mãe",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:00-04:00",
+      },
+      ptbr: {
         translation: "Mãe",
         is_approved: true,
         approved_at: "2019-07-01T10:10:38-04:00",
@@ -113350,6 +117350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dinheiro",
         is_approved: true,
+        approved_at: "2019-03-25T18:10:10-04:00",
+      },
+      ptbr: {
+        translation: "Dinheiro",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:22-04:00",
       },
       ro: {
@@ -113521,6 +117526,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Monitor",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:07-04:00",
+      },
+      ptbr: {
+        translation: "Monitor",
+        is_approved: true,
         approved_at: "2019-07-01T10:10:41-04:00",
       },
       ro: {
@@ -113637,6 +117647,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T16:00:46-04:00",
       },
       pt: {
+        translation: "Monóculo",
+        is_approved: true,
+        approved_at: "2020-06-29T06:06:42-04:00",
+      },
+      ptbr: {
         translation: "Monóculo",
         is_approved: true,
         approved_at: "2019-08-20T21:45:18-04:00",
@@ -113771,6 +117786,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Monstros",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:09-04:00",
+      },
+      ptbr: {
+        translation: "Monstros",
+        is_approved: true,
         approved_at: "2019-07-01T10:10:52-04:00",
       },
       ro: {
@@ -113901,6 +117921,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:17-04:00",
       },
       pt: {
+        translation: "Lua",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:12-04:00",
+      },
+      ptbr: {
         translation: "Lua",
         is_approved: true,
         approved_at: "2018-03-25T17:27:12-04:00",
@@ -114035,6 +118060,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Alce",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:13-04:00",
+      },
+      ptbr: {
+        translation: "Alce",
+        is_approved: true,
         approved_at: "2019-07-29T09:48:27-04:00",
       },
       ro: {
@@ -114151,6 +118181,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:19-04:00",
       },
       pt: {
+        translation: "Esfregona",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:16-04:00",
+      },
+      ptbr: {
         translation: "Esfregão",
         is_approved: true,
         approved_at: "2019-07-29T09:49:12-04:00",
@@ -114269,6 +118304,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:22-04:00",
       },
       pt: {
+        translation: "Manhã",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:17-04:00",
+      },
+      ptbr: {
         translation: "Manhã",
         is_approved: true,
         approved_at: "2019-07-01T10:11:01-04:00",
@@ -114401,6 +118441,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T15:44:50-04:00",
       },
       pt: {
+        translation: "Traça",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:41-04:00",
+      },
+      ptbr: {
         translation: "Mariposa",
         is_approved: true,
         approved_at: "2024-10-05T12:31:57-04:00",
@@ -114514,6 +118559,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:19:48-04:00",
       },
       pt: {
+        translation: "Motociclo",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:45-04:00",
+      },
+      ptbr: {
         translation: "Motocicleta",
         is_approved: true,
         approved_at: "2024-10-04T12:08:44-04:00",
@@ -114641,6 +118691,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:37:03-04:00",
       },
       pt: {
+        translation: "Montanha",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:22-04:00",
+      },
+      ptbr: {
         translation: "Montanha",
         is_approved: true,
         approved_at: "2018-11-11T15:34:27-05:00",
@@ -114818,6 +118873,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Rato",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:31-04:00",
+      },
+      ptbr: {
+        translation: "Rato",
+        is_approved: true,
         approved_at: "2018-11-11T15:34:29-05:00",
       },
       ro: {
@@ -114934,6 +118994,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:41-04:00",
       },
       pt: {
+        translation: "Tapete de rato",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:34-04:00",
+      },
+      ptbr: {
         translation: "Mouse pad",
         is_approved: true,
         approved_at: "2022-05-07T09:17:00-04:00",
@@ -115052,6 +119117,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:42:59-04:00",
       },
       pt: {
+        translation: "Ratoeira",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:36-04:00",
+      },
+      ptbr: {
         translation: "Ratoeira",
         is_approved: true,
         approved_at: "2019-07-03T09:43:27-04:00",
@@ -115199,6 +119269,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bigode",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:38-04:00",
+      },
+      ptbr: {
+        translation: "Bigode",
+        is_approved: true,
         approved_at: "2019-07-29T09:49:37-04:00",
       },
       ro: {
@@ -115344,6 +119419,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Boca",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:39-04:00",
+      },
+      ptbr: {
+        translation: "Boca",
+        is_approved: true,
         approved_at: "2019-07-29T09:49:52-04:00",
       },
       ro: {
@@ -115460,6 +119540,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:43:01-04:00",
       },
       pt: {
+        translation: "Filme",
+        is_approved: true,
+        approved_at: "2019-04-06T17:06:40-04:00",
+      },
+      ptbr: {
         translation: "Filme",
         is_approved: true,
         approved_at: "2019-07-01T10:11:48-04:00",
@@ -115712,6 +119797,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sala de cinema",
         is_approved: true,
+        approved_at: "2019-04-06T17:06:48-04:00",
+      },
+      ptbr: {
+        translation: "Sala de cinema",
+        is_approved: true,
         approved_at: "2022-05-07T09:16:27-04:00",
       },
       ro: {
@@ -115843,6 +119933,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:43:10-04:00",
       },
       pt: {
+        translation: "Lama",
+        is_approved: true,
+        approved_at: "2019-04-06T17:07:45-04:00",
+      },
+      ptbr: {
         translation: "Lama",
         is_approved: true,
         approved_at: "2019-07-29T09:50:09-04:00",
@@ -116032,6 +120127,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:58:17-04:00",
       },
       pt: {
+        translation: "Queque",
+        is_approved: true,
+        approved_at: "2023-03-07T17:49:01-05:00",
+      },
+      ptbr: {
         translation: "Muffin",
         is_approved: true,
         approved_at: "2019-06-23T10:05:32-04:00",
@@ -116192,6 +120292,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caneca",
         is_approved: true,
+        approved_at: "2019-04-06T17:08:06-04:00",
+      },
+      ptbr: {
+        translation: "Caneca",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:42-04:00",
       },
       ro: {
@@ -116308,6 +120413,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:43:21-04:00",
       },
       pt: {
+        translation: "Múmia",
+        is_approved: true,
+        approved_at: "2019-04-06T17:08:07-04:00",
+      },
+      ptbr: {
         translation: "Múmia",
         is_approved: true,
         approved_at: "2019-07-01T10:07:12-04:00",
@@ -116428,6 +120538,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Músculo",
         is_approved: true,
+        approved_at: "2019-04-06T17:08:09-04:00",
+      },
+      ptbr: {
+        translation: "Músculo",
+        is_approved: true,
         approved_at: "2019-07-01T10:07:13-04:00",
       },
       ro: {
@@ -116544,6 +120659,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:43:58-04:00",
       },
       pt: {
+        translation: "Museu",
+        is_approved: true,
+        approved_at: "2019-04-06T17:08:10-04:00",
+      },
+      ptbr: {
         translation: "Museu",
         is_approved: true,
         approved_at: "2019-07-01T10:07:13-04:00",
@@ -116676,6 +120796,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:46-04:00",
       },
       pt: {
+        translation: "Cogumelo",
+        is_approved: true,
+        approved_at: "2021-05-20T18:31:57-04:00",
+      },
+      ptbr: {
         translation: "Cogumelo",
         is_approved: true,
         approved_at: "2019-07-01T10:07:15-04:00",
@@ -116875,6 +121000,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Música",
         is_approved: true,
+        approved_at: "2020-06-15T13:58:46-04:00",
+      },
+      ptbr: {
+        translation: "Música",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:36-04:00",
       },
       ro: {
@@ -117072,6 +121202,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Musical",
         is_approved: true,
+        approved_at: "2019-09-11T11:21:32-04:00",
+      },
+      ptbr: {
+        translation: "Musical",
+        is_approved: true,
         approved_at: "2019-08-22T15:19:55-04:00",
       },
       ro: {
@@ -117188,6 +121323,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:06-04:00",
       },
       pt: {
+        translation: "Músico",
+        is_approved: true,
+        approved_at: "2019-04-06T17:08:36-04:00",
+      },
+      ptbr: {
         translation: "Músicos",
         is_approved: true,
         approved_at: "2019-07-01T10:07:18-04:00",
@@ -117308,6 +121448,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mostarda",
         is_approved: true,
+        approved_at: "2019-04-06T17:08:37-04:00",
+      },
+      ptbr: {
+        translation: "Mostarda",
+        is_approved: true,
         approved_at: "2019-07-01T10:07:19-04:00",
       },
       ro: {
@@ -117426,6 +121571,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Nachos",
         is_approved: true,
+        approved_at: "2019-04-06T17:08:45-04:00",
+      },
+      ptbr: {
+        translation: "Nachos",
+        is_approved: true,
         approved_at: "2019-07-01T10:07:20-04:00",
       },
       ro: {
@@ -117542,6 +121692,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:11-04:00",
       },
       pt: {
+        translation: "Esmalte",
+        is_approved: true,
+        approved_at: "2019-04-06T17:09:04-04:00",
+      },
+      ptbr: {
         translation: "Esmalte",
         is_approved: true,
         approved_at: "2019-07-29T09:50:44-04:00",
@@ -117702,6 +121857,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Etiqueta",
         is_approved: true,
+        approved_at: "2019-11-14T18:28:54-05:00",
+      },
+      ptbr: {
+        translation: "Etiqueta",
+        is_approved: true,
         approved_at: "2019-07-01T10:07:25-04:00",
       },
       ro: {
@@ -117860,6 +122020,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Guardanapo",
         is_approved: true,
+        approved_at: "2019-04-06T17:09:08-04:00",
+      },
+      ptbr: {
+        translation: "Guardanapo",
+        is_approved: true,
         approved_at: "2019-07-29T09:50:51-04:00",
       },
       ro: {
@@ -117973,6 +122138,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Narval",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:50-05:00",
+      },
+      ptbr: {
+        translation: "Narval",
+        is_approved: true,
         approved_at: "2025-02-02T19:52:56-05:00",
       },
       ro: {
@@ -118084,6 +122254,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:44:51-04:00",
       },
       pt: {
+        translation: "Natureza",
+        is_approved: true,
+        approved_at: "2019-03-25T18:10:34-04:00",
+      },
+      ptbr: {
         translation: "Natureza",
         is_approved: true,
         approved_at: "2018-09-12T13:36:44-04:00",
@@ -118216,6 +122391,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:17-04:00",
       },
       pt: {
+        translation: "Colar",
+        is_approved: true,
+        approved_at: "2019-04-06T17:09:11-04:00",
+      },
+      ptbr: {
         translation: "Colar",
         is_approved: true,
         approved_at: "2019-07-29T09:51:01-04:00",
@@ -118389,6 +122569,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Agulha",
         is_approved: true,
+        approved_at: "2019-04-06T17:09:15-04:00",
+      },
+      ptbr: {
+        translation: "Agulha",
+        is_approved: true,
         approved_at: "2019-07-29T09:51:44-04:00",
       },
       ro: {
@@ -118505,6 +122690,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:58:57-04:00",
       },
       pt: {
+        translation: "Nether",
+        is_approved: true,
+        approved_at: "2021-07-12T15:59:50-04:00",
+      },
+      ptbr: {
         translation: "Nether",
         is_approved: true,
         approved_at: "2019-07-01T10:07:31-04:00",
@@ -118625,6 +122815,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jornal",
         is_approved: true,
+        approved_at: "2019-04-06T17:09:18-04:00",
+      },
+      ptbr: {
+        translation: "Jornal",
+        is_approved: true,
         approved_at: "2019-07-02T09:21:44-04:00",
       },
       ro: {
@@ -118741,6 +122936,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-03-05T07:37:59-05:00",
       },
       pt: {
+        translation: "Noite",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:23-04:00",
+      },
+      ptbr: {
         translation: "Noite",
         is_approved: true,
         approved_at: "2019-07-01T10:07:34-04:00",
@@ -118861,6 +123061,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pesadelo",
         is_approved: true,
+        approved_at: "2019-03-25T18:10:51-04:00",
+      },
+      ptbr: {
+        translation: "Pesadelo",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:49-04:00",
       },
       ro: {
@@ -118977,6 +123182,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:47:04-04:00",
       },
       pt: {
+        translation: "Ninja",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:39-04:00",
+      },
+      ptbr: {
         translation: "Ninja",
         is_approved: true,
         approved_at: "2018-03-17T10:53:13-04:00",
@@ -119097,6 +123307,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Aurora boreal",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:48-04:00",
+      },
+      ptbr: {
+        translation: "Aurora boreal",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:45-04:00",
       },
       ro: {
@@ -119208,6 +123423,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:30-04:00",
       },
       pt: {
+        translation: "Bloco de notas",
+        is_approved: true,
+        approved_at: "2019-04-06T17:10:03-04:00",
+      },
+      ptbr: {
         translation: "Bloco de notas",
         is_approved: true,
         approved_at: "2019-07-01T10:07:48-04:00",
@@ -119328,6 +123548,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Enfermeira",
         is_approved: true,
+        approved_at: "2019-04-06T17:10:06-04:00",
+      },
+      ptbr: {
+        translation: "Enfermeira",
+        is_approved: true,
         approved_at: "2019-07-29T09:52:24-04:00",
       },
       ro: {
@@ -119444,6 +123669,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:32:52-04:00",
       },
       pt: {
+        translation: "Nutcracker",
+        is_approved: true,
+        approved_at: "2021-12-19T15:34:22-05:00",
+      },
+      ptbr: {
         translation: "Quebra-nozes",
         is_approved: true,
         approved_at: "2019-07-29T09:53:50-04:00",
@@ -119580,6 +123810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:33-04:00",
       },
       pt: {
+        translation: "Remar",
+        is_approved: true,
+        approved_at: "2019-04-06T17:10:21-04:00",
+      },
+      ptbr: {
         translation: "Remo",
         is_approved: true,
         approved_at: "2019-07-29T09:54:57-04:00",
@@ -119712,6 +123947,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:30-04:00",
       },
       pt: {
+        translation: "Oasis",
+        is_approved: true,
+        approved_at: "2024-09-11T16:52:57-04:00",
+      },
+      ptbr: {
         translation: "Oásis",
         is_approved: true,
         approved_at: "2023-08-14T16:38:53-04:00",
@@ -119832,6 +124072,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Oceano",
         is_approved: true,
+        approved_at: "2019-03-25T18:11:48-04:00",
+      },
+      ptbr: {
+        translation: "Oceano",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:55-04:00",
       },
       ro: {
@@ -119948,6 +124193,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-19T08:15:08-04:00",
       },
       pt: {
+        translation: "Ocelote",
+        is_approved: true,
+        approved_at: "2020-06-03T10:03:31-04:00",
+      },
+      ptbr: {
         translation: "Jaguatirica",
         is_approved: true,
         approved_at: "2019-09-20T15:49:22-04:00",
@@ -120066,6 +124316,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:35-04:00",
       },
       pt: {
+        translation: "Octógono",
+        is_approved: true,
+        approved_at: "2019-04-06T17:10:50-04:00",
+      },
+      ptbr: {
         translation: "Octógono",
         is_approved: true,
         approved_at: "2019-07-01T10:08:08-04:00",
@@ -120265,6 +124520,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Polvo",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:41-04:00",
+      },
+      ptbr: {
+        translation: "Polvo",
+        is_approved: true,
         approved_at: "2018-09-12T13:36:59-04:00",
       },
       ro: {
@@ -120436,6 +124696,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Escritório",
         is_approved: true,
+        approved_at: "2020-03-20T20:45:54-04:00",
+      },
+      ptbr: {
+        translation: "Escritório",
+        is_approved: true,
         approved_at: "2019-07-01T10:08:11-04:00",
       },
       ro: {
@@ -120552,6 +124817,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-11-12T05:09:54-05:00",
       },
       pt: {
+        translation: "Ogre",
+        is_approved: true,
+        approved_at: "2020-02-03T13:58:48-05:00",
+      },
+      ptbr: {
         translation: "Ogro",
         is_approved: true,
         approved_at: "2019-10-04T14:02:25-04:00",
@@ -120672,6 +124942,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Óleo",
         is_approved: true,
+        approved_at: "2019-04-06T17:10:55-04:00",
+      },
+      ptbr: {
+        translation: "Óleo",
+        is_approved: true,
         approved_at: "2019-07-01T10:08:15-04:00",
       },
       ro: {
@@ -120790,6 +125065,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Olimpíadas",
         is_approved: true,
+        approved_at: "2019-04-06T17:10:57-04:00",
+      },
+      ptbr: {
+        translation: "Olimpíadas",
+        is_approved: true,
         approved_at: "2019-07-01T10:08:16-04:00",
       },
       ro: {
@@ -120906,6 +125186,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:40-04:00",
       },
       pt: {
+        translation: "Omelete",
+        is_approved: true,
+        approved_at: "2019-04-06T17:11:00-04:00",
+      },
+      ptbr: {
         translation: "Omelete",
         is_approved: true,
         approved_at: "2019-07-01T10:08:17-04:00",
@@ -121038,6 +125323,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:41-04:00",
       },
       pt: {
+        translation: "Macacão",
+        is_approved: true,
+        approved_at: "2019-09-01T11:25:11-04:00",
+      },
+      ptbr: {
         translation: "Pijama",
         is_approved: true,
         approved_at: "2019-07-29T09:55:26-04:00",
@@ -121156,6 +125446,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-23T07:24:03-05:00",
       },
       pt: {
+        translation: "Aros de cebola",
+        is_approved: true,
+        approved_at: "2019-04-06T17:11:47-04:00",
+      },
+      ptbr: {
         translation: "Anéis de cebola",
         is_approved: true,
         approved_at: "2019-07-29T09:55:47-04:00",
@@ -121276,6 +125571,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Laranja",
         is_approved: true,
+        approved_at: "2019-11-14T18:30:57-05:00",
+      },
+      ptbr: {
+        translation: "Laranja",
+        is_approved: true,
         approved_at: "2019-08-28T11:47:32-04:00",
       },
       ro: {
@@ -121392,6 +125692,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-02-25T19:46:16-05:00",
       },
       pt: {
+        translation: "Sumo de laranja",
+        is_approved: true,
+        approved_at: "2019-04-06T17:11:58-04:00",
+      },
+      ptbr: {
         translation: "Suco de laranja",
         is_approved: true,
         approved_at: "2022-05-07T09:08:50-04:00",
@@ -121526,6 +125831,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pomar",
         is_approved: true,
+        approved_at: "2019-04-06T17:12:05-04:00",
+      },
+      ptbr: {
+        translation: "Pomar",
+        is_approved: true,
         approved_at: "2019-07-29T09:55:58-04:00",
       },
       ro: {
@@ -121639,6 +125949,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Orquídea",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:06-05:00",
+      },
+      ptbr: {
+        translation: "Orquídea",
+        is_approved: true,
         approved_at: "2025-01-30T14:42:18-05:00",
       },
       ro: {
@@ -121750,6 +126065,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:44:46-04:00",
       },
       pt: {
+        translation: "Minério",
+        is_approved: true,
+        approved_at: "2019-04-06T17:12:06-04:00",
+      },
+      ptbr: {
         translation: "Minério",
         is_approved: true,
         approved_at: "2019-07-01T10:08:30-04:00",
@@ -121868,6 +126188,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:44-04:00",
       },
       pt: {
+        translation: "Adorno",
+        is_approved: true,
+        approved_at: "2020-02-07T17:51:58-05:00",
+      },
+      ptbr: {
         translation: "Ornamento",
         is_approved: true,
         approved_at: "2019-07-01T10:08:32-04:00",
@@ -121988,6 +126313,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Avestruz",
         is_approved: true,
+        approved_at: "2019-04-06T17:12:38-04:00",
+      },
+      ptbr: {
+        translation: "Avestruz",
+        is_approved: true,
         approved_at: "2019-07-01T10:08:35-04:00",
       },
       ro: {
@@ -122104,6 +126434,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:53:47-04:00",
       },
       pt: {
+        translation: "Lontra",
+        is_approved: true,
+        approved_at: "2019-04-06T17:12:40-04:00",
+      },
+      ptbr: {
         translation: "Lontra",
         is_approved: true,
         approved_at: "2019-07-01T10:08:36-04:00",
@@ -122320,6 +126655,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Forno",
         is_approved: true,
+        approved_at: "2025-02-26T17:00:07-05:00",
+      },
+      ptbr: {
+        translation: "Forno",
+        is_approved: true,
         approved_at: "2025-01-30T14:42:19-05:00",
       },
       ro: {
@@ -122447,6 +126787,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Coruja",
         is_approved: true,
+        approved_at: "2020-02-03T14:10:25-05:00",
+      },
+      ptbr: {
+        translation: "Coruja",
+        is_approved: true,
         approved_at: "2018-09-12T13:37:04-04:00",
       },
       ro: {
@@ -122565,6 +126910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ostra",
         is_approved: true,
+        approved_at: "2019-04-06T17:12:46-04:00",
+      },
+      ptbr: {
+        translation: "Ostra",
+        is_approved: true,
         approved_at: "2019-07-29T09:57:43-04:00",
       },
       ro: {
@@ -122681,6 +127031,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:54:40-04:00",
       },
       pt: {
+        translation: "Pacote",
+        is_approved: true,
+        approved_at: "2019-04-06T17:12:54-04:00",
+      },
+      ptbr: {
         translation: "Pacote",
         is_approved: true,
         approved_at: "2019-07-01T15:37:06-04:00",
@@ -122895,6 +127250,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:54:47-04:00",
       },
       pt: {
+        translation: "Tinta",
+        is_approved: true,
+        approved_at: "2020-07-15T11:39:39-04:00",
+      },
+      ptbr: {
         translation: "Pintar",
         is_approved: true,
         approved_at: "2019-07-01T15:33:14-04:00",
@@ -123015,6 +127375,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balde de tinta",
         is_approved: true,
+        approved_at: "2019-04-06T17:13:08-04:00",
+      },
+      ptbr: {
+        translation: "Balde de tinta",
+        is_approved: true,
         approved_at: "2019-07-01T15:33:20-04:00",
       },
       ro: {
@@ -123131,6 +127496,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:55:03-04:00",
       },
       pt: {
+        translation: "Palete de pintura",
+        is_approved: true,
+        approved_at: "2019-04-06T17:13:18-04:00",
+      },
+      ptbr: {
         translation: "Paleta de pintura",
         is_approved: true,
         approved_at: "2019-07-01T15:33:34-04:00",
@@ -123249,6 +127619,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:26:15-05:00",
       },
       pt: {
+        translation: "Paintball",
+        is_approved: true,
+        approved_at: "2019-04-04T15:53:47-04:00",
+      },
+      ptbr: {
         translation: "Paintball",
         is_approved: true,
         approved_at: "2018-03-04T14:05:24-05:00",
@@ -123420,6 +127795,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:55:08-04:00",
       },
       pt: {
+        translation: "Pincel",
+        is_approved: true,
+        approved_at: "2019-04-06T17:13:21-04:00",
+      },
+      ptbr: {
         translation: "Pincel",
         is_approved: true,
         approved_at: "2019-07-01T15:33:38-04:00",
@@ -123612,6 +127992,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:40:04-04:00",
       },
       pt: {
+        translation: "Quadro",
+        is_approved: true,
+        approved_at: "2019-11-13T19:14:05-05:00",
+      },
+      ptbr: {
         translation: "Pintura",
         is_approved: true,
         approved_at: "2023-08-14T17:27:29-04:00",
@@ -123746,6 +128131,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Palácio",
         is_approved: true,
+        approved_at: "2019-04-06T17:13:30-04:00",
+      },
+      ptbr: {
+        translation: "Palácio",
+        is_approved: true,
         approved_at: "2019-07-01T15:33:47-04:00",
       },
       ro: {
@@ -123876,6 +128266,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T11:20:23-04:00",
       },
       pt: {
+        translation: "Palmeira",
+        is_approved: true,
+        approved_at: "2023-08-17T07:56:03-04:00",
+      },
+      ptbr: {
         translation: "Palmeira",
         is_approved: true,
         approved_at: "2023-08-14T16:42:16-04:00",
@@ -124151,6 +128546,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:56:50-04:00",
       },
       pt: {
+        translation: "Caçoila / Caçarola",
+        is_approved: true,
+        approved_at: "2019-04-06T18:51:03-04:00",
+      },
+      ptbr: {
         translation: "Panela",
         is_approved: true,
         approved_at: "2019-07-01T10:12:20-04:00",
@@ -124269,6 +128669,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:44:58-04:00",
       },
       pt: {
+        translation: "Panquecas",
+        is_approved: true,
+        approved_at: "2019-03-25T18:12:22-04:00",
+      },
+      ptbr: {
         translation: "Panqueca",
         is_approved: true,
         approved_at: "2018-09-12T13:47:02-04:00",
@@ -124387,6 +128792,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:26:01-04:00",
       },
       pt: {
+        translation: "Panda",
+        is_approved: true,
+        approved_at: "2021-10-03T20:59:18-04:00",
+      },
+      ptbr: {
         translation: "Panda",
         is_approved: true,
         approved_at: "2019-08-28T11:50:35-04:00",
@@ -124521,6 +128931,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Papel",
         is_approved: true,
+        approved_at: "2020-01-15T19:17:55-05:00",
+      },
+      ptbr: {
+        translation: "Papel",
+        is_approved: true,
         approved_at: "2019-07-01T10:12:23-04:00",
       },
       ro: {
@@ -124639,6 +129054,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Avião de papel",
         is_approved: true,
+        approved_at: "2019-04-06T17:14:23-04:00",
+      },
+      ptbr: {
+        translation: "Avião de papel",
+        is_approved: true,
         approved_at: "2019-07-01T10:12:28-04:00",
       },
       ro: {
@@ -124755,6 +129175,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:56:54-04:00",
       },
       pt: {
+        translation: "Clipe",
+        is_approved: true,
+        approved_at: "2019-04-06T17:14:25-04:00",
+      },
+      ptbr: {
         translation: "Clipe de papel",
         is_approved: true,
         approved_at: "2023-08-24T15:08:16-04:00",
@@ -124875,6 +129300,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Paraquedas",
         is_approved: true,
+        approved_at: "2022-05-07T09:00:56-04:00",
+      },
+      ptbr: {
+        translation: "Paraquedas",
+        is_approved: true,
         approved_at: "2019-07-01T10:12:34-04:00",
       },
       ro: {
@@ -124991,6 +129421,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:01-04:00",
       },
       pt: {
+        translation: "Parque",
+        is_approved: true,
+        approved_at: "2019-03-25T18:12:28-04:00",
+      },
+      ptbr: {
         translation: "Parque",
         is_approved: true,
         approved_at: "2018-09-12T13:47:11-04:00",
@@ -125111,6 +129546,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estacionamento",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:25-04:00",
+      },
+      ptbr: {
+        translation: "Estacionamento",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:46-04:00",
       },
       ro: {
@@ -125222,6 +129662,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-09T14:34:17-04:00",
       },
       pt: {
+        translation: "Parkour",
+        is_approved: true,
+        approved_at: "2019-09-06T13:12:34-04:00",
+      },
+      ptbr: {
         translation: "Parkour",
         is_approved: true,
         approved_at: "2019-06-24T20:36:33-04:00",
@@ -125342,6 +129787,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Papagaio",
         is_approved: true,
+        approved_at: "2019-03-25T18:12:29-04:00",
+      },
+      ptbr: {
+        translation: "Papagaio",
+        is_approved: true,
         approved_at: "2018-09-12T13:47:15-04:00",
       },
       ro: {
@@ -125460,6 +129910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Festa",
         is_approved: true,
+        approved_at: "2019-03-25T18:12:31-04:00",
+      },
+      ptbr: {
+        translation: "Festa",
+        is_approved: true,
         approved_at: "2022-04-25T21:26:29-04:00",
       },
       ro: {
@@ -125576,6 +130031,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:57:06-04:00",
       },
       pt: {
+        translation: "Chapéu de festa",
+        is_approved: true,
+        approved_at: "2019-04-06T17:15:26-04:00",
+      },
+      ptbr: {
         translation: "Chapéu de festa",
         is_approved: true,
         approved_at: "2022-04-10T10:53:35-04:00",
@@ -125740,6 +130200,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caminho",
         is_approved: true,
+        approved_at: "2019-04-06T17:15:30-04:00",
+      },
+      ptbr: {
+        translation: "Caminho",
+        is_approved: true,
         approved_at: "2019-07-01T15:33:54-04:00",
       },
       ro: {
@@ -125856,6 +130321,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:25-04:00",
       },
       pt: {
+        translation: "Pátio",
+        is_approved: true,
+        approved_at: "2019-04-06T17:15:07-04:00",
+      },
+      ptbr: {
         translation: "Pátio",
         is_approved: true,
         approved_at: "2019-07-01T10:12:54-04:00",
@@ -125988,6 +130458,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:26-04:00",
       },
       pt: {
+        translation: "Padrão",
+        is_approved: true,
+        approved_at: "2019-04-06T17:15:08-04:00",
+      },
+      ptbr: {
         translation: "Padrão",
         is_approved: true,
         approved_at: "2019-07-01T10:12:58-04:00",
@@ -126135,6 +130610,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Patas",
         is_approved: true,
+        approved_at: "2019-04-06T17:15:23-04:00",
+      },
+      ptbr: {
+        translation: "Patas",
+        is_approved: true,
         approved_at: "2019-07-29T10:00:38-04:00",
       },
       ro: {
@@ -126267,6 +130747,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ervilha",
         is_approved: true,
+        approved_at: "2019-04-06T17:15:33-04:00",
+      },
+      ptbr: {
+        translation: "Ervilha",
+        is_approved: true,
         approved_at: "2019-07-03T09:43:41-04:00",
       },
       ro: {
@@ -126383,6 +130868,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:48:04-04:00",
       },
       pt: {
+        translation: "Pêssego",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:26-04:00",
+      },
+      ptbr: {
         translation: "Pêssego",
         is_approved: true,
         approved_at: "2019-07-03T09:43:45-04:00",
@@ -126517,6 +131007,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pavão",
         is_approved: true,
+        approved_at: "2019-04-06T17:15:36-04:00",
+      },
+      ptbr: {
+        translation: "Pavão",
+        is_approved: true,
         approved_at: "2019-07-29T10:00:44-04:00",
       },
       ro: {
@@ -126635,6 +131130,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Amendoim",
         is_approved: true,
+        approved_at: "2019-04-06T17:15:38-04:00",
+      },
+      ptbr: {
+        translation: "Amendoim",
+        is_approved: true,
         approved_at: "2019-07-03T09:43:49-04:00",
       },
       ro: {
@@ -126751,6 +131251,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:32-04:00",
       },
       pt: {
+        translation: "Manteiga de amendoim",
+        is_approved: true,
+        approved_at: "2019-04-06T17:15:39-04:00",
+      },
+      ptbr: {
         translation: "Manteiga de amendoim",
         is_approved: true,
         approved_at: "2019-07-03T09:43:53-04:00",
@@ -126889,6 +131394,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pera",
         is_approved: true,
+        approved_at: "2023-08-17T08:00:32-04:00",
+      },
+      ptbr: {
+        translation: "Pera",
+        is_approved: true,
         approved_at: "2019-07-01T10:13:06-04:00",
       },
       ro: {
@@ -127007,6 +131517,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pérola",
         is_approved: true,
+        approved_at: "2019-04-06T17:16:02-04:00",
+      },
+      ptbr: {
+        translation: "Pérola",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:25-04:00",
       },
       ro: {
@@ -127123,6 +131638,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:34-04:00",
       },
       pt: {
+        translation: "Pedais",
+        is_approved: true,
+        approved_at: "2019-04-06T17:16:03-04:00",
+      },
+      ptbr: {
         translation: "Pedais",
         is_approved: true,
         approved_at: "2019-07-29T10:00:52-04:00",
@@ -127268,6 +131788,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:36-04:00",
       },
       pt: {
+        translation: "Caneta",
+        is_approved: true,
+        approved_at: "2019-04-06T17:16:04-04:00",
+      },
+      ptbr: {
         translation: "Caneta",
         is_approved: true,
         approved_at: "2018-03-25T17:26:43-04:00",
@@ -127428,6 +131953,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lápis",
         is_approved: true,
+        approved_at: "2020-03-01T11:49:21-05:00",
+      },
+      ptbr: {
+        translation: "Lápis",
+        is_approved: true,
         approved_at: "2019-08-05T12:33:01-04:00",
       },
       ro: {
@@ -127544,6 +132074,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:50-04:00",
       },
       pt: {
+        translation: "Estojo",
+        is_approved: true,
+        approved_at: "2019-04-06T17:16:23-04:00",
+      },
+      ptbr: {
         translation: "Estojo",
         is_approved: true,
         approved_at: "2019-07-01T10:13:17-04:00",
@@ -127664,6 +132199,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pinguim",
         is_approved: true,
+        approved_at: "2019-03-25T18:12:34-04:00",
+      },
+      ptbr: {
+        translation: "Pinguim",
+        is_approved: true,
         approved_at: "2023-08-14T16:33:36-04:00",
       },
       ro: {
@@ -127782,6 +132322,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pentágono",
         is_approved: true,
+        approved_at: "2019-04-06T17:16:43-04:00",
+      },
+      ptbr: {
+        translation: "Pentágono",
+        is_approved: true,
         approved_at: "2019-07-01T10:13:09-04:00",
       },
       ro: {
@@ -127898,6 +132443,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:49:55-04:00",
       },
       pt: {
+        translation: "Perfume",
+        is_approved: true,
+        approved_at: "2019-04-06T17:16:44-04:00",
+      },
+      ptbr: {
         translation: "Perfume",
         is_approved: true,
         approved_at: "2019-07-01T10:13:11-04:00",
@@ -128030,6 +132580,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-04-17T16:17:49-04:00",
       },
       pt: {
+        translation: "Animal de estimação",
+        is_approved: true,
+        approved_at: "2019-03-25T18:44:02-04:00",
+      },
+      ptbr: {
         translation: "Mascote",
         is_approved: true,
         approved_at: "2022-05-20T06:25:56-04:00",
@@ -128148,6 +132703,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:19:54-04:00",
       },
       pt: {
+        translation: "Loja de animais",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:26-04:00",
+      },
+      ptbr: {
         translation: "Pet shop",
         is_approved: true,
         approved_at: "2024-10-06T11:16:34-04:00",
@@ -128261,6 +132821,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T11:23:37-04:00",
       },
       pt: {
+        translation: "Faraó",
+        is_approved: true,
+        approved_at: "2021-01-25T08:58:05-05:00",
+      },
+      ptbr: {
         translation: "Faraó",
         is_approved: true,
         approved_at: "2022-05-20T06:46:13-04:00",
@@ -128379,6 +132944,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:08-04:00",
       },
       pt: {
+        translation: "Fénix",
+        is_approved: true,
+        approved_at: "2021-07-17T06:51:55-04:00",
+      },
+      ptbr: {
         translation: "Fênix",
         is_approved: true,
         approved_at: "2018-09-12T13:49:06-04:00",
@@ -128497,6 +133067,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:50:57-04:00",
       },
       pt: {
+        translation: "Capa de telemóvel",
+        is_approved: true,
+        approved_at: "2019-04-06T17:17:03-04:00",
+      },
+      ptbr: {
         translation: "Capa de celular",
         is_approved: true,
         approved_at: "2023-08-24T15:09:37-04:00",
@@ -128615,6 +133190,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:50:58-04:00",
       },
       pt: {
+        translation: "Carregador de telemóveis",
+        is_approved: true,
+        approved_at: "2019-04-06T17:17:05-04:00",
+      },
+      ptbr: {
         translation: "Carregador de celular",
         is_approved: true,
         approved_at: "2023-08-24T15:09:47-04:00",
@@ -128829,6 +133409,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fotografia",
         is_approved: true,
+        approved_at: "2019-04-06T17:17:18-04:00",
+      },
+      ptbr: {
+        translation: "Fotografia",
+        is_approved: true,
         approved_at: "2019-07-01T10:13:46-04:00",
       },
       ro: {
@@ -128973,6 +133558,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:02-04:00",
       },
       pt: {
+        translation: "Fotógrafo",
+        is_approved: true,
+        approved_at: "2019-04-06T17:17:31-04:00",
+      },
+      ptbr: {
         translation: "Fotógrafo",
         is_approved: true,
         approved_at: "2019-07-01T10:13:48-04:00",
@@ -129121,6 +133711,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Piano",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:44-04:00",
+      },
+      ptbr: {
+        translation: "Piano",
+        is_approved: true,
         approved_at: "2018-09-12T13:49:10-04:00",
       },
       ro: {
@@ -129239,6 +133834,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Picareta",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:45-04:00",
+      },
+      ptbr: {
+        translation: "Picareta",
+        is_approved: true,
         approved_at: "2018-09-12T13:49:20-04:00",
       },
       ro: {
@@ -129355,6 +133955,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:05-04:00",
       },
       pt: {
+        translation: "Picle",
+        is_approved: true,
+        approved_at: "2019-04-06T17:17:42-04:00",
+      },
+      ptbr: {
         translation: "Picles",
         is_approved: true,
         approved_at: "2019-07-01T10:13:49-04:00",
@@ -129473,6 +134078,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:09-04:00",
       },
       pt: {
+        translation: "Piquenique",
+        is_approved: true,
+        approved_at: "2019-03-25T18:13:02-04:00",
+      },
+      ptbr: {
         translation: "Piquenique",
         is_approved: true,
         approved_at: "2018-09-12T13:49:47-04:00",
@@ -129718,6 +134328,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:06-04:00",
       },
       pt: {
+        translation: "Fotografia",
+        is_approved: true,
+        approved_at: "2019-09-01T11:25:56-04:00",
+      },
+      ptbr: {
         translation: "Quadro",
         is_approved: true,
         approved_at: "2023-08-24T15:11:15-04:00",
@@ -129863,6 +134478,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-05T19:20:00-04:00",
       },
       pt: {
+        translation: "Moldura",
+        is_approved: true,
+        approved_at: "2024-10-27T10:48:27-04:00",
+      },
+      ptbr: {
         translation: "Moldura",
         is_approved: true,
         approved_at: "2024-10-05T12:49:22-04:00",
@@ -130054,6 +134674,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-11T04:45:58-04:00",
       },
       pt: {
+        translation: "Tarte",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:47-04:00",
+      },
+      ptbr: {
         translation: "Torta",
         is_approved: true,
         approved_at: "2018-09-12T13:49:52-04:00",
@@ -130243,6 +134868,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:10-04:00",
       },
       pt: {
+        translation: "Cais",
+        is_approved: true,
+        approved_at: "2019-04-06T17:17:53-04:00",
+      },
+      ptbr: {
         translation: "Cais",
         is_approved: true,
         approved_at: "2019-07-01T10:13:52-04:00",
@@ -130479,6 +135109,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:33:25-04:00",
       },
       pt: {
+        translation: "Porco",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:48-04:00",
+      },
+      ptbr: {
         translation: "Porco",
         is_approved: true,
         approved_at: "2019-06-22T19:54:52-04:00",
@@ -130795,6 +135430,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pombo",
         is_approved: true,
+        approved_at: "2019-04-06T17:17:56-04:00",
+      },
+      ptbr: {
+        translation: "Pombo",
+        is_approved: true,
         approved_at: "2019-07-01T10:13:55-04:00",
       },
       ro: {
@@ -130911,6 +135551,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:28-04:00",
       },
       pt: {
+        translation: "Porquinho mealheiro",
+        is_approved: true,
+        approved_at: "2020-04-07T18:26:14-04:00",
+      },
+      ptbr: {
         translation: "Cofrinho",
         is_approved: true,
         approved_at: "2019-07-01T10:14:12-04:00",
@@ -131029,6 +135674,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:26-04:00",
       },
       pt: {
+        translation: "Pigman",
+        is_approved: true,
+        approved_at: "2019-09-15T19:31:48-04:00",
+      },
+      ptbr: {
         translation: "Porco-zumbi",
         is_approved: true,
         approved_at: "2021-10-30T08:36:49-04:00",
@@ -131149,6 +135799,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pikachu",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:48-04:00",
+      },
+      ptbr: {
+        translation: "Pikachu",
+        is_approved: true,
         approved_at: "2018-09-12T13:55:27-04:00",
       },
       ro: {
@@ -131265,6 +135920,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:29-04:00",
       },
       pt: {
+        translation: "Almofada",
+        is_approved: true,
+        approved_at: "2019-04-06T17:18:20-04:00",
+      },
+      ptbr: {
         translation: "Travesseiro",
         is_approved: true,
         approved_at: "2019-07-29T10:00:59-04:00",
@@ -131383,6 +136043,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:30-04:00",
       },
       pt: {
+        translation: "Fronha",
+        is_approved: true,
+        approved_at: "2019-04-06T17:18:32-04:00",
+      },
+      ptbr: {
         translation: "Fronha",
         is_approved: true,
         approved_at: "2019-07-29T10:01:12-04:00",
@@ -131569,6 +136234,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Alfinete",
         is_approved: true,
+        approved_at: "2019-04-06T17:18:54-04:00",
+      },
+      ptbr: {
+        translation: "Alfinete",
+        is_approved: true,
         approved_at: "2019-07-29T10:01:46-04:00",
       },
       ro: {
@@ -131685,6 +136355,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:32-04:00",
       },
       pt: {
+        translation: "Pinhata",
+        is_approved: true,
+        approved_at: "2019-04-06T18:54:35-04:00",
+      },
+      ptbr: {
         translation: "Pinhata",
         is_approved: true,
         approved_at: "2020-12-14T06:11:37-05:00",
@@ -131832,6 +136507,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pinheiro",
         is_approved: true,
+        approved_at: "2019-04-06T18:54:38-04:00",
+      },
+      ptbr: {
+        translation: "Pinheiro",
+        is_approved: true,
         approved_at: "2019-07-01T10:14:21-04:00",
       },
       ro: {
@@ -131948,6 +136628,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-16T15:25:43-04:00",
       },
       pt: {
+        translation: "Ananás",
+        is_approved: true,
+        approved_at: "2023-08-17T07:56:04-04:00",
+      },
+      ptbr: {
         translation: "Abacaxi",
         is_approved: true,
         approved_at: "2019-07-01T10:14:22-04:00",
@@ -132066,6 +136751,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:51:35-04:00",
       },
       pt: {
+        translation: "Pizza de ananás",
+        is_approved: true,
+        approved_at: "2019-04-06T18:54:42-04:00",
+      },
+      ptbr: {
         translation: "Pizza de abacaxi",
         is_approved: true,
         approved_at: "2019-07-01T10:14:24-04:00",
@@ -132186,6 +136876,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pinha",
         is_approved: true,
+        approved_at: "2019-04-06T18:54:44-04:00",
+      },
+      ptbr: {
+        translation: "Pinha",
+        is_approved: true,
         approved_at: "2019-07-29T10:01:54-04:00",
       },
       ro: {
@@ -132302,6 +136997,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-07T10:40:41-04:00",
       },
       pt: {
+        translation: "Pirata",
+        is_approved: true,
+        approved_at: "2020-11-21T18:25:43-05:00",
+      },
+      ptbr: {
         translation: "Pirata",
         is_approved: true,
         approved_at: "2019-08-16T12:31:49-04:00",
@@ -132422,6 +137122,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chapéu de pirata",
         is_approved: true,
+        approved_at: "2019-04-06T18:56:15-04:00",
+      },
+      ptbr: {
+        translation: "Chapéu de pirata",
+        is_approved: true,
         approved_at: "2022-04-10T10:53:39-04:00",
       },
       ro: {
@@ -132538,6 +137243,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:11-04:00",
       },
       pt: {
+        translation: "Navio pirata",
+        is_approved: true,
+        approved_at: "2019-03-25T18:27:19-04:00",
+      },
+      ptbr: {
         translation: "Navio pirata",
         is_approved: true,
         approved_at: "2019-08-08T17:25:39-04:00",
@@ -132685,6 +137395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pistão",
         is_approved: true,
+        approved_at: "2019-03-25T18:14:04-04:00",
+      },
+      ptbr: {
+        translation: "Pistão",
+        is_approved: true,
         approved_at: "2018-09-12T13:56:41-04:00",
       },
       ro: {
@@ -132828,6 +137543,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:40-04:00",
       },
       pt: {
+        translation: "Forquilha",
+        is_approved: true,
+        approved_at: "2019-04-06T18:57:37-04:00",
+      },
+      ptbr: {
         translation: "Tridente",
         is_approved: true,
         approved_at: "2019-07-29T10:02:02-04:00",
@@ -132948,6 +137668,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pizza",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:51-04:00",
+      },
+      ptbr: {
+        translation: "Pizza",
+        is_approved: true,
         approved_at: "2018-09-12T13:56:45-04:00",
       },
       ro: {
@@ -133064,6 +137789,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:41-04:00",
       },
       pt: {
+        translation: "Planeta",
+        is_approved: true,
+        approved_at: "2019-04-06T18:57:47-04:00",
+      },
+      ptbr: {
         translation: "Planeta",
         is_approved: true,
         approved_at: "2019-07-01T10:14:40-04:00",
@@ -133198,6 +137928,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prancha",
         is_approved: true,
+        approved_at: "2019-09-08T18:02:37-04:00",
+      },
+      ptbr: {
+        translation: "Prancha",
+        is_approved: true,
         approved_at: "2019-09-06T14:11:32-04:00",
       },
       ro: {
@@ -133314,6 +138049,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:44-04:00",
       },
       pt: {
+        translation: "Planta",
+        is_approved: true,
+        approved_at: "2019-04-06T18:58:02-04:00",
+      },
+      ptbr: {
         translation: "Planta",
         is_approved: true,
         approved_at: "2019-07-01T10:14:44-04:00",
@@ -133543,6 +138283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prato",
         is_approved: true,
+        approved_at: "2019-04-06T18:58:26-04:00",
+      },
+      ptbr: {
+        translation: "Prato",
+        is_approved: true,
         approved_at: "2019-07-29T10:02:35-04:00",
       },
       ro: {
@@ -133659,6 +138404,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:47-04:00",
       },
       pt: {
+        translation: "Plataforma",
+        is_approved: true,
+        approved_at: "2019-04-06T18:58:27-04:00",
+      },
+      ptbr: {
         translation: "Plataforma",
         is_approved: true,
         approved_at: "2019-07-01T10:14:57-04:00",
@@ -133779,6 +138529,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ornitorrinco",
         is_approved: true,
+        approved_at: "2019-04-06T18:58:29-04:00",
+      },
+      ptbr: {
+        translation: "Ornitorrinco",
+        is_approved: true,
         approved_at: "2019-07-29T10:02:42-04:00",
       },
       ro: {
@@ -133895,6 +138650,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:47:31-04:00",
       },
       pt: {
+        translation: "Parque infantil",
+        is_approved: true,
+        approved_at: "2019-03-25T18:27:08-04:00",
+      },
+      ptbr: {
         translation: "Parquinho",
         is_approved: true,
         approved_at: "2019-08-21T11:14:38-04:00",
@@ -134027,6 +138787,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:57-04:00",
       },
       pt: {
+        translation: "Tomada elétrica",
+        is_approved: true,
+        approved_at: "2019-04-06T18:59:19-04:00",
+      },
+      ptbr: {
         translation: "Plugue",
         is_approved: true,
         approved_at: "2019-07-29T10:04:33-04:00",
@@ -134145,6 +138910,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:04:00-05:00",
       },
       pt: {
+        translation: "Canalizador",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:51-05:00",
+      },
+      ptbr: {
         translation: "Encanador",
         is_approved: true,
         approved_at: "2025-01-30T14:42:20-05:00",
@@ -134258,6 +139028,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:57-04:00",
       },
       pt: {
+        translation: "Desentupidor",
+        is_approved: true,
+        approved_at: "2019-04-06T18:59:21-04:00",
+      },
+      ptbr: {
         translation: "Desentupidor",
         is_approved: true,
         approved_at: "2019-07-29T10:03:46-04:00",
@@ -134376,6 +139151,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:58-04:00",
       },
       pt: {
+        translation: "Relógio de bolso",
+        is_approved: true,
+        approved_at: "2019-04-06T18:59:24-04:00",
+      },
+      ptbr: {
         translation: "Relógio de bolso",
         is_approved: true,
         approved_at: "2019-07-29T10:07:13-04:00",
@@ -134511,6 +139291,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pódio",
         is_approved: true,
+        approved_at: "2019-04-06T18:59:25-04:00",
+      },
+      ptbr: {
+        translation: "Pódio",
+        is_approved: true,
         approved_at: "2019-07-01T15:42:44-04:00",
       },
       ro: {
@@ -134627,6 +139412,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:00:08-04:00",
       },
       pt: {
+        translation: "Pogo",
+        is_approved: true,
+        approved_at: "2020-02-07T17:52:21-05:00",
+      },
+      ptbr: {
         translation: "Pula-pula",
         is_approved: true,
         approved_at: "2019-07-29T10:07:24-04:00",
@@ -134765,6 +139555,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Veneno",
         is_approved: true,
+        approved_at: "2019-11-14T18:39:18-05:00",
+      },
+      ptbr: {
+        translation: "Veneno",
+        is_approved: true,
         approved_at: "2019-09-24T13:24:42-04:00",
       },
       ro: {
@@ -134881,6 +139676,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:13-04:00",
       },
       pt: {
+        translation: "Urso polar",
+        is_approved: true,
+        approved_at: "2019-03-25T18:26:59-04:00",
+      },
+      ptbr: {
         translation: "Urso polar",
         is_approved: true,
         approved_at: "2019-08-08T17:25:45-04:00",
@@ -135041,6 +139841,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Polícia",
         is_approved: true,
+        approved_at: "2019-03-25T18:14:34-04:00",
+      },
+      ptbr: {
+        translation: "Polícia",
+        is_approved: true,
         approved_at: "2018-09-12T14:01:13-04:00",
       },
       ro: {
@@ -135157,6 +139962,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:00:12-04:00",
       },
       pt: {
+        translation: "Carro da polícia",
+        is_approved: true,
+        approved_at: "2019-04-06T19:00:25-04:00",
+      },
+      ptbr: {
         translation: "Carro de polícia",
         is_approved: true,
         approved_at: "2019-07-01T15:38:06-04:00",
@@ -135304,6 +140114,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chefe da polícia",
         is_approved: true,
+        approved_at: "2019-04-06T19:00:55-04:00",
+      },
+      ptbr: {
+        translation: "Chefe da polícia",
+        is_approved: true,
         approved_at: "2019-07-01T15:39:39-04:00",
       },
       ro: {
@@ -135420,6 +140235,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:00:14-04:00",
       },
       pt: {
+        translation: "Esquadra",
+        is_approved: true,
+        approved_at: "2019-04-06T19:01:39-04:00",
+      },
+      ptbr: {
         translation: "Delegacia de polícia",
         is_approved: true,
         approved_at: "2019-07-01T15:38:28-04:00",
@@ -135567,6 +140387,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lago",
         is_approved: true,
+        approved_at: "2021-07-01T19:27:14-04:00",
+      },
+      ptbr: {
+        translation: "Lago",
+        is_approved: true,
         approved_at: "2019-07-29T10:07:45-04:00",
       },
       ro: {
@@ -135683,6 +140508,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:00:18-04:00",
       },
       pt: {
+        translation: "Pónei",
+        is_approved: true,
+        approved_at: "2019-04-06T19:02:21-04:00",
+      },
+      ptbr: {
         translation: "Pônei",
         is_approved: true,
         approved_at: "2019-07-29T10:08:58-04:00",
@@ -135961,6 +140791,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Piscina",
         is_approved: true,
+        approved_at: "2019-04-06T19:02:22-04:00",
+      },
+      ptbr: {
+        translation: "Piscina",
+        is_approved: true,
         approved_at: "2019-07-11T21:53:06-04:00",
       },
       ro: {
@@ -136079,6 +140914,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mesa de bilhar",
         is_approved: true,
+        approved_at: "2023-08-17T07:56:12-04:00",
+      },
+      ptbr: {
+        translation: "Mesa de bilhar",
+        is_approved: true,
         approved_at: "2023-08-14T16:47:28-04:00",
       },
       ro: {
@@ -136195,6 +141035,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:01:29-04:00",
       },
       pt: {
+        translation: "Pipocas",
+        is_approved: true,
+        approved_at: "2021-08-01T21:58:25-04:00",
+      },
+      ptbr: {
         translation: "Pipoca",
         is_approved: true,
         approved_at: "2019-06-23T10:06:11-04:00",
@@ -136313,6 +141158,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:01:11-04:00",
       },
       pt: {
+        translation: "Gelado de água",
+        is_approved: true,
+        approved_at: "2020-02-07T17:54:53-05:00",
+      },
+      ptbr: {
         translation: "Picolé",
         is_approved: true,
         approved_at: "2019-07-29T10:09:56-04:00",
@@ -136431,6 +141281,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:15-04:00",
       },
       pt: {
+        translation: "Portal",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:53-04:00",
+      },
+      ptbr: {
         translation: "Portal",
         is_approved: true,
         approved_at: "2019-07-03T09:44:10-04:00",
@@ -136615,6 +141470,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:01:49-04:00",
       },
       pt: {
+        translation: "Correios",
+        is_approved: true,
+        approved_at: "2019-04-06T19:03:58-04:00",
+      },
+      ptbr: {
         translation: "Correio",
         is_approved: true,
         approved_at: "2019-07-03T09:44:14-04:00",
@@ -136733,6 +141593,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:01:50-04:00",
       },
       pt: {
+        translation: "Cartão postal",
+        is_approved: true,
+        approved_at: "2019-04-06T19:04:01-04:00",
+      },
+      ptbr: {
         translation: "Cartão postal",
         is_approved: true,
         approved_at: "2019-07-29T10:10:07-04:00",
@@ -136865,6 +141730,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:01:50-04:00",
       },
       pt: {
+        translation: "Póster / Poster",
+        is_approved: true,
+        approved_at: "2019-04-06T19:04:24-04:00",
+      },
+      ptbr: {
         translation: "Cartaz",
         is_approved: true,
         approved_at: "2019-07-01T15:39:51-04:00",
@@ -136985,6 +141855,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pote de ouro",
         is_approved: true,
+        approved_at: "2019-04-06T19:04:37-04:00",
+      },
+      ptbr: {
+        translation: "Pote de ouro",
+        is_approved: true,
         approved_at: "2019-07-01T15:39:58-04:00",
       },
       ro: {
@@ -137101,6 +141976,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:47:50-04:00",
       },
       pt: {
+        translation: "Batata",
+        is_approved: true,
+        approved_at: "2020-01-10T18:30:39-05:00",
+      },
+      ptbr: {
         translation: "Batata",
         is_approved: true,
         approved_at: "2019-07-01T15:39:59-04:00",
@@ -137297,6 +142177,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Batatas fritas",
         is_approved: true,
+        approved_at: "2019-04-06T19:04:39-04:00",
+      },
+      ptbr: {
+        translation: "Batatas fritas",
+        is_approved: true,
         approved_at: "2019-07-01T15:40:15-04:00",
       },
       ro: {
@@ -137427,6 +142312,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:30-04:00",
       },
       pt: {
+        translation: "Poção",
+        is_approved: true,
+        approved_at: "2019-09-18T14:40:12-04:00",
+      },
+      ptbr: {
         translation: "Poção",
         is_approved: true,
         approved_at: "2019-09-24T13:25:47-04:00",
@@ -137585,6 +142475,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:13-04:00",
       },
       pt: {
+        translation: "Fios elétricos",
+        is_approved: true,
+        approved_at: "2019-09-08T18:02:51-04:00",
+      },
+      ptbr: {
         translation: "Fios elétricos",
         is_approved: true,
         approved_at: "2019-07-29T10:12:26-04:00",
@@ -137878,6 +142773,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-12-13T16:23:00-05:00",
       },
       pt: {
+        translation: "Gift",
+        is_approved: true,
+        approved_at: "2021-12-13T17:31:59-05:00",
+      },
+      ptbr: {
         translation: "Presente",
         is_approved: true,
         approved_at: "2024-04-30T14:47:08-04:00",
@@ -137998,6 +142898,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Apresentação",
         is_approved: true,
+        approved_at: "2019-04-06T19:04:58-04:00",
+      },
+      ptbr: {
+        translation: "Apresentação",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:34-04:00",
       },
       ro: {
@@ -138114,6 +143019,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:33-04:00",
       },
       pt: {
+        translation: "Pretzel",
+        is_approved: true,
+        approved_at: "2019-04-06T19:04:59-04:00",
+      },
+      ptbr: {
         translation: "Pretzel",
         is_approved: true,
         approved_at: "2019-07-01T15:40:27-04:00",
@@ -138248,6 +143158,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Príncipe",
         is_approved: true,
+        approved_at: "2019-04-06T19:05:00-04:00",
+      },
+      ptbr: {
+        translation: "Príncipe",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:38-04:00",
       },
       ro: {
@@ -138380,6 +143295,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Princesa",
         is_approved: true,
+        approved_at: "2020-04-28T05:30:45-04:00",
+      },
+      ptbr: {
+        translation: "Princesa",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:39-04:00",
       },
       ro: {
@@ -138510,6 +143430,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:35-04:00",
       },
       pt: {
+        translation: "Impressora",
+        is_approved: true,
+        approved_at: "2019-04-06T19:05:04-04:00",
+      },
+      ptbr: {
         translation: "Impressora",
         is_approved: true,
         approved_at: "2019-07-01T10:15:40-04:00",
@@ -138852,6 +143777,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prisão",
         is_approved: true,
+        approved_at: "2021-01-27T12:50:10-05:00",
+      },
+      ptbr: {
+        translation: "Prisão",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:44-04:00",
       },
       ro: {
@@ -138982,6 +143912,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:38-04:00",
       },
       pt: {
+        translation: "Cela",
+        is_approved: true,
+        approved_at: "2019-04-06T19:05:34-04:00",
+      },
+      ptbr: {
         translation: "Cela de prisão",
         is_approved: true,
         approved_at: "2019-07-01T10:15:45-04:00",
@@ -139102,6 +144037,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Prisioneiro",
         is_approved: true,
+        approved_at: "2020-06-16T17:24:19-04:00",
+      },
+      ptbr: {
+        translation: "Prisioneiro",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:47-04:00",
       },
       ro: {
@@ -139218,6 +144158,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-08-11T12:33:52-04:00",
       },
       pt: {
+        translation: "Projéteis",
+        is_approved: true,
+        approved_at: "2019-09-11T11:21:42-04:00",
+      },
+      ptbr: {
         translation: "Projétil",
         is_approved: true,
         approved_at: "2023-08-24T15:14:10-04:00",
@@ -139338,6 +144283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Hélice",
         is_approved: true,
+        approved_at: "2019-04-06T19:05:44-04:00",
+      },
+      ptbr: {
+        translation: "Hélice",
+        is_approved: true,
         approved_at: "2019-07-01T10:15:49-04:00",
       },
       ro: {
@@ -139454,6 +144404,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:57:23-04:00",
       },
       pt: {
+        translation: "Pudim",
+        is_approved: true,
+        approved_at: "2019-04-06T19:06:00-04:00",
+      },
+      ptbr: {
         translation: "Pudim",
         is_approved: true,
         approved_at: "2019-07-29T10:12:37-04:00",
@@ -139586,6 +144541,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:57:25-04:00",
       },
       pt: {
+        translation: "Poça de água",
+        is_approved: true,
+        approved_at: "2019-04-06T19:06:40-04:00",
+      },
+      ptbr: {
         translation: "Poça d'água",
         is_approved: true,
         approved_at: "2023-08-24T15:15:45-04:00",
@@ -139701,6 +144661,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Papagaio-do-mar",
         is_approved: true,
+        approved_at: "2024-11-06T09:39:23-05:00",
+      },
+      ptbr: {
+        translation: "Papagaio-do-mar",
+        is_approved: true,
         approved_at: "2024-10-06T10:38:36-04:00",
       },
       ro: {
@@ -139812,6 +144777,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:28-04:00",
       },
       pt: {
+        translation: "Abóbora",
+        is_approved: true,
+        approved_at: "2019-07-21T14:08:55-04:00",
+      },
+      ptbr: {
         translation: "Abóbora",
         is_approved: true,
         approved_at: "2019-07-01T10:15:54-04:00",
@@ -139972,6 +144942,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fantoche",
         is_approved: true,
+        approved_at: "2019-04-06T19:06:49-04:00",
+      },
+      ptbr: {
+        translation: "Fantoche",
+        is_approved: true,
         approved_at: "2019-07-29T10:13:17-04:00",
       },
       ro: {
@@ -140102,6 +145077,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-05-14T09:43:42-04:00",
       },
       pt: {
+        translation: "Cachorrinho",
+        is_approved: true,
+        approved_at: "2019-09-08T17:41:54-04:00",
+      },
+      ptbr: {
         translation: "Filhote de cachorro",
         is_approved: true,
         approved_at: "2019-07-29T10:13:52-04:00",
@@ -140452,6 +145432,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carteira",
         is_approved: true,
+        approved_at: "2023-08-17T08:00:35-04:00",
+      },
+      ptbr: {
+        translation: "Carteira",
+        is_approved: true,
         approved_at: "2019-07-29T10:14:07-04:00",
       },
       ro: {
@@ -140687,6 +145672,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-08-22T17:10:21-04:00",
       },
       pt: {
+        translation: "Puzzle",
+        is_approved: true,
+        approved_at: "2019-03-25T18:16:58-04:00",
+      },
+      ptbr: {
         translation: "Quebra-cabeça",
         is_approved: true,
         approved_at: "2018-09-12T14:04:06-04:00",
@@ -140951,6 +145941,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cubo mágico",
         is_approved: true,
+        approved_at: "2019-04-06T19:07:37-04:00",
+      },
+      ptbr: {
+        translation: "Cubo mágico",
+        is_approved: true,
         approved_at: "2019-07-01T15:40:41-04:00",
       },
       ro: {
@@ -141081,6 +146076,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:30:25-05:00",
       },
       pt: {
+        translation: "Pijama",
+        is_approved: true,
+        approved_at: "2019-04-06T19:07:39-04:00",
+      },
+      ptbr: {
         translation: "Pijamas",
         is_approved: true,
         approved_at: "2019-07-01T15:40:45-04:00",
@@ -141201,6 +146201,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pirâmide",
         is_approved: true,
+        approved_at: "2019-07-21T14:08:58-04:00",
+      },
+      ptbr: {
+        translation: "Pirâmide",
+        is_approved: true,
         approved_at: "2018-09-12T14:04:16-04:00",
       },
       ro: {
@@ -141317,6 +146322,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:16-04:00",
       },
       pt: {
+        translation: "Moto-quatro",
+        is_approved: true,
+        approved_at: "2019-04-06T19:07:55-04:00",
+      },
+      ptbr: {
         translation: "Quadriciclo",
         is_approved: true,
         approved_at: "2019-07-29T10:14:52-04:00",
@@ -141435,6 +146445,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:30-04:00",
       },
       pt: {
+        translation: "Rainha",
+        is_approved: true,
+        approved_at: "2019-03-25T18:17:05-04:00",
+      },
+      ptbr: {
         translation: "Rainha",
         is_approved: true,
         approved_at: "2018-09-12T14:20:29-04:00",
@@ -141569,6 +146584,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Areia movediça",
         is_approved: true,
+        approved_at: "2019-04-06T19:08:04-04:00",
+      },
+      ptbr: {
+        translation: "Areia movediça",
+        is_approved: true,
         approved_at: "2019-07-01T10:16:02-04:00",
       },
       ro: {
@@ -141685,6 +146705,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:50:47-04:00",
       },
       pt: {
+        translation: "Aljava",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:41-04:00",
+      },
+      ptbr: {
         translation: "Aljava",
         is_approved: true,
         approved_at: "2019-07-01T10:16:06-04:00",
@@ -141923,6 +146948,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Coelho",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:00-04:00",
+      },
+      ptbr: {
+        translation: "Coelho",
+        is_approved: true,
         approved_at: "2018-09-12T14:20:32-04:00",
       },
       ro: {
@@ -142053,6 +147083,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:22-04:00",
       },
       pt: {
+        translation: "Guaxinim",
+        is_approved: true,
+        approved_at: "2019-04-06T19:12:54-04:00",
+      },
+      ptbr: {
         translation: "Guaxinim",
         is_approved: true,
         approved_at: "2019-07-29T10:15:25-04:00",
@@ -142226,6 +147261,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Corrida",
         is_approved: true,
+        approved_at: "2019-04-06T19:12:56-04:00",
+      },
+      ptbr: {
+        translation: "Corrida",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:15-04:00",
       },
       ro: {
@@ -142371,6 +147411,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pista de corridas",
         is_approved: true,
+        approved_at: "2019-04-06T19:13:03-04:00",
+      },
+      ptbr: {
+        translation: "Pista de corridas",
+        is_approved: true,
         approved_at: "2019-07-02T09:23:14-04:00",
       },
       ro: {
@@ -142487,6 +147532,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:33-04:00",
       },
       pt: {
+        translation: "Carro de corridas",
+        is_approved: true,
+        approved_at: "2019-03-25T18:26:32-04:00",
+      },
+      ptbr: {
         translation: "Carro de corrida",
         is_approved: true,
         approved_at: "2019-08-08T17:26:05-04:00",
@@ -142605,6 +147655,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:26-04:00",
       },
       pt: {
+        translation: "Rádio",
+        is_approved: true,
+        approved_at: "2019-04-06T19:13:15-04:00",
+      },
+      ptbr: {
         translation: "Rádio",
         is_approved: true,
         approved_at: "2019-07-01T10:16:11-04:00",
@@ -142764,6 +147819,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Jangada",
         is_approved: true,
+        approved_at: "2019-04-06T19:13:32-04:00",
+      },
+      ptbr: {
+        translation: "Jangada",
+        is_approved: true,
         approved_at: "2019-07-29T10:16:57-04:00",
       },
       ro: {
@@ -142894,6 +147954,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:28-04:00",
       },
       pt: {
+        translation: "Via-férrea",
+        is_approved: true,
+        approved_at: "2019-04-06T19:14:22-04:00",
+      },
+      ptbr: {
         translation: "Ferrovia",
         is_approved: true,
         approved_at: "2019-07-01T10:16:16-04:00",
@@ -143041,6 +148106,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chuva",
         is_approved: true,
+        approved_at: "2019-03-25T18:17:30-04:00",
+      },
+      ptbr: {
+        translation: "Chuva",
+        is_approved: true,
         approved_at: "2018-09-12T14:21:41-04:00",
       },
       ro: {
@@ -143157,6 +148227,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-20T17:29:58-04:00",
       },
       pt: {
+        translation: "Impermeável",
+        is_approved: true,
+        approved_at: "2019-04-06T19:15:05-04:00",
+      },
+      ptbr: {
         translation: "Capa de chuva",
         is_approved: true,
         approved_at: "2019-07-29T10:17:55-04:00",
@@ -143275,6 +148350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:18:16-04:00",
       },
       pt: {
+        translation: "Arco-íris",
+        is_approved: true,
+        approved_at: "2019-09-01T13:04:03-04:00",
+      },
+      ptbr: {
         translation: "Arco-íris",
         is_approved: true,
         approved_at: "2019-07-01T10:16:19-04:00",
@@ -143420,6 +148500,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:37-04:00",
       },
       pt: {
+        translation: "Gota de chuva",
+        is_approved: true,
+        approved_at: "2020-02-07T17:55:01-05:00",
+      },
+      ptbr: {
         translation: "Gotas de chuva",
         is_approved: true,
         approved_at: "2019-07-29T10:18:09-04:00",
@@ -143567,6 +148652,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ancinho",
         is_approved: true,
+        approved_at: "2019-04-06T19:15:35-04:00",
+      },
+      ptbr: {
+        translation: "Ancinho",
+        is_approved: true,
         approved_at: "2019-07-29T10:19:07-04:00",
       },
       ro: {
@@ -143683,6 +148773,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T15:13:12-05:00",
       },
       pt: {
+        translation: "Lámen",
+        is_approved: true,
+        approved_at: "2022-01-30T07:44:14-05:00",
+      },
+      ptbr: {
         translation: "Lámen",
         is_approved: true,
         approved_at: "2022-01-29T06:46:15-05:00",
@@ -143873,6 +148968,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Rato",
         is_approved: true,
+        approved_at: "2019-04-06T19:15:37-04:00",
+      },
+      ptbr: {
+        translation: "Rato",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:44-04:00",
       },
       ro: {
@@ -143989,6 +149089,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:44-04:00",
       },
       pt: {
+        translation: "Ravina",
+        is_approved: true,
+        approved_at: "2019-04-06T19:15:41-04:00",
+      },
+      ptbr: {
         translation: "Ravina",
         is_approved: true,
         approved_at: "2019-07-01T10:16:23-04:00",
@@ -144121,6 +149226,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:45-04:00",
       },
       pt: {
+        translation: "Ler",
+        is_approved: true,
+        approved_at: "2019-04-06T19:15:42-04:00",
+      },
+      ptbr: {
         translation: "Leitura",
         is_approved: true,
         approved_at: "2019-07-01T10:16:24-04:00",
@@ -144372,6 +149482,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ceifador",
         is_approved: true,
+        approved_at: "2024-09-06T10:49:44-04:00",
+      },
+      ptbr: {
+        translation: "Ceifador",
+        is_approved: true,
         approved_at: "2019-10-15T17:42:19-04:00",
       },
       ro: {
@@ -144488,6 +149603,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:47-04:00",
       },
       pt: {
+        translation: "Reciclar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:16:09-04:00",
+      },
+      ptbr: {
         translation: "Reciclar",
         is_approved: true,
         approved_at: "2019-07-01T10:16:28-04:00",
@@ -144608,6 +149728,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Panda vermelho",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:29-04:00",
+      },
+      ptbr: {
+        translation: "Panda vermelho",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:49-04:00",
       },
       ro: {
@@ -144719,6 +149844,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:37-04:00",
       },
       pt: {
+        translation: "Redstone",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:01-04:00",
+      },
+      ptbr: {
         translation: "Redstone",
         is_approved: true,
         approved_at: "2019-07-01T10:16:30-04:00",
@@ -144851,6 +149981,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:31:45-05:00",
       },
       pt: {
+        translation: "Reef",
+        is_approved: true,
+        approved_at: "2020-05-04T20:00:02-04:00",
+      },
+      ptbr: {
         translation: "Sandália",
         is_approved: true,
         approved_at: "2023-08-14T16:40:24-04:00",
@@ -145235,6 +150370,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:58:53-04:00",
       },
       pt: {
+        translation: "Frigorífico",
+        is_approved: true,
+        approved_at: "2019-04-06T19:16:42-04:00",
+      },
+      ptbr: {
         translation: "Refrigerador",
         is_approved: true,
         approved_at: "2019-07-01T15:41:01-04:00",
@@ -145353,6 +150493,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:30-04:00",
       },
       pt: {
+        translation: "Rena",
+        is_approved: true,
+        approved_at: "2019-04-13T21:10:46-04:00",
+      },
+      ptbr: {
         translation: "Rena",
         is_approved: true,
         approved_at: "2018-11-17T20:36:57-05:00",
@@ -145485,6 +150630,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:34-04:00",
       },
       pt: {
+        translation: "Telecomando",
+        is_approved: true,
+        approved_at: "2019-04-06T19:17:06-04:00",
+      },
+      ptbr: {
         translation: "Remoto",
         is_approved: true,
         approved_at: "2019-07-01T15:40:57-04:00",
@@ -145605,6 +150755,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Restaurante",
         is_approved: true,
+        approved_at: "2019-04-06T19:17:28-04:00",
+      },
+      ptbr: {
+        translation: "Restaurante",
+        is_approved: true,
         approved_at: "2019-07-01T15:41:04-04:00",
       },
       ro: {
@@ -145721,6 +150876,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:19-04:00",
       },
       pt: {
+        translation: "Rinoceronte",
+        is_approved: true,
+        approved_at: "2019-04-06T19:17:29-04:00",
+      },
+      ptbr: {
         translation: "Rinoceronte",
         is_approved: true,
         approved_at: "2019-07-01T15:41:05-04:00",
@@ -145903,6 +151063,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Laço",
         is_approved: true,
+        approved_at: "2019-04-06T19:17:59-04:00",
+      },
+      ptbr: {
+        translation: "Laço",
+        is_approved: true,
         approved_at: "2019-07-29T10:19:50-04:00",
       },
       ro: {
@@ -146048,6 +151213,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arroz",
         is_approved: true,
+        approved_at: "2019-04-06T19:18:02-04:00",
+      },
+      ptbr: {
+        translation: "Arroz",
+        is_approved: true,
         approved_at: "2019-07-01T15:42:58-04:00",
       },
       ro: {
@@ -146164,6 +151334,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-18T19:50:51-04:00",
       },
       pt: {
+        translation: "Rico",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:42-04:00",
+      },
+      ptbr: {
         translation: "Rico",
         is_approved: true,
         approved_at: "2019-07-01T15:43:00-04:00",
@@ -146322,6 +151497,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:59:24-04:00",
       },
       pt: {
+        translation: "Passear",
+        is_approved: true,
+        approved_at: "2019-04-06T19:18:11-04:00",
+      },
+      ptbr: {
         translation: "Passeio",
         is_approved: true,
         approved_at: "2019-07-01T15:43:02-04:00",
@@ -146442,6 +151622,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Anel",
         is_approved: true,
+        approved_at: "2019-03-25T18:17:56-04:00",
+      },
+      ptbr: {
+        translation: "Anel",
+        is_approved: true,
         approved_at: "2018-09-12T14:21:52-04:00",
       },
       ro: {
@@ -146558,6 +151743,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:48:09-04:00",
       },
       pt: {
+        translation: "Rio",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:03-04:00",
+      },
+      ptbr: {
         translation: "Rio",
         is_approved: true,
         approved_at: "2018-09-12T14:21:55-04:00",
@@ -146791,6 +151981,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estrada",
         is_approved: true,
+        approved_at: "2019-04-06T19:18:34-04:00",
+      },
+      ptbr: {
+        translation: "Estrada",
+        is_approved: true,
         approved_at: "2019-07-01T15:43:24-04:00",
       },
       ro: {
@@ -146926,6 +152121,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:48:34-04:00",
       },
       pt: {
+        translation: "Robô / Robot",
+        is_approved: true,
+        approved_at: "2019-03-25T18:44:50-04:00",
+      },
+      ptbr: {
         translation: "Robô",
         is_approved: true,
         approved_at: "2018-09-12T14:22:28-04:00",
@@ -147090,6 +152290,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pedra",
         is_approved: true,
+        approved_at: "2019-04-06T19:18:45-04:00",
+      },
+      ptbr: {
+        translation: "Pedra",
+        is_approved: true,
         approved_at: "2019-07-01T15:43:27-04:00",
       },
       ro: {
@@ -147206,6 +152411,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:16-04:00",
       },
       pt: {
+        translation: "Banda de rock",
+        is_approved: true,
+        approved_at: "2019-04-06T19:19:25-04:00",
+      },
+      ptbr: {
         translation: "Banda de rock",
         is_approved: true,
         approved_at: "2022-05-07T09:01:35-04:00",
@@ -147416,6 +152626,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:17-04:00",
       },
       pt: {
+        translation: "Escalar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:19:31-04:00",
+      },
+      ptbr: {
         translation: "Escalada",
         is_approved: true,
         approved_at: "2019-07-29T10:20:00-04:00",
@@ -147662,6 +152877,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Foguete",
         is_approved: true,
+        approved_at: "2019-04-06T19:20:45-04:00",
+      },
+      ptbr: {
+        translation: "Foguete",
+        is_approved: true,
         approved_at: "2019-07-01T15:43:36-04:00",
       },
       ro: {
@@ -147904,6 +153124,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-10-31T13:25:34-04:00",
       },
       pt: {
+        translation: "Nave espacial",
+        is_approved: true,
+        approved_at: "2019-04-06T19:20:06-04:00",
+      },
+      ptbr: {
         translation: "Espaçonave",
         is_approved: true,
         approved_at: "2019-07-03T09:48:59-04:00",
@@ -148022,6 +153247,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:20-04:00",
       },
       pt: {
+        translation: "Cadeira de baloiço",
+        is_approved: true,
+        approved_at: "2019-04-06T19:20:10-04:00",
+      },
+      ptbr: {
         translation: "Cadeira de balanço",
         is_approved: true,
         approved_at: "2019-07-03T09:46:12-04:00",
@@ -148154,6 +153384,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:20-04:00",
       },
       pt: {
+        translation: "Patins em linha",
+        is_approved: true,
+        approved_at: "2019-04-06T19:20:12-04:00",
+      },
+      ptbr: {
         translation: "Patins",
         is_approved: true,
         approved_at: "2019-07-29T10:20:16-04:00",
@@ -148272,6 +153507,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:22-04:00",
       },
       pt: {
+        translation: "Montanha-russa",
+        is_approved: true,
+        approved_at: "2019-04-06T19:20:23-04:00",
+      },
+      ptbr: {
         translation: "Montanha-russa",
         is_approved: true,
         approved_at: "2019-08-19T13:15:00-04:00",
@@ -148423,6 +153663,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Telhado",
         is_approved: true,
+        approved_at: "2019-04-06T19:20:24-04:00",
+      },
+      ptbr: {
+        translation: "Telhado",
+        is_approved: true,
         approved_at: "2019-07-01T15:44:41-04:00",
       },
       ro: {
@@ -148571,6 +153816,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:24-04:00",
       },
       pt: {
+        translation: "Quarto",
+        is_approved: true,
+        approved_at: "2019-04-06T19:20:26-04:00",
+      },
+      ptbr: {
         translation: "Sala",
         is_approved: true,
         approved_at: "2019-07-01T15:44:42-04:00",
@@ -148691,6 +153941,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Rosa",
         is_approved: true,
+        approved_at: "2019-03-25T18:19:11-04:00",
+      },
+      ptbr: {
+        translation: "Rosa",
+        is_approved: true,
         approved_at: "2018-09-12T14:22:54-04:00",
       },
       ro: {
@@ -148807,6 +154062,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:30-04:00",
       },
       pt: {
+        translation: "Rotunda",
+        is_approved: true,
+        approved_at: "2019-04-06T19:21:10-04:00",
+      },
+      ptbr: {
         translation: "Cruzamento",
         is_approved: true,
         approved_at: "2019-07-29T10:23:55-04:00",
@@ -148983,6 +154243,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:33-04:00",
       },
       pt: {
+        translation: "Barco a remos",
+        is_approved: true,
+        approved_at: "2019-04-06T19:21:31-04:00",
+      },
+      ptbr: {
         translation: "Barco a remo",
         is_approved: true,
         approved_at: "2019-07-29T10:26:14-04:00",
@@ -149119,6 +154384,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-07-15T12:35:36-04:00",
       },
       pt: {
+        translation: "Elástico de borracha",
+        is_approved: true,
+        approved_at: "2020-02-07T17:55:41-05:00",
+      },
+      ptbr: {
         translation: "Elástico",
         is_approved: true,
         approved_at: "2023-08-24T15:19:45-04:00",
@@ -149237,6 +154507,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:37-04:00",
       },
       pt: {
+        translation: "Patinho de borracha",
+        is_approved: true,
+        approved_at: "2019-04-06T19:22:02-04:00",
+      },
+      ptbr: {
         translation: "Patinho de borracha",
         is_approved: true,
         approved_at: "2019-07-03T09:46:27-04:00",
@@ -149543,6 +154818,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lixo",
         is_approved: true,
+        approved_at: "2019-04-06T19:22:03-04:00",
+      },
+      ptbr: {
+        translation: "Lixo",
+        is_approved: true,
         approved_at: "2019-07-29T10:29:48-04:00",
       },
       ro: {
@@ -149805,6 +155085,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cubo mágico",
         is_approved: true,
+        approved_at: "2019-04-06T19:22:05-04:00",
+      },
+      ptbr: {
+        translation: "Cubo mágico",
+        is_approved: true,
         approved_at: "2019-07-03T09:46:52-04:00",
       },
       ro: {
@@ -149921,6 +155206,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:31:35-04:00",
       },
       pt: {
+        translation: "Rodolfo",
+        is_approved: true,
+        approved_at: "2021-06-10T10:15:23-04:00",
+      },
+      ptbr: {
         translation: "Rudolph",
         is_approved: true,
         approved_at: "2019-09-03T13:54:53-04:00",
@@ -150271,6 +155561,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tapete",
         is_approved: true,
+        approved_at: "2019-04-06T19:22:07-04:00",
+      },
+      ptbr: {
+        translation: "Tapete",
+        is_approved: true,
         approved_at: "2019-07-29T10:29:58-04:00",
       },
       ro: {
@@ -150387,6 +155682,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-31T05:03:01-05:00",
       },
       pt: {
+        translation: "Ruins",
+        is_approved: true,
+        approved_at: "2022-08-07T13:11:29-04:00",
+      },
+      ptbr: {
         translation: "Ruínas",
         is_approved: true,
         approved_at: "2025-01-30T14:42:21-05:00",
@@ -150505,6 +155805,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:44-04:00",
       },
       pt: {
+        translation: "Régua",
+        is_approved: true,
+        approved_at: "2019-04-06T19:22:09-04:00",
+      },
+      ptbr: {
         translation: "Régua",
         is_approved: true,
         approved_at: "2019-07-29T10:30:04-04:00",
@@ -150654,6 +155959,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-16T10:06:12-04:00",
       },
       pt: {
+        translation: "Correr",
+        is_approved: true,
+        approved_at: "2020-12-18T17:29:12-05:00",
+      },
+      ptbr: {
         translation: "Corredor",
         is_approved: true,
         approved_at: "2019-07-03T09:47:01-04:00",
@@ -150868,6 +156178,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:46-04:00",
       },
       pt: {
+        translation: "Correr",
+        is_approved: true,
+        approved_at: "2019-04-06T19:22:58-04:00",
+      },
+      ptbr: {
         translation: "Correndo",
         is_approved: true,
         approved_at: "2019-07-03T09:47:04-04:00",
@@ -151027,6 +156342,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sela",
         is_approved: true,
+        approved_at: "2019-11-13T19:15:34-05:00",
+      },
+      ptbr: {
+        translation: "Sela",
+        is_approved: true,
         approved_at: "2019-08-31T23:31:43-04:00",
       },
       ro: {
@@ -151143,6 +156463,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T16:50:59-04:00",
       },
       pt: {
+        translation: "Safari",
+        is_approved: true,
+        approved_at: "2023-08-28T07:21:57-04:00",
+      },
+      ptbr: {
         translation: "Safári",
         is_approved: true,
         approved_at: "2023-08-24T12:24:54-04:00",
@@ -151292,6 +156617,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:32:06-05:00",
       },
       pt: {
+        translation: "Segura",
+        is_approved: true,
+        approved_at: "2021-03-09T06:23:58-05:00",
+      },
+      ptbr: {
         translation: "Seguro",
         is_approved: true,
         approved_at: "2021-02-04T17:39:27-05:00",
@@ -151410,6 +156740,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:46-04:00",
       },
       pt: {
+        translation: "Barco à vela",
+        is_approved: true,
+        approved_at: "2021-05-20T18:32:51-04:00",
+      },
+      ptbr: {
         translation: "Veleiro",
         is_approved: true,
         approved_at: "2019-09-23T21:40:13-04:00",
@@ -151596,6 +156931,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Salada",
         is_approved: true,
+        approved_at: "2019-04-06T19:25:23-04:00",
+      },
+      ptbr: {
+        translation: "Salada",
+        is_approved: true,
         approved_at: "2019-07-01T10:17:05-04:00",
       },
       ro: {
@@ -151712,6 +157052,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:59-04:00",
       },
       pt: {
+        translation: "Salamandra",
+        is_approved: true,
+        approved_at: "2019-04-06T19:25:25-04:00",
+      },
+      ptbr: {
         translation: "Salamandra",
         is_approved: true,
         approved_at: "2019-07-01T10:17:08-04:00",
@@ -151844,6 +157189,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-11T16:31:10-04:00",
       },
       pt: {
+        translation: "Salmão",
+        is_approved: true,
+        approved_at: "2019-04-05T20:02:03-04:00",
+      },
+      ptbr: {
         translation: "Salmão",
         is_approved: true,
         approved_at: "2019-08-02T13:41:42-04:00",
@@ -152078,6 +157428,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Salão",
         is_approved: true,
+        approved_at: "2020-12-18T17:33:09-05:00",
+      },
+      ptbr: {
+        translation: "Salão",
+        is_approved: true,
         approved_at: "2019-07-01T10:17:10-04:00",
       },
       ro: {
@@ -152283,6 +157638,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sal",
         is_approved: true,
+        approved_at: "2021-10-18T08:44:14-04:00",
+      },
+      ptbr: {
+        translation: "Sal",
+        is_approved: true,
         approved_at: "2019-07-01T10:17:11-04:00",
       },
       ro: {
@@ -152399,6 +157759,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:05:11-04:00",
       },
       pt: {
+        translation: "Sal e pimenta",
+        is_approved: true,
+        approved_at: "2019-04-06T19:26:12-04:00",
+      },
+      ptbr: {
         translation: "Sal e pimenta",
         is_approved: true,
         approved_at: "2022-05-06T15:15:51-04:00",
@@ -152519,6 +157884,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Samurai",
         is_approved: true,
+        approved_at: "2019-03-25T18:19:43-04:00",
+      },
+      ptbr: {
+        translation: "Samurai",
+        is_approved: true,
         approved_at: "2018-09-12T14:23:02-04:00",
       },
       ro: {
@@ -152635,6 +158005,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:32:29-04:00",
       },
       pt: {
+        translation: "Sandbox",
+        is_approved: true,
+        approved_at: "2020-05-04T20:00:22-04:00",
+      },
+      ptbr: {
         translation: "Caixa de areia",
         is_approved: true,
         approved_at: "2023-08-14T16:40:36-04:00",
@@ -152753,6 +158128,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:25:57-04:00",
       },
       pt: {
+        translation: "Sandcastle",
+        is_approved: true,
+        approved_at: "2020-02-23T11:29:02-05:00",
+      },
+      ptbr: {
         translation: "Castelo de areia",
         is_approved: true,
         approved_at: "2023-08-14T16:33:17-04:00",
@@ -152871,6 +158251,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:05:22-04:00",
       },
       pt: {
+        translation: "Sanduíche",
+        is_approved: true,
+        approved_at: "2019-04-06T19:26:51-04:00",
+      },
+      ptbr: {
         translation: "Sanduíche",
         is_approved: true,
         approved_at: "2019-07-01T10:17:19-04:00",
@@ -153185,6 +158570,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-07-05T16:11:56-04:00",
       },
       pt: {
+        translation: "Pai Natal",
+        is_approved: true,
+        approved_at: "2019-03-25T18:20:18-04:00",
+      },
+      ptbr: {
         translation: "Papai Noel",
         is_approved: true,
         approved_at: "2018-09-12T14:23:24-04:00",
@@ -153499,6 +158889,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:31:33-04:00",
       },
       pt: {
+        translation: "Pai Natal",
+        is_approved: true,
+        approved_at: "2020-12-27T18:17:50-05:00",
+      },
+      ptbr: {
         translation: "Papai Noel",
         is_approved: true,
         approved_at: "2019-08-29T17:20:28-04:00",
@@ -153619,6 +159014,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sardinhas",
         is_approved: true,
+        approved_at: "2019-04-06T19:26:55-04:00",
+      },
+      ptbr: {
+        translation: "Sardinhas",
+        is_approved: true,
         approved_at: "2019-07-29T10:31:24-04:00",
       },
       ro: {
@@ -153735,6 +159135,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:48:35-04:00",
       },
       pt: {
+        translation: "Satélite",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:06-04:00",
+      },
+      ptbr: {
         translation: "Satélite",
         is_approved: true,
         approved_at: "2018-09-12T14:23:27-04:00",
@@ -153895,6 +159300,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Molho",
         is_approved: true,
+        approved_at: "2019-04-06T19:27:23-04:00",
+      },
+      ptbr: {
+        translation: "Molho",
+        is_approved: true,
         approved_at: "2019-07-29T10:31:31-04:00",
       },
       ro: {
@@ -154013,6 +159423,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Salsicha",
         is_approved: true,
+        approved_at: "2019-04-06T19:27:25-04:00",
+      },
+      ptbr: {
+        translation: "Salsicha",
+        is_approved: true,
         approved_at: "2023-08-24T15:22:43-04:00",
       },
       ro: {
@@ -154129,6 +159544,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:56:26-04:00",
       },
       pt: {
+        translation: "Savana",
+        is_approved: true,
+        approved_at: "2020-10-13T17:46:52-04:00",
+      },
+      ptbr: {
         translation: "Savana",
         is_approved: true,
         approved_at: "2019-08-07T17:23:25-04:00",
@@ -154274,6 +159694,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:48-04:00",
       },
       pt: {
+        translation: "Serrote",
+        is_approved: true,
+        approved_at: "2019-04-06T19:27:27-04:00",
+      },
+      ptbr: {
         translation: "Serra",
         is_approved: true,
         approved_at: "2023-08-24T15:26:32-04:00",
@@ -154394,6 +159819,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Saxofone",
         is_approved: true,
+        approved_at: "2019-04-06T19:27:29-04:00",
+      },
+      ptbr: {
+        translation: "Saxofone",
+        is_approved: true,
         approved_at: "2019-07-01T10:17:30-04:00",
       },
       ro: {
@@ -154510,6 +159940,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:49-04:00",
       },
       pt: {
+        translation: "Andaime",
+        is_approved: true,
+        approved_at: "2019-04-06T19:27:43-04:00",
+      },
+      ptbr: {
         translation: "Andaime",
         is_approved: true,
         approved_at: "2019-07-01T10:17:28-04:00",
@@ -154657,6 +160092,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Escala",
         is_approved: true,
+        approved_at: "2019-04-06T19:27:44-04:00",
+      },
+      ptbr: {
+        translation: "Escala",
+        is_approved: true,
         approved_at: "2019-07-01T10:17:37-04:00",
       },
       ro: {
@@ -154773,6 +160213,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:45:35-05:00",
       },
       pt: {
+        translation: "Scarecrow",
+        is_approved: true,
+        approved_at: "2020-02-22T09:06:41-05:00",
+      },
+      ptbr: {
         translation: "Espantalho",
         is_approved: true,
         approved_at: "2023-08-14T16:35:06-04:00",
@@ -154891,6 +160336,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:52-04:00",
       },
       pt: {
+        translation: "Assustado",
+        is_approved: true,
+        approved_at: "2019-04-06T19:27:48-04:00",
+      },
+      ptbr: {
         translation: "Assustado",
         is_approved: true,
         approved_at: "2019-07-01T10:17:34-04:00",
@@ -155037,6 +160487,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cachecol",
         is_approved: true,
+        approved_at: "2019-04-06T19:27:49-04:00",
+      },
+      ptbr: {
+        translation: "Cachecol",
+        is_approved: true,
         approved_at: "2019-07-29T10:34:15-04:00",
       },
       ro: {
@@ -155153,6 +160608,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:56-04:00",
       },
       pt: {
+        translation: "Autocarro escolar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:28:06-04:00",
+      },
+      ptbr: {
         translation: "Ônibus escolar",
         is_approved: true,
         approved_at: "2022-05-07T09:01:23-04:00",
@@ -155273,6 +160733,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ciência",
         is_approved: true,
+        approved_at: "2019-03-25T18:20:28-04:00",
+      },
+      ptbr: {
+        translation: "Ciência",
+        is_approved: true,
         approved_at: "2018-09-12T14:24:13-04:00",
       },
       ro: {
@@ -155389,6 +160854,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:02:59-04:00",
       },
       pt: {
+        translation: "Cientista",
+        is_approved: true,
+        approved_at: "2019-04-06T19:28:09-04:00",
+      },
+      ptbr: {
         translation: "Cientista",
         is_approved: true,
         approved_at: "2019-07-01T10:16:40-04:00",
@@ -155509,6 +160979,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Scooby Doo",
         is_approved: true,
+        approved_at: "2019-04-06T19:28:11-04:00",
+      },
+      ptbr: {
+        translation: "Scooby Doo",
+        is_approved: true,
         approved_at: "2019-07-01T10:16:42-04:00",
       },
       ro: {
@@ -155627,6 +161102,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lambreta",
         is_approved: true,
+        approved_at: "2019-04-06T19:28:20-04:00",
+      },
+      ptbr: {
+        translation: "Lambreta",
+        is_approved: true,
         approved_at: "2019-07-03T09:47:18-04:00",
       },
       ro: {
@@ -155743,6 +161223,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:52:32-04:00",
       },
       pt: {
+        translation: "Escorpião",
+        is_approved: true,
+        approved_at: "2019-03-25T18:20:30-04:00",
+      },
+      ptbr: {
         translation: "Escorpião",
         is_approved: true,
         approved_at: "2018-09-12T14:24:17-04:00",
@@ -155927,6 +161412,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:04-04:00",
       },
       pt: {
+        translation: "Ecrã",
+        is_approved: true,
+        approved_at: "2019-04-06T19:28:23-04:00",
+      },
+      ptbr: {
         translation: "Tela",
         is_approved: true,
         approved_at: "2019-07-01T15:44:57-04:00",
@@ -156045,6 +161535,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:06-04:00",
       },
       pt: {
+        translation: "Chave de fendas",
+        is_approved: true,
+        approved_at: "2019-04-06T19:28:26-04:00",
+      },
+      ptbr: {
         translation: "Chave de fenda",
         is_approved: true,
         approved_at: "2019-07-01T15:45:14-04:00",
@@ -156163,6 +161658,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:07-04:00",
       },
       pt: {
+        translation: "Equipamento de mergulho",
+        is_approved: true,
+        approved_at: "2020-02-07T17:55:47-05:00",
+      },
+      ptbr: {
         translation: "Mergulho",
         is_approved: true,
         approved_at: "2024-08-11T07:15:16-04:00",
@@ -156349,6 +161849,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Foice",
         is_approved: true,
+        approved_at: "2020-07-12T07:10:21-04:00",
+      },
+      ptbr: {
+        translation: "Foice",
+        is_approved: true,
         approved_at: "2019-07-03T09:47:23-04:00",
       },
       ro: {
@@ -156498,6 +162003,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tartaruga marinha",
         is_approved: true,
+        approved_at: "2019-04-06T19:28:56-04:00",
+      },
+      ptbr: {
+        translation: "Tartaruga marinha",
+        is_approved: true,
         approved_at: "2022-05-07T09:01:14-04:00",
       },
       ro: {
@@ -156616,6 +162126,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Frutos do mar",
         is_approved: true,
+        approved_at: "2019-04-06T19:29:06-04:00",
+      },
+      ptbr: {
+        translation: "Frutos do mar",
+        is_approved: true,
         approved_at: "2019-07-01T15:45:26-04:00",
       },
       ro: {
@@ -156732,6 +162247,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:52:35-04:00",
       },
       pt: {
+        translation: "Gaivota",
+        is_approved: true,
+        approved_at: "2019-03-25T18:20:33-04:00",
+      },
+      ptbr: {
         translation: "Gaivota",
         is_approved: true,
         approved_at: "2018-09-12T14:24:25-04:00",
@@ -156864,6 +162384,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-08-22T17:16:16-04:00",
       },
       pt: {
+        translation: "Cavalo-marinho",
+        is_approved: true,
+        approved_at: "2019-04-06T19:29:25-04:00",
+      },
+      ptbr: {
         translation: "Cavalo marinho",
         is_approved: true,
         approved_at: "2019-07-01T15:45:41-04:00",
@@ -157044,6 +162569,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Foca",
         is_approved: true,
+        approved_at: "2019-04-06T19:29:28-04:00",
+      },
+      ptbr: {
+        translation: "Foca",
+        is_approved: true,
         approved_at: "2019-07-01T15:45:56-04:00",
       },
       ro: {
@@ -157187,6 +162717,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:15-04:00",
       },
       pt: {
+        translation: "Assento",
+        is_approved: true,
+        approved_at: "2019-04-06T19:29:44-04:00",
+      },
+      ptbr: {
         translation: "Assento",
         is_approved: true,
         approved_at: "2019-07-29T10:36:20-04:00",
@@ -157399,6 +162934,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Algas",
         is_approved: true,
+        approved_at: "2019-04-06T19:29:50-04:00",
+      },
+      ptbr: {
+        translation: "Algas",
+        is_approved: true,
         approved_at: "2019-07-01T15:45:53-04:00",
       },
       ro: {
@@ -157515,6 +163055,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-23T07:23:50-05:00",
       },
       pt: {
+        translation: "Câmara de segurança",
+        is_approved: true,
+        approved_at: "2019-04-06T19:29:52-04:00",
+      },
+      ptbr: {
         translation: "Câmera de segurança",
         is_approved: true,
         approved_at: "2022-05-07T09:01:05-04:00",
@@ -157633,6 +163178,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:21-04:00",
       },
       pt: {
+        translation: "Semente",
+        is_approved: true,
+        approved_at: "2019-04-06T19:29:54-04:00",
+      },
+      ptbr: {
         translation: "Semente",
         is_approved: true,
         approved_at: "2019-07-01T15:45:50-04:00",
@@ -157845,6 +163395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gangorra",
         is_approved: true,
+        approved_at: "2019-04-16T19:07:24-04:00",
+      },
+      ptbr: {
+        translation: "Gangorra",
+        is_approved: true,
         approved_at: "2019-07-29T10:37:07-04:00",
       },
       ro: {
@@ -157961,6 +163516,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:03:30-04:00",
       },
       pt: {
+        translation: "Auto-retrato",
+        is_approved: true,
+        approved_at: "2019-08-23T11:19:52-04:00",
+      },
+      ptbr: {
         translation: "Autorretrato",
         is_approved: true,
         approved_at: "2019-07-03T09:47:36-04:00",
@@ -158093,6 +163653,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:40-04:00",
       },
       pt: {
+        translation: "Esgotos",
+        is_approved: true,
+        approved_at: "2019-04-06T19:31:37-04:00",
+      },
+      ptbr: {
         translation: "Esgoto",
         is_approved: true,
         approved_at: "2019-07-29T10:37:09-04:00",
@@ -158211,6 +163776,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:48-04:00",
       },
       pt: {
+        translation: "Máquina de costura",
+        is_approved: true,
+        approved_at: "2019-04-06T19:31:48-04:00",
+      },
+      ptbr: {
         translation: "Máquina de costura",
         is_approved: true,
         approved_at: "2019-07-29T10:37:27-04:00",
@@ -158514,6 +164084,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:48-04:00",
       },
       pt: {
+        translation: "Cabana",
+        is_approved: true,
+        approved_at: "2019-04-06T19:31:50-04:00",
+      },
+      ptbr: {
         translation: "Barraco",
         is_approved: true,
         approved_at: "2023-12-17T11:03:26-05:00",
@@ -158634,6 +164209,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sombra",
         is_approved: true,
+        approved_at: "2020-02-03T13:39:18-05:00",
+      },
+      ptbr: {
+        translation: "Sombra",
+        is_approved: true,
         approved_at: "2019-10-11T16:06:42-04:00",
       },
       ro: {
@@ -158750,6 +164330,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:49-04:00",
       },
       pt: {
+        translation: "Champô",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:11-04:00",
+      },
+      ptbr: {
         translation: "Shampoo",
         is_approved: true,
         approved_at: "2019-07-01T15:46:10-04:00",
@@ -158868,6 +164453,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:50-04:00",
       },
       pt: {
+        translation: "Formas",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:14-04:00",
+      },
+      ptbr: {
         translation: "Formas",
         is_approved: true,
         approved_at: "2019-07-01T15:46:13-04:00",
@@ -159023,6 +164613,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tubarão",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:08-04:00",
+      },
+      ptbr: {
+        translation: "Tubarão",
+        is_approved: true,
         approved_at: "2018-09-12T14:24:52-04:00",
       },
       ro: {
@@ -159139,6 +164734,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:51-04:00",
       },
       pt: {
+        translation: "Barbear",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:17-04:00",
+      },
+      ptbr: {
         translation: "Barbear",
         is_approved: true,
         approved_at: "2019-07-29T10:37:55-04:00",
@@ -159348,6 +164948,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:52-04:00",
       },
       pt: {
+        translation: "Arrecadação",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:21-04:00",
+      },
+      ptbr: {
         translation: "Galpão",
         is_approved: true,
         approved_at: "2019-07-29T10:38:09-04:00",
@@ -159506,6 +165111,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:52:39-04:00",
       },
       pt: {
+        translation: "Ovelha",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:09-04:00",
+      },
+      ptbr: {
         translation: "Ovelha",
         is_approved: true,
         approved_at: "2018-09-12T14:24:59-04:00",
@@ -159711,6 +165321,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:54-04:00",
       },
       pt: {
+        translation: "Lençol",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:31-04:00",
+      },
+      ptbr: {
         translation: "Folha",
         is_approved: true,
         approved_at: "2019-07-01T15:46:26-04:00",
@@ -159869,6 +165484,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:03:57-04:00",
       },
       pt: {
+        translation: "Estante",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:43-04:00",
+      },
+      ptbr: {
         translation: "Estante",
         is_approved: true,
         approved_at: "2019-07-03T09:47:55-04:00",
@@ -160042,6 +165662,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Concha",
         is_approved: true,
+        approved_at: "2019-04-06T19:32:45-04:00",
+      },
+      ptbr: {
+        translation: "Concha",
+        is_approved: true,
         approved_at: "2019-07-01T15:46:29-04:00",
       },
       ro: {
@@ -160185,6 +165810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:00-04:00",
       },
       pt: {
+        translation: "Refúgio",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:50-04:00",
+      },
+      ptbr: {
         translation: "Abrigo",
         is_approved: true,
         approved_at: "2019-07-02T09:23:42-04:00",
@@ -160317,6 +165947,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:48:26-04:00",
       },
       pt: {
+        translation: "Escudo",
+        is_approved: true,
+        approved_at: "2019-04-06T19:32:53-04:00",
+      },
+      ptbr: {
         translation: "Escudo",
         is_approved: true,
         approved_at: "2019-07-01T15:46:32-04:00",
@@ -160477,6 +166112,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Navio",
         is_approved: true,
+        approved_at: "2019-03-25T18:21:59-04:00",
+      },
+      ptbr: {
+        translation: "Navio",
+        is_approved: true,
         approved_at: "2018-09-12T14:25:04-04:00",
       },
       ro: {
@@ -160593,6 +166233,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:02-04:00",
       },
       pt: {
+        translation: "Naufrágio",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:06-04:00",
+      },
+      ptbr: {
         translation: "Naufrágio",
         is_approved: true,
         approved_at: "2019-07-01T15:46:37-04:00",
@@ -160740,6 +166385,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Camisa",
         is_approved: true,
+        approved_at: "2019-04-06T19:33:26-04:00",
+      },
+      ptbr: {
+        translation: "Camisa",
+        is_approved: true,
         approved_at: "2019-07-01T15:46:41-04:00",
       },
       ro: {
@@ -160856,6 +166506,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:04-04:00",
       },
       pt: {
+        translation: "Atacadores",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:28-04:00",
+      },
+      ptbr: {
         translation: "Cadarços",
         is_approved: true,
         approved_at: "2019-07-29T10:38:50-04:00",
@@ -161040,6 +166695,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:04:05-04:00",
       },
       pt: {
+        translation: "Sapatos",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:28-04:00",
+      },
+      ptbr: {
         translation: "Sapatos",
         is_approved: true,
         approved_at: "2019-07-01T15:46:44-04:00",
@@ -161373,6 +167033,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Loja",
         is_approved: true,
+        approved_at: "2020-06-25T10:19:16-04:00",
+      },
+      ptbr: {
+        translation: "Loja",
+        is_approved: true,
         approved_at: "2019-06-19T22:25:02-04:00",
       },
       ro: {
@@ -161503,6 +167168,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:56-04:00",
       },
       pt: {
+        translation: "Saco de compras",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:34-04:00",
+      },
+      ptbr: {
         translation: "Sacola de compras",
         is_approved: true,
         approved_at: "2019-07-29T10:39:21-04:00",
@@ -161674,6 +167344,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:56-04:00",
       },
       pt: {
+        translation: "Carrinho de compras",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:36-04:00",
+      },
+      ptbr: {
         translation: "Carrinho de compras",
         is_approved: true,
         approved_at: "2019-07-29T10:40:13-04:00",
@@ -161897,6 +167572,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:57-04:00",
       },
       pt: {
+        translation: "Pequeno",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:37-04:00",
+      },
+      ptbr: {
         translation: "Bermuda",
         is_approved: true,
         approved_at: "2019-07-01T15:47:04-04:00",
@@ -162094,6 +167774,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:58-04:00",
       },
       pt: {
+        translation: "Calções",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:39-04:00",
+      },
+      ptbr: {
         translation: "Bermudas",
         is_approved: true,
         approved_at: "2019-07-01T15:47:08-04:00",
@@ -162212,6 +167897,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:03-04:00",
       },
       pt: {
+        translation: "Ombro",
+        is_approved: true,
+        approved_at: "2019-04-06T19:33:40-04:00",
+      },
+      ptbr: {
         translation: "Ombro",
         is_approved: true,
         approved_at: "2019-07-29T10:43:36-04:00",
@@ -162493,6 +168183,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pá",
         is_approved: true,
+        approved_at: "2020-01-27T17:05:13-05:00",
+      },
+      ptbr: {
+        translation: "Pá",
+        is_approved: true,
         approved_at: "2019-05-31T14:26:04-04:00",
       },
       ro: {
@@ -162611,6 +168306,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Chuveiro",
         is_approved: true,
+        approved_at: "2019-04-06T19:33:42-04:00",
+      },
+      ptbr: {
+        translation: "Chuveiro",
+        is_approved: true,
         approved_at: "2019-07-01T15:47:13-04:00",
       },
       ro: {
@@ -162727,6 +168427,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:04:02-05:00",
       },
       pt: {
+        translation: "Shuriken",
+        is_approved: true,
+        approved_at: "2023-01-31T15:47:26-05:00",
+      },
+      ptbr: {
         translation: "Estrela ninja",
         is_approved: true,
         approved_at: "2023-01-29T14:05:21-05:00",
@@ -162895,6 +168600,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Foice",
         is_approved: true,
+        approved_at: "2024-10-27T10:49:29-04:00",
+      },
+      ptbr: {
+        translation: "Foice",
+        is_approved: true,
         approved_at: "2024-10-05T12:32:15-04:00",
       },
       ro: {
@@ -163046,6 +168756,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:04-04:00",
       },
       pt: {
+        translation: "Passeio",
+        is_approved: true,
+        approved_at: "2020-04-17T15:26:51-04:00",
+      },
+      ptbr: {
         translation: "Calçada",
         is_approved: true,
         approved_at: "2019-07-29T10:43:43-04:00",
@@ -163210,6 +168925,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Placa",
         is_approved: true,
+        approved_at: "2021-01-30T17:06:44-05:00",
+      },
+      ptbr: {
+        translation: "Placa",
+        is_approved: true,
         approved_at: "2020-01-07T10:44:03-05:00",
       },
       ro: {
@@ -163326,6 +169046,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:08-04:00",
       },
       pt: {
+        translation: "Sinal",
+        is_approved: true,
+        approved_at: "2019-04-06T19:34:23-04:00",
+      },
+      ptbr: {
         translation: "Sinal",
         is_approved: true,
         approved_at: "2019-07-29T10:43:51-04:00",
@@ -163460,6 +169185,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Silo",
         is_approved: true,
+        approved_at: "2019-04-06T19:34:44-04:00",
+      },
+      ptbr: {
+        translation: "Silo",
+        is_approved: true,
         approved_at: "2019-07-29T10:44:43-04:00",
       },
       ro: {
@@ -163576,6 +169306,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-08-06T11:21:43-04:00",
       },
       pt: {
+        translation: "Prateado",
+        is_approved: true,
+        approved_at: "2019-11-14T18:31:54-05:00",
+      },
+      ptbr: {
         translation: "Prata",
         is_approved: true,
         approved_at: "2019-09-28T19:44:05-04:00",
@@ -163712,6 +169447,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:34:13-05:00",
       },
       pt: {
+        translation: "Cantar",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:45-04:00",
+      },
+      ptbr: {
         translation: "Canção",
         is_approved: true,
         approved_at: "2023-08-14T16:45:43-04:00",
@@ -163830,6 +169570,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:36-04:00",
       },
       pt: {
+        translation: "Lavatório",
+        is_approved: true,
+        approved_at: "2021-05-20T18:26:03-04:00",
+      },
+      ptbr: {
         translation: "Pia",
         is_approved: true,
         approved_at: "2019-07-29T10:45:25-04:00",
@@ -163948,6 +169693,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:52:56-04:00",
       },
       pt: {
+        translation: "Andar de skate",
+        is_approved: true,
+        approved_at: "2019-03-25T18:24:56-04:00",
+      },
+      ptbr: {
         translation: "Skate",
         is_approved: true,
         approved_at: "2021-10-17T16:20:24-04:00",
@@ -164080,6 +169830,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:16-04:00",
       },
       pt: {
+        translation: "Patinar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:35:11-04:00",
+      },
+      ptbr: {
         translation: "Patinação",
         is_approved: true,
         approved_at: "2019-07-29T10:46:37-04:00",
@@ -164198,6 +169953,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:52:59-04:00",
       },
       pt: {
+        translation: "Esqueleto",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:12-04:00",
+      },
+      ptbr: {
         translation: "Esqueleto",
         is_approved: true,
         approved_at: "2019-06-22T19:07:05-04:00",
@@ -164465,6 +170225,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:18-04:00",
       },
       pt: {
+        translation: "Esquiar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:35:54-04:00",
+      },
+      ptbr: {
         translation: "Esqui",
         is_approved: true,
         approved_at: "2019-07-11T21:53:34-04:00",
@@ -164721,6 +170486,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Esquiar",
         is_approved: true,
+        approved_at: "2019-03-25T18:23:28-04:00",
+      },
+      ptbr: {
+        translation: "Esquiar",
+        is_approved: true,
         approved_at: "2018-09-12T14:26:25-04:00",
       },
       ro: {
@@ -164868,6 +170638,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:23-04:00",
       },
       pt: {
+        translation: "Saia",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:06-04:00",
+      },
+      ptbr: {
         translation: "Saia",
         is_approved: true,
         approved_at: "2019-07-30T21:27:40-04:00",
@@ -165026,6 +170801,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:51:24-04:00",
       },
       pt: {
+        translation: "Caveira",
+        is_approved: true,
+        approved_at: "2019-11-19T18:22:24-05:00",
+      },
+      ptbr: {
         translation: "Crânio",
         is_approved: true,
         approved_at: "2019-09-24T20:55:53-04:00",
@@ -165146,6 +170926,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "SkyBlock",
         is_approved: true,
+        approved_at: "2019-09-06T09:09:36-04:00",
+      },
+      ptbr: {
+        translation: "SkyBlock",
+        is_approved: true,
         approved_at: "2019-09-05T18:39:47-04:00",
       },
       ro: {
@@ -165264,6 +171049,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Arranha-céus",
         is_approved: true,
+        approved_at: "2019-03-25T18:24:43-04:00",
+      },
+      ptbr: {
+        translation: "Arranha-céus",
+        is_approved: true,
         approved_at: "2018-09-12T14:26:32-04:00",
       },
       ro: {
@@ -165380,6 +171170,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T11:16:06-04:00",
       },
       pt: {
+        translation: "SkyWars",
+        is_approved: true,
+        approved_at: "2019-04-04T17:07:41-04:00",
+      },
+      ptbr: {
         translation: "SkyWars",
         is_approved: true,
         approved_at: "2018-03-03T12:02:39-05:00",
@@ -165514,6 +171309,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dormir",
         is_approved: true,
+        approved_at: "2019-04-06T19:36:13-04:00",
+      },
+      ptbr: {
+        translation: "Dormir",
+        is_approved: true,
         approved_at: "2019-07-02T09:24:16-04:00",
       },
       ro: {
@@ -165630,6 +171430,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:32-04:00",
       },
       pt: {
+        translation: "Saco-cama",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:19-04:00",
+      },
+      ptbr: {
         translation: "Saco de dormir",
         is_approved: true,
         approved_at: "2019-07-02T09:24:25-04:00",
@@ -165748,6 +171553,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:33-04:00",
       },
       pt: {
+        translation: "Trenó",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:21-04:00",
+      },
+      ptbr: {
         translation: "Trenó",
         is_approved: true,
         approved_at: "2019-07-30T21:27:52-04:00",
@@ -165880,6 +171690,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-10-26T15:30:38-04:00",
       },
       pt: {
+        translation: "Escorregar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:23-04:00",
+      },
+      ptbr: {
         translation: "Escorregador",
         is_approved: true,
         approved_at: "2019-07-30T21:28:13-04:00",
@@ -166027,6 +171842,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Slime",
         is_approved: true,
+        approved_at: "2021-01-19T15:48:58-05:00",
+      },
+      ptbr: {
+        translation: "Slime",
+        is_approved: true,
         approved_at: "2019-06-22T19:07:01-04:00",
       },
       ro: {
@@ -166157,6 +171977,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:35-04:00",
       },
       pt: {
+        translation: "Chinelos",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:25-04:00",
+      },
+      ptbr: {
         translation: "Pantufa",
         is_approved: true,
         approved_at: "2019-07-30T21:28:21-04:00",
@@ -166275,6 +172100,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:30:12-04:00",
       },
       pt: {
+        translation: "Sloth",
+        is_approved: true,
+        approved_at: "2022-09-19T11:51:34-04:00",
+      },
+      ptbr: {
         translation: "Preguiça",
         is_approved: true,
         approved_at: "2023-08-14T16:41:05-04:00",
@@ -166500,6 +172330,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lesma",
         is_approved: true,
+        approved_at: "2019-04-06T19:36:48-04:00",
+      },
+      ptbr: {
+        translation: "Lesma",
+        is_approved: true,
         approved_at: "2019-07-30T21:30:01-04:00",
       },
       ro: {
@@ -166616,6 +172451,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:20-04:00",
       },
       pt: {
+        translation: "Smartphone",
+        is_approved: true,
+        approved_at: "2019-03-25T18:45:37-04:00",
+      },
+      ptbr: {
         translation: "Celular",
         is_approved: true,
         approved_at: "2023-08-14T16:41:16-04:00",
@@ -166734,6 +172574,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:40-04:00",
       },
       pt: {
+        translation: "Cheiro / Odor",
+        is_approved: true,
+        approved_at: "2019-04-06T19:36:56-04:00",
+      },
+      ptbr: {
         translation: "Cheirar",
         is_approved: true,
         approved_at: "2019-07-30T21:30:34-04:00",
@@ -166866,6 +172711,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:41-04:00",
       },
       pt: {
+        translation: "Fundir",
+        is_approved: true,
+        approved_at: "2019-04-06T19:37:02-04:00",
+      },
+      ptbr: {
         translation: "Assando",
         is_approved: true,
         approved_at: "2019-07-01T15:47:52-04:00",
@@ -167052,6 +172902,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sorriso",
         is_approved: true,
+        approved_at: "2019-04-06T19:37:03-04:00",
+      },
+      ptbr: {
+        translation: "Sorriso",
+        is_approved: true,
         approved_at: "2019-07-01T15:48:05-04:00",
       },
       ro: {
@@ -167234,6 +173089,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T15:16:18-04:00",
       },
       pt: {
+        translation: "Sorriso",
+        is_approved: true,
+        approved_at: "2021-01-20T06:54:02-05:00",
+      },
+      ptbr: {
         translation: "Sorridente",
         is_approved: true,
         approved_at: "2019-08-21T13:04:51-04:00",
@@ -167379,6 +173239,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-11T09:01:51-04:00",
       },
       pt: {
+        translation: "Fumo",
+        is_approved: true,
+        approved_at: "2020-06-15T14:01:45-04:00",
+      },
+      ptbr: {
         translation: "Fumaça",
         is_approved: true,
         approved_at: "2019-06-22T20:43:33-04:00",
@@ -167499,6 +173364,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Batido de frutas",
         is_approved: true,
+        approved_at: "2019-04-06T19:37:36-04:00",
+      },
+      ptbr: {
+        translation: "Batido de frutas",
+        is_approved: true,
         approved_at: "2023-08-24T15:33:57-04:00",
       },
       ro: {
@@ -167615,6 +173485,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T16:07:28-04:00",
       },
       pt: {
+        translation: "S'more",
+        is_approved: true,
+        approved_at: "2024-11-06T09:41:34-05:00",
+      },
+      ptbr: {
         translation: "Smore",
         is_approved: true,
         approved_at: "2024-10-06T16:29:42-04:00",
@@ -167809,6 +173684,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Caracol",
         is_approved: true,
+        approved_at: "2019-04-06T19:37:38-04:00",
+      },
+      ptbr: {
+        translation: "Caracol",
+        is_approved: true,
         approved_at: "2019-07-30T21:31:30-04:00",
       },
       ro: {
@@ -167941,6 +173821,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cobra",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:18-04:00",
+      },
+      ptbr: {
+        translation: "Cobra",
+        is_approved: true,
         approved_at: "2018-09-12T14:28:14-04:00",
       },
       ro: {
@@ -168057,6 +173942,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:07:52-04:00",
       },
       pt: {
+        translation: "Sapatilhas",
+        is_approved: true,
+        approved_at: "2019-04-06T19:37:40-04:00",
+      },
+      ptbr: {
         translation: "Tênis",
         is_approved: true,
         approved_at: "2019-07-30T21:31:40-04:00",
@@ -168247,6 +174137,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Neve",
         is_approved: true,
+        approved_at: "2021-01-19T15:49:01-05:00",
+      },
+      ptbr: {
+        translation: "Neve",
+        is_approved: true,
         approved_at: "2019-09-03T10:44:41-04:00",
       },
       ro: {
@@ -168363,6 +174258,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:28-04:00",
       },
       pt: {
+        translation: "Bola de neve",
+        is_approved: true,
+        approved_at: "2020-01-16T18:37:29-05:00",
+      },
+      ptbr: {
         translation: "Bola de neve",
         is_approved: true,
         approved_at: "2019-09-08T11:22:08-04:00",
@@ -168483,6 +174383,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Snowboard",
         is_approved: true,
+        approved_at: "2019-03-25T18:46:16-04:00",
+      },
+      ptbr: {
+        translation: "Snowboard",
+        is_approved: true,
         approved_at: "2018-09-12T14:28:35-04:00",
       },
       ro: {
@@ -168599,6 +174504,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:48:46-04:00",
       },
       pt: {
+        translation: "Floco de neve",
+        is_approved: true,
+        approved_at: "2019-03-25T18:46:27-04:00",
+      },
+      ptbr: {
         translation: "Floco de neve",
         is_approved: true,
         approved_at: "2019-08-08T16:50:45-04:00",
@@ -168761,6 +174671,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:05:33-04:00",
       },
       pt: {
+        translation: "Nevar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:38:15-04:00",
+      },
+      ptbr: {
         translation: "Nevando",
         is_approved: true,
         approved_at: "2019-07-01T15:48:36-04:00",
@@ -168895,6 +174810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Boneco de neve",
         is_approved: true,
+        approved_at: "2020-03-08T06:18:48-04:00",
+      },
+      ptbr: {
+        translation: "Boneco de neve",
+        is_approved: true,
         approved_at: "2022-04-09T09:27:01-04:00",
       },
       ro: {
@@ -169011,6 +174931,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:05:34-04:00",
       },
       pt: {
+        translation: "Sabonete",
+        is_approved: true,
+        approved_at: "2019-04-06T19:38:57-04:00",
+      },
+      ptbr: {
         translation: "Sabonete",
         is_approved: true,
         approved_at: "2019-07-01T15:48:47-04:00",
@@ -169237,6 +175162,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Futebol",
         is_approved: true,
+        approved_at: "2019-03-25T18:46:56-04:00",
+      },
+      ptbr: {
+        translation: "Futebol",
+        is_approved: true,
         approved_at: "2018-09-12T14:28:46-04:00",
       },
       ro: {
@@ -169408,6 +175338,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Meias",
         is_approved: true,
+        approved_at: "2019-04-06T19:39:09-04:00",
+      },
+      ptbr: {
+        translation: "Meias",
+        is_approved: true,
         approved_at: "2019-07-30T21:32:02-04:00",
       },
       ro: {
@@ -169539,6 +175474,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:26-04:00",
       },
       pt: {
+        translation: "Refrigerante",
+        is_approved: true,
+        approved_at: "2019-03-25T18:47:04-04:00",
+      },
+      ptbr: {
         translation: "Refrigerante",
         is_approved: true,
         approved_at: "2018-09-12T14:28:50-04:00",
@@ -169753,6 +175693,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sofá",
         is_approved: true,
+        approved_at: "2023-11-27T16:29:58-05:00",
+      },
+      ptbr: {
+        translation: "Sofá",
+        is_approved: true,
         approved_at: "2023-08-14T16:41:24-04:00",
       },
       ro: {
@@ -169927,6 +175872,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:05:53-04:00",
       },
       pt: {
+        translation: "Plantação",
+        is_approved: true,
+        approved_at: "2020-04-07T15:46:23-04:00",
+      },
+      ptbr: {
         translation: "Solo",
         is_approved: true,
         approved_at: "2019-07-30T21:32:15-04:00",
@@ -170045,6 +175995,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:01-04:00",
       },
       pt: {
+        translation: "Sistema solar",
+        is_approved: true,
+        approved_at: "2019-04-06T19:39:59-04:00",
+      },
+      ptbr: {
         translation: "Sistema solar",
         is_approved: true,
         approved_at: "2019-07-01T15:49:03-04:00",
@@ -170179,6 +176134,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Som",
         is_approved: true,
+        approved_at: "2019-04-06T19:40:06-04:00",
+      },
+      ptbr: {
+        translation: "Som",
+        is_approved: true,
         approved_at: "2019-07-01T15:49:16-04:00",
       },
       ro: {
@@ -170309,6 +176269,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:01:23-04:00",
       },
       pt: {
+        translation: "Sopa",
+        is_approved: true,
+        approved_at: "2020-07-10T21:37:01-04:00",
+      },
+      ptbr: {
         translation: "Sopa",
         is_approved: true,
         approved_at: "2019-06-23T10:05:46-04:00",
@@ -170449,6 +176414,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:38-04:00",
       },
       pt: {
+        translation: "O Espaço",
+        is_approved: true,
+        approved_at: "2019-03-25T18:47:50-04:00",
+      },
+      ptbr: {
         translation: "Espaço",
         is_approved: true,
         approved_at: "2018-09-12T14:04:39-04:00",
@@ -170607,6 +176577,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:06-04:00",
       },
       pt: {
+        translation: "Nave espacial",
+        is_approved: true,
+        approved_at: "2019-04-06T19:40:40-04:00",
+      },
+      ptbr: {
         translation: "Nave espacial",
         is_approved: true,
         approved_at: "2019-07-03T09:48:21-04:00",
@@ -170888,6 +176863,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pá",
         is_approved: true,
+        approved_at: "2019-04-06T19:40:42-04:00",
+      },
+      ptbr: {
+        translation: "Pá",
+        is_approved: true,
         approved_at: "2019-07-30T21:32:24-04:00",
       },
       ro: {
@@ -171004,6 +176984,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:48:48-04:00",
       },
       pt: {
+        translation: "Esparguete",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:20-04:00",
+      },
+      ptbr: {
         translation: "Espaguete",
         is_approved: true,
         approved_at: "2018-09-12T14:04:43-04:00",
@@ -171140,6 +177125,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-08-02T05:31:52-04:00",
       },
       pt: {
+        translation: "Vela-de-artifício",
+        is_approved: true,
+        approved_at: "2020-06-05T15:56:02-04:00",
+      },
+      ptbr: {
         translation: "Vela faísca",
         is_approved: true,
         approved_at: "2023-08-14T16:58:02-04:00",
@@ -171272,6 +177262,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:11-04:00",
       },
       pt: {
+        translation: "Colunas",
+        is_approved: true,
+        approved_at: "2019-04-17T16:00:48-04:00",
+      },
+      ptbr: {
         translation: "Caixas de som",
         is_approved: true,
         approved_at: "2019-07-30T21:34:19-04:00",
@@ -171390,6 +177385,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:13-04:00",
       },
       pt: {
+        translation: "Lança",
+        is_approved: true,
+        approved_at: "2019-04-17T17:04:46-04:00",
+      },
+      ptbr: {
         translation: "Lança",
         is_approved: true,
         approved_at: "2019-07-18T16:47:48-04:00",
@@ -171522,6 +177522,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:14-04:00",
       },
       pt: {
+        translation: "Lancha",
+        is_approved: true,
+        approved_at: "2019-04-14T17:55:43-04:00",
+      },
+      ptbr: {
         translation: "Lancha",
         is_approved: true,
         approved_at: "2019-07-30T21:34:27-04:00",
@@ -171712,6 +177717,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Esfera",
         is_approved: true,
+        approved_at: "2021-05-20T18:20:03-04:00",
+      },
+      ptbr: {
+        translation: "Esfera",
+        is_approved: true,
         approved_at: "2019-07-01T15:49:31-04:00",
       },
       ro: {
@@ -171828,6 +177838,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:40-04:00",
       },
       pt: {
+        translation: "Aranha",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:22-04:00",
+      },
+      ptbr: {
         translation: "Aranha",
         is_approved: true,
         approved_at: "2018-09-12T14:04:49-04:00",
@@ -172256,6 +178271,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Teia de aranha",
         is_approved: true,
+        approved_at: "2019-04-14T17:54:44-04:00",
+      },
+      ptbr: {
+        translation: "Teia de aranha",
+        is_approved: true,
         approved_at: "2022-04-15T10:49:32-04:00",
       },
       ro: {
@@ -172374,6 +178394,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Homem-Aranha",
         is_approved: true,
+        approved_at: "2019-03-25T18:48:23-04:00",
+      },
+      ptbr: {
+        translation: "Homem-Aranha",
+        is_approved: true,
         approved_at: "2022-04-16T11:07:10-04:00",
       },
       ro: {
@@ -172487,6 +178512,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Escada em espiral",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:31-04:00",
+      },
+      ptbr: {
+        translation: "Escada em espiral",
+        is_approved: true,
         approved_at: "2024-10-05T12:35:24-04:00",
       },
       ro: {
@@ -172598,6 +178628,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:25-04:00",
       },
       pt: {
+        translation: "Spleef",
+        is_approved: true,
+        approved_at: "2019-04-14T17:55:05-04:00",
+      },
+      ptbr: {
         translation: "Spleef",
         is_approved: true,
         approved_at: "2019-07-02T09:24:41-04:00",
@@ -172730,6 +178765,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:23:56-04:00",
       },
       pt: {
+        translation: "Esponja",
+        is_approved: true,
+        approved_at: "2020-01-15T19:09:37-05:00",
+      },
+      ptbr: {
         translation: "Esponja",
         is_approved: true,
         approved_at: "2019-07-01T15:49:37-04:00",
@@ -172865,6 +178905,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Colher",
         is_approved: true,
+        approved_at: "2019-03-25T18:49:20-04:00",
+      },
+      ptbr: {
+        translation: "Colher",
+        is_approved: true,
         approved_at: "2018-09-12T14:06:28-04:00",
       },
       ro: {
@@ -172981,6 +179026,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:42:16-04:00",
       },
       pt: {
+        translation: "Desportos",
+        is_approved: true,
+        approved_at: "2019-03-25T18:49:28-04:00",
+      },
+      ptbr: {
         translation: "Esportes",
         is_approved: true,
         approved_at: "2018-09-12T14:06:31-04:00",
@@ -173099,6 +179149,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T14:03:02-04:00",
       },
       pt: {
+        translation: "Grafíti",
+        is_approved: true,
+        approved_at: "2019-09-09T09:48:38-04:00",
+      },
+      ptbr: {
         translation: "Spray",
         is_approved: true,
         approved_at: "2019-08-20T17:18:57-04:00",
@@ -173219,6 +179274,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Primavera",
         is_approved: true,
+        approved_at: "2019-03-25T18:49:36-04:00",
+      },
+      ptbr: {
+        translation: "Primavera",
+        is_approved: true,
         approved_at: "2018-09-12T14:06:39-04:00",
       },
       ro: {
@@ -173335,6 +179395,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:35-04:00",
       },
       pt: {
+        translation: "Aspersor",
+        is_approved: true,
+        approved_at: "2019-04-14T17:59:13-04:00",
+      },
+      ptbr: {
         translation: "Aspersor",
         is_approved: true,
         approved_at: "2019-07-30T21:35:06-04:00",
@@ -173512,6 +179577,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Correr",
         is_approved: true,
+        approved_at: "2019-09-08T18:04:49-04:00",
+      },
+      ptbr: {
+        translation: "Correr",
+        is_approved: true,
         approved_at: "2021-05-20T09:04:43-04:00",
       },
       ro: {
@@ -173630,6 +179700,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Espião",
         is_approved: true,
+        approved_at: "2019-03-25T18:49:37-04:00",
+      },
+      ptbr: {
+        translation: "Espião",
+        is_approved: true,
         approved_at: "2018-09-12T14:35:14-04:00",
       },
       ro: {
@@ -173746,6 +179821,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:47:08-04:00",
       },
       pt: {
+        translation: "Quadrado",
+        is_approved: true,
+        approved_at: "2020-03-01T11:49:48-05:00",
+      },
+      ptbr: {
         translation: "Quadrado",
         is_approved: true,
         approved_at: "2019-08-05T12:30:07-04:00",
@@ -173945,6 +180025,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lula",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:25-04:00",
+      },
+      ptbr: {
+        translation: "Lula",
+        is_approved: true,
         approved_at: "2018-09-12T14:35:22-04:00",
       },
       ro: {
@@ -174063,6 +180148,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Esquilo",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:26-04:00",
+      },
+      ptbr: {
+        translation: "Esquilo",
+        is_approved: true,
         approved_at: "2018-09-12T14:35:28-04:00",
       },
       ro: {
@@ -174179,6 +180269,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-18T15:40:19-04:00",
       },
       pt: {
+        translation: "Estábulos",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:47-04:00",
+      },
+      ptbr: {
         translation: "Estábulo",
         is_approved: true,
         approved_at: "2019-11-13T14:14:58-05:00",
@@ -174297,6 +180392,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:49-04:00",
       },
       pt: {
+        translation: "Estádio",
+        is_approved: true,
+        approved_at: "2019-04-14T17:55:58-04:00",
+      },
+      ptbr: {
         translation: "Estádio",
         is_approved: true,
         approved_at: "2019-07-11T21:51:22-04:00",
@@ -174444,6 +180544,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:06:49-04:00",
       },
       pt: {
+        translation: "Palco",
+        is_approved: true,
+        approved_at: "2019-04-14T17:56:18-04:00",
+      },
+      ptbr: {
         translation: "Estágio",
         is_approved: true,
         approved_at: "2019-07-11T21:51:24-04:00",
@@ -174622,6 +180727,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Escadaria",
         is_approved: true,
+        approved_at: "2019-04-14T17:56:20-04:00",
+      },
+      ptbr: {
+        translation: "Escadaria",
+        is_approved: true,
         approved_at: "2019-07-02T09:25:01-04:00",
       },
       ro: {
@@ -174769,6 +180879,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:37:57-04:00",
       },
       pt: {
+        translation: "Selo",
+        is_approved: true,
+        approved_at: "2019-09-08T18:05:15-04:00",
+      },
+      ptbr: {
         translation: "Carimbo",
         is_approved: true,
         approved_at: "2019-07-30T21:36:09-04:00",
@@ -174889,6 +181004,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estrela",
         is_approved: true,
+        approved_at: "2019-11-19T18:24:57-05:00",
+      },
+      ptbr: {
+        translation: "Estrela",
+        is_approved: true,
         approved_at: "2019-09-03T10:47:34-04:00",
       },
       ro: {
@@ -175007,6 +181127,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estrela-do-mar",
         is_approved: true,
+        approved_at: "2019-03-25T18:50:09-04:00",
+      },
+      ptbr: {
+        translation: "Estrela-do-mar",
+        is_approved: true,
         approved_at: "2022-04-19T14:33:52-04:00",
       },
       ro: {
@@ -175123,6 +181248,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:46-04:00",
       },
       pt: {
+        translation: "Estátua",
+        is_approved: true,
+        approved_at: "2019-03-25T18:50:11-04:00",
+      },
+      ptbr: {
         translation: "Estátua",
         is_approved: true,
         approved_at: "2018-09-12T14:35:59-04:00",
@@ -175307,6 +181437,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:29-04:00",
       },
       pt: {
+        translation: "Bife",
+        is_approved: true,
+        approved_at: "2019-11-13T19:15:40-05:00",
+      },
+      ptbr: {
         translation: "Filé",
         is_approved: true,
         approved_at: "2019-09-08T12:59:43-04:00",
@@ -175439,6 +181574,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-23T07:23:51-05:00",
       },
       pt: {
+        translation: "Volante",
+        is_approved: true,
+        approved_at: "2019-04-14T17:58:14-04:00",
+      },
+      ptbr: {
         translation: "Volante",
         is_approved: true,
         approved_at: "2019-07-30T21:36:17-04:00",
@@ -175623,6 +181763,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:12-04:00",
       },
       pt: {
+        translation: "Escadote",
+        is_approved: true,
+        approved_at: "2019-04-14T17:58:22-04:00",
+      },
+      ptbr: {
         translation: "Escada",
         is_approved: true,
         approved_at: "2020-01-07T12:52:11-05:00",
@@ -175755,6 +181900,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:15-04:00",
       },
       pt: {
+        translation: "Escada de apoio",
+        is_approved: true,
+        approved_at: "2020-06-03T09:47:38-04:00",
+      },
+      ptbr: {
         translation: "Escada",
         is_approved: true,
         approved_at: "2019-07-30T21:36:59-04:00",
@@ -175887,6 +182037,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:15-04:00",
       },
       pt: {
+        translation: "Calçada",
+        is_approved: true,
+        approved_at: "2020-02-07T17:58:31-05:00",
+      },
+      ptbr: {
         translation: "Caminho de pedras",
         is_approved: true,
         approved_at: "2022-05-07T09:00:24-04:00",
@@ -176007,6 +182162,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Estéreo",
         is_approved: true,
+        approved_at: "2020-02-07T17:59:17-05:00",
+      },
+      ptbr: {
+        translation: "Estéreo",
+        is_approved: true,
         approved_at: "2019-07-30T21:38:09-04:00",
       },
       ro: {
@@ -176123,6 +182283,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:17-04:00",
       },
       pt: {
+        translation: "Post-it",
+        is_approved: true,
+        approved_at: "2020-02-07T17:59:21-05:00",
+      },
+      ptbr: {
         translation: "Nota adesiva",
         is_approved: true,
         approved_at: "2019-07-30T21:38:37-04:00",
@@ -176241,6 +182406,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:18-04:00",
       },
       pt: {
+        translation: "Raia",
+        is_approved: true,
+        approved_at: "2019-04-14T18:00:44-04:00",
+      },
+      ptbr: {
         translation: "Arraia",
         is_approved: true,
         approved_at: "2019-07-30T21:38:59-04:00",
@@ -176414,6 +182584,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Meia",
         is_approved: true,
+        approved_at: "2020-02-07T17:59:25-05:00",
+      },
+      ptbr: {
+        translation: "Meia",
+        is_approved: true,
         approved_at: "2019-07-30T21:39:55-04:00",
       },
       ro: {
@@ -176530,6 +182705,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:21-04:00",
       },
       pt: {
+        translation: "Sinal de stop",
+        is_approved: true,
+        approved_at: "2019-04-14T18:00:54-04:00",
+      },
+      ptbr: {
         translation: "Placa de pare",
         is_approved: true,
         approved_at: "2019-07-30T21:39:47-04:00",
@@ -176648,6 +182828,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:23-04:00",
       },
       pt: {
+        translation: "Cronómetro",
+        is_approved: true,
+        approved_at: "2019-04-14T18:01:11-04:00",
+      },
+      ptbr: {
         translation: "Cronômetro",
         is_approved: true,
         approved_at: "2019-07-30T21:40:57-04:00",
@@ -176793,6 +182978,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:38:07-05:00",
       },
       pt: {
+        translation: "Armazenamento",
+        is_approved: true,
+        approved_at: "2020-02-22T09:06:17-05:00",
+      },
+      ptbr: {
         translation: "Armazenamento",
         is_approved: true,
         approved_at: "2019-09-11T08:12:34-04:00",
@@ -177126,6 +183316,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Loja",
         is_approved: true,
+        approved_at: "2019-03-25T18:50:15-04:00",
+      },
+      ptbr: {
+        translation: "Loja",
+        is_approved: true,
         approved_at: "2018-09-12T14:36:09-04:00",
       },
       ro: {
@@ -177310,6 +183505,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tempestade",
         is_approved: true,
+        approved_at: "2019-11-19T18:24:36-05:00",
+      },
+      ptbr: {
+        translation: "Tempestade",
+        is_approved: true,
         approved_at: "2019-09-03T10:47:30-04:00",
       },
       ro: {
@@ -177472,6 +183672,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fogão",
         is_approved: true,
+        approved_at: "2019-04-14T18:01:55-04:00",
+      },
+      ptbr: {
+        translation: "Fogão",
+        is_approved: true,
         approved_at: "2019-08-03T12:51:43-04:00",
       },
       ro: {
@@ -177606,6 +183811,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-10-31T14:03:18-04:00",
       },
       pt: {
+        translation: "Palhinha",
+        is_approved: true,
+        approved_at: "2019-04-14T18:02:01-04:00",
+      },
+      ptbr: {
         translation: "Canudo",
         is_approved: true,
         approved_at: "2019-08-03T12:51:50-04:00",
@@ -177724,6 +183934,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:32:32-04:00",
       },
       pt: {
+        translation: "Morango",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:48-04:00",
+      },
+      ptbr: {
         translation: "Morango",
         is_approved: true,
         approved_at: "2019-07-02T09:25:33-04:00",
@@ -177882,6 +184097,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:34-04:00",
       },
       pt: {
+        translation: "Rua",
+        is_approved: true,
+        approved_at: "2019-04-14T18:02:07-04:00",
+      },
+      ptbr: {
         translation: "Rua",
         is_approved: true,
         approved_at: "2019-07-11T21:53:54-04:00",
@@ -178066,6 +184286,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:35-04:00",
       },
       pt: {
+        translation: "Poste de luz",
+        is_approved: true,
+        approved_at: "2019-04-14T18:02:10-04:00",
+      },
+      ptbr: {
         translation: "Poste de luz",
         is_approved: true,
         approved_at: "2019-08-03T12:52:00-04:00",
@@ -178263,6 +184488,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-23T07:23:33-05:00",
       },
       pt: {
+        translation: "Fio",
+        is_approved: true,
+        approved_at: "2019-11-13T19:10:27-05:00",
+      },
+      ptbr: {
         translation: "Linha",
         is_approved: true,
         approved_at: "2019-09-24T13:24:56-04:00",
@@ -178395,6 +184625,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:38:29-05:00",
       },
       pt: {
+        translation: "Forte",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:52-04:00",
+      },
+      ptbr: {
         translation: "Forte",
         is_approved: true,
         approved_at: "2019-07-02T09:25:40-04:00",
@@ -178617,6 +184852,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-04T20:21:45-04:00",
       },
       pt: {
+        translation: "Masmorra",
+        is_approved: true,
+        approved_at: "2024-10-27T10:49:36-04:00",
+      },
+      ptbr: {
         translation: "Fortaleza",
         is_approved: true,
         approved_at: "2024-10-06T11:07:47-04:00",
@@ -178744,6 +184984,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:48:57-04:00",
       },
       pt: {
+        translation: "Submarino",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:30-04:00",
+      },
+      ptbr: {
         translation: "Submarino",
         is_approved: true,
         approved_at: "2018-09-12T14:36:17-04:00",
@@ -178876,6 +185121,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:29-04:00",
       },
       pt: {
+        translation: "Açúcar",
+        is_approved: true,
+        approved_at: "2020-01-16T19:08:52-05:00",
+      },
+      ptbr: {
         translation: "Açúcar",
         is_approved: true,
         approved_at: "2019-09-24T21:30:28-04:00",
@@ -179021,6 +185271,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-11T08:47:59-04:00",
       },
       pt: {
+        translation: "Fato",
+        is_approved: true,
+        approved_at: "2020-06-15T10:27:05-04:00",
+      },
+      ptbr: {
         translation: "Roupa",
         is_approved: true,
         approved_at: "2019-06-22T20:31:52-04:00",
@@ -179159,6 +185414,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mala",
         is_approved: true,
+        approved_at: "2019-09-08T18:05:45-04:00",
+      },
+      ptbr: {
+        translation: "Mala",
+        is_approved: true,
         approved_at: "2019-08-03T12:52:09-04:00",
       },
       ro: {
@@ -179289,6 +185549,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-07T12:20:34-04:00",
       },
       pt: {
+        translation: "Verão",
+        is_approved: true,
+        approved_at: "2019-10-02T19:57:31-04:00",
+      },
+      ptbr: {
         translation: "Verão",
         is_approved: true,
         approved_at: "2019-08-16T12:35:37-04:00",
@@ -179422,6 +185687,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:38:42-05:00",
       },
       pt: {
+        translation: "Sumo",
+        is_approved: true,
+        approved_at: "2021-10-18T08:44:45-04:00",
+      },
+      ptbr: {
         translation: "Sumô",
         is_approved: true,
         approved_at: "2023-08-14T16:41:58-04:00",
@@ -179574,6 +185844,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sol",
         is_approved: true,
+        approved_at: "2019-03-25T18:50:29-04:00",
+      },
+      ptbr: {
+        translation: "Sol",
+        is_approved: true,
         approved_at: "2022-08-12T14:12:59-04:00",
       },
       ro: {
@@ -179690,6 +185965,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:38:56-04:00",
       },
       pt: {
+        translation: "Espreguiçadeira",
+        is_approved: true,
+        approved_at: "2019-04-14T18:03:22-04:00",
+      },
+      ptbr: {
         translation: "Espreguiçadeira",
         is_approved: true,
         approved_at: "2019-09-17T20:23:47-04:00",
@@ -179810,6 +186090,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Girassol",
         is_approved: true,
+        approved_at: "2020-01-16T18:27:53-05:00",
+      },
+      ptbr: {
+        translation: "Girassol",
+        is_approved: true,
         approved_at: "2019-07-01T15:50:27-04:00",
       },
       ro: {
@@ -179928,6 +186213,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Óculos de sol",
         is_approved: true,
+        approved_at: "2019-04-14T18:03:29-04:00",
+      },
+      ptbr: {
+        translation: "Óculos de sol",
+        is_approved: true,
         approved_at: "2019-07-01T15:50:34-04:00",
       },
       ro: {
@@ -180044,6 +186334,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:39:10-04:00",
       },
       pt: {
+        translation: "Avião naufragado",
+        is_approved: true,
+        approved_at: "2019-04-14T18:04:08-04:00",
+      },
+      ptbr: {
         translation: "Avião naufragado",
         is_approved: true,
         approved_at: "2019-08-03T12:52:47-04:00",
@@ -180176,6 +186471,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:39:17-04:00",
       },
       pt: {
+        translation: "Luz solar",
+        is_approved: true,
+        approved_at: "2019-09-08T18:05:53-04:00",
+      },
+      ptbr: {
         translation: "Luz do sol",
         is_approved: true,
         approved_at: "2019-07-01T15:50:40-04:00",
@@ -180294,6 +186594,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-03-05T07:39:22-05:00",
       },
       pt: {
+        translation: "Amanhecer",
+        is_approved: true,
+        approved_at: "2023-08-17T08:00:58-04:00",
+      },
+      ptbr: {
         translation: "Nascer do sol",
         is_approved: true,
         approved_at: "2022-04-18T08:29:19-04:00",
@@ -180412,6 +186717,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:53:53-04:00",
       },
       pt: {
+        translation: "Pôr-do-sol",
+        is_approved: true,
+        approved_at: "2019-03-25T18:50:46-04:00",
+      },
+      ptbr: {
         translation: "Pôr do sol",
         is_approved: true,
         approved_at: "2021-10-17T16:19:42-04:00",
@@ -180532,6 +186842,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Super-herói",
         is_approved: true,
+        approved_at: "2023-08-17T07:59:04-04:00",
+      },
+      ptbr: {
+        translation: "Super-herói",
+        is_approved: true,
         approved_at: "2023-08-14T16:44:38-04:00",
       },
       ro: {
@@ -180650,6 +186965,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Supermercado",
         is_approved: true,
+        approved_at: "2019-04-14T18:04:47-04:00",
+      },
+      ptbr: {
+        translation: "Supermercado",
+        is_approved: true,
         approved_at: "2019-07-01T15:51:25-04:00",
       },
       ro: {
@@ -180766,6 +187086,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:39:38-04:00",
       },
       pt: {
+        translation: "Prancha de surf",
+        is_approved: true,
+        approved_at: "2019-04-14T18:05:01-04:00",
+      },
+      ptbr: {
         translation: "Prancha de surfe",
         is_approved: true,
         approved_at: "2022-06-27T14:39:19-04:00",
@@ -180884,6 +187209,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:38:56-05:00",
       },
       pt: {
+        translation: "Surfar",
+        is_approved: true,
+        approved_at: "2023-08-17T08:01:01-04:00",
+      },
+      ptbr: {
         translation: "Surfe",
         is_approved: true,
         approved_at: "2022-06-27T14:39:24-04:00",
@@ -181002,6 +187332,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T15:18:14-04:00",
       },
       pt: {
+        translation: "Surpresa",
+        is_approved: true,
+        approved_at: "2020-04-26T14:21:41-04:00",
+      },
+      ptbr: {
         translation: "Surpresa",
         is_approved: true,
         approved_at: "2019-09-03T13:53:10-04:00",
@@ -181134,6 +187469,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:00:32-04:00",
       },
       pt: {
+        translation: "Sushi",
+        is_approved: true,
+        approved_at: "2019-07-21T14:09:33-04:00",
+      },
+      ptbr: {
         translation: "Sushi",
         is_approved: true,
         approved_at: "2018-09-12T14:37:27-04:00",
@@ -181285,6 +187625,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pântano",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:34-04:00",
+      },
+      ptbr: {
+        translation: "Pântano",
+        is_approved: true,
         approved_at: "2018-09-12T14:37:32-04:00",
       },
       ro: {
@@ -181417,6 +187762,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cisne",
         is_approved: true,
+        approved_at: "2019-04-14T18:05:24-04:00",
+      },
+      ptbr: {
+        translation: "Cisne",
+        is_approved: true,
         approved_at: "2019-08-03T12:53:00-04:00",
       },
       ro: {
@@ -181547,6 +187897,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:39:50-04:00",
       },
       pt: {
+        translation: "Camisola",
+        is_approved: true,
+        approved_at: "2019-04-14T18:05:25-04:00",
+      },
+      ptbr: {
         translation: "Suéter",
         is_approved: true,
         approved_at: "2019-08-03T12:54:14-04:00",
@@ -181665,6 +188020,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:00:28-04:00",
       },
       pt: {
+        translation: "Nadar",
+        is_approved: true,
+        approved_at: "2019-03-25T18:52:00-04:00",
+      },
+      ptbr: {
         translation: "Natação",
         is_approved: true,
         approved_at: "2018-09-12T14:37:50-04:00",
@@ -181943,6 +188303,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Piscina",
         is_approved: true,
+        approved_at: "2019-04-14T18:05:30-04:00",
+      },
+      ptbr: {
+        translation: "Piscina",
+        is_approved: true,
         approved_at: "2019-07-01T15:51:34-04:00",
       },
       ro: {
@@ -182138,6 +188503,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T19:41:54-05:00",
       },
       pt: {
+        translation: "Baloiço",
+        is_approved: true,
+        approved_at: "2019-03-25T18:52:03-04:00",
+      },
+      ptbr: {
         translation: "Balanço",
         is_approved: true,
         approved_at: "2018-09-12T14:37:59-04:00",
@@ -182256,6 +188626,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:32:36-04:00",
       },
       pt: {
+        translation: "Queijo suíço",
+        is_approved: true,
+        approved_at: "2019-04-14T18:05:45-04:00",
+      },
+      ptbr: {
         translation: "Queijo suíço",
         is_approved: true,
         approved_at: "2019-08-03T12:54:28-04:00",
@@ -182416,6 +188791,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Interruptor",
         is_approved: true,
+        approved_at: "2019-09-08T18:06:17-04:00",
+      },
+      ptbr: {
+        translation: "Interruptor",
+        is_approved: true,
         approved_at: "2019-08-03T12:55:01-04:00",
       },
       ro: {
@@ -182534,6 +188914,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Espada",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:35-04:00",
+      },
+      ptbr: {
+        translation: "Espada",
+        is_approved: true,
         approved_at: "2018-09-12T14:38:03-04:00",
       },
       ro: {
@@ -182650,6 +189035,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:39:08-05:00",
       },
       pt: {
+        translation: "Peixe-espada",
+        is_approved: true,
+        approved_at: "2019-03-25T18:52:20-04:00",
+      },
+      ptbr: {
         translation: "Peixe-espada",
         is_approved: true,
         approved_at: "2018-09-12T14:38:11-04:00",
@@ -182773,6 +189163,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:00:20-04:00",
       },
       pt: {
+        translation: "T-Rex / Tiranossauros",
+        is_approved: true,
+        approved_at: "2019-03-25T18:53:04-04:00",
+      },
+      ptbr: {
         translation: "Tiranossauro rex",
         is_approved: true,
         approved_at: "2023-08-24T15:37:46-04:00",
@@ -182910,6 +189305,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:32:38-04:00",
       },
       pt: {
+        translation: "T-shirt",
+        is_approved: true,
+        approved_at: "2019-04-14T18:06:45-04:00",
+      },
+      ptbr: {
         translation: "Camiseta",
         is_approved: true,
         approved_at: "2019-07-01T15:51:43-04:00",
@@ -183139,6 +189539,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Mesa",
         is_approved: true,
+        approved_at: "2019-07-21T14:09:48-04:00",
+      },
+      ptbr: {
+        translation: "Mesa",
+        is_approved: true,
         approved_at: "2018-09-12T14:38:33-04:00",
       },
       ro: {
@@ -183275,6 +189680,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Toalha de mesa",
         is_approved: true,
+        approved_at: "2019-04-14T18:07:05-04:00",
+      },
+      ptbr: {
+        translation: "Toalha de mesa",
+        is_approved: true,
         approved_at: "2019-08-03T12:55:37-04:00",
       },
       ro: {
@@ -183391,6 +189801,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:32:40-04:00",
       },
       pt: {
+        translation: "Ténis de mesa",
+        is_approved: true,
+        approved_at: "2022-05-28T12:33:39-04:00",
+      },
+      ptbr: {
         translation: "Mesa de tênis",
         is_approved: true,
         approved_at: "2022-04-10T10:03:42-04:00",
@@ -183511,6 +189926,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tablet",
         is_approved: true,
+        approved_at: "2019-04-12T21:14:52-04:00",
+      },
+      ptbr: {
+        translation: "Tablet",
+        is_approved: true,
         approved_at: "2019-07-01T15:51:49-04:00",
       },
       ro: {
@@ -183627,6 +190047,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-11-12T04:48:02-05:00",
       },
       pt: {
+        translation: "Taco",
+        is_approved: true,
+        approved_at: "2020-02-03T10:11:25-05:00",
+      },
+      ptbr: {
         translation: "Taco",
         is_approved: true,
         approved_at: "2019-10-16T12:43:30-04:00",
@@ -183787,6 +190212,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Cauda",
         is_approved: true,
+        approved_at: "2019-04-14T18:07:12-04:00",
+      },
+      ptbr: {
+        translation: "Cauda",
+        is_approved: true,
         approved_at: "2019-08-03T12:55:49-04:00",
       },
       ro: {
@@ -183930,6 +190360,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:32:43-04:00",
       },
       pt: {
+        translation: "Alto",
+        is_approved: true,
+        approved_at: "2020-02-07T18:00:00-05:00",
+      },
+      ptbr: {
         translation: "Alto",
         is_approved: true,
         approved_at: "2019-08-03T12:50:06-04:00",
@@ -184123,6 +190558,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:32:45-04:00",
       },
       pt: {
+        translation: "Fita-cola",
+        is_approved: true,
+        approved_at: "2019-04-14T18:08:22-04:00",
+      },
+      ptbr: {
         translation: "Fita",
         is_approved: true,
         approved_at: "2019-08-03T12:55:53-04:00",
@@ -184292,6 +190732,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Alvo",
         is_approved: true,
+        approved_at: "2020-02-03T19:29:15-05:00",
+      },
+      ptbr: {
+        translation: "Alvo",
+        is_approved: true,
         approved_at: "2019-07-18T16:42:04-04:00",
       },
       ro: {
@@ -184408,6 +190853,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:22-04:00",
       },
       pt: {
+        translation: "Tatuagem",
+        is_approved: true,
+        approved_at: "2019-04-12T21:15:33-04:00",
+      },
+      ptbr: {
         translation: "Tatuagem",
         is_approved: true,
         approved_at: "2019-07-11T21:58:15-04:00",
@@ -184540,6 +190990,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:22-04:00",
       },
       pt: {
+        translation: "Taberna",
+        is_approved: true,
+        approved_at: "2019-04-12T21:17:28-04:00",
+      },
+      ptbr: {
         translation: "Taberna",
         is_approved: true,
         approved_at: "2019-07-02T09:25:59-04:00",
@@ -184780,6 +191235,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Táxi",
         is_approved: true,
+        approved_at: "2019-03-25T18:53:33-04:00",
+      },
+      ptbr: {
+        translation: "Táxi",
+        is_approved: true,
         approved_at: "2018-09-12T14:38:43-04:00",
       },
       ro: {
@@ -184896,6 +191356,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:23-04:00",
       },
       pt: {
+        translation: "Chá",
+        is_approved: true,
+        approved_at: "2019-04-12T21:15:43-04:00",
+      },
+      ptbr: {
         translation: "Chá",
         is_approved: true,
         approved_at: "2019-07-01T15:51:56-04:00",
@@ -185043,6 +191508,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bule de chá",
         is_approved: true,
+        approved_at: "2019-03-25T18:53:45-04:00",
+      },
+      ptbr: {
+        translation: "Bule de chá",
+        is_approved: true,
         approved_at: "2022-05-12T06:54:07-04:00",
       },
       ro: {
@@ -185159,6 +191629,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:27-04:00",
       },
       pt: {
+        translation: "Lágrimas",
+        is_approved: true,
+        approved_at: "2019-04-12T21:16:09-04:00",
+      },
+      ptbr: {
         translation: "Lágrimas",
         is_approved: true,
         approved_at: "2019-07-02T09:26:19-04:00",
@@ -185279,6 +191754,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tecnologia",
         is_approved: true,
+        approved_at: "2019-03-25T18:53:48-04:00",
+      },
+      ptbr: {
+        translation: "Tecnologia",
+        is_approved: true,
         approved_at: "2018-09-12T14:38:57-04:00",
       },
       ro: {
@@ -185395,6 +191875,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:21:51-04:00",
       },
       pt: {
+        translation: "Urso de peluche",
+        is_approved: true,
+        approved_at: "2020-03-20T11:22:11-04:00",
+      },
+      ptbr: {
         translation: "Urso de pelúcia",
         is_approved: true,
         approved_at: "2022-05-07T08:59:12-04:00",
@@ -185607,6 +192092,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dente",
         is_approved: true,
+        approved_at: "2019-04-12T21:16:24-04:00",
+      },
+      ptbr: {
+        translation: "Dente",
+        is_approved: true,
         approved_at: "2022-05-07T08:57:27-04:00",
       },
       ro: {
@@ -185725,6 +192215,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Telefone",
         is_approved: true,
+        approved_at: "2019-04-12T21:16:26-04:00",
+      },
+      ptbr: {
+        translation: "Telefone",
+        is_approved: true,
         approved_at: "2019-07-02T09:26:32-04:00",
       },
       ro: {
@@ -185841,6 +192336,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:34-04:00",
       },
       pt: {
+        translation: "Cabine telefónica",
+        is_approved: true,
+        approved_at: "2019-04-12T21:16:32-04:00",
+      },
+      ptbr: {
         translation: "Cabine telefônica",
         is_approved: true,
         approved_at: "2019-07-02T09:26:34-04:00",
@@ -185961,6 +192461,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Telescópio",
         is_approved: true,
+        approved_at: "2019-04-12T21:16:35-04:00",
+      },
+      ptbr: {
+        translation: "Telescópio",
+        is_approved: true,
         approved_at: "2019-07-02T09:26:35-04:00",
       },
       ro: {
@@ -186077,6 +192582,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:50-04:00",
       },
       pt: {
+        translation: "Televisão",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:08-04:00",
+      },
+      ptbr: {
         translation: "Televisão",
         is_approved: true,
         approved_at: "2018-09-12T14:39:01-04:00",
@@ -186209,6 +192719,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:51-04:00",
       },
       pt: {
+        translation: "Templo",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:09-04:00",
+      },
+      ptbr: {
         translation: "Templo",
         is_approved: true,
         approved_at: "2018-09-12T14:39:07-04:00",
@@ -186354,6 +192869,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:52-04:00",
       },
       pt: {
+        translation: "Ténis (desporto)",
+        is_approved: true,
+        approved_at: "2019-03-25T18:54:16-04:00",
+      },
+      ptbr: {
         translation: "Jogo de tênis",
         is_approved: true,
         approved_at: "2022-04-10T10:03:45-04:00",
@@ -186499,6 +193019,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:39:36-04:00",
       },
       pt: {
+        translation: "Bola de ténis",
+        is_approved: true,
+        approved_at: "2019-04-12T21:16:49-04:00",
+      },
+      ptbr: {
         translation: "Bola de tênis",
         is_approved: true,
         approved_at: "2022-04-10T10:03:49-04:00",
@@ -186617,6 +193142,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:07-04:00",
       },
       pt: {
+        translation: "Campo de ténis",
+        is_approved: true,
+        approved_at: "2019-04-12T21:17:02-04:00",
+      },
+      ptbr: {
         translation: "Quadra de tênis",
         is_approved: true,
         approved_at: "2022-04-10T10:03:54-04:00",
@@ -186751,6 +193281,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tenda",
         is_approved: true,
+        approved_at: "2019-04-12T21:17:32-04:00",
+      },
+      ptbr: {
+        translation: "Tenda",
+        is_approved: true,
         approved_at: "2019-08-03T12:49:43-04:00",
       },
       ro: {
@@ -186869,6 +193404,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tetris",
         is_approved: true,
+        approved_at: "2019-04-12T21:17:33-04:00",
+      },
+      ptbr: {
+        translation: "Tetris",
+        is_approved: true,
         approved_at: "2019-07-02T09:26:44-04:00",
       },
       ro: {
@@ -186985,6 +193525,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:09-04:00",
       },
       pt: {
+        translation: "SMS",
+        is_approved: true,
+        approved_at: "2019-04-12T21:18:17-04:00",
+      },
+      ptbr: {
         translation: "Mensagens de texto",
         is_approved: true,
         approved_at: "2019-08-03T12:49:49-04:00",
@@ -187103,6 +193648,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:12-04:00",
       },
       pt: {
+        translation: "Ação de graças",
+        is_approved: true,
+        approved_at: "2019-04-14T18:09:02-04:00",
+      },
+      ptbr: {
         translation: "Ação de Graças",
         is_approved: true,
         approved_at: "2025-02-02T08:15:10-05:00",
@@ -187237,6 +193787,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "O End",
         is_approved: true,
+        approved_at: "2023-03-14T18:32:47-04:00",
+      },
+      ptbr: {
+        translation: "O End",
+        is_approved: true,
         approved_at: "2022-04-25T21:53:13-04:00",
       },
       ro: {
@@ -187353,6 +193908,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:21-04:00",
       },
       pt: {
+        translation: "Teatro",
+        is_approved: true,
+        approved_at: "2019-04-12T21:19:08-04:00",
+      },
+      ptbr: {
         translation: "Teatro",
         is_approved: true,
         approved_at: "2019-07-02T09:26:58-04:00",
@@ -187487,6 +194047,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Parque temático",
         is_approved: true,
+        approved_at: "2019-04-14T18:09:08-04:00",
+      },
+      ptbr: {
+        translation: "Parque temático",
+        is_approved: true,
         approved_at: "2019-07-02T09:27:00-04:00",
       },
       ro: {
@@ -187603,6 +194168,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:42-04:00",
       },
       pt: {
+        translation: "Termómetro",
+        is_approved: true,
+        approved_at: "2019-04-12T21:19:17-04:00",
+      },
+      ptbr: {
         translation: "Termômetro",
         is_approved: true,
         approved_at: "2019-07-18T16:42:11-04:00",
@@ -187737,6 +194307,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ladrão",
         is_approved: true,
+        approved_at: "2020-05-02T15:52:51-04:00",
+      },
+      ptbr: {
+        translation: "Ladrão",
+        is_approved: true,
         approved_at: "2019-08-03T12:49:56-04:00",
       },
       ro: {
@@ -187853,6 +194428,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:55-04:00",
       },
       pt: {
+        translation: "Trono",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:15-04:00",
+      },
+      ptbr: {
         translation: "Trono",
         is_approved: true,
         approved_at: "2018-11-11T15:34:30-05:00",
@@ -188000,6 +194580,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bandido",
         is_approved: true,
+        approved_at: "2020-02-03T19:23:12-05:00",
+      },
+      ptbr: {
+        translation: "Bandido",
+        is_approved: true,
         approved_at: "2019-08-29T09:54:44-04:00",
       },
       ro: {
@@ -188130,6 +194715,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:45-04:00",
       },
       pt: {
+        translation: "Polegar",
+        is_approved: true,
+        approved_at: "2019-04-12T21:19:35-04:00",
+      },
+      ptbr: {
         translation: "Polegar",
         is_approved: true,
         approved_at: "2019-08-03T12:56:47-04:00",
@@ -188288,6 +194878,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:45:55-04:00",
       },
       pt: {
+        translation: "Relâmpago",
+        is_approved: true,
+        approved_at: "2021-07-24T07:32:04-04:00",
+      },
+      ptbr: {
         translation: "Trovão",
         is_approved: true,
         approved_at: "2018-09-12T14:40:22-04:00",
@@ -188487,6 +195082,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Trovoada",
         is_approved: true,
+        approved_at: "2019-03-25T18:55:39-04:00",
+      },
+      ptbr: {
+        translation: "Trovoada",
+        is_approved: true,
         approved_at: "2018-09-12T14:40:45-04:00",
       },
       ro: {
@@ -188603,6 +195203,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:49-04:00",
       },
       pt: {
+        translation: "Jogo do galo",
+        is_approved: true,
+        approved_at: "2022-09-15T19:46:12-04:00",
+      },
+      ptbr: {
         translation: "Jogo da velha",
         is_approved: true,
         approved_at: "2022-05-07T08:51:18-04:00",
@@ -188721,6 +195326,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:42:49-04:00",
       },
       pt: {
+        translation: "Bilhete",
+        is_approved: true,
+        approved_at: "2019-04-12T21:20:26-04:00",
+      },
+      ptbr: {
         translation: "Bilhete",
         is_approved: true,
         approved_at: "2019-07-01T15:52:12-04:00",
@@ -188868,6 +195478,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Gravata",
         is_approved: true,
+        approved_at: "2019-04-12T21:20:33-04:00",
+      },
+      ptbr: {
+        translation: "Gravata",
+        is_approved: true,
         approved_at: "2019-08-03T12:56:56-04:00",
       },
       ro: {
@@ -188986,6 +195601,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tigre",
         is_approved: true,
+        approved_at: "2019-04-12T21:20:35-04:00",
+      },
+      ptbr: {
+        translation: "Tigre",
+        is_approved: true,
         approved_at: "2019-07-01T15:52:15-04:00",
       },
       ro: {
@@ -189102,6 +195722,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T04:43:01-04:00",
       },
       pt: {
+        translation: "Máquina do tempo",
+        is_approved: true,
+        approved_at: "2019-04-12T21:21:16-04:00",
+      },
+      ptbr: {
         translation: "Máquina do tempo",
         is_approved: true,
         approved_at: "2019-06-22T22:22:20-04:00",
@@ -189314,6 +195939,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lata",
         is_approved: true,
+        approved_at: "2019-04-12T21:21:30-04:00",
+      },
+      ptbr: {
+        translation: "Lata",
+        is_approved: true,
         approved_at: "2019-07-11T21:59:23-04:00",
       },
       ro: {
@@ -189430,6 +196060,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:44:50-04:00",
       },
       pt: {
+        translation: "Ouropel",
+        is_approved: true,
+        approved_at: "2019-04-14T18:10:15-04:00",
+      },
+      ptbr: {
         translation: "Ouropel de Natal",
         is_approved: true,
         approved_at: "2019-09-06T14:15:38-04:00",
@@ -189562,6 +196197,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:44:51-04:00",
       },
       pt: {
+        translation: "Pneu de baloiço",
+        is_approved: true,
+        approved_at: "2020-02-07T18:00:42-05:00",
+      },
+      ptbr: {
         translation: "Balanço de pneu",
         is_approved: true,
         approved_at: "2019-08-03T12:57:59-04:00",
@@ -189709,6 +196349,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lenço de papel",
         is_approved: true,
+        approved_at: "2019-04-12T21:21:42-04:00",
+      },
+      ptbr: {
+        translation: "Lenço de papel",
+        is_approved: true,
         approved_at: "2019-08-03T12:58:10-04:00",
       },
       ro: {
@@ -189839,6 +196484,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:39:37-05:00",
       },
       pt: {
+        translation: "Titanic",
+        is_approved: true,
+        approved_at: "2023-08-17T08:01:03-04:00",
+      },
+      ptbr: {
         translation: "Titânico",
         is_approved: true,
         approved_at: "2019-09-11T15:18:30-04:00",
@@ -190039,6 +196689,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dinamite",
         is_approved: true,
+        approved_at: "2019-07-21T14:10:46-04:00",
+      },
+      ptbr: {
+        translation: "Dinamite",
+        is_approved: true,
         approved_at: "2021-10-18T13:38:38-04:00",
       },
       ro: {
@@ -190155,6 +196810,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:44:53-04:00",
       },
       pt: {
+        translation: "Canhão de TNT",
+        is_approved: true,
+        approved_at: "2019-04-12T21:21:47-04:00",
+      },
+      ptbr: {
         translation: "Canhão de dinamite",
         is_approved: true,
         approved_at: "2023-08-24T15:39:29-04:00",
@@ -190323,6 +196983,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Sapo",
         is_approved: true,
+        approved_at: "2019-04-12T21:21:52-04:00",
+      },
+      ptbr: {
+        translation: "Sapo",
+        is_approved: true,
         approved_at: "2019-08-03T12:58:16-04:00",
       },
       ro: {
@@ -190439,6 +197104,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:44:55-04:00",
       },
       pt: {
+        translation: "Torrada",
+        is_approved: true,
+        approved_at: "2019-04-12T21:22:02-04:00",
+      },
+      ptbr: {
         translation: "Torrada",
         is_approved: true,
         approved_at: "2019-08-03T12:50:26-04:00",
@@ -190559,6 +197229,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Torradeira",
         is_approved: true,
+        approved_at: "2019-08-23T18:59:24-04:00",
+      },
+      ptbr: {
+        translation: "Torradeira",
+        is_approved: true,
         approved_at: "2019-08-03T12:50:28-04:00",
       },
       ro: {
@@ -190675,6 +197350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:02-04:00",
       },
       pt: {
+        translation: "Dedos do pé",
+        is_approved: true,
+        approved_at: "2019-09-01T11:31:07-04:00",
+      },
+      ptbr: {
         translation: "Dedos do pé",
         is_approved: true,
         approved_at: "2019-08-03T12:58:24-04:00",
@@ -190807,6 +197487,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:36-04:00",
       },
       pt: {
+        translation: "Sanita",
+        is_approved: true,
+        approved_at: "2021-05-20T18:25:49-04:00",
+      },
+      ptbr: {
         translation: "Privada",
         is_approved: true,
         approved_at: "2019-07-02T09:27:13-04:00",
@@ -190925,6 +197610,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:03-04:00",
       },
       pt: {
+        translation: "Papel higiénico",
+        is_approved: true,
+        approved_at: "2019-04-12T21:22:14-04:00",
+      },
+      ptbr: {
         translation: "Papel higiênico",
         is_approved: true,
         approved_at: "2019-07-02T09:27:16-04:00",
@@ -191043,6 +197733,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:58:10-04:00",
       },
       pt: {
+        translation: "Tomate",
+        is_approved: true,
+        approved_at: "2020-07-12T15:26:31-04:00",
+      },
+      ptbr: {
         translation: "Tomate",
         is_approved: true,
         approved_at: "2019-06-23T10:05:31-04:00",
@@ -191231,6 +197926,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Ketchup",
         is_approved: true,
+        approved_at: "2019-04-12T21:22:17-04:00",
+      },
+      ptbr: {
+        translation: "Ketchup",
+        is_approved: true,
         approved_at: "2019-07-01T15:52:36-04:00",
       },
       ro: {
@@ -191349,6 +198049,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Língua",
         is_approved: true,
+        approved_at: "2019-04-12T21:22:20-04:00",
+      },
+      ptbr: {
+        translation: "Língua",
+        is_approved: true,
         approved_at: "2019-08-03T12:58:37-04:00",
       },
       ro: {
@@ -191465,6 +198170,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:09-04:00",
       },
       pt: {
+        translation: "Ferramentas",
+        is_approved: true,
+        approved_at: "2020-04-27T09:28:55-04:00",
+      },
+      ptbr: {
         translation: "Ferramentas",
         is_approved: true,
         approved_at: "2018-09-12T14:40:52-04:00",
@@ -191677,6 +198387,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Dente",
         is_approved: true,
+        approved_at: "2019-04-12T21:22:22-04:00",
+      },
+      ptbr: {
+        translation: "Dente",
+        is_approved: true,
         approved_at: "2019-07-01T15:52:40-04:00",
       },
       ro: {
@@ -191795,6 +198510,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fada dos dentes",
         is_approved: true,
+        approved_at: "2019-04-12T21:22:28-04:00",
+      },
+      ptbr: {
+        translation: "Fada dos dentes",
+        is_approved: true,
         approved_at: "2019-07-01T15:53:06-04:00",
       },
       ro: {
@@ -191911,6 +198631,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:09-04:00",
       },
       pt: {
+        translation: "Escova de dentes",
+        is_approved: true,
+        approved_at: "2019-04-12T21:22:34-04:00",
+      },
+      ptbr: {
         translation: "Escova de dente",
         is_approved: true,
         approved_at: "2023-08-24T15:40:08-04:00",
@@ -192029,6 +198754,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:12-04:00",
       },
       pt: {
+        translation: "Pasta de dentes",
+        is_approved: true,
+        approved_at: "2019-04-12T21:22:45-04:00",
+      },
+      ptbr: {
         translation: "Pasta de dente",
         is_approved: true,
         approved_at: "2019-07-01T15:52:55-04:00",
@@ -192161,6 +198891,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-06T15:57:02-04:00",
       },
       pt: {
+        translation: "Cartola",
+        is_approved: true,
+        approved_at: "2020-06-29T07:31:16-04:00",
+      },
+      ptbr: {
         translation: "Cartola",
         is_approved: true,
         approved_at: "2019-08-20T21:45:22-04:00",
@@ -192310,6 +199045,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:12-04:00",
       },
       pt: {
+        translation: "Tocha / Archote",
+        is_approved: true,
+        approved_at: "2019-03-25T18:56:16-04:00",
+      },
+      ptbr: {
         translation: "Tocha",
         is_approved: true,
         approved_at: "2018-09-12T14:42:38-04:00",
@@ -192428,6 +199168,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:15-04:00",
       },
       pt: {
+        translation: "Tornado",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:18-04:00",
+      },
+      ptbr: {
         translation: "Tornado",
         is_approved: true,
         approved_at: "2018-09-12T14:42:44-04:00",
@@ -192657,6 +199402,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tartaruga",
         is_approved: true,
+        approved_at: "2019-04-12T21:24:20-04:00",
+      },
+      ptbr: {
+        translation: "Tartaruga",
+        is_approved: true,
         approved_at: "2019-08-03T12:59:00-04:00",
       },
       ro: {
@@ -192773,6 +199523,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:16-04:00",
       },
       pt: {
+        translation: "Totem",
+        is_approved: true,
+        approved_at: "2019-04-12T21:25:28-04:00",
+      },
+      ptbr: {
         translation: "Totem",
         is_approved: true,
         approved_at: "2019-07-18T16:43:36-04:00",
@@ -192907,6 +199662,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Toalha",
         is_approved: true,
+        approved_at: "2019-04-12T21:25:47-04:00",
+      },
+      ptbr: {
+        translation: "Toalha",
+        is_approved: true,
         approved_at: "2019-08-03T12:59:17-04:00",
       },
       ro: {
@@ -193023,6 +199783,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:20-04:00",
       },
       pt: {
+        translation: "Toalheiro",
+        is_approved: true,
+        approved_at: "2019-09-01T11:31:35-04:00",
+      },
+      ptbr: {
         translation: "Toalheiro",
         is_approved: true,
         approved_at: "2019-09-17T19:07:52-04:00",
@@ -193157,6 +199922,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Brinquedo",
         is_approved: true,
+        approved_at: "2019-04-12T21:26:30-04:00",
+      },
+      ptbr: {
+        translation: "Brinquedo",
+        is_approved: true,
         approved_at: "2018-03-25T17:26:45-04:00",
       },
       ro: {
@@ -193273,6 +200043,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:21:52-04:00",
       },
       pt: {
+        translation: "Soldado de brincar",
+        is_approved: true,
+        approved_at: "2020-06-10T15:05:51-04:00",
+      },
+      ptbr: {
         translation: "Soldado de brinquedo",
         is_approved: true,
         approved_at: "2019-07-02T09:27:32-04:00",
@@ -193454,6 +200229,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pista",
         is_approved: true,
+        approved_at: "2020-02-07T18:01:38-05:00",
+      },
+      ptbr: {
+        translation: "Pista",
+        is_approved: true,
         approved_at: "2019-07-11T21:59:38-04:00",
       },
       ro: {
@@ -193570,6 +200350,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:51:56-04:00",
       },
       pt: {
+        translation: "Trator",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:21-04:00",
+      },
+      ptbr: {
         translation: "Trator",
         is_approved: true,
         approved_at: "2018-09-12T14:43:02-04:00",
@@ -193702,6 +200487,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:28-04:00",
       },
       pt: {
+        translation: "Trânsito",
+        is_approved: true,
+        approved_at: "2019-04-12T21:26:59-04:00",
+      },
+      ptbr: {
         translation: "Tráfego",
         is_approved: true,
         approved_at: "2019-07-01T15:54:41-04:00",
@@ -193834,6 +200624,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:29-04:00",
       },
       pt: {
+        translation: "Engarrafamento",
+        is_approved: true,
+        approved_at: "2019-04-12T21:27:01-04:00",
+      },
+      ptbr: {
         translation: "Congestionamento",
         is_approved: true,
         approved_at: "2023-08-24T15:40:33-04:00",
@@ -193954,6 +200749,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Semáforo",
         is_approved: true,
+        approved_at: "2019-04-12T21:27:03-04:00",
+      },
+      ptbr: {
+        translation: "Semáforo",
+        is_approved: true,
         approved_at: "2019-07-11T21:59:48-04:00",
       },
       ro: {
@@ -194070,6 +200870,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-02T12:56:24-04:00",
       },
       pt: {
+        translation: "Atrelado",
+        is_approved: true,
+        approved_at: "2020-02-03T19:29:39-05:00",
+      },
+      ptbr: {
         translation: "Trailer",
         is_approved: true,
         approved_at: "2019-07-01T15:54:47-04:00",
@@ -194202,6 +201007,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:32-04:00",
       },
       pt: {
+        translation: "Gare",
+        is_approved: true,
+        approved_at: "2019-04-12T21:27:34-04:00",
+      },
+      ptbr: {
         translation: "Estação de trem",
         is_approved: true,
         approved_at: "2025-02-20T06:10:36-05:00",
@@ -194334,6 +201144,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:32-04:00",
       },
       pt: {
+        translation: "Carril",
+        is_approved: true,
+        approved_at: "2019-09-01T11:32:37-04:00",
+      },
+      ptbr: {
         translation: "Trilhos de trem",
         is_approved: true,
         approved_at: "2019-07-01T15:54:56-04:00",
@@ -194470,6 +201285,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:34-04:00",
       },
       pt: {
+        translation: "Comboios",
+        is_approved: true,
+        approved_at: "2019-04-12T21:27:46-04:00",
+      },
+      ptbr: {
         translation: "Trens",
         is_approved: true,
         approved_at: "2019-07-01T15:54:58-04:00",
@@ -194602,6 +201422,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:02-04:00",
       },
       pt: {
+        translation: "Trampolim",
+        is_approved: true,
+        approved_at: "2019-03-25T18:56:51-04:00",
+      },
+      ptbr: {
         translation: "Trampolim",
         is_approved: true,
         approved_at: "2025-02-20T05:57:14-05:00",
@@ -194778,6 +201603,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-11-08T20:40:02-05:00",
       },
       pt: {
+        translation: "Transport",
+        is_approved: true,
+        approved_at: "2019-04-22T15:08:59-04:00",
+      },
+      ptbr: {
         translation: "Transporte",
         is_approved: true,
         approved_at: "2023-08-14T16:41:48-04:00",
@@ -194982,6 +201812,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Transporte",
         is_approved: true,
+        approved_at: "2020-02-07T18:01:51-05:00",
+      },
+      ptbr: {
+        translation: "Transporte",
+        is_approved: true,
         approved_at: "2019-07-01T15:55:19-04:00",
       },
       ro: {
@@ -195116,6 +201951,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:38-04:00",
       },
       pt: {
+        translation: "Armadilha",
+        is_approved: true,
+        approved_at: "2019-04-12T21:27:57-04:00",
+      },
+      ptbr: {
         translation: "Armadilha",
         is_approved: true,
         approved_at: "2019-07-01T15:55:21-04:00",
@@ -195492,6 +202332,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:42-04:00",
       },
       pt: {
+        translation: "Caixote do lixo",
+        is_approved: true,
+        approved_at: "2019-04-12T21:28:07-04:00",
+      },
+      ptbr: {
         translation: "Lixeira",
         is_approved: true,
         approved_at: "2019-09-05T17:34:34-04:00",
@@ -195624,6 +202469,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:43-04:00",
       },
       pt: {
+        translation: "Passadeira de corrida",
+        is_approved: true,
+        approved_at: "2020-02-07T18:02:15-05:00",
+      },
+      ptbr: {
         translation: "Esteira",
         is_approved: true,
         approved_at: "2019-08-03T12:59:40-04:00",
@@ -195762,6 +202612,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tesouro",
         is_approved: true,
+        approved_at: "2021-07-01T19:08:13-04:00",
+      },
+      ptbr: {
+        translation: "Tesouro",
+        is_approved: true,
         approved_at: "2019-05-31T15:19:06-04:00",
       },
       ro: {
@@ -195878,6 +202733,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-04-06T13:13:51-04:00",
       },
       pt: {
+        translation: "Baú do tesouro",
+        is_approved: true,
+        approved_at: "2020-06-29T07:31:12-04:00",
+      },
+      ptbr: {
         translation: "Baú do tesouro",
         is_approved: true,
         approved_at: "2022-04-14T08:09:40-04:00",
@@ -196025,6 +202885,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Árvore",
         is_approved: true,
+        approved_at: "2020-04-29T06:27:10-04:00",
+      },
+      ptbr: {
+        translation: "Árvore",
+        is_approved: true,
         approved_at: "2019-08-17T09:13:24-04:00",
       },
       ro: {
@@ -196159,6 +203024,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:45:48-04:00",
       },
       pt: {
+        translation: "Rã",
+        is_approved: true,
+        approved_at: "2019-04-12T21:28:22-04:00",
+      },
+      ptbr: {
         translation: "Rã",
         is_approved: true,
         approved_at: "2023-08-24T15:43:06-04:00",
@@ -196306,6 +203176,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casa na árvore",
         is_approved: true,
+        approved_at: "2019-03-25T18:57:23-04:00",
+      },
+      ptbr: {
+        translation: "Casa na árvore",
+        is_approved: true,
         approved_at: "2019-08-08T16:51:24-04:00",
       },
       ro: {
@@ -196424,6 +203299,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Triângulo",
         is_approved: true,
+        approved_at: "2019-04-12T21:28:28-04:00",
+      },
+      ptbr: {
+        translation: "Triângulo",
+        is_approved: true,
         approved_at: "2019-07-01T15:55:55-04:00",
       },
       ro: {
@@ -196535,6 +203415,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-15T12:30:01-04:00",
       },
       pt: {
+        translation: "Tiro com efeito",
+        is_approved: true,
+        approved_at: "2024-11-06T09:45:23-05:00",
+      },
+      ptbr: {
         translation: "Truque de tiro",
         is_approved: true,
         approved_at: "2024-10-06T16:50:26-04:00",
@@ -196648,6 +203533,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:40:07-04:00",
       },
       pt: {
+        translation: "Triciclo",
+        is_approved: true,
+        approved_at: "2019-04-12T21:28:29-04:00",
+      },
+      ptbr: {
         translation: "Triciclo",
         is_approved: true,
         approved_at: "2019-07-01T15:55:58-04:00",
@@ -196879,6 +203769,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:40:09-04:00",
       },
       pt: {
+        translation: "Carrinho de compras",
+        is_approved: true,
+        approved_at: "2020-02-07T18:02:37-05:00",
+      },
+      ptbr: {
         translation: "Trólebus",
         is_approved: true,
         approved_at: "2023-08-24T15:44:41-04:00",
@@ -197013,6 +203908,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Troféu",
         is_approved: true,
+        approved_at: "2021-09-12T23:17:25-04:00",
+      },
+      ptbr: {
+        translation: "Troféu",
+        is_approved: true,
         approved_at: "2019-07-01T15:56:08-04:00",
       },
       ro: {
@@ -197145,6 +204045,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Calças",
         is_approved: true,
+        approved_at: "2019-04-12T21:28:57-04:00",
+      },
+      ptbr: {
+        translation: "Calças",
+        is_approved: true,
         approved_at: "2019-08-03T13:00:00-04:00",
       },
       ro: {
@@ -197261,6 +204166,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:42:41-04:00",
       },
       pt: {
+        translation: "Carreta",
+        is_approved: true,
+        approved_at: "2020-02-18T18:08:01-05:00",
+      },
+      ptbr: {
         translation: "Caminhão",
         is_approved: true,
         approved_at: "2019-08-03T12:50:59-04:00",
@@ -197393,6 +204303,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:40:25-04:00",
       },
       pt: {
+        translation: "Trompete",
+        is_approved: true,
+        approved_at: "2019-04-12T21:29:18-04:00",
+      },
+      ptbr: {
         translation: "Trombeta",
         is_approved: true,
         approved_at: "2019-07-18T16:42:52-04:00",
@@ -197511,6 +204426,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:40:26-04:00",
       },
       pt: {
+        translation: "Tsunami",
+        is_approved: true,
+        approved_at: "2019-04-12T21:29:55-04:00",
+      },
+      ptbr: {
         translation: "Tsunami",
         is_approved: true,
         approved_at: "2019-07-18T16:42:50-04:00",
@@ -197727,6 +204647,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Banheira",
         is_approved: true,
+        approved_at: "2019-04-12T21:29:58-04:00",
+      },
+      ptbr: {
+        translation: "Banheira",
+        is_approved: true,
         approved_at: "2019-08-03T13:00:09-04:00",
       },
       ro: {
@@ -197845,6 +204770,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Tuba",
         is_approved: true,
+        approved_at: "2024-10-27T10:50:44-04:00",
+      },
+      ptbr: {
+        translation: "Tuba",
+        is_approved: true,
         approved_at: "2024-10-06T11:18:34-04:00",
       },
       ro: {
@@ -197956,6 +204886,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:40:28-04:00",
       },
       pt: {
+        translation: "Jogo da corda",
+        is_approved: true,
+        approved_at: "2020-02-03T19:30:10-05:00",
+      },
+      ptbr: {
         translation: "Cabo de guerra",
         is_approved: true,
         approved_at: "2019-07-18T16:43:43-04:00",
@@ -198103,6 +205038,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Atum",
         is_approved: true,
+        approved_at: "2019-04-12T21:30:02-04:00",
+      },
+      ptbr: {
+        translation: "Atum",
+        is_approved: true,
         approved_at: "2019-08-03T13:00:23-04:00",
       },
       ro: {
@@ -198221,6 +205161,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Túnel",
         is_approved: true,
+        approved_at: "2019-04-12T21:30:04-04:00",
+      },
+      ptbr: {
+        translation: "Túnel",
+        is_approved: true,
         approved_at: "2019-07-18T16:42:55-04:00",
       },
       ro: {
@@ -198337,6 +205282,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:05-04:00",
       },
       pt: {
+        translation: "Perú",
+        is_approved: true,
+        approved_at: "2019-03-25T18:57:29-04:00",
+      },
+      ptbr: {
         translation: "Peru",
         is_approved: true,
         approved_at: "2018-09-12T14:29:50-04:00",
@@ -198474,6 +205424,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:50:37-04:00",
       },
       pt: {
+        translation: "Turret",
+        is_approved: true,
+        approved_at: "2019-11-22T22:00:59-05:00",
+      },
+      ptbr: {
         translation: "Torreta",
         is_approved: true,
         approved_at: "2021-12-05T06:55:29-05:00",
@@ -198714,6 +205669,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:22:39-04:00",
       },
       pt: {
+        translation: "Turtle",
+        is_approved: true,
+        approved_at: "2020-12-26T14:29:39-05:00",
+      },
+      ptbr: {
         translation: "Tartaruga",
         is_approved: true,
         approved_at: "2023-08-14T16:33:28-04:00",
@@ -198848,6 +205808,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Galho",
         is_approved: true,
+        approved_at: "2020-02-07T18:03:02-05:00",
+      },
+      ptbr: {
+        translation: "Galho",
+        is_approved: true,
         approved_at: "2019-08-03T13:03:37-04:00",
       },
       ro: {
@@ -198978,6 +205943,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:13-04:00",
       },
       pt: {
+        translation: "Máquina de escrever",
+        is_approved: true,
+        approved_at: "2019-04-12T21:31:15-04:00",
+      },
+      ptbr: {
         translation: "Máquina de escrever",
         is_approved: true,
         approved_at: "2019-08-03T13:03:47-04:00",
@@ -199139,6 +206109,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Pneu",
         is_approved: true,
+        approved_at: "2019-04-12T21:31:18-04:00",
+      },
+      ptbr: {
+        translation: "Pneu",
+        is_approved: true,
         approved_at: "2019-08-03T13:03:54-04:00",
       },
       ro: {
@@ -199257,6 +206232,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "OVNI",
         is_approved: true,
+        approved_at: "2019-03-25T18:57:40-04:00",
+      },
+      ptbr: {
+        translation: "OVNI",
+        is_approved: true,
         approved_at: "2018-09-12T14:29:58-04:00",
       },
       ro: {
@@ -199373,6 +206353,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-04T20:21:30-04:00",
       },
       pt: {
+        translation: "Uculele",
+        is_approved: true,
+        approved_at: "2024-10-27T10:51:39-04:00",
+      },
+      ptbr: {
         translation: "Ukulele",
         is_approved: true,
         approved_at: "2024-10-06T11:18:32-04:00",
@@ -199486,6 +206471,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:34-04:00",
       },
       pt: {
+        translation: "Guarda-chuva",
+        is_approved: true,
+        approved_at: "2019-03-25T18:58:13-04:00",
+      },
+      ptbr: {
         translation: "Guarda-chuva",
         is_approved: true,
         approved_at: "2018-09-12T14:30:02-04:00",
@@ -199604,6 +206594,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:15-04:00",
       },
       pt: {
+        translation: "Morto-vivo",
+        is_approved: true,
+        approved_at: "2019-04-12T21:31:29-04:00",
+      },
+      ptbr: {
         translation: "Morto-vivo",
         is_approved: true,
         approved_at: "2019-07-18T16:43:57-04:00",
@@ -199749,6 +206744,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:15-04:00",
       },
       pt: {
+        translation: "Debaixo do mar",
+        is_approved: true,
+        approved_at: "2019-04-12T21:31:38-04:00",
+      },
+      ptbr: {
         translation: "Fundo do mar",
         is_approved: true,
         approved_at: "2022-05-07T08:51:01-04:00",
@@ -199909,6 +206909,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Subaquático",
         is_approved: true,
+        approved_at: "2019-03-25T18:58:26-04:00",
+      },
+      ptbr: {
+        translation: "Subaquático",
+        is_approved: true,
         approved_at: "2018-09-12T14:30:05-04:00",
       },
       ro: {
@@ -200025,6 +207030,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:49:23-04:00",
       },
       pt: {
+        translation: "Unicórnio",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:25-04:00",
+      },
+      ptbr: {
         translation: "Unicórnio",
         is_approved: true,
         approved_at: "2018-09-12T14:30:09-04:00",
@@ -200172,6 +207182,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Monociclo",
         is_approved: true,
+        approved_at: "2019-04-12T21:31:43-04:00",
+      },
+      ptbr: {
+        translation: "Monociclo",
+        is_approved: true,
         approved_at: "2019-08-03T13:04:01-04:00",
       },
       ro: {
@@ -200290,6 +207305,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Universidade",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:03-04:00",
+      },
+      ptbr: {
+        translation: "Universidade",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:29-04:00",
       },
       ro: {
@@ -200401,6 +207421,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-04T20:21:33-04:00",
       },
       pt: {
+        translation: "Upside Down",
+        is_approved: true,
+        approved_at: "2023-09-18T14:36:18-04:00",
+      },
+      ptbr: {
         translation: "De cabeça para baixo",
         is_approved: true,
         approved_at: "2024-10-06T16:12:42-04:00",
@@ -200521,6 +207546,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vácuo",
         is_approved: true,
+        approved_at: "2023-02-05T10:33:19-05:00",
+      },
+      ptbr: {
+        translation: "Vácuo",
+        is_approved: true,
         approved_at: "2019-11-03T10:19:19-05:00",
       },
       ro: {
@@ -200637,6 +207667,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:22-04:00",
       },
       pt: {
+        translation: "S. Valentim",
+        is_approved: true,
+        approved_at: "2019-04-14T18:11:23-04:00",
+      },
+      ptbr: {
         translation: "Namorados",
         is_approved: true,
         approved_at: "2019-07-01T15:57:09-04:00",
@@ -200757,6 +207792,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vampiro",
         is_approved: true,
+        approved_at: "2019-07-21T14:10:27-04:00",
+      },
+      ptbr: {
+        translation: "Vampiro",
+        is_approved: true,
         approved_at: "2018-09-12T14:30:18-04:00",
       },
       ro: {
@@ -200873,6 +207913,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:22-04:00",
       },
       pt: {
+        translation: "Carrinha",
+        is_approved: true,
+        approved_at: "2019-04-12T21:31:57-04:00",
+      },
+      ptbr: {
         translation: "Furgão",
         is_approved: true,
         approved_at: "2023-08-14T16:59:12-04:00",
@@ -201005,6 +208050,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:03:52-04:00",
       },
       pt: {
+        translation: "Vaso",
+        is_approved: true,
+        approved_at: "2019-08-23T19:00:01-04:00",
+      },
+      ptbr: {
         translation: "Vaso",
         is_approved: true,
         approved_at: "2019-05-31T14:40:11-04:00",
@@ -201167,6 +208217,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-07T06:46:10-04:00",
       },
       pt: {
+        translation: "Caixa-forte",
+        is_approved: true,
+        approved_at: "2019-03-25T18:58:55-04:00",
+      },
+      ptbr: {
         translation: "Cofre",
         is_approved: true,
         approved_at: "2018-09-12T14:30:23-04:00",
@@ -201287,6 +208342,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Horta",
         is_approved: true,
+        approved_at: "2019-04-12T21:32:02-04:00",
+      },
+      ptbr: {
+        translation: "Horta",
+        is_approved: true,
         approved_at: "2019-07-01T15:57:22-04:00",
       },
       ro: {
@@ -201403,6 +208463,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:31-04:00",
       },
       pt: {
+        translation: "Vegetais",
+        is_approved: true,
+        approved_at: "2019-04-12T21:32:04-04:00",
+      },
+      ptbr: {
         translation: "Vegetais",
         is_approved: true,
         approved_at: "2019-07-01T15:57:18-04:00",
@@ -201541,6 +208606,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Veículo",
         is_approved: true,
+        approved_at: "2019-03-25T18:58:57-04:00",
+      },
+      ptbr: {
+        translation: "Veículo",
+        is_approved: true,
         approved_at: "2018-09-12T14:30:28-04:00",
       },
       ro: {
@@ -201671,6 +208741,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-06-05T15:35:06-04:00",
       },
       pt: {
+        translation: "Máquina de venda",
+        is_approved: true,
+        approved_at: "2020-03-20T21:01:50-04:00",
+      },
+      ptbr: {
         translation: "Máquina de vendas",
         is_approved: true,
         approved_at: "2021-10-17T15:52:30-04:00",
@@ -201803,6 +208878,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-03-23T12:43:57-04:00",
       },
       pt: {
+        translation: "Videojogos",
+        is_approved: true,
+        approved_at: "2023-01-31T09:32:22-05:00",
+      },
+      ptbr: {
         translation: "Jogos",
         is_approved: true,
         approved_at: "2023-08-24T15:48:48-04:00",
@@ -201921,6 +209001,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:46:40-04:00",
       },
       pt: {
+        translation: "Viking",
+        is_approved: true,
+        approved_at: "2020-05-21T05:27:30-04:00",
+      },
+      ptbr: {
         translation: "Viking",
         is_approved: true,
         approved_at: "2019-07-01T15:57:32-04:00",
@@ -202057,6 +209142,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-27T17:28:33-04:00",
       },
       pt: {
+        translation: "Aldeia",
+        is_approved: true,
+        approved_at: "2023-08-17T08:01:04-04:00",
+      },
+      ptbr: {
         translation: "Vila",
         is_approved: true,
         approved_at: "2022-04-21T13:01:05-04:00",
@@ -202177,6 +209267,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Aldeão",
         is_approved: true,
+        approved_at: "2019-07-21T14:10:29-04:00",
+      },
+      ptbr: {
+        translation: "Aldeão",
+        is_approved: true,
         approved_at: "2018-09-12T14:30:33-04:00",
       },
       ro: {
@@ -202293,6 +209388,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:44-04:00",
       },
       pt: {
+        translation: "Violino",
+        is_approved: true,
+        approved_at: "2019-04-12T21:33:04-04:00",
+      },
+      ptbr: {
         translation: "Violino",
         is_approved: true,
         approved_at: "2019-07-01T15:57:39-04:00",
@@ -202418,6 +209518,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Realidade virtual",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:35-04:00",
+      },
+      ptbr: {
+        translation: "Realidade virtual",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:51-04:00",
       },
       ro: {
@@ -202529,6 +209634,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:49:19-04:00",
       },
       pt: {
+        translation: "Vulcão",
+        is_approved: true,
+        approved_at: "2020-03-13T07:54:04-04:00",
+      },
+      ptbr: {
         translation: "Vulcão",
         is_approved: true,
         approved_at: "2023-08-14T16:34:00-04:00",
@@ -202647,6 +209757,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:02:22-04:00",
       },
       pt: {
+        translation: "Voleibol",
+        is_approved: true,
+        approved_at: "2019-03-25T18:59:20-04:00",
+      },
+      ptbr: {
         translation: "Vôlei",
         is_approved: true,
         approved_at: "2021-01-21T05:48:28-05:00",
@@ -202792,6 +209907,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:48-04:00",
       },
       pt: {
+        translation: "Abutre",
+        is_approved: true,
+        approved_at: "2019-04-12T21:34:18-04:00",
+      },
+      ptbr: {
         translation: "Urubu",
         is_approved: true,
         approved_at: "2019-08-03T13:05:12-04:00",
@@ -202910,6 +210030,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-14T12:58:32-04:00",
       },
       pt: {
+        translation: "Waffle",
+        is_approved: true,
+        approved_at: "2021-08-01T21:58:22-04:00",
+      },
+      ptbr: {
         translation: "Waffle",
         is_approved: true,
         approved_at: "2019-06-23T10:06:09-04:00",
@@ -203167,6 +210292,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:42:51-04:00",
       },
       pt: {
+        translation: "Carrinho de mina",
+        is_approved: true,
+        approved_at: "2020-02-03T19:30:31-05:00",
+      },
+      ptbr: {
         translation: "Carroça",
         is_approved: true,
         approved_at: "2019-08-03T13:05:23-04:00",
@@ -203299,6 +210429,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:42-04:00",
       },
       pt: {
+        translation: "Parede",
+        is_approved: true,
+        approved_at: "2020-07-11T12:34:57-04:00",
+      },
+      ptbr: {
         translation: "Parede",
         is_approved: true,
         approved_at: "2019-07-01T15:58:11-04:00",
@@ -203563,6 +210698,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Carteira",
         is_approved: true,
+        approved_at: "2019-04-12T21:34:54-04:00",
+      },
+      ptbr: {
+        translation: "Carteira",
+        is_approved: true,
         approved_at: "2019-07-01T15:58:15-04:00",
       },
       ro: {
@@ -203674,6 +210814,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T16:04:03-05:00",
       },
       pt: {
+        translation: "Papel de parede",
+        is_approved: true,
+        approved_at: "2025-02-26T17:00:10-05:00",
+      },
+      ptbr: {
         translation: "Papel de parede",
         is_approved: true,
         approved_at: "2025-01-30T14:42:22-05:00",
@@ -203814,6 +210959,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:43-04:00",
       },
       pt: {
+        translation: "Morsa",
+        is_approved: true,
+        approved_at: "2019-04-12T21:34:56-04:00",
+      },
+      ptbr: {
         translation: "Morsa",
         is_approved: true,
         approved_at: "2019-08-03T13:06:23-04:00",
@@ -204076,6 +211226,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:44-04:00",
       },
       pt: {
+        translation: "Varinha mágica",
+        is_approved: true,
+        approved_at: "2019-04-12T21:35:08-04:00",
+      },
+      ptbr: {
         translation: "Varinha",
         is_approved: true,
         approved_at: "2019-07-01T15:58:18-04:00",
@@ -204264,6 +211419,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:46-04:00",
       },
       pt: {
+        translation: "Armário",
+        is_approved: true,
+        approved_at: "2019-04-12T21:35:10-04:00",
+      },
+      ptbr: {
         translation: "Guarda-roupa",
         is_approved: true,
         approved_at: "2021-03-27T09:57:44-04:00",
@@ -204384,6 +211544,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Guerreiro",
         is_approved: true,
+        approved_at: "2023-08-17T08:01:07-04:00",
+      },
+      ptbr: {
+        translation: "Guerreiro",
+        is_approved: true,
         approved_at: "2019-07-01T15:58:21-04:00",
       },
       ro: {
@@ -204502,6 +211667,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Máquina de lavar",
         is_approved: true,
+        approved_at: "2021-05-20T18:25:01-04:00",
+      },
+      ptbr: {
+        translation: "Máquina de lavar",
+        is_approved: true,
         approved_at: "2019-07-11T22:02:19-04:00",
       },
       ro: {
@@ -204618,6 +211788,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:47:55-04:00",
       },
       pt: {
+        translation: "Vespa",
+        is_approved: true,
+        approved_at: "2019-04-14T18:12:28-04:00",
+      },
+      ptbr: {
         translation: "Vespa",
         is_approved: true,
         approved_at: "2019-08-03T13:06:47-04:00",
@@ -204853,6 +212028,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:02:11-04:00",
       },
       pt: {
+        translation: "Relógio de pulso",
+        is_approved: true,
+        approved_at: "2019-03-25T18:59:51-04:00",
+      },
+      ptbr: {
         translation: "Relógio",
         is_approved: true,
         approved_at: "2019-07-01T15:58:30-04:00",
@@ -204987,6 +212167,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Água",
         is_approved: true,
+        approved_at: "2019-11-13T18:43:36-05:00",
+      },
+      ptbr: {
+        translation: "Água",
+        is_approved: true,
         approved_at: "2019-08-28T12:06:47-04:00",
       },
       ro: {
@@ -205105,6 +212290,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balão de água",
         is_approved: true,
+        approved_at: "2020-07-12T07:27:16-04:00",
+      },
+      ptbr: {
+        translation: "Balão de água",
+        is_approved: true,
         approved_at: "2019-07-01T15:58:34-04:00",
       },
       ro: {
@@ -205221,6 +212411,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-09-15T10:57:51-04:00",
       },
       pt: {
+        translation: "Garrafa de água",
+        is_approved: true,
+        approved_at: "2019-11-13T19:16:27-05:00",
+      },
+      ptbr: {
         translation: "Frasco de água",
         is_approved: true,
         approved_at: "2022-04-16T10:45:08-04:00",
@@ -205341,6 +212536,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Balde de água",
         is_approved: true,
+        approved_at: "2019-11-13T19:15:14-05:00",
+      },
+      ptbr: {
+        translation: "Balde de água",
+        is_approved: true,
         approved_at: "2022-04-15T12:44:10-04:00",
       },
       ro: {
@@ -205457,6 +212657,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:00-04:00",
       },
       pt: {
+        translation: "Parque aquático",
+        is_approved: true,
+        approved_at: "2019-04-14T18:12:06-04:00",
+      },
+      ptbr: {
         translation: "Parque aquático",
         is_approved: true,
         approved_at: "2022-05-07T08:50:41-04:00",
@@ -205589,6 +212794,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:01-04:00",
       },
       pt: {
+        translation: "Escorrega de água",
+        is_approved: true,
+        approved_at: "2019-04-14T18:12:14-04:00",
+      },
+      ptbr: {
         translation: "Toboágua",
         is_approved: true,
         approved_at: "2019-07-01T15:59:08-04:00",
@@ -205707,6 +212917,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-08-19T04:02:04-04:00",
       },
       pt: {
+        translation: "Cascata / Queda de água",
+        is_approved: true,
+        approved_at: "2019-03-25T19:00:26-04:00",
+      },
+      ptbr: {
         translation: "Cachoeira",
         is_approved: true,
         approved_at: "2019-08-21T11:12:11-04:00",
@@ -205827,6 +213042,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Melancia",
         is_approved: true,
+        approved_at: "2023-08-17T08:01:08-04:00",
+      },
+      ptbr: {
+        translation: "Melancia",
+        is_approved: true,
         approved_at: "2019-07-01T15:59:28-04:00",
       },
       ro: {
@@ -205943,6 +213163,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:07-04:00",
       },
       pt: {
+        translation: "Esqui aquático",
+        is_approved: true,
+        approved_at: "2020-02-07T18:04:12-05:00",
+      },
+      ptbr: {
         translation: "Esqui aquático",
         is_approved: true,
         approved_at: "2019-07-08T08:09:47-04:00",
@@ -206107,6 +213332,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Onda",
         is_approved: true,
+        approved_at: "2021-06-17T18:44:53-04:00",
+      },
+      ptbr: {
+        translation: "Onda",
+        is_approved: true,
         approved_at: "2018-03-25T17:27:16-04:00",
       },
       ro: {
@@ -206237,6 +213467,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T12:01:30-04:00",
       },
       pt: {
+        translation: "Clima",
+        is_approved: true,
+        approved_at: "2020-07-12T11:26:05-04:00",
+      },
+      ptbr: {
         translation: "Clima",
         is_approved: true,
         approved_at: "2019-06-23T10:07:22-04:00",
@@ -206637,6 +213872,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-10-12T13:24:13-04:00",
       },
       pt: {
+        translation: "Teia",
+        is_approved: true,
+        approved_at: "2020-01-15T19:11:13-05:00",
+      },
+      ptbr: {
         translation: "Teia de aranha",
         is_approved: true,
         approved_at: "2022-04-15T10:49:29-04:00",
@@ -206757,6 +213997,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casamento",
         is_approved: true,
+        approved_at: "2019-03-25T19:00:35-04:00",
+      },
+      ptbr: {
+        translation: "Casamento",
+        is_approved: true,
         approved_at: "2018-09-12T14:31:45-04:00",
       },
       ro: {
@@ -206875,6 +214120,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bolo de casamento",
         is_approved: true,
+        approved_at: "2020-01-26T12:29:19-05:00",
+      },
+      ptbr: {
+        translation: "Bolo de casamento",
+        is_approved: true,
         approved_at: "2019-08-03T13:07:04-04:00",
       },
       ro: {
@@ -206991,6 +214241,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:16-04:00",
       },
       pt: {
+        translation: "Levantamento de pesos",
+        is_approved: true,
+        approved_at: "2020-02-07T18:04:25-05:00",
+      },
+      ptbr: {
         translation: "Levantamento de peso",
         is_approved: true,
         approved_at: "2019-08-03T13:07:27-04:00",
@@ -207138,6 +214393,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Poço",
         is_approved: true,
+        approved_at: "2019-04-12T21:37:26-04:00",
+      },
+      ptbr: {
+        translation: "Poço",
+        is_approved: true,
         approved_at: "2019-07-18T16:44:26-04:00",
       },
       ro: {
@@ -207254,6 +214514,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:02:11-04:00",
       },
       pt: {
+        translation: "Lobisomem",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:33-04:00",
+      },
+      ptbr: {
         translation: "Lobisomem",
         is_approved: true,
         approved_at: "2018-09-12T14:31:48-04:00",
@@ -207386,6 +214651,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-05-07T11:23:33-04:00",
       },
       pt: {
+        translation: "Velho Oeste",
+        is_approved: true,
+        approved_at: "2021-01-27T11:14:21-05:00",
+      },
+      ptbr: {
         translation: "Faroeste",
         is_approved: true,
         approved_at: "2023-08-14T16:59:32-04:00",
@@ -207524,6 +214794,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Baleia",
         is_approved: true,
+        approved_at: "2020-04-29T06:27:35-04:00",
+      },
+      ptbr: {
+        translation: "Baleia",
+        is_approved: true,
         approved_at: "2019-08-03T13:07:57-04:00",
       },
       ro: {
@@ -207640,6 +214915,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-06-15T08:23:28-04:00",
       },
       pt: {
+        translation: "Trigo",
+        is_approved: true,
+        approved_at: "2019-11-13T19:11:17-05:00",
+      },
+      ptbr: {
         translation: "Trigo",
         is_approved: true,
         approved_at: "2019-07-18T16:44:29-04:00",
@@ -207793,6 +215073,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-10T13:48:25-04:00",
       },
       pt: {
+        translation: "Roda",
+        is_approved: true,
+        approved_at: "2020-04-26T07:29:12-04:00",
+      },
+      ptbr: {
         translation: "Roleta",
         is_approved: true,
         approved_at: "2023-08-24T13:11:24-04:00",
@@ -207938,6 +215223,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:43-04:00",
       },
       pt: {
+        translation: "Cavalinho",
+        is_approved: true,
+        approved_at: "2020-12-18T17:32:50-05:00",
+      },
+      ptbr: {
         translation: "Empinar moto",
         is_approved: true,
         approved_at: "2019-09-17T22:33:39-04:00",
@@ -208070,6 +215360,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:45-04:00",
       },
       pt: {
+        translation: "Redemoinho",
+        is_approved: true,
+        approved_at: "2020-02-07T18:05:15-05:00",
+      },
+      ptbr: {
         translation: "Hidromassagem",
         is_approved: true,
         approved_at: "2019-08-21T13:34:09-04:00",
@@ -208230,6 +215525,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Apito",
         is_approved: true,
+        approved_at: "2020-02-03T19:30:45-05:00",
+      },
+      ptbr: {
+        translation: "Apito",
+        is_approved: true,
         approved_at: "2019-08-03T13:09:11-04:00",
       },
       ro: {
@@ -208362,6 +215662,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Quadro branco",
         is_approved: true,
+        approved_at: "2020-02-03T19:30:52-05:00",
+      },
+      ptbr: {
+        translation: "Quadro branco",
+        is_approved: true,
         approved_at: "2022-05-07T08:49:23-04:00",
       },
       ro: {
@@ -208478,6 +215783,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:54-04:00",
       },
       pt: {
+        translation: "Peruca",
+        is_approved: true,
+        approved_at: "2019-04-12T21:39:13-04:00",
+      },
+      ptbr: {
         translation: "Peruca",
         is_approved: true,
         approved_at: "2018-03-25T17:26:46-04:00",
@@ -208598,6 +215908,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Vento",
         is_approved: true,
+        approved_at: "2019-04-12T21:39:19-04:00",
+      },
+      ptbr: {
+        translation: "Vento",
+        is_approved: true,
         approved_at: "2019-07-18T16:44:48-04:00",
       },
       ro: {
@@ -208714,6 +216029,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:48:58-04:00",
       },
       pt: {
+        translation: "Moinho de vento",
+        is_approved: true,
+        approved_at: "2020-02-03T19:31:06-05:00",
+      },
+      ptbr: {
         translation: "Moinho",
         is_approved: true,
         approved_at: "2025-02-20T06:20:54-05:00",
@@ -208832,6 +216152,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:49:00-04:00",
       },
       pt: {
+        translation: "Janela",
+        is_approved: true,
+        approved_at: "2019-04-12T21:39:30-04:00",
+      },
+      ptbr: {
         translation: "Janela",
         is_approved: true,
         approved_at: "2019-07-01T16:00:00-04:00",
@@ -208979,6 +216304,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Asas",
         is_approved: true,
+        approved_at: "2021-01-12T15:38:24-05:00",
+      },
+      ptbr: {
+        translation: "Asas",
+        is_approved: true,
         approved_at: "2019-07-01T15:59:55-04:00",
       },
       ro: {
@@ -209095,6 +216425,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:49:04-04:00",
       },
       pt: {
+        translation: "Piscar o olho",
+        is_approved: true,
+        approved_at: "2020-02-07T18:05:42-05:00",
+      },
+      ptbr: {
         translation: "Piscar",
         is_approved: true,
         approved_at: "2019-08-03T13:09:38-04:00",
@@ -209227,6 +216562,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:48:51-04:00",
       },
       pt: {
+        translation: "Inverno",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:35-04:00",
+      },
+      ptbr: {
         translation: "Inverno",
         is_approved: true,
         approved_at: "2018-09-12T14:32:35-04:00",
@@ -209479,6 +216819,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Fio",
         is_approved: true,
+        approved_at: "2019-04-16T19:08:38-04:00",
+      },
+      ptbr: {
+        translation: "Fio",
+        is_approved: true,
         approved_at: "2019-08-03T13:10:04-04:00",
       },
       ro: {
@@ -209595,6 +216940,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-08-22T16:52:06-04:00",
       },
       pt: {
+        translation: "Poço dos desejos",
+        is_approved: true,
+        approved_at: "2019-04-16T19:08:45-04:00",
+      },
+      ptbr: {
         translation: "Poço dos desejos",
         is_approved: true,
         approved_at: "2019-07-18T16:45:04-04:00",
@@ -209729,6 +217079,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Bruxa",
         is_approved: true,
+        approved_at: "2019-03-25T19:01:24-04:00",
+      },
+      ptbr: {
+        translation: "Bruxa",
+        is_approved: true,
         approved_at: "2019-11-21T12:07:44-05:00",
       },
       ro: {
@@ -209847,6 +217202,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Casa de bruxa",
         is_approved: true,
+        approved_at: "2021-05-20T18:33:00-04:00",
+      },
+      ptbr: {
+        translation: "Casa de bruxa",
+        is_approved: true,
         approved_at: "2023-05-09T14:17:23-04:00",
       },
       ro: {
@@ -209963,6 +217323,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:47-04:00",
       },
       pt: {
+        translation: "Wither",
+        is_approved: true,
+        approved_at: "2019-03-25T19:01:26-04:00",
+      },
+      ptbr: {
         translation: "Wither",
         is_approved: true,
         approved_at: "2018-09-12T14:32:46-04:00",
@@ -210121,6 +217486,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T10:48:58-04:00",
       },
       pt: {
+        translation: "Feiticeiro / Mago",
+        is_approved: true,
+        approved_at: "2019-03-25T19:01:41-04:00",
+      },
+      ptbr: {
         translation: "Feiticeiro",
         is_approved: true,
         approved_at: "2018-09-12T14:32:50-04:00",
@@ -210253,6 +217623,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:51-04:00",
       },
       pt: {
+        translation: "Lobo",
+        is_approved: true,
+        approved_at: "2019-07-21T14:10:56-04:00",
+      },
+      ptbr: {
         translation: "Lobo",
         is_approved: true,
         approved_at: "2019-06-22T19:07:02-04:00",
@@ -210413,6 +217788,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Lã",
         is_approved: true,
+        approved_at: "2020-01-15T19:11:51-05:00",
+      },
+      ptbr: {
+        translation: "Lã",
+        is_approved: true,
         approved_at: "2019-08-31T23:24:02-04:00",
       },
       ro: {
@@ -210543,6 +217923,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-07-06T04:46:26-04:00",
       },
       pt: {
+        translation: "Oficina",
+        is_approved: true,
+        approved_at: "2025-04-17T11:47:27-04:00",
+      },
+      ptbr: {
         translation: "Oficina",
         is_approved: true,
         approved_at: "2023-08-14T16:59:45-04:00",
@@ -210703,6 +218088,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Minhoca",
         is_approved: true,
+        approved_at: "2019-03-25T19:01:50-04:00",
+      },
+      ptbr: {
+        translation: "Minhoca",
+        is_approved: true,
         approved_at: "2021-01-05T13:36:17-05:00",
       },
       ro: {
@@ -210819,6 +218209,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-08-22T16:53:44-04:00",
       },
       pt: {
+        translation: "Bola de demolição",
+        is_approved: true,
+        approved_at: "2020-02-03T19:31:21-05:00",
+      },
+      ptbr: {
         translation: "Bola da demolição",
         is_approved: true,
         approved_at: "2019-07-11T22:02:08-04:00",
@@ -210937,6 +218332,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:49:43-04:00",
       },
       pt: {
+        translation: "Chave Inglesa",
+        is_approved: true,
+        approved_at: "2020-02-03T19:31:23-05:00",
+      },
+      ptbr: {
         translation: "Chave inglesa",
         is_approved: true,
         approved_at: "2019-07-11T22:02:04-04:00",
@@ -211057,6 +218457,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Luta livre",
         is_approved: true,
+        approved_at: "2020-02-07T18:08:35-05:00",
+      },
+      ptbr: {
+        translation: "Luta livre",
+        is_approved: true,
         approved_at: "2019-08-03T13:10:17-04:00",
       },
       ro: {
@@ -211175,6 +218580,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Xilofone",
         is_approved: true,
+        approved_at: "2019-04-12T21:40:31-04:00",
+      },
+      ptbr: {
+        translation: "Xilofone",
+        is_approved: true,
         approved_at: "2019-07-01T16:00:51-04:00",
       },
       ro: {
@@ -211291,6 +218701,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:56-04:00",
       },
       pt: {
+        translation: "Iate",
+        is_approved: true,
+        approved_at: "2019-03-25T19:02:05-04:00",
+      },
+      ptbr: {
         translation: "Iate",
         is_approved: true,
         approved_at: "2018-09-12T14:33:09-04:00",
@@ -211431,6 +218846,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-04T20:21:36-04:00",
       },
       pt: {
+        translation: "Yeti",
+        is_approved: true,
+        approved_at: "2024-11-06T09:44:45-05:00",
+      },
+      ptbr: {
         translation: "Iéti",
         is_approved: true,
         approved_at: "2024-10-04T12:08:52-04:00",
@@ -211546,6 +218966,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Iogurte",
         is_approved: true,
+        approved_at: "2024-10-27T10:48:37-04:00",
+      },
+      ptbr: {
+        translation: "Iogurte",
+        is_approved: true,
         approved_at: "2024-10-04T12:08:53-04:00",
       },
       ro: {
@@ -211657,6 +219082,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-08-22T16:54:07-04:00",
       },
       pt: {
+        translation: "Youtube",
+        is_approved: true,
+        approved_at: "2019-04-12T21:40:39-04:00",
+      },
+      ptbr: {
         translation: "YouTube",
         is_approved: true,
         approved_at: "2022-12-15T08:01:00-05:00",
@@ -211777,6 +219207,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Zebra",
         is_approved: true,
+        approved_at: "2019-03-25T19:02:07-04:00",
+      },
+      ptbr: {
+        translation: "Zebra",
+        is_approved: true,
         approved_at: "2018-09-12T14:33:15-04:00",
       },
       ro: {
@@ -211893,6 +219328,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-27T16:01:59-04:00",
       },
       pt: {
+        translation: "Zeus",
+        is_approved: true,
+        approved_at: "2019-03-25T19:02:11-04:00",
+      },
+      ptbr: {
         translation: "Zeus",
         is_approved: true,
         approved_at: "2018-09-12T14:33:19-04:00",
@@ -212038,6 +219478,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:46:08-04:00",
       },
       pt: {
+        translation: "Tirolesa",
+        is_approved: true,
+        approved_at: "2020-02-07T18:09:45-05:00",
+      },
+      ptbr: {
         translation: "Tirolesa",
         is_approved: true,
         approved_at: "2019-07-01T16:01:16-04:00",
@@ -212198,6 +219643,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       pt: {
         translation: "Zíper",
         is_approved: true,
+        approved_at: "2020-02-07T18:10:09-05:00",
+      },
+      ptbr: {
+        translation: "Zíper",
+        is_approved: true,
         approved_at: "2019-07-01T16:01:23-04:00",
       },
       ro: {
@@ -212314,6 +219764,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T13:46:12-04:00",
       },
       pt: {
+        translation: "Apocalipse zombie",
+        is_approved: true,
+        approved_at: "2019-04-12T21:41:05-04:00",
+      },
+      ptbr: {
         translation: "Apocalipse zumbi",
         is_approved: true,
         approved_at: "2022-05-06T16:02:50-04:00",
@@ -212432,6 +219887,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-01-03T12:48:14-05:00",
       },
       pt: {
+        translation: "Zombies",
+        is_approved: true,
+        approved_at: "2020-10-13T05:34:21-04:00",
+      },
+      ptbr: {
         translation: "Zumbis",
         is_approved: true,
         approved_at: "2023-08-14T16:35:21-04:00",
@@ -212550,6 +220010,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-08-13T07:24:13-04:00",
       },
       pt: {
+        translation: "Zoológico",
+        is_approved: true,
+        approved_at: "2019-04-12T21:41:07-04:00",
+      },
+      ptbr: {
         translation: "Zoológico",
         is_approved: true,
         approved_at: "2019-07-01T16:01:36-04:00",

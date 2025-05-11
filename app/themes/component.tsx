@@ -56,6 +56,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
   no: "Norwegian",
   pl: "Polish",
   pt: "Portuguese",
+  ptbr: "Portuguese, Brazilian",
   ro: "Romanian",
   ru: "Russian",
   sv: "Swedish",
