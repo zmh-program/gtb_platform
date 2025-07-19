@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Search,
   Globe,
@@ -69,6 +70,82 @@ const LANGUAGE_NAMES: Record<string, string> = {
 
 const ITEMS_PER_PAGE = 50;
 
+// Fuzzy search function that uses Levenshtein distance
+function levenshteinDistance(a: string, b: string): number {
+  const matrix = [];
+  
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+      }
+    }
+  }
+  
+  return matrix[b.length][a.length];
+}
+
+function fuzzySearchTranslations(query: string): TranslationItem[] {
+  if (!query) return [];
+  
+  const normalizedQuery = removeAccents(query).toLowerCase().trim();
+  const results: Array<{ item: TranslationItem; score: number }> = [];
+  
+  const ALL_TRANSLATIONS = require("@/lib/source/source").ALL_TRANSLATIONS as TranslationItem[];
+  
+  ALL_TRANSLATIONS.forEach((item) => {
+    let bestScore = Infinity;
+    
+    // Check theme
+    const normalizedTheme = removeAccents(item.theme).toLowerCase();
+    const themeDistance = levenshteinDistance(normalizedQuery, normalizedTheme);
+    
+    // For partial matches, check if query is contained in theme
+    if (normalizedTheme.includes(normalizedQuery)) {
+      bestScore = Math.min(bestScore, themeDistance * 0.5);
+    } else {
+      bestScore = Math.min(bestScore, themeDistance);
+    }
+    
+    // Check translations
+    Object.values(item.translations).forEach((translation) => {
+      const normalizedTranslation = removeAccents(translation.translation).toLowerCase();
+      const translationDistance = levenshteinDistance(normalizedQuery, normalizedTranslation);
+      
+      if (normalizedTranslation.includes(normalizedQuery)) {
+        bestScore = Math.min(bestScore, translationDistance * 0.7);
+      } else {
+        bestScore = Math.min(bestScore, translationDistance);
+      }
+    });
+    
+    // Only include items with reasonable similarity (distance < 60% of query length)
+    const maxDistance = Math.max(3, Math.floor(normalizedQuery.length * 0.6));
+    if (bestScore <= maxDistance) {
+      results.push({ item, score: bestScore });
+    }
+  });
+  
+  // Sort by score (lower is better)
+  return results
+    .sort((a, b) => a.score - b.score)
+    .map(result => result.item);
+}
+
 export default function ThemesPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -84,6 +161,9 @@ export default function ThemesPageContent() {
   const [exactMatch, setExactMatch] = useState(
     searchParams.get("exact") === "true",
   );
+  const [searchMode, setSearchMode] = useState(
+    searchParams.get("mode") || "regular",
+  );
   const [requestTime, setRequestTime] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(
     parseInt(searchParams.get("page") || "1", 10),
@@ -94,18 +174,25 @@ export default function ThemesPageContent() {
   useEffect(() => {
     const query = searchParams.get("theme") || "";
     const exact = searchParams.get("exact") === "true";
+    const mode = searchParams.get("mode") || "regular";
     const page = parseInt(searchParams.get("page") || "1", 10);
 
     setSearchQuery(query);
     setInputValue(query);
     setExactMatch(exact);
+    setSearchMode(mode);
     setCurrentPage(page);
     setIsEmptyResults(false);
 
     if (query.length >= 1) {
       setIsLoading(true);
       const startTime = performance.now();
-      const allResults = searchTranslations(query, exact);
+      
+      // Use appropriate search function based on mode
+      const allResults = mode === "fuzzy" 
+        ? fuzzySearchTranslations(query)
+        : searchTranslations(query, exact);
+        
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
 
       // Paginate results
@@ -137,10 +224,16 @@ export default function ThemesPageContent() {
       params.delete("theme");
     }
 
-    if (exactMatch) {
+    if (exactMatch && searchMode === "regular") {
       params.set("exact", "true");
     } else {
       params.delete("exact");
+    }
+
+    if (searchMode !== "regular") {
+      params.set("mode", searchMode);
+    } else {
+      params.delete("mode");
     }
 
     // Reset to page 1 when performing a new search
@@ -152,6 +245,26 @@ export default function ThemesPageContent() {
   const handlePageChange = (page: number) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", page.toString());
+    router.push(`/themes?${params.toString()}`);
+  };
+
+  const handleSearchModeChange = (mode: string) => {
+    const params = new URLSearchParams(searchParams);
+    
+    if (mode !== "regular") {
+      params.set("mode", mode);
+    } else {
+      params.delete("mode");
+    }
+    
+    // Remove exact match parameter when switching to fuzzy mode
+    if (mode === "fuzzy") {
+      params.delete("exact");
+    }
+    
+    // Reset to page 1 when changing search mode
+    params.set("page", "1");
+    
     router.push(`/themes?${params.toString()}`);
   };
 
@@ -315,39 +428,70 @@ export default function ThemesPageContent() {
         </h1>
 
         <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
-          <div className="space-y-4">
-            <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Enter your search query to find themes..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                className="pl-8"
-              />
-            </div>
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-2">
-                <Switch
-                  id="exact-match"
-                  checked={exactMatch}
-                  onCheckedChange={setExactMatch}
+          <Tabs value={searchMode} onValueChange={handleSearchModeChange} className="w-full">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="regular">Regular Search</TabsTrigger>
+              <TabsTrigger value="fuzzy">Fuzzy Search</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="regular" className="space-y-4 mt-4">
+              <div className="relative">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="search"
+                  placeholder="Enter exact or partial theme name..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                  className="pl-8"
                 />
-                <Label htmlFor="exact-match" className="text-sm cursor-pointer">
-                  Exact match
-                </Label>
               </div>
-              <Button
-                onClick={handleSearch}
-                disabled={inputValue.trim().length < 1}
-                className="w-auto"
-              >
-                <Search className="h-4 w-4 mr-2" />
-                Search
-              </Button>
-            </div>
-          </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Switch
+                    id="exact-match"
+                    checked={exactMatch}
+                    onCheckedChange={setExactMatch}
+                  />
+                  <Label htmlFor="exact-match" className="text-sm cursor-pointer">
+                    Exact match
+                  </Label>
+                </div>
+                <Button
+                  onClick={handleSearch}
+                  disabled={inputValue.trim().length < 1}
+                  className="w-auto"
+                >
+                  <Search className="h-4 w-4 mr-2" />
+                  Search
+                </Button>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="fuzzy" className="space-y-4 mt-4">
+              <div className="relative">
+                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="search"
+                  placeholder="Enter approximate theme name (typos allowed)..."
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                  className="pl-8"
+                />
+              </div>
+              <div className="flex items-center justify-end">
+                <Button
+                  onClick={handleSearch}
+                  disabled={inputValue.trim().length < 1}
+                  className="w-auto"
+                >
+                  <Search className="h-4 w-4 mr-2" />
+                  Search
+                </Button>
+              </div>
+            </TabsContent>
+          </Tabs>
         </Card>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
@@ -512,8 +656,7 @@ export default function ThemesPageContent() {
         {isEmptyResults && (
           <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
             <p className="text-center text-muted-foreground">
-              {`No themes found matching ${searchQuery}
-              ${exactMatch ? " (exact match)" : ""}`}
+              {`No themes found matching "${searchQuery}" using ${searchMode} search${exactMatch && searchMode === "regular" ? " (exact match)" : ""}`}
             </p>
           </Card>
         )}
