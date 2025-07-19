@@ -101,8 +101,16 @@ export default function ThemesPageContent() {
       try {
         const conditionsParam = searchParams.get("conditions");
         if (conditionsParam) {
-          // Parse conditions from URL
-          const conditionsData = JSON.parse(conditionsParam);
+          // Try to parse as base64 first, fallback to JSON for backward compatibility
+          let conditionsData;
+          try {
+            // Try base64 decode first
+            const decoded = atob(conditionsParam);
+            conditionsData = JSON.parse(decoded);
+          } catch {
+            // Fallback to direct JSON parsing for backward compatibility
+            conditionsData = JSON.parse(conditionsParam);
+          }
           const conditions = conditionsData.map((c: any) => ({
             language: c.l,
             pattern: c.p,
@@ -116,7 +124,7 @@ export default function ThemesPageContent() {
           setSearchConditions(conditions);
         }
       } catch (error) {
-        // If JSON parsing fails, fallback to single condition
+        // If parsing fails, fallback to single condition
         const conditions = query
           ? [{ language: "default", pattern: query }]
           : [{ language: "default", pattern: "" }];
@@ -202,7 +210,16 @@ export default function ThemesPageContent() {
           const conditionsParam = searchParams.get("conditions");
           let conditions: SearchCondition[];
           if (conditionsParam) {
-            const conditionsData = JSON.parse(conditionsParam);
+            // Try to parse as base64 first, fallback to JSON for backward compatibility
+            let conditionsData;
+            try {
+              // Try base64 decode first
+              const decoded = atob(conditionsParam);
+              conditionsData = JSON.parse(decoded);
+            } catch {
+              // Fallback to direct JSON parsing for backward compatibility
+              conditionsData = JSON.parse(conditionsParam);
+            }
             conditions = conditionsData.map((c: any) => ({
               language: c.l,
               pattern: c.p,
@@ -240,12 +257,13 @@ export default function ThemesPageContent() {
       // For pattern search, encode all conditions in URL
       const validConditions = searchConditions.filter((c) => c.pattern.trim());
       if (validConditions.length > 0) {
-        // Encode conditions as JSON in URL
+        // Encode conditions as base64 in URL
         const conditionsData = validConditions.map((c) => ({
           l: c.language,
           p: c.pattern,
         }));
-        params.set("conditions", JSON.stringify(conditionsData));
+        const encoded = btoa(JSON.stringify(conditionsData));
+        params.set("conditions", encoded);
         // Keep first pattern in theme for backward compatibility
         params.set("theme", validConditions[0].pattern);
       } else {
@@ -291,20 +309,25 @@ export default function ThemesPageContent() {
   const handleSearchModeChange = (mode: string) => {
     const params = new URLSearchParams(searchParams);
 
+    // Set or remove mode parameter
     if (mode !== "regular") {
       params.set("mode", mode);
     } else {
       params.delete("mode");
     }
 
-    // Remove exact match parameter when switching to pattern mode
+    // Handle mode-specific parameters
     if (mode === "pattern") {
+      // Remove exact match parameter when switching to pattern mode
       params.delete("exact");
+      // Keep pattern-specific parameters like conditions if they exist
+    } else if (mode === "regular") {
+      // Remove pattern-specific parameters when switching to regular mode
+      params.delete("conditions");
+      // Keep regular mode parameters like exact if they were set
     }
 
-    // Reset to page 1 when changing search mode
-    params.set("page", "1");
-
+    // Keep all other universal parameters (page, theme, etc.)
     router.push(`/themes?${params.toString()}`);
   };
 
