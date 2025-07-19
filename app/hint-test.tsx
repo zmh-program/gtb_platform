@@ -28,47 +28,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-
-type LanguageOption = {
-  label: string;
-  native?: string;
-  badge?: string;
-};
-
-const languageOptions: Record<string, LanguageOption> = {
-  default: { label: "English", badge: "Recommended" },
-  zh_cn: { label: "Chinese Simplified", native: "简体中文" },
-  zh_tw: { label: "Chinese Traditional", native: "繁體中文" },
-  ru: { label: "Russian", native: "Русский" },
-  ja: { label: "Japanese", native: "日本語" },
-  ko: { label: "Korean", native: "한국어" },
-  en: { label: "Pirate English", native: "Pirate English" },
-  de: { label: "German", native: "Deutsch" },
-  es: { label: "Spanish", native: "Español" },
-  fi: { label: "Finnish", native: "Suomi" },
-  fr: { label: "French", native: "Français" },
-  hu: { label: "Hungarian", native: "Magyar" },
-  it: { label: "Italian", native: "Italiano" },
-  nl: { label: "Dutch", native: "Nederlands" },
-  no: { label: "Norwegian", native: "Norsk" },
-  pl: { label: "Polish", native: "Polski" },
-  pt: { label: "Portuguese", native: "Português" },
-  ptbr: { label: "Portuguese, Brazilian", native: "Português do Brasil" },
-  ro: { label: "Romanian", native: "Română" },
-  sv: { label: "Swedish", native: "Svenska" },
-  tr: { label: "Turkish", native: "Türkçe" },
-  uk: { label: "Ukrainian", native: "Українська" },
-  cs: { label: "Czech", native: "Čeština" },
-  da: { label: "Danish", native: "Dansk" },
-};
+import {
+  LanguageSelect,
+  languageOptions,
+} from "@/components/ui/language-select";
 
 function getStructure(hint: string | undefined) {
   if (!hint) return "";
@@ -482,57 +446,16 @@ export default function HintTest() {
           </div>
 
           <div className="flex flex-col justify-between h-full">
-            <div className="space-y-3 mb-3">
-              <div className="flex items-center gap-2">
-                <Label className="text-base font-semibold">Language</Label>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center cursor-help">
-                        <span className="text-xs">?</span>
-                      </div>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p className="text-xs">
-                        Select the language you want to practice with
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-              </div>
-              <Select
-                value={language}
-                onValueChange={(value) => {
-                  setLanguage(value);
-                  dispatch({ type: "SET_LANGUAGE", payload: value });
-                }}
-              >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select language" />
-                </SelectTrigger>
-                <SelectContent>
-                  {Object.entries(languageOptions).map(
-                    ([value, { label, native, badge }]) => (
-                      <SelectItem key={value} value={value}>
-                        <div className="flex items-center space-x-1.5">
-                          <span>{label}</span>
-                          {native && (
-                            <span className="text-xs text-muted-foreground">
-                              ({native})
-                            </span>
-                          )}
-                          {badge && (
-                            <span className="ml-auto px-1.5 py-0.5 text-xs rounded-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500 font-medium">
-                              {badge}
-                            </span>
-                          )}
-                        </div>
-                      </SelectItem>
-                    ),
-                  )}
-                </SelectContent>
-              </Select>
-            </div>
+            <LanguageSelect
+              value={language}
+              showLabel={true}
+              showTooltip={true}
+              onValueChange={(value) => {
+                setLanguage(value);
+                dispatch({ type: "SET_LANGUAGE", payload: value });
+              }}
+              className="mb-3"
+            />
 
             <div className="p-6 rounded-lg bg-gradient-to-br from-background to-muted/50 border border-border shadow-sm space-y-5">
               <h3 className="text-lg font-semibold flex items-center gap-2">

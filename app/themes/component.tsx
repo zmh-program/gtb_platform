@@ -8,18 +8,16 @@ import {
   patternSearchTranslations,
   SearchCondition,
 } from "@/lib/translations";
+import {
+  LanguageSelect,
+  languageOptions,
+  languageOptionsWithComplement,
+} from "@/components/ui/language-select";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import {
   Search,
   Globe,
@@ -55,33 +53,6 @@ import {
 import { TranslationItem } from "@/lib/source/types";
 import { LAST_UPDATED } from "@/lib/source/source";
 
-const LANGUAGE_NAMES: Record<string, string> = {
-  cs: "Czech",
-  da: "Danish",
-  de: "German",
-  en: "Pirate English",
-  es: "Spanish",
-  fi: "Finnish",
-  fr: "French",
-  hu: "Hungarian",
-  it: "Italian",
-  ja: "Japanese",
-  ko: "Korean",
-  nl: "Dutch",
-  no: "Norwegian",
-  pl: "Polish",
-  pt: "Portuguese",
-  ptbr: "Portuguese, Brazilian",
-  ro: "Romanian",
-  ru: "Russian",
-  sv: "Swedish",
-  tr: "Turkish",
-  uk: "Ukrainian",
-  zh_cn: "Chinese Simplified",
-  zh_tw: "Chinese Traditional",
-  co: "Complement",
-};
-
 const ITEMS_PER_PAGE = 50;
 
 export default function ThemesPageContent() {
@@ -103,7 +74,7 @@ export default function ThemesPageContent() {
     searchParams.get("mode") || "regular",
   );
   const [searchConditions, setSearchConditions] = useState<SearchCondition[]>([
-    { language: "English", pattern: searchParams.get("theme") || "" },
+    { language: "default", pattern: searchParams.get("theme") || "" },
   ]);
   const [requestTime, setRequestTime] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(
@@ -140,15 +111,15 @@ export default function ThemesPageContent() {
         } else {
           // Fallback to single condition from theme param
           const conditions = query
-            ? [{ language: "English", pattern: query }]
-            : [{ language: "English", pattern: "" }];
+            ? [{ language: "default", pattern: query }]
+            : [{ language: "default", pattern: "" }];
           setSearchConditions(conditions);
         }
       } catch (error) {
         // If JSON parsing fails, fallback to single condition
         const conditions = query
-          ? [{ language: "English", pattern: query }]
-          : [{ language: "English", pattern: "" }];
+          ? [{ language: "default", pattern: query }]
+          : [{ language: "default", pattern: "" }];
         setSearchConditions(conditions);
       }
     }
@@ -305,7 +276,7 @@ export default function ThemesPageContent() {
   const addSearchCondition = () => {
     setSearchConditions([
       ...searchConditions,
-      { language: "English", pattern: "" },
+      { language: "default", pattern: "" },
     ]);
   };
 
@@ -321,6 +292,7 @@ export default function ThemesPageContent() {
     field: keyof SearchCondition,
     value: string,
   ) => {
+    console.log("updateSearchCondition", index, field, value);
     const newConditions = [...searchConditions];
     newConditions[index] = { ...newConditions[index], [field]: value };
     setSearchConditions(newConditions);
@@ -331,13 +303,13 @@ export default function ThemesPageContent() {
     const searchedLanguages = new Set<string>();
 
     // Add English for theme display
-    searchedLanguages.add("en");
+    searchedLanguages.add("default");
 
     // Add languages from searched conditions (not current state)
     searchedConditions.forEach((condition) => {
-      if (condition.pattern.trim() && condition.language !== "English") {
-        const langCode = Object.entries(LANGUAGE_NAMES).find(
-          ([_, name]) => name === condition.language,
+      if (condition.pattern.trim() && condition.language !== "default") {
+        const langCode = Object.entries(languageOptions).find(
+          ([_, name]) => name.label === condition.language,
         )?.[0];
         if (
           langCode &&
@@ -662,24 +634,12 @@ export default function ThemesPageContent() {
             <TabsContent value="pattern" className="space-y-3 mt-4">
               {searchConditions.map((condition, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <Select
+                  <LanguageSelect
                     value={condition.language}
                     onValueChange={(value) =>
                       updateSearchCondition(index, "language", value)
                     }
-                  >
-                    <SelectTrigger className="w-[150px]">
-                      <SelectValue placeholder="Language" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="English">English</SelectItem>
-                      {Object.keys(LANGUAGE_NAMES).map((code) => (
-                        <SelectItem key={code} value={LANGUAGE_NAMES[code]}>
-                          {LANGUAGE_NAMES[code]}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  />
 
                   <div className="relative flex-1">
                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -927,7 +887,7 @@ export default function ThemesPageContent() {
                               {highlightPatternMatch(
                                 item.theme,
                                 searchedConditions.find(
-                                  (c) => c.language === "English",
+                                  (c) => c.language === "default",
                                 ) || searchedConditions[0],
                               )}
                             </span>
@@ -945,7 +905,7 @@ export default function ThemesPageContent() {
                       {/* Pattern Mode: Language Translations with Fold */}
                       {(() => {
                         const searchedLangs = getSearchedLanguages(item).filter(
-                          (lang: string) => lang !== "en",
+                          (lang: string) => lang !== "default",
                         );
                         const nonSearchedLangs = getNonSearchedLanguages(item);
 
@@ -969,12 +929,9 @@ export default function ThemesPageContent() {
                               // Find matching search condition for this language (from searched conditions)
                               const matchingCondition = searchedConditions.find(
                                 (c) => {
-                                  const langCode = Object.entries(
-                                    LANGUAGE_NAMES,
-                                  ).find(
-                                    ([code, name]) => name === c.language,
-                                  )?.[0];
-                                  return langCode === lang;
+                                  return (
+                                    c.language === languageOptions[lang].label
+                                  );
                                 },
                               );
 
@@ -988,7 +945,7 @@ export default function ThemesPageContent() {
                                       <Globe className="h-3.5 w-3.5 text-muted-foreground" />
                                     </div>
                                     <span className="text-sm font-medium text-muted-foreground">
-                                      {LANGUAGE_NAMES[lang]}
+                                      {languageOptions[lang].label}
                                     </span>
                                   </div>
                                   <div className="flex flex-wrap items-center gap-1 ml-auto">
@@ -1006,7 +963,7 @@ export default function ThemesPageContent() {
                                           handleCopy(trans.translation)
                                         }
                                         className="p-1 rounded-full hover:bg-muted/50 transition-colors"
-                                        aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
+                                        aria-label={`Copy ${languageOptions[lang].label} translation`}
                                       >
                                         <Copy className="h-3.5 w-3.5 text-muted-foreground" />
                                       </button>
@@ -1062,7 +1019,7 @@ export default function ThemesPageContent() {
                             <Globe className="h-3.5 w-3.5 text-muted-foreground" />
                           </div>
                           <span className="text-sm font-medium text-muted-foreground">
-                            {LANGUAGE_NAMES[lang]}
+                            {languageOptionsWithComplement[lang].label}
                           </span>
                         </div>
                         <div className="flex flex-wrap items-center gap-1 ml-auto">
@@ -1073,7 +1030,7 @@ export default function ThemesPageContent() {
                             <button
                               onClick={() => handleCopy(trans.translation)}
                               className="p-1 rounded-full hover:bg-muted/50 transition-colors"
-                              aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
+                              aria-label={`Copy ${languageOptionsWithComplement[lang].label} translation`}
                             >
                               <Copy className="h-3.5 w-3.5 text-muted-foreground" />
                             </button>
@@ -1149,7 +1106,7 @@ export default function ThemesPageContent() {
           {requestTime !== null && (
             <p>
               Request Time: {requestTime.toFixed(2)}ms ({results.length}{" "}
-              results)
+              {results.length > 1 ? "results" : "result"})
             </p>
           )}
           <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
