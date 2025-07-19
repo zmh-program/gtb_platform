@@ -263,7 +263,9 @@ export default function ThemesPageContent() {
           p: c.pattern,
         }));
         // Use encodeURIComponent to handle non-ASCII characters, then btoa
-        const encoded = btoa(encodeURIComponent(JSON.stringify(conditionsData)));
+        const encoded = btoa(
+          encodeURIComponent(JSON.stringify(conditionsData)),
+        );
         params.set("conditions", encoded);
         // Keep first pattern in theme for backward compatibility
         params.set("theme", validConditions[0].pattern);
@@ -694,7 +696,8 @@ export default function ThemesPageContent() {
                     onValueChange={(value) =>
                       updateSearchCondition(index, "language", value)
                     }
-                    className="w-[125px] md:w-[200px]"
+                    className="w-[100px] md:w-[200px]"
+                    showBadge={false}
                   />
 
                   <div className="relative flex-1">

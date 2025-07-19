@@ -62,6 +62,7 @@ interface LanguageSelectProps {
   tooltipText?: string;
   placeholder?: string;
   className?: string;
+  showBadge?: boolean;
 }
 
 export function LanguageSelect({
@@ -73,6 +74,7 @@ export function LanguageSelect({
   tooltipText = "Select the language you want to practice with",
   placeholder = "Select language",
   className = "",
+  showBadge = true,
 }: LanguageSelectProps) {
   return (
     <div className={cn(showLabel && "space-y-3", className)}>
@@ -104,13 +106,13 @@ export function LanguageSelect({
             ([value, { label, native, badge }]) => (
               <SelectItem key={value} value={value}>
                 <div className="flex items-center space-x-1.5">
-                  <span>{label}</span>
+                  <span>{native || label}</span>
                   {native && (
                     <span className="text-xs text-muted-foreground">
-                      ({native})
+                      ({label})
                     </span>
                   )}
-                  {badge && (
+                  {showBadge && badge && (
                     <span className="ml-auto px-1.5 py-0.5 text-xs rounded-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500 font-medium">
                       {badge}
                     </span>
