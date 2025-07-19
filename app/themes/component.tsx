@@ -154,6 +154,8 @@ export default function ThemesPageContent() {
           ? patternSearchTranslations(searchConditions)
           : searchTranslations(query, exact);
 
+      console.log("allResults", allResults);
+
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
 
       // Paginate results
@@ -309,7 +311,7 @@ export default function ThemesPageContent() {
     searchedConditions.forEach((condition) => {
       if (condition.pattern.trim() && condition.language !== "default") {
         const langCode = Object.entries(languageOptions).find(
-          ([_, name]) => name.label === condition.language,
+          ([key, _]) => key === condition.language,
         )?.[0];
         if (
           langCode &&
@@ -928,11 +930,7 @@ export default function ThemesPageContent() {
 
                               // Find matching search condition for this language (from searched conditions)
                               const matchingCondition = searchedConditions.find(
-                                (c) => {
-                                  return (
-                                    c.language === languageOptions[lang].label
-                                  );
-                                },
+                                (c) => c.language === lang,
                               );
 
                               return (
@@ -945,7 +943,10 @@ export default function ThemesPageContent() {
                                       <Globe className="h-3.5 w-3.5 text-muted-foreground" />
                                     </div>
                                     <span className="text-sm font-medium text-muted-foreground">
-                                      {languageOptions[lang].label}
+                                      {
+                                        languageOptionsWithComplement[lang]
+                                          .label
+                                      }
                                     </span>
                                   </div>
                                   <div className="flex flex-wrap items-center gap-1 ml-auto">
@@ -963,7 +964,7 @@ export default function ThemesPageContent() {
                                           handleCopy(trans.translation)
                                         }
                                         className="p-1 rounded-full hover:bg-muted/50 transition-colors"
-                                        aria-label={`Copy ${languageOptions[lang].label} translation`}
+                                        aria-label={`Copy ${languageOptionsWithComplement[lang].label} translation`}
                                       >
                                         <Copy className="h-3.5 w-3.5 text-muted-foreground" />
                                       </button>

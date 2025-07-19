@@ -132,34 +132,6 @@ export function searchTranslations(
   });
 }
 
-// Language code mapping for pattern search
-const LANGUAGE_CODES: Record<string, keyof TranslationItem["translations"]> = {
-  Czech: "cs",
-  Danish: "da",
-  German: "de",
-  "Pirate English": "en",
-  Spanish: "es",
-  Finnish: "fi",
-  French: "fr",
-  Hungarian: "hu",
-  Italian: "it",
-  Japanese: "ja",
-  Korean: "ko",
-  Dutch: "nl",
-  Norwegian: "no",
-  Polish: "pl",
-  Portuguese: "pt",
-  "Portuguese, Brazilian": "ptbr",
-  Romanian: "ro",
-  Russian: "ru",
-  Swedish: "sv",
-  Turkish: "tr",
-  Ukrainian: "uk",
-  "Chinese Simplified": "zh_cn",
-  "Chinese Traditional": "zh_tw",
-  Complement: "co",
-};
-
 // Search condition interface
 export interface SearchCondition {
   language: string;
@@ -226,11 +198,12 @@ export function patternSearchTranslations(
       // Apply digit filtering
       pattern = filterDigit(pattern);
 
-      const languageCode = LANGUAGE_CODES[condition.language];
-
-      if (languageCode) {
+      if (condition.language) {
         // Check specific language translation
-        const translation = item.translations[languageCode];
+        const translation =
+          item.translations[
+            condition.language as keyof typeof item.translations
+          ];
         if (translation) {
           const translationText = removeAccents(
             translation.translation,
@@ -240,7 +213,7 @@ export function patternSearchTranslations(
       }
 
       // If language is "English" (default/theme) or not found, check theme
-      if (condition.language === "English" || !languageCode) {
+      if (condition.language === "default" || !condition.language) {
         const themeText = removeAccents(item.theme).toLowerCase();
         return matchesPattern(themeText, pattern, allowSpaceWildcard);
       }
