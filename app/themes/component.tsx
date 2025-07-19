@@ -392,9 +392,9 @@ export default function ThemesPageContent() {
       } else if (patternChar === normalizedText[i]) {
         // Exact match - highlight in yellow
         result.push(
-          <span key={i} className="!text-yellow-500 !dark:text-yellow-400">
+          <mark key={i} className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5">
             {char}
-          </span>,
+          </mark>,
         );
       } else {
         result.push(char);
@@ -585,7 +585,6 @@ export default function ThemesPageContent() {
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                 <Input
-                  type="search"
                   placeholder="Enter exact or partial theme name..."
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
@@ -643,7 +642,6 @@ export default function ThemesPageContent() {
                   <div className="relative flex-1">
                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                     <Input
-                      type="search"
                       placeholder="Pattern: t_n_, 3a4, etc."
                       value={condition.pattern}
                       onChange={(e) =>
