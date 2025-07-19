@@ -371,7 +371,6 @@ export default function ThemesPageContent() {
       if (patternChar === "_") {
         // Wildcard match - collect consecutive wildcards
         let wildcardText = "";
-        let startIndex = i;
 
         while (i < text.length && pattern[i] === "_") {
           wildcardText += text[i];
@@ -380,7 +379,7 @@ export default function ThemesPageContent() {
 
         result.push(
           <span
-            key={startIndex}
+            key={i}
             className="bg-blue-200 dark:bg-blue-800 rounded px-0.5"
           >
             {wildcardText}
@@ -389,7 +388,6 @@ export default function ThemesPageContent() {
       } else if (patternChar === normalizedText[i]) {
         // Exact match - collect consecutive exact matches
         let exactText = "";
-        let startIndex = i;
 
         while (
           i < text.length &&
@@ -402,7 +400,7 @@ export default function ThemesPageContent() {
 
         result.push(
           <mark
-            key={startIndex}
+            key={i}
             className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5"
           >
             {exactText}
