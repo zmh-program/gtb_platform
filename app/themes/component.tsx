@@ -170,6 +170,13 @@ export default function ThemesPageContent() {
       setIsLoading(true);
       const startTime = performance.now();
 
+      // Save the conditions used for this search (for highlighting)
+      if (mode === "pattern") {
+        setSearchedConditions([...searchConditions]);
+      } else {
+        setSearchedConditions([]);
+      }
+
       // Use appropriate search function based on mode
       const allResults =
         mode === "pattern"
@@ -193,6 +200,7 @@ export default function ThemesPageContent() {
       setResults([]);
       setRequestTime(null);
       setTotalPages(1);
+      setSearchedConditions([]);
     }
   };
 
@@ -318,21 +326,15 @@ export default function ThemesPageContent() {
     setSearchConditions(newConditions);
   };
 
-  // Get relevant languages for display based on search conditions
-  const getRelevantLanguages = (item: TranslationItem) => {
-    if (searchMode !== "pattern") {
-      // For regular search, show all available languages
-      return Object.keys(item.translations);
-    }
-
-    // For pattern search, show languages that were searched + English (theme)
+  // Get searched languages (for fold logic)
+  const getSearchedLanguages = (item: TranslationItem) => {
     const searchedLanguages = new Set<string>();
 
     // Add English for theme display
     searchedLanguages.add("en");
 
-    // Add languages from search conditions
-    searchConditions.forEach((condition) => {
+    // Add languages from searched conditions (not current state)
+    searchedConditions.forEach((condition) => {
       if (condition.pattern.trim() && condition.language !== "English") {
         const langCode = Object.entries(LANGUAGE_NAMES).find(
           ([_, name]) => name === condition.language,
@@ -352,7 +354,15 @@ export default function ThemesPageContent() {
     );
   };
 
-  // Highlight pattern matches in text
+  // Get non-searched languages (for fold expansion)
+  const getNonSearchedLanguages = (item: TranslationItem) => {
+    const searchedLangs = new Set(getSearchedLanguages(item));
+    return Object.keys(item.translations).filter(
+      (lang) => !searchedLangs.has(lang),
+    );
+  };
+
+  // Highlight pattern matches in text with optimized consecutive merging
   const highlightPatternMatch = (text: string, condition: SearchCondition) => {
     if (!condition.pattern.trim() || searchMode !== "pattern") {
       return highlightMatch(text, searchQuery);
@@ -378,26 +388,55 @@ export default function ThemesPageContent() {
     }
 
     const result = [];
-    for (let i = 0; i < text.length; i++) {
+    let i = 0;
+
+    while (i < text.length) {
       const char = text[i];
       const patternChar = pattern[i];
 
       if (patternChar === "_") {
-        // Wildcard match - highlight in different color
+        // Wildcard match - collect consecutive wildcards
+        let wildcardText = "";
+        let startIndex = i;
+
+        while (i < text.length && pattern[i] === "_") {
+          wildcardText += text[i];
+          i++;
+        }
+
         result.push(
-          <span key={i} className="">
-            {char}
+          <span
+            key={startIndex}
+            className="bg-blue-200 dark:bg-blue-800 rounded px-0.5"
+          >
+            {wildcardText}
           </span>,
         );
       } else if (patternChar === normalizedText[i]) {
-        // Exact match - highlight in yellow
+        // Exact match - collect consecutive exact matches
+        let exactText = "";
+        let startIndex = i;
+
+        while (
+          i < text.length &&
+          pattern[i] !== "_" &&
+          pattern[i] === normalizedText[i]
+        ) {
+          exactText += text[i];
+          i++;
+        }
+
         result.push(
-          <mark key={i} className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5">
-            {char}
+          <mark
+            key={startIndex}
+            className="bg-yellow-200 dark:bg-yellow-800 rounded px-0.5"
+          >
+            {exactText}
           </mark>,
         );
       } else {
         result.push(char);
+        i++;
       }
     }
 
@@ -406,6 +445,9 @@ export default function ThemesPageContent() {
 
   // State for folding language displays
   const [foldedCards, setFoldedCards] = useState<Record<number, boolean>>({});
+  const [searchedConditions, setSearchedConditions] = useState<
+    SearchCondition[]
+  >([]);
 
   const toggleCardFold = (index: number) => {
     setFoldedCards((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -884,9 +926,9 @@ export default function ThemesPageContent() {
                             <span className="text-sm font-medium mr-1">
                               {highlightPatternMatch(
                                 item.theme,
-                                searchConditions.find(
+                                searchedConditions.find(
                                   (c) => c.language === "English",
-                                ) || searchConditions[0],
+                                ) || searchedConditions[0],
                               )}
                             </span>
                             <button
@@ -900,16 +942,20 @@ export default function ThemesPageContent() {
                         </div>
                       </div>
 
-                      {/* Pattern Mode: Relevant Language Translations with Fold */}
+                      {/* Pattern Mode: Language Translations with Fold */}
                       {(() => {
-                        const relevantLangs = getRelevantLanguages(item).filter(
-                          (lang) => lang !== "en",
+                        const searchedLangs = getSearchedLanguages(item).filter(
+                          (lang: string) => lang !== "en",
                         );
-                        const maxDisplay = 3;
-                        const isLongList = relevantLangs.length > maxDisplay;
+                        const nonSearchedLangs = getNonSearchedLanguages(item);
+
+                        // When folded: show searched languages
+                        // When expanded: show searched + non-searched languages
                         const displayLangs = foldedCards[index]
-                          ? relevantLangs
-                          : relevantLangs.slice(0, maxDisplay);
+                          ? [...searchedLangs, ...nonSearchedLangs]
+                          : searchedLangs;
+
+                        const isLongList = nonSearchedLangs.length > 0;
 
                         return (
                           <>
@@ -920,8 +966,8 @@ export default function ThemesPageContent() {
                                 ];
                               if (!trans) return null;
 
-                              // Find matching search condition for this language
-                              const matchingCondition = searchConditions.find(
+                              // Find matching search condition for this language (from searched conditions)
+                              const matchingCondition = searchedConditions.find(
                                 (c) => {
                                   const langCode = Object.entries(
                                     LANGUAGE_NAMES,
@@ -993,9 +1039,8 @@ export default function ThemesPageContent() {
                                   ) : (
                                     <>
                                       <ChevronRight className="h-3 w-3" />
-                                      Show {relevantLangs.length -
-                                        maxDisplay}{" "}
-                                      More Languages
+                                      Show {nonSearchedLangs.length} More
+                                      Languages
                                     </>
                                   )}
                                 </button>

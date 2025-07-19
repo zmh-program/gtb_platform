@@ -1,6 +1,6 @@
 import { type TranslationItem } from "./types";
 
-export const LAST_UPDATED: string = "2025/04/30";
+export const LAST_UPDATED: string = "2025/07/01";
 export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 213567,
