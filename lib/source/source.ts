@@ -1418,8 +1418,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Anti-Virüs",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:07:48-04:00",
       },
       uk: {
         translation: "Антивірус",
@@ -2541,10 +2541,15 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         is_approved: false,
         approved_at: null,
       },
+      da: {
+        translation: "Arktisk",
+        is_approved: true,
+        approved_at: "2025-05-03T14:47:29-04:00",
+      },
       nl: {
         translation: "Noordpoolgebied",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-05-31T13:20:01-04:00",
       },
       fi: {
         translation: "Arktinen",
@@ -3542,8 +3547,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Atom",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:07:51-04:00",
       },
       uk: {
         translation: "Атом",
@@ -4316,9 +4321,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-02-01T00:47:25-05:00",
       },
       tr: {
-        translation: "Aksolotl",
-        is_approved: false,
-        approved_at: null,
+        translation: "Axolotl",
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:02-04:00",
       },
       uk: {
         translation: "Аксолотль",
@@ -5373,6 +5378,10 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Furnace",
+            reference: "Turkish",
+          },
+          {
+            theme: "Oven",
             reference: "Turkish",
           },
         ],
@@ -7871,8 +7880,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Beyzbol Eldiveni",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:11-04:00",
       },
       uk: {
         translation: "Бейсбольна рукавиця",
@@ -10496,8 +10505,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Bed Wars",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:06-04:00",
       },
       uk: {
         translation: "Bed Wars",
@@ -12944,8 +12953,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Bisiklet Yolu",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:13-04:00",
       },
       uk: {
         translation: "Велодоріжка",
@@ -14037,8 +14046,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Kuş Evi",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:06:54-04:00",
       },
       uk: {
         translation: "Шпаківня",
@@ -16229,7 +16238,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-31T00:45:00-05:00",
       },
       cs: {
-        translation: "Modrák",
+        translation: "Nákres",
         is_approved: false,
         approved_at: null,
       },
@@ -44124,9 +44133,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-17T05:03:49-04:00",
       },
       es: {
-        translation: "Cowboy",
-        is_approved: true,
-        approved_at: "2019-11-09T07:38:42-05:00",
+        translation: "Vaquero",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Cowboy",
@@ -46793,8 +46802,22 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 214069,
     theme: "Crystal",
-    shortcut: null,
-    multiwords: [],
+    shortcut: "jewel",
+    multiwords: [
+      {
+        multiword: "jewel",
+        occurrences: [
+          {
+            theme: "Crystal",
+            reference: "Pirate English",
+          },
+          {
+            theme: "Diamond",
+            reference: "Pirate English",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "水晶",
@@ -46862,9 +46885,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-07-05T18:08:19-04:00",
       },
       en: {
-        translation: "Crystal",
+        translation: "Jewel",
         is_approved: true,
-        approved_at: "2019-09-20T17:47:16-04:00",
+        approved_at: "2025-06-12T09:32:53-04:00",
       },
       pl: {
         translation: "Kryształ",
@@ -50056,6 +50079,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
         ],
       },
+      {
+        multiword: "jewel",
+        occurrences: [
+          {
+            theme: "Crystal",
+            reference: "Pirate English",
+          },
+          {
+            theme: "Diamond",
+            reference: "Pirate English",
+          },
+        ],
+      },
     ],
     translations: {
       zh_cn: {
@@ -53068,9 +53104,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-03-14T09:33:33-04:00",
       },
       pl: {
-        translation: "Domek Dla Lalek",
+        translation: "Domek dla lalek",
         is_approved: true,
-        approved_at: "2018-05-12T03:14:46-04:00",
+        approved_at: "2025-06-19T21:17:59-04:00",
       },
       pt: {
         translation: "Casa de bonecas",
@@ -58021,9 +58057,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-14T16:37:27-04:00",
       },
       es: {
-        translation: "Elephant",
-        is_approved: true,
-        approved_at: "2016-10-10T21:07:13-04:00",
+        translation: "Elefante",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Elefant",
@@ -60842,7 +60878,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     ],
     translations: {
       zh_cn: {
-        translation: "晴天",
+        translation: "集市",
         is_approved: false,
         approved_at: null,
       },
@@ -63945,9 +63981,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-14T16:50:25-04:00",
       },
       es: {
-        translation: "Fireplace",
-        is_approved: true,
-        approved_at: "2022-12-12T17:09:16-05:00",
+        translation: "Chimenea",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Fireplace",
@@ -64909,9 +64945,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-05-12T03:20:57-04:00",
       },
       pt: {
-        translation: "Punho / Murro",
+        translation: "Punho",
         is_approved: true,
-        approved_at: "2019-04-06T10:05:09-04:00",
+        approved_at: "2025-05-30T05:33:58-04:00",
       },
       ptbr: {
         translation: "Punho",
@@ -66755,9 +66791,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-12-17T07:47:03-05:00",
       },
       pl: {
-        translation: "Latająca Świnia",
+        translation: "Latająca świnia",
         is_approved: true,
-        approved_at: "2018-05-06T13:59:50-04:00",
+        approved_at: "2025-06-19T21:18:05-04:00",
       },
       pt: {
         translation: "Porco voador",
@@ -67164,7 +67200,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Football",
             reference:
-              "English / Czech / Danish / Dutch / French / German / Italian / Norwegian / Pirate English / Portuguese / Romanian / Spanish",
+              "English / Czech / Danish / Dutch / French / German / Italian / Norwegian / Pirate English / Portuguese / Romanian",
           },
           {
             theme: "Soccer",
@@ -67314,9 +67350,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-14T16:37:51-04:00",
       },
       es: {
-        translation: "Football",
-        is_approved: true,
-        approved_at: "2017-07-02T22:21:46-04:00",
+        translation: "Fútbol",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Fotboll",
@@ -69232,6 +69268,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "batatafrita",
+        occurrences: [
+          {
+            theme: "French Fries",
+            reference: "Portuguese, Brazilian",
+          },
+          {
+            theme: "Potato Chips",
+            reference: "Portuguese, Brazilian",
+          },
+        ],
+      },
+      {
         multiword: "batatasfrita",
         occurrences: [
           {
@@ -69240,7 +69289,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Potato Chips",
-            reference: "Portuguese / Portuguese, Brazilian",
+            reference: "Portuguese",
           },
         ],
       },
@@ -71154,6 +71203,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "ovn",
     multiwords: [
       {
+        multiword: "firin",
+        occurrences: [
+          {
+            theme: "Bakery",
+            reference: "Turkish",
+          },
+          {
+            theme: "Furnace",
+            reference: "Turkish",
+          },
+          {
+            theme: "Oven",
+            reference: "Turkish",
+          },
+        ],
+      },
+      {
         multiword: "печь",
         occurrences: [
           {
@@ -71232,19 +71298,6 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Stove",
             reference: "Polish",
-          },
-        ],
-      },
-      {
-        multiword: "firin",
-        occurrences: [
-          {
-            theme: "Bakery",
-            reference: "Turkish",
-          },
-          {
-            theme: "Furnace",
-            reference: "Turkish",
           },
         ],
       },
@@ -71495,9 +71548,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2018-03-22T06:57:49-04:00",
       },
       es: {
-        translation: "Furniture",
-        is_approved: true,
-        approved_at: "2020-06-09T16:18:35-04:00",
+        translation: "Mueble",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Möbler",
@@ -83040,8 +83093,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       es: {
         translation: "Feliz",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-05-13T22:59:50-04:00",
       },
       sv: {
         translation: "Glad",
@@ -85897,7 +85950,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 214519,
     theme: "Hide and Seek",
-    shortcut: "kurragomma",
+    shortcut: "escondida",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -85996,9 +86049,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-14T16:51:52-04:00",
       },
       es: {
-        translation: "Hide and Seek",
+        translation: "Escondidas",
         is_approved: true,
-        approved_at: "2019-08-02T11:29:08-04:00",
+        approved_at: "2025-06-03T17:49:35-04:00",
       },
       sv: {
         translation: "Kurragömma",
@@ -92779,9 +92832,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-09-17T17:07:41-04:00",
       },
       tr: {
-        translation: "Illusion",
-        is_approved: false,
-        approved_at: null,
+        translation: "İlizyon",
+        is_approved: true,
+        approved_at: "2025-06-21T08:06:41-04:00",
       },
       uk: {
         translation: "Ілюзія",
@@ -97298,7 +97351,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T04:08:51-04:00",
       },
       cs: {
-        translation: "Kelp",
+        translation: "Mořské Řasy",
         is_approved: false,
         approved_at: null,
       },
@@ -102098,8 +102151,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Lav Lambası",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:06:43-04:00",
       },
       uk: {
         translation: "Лавова лампа",
@@ -108584,7 +108637,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T04:09:08-04:00",
       },
       cs: {
-        translation: "Lucky blok",
+        translation: "Lucky Block",
         is_approved: false,
         approved_at: null,
       },
@@ -117667,9 +117720,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-15T08:41:23-04:00",
       },
       es: {
-        translation: "Monocle",
-        is_approved: true,
-        approved_at: "2017-07-17T01:20:03-04:00",
+        translation: "Monóculo",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Monokel",
@@ -118585,8 +118638,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Motosiklet",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:23-04:00",
       },
       uk: {
         translation: "Мотоцикл",
@@ -123331,8 +123384,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Kuzey Işıkları",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:17-04:00",
       },
       uk: {
         translation: "Полярне сяйво",
@@ -126481,6 +126534,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "ovn",
     multiwords: [
       {
+        multiword: "firin",
+        occurrences: [
+          {
+            theme: "Bakery",
+            reference: "Turkish",
+          },
+          {
+            theme: "Furnace",
+            reference: "Turkish",
+          },
+          {
+            theme: "Oven",
+            reference: "Turkish",
+          },
+        ],
+      },
+      {
         multiword: "печь",
         occurrences: [
           {
@@ -126679,8 +126749,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Fırın",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:21-04:00",
       },
       uk: {
         translation: "Духовка",
@@ -129465,7 +129535,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 240772,
     theme: "Parking Lot",
-    shortcut: "parking",
+    shortcut: "otopark",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -129570,8 +129640,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Otopark",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:19-04:00",
       },
       uk: {
         translation: "Паркінг",
@@ -132729,8 +132799,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Evcil Hayvan Mağazası",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:48-04:00",
       },
       uk: {
         translation: "Зоомагазин",
@@ -134504,8 +134574,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Resim Çerçevesi",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:49-04:00",
       },
       uk: {
         translation: "Фоторамка",
@@ -141055,9 +141125,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-04-12T04:57:18-04:00",
       },
       es: {
-        translation: "Palomitas (comida)",
+        translation: "Palomitas de Maíz",
         is_approved: true,
-        approved_at: "2017-07-02T21:48:29-04:00",
+        approved_at: "2025-05-26T02:10:58-04:00",
       },
       sv: {
         translation: "Popcorn",
@@ -142054,6 +142124,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "batatafrita",
+        occurrences: [
+          {
+            theme: "French Fries",
+            reference: "Portuguese, Brazilian",
+          },
+          {
+            theme: "Potato Chips",
+            reference: "Portuguese, Brazilian",
+          },
+        ],
+      },
+      {
         multiword: "batatasfrita",
         occurrences: [
           {
@@ -142062,7 +142145,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Potato Chips",
-            reference: "Portuguese / Portuguese, Brazilian",
+            reference: "Portuguese",
           },
         ],
       },
@@ -142180,9 +142263,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2019-04-06T19:04:39-04:00",
       },
       ptbr: {
-        translation: "Batatas fritas",
+        translation: "Batata frita",
         is_approved: true,
-        approved_at: "2019-07-01T15:40:15-04:00",
+        approved_at: "2025-05-22T12:40:04-04:00",
       },
       ro: {
         translation: "Cipsuri de Cartof",
@@ -148708,7 +148791,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-01-29T04:52:52-05:00",
       },
       cs: {
-        translation: "Vývar s čínskými nudlemi",
+        translation: "Ramen",
         is_approved: false,
         approved_at: null,
       },
@@ -151259,9 +151342,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     multiwords: [],
     translations: {
       zh_cn: {
-        translation: "富有的",
-        is_approved: false,
-        approved_at: null,
+        translation: "富有",
+        is_approved: true,
+        approved_at: "2025-05-13T11:07:04-04:00",
       },
       zh_tw: {
         translation: "富裕的",
@@ -155702,9 +155785,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2025-01-30T15:34:55-05:00",
       },
       es: {
-        translation: "Ruins",
-        is_approved: true,
-        approved_at: "2022-04-05T16:43:38-04:00",
+        translation: "Ruinas",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Ruins",
@@ -160233,9 +160316,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2023-08-14T16:42:59-04:00",
       },
       es: {
-        translation: "Scarecrow",
-        is_approved: true,
-        approved_at: "2019-10-09T10:21:32-04:00",
+        translation: "Espantapájaros",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Fågelskrämma",
@@ -161996,9 +162079,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2021-07-28T13:19:01-04:00",
       },
       pl: {
-        translation: "Żółw Morski",
+        translation: "Żółw morski",
         is_approved: true,
-        approved_at: "2018-05-12T04:03:10-04:00",
+        approved_at: "2025-06-19T21:17:46-04:00",
       },
       pt: {
         translation: "Tartaruga marinha",
@@ -171568,9 +171651,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2022-07-22T15:10:36-04:00",
       },
       ru: {
-        translation: "Сани ",
+        translation: "Сани",
         is_approved: true,
-        approved_at: "2023-08-24T13:03:54-04:00",
+        approved_at: "2025-07-06T14:43:33-04:00",
       },
       es: {
         translation: "Trineo",
@@ -173420,7 +173503,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2024-10-06T04:22:23-04:00",
       },
       cs: {
-        translation: "Více",
+        translation: "S'more",
         is_approved: false,
         approved_at: null,
       },
@@ -174499,9 +174582,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-01-29T12:51:19-05:00",
       },
       pl: {
-        translation: "Płatek Śniegu",
+        translation: "Płatek śniegu",
         is_approved: true,
-        approved_at: "2018-05-07T06:48:46-04:00",
+        approved_at: "2025-06-19T21:17:40-04:00",
       },
       pt: {
         translation: "Floco de neve",
@@ -175035,7 +175118,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Football",
             reference:
-              "English / Czech / Danish / Dutch / French / German / Italian / Norwegian / Pirate English / Portuguese / Romanian / Spanish",
+              "English / Czech / Danish / Dutch / French / German / Italian / Norwegian / Pirate English / Portuguese / Romanian",
           },
           {
             theme: "Soccer",
@@ -188523,9 +188606,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2020-04-15T11:41:53-04:00",
       },
       es: {
-        translation: "Swing",
-        is_approved: true,
-        approved_at: "2019-11-09T08:07:23-05:00",
+        translation: "Columpio",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Gunga",
@@ -202903,9 +202986,9 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         approved_at: "2017-07-13T06:43:31-04:00",
       },
       es: {
-        translation: "Tree",
-        is_approved: true,
-        approved_at: "2017-07-17T01:18:14-04:00",
+        translation: "Árbol",
+        is_approved: false,
+        approved_at: null,
       },
       sv: {
         translation: "Träd",
@@ -203345,7 +203428,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     multiwords: [],
     translations: {
       zh_cn: {
-        translation: "花式射击",
+        translation: "花式进球",
         is_approved: false,
         approved_at: null,
       },
@@ -206379,8 +206462,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Ukulele",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:39-04:00",
       },
       uk: {
         translation: "Укулеле",
@@ -207329,8 +207412,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Üniversite",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:07:31-04:00",
       },
       uk: {
         translation: "Університет",
@@ -210840,8 +210923,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Duvar Kağıdı",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:34-04:00",
       },
       uk: {
         translation: "Шпалери",
@@ -218872,8 +218955,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Yeti",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:36-04:00",
       },
       uk: {
         translation: "Єті",
@@ -218990,8 +219073,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
       },
       tr: {
         translation: "Yoğurt",
-        is_approved: false,
-        approved_at: null,
+        is_approved: true,
+        approved_at: "2025-06-21T08:08:31-04:00",
       },
       uk: {
         translation: "Йогурт",
