@@ -190,9 +190,9 @@ export function patternSearchTranslations(
       let allowSpaceWildcard = false;
 
       // Check for space wildcard suffix
-      if (pattern.endsWith("!")) {
+      if (pattern.startsWith("!")) {
         allowSpaceWildcard = true;
-        pattern = pattern.slice(0, -1).trim();
+        pattern = pattern.slice(1).trim();
       }
 
       // Apply digit filtering

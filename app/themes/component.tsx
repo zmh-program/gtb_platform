@@ -402,8 +402,8 @@ export default function ThemesPageContent() {
     let pattern = condition.pattern.toLowerCase().trim();
 
     // Handle space wildcard suffix
-    if (pattern.endsWith("!")) {
-      pattern = pattern.slice(0, -1).trim();
+    if (pattern.startsWith("!")) {
+      pattern = pattern.slice(1).trim();
     }
 
     // Apply digit filtering
@@ -785,12 +785,11 @@ export default function ThemesPageContent() {
                 <span className="text-emerald-600 dark:text-emerald-400">
                   ! Prefix
                 </span>
-                : allow space-ignore mode in pattern (e.g. !c___ ___ = c___ ___
-                + c___
+                : allow{" "}
                 <span className="text-emerald-600 dark:text-emerald-400 font-bold">
                   _
-                </span>
-                ___)
+                </span>{" "}
+                to match space (e.g. !c___ = c_ _ + c___ + c __ ...)
                 <br />
                 <span className="text-emerald-600 dark:text-emerald-400">
                   +/- Buttons
