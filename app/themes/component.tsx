@@ -106,7 +106,7 @@ export default function ThemesPageContent() {
           try {
             // Try base64 decode first
             const decoded = atob(conditionsParam);
-            conditionsData = JSON.parse(decoded);
+            conditionsData = JSON.parse(decodeURIComponent(decoded));
           } catch {
             // Fallback to direct JSON parsing for backward compatibility
             conditionsData = JSON.parse(conditionsParam);
@@ -215,7 +215,7 @@ export default function ThemesPageContent() {
             try {
               // Try base64 decode first
               const decoded = atob(conditionsParam);
-              conditionsData = JSON.parse(decoded);
+              conditionsData = JSON.parse(decodeURIComponent(decoded));
             } catch {
               // Fallback to direct JSON parsing for backward compatibility
               conditionsData = JSON.parse(conditionsParam);
@@ -262,7 +262,8 @@ export default function ThemesPageContent() {
           l: c.language,
           p: c.pattern,
         }));
-        const encoded = btoa(JSON.stringify(conditionsData));
+        // Use encodeURIComponent to handle non-ASCII characters, then btoa
+        const encoded = btoa(encodeURIComponent(JSON.stringify(conditionsData)));
         params.set("conditions", encoded);
         // Keep first pattern in theme for backward compatibility
         params.set("theme", validConditions[0].pattern);
