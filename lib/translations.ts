@@ -198,24 +198,20 @@ export function patternSearchTranslations(
       // Apply digit filtering
       pattern = filterDigit(pattern);
 
-      if (condition.language) {
-        // Check specific language translation
-        const translation =
-          item.translations[
-            condition.language as keyof typeof item.translations
-          ];
-        if (translation) {
-          const translationText = removeAccents(
-            translation.translation,
-          ).toLowerCase();
-          return matchesPattern(translationText, pattern, allowSpaceWildcard);
-        }
-      }
-
-      // If language is "English" (default/theme) or not found, check theme
+      // If language is "default" or not found, check theme
       if (condition.language === "default" || !condition.language) {
         const themeText = removeAccents(item.theme).toLowerCase();
         return matchesPattern(themeText, pattern, allowSpaceWildcard);
+      }
+
+      // Check specific language translation
+      const translation =
+        item.translations[condition.language as keyof typeof item.translations];
+      if (translation) {
+        const translationText = removeAccents(
+          translation.translation,
+        ).toLowerCase();
+        return matchesPattern(translationText, pattern, allowSpaceWildcard);
       }
 
       return false;

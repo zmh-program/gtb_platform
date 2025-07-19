@@ -126,16 +126,21 @@ export default function ThemesPageContent() {
   }, [searchParams]);
 
   // Manual search function
-  const performSearch = () => {
+  const performSearch = (overrideConditions?: SearchCondition[]) => {
     const mode = searchParams.get("mode") || "regular";
     const query = searchParams.get("theme") || "";
     const exact = searchParams.get("exact") === "true";
     const page = parseInt(searchParams.get("page") || "1", 10);
 
+    const currentConditions = overrideConditions || searchConditions;
+    console.log("performSearch called:", { mode, query, currentConditions });
+
     const hasValidSearch =
       mode === "pattern"
-        ? searchConditions.some((c) => c.pattern.trim().length >= 1)
+        ? currentConditions.some((c) => c.pattern.trim().length >= 1)
         : query.length >= 1;
+
+    console.log("hasValidSearch:", hasValidSearch);
 
     if (hasValidSearch) {
       setIsLoading(true);
@@ -143,16 +148,24 @@ export default function ThemesPageContent() {
 
       // Save the conditions used for this search (for highlighting)
       if (mode === "pattern") {
-        setSearchedConditions([...searchConditions]);
+        setSearchedConditions([...currentConditions]);
       } else {
         setSearchedConditions([]);
       }
 
       // Use appropriate search function based on mode
-      const allResults =
-        mode === "pattern"
-          ? patternSearchTranslations(searchConditions)
-          : searchTranslations(query, exact);
+      let allResults;
+      if (mode === "pattern") {
+        console.log("Pattern search with conditions:", currentConditions);
+        allResults = patternSearchTranslations(currentConditions);
+        console.log(
+          "Pattern search results:",
+          allResults.length,
+          allResults.slice(0, 3),
+        );
+      } else {
+        allResults = searchTranslations(query, exact);
+      }
 
       console.log("allResults", allResults);
 
@@ -183,7 +196,28 @@ export default function ThemesPageContent() {
     const mode = searchParams.get("mode") || "regular";
 
     if (query) {
-      performSearch();
+      if (mode === "pattern") {
+        // For pattern mode, construct the conditions and pass them directly
+        try {
+          const conditionsParam = searchParams.get("conditions");
+          let conditions: SearchCondition[];
+          if (conditionsParam) {
+            const conditionsData = JSON.parse(conditionsParam);
+            conditions = conditionsData.map((c: any) => ({
+              language: c.l,
+              pattern: c.p,
+            }));
+          } else {
+            conditions = [{ language: "default", pattern: query }];
+          }
+          performSearch(conditions);
+        } catch (error) {
+          const conditions = [{ language: "default", pattern: query }];
+          performSearch(conditions);
+        }
+      } else {
+        performSearch();
+      }
     }
   }, [searchParams]);
 
@@ -378,10 +412,7 @@ export default function ThemesPageContent() {
         }
 
         result.push(
-          <span
-            key={i}
-            className="bg-blue-200 dark:bg-blue-800 rounded px-0.5"
-          >
+          <span key={i} className="bg-blue-200 dark:bg-blue-800 rounded px-0.5">
             {wildcardText}
           </span>,
         );
@@ -639,6 +670,7 @@ export default function ThemesPageContent() {
                     onValueChange={(value) =>
                       updateSearchCondition(index, "language", value)
                     }
+                    className="w-[125px] md:w-[200px]"
                   />
 
                   <div className="relative flex-1">
