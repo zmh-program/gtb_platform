@@ -2,12 +2,24 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { searchTranslations, removeAccents } from "@/lib/translations";
+import {
+  searchTranslations,
+  removeAccents,
+  patternSearchTranslations,
+  SearchCondition,
+} from "@/lib/translations";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import {
   Search,
   Globe,
@@ -18,6 +30,8 @@ import {
   Clapperboard,
   ArrowRight,
   LinkIcon,
+  Plus,
+  X,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import {
@@ -70,82 +84,6 @@ const LANGUAGE_NAMES: Record<string, string> = {
 
 const ITEMS_PER_PAGE = 50;
 
-// Fuzzy search function that uses Levenshtein distance
-function levenshteinDistance(a: string, b: string): number {
-  const matrix = [];
-  
-  for (let i = 0; i <= b.length; i++) {
-    matrix[i] = [i];
-  }
-  
-  for (let j = 0; j <= a.length; j++) {
-    matrix[0][j] = j;
-  }
-  
-  for (let i = 1; i <= b.length; i++) {
-    for (let j = 1; j <= a.length; j++) {
-      if (b.charAt(i - 1) === a.charAt(j - 1)) {
-        matrix[i][j] = matrix[i - 1][j - 1];
-      } else {
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j] + 1
-        );
-      }
-    }
-  }
-  
-  return matrix[b.length][a.length];
-}
-
-function fuzzySearchTranslations(query: string): TranslationItem[] {
-  if (!query) return [];
-  
-  const normalizedQuery = removeAccents(query).toLowerCase().trim();
-  const results: Array<{ item: TranslationItem; score: number }> = [];
-  
-  const ALL_TRANSLATIONS = require("@/lib/source/source").ALL_TRANSLATIONS as TranslationItem[];
-  
-  ALL_TRANSLATIONS.forEach((item) => {
-    let bestScore = Infinity;
-    
-    // Check theme
-    const normalizedTheme = removeAccents(item.theme).toLowerCase();
-    const themeDistance = levenshteinDistance(normalizedQuery, normalizedTheme);
-    
-    // For partial matches, check if query is contained in theme
-    if (normalizedTheme.includes(normalizedQuery)) {
-      bestScore = Math.min(bestScore, themeDistance * 0.5);
-    } else {
-      bestScore = Math.min(bestScore, themeDistance);
-    }
-    
-    // Check translations
-    Object.values(item.translations).forEach((translation) => {
-      const normalizedTranslation = removeAccents(translation.translation).toLowerCase();
-      const translationDistance = levenshteinDistance(normalizedQuery, normalizedTranslation);
-      
-      if (normalizedTranslation.includes(normalizedQuery)) {
-        bestScore = Math.min(bestScore, translationDistance * 0.7);
-      } else {
-        bestScore = Math.min(bestScore, translationDistance);
-      }
-    });
-    
-    // Only include items with reasonable similarity (distance < 60% of query length)
-    const maxDistance = Math.max(3, Math.floor(normalizedQuery.length * 0.6));
-    if (bestScore <= maxDistance) {
-      results.push({ item, score: bestScore });
-    }
-  });
-  
-  // Sort by score (lower is better)
-  return results
-    .sort((a, b) => a.score - b.score)
-    .map(result => result.item);
-}
-
 export default function ThemesPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -164,6 +102,9 @@ export default function ThemesPageContent() {
   const [searchMode, setSearchMode] = useState(
     searchParams.get("mode") || "regular",
   );
+  const [searchConditions, setSearchConditions] = useState<SearchCondition[]>([
+    { language: "English", pattern: searchParams.get("theme") || "" },
+  ]);
   const [requestTime, setRequestTime] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(
     parseInt(searchParams.get("page") || "1", 10),
@@ -184,15 +125,57 @@ export default function ThemesPageContent() {
     setCurrentPage(page);
     setIsEmptyResults(false);
 
-    if (query.length >= 1) {
+    // Update search conditions based on URL params (only for pattern mode)
+    if (mode === "pattern") {
+      try {
+        const conditionsParam = searchParams.get("conditions");
+        if (conditionsParam) {
+          // Parse conditions from URL
+          const conditionsData = JSON.parse(conditionsParam);
+          const conditions = conditionsData.map((c: any) => ({
+            language: c.l,
+            pattern: c.p,
+          }));
+          setSearchConditions(conditions);
+        } else {
+          // Fallback to single condition from theme param
+          const conditions = query
+            ? [{ language: "English", pattern: query }]
+            : [{ language: "English", pattern: "" }];
+          setSearchConditions(conditions);
+        }
+      } catch (error) {
+        // If JSON parsing fails, fallback to single condition
+        const conditions = query
+          ? [{ language: "English", pattern: query }]
+          : [{ language: "English", pattern: "" }];
+        setSearchConditions(conditions);
+      }
+    }
+  }, [searchParams]);
+
+  // Manual search function
+  const performSearch = () => {
+    const mode = searchParams.get("mode") || "regular";
+    const query = searchParams.get("theme") || "";
+    const exact = searchParams.get("exact") === "true";
+    const page = parseInt(searchParams.get("page") || "1", 10);
+
+    const hasValidSearch =
+      mode === "pattern"
+        ? searchConditions.some((c) => c.pattern.trim().length >= 1)
+        : query.length >= 1;
+
+    if (hasValidSearch) {
       setIsLoading(true);
       const startTime = performance.now();
-      
+
       // Use appropriate search function based on mode
-      const allResults = mode === "fuzzy" 
-        ? fuzzySearchTranslations(query)
-        : searchTranslations(query, exact);
-        
+      const allResults =
+        mode === "pattern"
+          ? patternSearchTranslations(searchConditions)
+          : searchTranslations(query, exact);
+
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
 
       // Paginate results
@@ -211,17 +194,56 @@ export default function ThemesPageContent() {
       setRequestTime(null);
       setTotalPages(1);
     }
+  };
+
+  // Only perform search when URL changes and there's already a search query
+  useEffect(() => {
+    const query = searchParams.get("theme") || "";
+    const mode = searchParams.get("mode") || "regular";
+
+    if (query) {
+      performSearch();
+    }
   }, [searchParams]);
 
   const handleSearch = () => {
-    if (inputValue.trim().length < 1) {
-      return;
-    }
-    const params = new URLSearchParams(searchParams);
-    if (inputValue) {
-      params.set("theme", inputValue);
+    if (searchMode === "pattern") {
+      // For pattern search, check if any condition has a pattern
+      if (!searchConditions.some((c) => c.pattern.trim().length >= 1)) {
+        return;
+      }
     } else {
-      params.delete("theme");
+      // For regular search, check input value
+      if (inputValue.trim().length < 1) {
+        return;
+      }
+    }
+
+    const params = new URLSearchParams(searchParams);
+
+    if (searchMode === "pattern") {
+      // For pattern search, encode all conditions in URL
+      const validConditions = searchConditions.filter((c) => c.pattern.trim());
+      if (validConditions.length > 0) {
+        // Encode conditions as JSON in URL
+        const conditionsData = validConditions.map((c) => ({
+          l: c.language,
+          p: c.pattern,
+        }));
+        params.set("conditions", JSON.stringify(conditionsData));
+        // Keep first pattern in theme for backward compatibility
+        params.set("theme", validConditions[0].pattern);
+      } else {
+        params.delete("conditions");
+        params.delete("theme");
+      }
+    } else {
+      // For regular search
+      if (inputValue) {
+        params.set("theme", inputValue);
+      } else {
+        params.delete("theme");
+      }
     }
 
     if (exactMatch && searchMode === "regular") {
@@ -240,6 +262,9 @@ export default function ThemesPageContent() {
     params.set("page", "1");
 
     router.push(`/themes?${params.toString()}`);
+
+    // Perform search immediately after URL update
+    setTimeout(() => performSearch(), 0);
   };
 
   const handlePageChange = (page: number) => {
@@ -250,22 +275,140 @@ export default function ThemesPageContent() {
 
   const handleSearchModeChange = (mode: string) => {
     const params = new URLSearchParams(searchParams);
-    
+
     if (mode !== "regular") {
       params.set("mode", mode);
     } else {
       params.delete("mode");
     }
-    
-    // Remove exact match parameter when switching to fuzzy mode
-    if (mode === "fuzzy") {
+
+    // Remove exact match parameter when switching to pattern mode
+    if (mode === "pattern") {
       params.delete("exact");
     }
-    
+
     // Reset to page 1 when changing search mode
     params.set("page", "1");
-    
+
     router.push(`/themes?${params.toString()}`);
+  };
+
+  // Functions to manage search conditions for pattern search
+  const addSearchCondition = () => {
+    setSearchConditions([
+      ...searchConditions,
+      { language: "English", pattern: "" },
+    ]);
+  };
+
+  const removeSearchCondition = (index: number) => {
+    if (searchConditions.length > 1) {
+      const newConditions = searchConditions.filter((_, i) => i !== index);
+      setSearchConditions(newConditions);
+    }
+  };
+
+  const updateSearchCondition = (
+    index: number,
+    field: keyof SearchCondition,
+    value: string,
+  ) => {
+    const newConditions = [...searchConditions];
+    newConditions[index] = { ...newConditions[index], [field]: value };
+    setSearchConditions(newConditions);
+  };
+
+  // Get relevant languages for display based on search conditions
+  const getRelevantLanguages = (item: TranslationItem) => {
+    if (searchMode !== "pattern") {
+      // For regular search, show all available languages
+      return Object.keys(item.translations);
+    }
+
+    // For pattern search, show languages that were searched + English (theme)
+    const searchedLanguages = new Set<string>();
+
+    // Add English for theme display
+    searchedLanguages.add("en");
+
+    // Add languages from search conditions
+    searchConditions.forEach((condition) => {
+      if (condition.pattern.trim() && condition.language !== "English") {
+        const langCode = Object.entries(LANGUAGE_NAMES).find(
+          ([_, name]) => name === condition.language,
+        )?.[0];
+        if (
+          langCode &&
+          item.translations[langCode as keyof typeof item.translations]
+        ) {
+          searchedLanguages.add(langCode);
+        }
+      }
+    });
+
+    return Array.from(searchedLanguages).filter(
+      (langCode) =>
+        item.translations[langCode as keyof typeof item.translations],
+    );
+  };
+
+  // Highlight pattern matches in text
+  const highlightPatternMatch = (text: string, condition: SearchCondition) => {
+    if (!condition.pattern.trim() || searchMode !== "pattern") {
+      return highlightMatch(text, searchQuery);
+    }
+
+    let pattern = condition.pattern.toLowerCase().trim();
+
+    // Handle space wildcard suffix
+    if (pattern.endsWith("!")) {
+      pattern = pattern.slice(0, -1).trim();
+    }
+
+    // Apply digit filtering
+    pattern = pattern.replace(/-/g, " ").replace(/\d{1,2}/g, (match) => {
+      const num = parseInt(match);
+      return "_".repeat(num);
+    });
+
+    const normalizedText = removeAccents(text).toLowerCase();
+
+    if (normalizedText.length !== pattern.length) {
+      return text;
+    }
+
+    const result = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const patternChar = pattern[i];
+
+      if (patternChar === "_") {
+        // Wildcard match - highlight in different color
+        result.push(
+          <span key={i} className="">
+            {char}
+          </span>,
+        );
+      } else if (patternChar === normalizedText[i]) {
+        // Exact match - highlight in yellow
+        result.push(
+          <span key={i} className="!text-yellow-500 !dark:text-yellow-400">
+            {char}
+          </span>,
+        );
+      } else {
+        result.push(char);
+      }
+    }
+
+    return result;
+  };
+
+  // State for folding language displays
+  const [foldedCards, setFoldedCards] = useState<Record<number, boolean>>({});
+
+  const toggleCardFold = (index: number) => {
+    setFoldedCards((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
   const highlightMatch = (text: string, query: string) => {
@@ -428,12 +571,16 @@ export default function ThemesPageContent() {
         </h1>
 
         <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
-          <Tabs value={searchMode} onValueChange={handleSearchModeChange} className="w-full">
+          <Tabs
+            value={searchMode}
+            onValueChange={handleSearchModeChange}
+            className="w-full"
+          >
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="regular">Regular Search</TabsTrigger>
-              <TabsTrigger value="fuzzy">Fuzzy Search</TabsTrigger>
+              <TabsTrigger value="regular">Regular</TabsTrigger>
+              <TabsTrigger value="pattern">Pattern</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="regular" className="space-y-4 mt-4">
               <div className="relative">
                 <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -453,7 +600,10 @@ export default function ThemesPageContent() {
                     checked={exactMatch}
                     onCheckedChange={setExactMatch}
                   />
-                  <Label htmlFor="exact-match" className="text-sm cursor-pointer">
+                  <Label
+                    htmlFor="exact-match"
+                    className="text-sm cursor-pointer"
+                  >
                     Exact match
                   </Label>
                 </div>
@@ -467,28 +617,136 @@ export default function ThemesPageContent() {
                 </Button>
               </div>
             </TabsContent>
-            
-            <TabsContent value="fuzzy" className="space-y-4 mt-4">
-              <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Enter approximate theme name (typos allowed)..."
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                  className="pl-8"
-                />
-              </div>
-              <div className="flex items-center justify-end">
+
+            <TabsContent value="pattern" className="space-y-3 mt-4">
+              {searchConditions.map((condition, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <Select
+                    value={condition.language}
+                    onValueChange={(value) =>
+                      updateSearchCondition(index, "language", value)
+                    }
+                  >
+                    <SelectTrigger className="w-[150px]">
+                      <SelectValue placeholder="Language" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="English">English</SelectItem>
+                      {Object.keys(LANGUAGE_NAMES).map((code) => (
+                        <SelectItem key={code} value={LANGUAGE_NAMES[code]}>
+                          {LANGUAGE_NAMES[code]}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
+                  <div className="relative flex-1">
+                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                    <Input
+                      type="search"
+                      placeholder="Pattern: t_n_, 3a4, etc."
+                      value={condition.pattern}
+                      onChange={(e) =>
+                        updateSearchCondition(index, "pattern", e.target.value)
+                      }
+                      onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                      className="pl-8"
+                    />
+                  </div>
+
+                  {searchConditions.length > 1 && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => removeSearchCondition(index)}
+                      className="px-2"
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
+                  )}
+                </div>
+              ))}
+
+              <div className="flex items-center justify-between pt-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={addSearchCondition}
+                  className="flex items-center gap-1 text-xs"
+                >
+                  <Plus className="h-3 w-3" />
+                  Add
+                </Button>
+
                 <Button
                   onClick={handleSearch}
-                  disabled={inputValue.trim().length < 1}
+                  disabled={
+                    !searchConditions.some((c) => c.pattern.trim().length >= 1)
+                  }
                   className="w-auto"
                 >
                   <Search className="h-4 w-4 mr-2" />
                   Search
                 </Button>
+              </div>
+
+              <div className="text-xs text-muted-foreground pt-1">
+                <strong>Tips</strong>
+                <br />
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  _
+                </span>
+                : match any single character (e.g. t_n_ ={" "}
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  t
+                </span>
+                e
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  n
+                </span>
+                t,{" "}
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  t
+                </span>
+                u
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  n
+                </span>
+                e, etc.)
+                <br />
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  Numbers
+                </span>
+                : converted to underscores (e.g. 3a4 ={" "}
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  ___
+                </span>
+                a
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  ____
+                </span>
+                )
+                <br />
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  ! Prefix
+                </span>
+                : allow space-ignore mode in pattern (e.g. !c___ ___ = c___ ___
+                + c___
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">
+                  _
+                </span>
+                ___)
+                <br />
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  +/- Buttons
+                </span>
+                : Add/Remove language conditions
+                <br />
+                <span className="text-emerald-600 dark:text-emerald-400">
+                  Multiple Languages
+                </span>
+                : Add conditions to filter themes matching all patterns across
+                selected Languages
               </div>
             </TabsContent>
           </Tabs>
@@ -496,6 +754,7 @@ export default function ThemesPageContent() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           {results.map((item, index) => (
+            // Item Result Card
             <Card
               key={index}
               className="w-full shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
@@ -610,43 +869,184 @@ export default function ThemesPageContent() {
 
               <CardContent className="p-0">
                 <div className="divide-y">
-                  {Object.entries(item.translations).map(([lang, trans]) => (
-                    <div
-                      key={lang}
-                      className="flex flex-wrap items-center p-3 hover:bg-muted/30 transition-colors"
-                    >
-                      <div className="flex items-center gap-2 min-w-[130px]">
-                        <div className="rounded-full p-1">
-                          <Globe className="h-3.5 w-3.5 text-muted-foreground" />
-                        </div>
-                        <span className="text-sm font-medium text-muted-foreground">
-                          {LANGUAGE_NAMES[lang]}
-                        </span>
-                      </div>
-                      <div className="flex flex-wrap items-center gap-1 ml-auto">
-                        <div className="flex items-center">
-                          <span className="text-sm font-medium mr-1">
-                            {highlightMatch(trans.translation, searchQuery)}
+                  {searchMode === "pattern" ? (
+                    <>
+                      {/* Pattern Mode: Theme Display (English) */}
+                      <div className="flex flex-wrap items-center p-3 hover:bg-muted/30 transition-colors bg-primary/5">
+                        <div className="flex items-center gap-2 min-w-[130px]">
+                          <div className="rounded-full p-1">
+                            <Globe className="h-3.5 w-3.5 text-primary" />
+                          </div>
+                          <span className="text-sm font-medium text-primary">
+                            English (Theme)
                           </span>
-                          <button
-                            onClick={() => handleCopy(trans.translation)}
-                            className="p-1 rounded-full hover:bg-muted/50 transition-colors"
-                            aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
-                          >
-                            <Copy className="h-3.5 w-3.5 text-muted-foreground" />
-                          </button>
                         </div>
-                        {!trans.is_approved && (
-                          <Badge
-                            variant="outline"
-                            className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap"
-                          >
-                            Not Approved
-                          </Badge>
-                        )}
+                        <div className="flex flex-wrap items-center gap-1 ml-auto">
+                          <div className="flex items-center">
+                            <span className="text-sm font-medium mr-1">
+                              {highlightPatternMatch(
+                                item.theme,
+                                searchConditions.find(
+                                  (c) => c.language === "English",
+                                ) || searchConditions[0],
+                              )}
+                            </span>
+                            <button
+                              onClick={() => handleCopy(item.theme)}
+                              className="p-1 rounded-full hover:bg-muted/50 transition-colors"
+                              aria-label="Copy theme"
+                            >
+                              <Copy className="h-3.5 w-3.5 text-muted-foreground" />
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+
+                      {/* Pattern Mode: Relevant Language Translations with Fold */}
+                      {(() => {
+                        const relevantLangs = getRelevantLanguages(item).filter(
+                          (lang) => lang !== "en",
+                        );
+                        const maxDisplay = 3;
+                        const isLongList = relevantLangs.length > maxDisplay;
+                        const displayLangs = foldedCards[index]
+                          ? relevantLangs
+                          : relevantLangs.slice(0, maxDisplay);
+
+                        return (
+                          <>
+                            {displayLangs.map((lang) => {
+                              const trans =
+                                item.translations[
+                                  lang as keyof typeof item.translations
+                                ];
+                              if (!trans) return null;
+
+                              // Find matching search condition for this language
+                              const matchingCondition = searchConditions.find(
+                                (c) => {
+                                  const langCode = Object.entries(
+                                    LANGUAGE_NAMES,
+                                  ).find(
+                                    ([code, name]) => name === c.language,
+                                  )?.[0];
+                                  return langCode === lang;
+                                },
+                              );
+
+                              return (
+                                <div
+                                  key={lang}
+                                  className="flex flex-wrap items-center p-3 hover:bg-muted/30 transition-colors"
+                                >
+                                  <div className="flex items-center gap-2 min-w-[130px]">
+                                    <div className="rounded-full p-1">
+                                      <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+                                    </div>
+                                    <span className="text-sm font-medium text-muted-foreground">
+                                      {LANGUAGE_NAMES[lang]}
+                                    </span>
+                                  </div>
+                                  <div className="flex flex-wrap items-center gap-1 ml-auto">
+                                    <div className="flex items-center">
+                                      <span className="text-sm font-medium mr-1">
+                                        {matchingCondition
+                                          ? highlightPatternMatch(
+                                              trans.translation,
+                                              matchingCondition,
+                                            )
+                                          : trans.translation}
+                                      </span>
+                                      <button
+                                        onClick={() =>
+                                          handleCopy(trans.translation)
+                                        }
+                                        className="p-1 rounded-full hover:bg-muted/50 transition-colors"
+                                        aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
+                                      >
+                                        <Copy className="h-3.5 w-3.5 text-muted-foreground" />
+                                      </button>
+                                    </div>
+                                    {!trans.is_approved && (
+                                      <Badge
+                                        variant="outline"
+                                        className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap"
+                                      >
+                                        Not Approved
+                                      </Badge>
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            })}
+
+                            {/* Fold/Expand Button - Only for Pattern Mode */}
+                            {isLongList && (
+                              <div className="flex justify-center p-2 border-t bg-muted/20">
+                                <button
+                                  onClick={() => toggleCardFold(index)}
+                                  className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"
+                                >
+                                  {foldedCards[index] ? (
+                                    <>
+                                      <ChevronDown className="h-3 w-3" />
+                                      Show Less
+                                    </>
+                                  ) : (
+                                    <>
+                                      <ChevronRight className="h-3 w-3" />
+                                      Show {relevantLangs.length -
+                                        maxDisplay}{" "}
+                                      More Languages
+                                    </>
+                                  )}
+                                </button>
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </>
+                  ) : (
+                    /* Regular Mode: Traditional Display - Show All Languages */
+                    Object.entries(item.translations).map(([lang, trans]) => (
+                      <div
+                        key={lang}
+                        className="flex flex-wrap items-center p-3 hover:bg-muted/30 transition-colors"
+                      >
+                        <div className="flex items-center gap-2 min-w-[130px]">
+                          <div className="rounded-full p-1">
+                            <Globe className="h-3.5 w-3.5 text-muted-foreground" />
+                          </div>
+                          <span className="text-sm font-medium text-muted-foreground">
+                            {LANGUAGE_NAMES[lang]}
+                          </span>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-1 ml-auto">
+                          <div className="flex items-center">
+                            <span className="text-sm font-medium mr-1">
+                              {highlightMatch(trans.translation, searchQuery)}
+                            </span>
+                            <button
+                              onClick={() => handleCopy(trans.translation)}
+                              className="p-1 rounded-full hover:bg-muted/50 transition-colors"
+                              aria-label={`Copy ${LANGUAGE_NAMES[lang]} translation`}
+                            >
+                              <Copy className="h-3.5 w-3.5 text-muted-foreground" />
+                            </button>
+                          </div>
+                          {!trans.is_approved && (
+                            <Badge
+                              variant="outline"
+                              className="text-xs border-yellow-500 text-yellow-500 whitespace-nowrap"
+                            >
+                              Not Approved
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                    ))
+                  )}
                 </div>
               </CardContent>
             </Card>

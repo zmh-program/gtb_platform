@@ -131,3 +131,121 @@ export function searchTranslations(
     return a.theme.localeCompare(b.theme);
   });
 }
+
+// Language code mapping for pattern search
+const LANGUAGE_CODES: Record<string, keyof TranslationItem["translations"]> = {
+  Czech: "cs",
+  Danish: "da",
+  German: "de",
+  "Pirate English": "en",
+  Spanish: "es",
+  Finnish: "fi",
+  French: "fr",
+  Hungarian: "hu",
+  Italian: "it",
+  Japanese: "ja",
+  Korean: "ko",
+  Dutch: "nl",
+  Norwegian: "no",
+  Polish: "pl",
+  Portuguese: "pt",
+  "Portuguese, Brazilian": "ptbr",
+  Romanian: "ro",
+  Russian: "ru",
+  Swedish: "sv",
+  Turkish: "tr",
+  Ukrainian: "uk",
+  "Chinese Simplified": "zh_cn",
+  "Chinese Traditional": "zh_tw",
+  Complement: "co",
+};
+
+// Search condition interface
+export interface SearchCondition {
+  language: string;
+  pattern: string;
+}
+
+// Filter digits: replace numbers (0-100) with corresponding number of underscores
+function filterDigit(pattern: string): string {
+  // Replace all hyphens with spaces
+  pattern = pattern.replace(/-/g, " ");
+
+  // Replace numbers with underscores
+  return pattern.replace(/\d{1,2}/g, (match) => {
+    const num = parseInt(match);
+    return "_".repeat(num);
+  });
+}
+
+// Check if a word matches a pattern with wildcards
+function matchesPattern(
+  word: string,
+  pattern: string,
+  allowSpaceWildcard: boolean = false,
+): boolean {
+  if (word.length !== pattern.length) {
+    return false;
+  }
+
+  for (let i = 0; i < pattern.length; i++) {
+    if (pattern[i] !== "_" && pattern[i] !== word[i]) {
+      return false;
+    }
+
+    if (pattern[i] === "_" && word[i] === " " && !allowSpaceWildcard) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// Pattern-based search function
+export function patternSearchTranslations(
+  conditions: SearchCondition[],
+): TranslationItem[] {
+  if (!conditions.length || conditions.every((c) => !c.pattern.trim())) {
+    return [];
+  }
+
+  return ALL_TRANSLATIONS.filter((item) => {
+    // All conditions must match
+    return conditions.every((condition) => {
+      if (!condition.pattern.trim()) return true;
+
+      let pattern = condition.pattern.toLowerCase().trim();
+      let allowSpaceWildcard = false;
+
+      // Check for space wildcard suffix
+      if (pattern.endsWith("!")) {
+        allowSpaceWildcard = true;
+        pattern = pattern.slice(0, -1).trim();
+      }
+
+      // Apply digit filtering
+      pattern = filterDigit(pattern);
+
+      const languageCode = LANGUAGE_CODES[condition.language];
+
+      if (languageCode) {
+        // Check specific language translation
+        const translation = item.translations[languageCode];
+        if (translation) {
+          const translationText = removeAccents(
+            translation.translation,
+          ).toLowerCase();
+          return matchesPattern(translationText, pattern, allowSpaceWildcard);
+        }
+      }
+
+      // If language is "English" (default/theme) or not found, check theme
+      if (condition.language === "English" || !languageCode) {
+        const themeText = removeAccents(item.theme).toLowerCase();
+        return matchesPattern(themeText, pattern, allowSpaceWildcard);
+      }
+
+      return false;
+    });
+  });
+}
