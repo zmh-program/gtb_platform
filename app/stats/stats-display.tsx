@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Copy, Check } from "lucide-react";
 
 export function StatsDisplay({ stats }: { stats: any }) {
   const bbStats = stats.stats?.BuildBattle || {};
@@ -9,6 +11,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
     head: string;
     body: string;
   } | null>(null);
+  const [copiedUuid, setCopiedUuid] = useState(false);
 
   useEffect(() => {
     async function fetchAvatars() {
@@ -24,6 +27,18 @@ export function StatsDisplay({ stats }: { stats: any }) {
     }
     fetchAvatars();
   }, [stats.displayname]);
+
+  const copyUuid = async () => {
+    if (stats.uuid) {
+      try {
+        await navigator.clipboard.writeText(stats.uuid);
+        setCopiedUuid(true);
+        setTimeout(() => setCopiedUuid(false), 2000);
+      } catch (error) {
+        console.error("Failed to copy UUID:", error);
+      }
+    }
+  };
 
   const winPercentage = useMemo(() => {
     if (!bbStats.games_played || bbStats.games_played === 0) return 0;
@@ -94,6 +109,28 @@ export function StatsDisplay({ stats }: { stats: any }) {
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Language</span>
               <span>{stats.userLanguage || "N/A"}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">UUID</span>
+              <div className="flex items-center gap-1">
+                <span className="text-xs font-mono">
+                  {stats.uuid ? `${stats.uuid.slice(0, 8)}...` : "N/A"}
+                </span>
+                {stats.uuid && (
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="h-4 w-4 p-0"
+                    onClick={copyUuid}
+                  >
+                    {copiedUuid ? (
+                      <Check className="h-3 w-3 text-green-500" />
+                    ) : (
+                      <Copy className="h-3 w-3" />
+                    )}
+                  </Button>
+                )}
+              </div>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Total Games</span>

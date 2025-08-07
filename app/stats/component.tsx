@@ -20,6 +20,9 @@ import { toJpeg } from "html-to-image";
 import { StatsDisplay } from "./stats-display";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { SearchHistory } from "@/components/search-history";
+import { addToSearchHistory } from "@/lib/history";
+import { getUUIDFromPlayer } from "@/lib/api/get_uuid_from_player";
 
 function ErrorMessage({ message }: { message: string }) {
   return (
@@ -37,6 +40,7 @@ export function StatsContent() {
   const [stats, setStats] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
+  const [refreshHistory, setRefreshHistory] = useState(0);
   const searchParams = useSearchParams();
   const router = useRouter();
   const statsRef = useRef<HTMLDivElement>(null);
@@ -99,6 +103,17 @@ export function StatsContent() {
 
       setStats(data);
 
+      // Save to history
+      try {
+        const uuidResponse = await getUUIDFromPlayer(usernameToSearch);
+        if (uuidResponse.id && !uuidResponse.error) {
+          addToSearchHistory(uuidResponse.id, data.player.displayname);
+          setRefreshHistory(prev => prev + 1);
+        }
+      } catch (error) {
+        console.warn("Failed to add to history:", error);
+      }
+
       // Update URL with username parameter without refreshing the page
       const params = new URLSearchParams(searchParams.toString());
       params.set("u", usernameToSearch);
@@ -112,6 +127,11 @@ export function StatsContent() {
       setLoading(false);
     }
   }
+
+  const handleHistoryPlayerSelect = (uuid: string, username: string) => {
+    setUsername(username);
+    fetchStats(username, apiKey);
+  };
 
   async function downloadStatsImage() {
     if (!statsRef.current) return;
@@ -219,6 +239,12 @@ export function StatsContent() {
 
           {error && <ErrorMessage message={error} />}
         </Card>
+
+        {/* Search History */}
+        <SearchHistory 
+          key={refreshHistory} 
+          onPlayerSelect={handleHistoryPlayerSelect} 
+        />
 
         {/* Stats Card */}
         {stats && (
