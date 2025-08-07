@@ -1432,7 +1432,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 213579,
     theme: "Anvil",
     shortcut: "ors",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "ors",
+        occurrences: [
+          {
+            theme: "Anvil",
+            reference: "Turkish",
+          },
+          {
+            theme: "Gold",
+            reference: "French",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "铁砧",
@@ -3197,7 +3211,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 212827,
     theme: "Astronaut",
     shortcut: "urhajos",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "űrhajó",
+        occurrences: [
+          {
+            theme: "Astronaut",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Spaceship",
+            reference: "Hungarian",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "宇航员",
@@ -7275,7 +7303,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 213643,
     theme: "Barrel",
     shortcut: "fas",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "fas",
+        occurrences: [
+          {
+            theme: "Barrel",
+            reference: "German",
+          },
+          {
+            theme: "Tree",
+            reference: "Hungarian",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "桶",
@@ -13143,6 +13185,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "kos",
+        occurrences: [
+          {
+            theme: "Bin",
+            reference: "Czech",
+          },
+          {
+            theme: "Cow",
+            reference: "Danish / Swedish",
+          },
+        ],
+      },
+      {
         multiword: "cestino",
         occurrences: [
           {
@@ -13559,8 +13614,12 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
             reference: "Turkish",
           },
           {
+            theme: "Cow",
+            reference: "Norwegian",
+          },
+          {
             theme: "Kiss",
-            reference: "German",
+            reference: "Dutch / German",
           },
         ],
       },
@@ -13930,7 +13989,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "fuglehu",
     multiwords: [
       {
-        multiword: "fuglehu",
+        multiword: "fuglehus",
         occurrences: [
           {
             theme: "Bird House",
@@ -14062,7 +14121,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "ninho",
     multiwords: [
       {
-        multiword: "fuglehu",
+        multiword: "fuglehus",
         occurrences: [
           {
             theme: "Bird House",
@@ -18938,7 +18997,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 213763,
     theme: "Bowling Ball",
-    shortcut: "boladebolo",
+    shortcut: "bowlingbal",
     multiwords: [
       {
         multiword: "保齡球",
@@ -28242,7 +28301,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 213859,
     theme: "Card Games",
-    shortcut: null,
+    shortcut: "kortspel",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -28735,7 +28794,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 213867,
     theme: "Carpenter",
     shortcut: "acs",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "acs",
+        occurrences: [
+          {
+            theme: "Carpenter",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Needle",
+            reference: "Romanian",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "木匠",
@@ -34505,7 +34578,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         occurrences: [
           {
             theme: "Chip",
-            reference: "Complement",
+            reference:
+              "Complement / Danish / Dutch / German / Hungarian / Norwegian / Pirate English / Portuguese, Brazilian / Romanian / Swedish",
           },
           {
             theme: "French Fries",
@@ -34513,7 +34587,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Potato Chips",
-            reference: "Complement",
+            reference: "Complement / French / Hungarian",
           },
         ],
       },
@@ -43750,6 +43824,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "ko",
     multiwords: [
       {
+        multiword: "kus",
+        occurrences: [
+          {
+            theme: "Bird",
+            reference: "Turkish",
+          },
+          {
+            theme: "Cow",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Kiss",
+            reference: "Dutch / German",
+          },
+        ],
+      },
+      {
         multiword: "ko",
         occurrences: [
           {
@@ -43772,6 +43863,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Kiss",
             reference: "Dutch",
+          },
+        ],
+      },
+      {
+        multiword: "kos",
+        occurrences: [
+          {
+            theme: "Bin",
+            reference: "Czech",
+          },
+          {
+            theme: "Cow",
+            reference: "Danish / Swedish",
           },
         ],
       },
@@ -51927,7 +52031,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 240744,
     theme: "DNA",
-    shortcut: "dn",
+    shortcut: null,
     multiwords: [],
     translations: {
       zh_cn: {
@@ -52483,6 +52587,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Pie",
             reference: "English / Pirate English",
+          },
+        ],
+      },
+      {
+        multiword: "pes",
+        occurrences: [
+          {
+            theme: "Dog",
+            reference: "Czech",
+          },
+          {
+            theme: "Feet",
+            reference: "Portuguese / Portuguese, Brazilian",
           },
         ],
       },
@@ -56387,6 +56504,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Saddle",
             reference: "Romanian",
+          },
+        ],
+      },
+      {
+        multiword: "sas",
+        occurrences: [
+          {
+            theme: "Eagle",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Sauce",
+            reference: "Swedish",
           },
         ],
       },
@@ -60322,6 +60452,27 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "pala",
     multiwords: [
       {
+        multiword: "palas",
+        occurrences: [
+          {
+            theme: "Eye Patch",
+            reference: "Portuguese",
+          },
+          {
+            theme: "Palace",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Shovel",
+            reference: "Italian / Spanish",
+          },
+          {
+            theme: "Spade",
+            reference: "Italian / Spanish",
+          },
+        ],
+      },
+      {
         multiword: "pala",
         occurrences: [
           {
@@ -60461,7 +60612,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 214225,
     theme: "Eyebrow",
     shortcut: "kas",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "kas",
+        occurrences: [
+          {
+            theme: "Eyebrow",
+            reference: "Turkish",
+          },
+          {
+            theme: "Muscle",
+            reference: "Turkish",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "眉毛",
@@ -62105,6 +62270,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Pie",
             reference: "English / Pirate English",
+          },
+        ],
+      },
+      {
+        multiword: "pes",
+        occurrences: [
+          {
+            theme: "Dog",
+            reference: "Czech",
+          },
+          {
+            theme: "Feet",
+            reference: "Portuguese / Portuguese, Brazilian",
           },
         ],
       },
@@ -67933,6 +68111,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "las",
+        occurrences: [
+          {
+            theme: "Forest",
+            reference: "Polish",
+          },
+          {
+            theme: "Lock",
+            reference: "Danish / Norwegian / Swedish",
+          },
+        ],
+      },
+      {
         multiword: "orman",
         occurrences: [
           {
@@ -69242,7 +69433,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         occurrences: [
           {
             theme: "Chip",
-            reference: "Complement",
+            reference:
+              "Complement / Danish / Dutch / German / Hungarian / Norwegian / Pirate English / Portuguese, Brazilian / Romanian / Swedish",
           },
           {
             theme: "French Fries",
@@ -69250,7 +69442,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Potato Chips",
-            reference: "Complement",
+            reference: "Complement / French / Hungarian",
           },
         ],
       },
@@ -69281,7 +69473,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "batatasfrita",
+        multiword: "batatas frita",
         occurrences: [
           {
             theme: "French Fries",
@@ -69294,7 +69486,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "patatasfrita",
+        multiword: "patatas frita",
         occurrences: [
           {
             theme: "French Fries",
@@ -73506,6 +73698,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "lampa",
     multiwords: [
       {
+        multiword: "lampas",
+        occurrences: [
+          {
+            theme: "Genie Lamp",
+            reference: "Polish",
+          },
+          {
+            theme: "Lamp",
+            reference: "Czech / Polish / Swedish",
+          },
+          {
+            theme: "Lantern",
+            reference: "Hungarian",
+          },
+        ],
+      },
+      {
         multiword: "lampa",
         occurrences: [
           {
@@ -74588,6 +74797,24 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "cam",
     multiwords: [
       {
+        multiword: "glas",
+        occurrences: [
+          {
+            theme: "Glass",
+            reference:
+              "Danish / Dutch / German / Norwegian / Pirate English / Swedish",
+          },
+          {
+            theme: "Ice Cream",
+            reference: "Swedish",
+          },
+          {
+            theme: "Jar",
+            reference: "German",
+          },
+        ],
+      },
+      {
         multiword: "gla",
         occurrences: [
           {
@@ -74597,19 +74824,6 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Jar",
             reference: "German",
-          },
-        ],
-      },
-      {
-        multiword: "glas",
-        occurrences: [
-          {
-            theme: "Glass",
-            reference: "Norwegian / Pirate English",
-          },
-          {
-            theme: "Ice Cream",
-            reference: "Swedish",
           },
         ],
       },
@@ -76646,7 +76860,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 214411,
     theme: "Gold",
     shortcut: "or",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "ors",
+        occurrences: [
+          {
+            theme: "Anvil",
+            reference: "Turkish",
+          },
+          {
+            theme: "Gold",
+            reference: "French",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "金",
@@ -79580,6 +79808,10 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Reaper",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Scythe",
             reference: "Hungarian",
           },
         ],
@@ -91330,11 +91562,16 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         occurrences: [
           {
             theme: "Glass",
-            reference: "Norwegian / Pirate English",
+            reference:
+              "Danish / Dutch / German / Norwegian / Pirate English / Swedish",
           },
           {
             theme: "Ice Cream",
             reference: "Swedish",
+          },
+          {
+            theme: "Jar",
+            reference: "German",
           },
         ],
       },
@@ -94483,6 +94720,24 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: null,
     multiwords: [
       {
+        multiword: "glas",
+        occurrences: [
+          {
+            theme: "Glass",
+            reference:
+              "Danish / Dutch / German / Norwegian / Pirate English / Swedish",
+          },
+          {
+            theme: "Ice Cream",
+            reference: "Swedish",
+          },
+          {
+            theme: "Jar",
+            reference: "German",
+          },
+        ],
+      },
+      {
         multiword: "gla",
         occurrences: [
           {
@@ -95675,6 +95930,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Puzzle",
             reference: "Russian / Ukrainian",
+          },
+        ],
+      },
+      {
+        multiword: "quebra-cabeça",
+        occurrences: [
+          {
+            theme: "Jigsaw",
+            reference: "Portuguese / Portuguese, Brazilian",
+          },
+          {
+            theme: "Puzzle",
+            reference: "Portuguese, Brazilian",
           },
         ],
       },
@@ -98521,6 +98789,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "ku",
     multiwords: [
       {
+        multiword: "kus",
+        occurrences: [
+          {
+            theme: "Bird",
+            reference: "Turkish",
+          },
+          {
+            theme: "Cow",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Kiss",
+            reference: "Dutch / German",
+          },
+        ],
+      },
+      {
         multiword: "ku",
         occurrences: [
           {
@@ -98543,19 +98828,6 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Winter",
             reference: "Turkish",
-          },
-        ],
-      },
-      {
-        multiword: "kus",
-        occurrences: [
-          {
-            theme: "Bird",
-            reference: "Turkish",
-          },
-          {
-            theme: "Kiss",
-            reference: "German",
           },
         ],
       },
@@ -100758,6 +101030,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: null,
     multiwords: [
       {
+        multiword: "lampas",
+        occurrences: [
+          {
+            theme: "Genie Lamp",
+            reference: "Polish",
+          },
+          {
+            theme: "Lamp",
+            reference: "Czech / Polish / Swedish",
+          },
+          {
+            theme: "Lantern",
+            reference: "Hungarian",
+          },
+        ],
+      },
+      {
         multiword: "lampa",
         occurrences: [
           {
@@ -100960,7 +101249,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "фонарныи столб",
+        multiword: "фонарныйстолб",
         occurrences: [
           {
             theme: "Lamp Post",
@@ -101233,6 +101522,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Lantern",
     shortcut: "lyhty",
     multiwords: [
+      {
+        multiword: "lampas",
+        occurrences: [
+          {
+            theme: "Genie Lamp",
+            reference: "Polish",
+          },
+          {
+            theme: "Lamp",
+            reference: "Czech / Polish / Swedish",
+          },
+          {
+            theme: "Lantern",
+            reference: "Hungarian",
+          },
+        ],
+      },
       {
         multiword: "lanterna",
         occurrences: [
@@ -102164,7 +102470,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 244138,
     theme: "Lawn Games",
-    shortcut: null,
+    shortcut: "havespil",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -107593,7 +107899,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 214769,
     theme: "Loch Ness Monster",
-    shortcut: "deniz canavari",
+    shortcut: "denizcanavari",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -107718,6 +108024,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Lock",
     shortcut: "las",
     multiwords: [
+      {
+        multiword: "las",
+        occurrences: [
+          {
+            theme: "Forest",
+            reference: "Polish",
+          },
+          {
+            theme: "Lock",
+            reference: "Danish / Norwegian / Swedish",
+          },
+        ],
+      },
       {
         multiword: "slot",
         occurrences: [
@@ -110798,6 +111117,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "postas",
+        occurrences: [
+          {
+            theme: "Mail",
+            reference: "Italian / Turkish",
+          },
+          {
+            theme: "Mailman",
+            reference: "Hungarian / Romanian",
+          },
+        ],
+      },
+      {
         multiword: "correio",
         occurrences: [
           {
@@ -111069,7 +111401,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 214805,
     theme: "Mailman",
     shortcut: "postak",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "postas",
+        occurrences: [
+          {
+            theme: "Mail",
+            reference: "Italian / Turkish",
+          },
+          {
+            theme: "Mailman",
+            reference: "Hungarian / Romanian",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "邮差",
@@ -111451,9 +111797,28 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 240762,
     theme: "Mannequin",
-    shortcut: "paspop",
-    multiwords: [],
+    shortcut: "model",
+    multiwords: [
+      {
+        multiword: "model",
+        occurrences: [
+          {
+            theme: "Mannequin",
+            reference: "Complement",
+          },
+          {
+            theme: "Pattern",
+            reference: "Romanian / Turkish",
+          },
+        ],
+      },
+    ],
     translations: {
+      co: {
+        translation: "model",
+        is_approved: true,
+        approved_at: "",
+      },
       zh_cn: {
         translation: "人体模型",
         is_approved: true,
@@ -113122,9 +113487,14 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 214825,
     theme: "Mayonnaise",
-    shortcut: "majone",
+    shortcut: "mayo",
     multiwords: [],
     translations: {
+      co: {
+        translation: "mayo",
+        is_approved: true,
+        approved_at: "",
+      },
       zh_cn: {
         translation: "蛋黄酱",
         is_approved: true,
@@ -113917,7 +114287,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 214833,
     theme: "Medieval House",
-    shortcut: "medeltidahu",
+    shortcut: "ortacag evi",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -120511,7 +120881,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 214911,
     theme: "Muscle",
     shortcut: "ka",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "kas",
+        occurrences: [
+          {
+            theme: "Eyebrow",
+            reference: "Turkish",
+          },
+          {
+            theme: "Muscle",
+            reference: "Turkish",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "肌肉",
@@ -122500,6 +122884,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Pin",
             reference: "Hungarian",
+          },
+        ],
+      },
+      {
+        multiword: "acs",
+        occurrences: [
+          {
+            theme: "Carpenter",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Needle",
+            reference: "Romanian",
           },
         ],
       },
@@ -128109,6 +128506,27 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "palac",
     multiwords: [
       {
+        multiword: "palas",
+        occurrences: [
+          {
+            theme: "Eye Patch",
+            reference: "Portuguese",
+          },
+          {
+            theme: "Palace",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Shovel",
+            reference: "Italian / Spanish",
+          },
+          {
+            theme: "Spade",
+            reference: "Italian / Spanish",
+          },
+        ],
+      },
+      {
         multiword: "palac",
         occurrences: [
           {
@@ -130437,6 +130855,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Pattern",
     shortcut: "vzor",
     multiwords: [
+      {
+        multiword: "model",
+        occurrences: [
+          {
+            theme: "Mannequin",
+            reference: "Complement",
+          },
+          {
+            theme: "Pattern",
+            reference: "Romanian / Turkish",
+          },
+        ],
+      },
       {
         multiword: "monster",
         occurrences: [
@@ -142097,7 +142528,8 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         occurrences: [
           {
             theme: "Chip",
-            reference: "Complement",
+            reference:
+              "Complement / Danish / Dutch / German / Hungarian / Norwegian / Pirate English / Portuguese, Brazilian / Romanian / Swedish",
           },
           {
             theme: "French Fries",
@@ -142105,7 +142537,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Potato Chips",
-            reference: "Complement",
+            reference: "Complement / French / Hungarian",
           },
         ],
       },
@@ -142137,7 +142569,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "batatasfrita",
+        multiword: "batatas frita",
         occurrences: [
           {
             theme: "French Fries",
@@ -142150,7 +142582,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "patatasfrita",
+        multiword: "patatas frita",
         occurrences: [
           {
             theme: "French Fries",
@@ -145677,6 +146109,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
         ],
       },
+      {
+        multiword: "quebra-cabeça",
+        occurrences: [
+          {
+            theme: "Jigsaw",
+            reference: "Portuguese / Portuguese, Brazilian",
+          },
+          {
+            theme: "Puzzle",
+            reference: "Portuguese, Brazilian",
+          },
+        ],
+      },
     ],
     translations: {
       zh_cn: {
@@ -145841,19 +146286,6 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "rubikskubu",
-        occurrences: [
-          {
-            theme: "Puzzle Cube",
-            reference: "Dutch",
-          },
-          {
-            theme: "Rubiks Cube",
-            reference: "Dutch",
-          },
-        ],
-      },
-      {
         multiword: "cubo magico",
         occurrences: [
           {
@@ -145889,6 +146321,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Rubiks Cube",
             reference: "Italian",
+          },
+        ],
+      },
+      {
+        multiword: "rubiks kubu",
+        occurrences: [
+          {
+            theme: "Puzzle Cube",
+            reference: "Dutch",
+          },
+          {
+            theme: "Rubiks Cube",
+            reference: "Dutch",
           },
         ],
       },
@@ -149364,6 +149809,10 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
           {
             theme: "Reaper",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Scythe",
             reference: "Hungarian",
           },
         ],
@@ -154985,19 +155434,6 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "rubikskubu",
-        occurrences: [
-          {
-            theme: "Puzzle Cube",
-            reference: "Dutch",
-          },
-          {
-            theme: "Rubiks Cube",
-            reference: "Dutch",
-          },
-        ],
-      },
-      {
         multiword: "cubo magico",
         occurrences: [
           {
@@ -155033,6 +155469,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           {
             theme: "Rubiks Cube",
             reference: "Italian",
+          },
+        ],
+      },
+      {
+        multiword: "rubiks kubu",
+        occurrences: [
+          {
+            theme: "Puzzle Cube",
+            reference: "Dutch",
+          },
+          {
+            theme: "Rubiks Cube",
+            reference: "Dutch",
           },
         ],
       },
@@ -159278,6 +159727,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
+        multiword: "sas",
+        occurrences: [
+          {
+            theme: "Eagle",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Sauce",
+            reference: "Swedish",
+          },
+        ],
+      },
+      {
         multiword: "sau",
         occurrences: [
           {
@@ -161665,6 +162127,11 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "buceo",
     multiwords: [],
     translations: {
+      co: {
+        translation: "scuba",
+        is_approved: true,
+        approved_at: "",
+      },
       zh_cn: {
         translation: "水肺潜水",
         is_approved: true,
@@ -161787,6 +162254,23 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Scythe",
     shortcut: "le",
     multiwords: [
+      {
+        multiword: "kaszas",
+        occurrences: [
+          {
+            theme: "Grim Reaper",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Reaper",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Scythe",
+            reference: "Hungarian",
+          },
+        ],
+      },
       {
         multiword: "le",
         occurrences: [
@@ -167324,7 +167808,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "carrinhodecompra",
+        multiword: "carrinhodecompras",
         occurrences: [
           {
             theme: "Shopping Trolley",
@@ -168026,6 +168510,27 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Shovel",
     shortcut: "pa",
     multiwords: [
+      {
+        multiword: "palas",
+        occurrences: [
+          {
+            theme: "Eye Patch",
+            reference: "Portuguese",
+          },
+          {
+            theme: "Palace",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Shovel",
+            reference: "Italian / Spanish",
+          },
+          {
+            theme: "Spade",
+            reference: "Italian / Spanish",
+          },
+        ],
+      },
       {
         multiword: "pa",
         occurrences: [
@@ -173947,7 +174452,21 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     id: 215499,
     theme: "Sneakers",
     shortcut: "tenis",
-    multiwords: [],
+    multiwords: [
+      {
+        multiword: "tenis",
+        occurrences: [
+          {
+            theme: "Sneakers",
+            reference: "Portuguese, Brazilian",
+          },
+          {
+            theme: "Tennis",
+            reference: "Czech / Polish / Romanian / Spanish / Turkish",
+          },
+        ],
+      },
+    ],
     translations: {
       zh_cn: {
         translation: "运动鞋",
@@ -176582,6 +177101,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
           },
         ],
       },
+      {
+        multiword: "űrhajó",
+        occurrences: [
+          {
+            theme: "Astronaut",
+            reference: "Hungarian",
+          },
+          {
+            theme: "Spaceship",
+            reference: "Hungarian",
+          },
+        ],
+      },
     ],
     translations: {
       zh_cn: {
@@ -176706,6 +177238,27 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Spade",
     shortcut: "pa",
     multiwords: [
+      {
+        multiword: "palas",
+        occurrences: [
+          {
+            theme: "Eye Patch",
+            reference: "Portuguese",
+          },
+          {
+            theme: "Palace",
+            reference: "Norwegian",
+          },
+          {
+            theme: "Shovel",
+            reference: "Italian / Spanish",
+          },
+          {
+            theme: "Spade",
+            reference: "Italian / Spanish",
+          },
+        ],
+      },
       {
         multiword: "pa",
         occurrences: [
@@ -184279,7 +184832,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "фонарныи столб",
+        multiword: "фонарныйстолб",
         occurrences: [
           {
             theme: "Lamp Post",
@@ -192340,7 +192893,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 215709,
     theme: "Telephone Booth",
-    shortcut: "telefonbok",
+    shortcut: "telefon bok",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -192848,6 +193401,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     theme: "Tennis",
     shortcut: "teni",
     multiwords: [
+      {
+        multiword: "tenis",
+        occurrences: [
+          {
+            theme: "Sneakers",
+            reference: "Portuguese, Brazilian",
+          },
+          {
+            theme: "Tennis",
+            reference: "Czech / Polish / Romanian / Spanish / Turkish",
+          },
+        ],
+      },
       {
         multiword: "網球",
         occurrences: [
@@ -193529,7 +194095,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 215723,
     theme: "Texting",
-    shortcut: "sm",
+    shortcut: "sms",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -202863,6 +203429,19 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
     shortcut: "fa",
     multiwords: [
       {
+        multiword: "fas",
+        occurrences: [
+          {
+            theme: "Barrel",
+            reference: "German",
+          },
+          {
+            theme: "Tree",
+            reference: "Hungarian",
+          },
+        ],
+      },
+      {
         multiword: "trad",
         occurrences: [
           {
@@ -203749,7 +204328,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
         ],
       },
       {
-        multiword: "carrinhodecompra",
+        multiword: "carrinhodecompras",
         occurrences: [
           {
             theme: "Shopping Trolley",
@@ -206357,9 +206936,14 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 240804,
     theme: "Ukulele",
-    shortcut: null,
+    shortcut: "uke",
     multiwords: [],
     translations: {
+      co: {
+        translation: "uke",
+        is_approved: true,
+        approved_at: "",
+      },
       zh_cn: {
         translation: "尤克里里",
         is_approved: true,
@@ -206871,7 +207455,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 215863,
     theme: "Underwater",
-    shortcut: "su alti",
+    shortcut: "sualti",
     multiwords: [
       {
         multiword: "pod woda",
@@ -212538,7 +213122,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 212877,
     theme: "Water Bucket",
-    shortcut: "seaud'eau",
+    shortcut: "sukovasi",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -212661,7 +213245,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 215919,
     theme: "Water Park",
-    shortcut: "aquapark",
+    shortcut: "suparki",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -218213,7 +218797,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 215977,
     theme: "Wrecking Ball",
-    shortcut: "bontogolyo",
+    shortcut: "yikimtopu",
     multiwords: [],
     translations: {
       zh_cn: {
@@ -219768,7 +220352,7 @@ export const ALL_TRANSLATIONS: TranslationItem[] = [
   {
     id: 213335,
     theme: "Zombie Apocalypse",
-    shortcut: "zombi kiyameti",
+    shortcut: "zombikiyameti",
     multiwords: [],
     translations: {
       zh_cn: {
