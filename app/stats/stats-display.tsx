@@ -44,7 +44,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
   const bbTotalWins =
     (bbStats.wins_solo_normal || 0) +
     (bbStats.wins_teams_normal || 0) +
-    (bbStats.wins_pro_mode || 0);
+    (bbStats.wins_solo_pro || 0);
   const gtbTotalWins = bbStats.wins_guess_the_build || 0;
   const spbTotalWins = bbStats.wins_speed_builders || 0;
 
@@ -70,7 +70,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
                 src={avatarUrls.head}
                 alt={`${stats.displayname}'s head`}
                 className="w-8 h-8 rounded-md flex-shrink-0"
-                loading="lazy"
+                // loading="lazy"
               />
             </div>
           )}
@@ -121,7 +121,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
               src={avatarUrls?.body}
               alt={`${stats.displayname}'s body`}
               className="w-16 mx-auto pb-2"
-              loading="lazy"
+              // loading="lazy"
             />
           </div>
         </Card>
@@ -157,7 +157,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
               </div>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-muted-foreground">Pro Wins</span>
-                <span>{bbStats.wins_pro_mode || 0}</span>
+                <span>{bbStats.wins_solo_pro || 0}</span>
               </div>
             </div>
           </Card>
