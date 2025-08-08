@@ -9,7 +9,7 @@ const MAX_HISTORY_ITEMS = 8;
 
 export function getSearchHistory(): PlayerHistory[] {
   if (typeof window === "undefined") return [];
-  
+
   try {
     const history = localStorage.getItem(HISTORY_KEY);
     return history ? JSON.parse(history) : [];
@@ -22,22 +22,22 @@ export function addToSearchHistory(uuid: string, username: string) {
   if (typeof window === "undefined") return;
 
   const history = getSearchHistory();
-  
-  const existingIndex = history.findIndex(item => item.uuid === uuid);
+
+  const existingIndex = history.findIndex((item) => item.uuid === uuid);
   if (existingIndex !== -1) {
     history.splice(existingIndex, 1);
   }
-  
+
   history.unshift({
     uuid,
     username,
-    timestamp: Date.now()
+    timestamp: Date.now(),
   });
-  
+
   if (history.length > MAX_HISTORY_ITEMS) {
     history.splice(MAX_HISTORY_ITEMS);
   }
-  
+
   localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
 }
 
@@ -48,8 +48,8 @@ export function clearSearchHistory() {
 
 export function removeFromSearchHistory(uuid: string) {
   if (typeof window === "undefined") return;
-  
+
   const history = getSearchHistory();
-  const filteredHistory = history.filter(item => item.uuid !== uuid);
+  const filteredHistory = history.filter((item) => item.uuid !== uuid);
   localStorage.setItem(HISTORY_KEY, JSON.stringify(filteredHistory));
 }

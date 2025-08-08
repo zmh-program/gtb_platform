@@ -108,7 +108,7 @@ export function StatsContent() {
         const uuidResponse = await getUUIDFromPlayer(usernameToSearch);
         if (uuidResponse.id && !uuidResponse.error) {
           addToSearchHistory(uuidResponse.id, data.player.displayname);
-          setRefreshHistory(prev => prev + 1);
+          setRefreshHistory((prev) => prev + 1);
         }
       } catch (error) {
         console.warn("Failed to add to history:", error);
@@ -241,9 +241,9 @@ export function StatsContent() {
         </Card>
 
         {/* Search History */}
-        <SearchHistory 
-          key={refreshHistory} 
-          onPlayerSelect={handleHistoryPlayerSelect} 
+        <SearchHistory
+          key={refreshHistory}
+          onPlayerSelect={handleHistoryPlayerSelect}
         />
 
         {/* Stats Card */}

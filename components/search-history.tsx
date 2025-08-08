@@ -3,7 +3,11 @@
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { getSearchHistory, removeFromSearchHistory, type PlayerHistory } from "@/lib/history";
+import {
+  getSearchHistory,
+  removeFromSearchHistory,
+  type PlayerHistory,
+} from "@/lib/history";
 import { X, History } from "lucide-react";
 
 interface SearchHistoryProps {
@@ -21,7 +25,7 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
   useEffect(() => {
     const loadAvatars = async () => {
       const urls: Record<string, string> = {};
-      
+
       for (const player of history) {
         try {
           const response = await fetch(`/api/avatar/${player.username}`);
@@ -33,7 +37,7 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
           // Failed to load avatar, skip
         }
       }
-      
+
       setAvatarUrls(urls);
     };
 
@@ -62,7 +66,7 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
         <History className="h-4 w-4 text-muted-foreground" />
         <h3 className="text-sm font-medium">Recent Searches</h3>
       </div>
-      
+
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
         {history.map((player) => (
           <div
@@ -85,7 +89,7 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
                     </span>
                   </div>
                 )}
-                
+
                 <Button
                   size="sm"
                   variant="destructive"
@@ -95,7 +99,7 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
                   <X className="h-2 w-2" />
                 </Button>
               </div>
-              
+
               <span className="text-xs text-center mt-1 truncate w-full">
                 {player.username}
               </span>
