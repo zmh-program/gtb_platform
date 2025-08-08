@@ -1,7 +1,8 @@
 import { type TranslationItem } from "./types";
 import translationData from "./translations-data.json";
+import versions from "./versions.json";
 
-export const LAST_UPDATED: string = "2025/07/01";
+export const LAST_UPDATED: string = versions.last_updated;
 export const ALL_TRANSLATIONS: TranslationItem[] =
   translationData as TranslationItem[];
 
