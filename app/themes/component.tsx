@@ -12,6 +12,7 @@ import {
   LanguageSelect,
   languageOptions,
   languageOptionsWithComplement,
+  type LanguageOption,
 } from "@/components/ui/language-select";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -40,6 +41,13 @@ import {
 import { toast } from "sonner";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import Link from "next/link";
 import {
   Pagination,
@@ -54,6 +62,12 @@ import { TranslationItem } from "@/lib/source/types";
 import { LAST_UPDATED } from "@/lib/source/source";
 
 const ITEMS_PER_PAGE = 50;
+
+// Extended language options with Match All only for themes page
+const themesLanguageOptions: Record<string, LanguageOption> = {
+  ...languageOptions,
+  match_all: { label: "Match All Languages", badge: "All" },
+};
 
 export default function ThemesPageContent() {
   const searchParams = useSearchParams();
@@ -369,15 +383,22 @@ export default function ThemesPageContent() {
 
     // Add languages from searched conditions (not current state)
     searchedConditions.forEach((condition) => {
-      if (condition.pattern.trim() && condition.language !== "default") {
-        const langCode = Object.entries(languageOptions).find(
-          ([key, _]) => key === condition.language,
-        )?.[0];
-        if (
-          langCode &&
-          item.translations[langCode as keyof typeof item.translations]
-        ) {
-          searchedLanguages.add(langCode);
+      if (condition.pattern.trim()) {
+        if (condition.language === "match_all") {
+          // For match_all, add all available languages
+          Object.keys(item.translations).forEach((langCode) => {
+            searchedLanguages.add(langCode);
+          });
+        } else if (condition.language !== "default") {
+          const langCode = Object.entries(themesLanguageOptions).find(
+            ([key, _]) => key === condition.language,
+          )?.[0];
+          if (
+            langCode &&
+            item.translations[langCode as keyof typeof item.translations]
+          ) {
+            searchedLanguages.add(langCode);
+          }
         }
       }
     });
@@ -691,14 +712,37 @@ export default function ThemesPageContent() {
             <TabsContent value="pattern" className="space-y-3 mt-4">
               {searchConditions.map((condition, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <LanguageSelect
+                  <Select
                     value={condition.language}
                     onValueChange={(value) =>
                       updateSearchCondition(index, "language", value)
                     }
-                    className="w-[100px] md:w-[200px]"
-                    showBadge={false}
-                  />
+                  >
+                    <SelectTrigger className="w-[100px] md:w-[200px]">
+                      <SelectValue placeholder="Select language" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {Object.entries(themesLanguageOptions).map(
+                        ([value, { label, native, badge }]) => (
+                          <SelectItem key={value} value={value}>
+                            <div className="flex items-center space-x-1.5">
+                              <span>{native || label}</span>
+                              {native && (
+                                <span className="text-xs text-muted-foreground">
+                                  ({label})
+                                </span>
+                              )}
+                              {badge && (
+                                <span className="ml-auto px-1.5 py-0.5 text-xs rounded-sm bg-green-100 text-green-800 dark:bg-green-500/10 dark:text-green-500 font-medium">
+                                  {badge}
+                                </span>
+                              )}
+                            </div>
+                          </SelectItem>
+                        ),
+                      )}
+                    </SelectContent>
+                  </Select>
 
                   <div className="relative flex-1">
                     <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -945,7 +989,7 @@ export default function ThemesPageContent() {
                               {highlightPatternMatch(
                                 item.theme,
                                 searchedConditions.find(
-                                  (c) => c.language === "default",
+                                  (c) => c.language === "default" || c.language === "match_all",
                                 ) || searchedConditions[0],
                               )}
                             </span>
@@ -986,7 +1030,7 @@ export default function ThemesPageContent() {
 
                               // Find matching search condition for this language (from searched conditions)
                               const matchingCondition = searchedConditions.find(
-                                (c) => c.language === lang,
+                                (c) => c.language === lang || c.language === "match_all",
                               );
 
                               return (
