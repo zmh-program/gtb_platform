@@ -204,6 +204,23 @@ export function patternSearchTranslations(
         return matchesPattern(themeText, pattern, allowSpaceWildcard);
       }
 
+      // If language is "match_all", check all translations and theme
+      if (condition.language === "match_all") {
+        // Check theme first
+        const themeText = removeAccents(item.theme).toLowerCase();
+        if (matchesPattern(themeText, pattern, allowSpaceWildcard)) {
+          return true;
+        }
+
+        // Check all available translations
+        return Object.values(item.translations).some((translation) => {
+          const translationText = removeAccents(
+            translation.translation,
+          ).toLowerCase();
+          return matchesPattern(translationText, pattern, allowSpaceWildcard);
+        });
+      }
+
       // Check specific language translation
       const translation =
         item.translations[condition.language as keyof typeof item.translations];
