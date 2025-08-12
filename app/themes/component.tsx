@@ -65,8 +65,11 @@ const ITEMS_PER_PAGE = 50;
 
 // Extended language options with Match All only for themes page
 const themesLanguageOptions: Record<string, LanguageOption> = {
-  ...languageOptions,
-  match_all: { label: "Match All Languages", badge: "All" },
+  default: languageOptions.default,
+  match_all: { label: "Match All", badge: "All" },
+  ...Object.fromEntries(
+    Object.entries(languageOptions).filter(([key]) => key !== "default")
+  ),
 };
 
 export default function ThemesPageContent() {
@@ -95,6 +98,7 @@ export default function ThemesPageContent() {
     parseInt(searchParams.get("page") || "1", 10),
   );
   const [totalPages, setTotalPages] = useState(1);
+  const [totalResults, setTotalResults] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -191,6 +195,7 @@ export default function ThemesPageContent() {
 
       console.log("allResults", allResults);
 
+      setTotalResults(allResults.length);
       setTotalPages(Math.ceil(allResults.length / ITEMS_PER_PAGE));
 
       // Paginate results
@@ -208,6 +213,7 @@ export default function ThemesPageContent() {
       setResults([]);
       setRequestTime(null);
       setTotalPages(1);
+      setTotalResults(0);
       setSearchedConditions([]);
     }
   };
@@ -1206,8 +1212,8 @@ export default function ThemesPageContent() {
         <div className="w-full text-center text-xs text-muted-foreground pt-2">
           {requestTime !== null && (
             <p>
-              Request Time: {requestTime.toFixed(2)}ms ({results.length}{" "}
-              {results.length > 1 ? "results" : "result"})
+              Request Time: {requestTime.toFixed(2)}ms ({totalResults}{" "}
+              {totalResults !== 1 ? "results" : "result"})
             </p>
           )}
           <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
