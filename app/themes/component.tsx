@@ -68,7 +68,7 @@ const themesLanguageOptions: Record<string, LanguageOption> = {
   default: languageOptions.default,
   match_all: { label: "Match All", badge: "All" },
   ...Object.fromEntries(
-    Object.entries(languageOptions).filter(([key]) => key !== "default")
+    Object.entries(languageOptions).filter(([key]) => key !== "default"),
   ),
 };
 
@@ -995,7 +995,9 @@ export default function ThemesPageContent() {
                               {highlightPatternMatch(
                                 item.theme,
                                 searchedConditions.find(
-                                  (c) => c.language === "default" || c.language === "match_all",
+                                  (c) =>
+                                    c.language === "default" ||
+                                    c.language === "match_all",
                                 ) || searchedConditions[0],
                               )}
                             </span>
@@ -1036,7 +1038,9 @@ export default function ThemesPageContent() {
 
                               // Find matching search condition for this language (from searched conditions)
                               const matchingCondition = searchedConditions.find(
-                                (c) => c.language === lang || c.language === "match_all",
+                                (c) =>
+                                  c.language === lang ||
+                                  c.language === "match_all",
                               );
 
                               return (
