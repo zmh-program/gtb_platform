@@ -278,19 +278,6 @@
         ]
       },
       {
-        "multiword": "leghajo",
-        "occurrences": [
-          {
-            "theme": "Airship",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Blimp",
-            "reference": "Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "luftskib",
         "occurrences": [
           {
@@ -417,6 +404,19 @@
           {
             "theme": "Blimp",
             "reference": "Japanese"
+          }
+        ]
+      },
+      {
+        "multiword": "léghajó",
+        "occurrences": [
+          {
+            "theme": "Airship",
+            "reference": "Hungarian"
+          },
+          {
+            "theme": "Blimp",
+            "reference": "Hungarian"
           }
         ]
       },
@@ -4255,8 +4255,8 @@
       },
       "cs": {
         "translation": "Axolotl",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:43:57-04:00"
       },
       "da": {
         "translation": "Axolotl",
@@ -12913,8 +12913,8 @@
       },
       "cs": {
         "translation": "Cyklostezka",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:44:03-04:00"
       },
       "da": {
         "translation": "Cykelsti",
@@ -14830,8 +14830,8 @@
       },
       "cs": {
         "translation": "Bizon",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:44:14-04:00"
       },
       "da": {
         "translation": "Bisonokse",
@@ -15762,19 +15762,6 @@
         ]
       },
       {
-        "multiword": "leghajo",
-        "occurrences": [
-          {
-            "theme": "Airship",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Blimp",
-            "reference": "Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "luftskib",
         "occurrences": [
           {
@@ -15901,6 +15888,19 @@
           {
             "theme": "Blimp",
             "reference": "Japanese"
+          }
+        ]
+      },
+      {
+        "multiword": "léghajó",
+        "occurrences": [
+          {
+            "theme": "Airship",
+            "reference": "Hungarian"
+          },
+          {
+            "theme": "Blimp",
+            "reference": "Hungarian"
           }
         ]
       },
@@ -16620,6 +16620,19 @@
         ]
       },
       {
+        "multiword": "船",
+        "occurrences": [
+          {
+            "theme": "Boat",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Ship",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "лодка",
         "occurrences": [
           {
@@ -16648,9 +16661,9 @@
     ],
     "translations": {
       "zh_cn": {
-        "translation": "小船",
+        "translation": "船",
         "is_approved": true,
-        "approved_at": "2017-06-24T05:45:00-04:00"
+        "approved_at": "2025-08-18T09:43:15-04:00"
       },
       "zh_tw": {
         "translation": "小船",
@@ -17493,19 +17506,6 @@
     "shortcut": "kitapevi",
     "multiwords": [
       {
-        "multiword": "librarie",
-        "occurrences": [
-          {
-            "theme": "Bookstore",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Library",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "libreria",
         "occurrences": [
           {
@@ -17515,6 +17515,19 @@
           {
             "theme": "Bookstore",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "librărie",
+        "occurrences": [
+          {
+            "theme": "Bookstore",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Library",
+            "reference": "Romanian"
           }
         ]
       }
@@ -22342,7 +22355,7 @@
   {
     "id": 244102,
     "theme": "Bunker",
-    "shortcut": null,
+    "shortcut": "bunkr",
     "multiwords": [
       {
         "multiword": "бункер",
@@ -22371,8 +22384,8 @@
       },
       "cs": {
         "translation": "Bunkr",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:44:22-04:00"
       },
       "da": {
         "translation": "Bunker",
@@ -24746,19 +24759,6 @@
     "theme": "Cage",
     "shortcut": "bur",
     "multiwords": [
-      {
-        "multiword": "kafe",
-        "occurrences": [
-          {
-            "theme": "Cage",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Coffee Shop",
-            "reference": "Norwegian"
-          }
-        ]
-      },
       {
         "multiword": "celle",
         "occurrences": [
@@ -27970,8 +27970,8 @@
       },
       "cs": {
         "translation": "Kapybara",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:45:31-04:00"
       },
       "da": {
         "translation": "Kapivar",
@@ -34325,6 +34325,19 @@
             "reference": "French"
           }
         ]
+      },
+      {
+        "multiword": "chimenea",
+        "occurrences": [
+          {
+            "theme": "Chimney",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Fireplace",
+            "reference": "Spanish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -40297,19 +40310,6 @@
             "reference": "German"
           }
         ]
-      },
-      {
-        "multiword": "kafe",
-        "occurrences": [
-          {
-            "theme": "Cage",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Coffee Shop",
-            "reference": "Norwegian"
-          }
-        ]
       }
     ],
     "translations": {
@@ -44281,8 +44281,8 @@
       },
       "es": {
         "translation": "Vaquero",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:14:42-04:00"
       },
       "sv": {
         "translation": "Cowboy",
@@ -55542,9 +55542,9 @@
     ],
     "translations": {
       "zh_cn": {
-        "translation": "鼓棍",
+        "translation": "鼓槌",
         "is_approved": true,
-        "approved_at": "2018-02-14T04:56:23-05:00"
+        "approved_at": "2025-08-18T09:48:28-04:00"
       },
       "zh_tw": {
         "translation": "鼓棒",
@@ -58228,8 +58228,8 @@
       },
       "es": {
         "translation": "Elefante",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:14:43-04:00"
       },
       "sv": {
         "translation": "Elefant",
@@ -61936,8 +61936,8 @@
       },
       "cs": {
         "translation": "Módní přehlídka",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:45:36-04:00"
       },
       "da": {
         "translation": "Modeshow",
@@ -64100,6 +64100,19 @@
             "reference": "French"
           }
         ]
+      },
+      {
+        "multiword": "chimenea",
+        "occurrences": [
+          {
+            "theme": "Chimney",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Fireplace",
+            "reference": "Spanish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -64200,8 +64213,8 @@
       },
       "es": {
         "translation": "Chimenea",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:11-04:00"
       },
       "sv": {
         "translation": "Fireplace",
@@ -67564,9 +67577,9 @@
         "approved_at": "2023-08-14T16:37:51-04:00"
       },
       "es": {
-        "translation": "Fútbol",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Fútbol Americano",
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:07-04:00"
       },
       "sv": {
         "translation": "Fotboll",
@@ -67603,8 +67616,8 @@
       },
       "cs": {
         "translation": "Fotbalové hřiště",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:45:40-04:00"
       },
       "da": {
         "translation": "Amerikansk Fodboldbane",
@@ -70571,9 +70584,9 @@
     "multiwords": [],
     "translations": {
       "zh_cn": {
-        "translation": "果篮",
+        "translation": "水果篮",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:01:14-05:00"
+        "approved_at": "2025-08-18T09:49:43-04:00"
       },
       "zh_tw": {
         "translation": "水果籃",
@@ -71653,8 +71666,8 @@
       },
       "es": {
         "translation": "Mueble",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:15-04:00"
       },
       "sv": {
         "translation": "Möbler",
@@ -75828,7 +75841,7 @@
           },
           {
             "theme": "Target",
-            "reference": "Danish / Norwegian"
+            "reference": "Norwegian"
           }
         ]
       },
@@ -79717,10 +79730,6 @@
           },
           {
             "theme": "Reaper",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Scythe",
             "reference": "Hungarian"
           }
         ]
@@ -102315,6 +102324,11 @@
         "is_approved": true,
         "approved_at": "2024-10-11T03:28:27-04:00"
       },
+      "fi": {
+        "translation": "Laavalamppu",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Lampe à lave",
         "is_approved": true,
@@ -104816,19 +104830,6 @@
         ]
       },
       {
-        "multiword": "librarie",
-        "occurrences": [
-          {
-            "theme": "Bookstore",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Library",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "bibliotheque",
         "occurrences": [
           {
@@ -104838,6 +104839,19 @@
           {
             "theme": "Library",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "librărie",
+        "occurrences": [
+          {
+            "theme": "Bookstore",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Library",
+            "reference": "Romanian"
           }
         ]
       }
@@ -111806,8 +111820,8 @@
       },
       "cs": {
         "translation": "Manekýn",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:46:18-04:00"
       },
       "da": {
         "translation": "Mannequin",
@@ -113876,7 +113890,7 @@
           },
           {
             "theme": "Target",
-            "reference": "Danish / Norwegian"
+            "reference": "Norwegian"
           }
         ]
       },
@@ -115416,6 +115430,19 @@
         ]
       },
       {
+        "multiword": "挖矿",
+        "occurrences": [
+          {
+            "theme": "Mine",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Mining",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "挖礦",
         "occurrences": [
           {
@@ -115990,9 +116017,9 @@
     ],
     "translations": {
       "zh_cn": {
-        "translation": "矿井",
+        "translation": "废弃矿井",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:42:22-05:00"
+        "approved_at": "2025-08-18T09:50:12-04:00"
       },
       "zh_tw": {
         "translation": "廢棄礦坑",
@@ -116235,6 +116262,19 @@
     "shortcut": null,
     "multiwords": [
       {
+        "multiword": "挖矿",
+        "occurrences": [
+          {
+            "theme": "Mine",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Mining",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "挖礦",
         "occurrences": [
           {
@@ -116251,8 +116291,8 @@
     "translations": {
       "zh_cn": {
         "translation": "挖矿",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-18T09:36:24-04:00"
       },
       "zh_tw": {
         "translation": "挖礦",
@@ -118065,8 +118105,8 @@
       },
       "es": {
         "translation": "Monóculo",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:17-04:00"
       },
       "sv": {
         "translation": "Monokel",
@@ -120115,6 +120155,11 @@
       }
     ],
     "translations": {
+      "co": {
+        "translation": "movie theater",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "电影院",
         "is_approved": true,
@@ -123047,8 +123092,8 @@
       },
       "cs": {
         "translation": "Nether",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:46:34-04:00"
       },
       "da": {
         "translation": "Nether",
@@ -123662,8 +123707,8 @@
       },
       "cs": {
         "translation": "Polární záře",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:46:38-04:00"
       },
       "da": {
         "translation": "Nordlys",
@@ -130704,9 +130749,9 @@
     "multiwords": [],
     "translations": {
       "zh_cn": {
-        "translation": "天井",
+        "translation": "庭院",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:28:50-05:00"
+        "approved_at": "2025-08-18T09:50:56-04:00"
       },
       "zh_tw": {
         "translation": "天井",
@@ -139312,8 +139357,8 @@
       },
       "cs": {
         "translation": "Instalatér",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:46:48-04:00"
       },
       "da": {
         "translation": "VVS'er",
@@ -149786,10 +149831,6 @@
           {
             "theme": "Reaper",
             "reference": "Hungarian"
-          },
-          {
-            "theme": "Scythe",
-            "reference": "Hungarian"
           }
         ]
       },
@@ -155974,8 +156015,8 @@
       },
       "es": {
         "translation": "Ruinas",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:18-04:00"
       },
       "sv": {
         "translation": "Ruins",
@@ -160027,8 +160068,8 @@
       },
       "es": {
         "translation": "Espantapájaros",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:10-04:00"
       },
       "sv": {
         "translation": "Fågelskrämma",
@@ -161502,23 +161543,6 @@
     "theme": "Scythe",
     "shortcut": "le",
     "multiwords": [
-      {
-        "multiword": "kaszas",
-        "occurrences": [
-          {
-            "theme": "Grim Reaper",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Reaper",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Scythe",
-            "reference": "Hungarian"
-          }
-        ]
-      },
       {
         "multiword": "le",
         "occurrences": [
@@ -165846,6 +165870,19 @@
             "reference": "French"
           }
         ]
+      },
+      {
+        "multiword": "船",
+        "occurrences": [
+          {
+            "theme": "Boat",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Ship",
+            "reference": "Chinese Simplified"
+          }
+        ]
       }
     ],
     "translations": {
@@ -169452,6 +169489,11 @@
     "shortcut": "skate",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "skateboard",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "滑板",
         "is_approved": true,
@@ -185364,8 +185406,8 @@
     "translations": {
       "zh_cn": {
         "translation": "夏天",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-18T09:51:27-04:00"
       },
       "zh_tw": {
         "translation": "夏日",
@@ -188247,6 +188289,19 @@
         ]
       },
       {
+        "multiword": "columpio",
+        "occurrences": [
+          {
+            "theme": "Swing",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Tire Swing",
+            "reference": "Spanish"
+          }
+        ]
+      },
+      {
         "multiword": "houpacka",
         "occurrences": [
           {
@@ -188410,8 +188465,8 @@
       },
       "es": {
         "translation": "Columpio",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:08-04:00"
       },
       "sv": {
         "translation": "Gunga",
@@ -190502,7 +190557,7 @@
           },
           {
             "theme": "Target",
-            "reference": "Danish / Norwegian"
+            "reference": "Norwegian"
           }
         ]
       },
@@ -196013,6 +196068,19 @@
             "reference": "Romanian"
           }
         ]
+      },
+      {
+        "multiword": "columpio",
+        "occurrences": [
+          {
+            "theme": "Swing",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Tire Swing",
+            "reference": "Spanish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -201415,13 +201483,26 @@
             "reference": "Portuguese / Portuguese, Brazilian / Spanish"
           }
         ]
+      },
+      {
+        "multiword": "运输",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Chinese Simplified"
+          }
+        ]
       }
     ],
     "translations": {
       "zh_cn": {
         "translation": "运输",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-18T09:52:04-04:00"
       },
       "zh_tw": {
         "translation": "運輸",
@@ -201606,6 +201687,19 @@
           {
             "theme": "Transportation",
             "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "运输",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Chinese Simplified"
           }
         ]
       },
@@ -202807,8 +202901,8 @@
       },
       "es": {
         "translation": "Árbol",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-17T18:15:19-04:00"
       },
       "sv": {
         "translation": "Träd",
@@ -206425,9 +206519,9 @@
     "multiwords": [],
     "translations": {
       "zh_cn": {
-        "translation": "不死族",
+        "translation": "亡灵生物",
         "is_approved": true,
-        "approved_at": "2018-02-13T06:08:25-05:00"
+        "approved_at": "2025-08-18T09:48:05-04:00"
       },
       "zh_tw": {
         "translation": "不死生物",
@@ -207263,8 +207357,8 @@
       },
       "cs": {
         "translation": "Vzhůru nohama",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:47:10-04:00"
       },
       "da": {
         "translation": "Upside Down",
@@ -207498,9 +207592,9 @@
     "multiwords": [],
     "translations": {
       "zh_cn": {
-        "translation": "情人",
+        "translation": "情人节",
         "is_approved": true,
-        "approved_at": "2018-02-13T06:09:43-05:00"
+        "approved_at": "2025-08-18T09:52:10-04:00"
       },
       "zh_tw": {
         "translation": "情人節",
@@ -217766,7 +217860,7 @@
   {
     "id": 215975,
     "theme": "Workshop",
-    "shortcut": "atolye",
+    "shortcut": "dilna",
     "multiwords": [
       {
         "multiword": "oficina",
@@ -217795,8 +217889,8 @@
       },
       "cs": {
         "translation": "Dílna",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-08-31T11:47:13-04:00"
       },
       "da": {
         "translation": "Værkstedet",
