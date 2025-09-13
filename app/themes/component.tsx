@@ -34,6 +34,7 @@ import {
   Type,
   CaseLower,
   CaseUpper,
+  MapPinCheck,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import {
@@ -523,10 +524,25 @@ export default function ThemesPageContent() {
     return "normal";
   });
 
+  const [showTips, setShowTips] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("gtb-show-tips") === "true";
+    }
+    return false;
+  });
+
   const handleTextCaseChange = (value: "normal" | "uppercase" | "lowercase") => {
     setTextCase(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("gtb-text-case", value);
+    }
+  };
+
+  const handleTipsToggle = () => {
+    const newValue = !showTips;
+    setShowTips(newValue);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("gtb-show-tips", newValue.toString());
     }
   };
 
@@ -539,6 +555,48 @@ export default function ThemesPageContent() {
       default:
         return text;
     }
+  };
+
+  // Generate translation tips for a theme
+  const generateLanguageTips = (item: TranslationItem): string => {
+    // Priority order for displaying translations (common languages first)
+    const priorityOrder = ["ru", "ja", "kr", "zh_cn", "zh_tw", "fr", "pl", "ko", "de", "es", "it", "pt", "ptbr", "en"];
+    
+    // Collect all translations starting with item.theme (highest priority)
+    const allTranslations: string[] = [];
+    
+    // Add item.theme first (highest priority)
+    if (item.theme) {
+      allTranslations.push(item.theme);
+    }
+    
+    // Get all approved translations
+    const approvedTranslations = Object.entries(item.translations)
+      .filter(([_, translation]) => translation && translation.is_approved)
+      .map(([lang, translation]) => ({
+        lang,
+        translation: translation!.translation
+      }))
+      .sort((a, b) => {
+        const aIndex = priorityOrder.indexOf(a.lang);
+        const bIndex = priorityOrder.indexOf(b.lang);
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+        return a.lang.localeCompare(b.lang);
+      });
+
+    // Add approved translations
+    allTranslations.push(...approvedTranslations.map(t => t.translation));
+
+    if (allTranslations.length > 0) {
+      // Use Set to remove duplicates while preserving order
+      const uniqueTranslations = Array.from(new Set(allTranslations));
+      const translationsStr = uniqueTranslations.join(", ");
+      return `The theme is: ${translationsStr}`;
+    }
+    
+    return "No approved translations available";
   };
 
   const toggleCardFold = (index: number) => {
@@ -898,7 +956,16 @@ export default function ThemesPageContent() {
           </Tabs>
         </Card>
 
-        <div className="flex items-center justify-center gap-1 bg-muted/50 rounded-md p-1 w-fit ml-auto">
+        <div className="flex items-center gap-2 ml-auto">
+          <Button
+            variant={showTips ? "default" : "secondary"}
+            size="sm"
+            onClick={handleTipsToggle}
+            className="h-8 w-8"
+          >
+            <MapPinCheck className="h-4 w-4" />
+          </Button>
+          <div className="flex items-center justify-center gap-1 bg-muted/50 rounded-md p-1">
             <Button
               variant={textCase === "normal" ? "default" : "ghost"}
               size="sm"
@@ -909,15 +976,6 @@ export default function ThemesPageContent() {
               <Type className="h-4 w-4" />
             </Button>
             <Button
-              variant={textCase === "uppercase" ? "default" : "ghost"}
-              size="sm"
-              onClick={() => handleTextCaseChange("uppercase")}
-              className="h-8 w-8 p-0"
-              title="UPPERCASE"
-            >
-              <CaseUpper className="h-4 w-4" />
-            </Button>
-            <Button
               variant={textCase === "lowercase" ? "default" : "ghost"}
               size="sm"
               onClick={() => handleTextCaseChange("lowercase")}
@@ -926,7 +984,17 @@ export default function ThemesPageContent() {
             >
               <CaseLower className="h-4 w-4" />
             </Button>
+            <Button
+              variant={textCase === "uppercase" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => handleTextCaseChange("uppercase")}
+              className="h-8 w-8 p-0"
+              title="UPPERCASE"
+            >
+              <CaseUpper className="h-4 w-4" />
+            </Button>
           </div>
+        </div>
           
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           {results.map((item, index) => (
@@ -960,6 +1028,22 @@ export default function ThemesPageContent() {
                 </CardTitle>
               </CardHeader>
 
+              {showTips && (
+                  <div className="p-3 border-b bg-secondary/40">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-secondary-foreground font-medium">
+                        {applyTextCase(generateLanguageTips(item))}
+                      </span>
+                      <button
+                        onClick={() => handleCopy(generateLanguageTips(item))}
+                        className="p-1 rounded-full hover:bg-secondary/50 transition-colors"
+                        title="Copy tips"
+                      >
+                        <Copy className="h-3 w-3 text-secondary-foreground" />
+                      </button>
+                    </div>
+                  </div>
+                )}
               <Collapsible
                 className="bg-muted/30 border-b"
                 open={openMultiwords[`item-${index}`]}
