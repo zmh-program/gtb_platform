@@ -186,7 +186,7 @@ export function patternSearchTranslations(
     return conditions.every((condition) => {
       if (!condition.pattern.trim()) return true;
 
-      let pattern = condition.pattern.toLowerCase().trim();
+      let pattern = removeAccents(condition.pattern).toLowerCase().trim();
       let allowSpaceWildcard = false;
 
       // Check for space wildcard suffix

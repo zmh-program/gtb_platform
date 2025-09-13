@@ -429,7 +429,7 @@ export default function ThemesPageContent() {
       return highlightMatch(text, searchQuery);
     }
 
-    let pattern = condition.pattern.toLowerCase().trim();
+    let pattern = removeAccents(condition.pattern).toLowerCase().trim();
 
     // Handle space wildcard suffix
     if (pattern.startsWith("!")) {
