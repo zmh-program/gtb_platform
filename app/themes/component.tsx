@@ -449,6 +449,13 @@ export default function ThemesPageContent() {
       return text;
     }
 
+    // Check if the text actually matches the pattern before highlighting
+    for (let i = 0; i < pattern.length; i++) {
+      if (pattern[i] !== "_" && pattern[i] !== normalizedText[i]) {
+        return text; // No match, return original text without highlighting
+      }
+    }
+
     const result = [];
     let i = 0;
 
