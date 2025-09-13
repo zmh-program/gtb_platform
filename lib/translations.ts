@@ -141,7 +141,7 @@ export interface SearchCondition {
 // Filter digits: replace numbers (0-100) with corresponding number of underscores
 function filterDigit(pattern: string): string {
   // Replace all hyphens with spaces
-  pattern = pattern.replace(/-/g, " ");
+  // pattern = pattern.replace(/-/g, " ");
 
   // Replace numbers with underscores
   return pattern.replace(/\d{1,2}/g, (match) => {
