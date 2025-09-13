@@ -12926,6 +12926,11 @@
         "is_approved": true,
         "approved_at": "2024-10-11T03:32:12-04:00"
       },
+      "fi": {
+        "translation": "Pyörätie",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Piste cyclable",
         "is_approved": true,
@@ -22397,6 +22402,11 @@
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:34-05:00"
       },
+      "fi": {
+        "translation": "Bunkkeri",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Bunker",
         "is_approved": true,
@@ -31418,6 +31428,11 @@
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:36-05:00"
       },
+      "fi": {
+        "translation": "Betonimylly",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Bétonnière",
         "is_approved": true,
@@ -32562,6 +32577,11 @@
     "shortcut": "damier",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "checkers",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "棋盘",
         "is_approved": true,
@@ -40337,6 +40357,11 @@
         "translation": "Koffiebar",
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:38-05:00"
+      },
+      "fi": {
+        "translation": "Kahvila",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Cafétéria",
@@ -50958,6 +50983,11 @@
         "translation": "Diploma",
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:42-05:00"
+      },
+      "fi": {
+        "translation": "Päättötodistus",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Diplôme",
@@ -67746,6 +67776,11 @@
         "translation": "Voetbalhelm",
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:45-05:00"
+      },
+      "fi": {
+        "translation": "Jalkapallokypärä",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Casque de football américain",
@@ -94457,6 +94492,11 @@
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:50-05:00"
       },
+      "fi": {
+        "translation": "Siivooja",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Concierge",
         "is_approved": true,
@@ -102326,8 +102366,8 @@
       },
       "fi": {
         "translation": "Laavalamppu",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-09-04T17:05:46-04:00"
       },
       "fr": {
         "translation": "Lampe à lave",
@@ -103536,6 +103576,11 @@
         "translation": "Collegezaal",
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:53-05:00"
+      },
+      "fi": {
+        "translation": "Luentosali",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Amphithéâtre",
@@ -122543,6 +122588,11 @@
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:54-05:00"
       },
+      "fi": {
+        "translation": "Sarvivalas",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Narval",
         "is_approved": true,
@@ -126366,6 +126416,11 @@
         "translation": "Orchidee",
         "is_approved": true,
         "approved_at": "2025-02-26T14:21:55-05:00"
+      },
+      "fi": {
+        "translation": "Orkidea",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Orchidée",
@@ -145149,6 +145204,11 @@
         "translation": "Papegaaiduiker",
         "is_approved": true,
         "approved_at": "2024-10-11T03:33:53-04:00"
+      },
+      "fi": {
+        "translation": "Lunni",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Macareux",
@@ -167120,6 +167180,11 @@
       }
     ],
     "translations": {
+      "co": {
+        "translation": "shopping cart",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "购物车",
         "is_approved": true,
@@ -178397,6 +178462,11 @@
         "translation": "Wenteltrap",
         "is_approved": true,
         "approved_at": "2024-10-12T10:42:19-04:00"
+      },
+      "fi": {
+        "translation": "Kierreportaat",
+        "is_approved": false,
+        "approved_at": null
       },
       "fr": {
         "translation": "Escalier en colimaçon",
@@ -210768,6 +210838,11 @@
         "is_approved": true,
         "approved_at": "2025-02-26T14:22:02-05:00"
       },
+      "fi": {
+        "translation": "Tapetti",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Papier peint",
         "is_approved": true,
@@ -218830,6 +218905,11 @@
         "is_approved": true,
         "approved_at": "2024-10-12T10:43:25-04:00"
       },
+      "fi": {
+        "translation": "Lumimies",
+        "is_approved": false,
+        "approved_at": null
+      },
       "fr": {
         "translation": "Yéti",
         "is_approved": true,
@@ -219832,129 +219912,6 @@
         "translation": "Зомбі апокаліпсис",
         "is_approved": true,
         "approved_at": "2025-02-07T08:27:16-05:00"
-      }
-    }
-  },
-  {
-    "id": 213565,
-    "theme": "Zombies",
-    "shortcut": "zumbi",
-    "multiwords": [],
-    "translations": {
-      "zh_cn": {
-        "translation": "僵尸",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "zh_tw": {
-        "translation": "殭屍",
-        "is_approved": true,
-        "approved_at": "2024-11-03T04:48:00-05:00"
-      },
-      "cs": {
-        "translation": "Zombíci",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "da": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2023-02-06T08:48:06-05:00"
-      },
-      "nl": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2017-07-14T15:20:40-04:00"
-      },
-      "fi": {
-        "translation": "Zombit",
-        "is_approved": true,
-        "approved_at": "2023-08-14T17:21:37-04:00"
-      },
-      "fr": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2018-01-30T12:37:47-05:00"
-      },
-      "de": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2017-07-30T17:42:55-04:00"
-      },
-      "hu": {
-        "translation": "Zombik",
-        "is_approved": true,
-        "approved_at": "2024-05-26T14:52:20-04:00"
-      },
-      "it": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2019-07-20T06:15:38-04:00"
-      },
-      "ja": {
-        "translation": "ゾンビ",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "ko": {
-        "translation": "좀비",
-        "is_approved": true,
-        "approved_at": "2023-08-26T01:51:56-04:00"
-      },
-      "no": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2022-12-17T15:19:36-05:00"
-      },
-      "en": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2019-08-30T22:50:27-04:00"
-      },
-      "pl": {
-        "translation": "Zombie",
-        "is_approved": true,
-        "approved_at": "2024-01-03T12:48:14-05:00"
-      },
-      "pt": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2020-10-13T05:34:21-04:00"
-      },
-      "ptbr": {
-        "translation": "Zumbis",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:35:21-04:00"
-      },
-      "ro": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2022-04-19T16:24:47-04:00"
-      },
-      "ru": {
-        "translation": "Зомби",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:45:28-04:00"
-      },
-      "es": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2017-07-11T13:50:40-04:00"
-      },
-      "sv": {
-        "translation": "Zombier",
-        "is_approved": true,
-        "approved_at": "2023-08-14T17:26:11-04:00"
-      },
-      "tr": {
-        "translation": "Zombies",
-        "is_approved": true,
-        "approved_at": "2020-08-15T05:28:46-04:00"
-      },
-      "uk": {
-        "translation": "Зомбі",
-        "is_approved": true,
-        "approved_at": "2023-08-15T17:47:01-04:00"
       }
     }
   },
