@@ -437,7 +437,8 @@ export default function ThemesPageContent() {
     }
 
     // Apply digit filtering
-    pattern = pattern.replace(/-/g, " ").replace(/\d{1,2}/g, (match) => {
+    //  pattern.replace(/-/g, " ")
+    pattern = pattern.replace(/\d{1,2}/g, (match) => {
       const num = parseInt(match);
       return "_".repeat(num);
     });
@@ -513,7 +514,9 @@ export default function ThemesPageContent() {
     if (!query) return text;
     const normalizedQuery = removeAccents(query);
     const normalizedText = removeAccents(text);
-    const regex = new RegExp(`(${normalizedQuery})`, "gi");
+    // Escape special regex characters to prevent errors when searching for them
+    const escapedQuery = normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, "gi");
     const parts = normalizedText.split(regex);
 
     // Track position in original text to extract corresponding substrings
