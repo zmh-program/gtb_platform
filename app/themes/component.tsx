@@ -31,6 +31,9 @@ import {
   LinkIcon,
   Plus,
   X,
+  Type,
+  CaseLower,
+  CaseUpper,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import {
@@ -513,6 +516,31 @@ export default function ThemesPageContent() {
     SearchCondition[]
   >([]);
 
+  const [textCase, setTextCase] = useState<"normal" | "uppercase" | "lowercase">(() => {
+    if (typeof window !== "undefined") {
+      return (localStorage.getItem("gtb-text-case") as "normal" | "uppercase" | "lowercase") || "normal";
+    }
+    return "normal";
+  });
+
+  const handleTextCaseChange = (value: "normal" | "uppercase" | "lowercase") => {
+    setTextCase(value);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("gtb-text-case", value);
+    }
+  };
+
+  const applyTextCase = (text: string): string => {
+    switch (textCase) {
+      case "uppercase":
+        return text.toUpperCase();
+      case "lowercase":
+        return text.toLowerCase();
+      default:
+        return text;
+    }
+  };
+
   const toggleCardFold = (index: number) => {
     setFoldedCards((prev) => ({ ...prev, [index]: !prev[index] }));
   };
@@ -870,6 +898,36 @@ export default function ThemesPageContent() {
           </Tabs>
         </Card>
 
+        <div className="flex items-center justify-center gap-1 bg-muted/50 rounded-md p-1 w-fit ml-auto">
+            <Button
+              variant={textCase === "normal" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => handleTextCaseChange("normal")}
+              className="h-8 w-8 p-0"
+              title="Normal case"
+            >
+              <Type className="h-4 w-4" />
+            </Button>
+            <Button
+              variant={textCase === "uppercase" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => handleTextCaseChange("uppercase")}
+              className="h-8 w-8 p-0"
+              title="UPPERCASE"
+            >
+              <CaseUpper className="h-4 w-4" />
+            </Button>
+            <Button
+              variant={textCase === "lowercase" ? "default" : "ghost"}
+              size="sm"
+              onClick={() => handleTextCaseChange("lowercase")}
+              className="h-8 w-8 p-0"
+              title="lowercase"
+            >
+              <CaseLower className="h-4 w-4" />
+            </Button>
+          </div>
+          
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           {results.map((item, index) => (
             // Item Result Card
@@ -878,10 +936,10 @@ export default function ThemesPageContent() {
               className="w-full shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
               <CardHeader className="p-4 bg-muted/50 border-b">
-                <CardTitle className="text-lg font-medium flex items-center justify-between">
-                  <span className="truncate mr-2">
-                    {highlightMatch(item.theme, searchQuery)}
-                  </span>
+                 <CardTitle className="text-lg font-medium flex items-center justify-between">
+                   <span className="truncate mr-2">
+                     {highlightMatch(applyTextCase(item.theme), searchQuery)}
+                   </span>
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleCopy(item.theme)}
@@ -1003,7 +1061,7 @@ export default function ThemesPageContent() {
                           <div className="flex items-center">
                             <span className="text-sm font-medium mr-1">
                               {highlightPatternMatch(
-                                item.theme,
+                                applyTextCase(item.theme),
                                 searchedConditions.find(
                                   (c) =>
                                     c.language === "default" ||
@@ -1074,10 +1132,10 @@ export default function ThemesPageContent() {
                                       <span className="text-sm font-medium mr-1">
                                         {matchingCondition
                                           ? highlightPatternMatch(
-                                              trans.translation,
+                                              applyTextCase(trans.translation),
                                               matchingCondition,
                                             )
-                                          : trans.translation}
+                                          : applyTextCase(trans.translation)}
                                       </span>
                                       <button
                                         onClick={() =>
@@ -1146,7 +1204,7 @@ export default function ThemesPageContent() {
                         <div className="flex flex-wrap items-center gap-1 ml-auto">
                           <div className="flex items-center">
                             <span className="text-sm font-medium mr-1">
-                              {highlightMatch(trans.translation, searchQuery)}
+                              {highlightMatch(applyTextCase(trans.translation), searchQuery)}
                             </span>
                             <button
                               onClick={() => handleCopy(trans.translation)}
