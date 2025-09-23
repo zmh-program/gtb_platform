@@ -631,26 +631,23 @@ export default function ThemesPageContent() {
     });
   };
 
-  const handleCopy = (text: string) => {
+  const handleCopy = (text: string, applyCase: boolean = true) => {
     try {
-      // Modern clipboard API
+      const textToCopy = applyCase ? applyTextCase(text) : text;
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard
-          .writeText(text)
+          .writeText(textToCopy)
           .then(() => {
             toast.success("Copied to clipboard");
           })
           .catch(() => {
-            // Fallback for browsers where clipboard API fails
-            fallbackCopyTextToClipboard(text);
+            fallbackCopyTextToClipboard(textToCopy);
           });
       } else {
-        // Fallback for browsers without clipboard API
-        fallbackCopyTextToClipboard(text);
+        fallbackCopyTextToClipboard(textToCopy);
       }
     } catch (err) {
       console.error("Failed to copy text: ", err);
-      toast.error("Failed to copy to clipboard");
     }
   };
 
@@ -1081,7 +1078,7 @@ export default function ThemesPageContent() {
                               {highlightMatch(multiword.multiword, searchQuery)}
                             </span>
                             <button
-                              onClick={() => handleCopy(multiword.multiword)}
+                              onClick={() => handleCopy(multiword.multiword, false)}
                               className="p-1 rounded-full hover:bg-muted/50 transition-colors"
                               aria-label="Copy multiword"
                             >
@@ -1094,11 +1091,11 @@ export default function ThemesPageContent() {
                                 key={occIdx}
                                 className="text-xs text-muted-foreground flex items-center gap-1"
                               >
-                                <span className="text-muted-foreground/70">
+                                <span className="text-muted-foreground/70 select-none">
                                   •
                                 </span>
                                 <span>
-                                  {highlightMatch(
+                                  &nbsp;{highlightMatch(
                                     occurrence.theme,
                                     searchQuery,
                                   )}
