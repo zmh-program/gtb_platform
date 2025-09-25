@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
+import { generateAvatarUrls } from "@/lib/avatar";
 
 export function StatsDisplay({ stats }: { stats: any }) {
   const bbStats = stats.stats?.BuildBattle || {};
@@ -14,19 +15,11 @@ export function StatsDisplay({ stats }: { stats: any }) {
   const [copiedUuid, setCopiedUuid] = useState(false);
 
   useEffect(() => {
-    async function fetchAvatars() {
-      try {
-        const response = await fetch(`/api/avatar/${stats.displayname}`);
-        const data = await response.json();
-        if (data.allUrls) {
-          setAvatarUrls(data.allUrls);
-        }
-      } catch (error) {
-        console.error("Failed to fetch avatars:", error);
-      }
+    if (stats.uuid) {
+      const urls = generateAvatarUrls(stats.uuid);
+      setAvatarUrls(urls);
     }
-    fetchAvatars();
-  }, [stats.displayname]);
+  }, [stats.uuid]);
 
   const copyUuid = async () => {
     if (stats.uuid) {

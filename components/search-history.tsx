@@ -9,6 +9,7 @@ import {
   type PlayerHistory,
 } from "@/lib/history";
 import { X, History } from "lucide-react";
+import { getAvatarUrl } from "@/lib/avatar";
 
 interface SearchHistoryProps {
   onPlayerSelect: (uuid: string, username: string) => void;
@@ -16,35 +17,10 @@ interface SearchHistoryProps {
 
 export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
   const [history, setHistory] = useState<PlayerHistory[]>([]);
-  const [avatarUrls, setAvatarUrls] = useState<Record<string, string>>({});
 
   useEffect(() => {
     setHistory(getSearchHistory());
   }, []);
-
-  useEffect(() => {
-    const loadAvatars = async () => {
-      const urls: Record<string, string> = {};
-
-      for (const player of history) {
-        try {
-          const response = await fetch(`/api/avatar/${player.username}`);
-          const data = await response.json();
-          if (data.allUrls?.head) {
-            urls[player.uuid] = data.allUrls.head;
-          }
-        } catch {
-          // Failed to load avatar, skip
-        }
-      }
-
-      setAvatarUrls(urls);
-    };
-
-    if (history.length > 0) {
-      loadAvatars();
-    }
-  }, [history]);
 
   const handleRemove = (uuid: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -76,19 +52,23 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
           >
             <div className="flex flex-col items-center p-2 rounded-lg hover:bg-muted/50 transition-colors">
               <div className="relative">
-                {avatarUrls[player.uuid] ? (
-                  <img
-                    src={avatarUrls[player.uuid]}
-                    alt={`${player.username}'s avatar`}
-                    className="w-8 h-8 rounded"
-                  />
-                ) : (
-                  <div className="w-8 h-8 bg-muted rounded flex items-center justify-center">
-                    <span className="text-xs font-medium">
-                      {player.username.charAt(0).toUpperCase()}
-                    </span>
-                  </div>
-                )}
+                <img
+                  src={getAvatarUrl(player.uuid, 'head')}
+                  alt={`${player.username}'s avatar`}
+                  className="w-8 h-8 rounded"
+                  onError={(e) => {
+                    // Fallback to initial letter if avatar fails to load
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="w-8 h-8 bg-muted rounded flex items-center justify-center" style={{ display: 'none' }}>
+                  <span className="text-xs font-medium">
+                    {player.username.charAt(0).toUpperCase()}
+                  </span>
+                </div>
 
                 <Button
                   size="sm"
