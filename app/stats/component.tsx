@@ -130,7 +130,10 @@ export function StatsContent() {
   }
 
   const handleHistoryPlayerSelect = (uuid: string, username: string) => {
-    if (stats?.uuid === uuid) {
+    // Normalize UUIDs for comparison (remove dashes and convert to lowercase)
+    const normalizeUuid = (uuid: string) => uuid.replace(/-/g, '').toLowerCase().trim();
+    
+    if (stats?.uuid && normalizeUuid(stats.uuid) === normalizeUuid(uuid)) {
       return;
     }
     
