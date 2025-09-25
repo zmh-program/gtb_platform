@@ -22,7 +22,6 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { SearchHistory } from "@/components/search-history";
 import { addToSearchHistory } from "@/lib/history";
-import { getUUIDFromPlayer } from "@/lib/api/get_uuid_from_player";
 
 function ErrorMessage({ message }: { message: string }) {
   return (
@@ -103,15 +102,17 @@ export function StatsContent() {
 
       setStats(data);
 
-      // Save to history
-      try {
-        const uuidResponse = await getUUIDFromPlayer(usernameToSearch);
-        if (uuidResponse.id && !uuidResponse.error) {
-          addToSearchHistory(uuidResponse.id, data.player.displayname);
+      // Save to history - use UUID from stats data
+      const respUuid: string | undefined = data.player?.uuid;
+      const respUsername: string | undefined = data.player?.displayname;
+      
+      if (respUuid && respUsername) {
+        try {
+          addToSearchHistory(respUuid, respUsername);
           setRefreshHistory((prev) => prev + 1);
+        } catch (error) {
+          console.warn("Failed to add to history:", error);
         }
-      } catch (error) {
-        console.warn("Failed to add to history:", error);
       }
 
       // Update URL with username parameter without refreshing the page
