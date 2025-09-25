@@ -130,8 +130,12 @@ export function StatsContent() {
   }
 
   const handleHistoryPlayerSelect = (uuid: string, username: string) => {
+    if (stats?.uuid === uuid) {
+      return;
+    }
+    
     setUsername(username);
-    fetchStats(username, apiKey);
+    fetchStats(uuid, apiKey);
   };
 
   async function downloadStatsImage() {
