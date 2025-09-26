@@ -150,8 +150,7 @@ export function StatsDisplay({ stats }: { stats: any }) {
             <img
               src={avatarUrls?.body}
               alt={`${stats.displayname}'s body`}
-              className="w-16 mx-auto pb-2"
-              // loading="lazy"
+              className="w-20 mx-auto pb-2"
             />
           </div>
         </Card>
