@@ -19,7 +19,7 @@ export function generateAvatarUrls(uuid: string, size: string = "64"): AvatarUrl
   
   return {
     head: `https://crafatar.com/avatars/${cleanUuid}?size=${size}&overlay=true`,
-    body: `https://crafatar.com/renders/body/${cleanUuid}?size=${size}&overlay=true`,
+    body: `https://nmsr.nickac.dev/fullbody/${cleanUuid}`,
   };
 }
 
