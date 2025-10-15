@@ -2595,6 +2595,11 @@
         "is_approved": false,
         "approved_at": null
       },
+      "no": {
+        "translation": "Arktis",
+        "is_approved": true,
+        "approved_at": "2025-10-09T14:11:16-04:00"
+      },
       "en": {
         "translation": "Arctic",
         "is_approved": true,
@@ -13596,6 +13601,11 @@
         "translation": "Casa de Pájaro",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:34-05:00"
+      },
+      "sv": {
+        "translation": "Fågelholk",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kuş Evi",
@@ -27538,8 +27548,8 @@
       },
       "tr": {
         "translation": "Kapibara",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:52:22-04:00"
       },
       "uk": {
         "translation": "Капібара",
@@ -30978,8 +30988,8 @@
       },
       "tr": {
         "translation": "Çimento Karıştırıcısı",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:52:36-04:00"
       },
       "uk": {
         "translation": "Бетонозмішувач",
@@ -31929,7 +31939,7 @@
   {
     "id": 240734,
     "theme": "Chandelier",
-    "shortcut": "lustre",
+    "shortcut": "avize",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -32034,8 +32044,8 @@
       },
       "tr": {
         "translation": "Avize",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:52:32-04:00"
       },
       "uk": {
         "translation": "Люстра",
@@ -40471,8 +40481,8 @@
       },
       "tr": {
         "translation": "Kolezyum",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:01-04:00"
       },
       "uk": {
         "translation": "Колізей",
@@ -47464,8 +47474,8 @@
       },
       "tr": {
         "translation": "Kesme Tahtası",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:03-04:00"
       },
       "uk": {
         "translation": "Нарізна дошка",
@@ -50534,8 +50544,8 @@
       },
       "tr": {
         "translation": "Diploma",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:05-04:00"
       },
       "uk": {
         "translation": "Диплом",
@@ -61424,7 +61434,7 @@
   {
     "id": 244118,
     "theme": "Fashion Show",
-    "shortcut": "modeshow",
+    "shortcut": "defile",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -61524,8 +61534,8 @@
       },
       "tr": {
         "translation": "Defile",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:11-04:00"
       },
       "uk": {
         "translation": "Показ моди",
@@ -77283,8 +77293,8 @@
       },
       "tr": {
         "translation": "Golf Topu",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:32-04:00"
       },
       "uk": {
         "translation": "М'яч для гольфу",
@@ -83059,8 +83069,8 @@
       },
       "tr": {
         "translation": "Baret",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:42-04:00"
       },
       "uk": {
         "translation": "Каска",
@@ -90740,8 +90750,8 @@
       },
       "tr": {
         "translation": "Buz Devri",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:44-04:00"
       },
       "uk": {
         "translation": "Льодовиковий період",
@@ -91395,8 +91405,8 @@
       },
       "tr": {
         "translation": "Dondurma Kamyonu",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:46-04:00"
       },
       "uk": {
         "translation": "Вантажівка з морозивом",
@@ -101912,6 +101922,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:40:44-05:00"
       },
+      "sv": {
+        "translation": "Lavalampa",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Lav Lambası",
         "is_approved": true,
@@ -103022,7 +103037,7 @@
   {
     "id": 244140,
     "theme": "Lecture Hall",
-    "shortcut": "aula",
+    "shortcut": "amfi",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -103127,8 +103142,8 @@
       },
       "tr": {
         "translation": "Amfi",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:53-04:00"
       },
       "uk": {
         "translation": "Навчальна аудиторія",
@@ -111428,8 +111443,8 @@
       },
       "tr": {
         "translation": "Manken",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:51:55-04:00"
       },
       "uk": {
         "translation": "Манекен",
@@ -208962,8 +208977,8 @@
       },
       "tr": {
         "translation": "Sanal Gerçeklik",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-10T19:52:04-04:00"
       },
       "uk": {
         "translation": "Віртуальна реальність",
