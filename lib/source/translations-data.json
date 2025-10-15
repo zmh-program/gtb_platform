@@ -10691,10 +10691,6 @@
           {
             "theme": "Bumblebee",
             "reference": "Greek"
-          },
-          {
-            "theme": "Wasp",
-            "reference": "Greek"
           }
         ]
       }
@@ -21467,10 +21463,6 @@
           },
           {
             "theme": "Bumblebee",
-            "reference": "Greek"
-          },
-          {
-            "theme": "Wasp",
             "reference": "Greek"
           }
         ]
@@ -211150,25 +211142,7 @@
     "id": 215911,
     "theme": "Wasp",
     "shortcut": "osa",
-    "multiwords": [
-      {
-        "multiword": "Μέλισσα",
-        "occurrences": [
-          {
-            "theme": "Bee",
-            "reference": "Greek"
-          },
-          {
-            "theme": "Bumblebee",
-            "reference": "Greek"
-          },
-          {
-            "theme": "Wasp",
-            "reference": "Greek"
-          }
-        ]
-      }
-    ],
+    "multiwords": [],
     "translations": {
       "zh_cn": {
         "translation": "黄蜂",
