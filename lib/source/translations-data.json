@@ -2637,8 +2637,8 @@
       },
       "tr": {
         "translation": "Arktik",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:46:46-04:00"
       },
       "uk": {
         "translation": "Арктика",
@@ -8328,8 +8328,22 @@
   {
     "id": 244094,
     "theme": "Bastion",
-    "shortcut": "bastya",
-    "multiwords": [],
+    "shortcut": "kale",
+    "multiwords": [
+      {
+        "multiword": "kale",
+        "occurrences": [
+          {
+            "theme": "Bastion",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Castle",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "堡垒",
@@ -8428,8 +8442,8 @@
       },
       "tr": {
         "translation": "Kale",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:10-04:00"
       },
       "uk": {
         "translation": "Бастіон",
@@ -11590,8 +11604,8 @@
       },
       "tr": {
         "translation": "Dolmalık Biber",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:16-04:00"
       },
       "uk": {
         "translation": "Болгарський перець",
@@ -13345,8 +13359,8 @@
       },
       "tr": {
         "translation": "Kuş Banyosu",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:20-04:00"
       },
       "uk": {
         "translation": "Купальня для птахів",
@@ -13457,9 +13471,9 @@
         "approved_at": "2024-10-02T16:36:51-04:00"
       },
       "es": {
-        "translation": "Jaula de Pájaro",
+        "translation": "Jaula de Pájaros",
         "is_approved": true,
-        "approved_at": "2024-10-02T15:17:04-04:00"
+        "approved_at": "2025-10-17T12:01:36-04:00"
       },
       "sv": {
         "translation": "Bird Cage",
@@ -13467,9 +13481,9 @@
         "approved_at": "2023-09-17T17:07:45-04:00"
       },
       "tr": {
-        "translation": "Bird Cage",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Kuş Kafesi",
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:49-04:00"
       },
       "uk": {
         "translation": "Пташина клітка",
@@ -14404,8 +14418,8 @@
       },
       "tr": {
         "translation": "Bizon",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:51-04:00"
       },
       "uk": {
         "translation": "Зубр",
@@ -15783,7 +15797,7 @@
   {
     "id": 244100,
     "theme": "Blueprint",
-    "shortcut": "schita",
+    "shortcut": "sablon",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -15883,8 +15897,8 @@
       },
       "tr": {
         "translation": "Şablon",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:54-04:00"
       },
       "uk": {
         "translation": "Креслення",
@@ -21838,6 +21852,19 @@
     "shortcut": "bunkr",
     "multiwords": [
       {
+        "multiword": "siginak",
+        "occurrences": [
+          {
+            "theme": "Bunker",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Shelter",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "бункер",
         "occurrences": [
           {
@@ -21954,8 +21981,8 @@
       },
       "tr": {
         "translation": "Sığınak",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:57-04:00"
       },
       "uk": {
         "translation": "Бункер",
@@ -24244,6 +24271,19 @@
     "theme": "Cage",
     "shortcut": "bur",
     "multiwords": [
+      {
+        "multiword": "kafe",
+        "occurrences": [
+          {
+            "theme": "Cage",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Coffee Shop",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "celle",
         "occurrences": [
@@ -29610,6 +29650,19 @@
         ]
       },
       {
+        "multiword": "kale",
+        "occurrences": [
+          {
+            "theme": "Bastion",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Castle",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "slot",
         "occurrences": [
           {
@@ -31358,8 +31411,8 @@
       },
       "tr": {
         "translation": "Mısır Gevreği Kutusu",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:47:58-04:00"
       },
       "uk": {
         "translation": "Коробка злаків",
@@ -39805,6 +39858,19 @@
             "reference": "German"
           }
         ]
+      },
+      {
+        "multiword": "kafe",
+        "occurrences": [
+          {
+            "theme": "Cage",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Coffee Shop",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -39910,8 +39976,8 @@
       },
       "tr": {
         "translation": "Kafe",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:00-04:00"
       },
       "uk": {
         "translation": "Кав'ярня",
@@ -51858,8 +51924,8 @@
       },
       "tr": {
         "translation": "Rıhtım",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:05-04:00"
       },
       "uk": {
         "translation": "Корабельний док",
@@ -67211,8 +67277,8 @@
       },
       "tr": {
         "translation": "Futbol Sahası",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:06-04:00"
       },
       "uk": {
         "translation": "Футбольне поле",
@@ -67328,9 +67394,9 @@
         "approved_at": "2025-02-01T00:48:06-05:00"
       },
       "tr": {
-        "translation": "Amerikan Futbolu Kaskı",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Futbol Kaskı",
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:14-04:00"
       },
       "uk": {
         "translation": "Футбольний шолом",
@@ -70313,8 +70379,8 @@
       },
       "tr": {
         "translation": "Meyveli İçki",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:44-04:00"
       },
       "uk": {
         "translation": "Фруктовий пунш",
@@ -79216,8 +79282,8 @@
       },
       "tr": {
         "translation": "Grifin",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:46-04:00"
       },
       "uk": {
         "translation": "Грифон",
@@ -94044,8 +94110,8 @@
       },
       "tr": {
         "translation": "Hademe",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:48-04:00"
       },
       "uk": {
         "translation": "Прибиральник",
@@ -97169,8 +97235,8 @@
       },
       "tr": {
         "translation": "Yosun",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:49-04:00"
       },
       "uk": {
         "translation": "Ламінарія",
@@ -102034,8 +102100,8 @@
       },
       "tr": {
         "translation": "Bahçe Oyunları",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:44:53-04:00"
       },
       "uk": {
         "translation": "Ігри на дворі",
@@ -113387,8 +113453,8 @@
       },
       "tr": {
         "translation": "Çayır",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:45:00-04:00"
       },
       "uk": {
         "translation": "Луг",
@@ -118429,8 +118495,8 @@
       },
       "tr": {
         "translation": "Güve",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:48:51-04:00"
       },
       "uk": {
         "translation": "Моль",
@@ -122144,9 +122210,9 @@
         "approved_at": "2025-02-01T00:48:34-05:00"
       },
       "tr": {
-        "translation": "Deniz Gergedanı",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Narval",
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:08-04:00"
       },
       "uk": {
         "translation": "Нарвал",
@@ -125974,8 +126040,8 @@
       },
       "tr": {
         "translation": "Orkide",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:10-04:00"
       },
       "uk": {
         "translation": "Орхідея",
@@ -138982,8 +139048,8 @@
       },
       "tr": {
         "translation": "Tesisatçı",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:12-04:00"
       },
       "uk": {
         "translation": "Сантехнік",
@@ -141796,9 +141862,9 @@
         "approved_at": "2019-04-06T19:04:24-04:00"
       },
       "ptbr": {
-        "translation": "Cartaz",
+        "translation": "Pôster",
         "is_approved": true,
-        "approved_at": "2019-07-01T15:39:51-04:00"
+        "approved_at": "2025-10-16T13:40:51-04:00"
       },
       "ro": {
         "translation": "Afiș",
@@ -144658,7 +144724,21 @@
     "id": 240778,
     "theme": "Puffin",
     "shortcut": "lunde",
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "marti",
+        "occurrences": [
+          {
+            "theme": "Puffin",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Seagull",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "海鹦",
@@ -144762,8 +144842,8 @@
       },
       "tr": {
         "translation": "Martı",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:14-04:00"
       },
       "uk": {
         "translation": "Іпатка",
@@ -149841,8 +149921,8 @@
       },
       "tr": {
         "translation": "Kırmızı Panda",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:17-04:00"
       },
       "uk": {
         "translation": "Червона панда",
@@ -155565,8 +155645,8 @@
       },
       "tr": {
         "translation": "Harabeler",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:18-04:00"
       },
       "uk": {
         "translation": "Руїни",
@@ -161548,7 +161628,21 @@
     "id": 215379,
     "theme": "Seagull",
     "shortcut": "mage",
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "marti",
+        "occurrences": [
+          {
+            "theme": "Puffin",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Seagull",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "海鸥",
@@ -165110,6 +165204,19 @@
             "reference": "Portuguese, Brazilian"
           }
         ]
+      },
+      {
+        "multiword": "siginak",
+        "occurrences": [
+          {
+            "theme": "Bunker",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Shelter",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -168041,8 +168148,8 @@
       },
       "tr": {
         "translation": "Orak",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:23-04:00"
       },
       "uk": {
         "translation": "Серп",
@@ -172931,8 +173038,8 @@
       },
       "tr": {
         "translation": "Boğulmak",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:27-04:00"
       },
       "uk": {
         "translation": "Смор",
@@ -178020,8 +178127,8 @@
       },
       "tr": {
         "translation": "Spiral Merdiven",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:28-04:00"
       },
       "uk": {
         "translation": "Гвинтові сходи",
@@ -184359,8 +184466,8 @@
       },
       "tr": {
         "translation": "Stronghold",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:33-04:00"
       },
       "uk": {
         "translation": "Фортеця",
@@ -200349,9 +200456,9 @@
         "approved_at": "2021-05-16T14:29:14-04:00"
       },
       "fr": {
-        "translation": "Gare Ferroviaire",
+        "translation": "Gare ferroviaire",
         "is_approved": true,
-        "approved_at": "2018-03-29T01:44:18-04:00"
+        "approved_at": "2025-10-29T19:09:33-04:00"
       },
       "de": {
         "translation": "Bahnhof",
@@ -202865,8 +202972,8 @@
       },
       "tr": {
         "translation": "Taktikli Atış",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:36-04:00"
       },
       "uk": {
         "translation": "Трюк",
@@ -204218,8 +204325,8 @@
       },
       "tr": {
         "translation": "Tuba",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:38-04:00"
       },
       "uk": {
         "translation": "Туба",
@@ -206878,9 +206985,9 @@
         "approved_at": "2023-09-17T17:07:55-04:00"
       },
       "tr": {
-        "translation": "Upside Down",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Başaşağı",
+        "is_approved": true,
+        "approved_at": "2025-10-17T06:49:46-04:00"
       },
       "uk": {
         "translation": "Догори дриґом",
