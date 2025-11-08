@@ -8,6 +8,8 @@ import { generateAvatarUrls } from "@/lib/avatar";
 
 export function StatsDisplay({ stats }: { stats: any }) {
   const bbStats = stats.stats?.BuildBattle || {};
+  const achievements = stats.achievements || {};
+
   const [avatarUrls, setAvatarUrls] = useState<{
     head: string;
     body: string;
@@ -43,6 +45,13 @@ export function StatsDisplay({ stats }: { stats: any }) {
       return 0;
     return (bbStats.score / bbStats.games_played).toFixed(2);
   }, [bbStats.score, bbStats.games_played]);
+
+  const spbPerfectBuildTimes = achievements.buildbattle_speed_builders_perfectionist || 0;
+
+  const pwValue = useMemo(() => {
+    if (!spbPerfectBuildTimes || spbPerfectBuildTimes === 0) return 0;
+    return (spbPerfectBuildTimes / bbStats.wins_speed_builders).toFixed(2);
+  }, [spbPerfectBuildTimes, bbStats.wins_speed_builders]);
 
   const cwValue = useMemo(() => {
     if (!bbStats.correct_guesses || bbStats.correct_guesses === 0) return 0;
@@ -224,6 +233,14 @@ export function StatsDisplay({ stats }: { stats: any }) {
             <div className="flex justify-between items-center text-sm">
               <span className="text-muted-foreground">Wins</span>
               <span>{bbStats.wins_speed_builders || 0}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-muted-foreground">Perfect Builds</span>
+              <span>{spbPerfectBuildTimes?.toLocaleString() || 0}</span>
+            </div>
+            <div className="flex justify-between items-center text-sm">
+              <span className="text-muted-foreground">P/W</span>
+              <span>{pwValue}</span>
             </div>
           </Card>
         </div>
