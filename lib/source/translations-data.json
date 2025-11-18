@@ -947,7 +947,21 @@
     "id": 212815,
     "theme": "Angel",
     "shortcut": "ange",
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "engel",
+        "occurrences": [
+          {
+            "theme": "Angel",
+            "reference": "Danish / Dutch / German / Norwegian"
+          },
+          {
+            "theme": "Hurdles",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "天使",
@@ -5098,19 +5112,6 @@
         ]
       },
       {
-        "multiword": "bag",
-        "occurrences": [
-          {
-            "theme": "Bag",
-            "reference": "English / Norwegian / Pirate English"
-          },
-          {
-            "theme": "Orchard",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "sac",
         "occurrences": [
           {
@@ -8339,6 +8340,10 @@
           },
           {
             "theme": "Castle",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Fortress",
             "reference": "Turkish"
           }
         ]
@@ -18510,9 +18515,9 @@
         "approved_at": "2017-07-11T12:57:37-04:00"
       },
       "tr": {
-        "translation": "Bovling",
+        "translation": "Bowling",
         "is_approved": true,
-        "approved_at": "2020-08-14T04:55:51-04:00"
+        "approved_at": "2025-11-18T00:31:00-05:00"
       },
       "uk": {
         "translation": "Боулінг",
@@ -18660,9 +18665,9 @@
         "approved_at": "2019-10-03T03:05:20-04:00"
       },
       "tr": {
-        "translation": "Bovling topu",
+        "translation": "Bowling topu",
         "is_approved": true,
-        "approved_at": "2020-08-14T04:55:48-04:00"
+        "approved_at": "2025-11-18T00:30:53-05:00"
       },
       "uk": {
         "translation": "М'яч для боулінгу",
@@ -29633,6 +29638,23 @@
     "shortcut": "burg",
     "multiwords": [
       {
+        "multiword": "kale",
+        "occurrences": [
+          {
+            "theme": "Bastion",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Castle",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Fortress",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "крепость",
         "occurrences": [
           {
@@ -29646,19 +29668,6 @@
           {
             "theme": "Stronghold",
             "reference": "Russian"
-          }
-        ]
-      },
-      {
-        "multiword": "kale",
-        "occurrences": [
-          {
-            "theme": "Bastion",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Castle",
-            "reference": "Turkish"
           }
         ]
       },
@@ -31575,7 +31584,21 @@
     "id": 213897,
     "theme": "Chainsaw",
     "shortcut": "drujba",
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "testere",
+        "occurrences": [
+          {
+            "theme": "Chainsaw",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Saw",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "电锯",
@@ -31683,9 +31706,9 @@
         "approved_at": "2019-10-05T20:13:08-04:00"
       },
       "tr": {
-        "translation": "Elektrikli Testere",
+        "translation": "Testere",
         "is_approved": true,
-        "approved_at": "2020-08-18T16:22:21-04:00"
+        "approved_at": "2025-11-18T00:32:53-05:00"
       },
       "uk": {
         "translation": "Бензопила",
@@ -32646,6 +32669,19 @@
           {
             "theme": "Cooking",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "sef",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Turkish"
           }
         ]
       },
@@ -34020,6 +34056,10 @@
           },
           {
             "theme": "Genie",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Leprechaun",
             "reference": "Turkish"
           }
         ]
@@ -35807,9 +35847,9 @@
         "approved_at": "2020-12-09T11:21:09-05:00"
       },
       "tr": {
-        "translation": "Çember",
+        "translation": "Yuvarlak",
         "is_approved": true,
-        "approved_at": "2021-04-03T16:06:32-04:00"
+        "approved_at": "2025-11-18T00:33:45-05:00"
       },
       "uk": {
         "translation": "Коло",
@@ -40415,9 +40455,9 @@
         "approved_at": "2019-10-04T09:08:24-04:00"
       },
       "tr": {
-        "translation": "Renkli Kurşun Kalem",
+        "translation": "Renkli Kalem",
         "is_approved": true,
-        "approved_at": "2022-05-06T18:48:56-04:00"
+        "approved_at": "2025-11-18T00:34:37-05:00"
       },
       "uk": {
         "translation": "Кольоровий олівець",
@@ -41424,6 +41464,19 @@
             "reference": "Swedish"
           }
         ]
+      },
+      {
+        "multiword": "oyunkumandasi",
+        "occurrences": [
+          {
+            "theme": "Controller",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Games Controller",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -41533,9 +41586,9 @@
         "approved_at": "2019-09-19T11:23:41-04:00"
       },
       "tr": {
-        "translation": "Kumanda",
+        "translation": "Oyun Kumandası",
         "is_approved": true,
-        "approved_at": "2020-08-14T18:39:09-04:00"
+        "approved_at": "2025-11-18T00:35:12-05:00"
       },
       "uk": {
         "translation": "Контролер",
@@ -41730,6 +41783,19 @@
           {
             "theme": "Food",
             "reference": "Danish"
+          }
+        ]
+      },
+      {
+        "multiword": "sef",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Turkish"
           }
         ]
       },
@@ -41971,9 +42037,9 @@
         "approved_at": "2019-10-04T09:08:53-04:00"
       },
       "tr": {
-        "translation": "Pişirmek",
+        "translation": "Şef",
         "is_approved": true,
-        "approved_at": "2022-08-19T08:11:32-04:00"
+        "approved_at": "2025-11-18T00:35:36-05:00"
       },
       "uk": {
         "translation": "Кухар",
@@ -42612,6 +42678,19 @@
             "reference": "Norwegian"
           }
         ]
+      },
+      {
+        "multiword": "misir",
+        "occurrences": [
+          {
+            "theme": "Corn",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Egypt",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -43226,7 +43305,7 @@
           },
           {
             "theme": "Sofa",
-            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Portuguese, Brazilian / Romanian / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Portuguese, Brazilian / Romanian / Spanish / Swedish"
           }
         ]
       },
@@ -44539,9 +44618,9 @@
         "approved_at": "2021-04-02T13:34:59-04:00"
       },
       "tr": {
-        "translation": "Tahta Kasa",
+        "translation": "Sandık",
         "is_approved": true,
-        "approved_at": "2022-08-14T07:16:25-04:00"
+        "approved_at": "2025-11-18T00:37:57-05:00"
       },
       "uk": {
         "translation": "Ящик",
@@ -46378,9 +46457,9 @@
         "approved_at": "2023-08-14T17:25:55-04:00"
       },
       "tr": {
-        "translation": "Cruise Ship",
+        "translation": "Kruz gemisi",
         "is_approved": true,
-        "approved_at": "2020-08-14T06:00:54-04:00"
+        "approved_at": "2025-11-18T00:38:55-05:00"
       },
       "uk": {
         "translation": "Круїзний корабель",
@@ -51219,9 +51298,9 @@
         "approved_at": "2021-04-02T13:53:42-04:00"
       },
       "tr": {
-        "translation": "Bulaşık",
+        "translation": "Yemek",
         "is_approved": true,
-        "approved_at": "2022-08-19T08:12:13-04:00"
+        "approved_at": "2025-11-18T00:39:47-05:00"
       },
       "uk": {
         "translation": "Страва",
@@ -54512,9 +54591,9 @@
         "approved_at": "2021-04-20T18:52:49-04:00"
       },
       "tr": {
-        "translation": "Çizmek",
+        "translation": "Çizim",
         "is_approved": true,
-        "approved_at": "2020-08-18T16:27:16-04:00"
+        "approved_at": "2025-11-18T00:40:28-05:00"
       },
       "uk": {
         "translation": "Рисунок",
@@ -57439,9 +57518,9 @@
         "approved_at": "2021-03-07T09:36:29-05:00"
       },
       "tr": {
-        "translation": "Yumurtalar",
+        "translation": "Yumurta",
         "is_approved": true,
-        "approved_at": "2020-10-01T15:05:01-04:00"
+        "approved_at": "2025-11-18T00:41:02-05:00"
       },
       "uk": {
         "translation": "Яйця",
@@ -57454,7 +57533,21 @@
     "id": 214189,
     "theme": "Egypt",
     "shortcut": null,
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "misir",
+        "occurrences": [
+          {
+            "theme": "Corn",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Egypt",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "埃及",
@@ -57562,9 +57655,9 @@
         "approved_at": "2017-07-11T13:09:43-04:00"
       },
       "tr": {
-        "translation": "Mısır Ülkesi",
+        "translation": "Mısır",
         "is_approved": true,
-        "approved_at": "2020-08-17T14:20:56-04:00"
+        "approved_at": "2025-11-18T00:41:17-05:00"
       },
       "uk": {
         "translation": "Єгипет",
@@ -58359,8 +58452,22 @@
   {
     "id": 214201,
     "theme": "Enchant",
-    "shortcut": "lumou",
-    "multiwords": [],
+    "shortcut": "buyu",
+    "multiwords": [
+      {
+        "multiword": "buyu",
+        "occurrences": [
+          {
+            "theme": "Enchant",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Magic",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "附魔",
@@ -58468,9 +58575,9 @@
         "approved_at": "2023-08-16T04:19:50-04:00"
       },
       "tr": {
-        "translation": "Büyüle",
+        "translation": "Büyü",
         "is_approved": true,
-        "approved_at": "2022-05-21T19:24:20-04:00"
+        "approved_at": "2025-11-18T00:41:32-05:00"
       },
       "uk": {
         "translation": "Чари",
@@ -61851,9 +61958,9 @@
         "approved_at": "2021-03-08T04:15:07-05:00"
       },
       "tr": {
-        "translation": "İri",
+        "translation": "Şişman",
         "is_approved": true,
-        "approved_at": "2020-09-28T16:13:13-04:00"
+        "approved_at": "2025-11-18T00:42:19-05:00"
       },
       "uk": {
         "translation": "Товстун",
@@ -62021,6 +62128,19 @@
     "theme": "Fence",
     "shortcut": "cit",
     "multiwords": [
+      {
+        "multiword": "cit",
+        "occurrences": [
+          {
+            "theme": "Fence",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Hedge",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "hek",
         "occurrences": [
@@ -63397,9 +63517,9 @@
         "approved_at": "2019-10-07T07:41:45-04:00"
       },
       "tr": {
-        "translation": "Yangın Tüpü",
+        "translation": "Yangın Söndürme Tüpü",
         "is_approved": true,
-        "approved_at": "2022-09-22T14:31:40-04:00"
+        "approved_at": "2025-11-18T00:43:00-05:00"
       },
       "uk": {
         "translation": "Вогнегасник",
@@ -63520,9 +63640,9 @@
         "approved_at": "2017-07-14T12:55:57-04:00"
       },
       "tr": {
-        "translation": "Ateş Topu",
+        "translation": "Alev Topu",
         "is_approved": true,
-        "approved_at": "2020-08-17T09:55:41-04:00"
+        "approved_at": "2025-11-18T00:43:06-05:00"
       },
       "uk": {
         "translation": "Вогняна куля",
@@ -63916,9 +64036,9 @@
         "approved_at": "2019-09-19T11:27:59-04:00"
       },
       "tr": {
-        "translation": "Havai Fişekler",
+        "translation": "Havai Fişek",
         "is_approved": true,
-        "approved_at": "2020-08-14T18:31:06-04:00"
+        "approved_at": "2025-11-18T00:43:13-05:00"
       },
       "uk": {
         "translation": "Феєрверки",
@@ -64639,9 +64759,9 @@
         "approved_at": "2019-09-19T11:28:01-04:00"
       },
       "tr": {
-        "translation": "Balık tutma",
+        "translation": "Balık tutmak",
         "is_approved": true,
-        "approved_at": "2020-08-14T18:31:07-04:00"
+        "approved_at": "2025-11-18T00:43:24-05:00"
       },
       "uk": {
         "translation": "Риболовля",
@@ -68006,8 +68126,25 @@
   {
     "id": 214325,
     "theme": "Fortress",
-    "shortcut": null,
+    "shortcut": "kale",
     "multiwords": [
+      {
+        "multiword": "kale",
+        "occurrences": [
+          {
+            "theme": "Bastion",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Castle",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Fortress",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "крепость",
         "occurrences": [
@@ -68211,9 +68348,9 @@
         "approved_at": "2023-08-14T17:25:15-04:00"
       },
       "tr": {
-        "translation": "Fortress",
+        "translation": "Kale",
         "is_approved": true,
-        "approved_at": "2020-09-26T06:02:08-04:00"
+        "approved_at": "2025-11-18T00:44:22-05:00"
       },
       "uk": {
         "translation": "Фортеця",
@@ -69787,6 +69924,19 @@
             "reference": "Portuguese / Portuguese, Brazilian / Spanish"
           }
         ]
+      },
+      {
+        "multiword": "kurbaga",
+        "occurrences": [
+          {
+            "theme": "Frog",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Toad",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -69896,9 +70046,9 @@
         "approved_at": "2023-08-14T17:25:07-04:00"
       },
       "tr": {
-        "translation": "Frog",
+        "translation": "Kurbağa",
         "is_approved": true,
-        "approved_at": "2020-08-23T03:28:26-04:00"
+        "approved_at": "2025-11-18T00:44:41-05:00"
       },
       "uk": {
         "translation": "Жаба",
@@ -70742,9 +70892,9 @@
         "approved_at": "2019-10-07T07:43:15-04:00"
       },
       "tr": {
-        "translation": "Boş laf",
+        "translation": "Şekerleme",
         "is_approved": true,
-        "approved_at": "2023-04-18T16:49:45-04:00"
+        "approved_at": "2025-11-18T00:45:25-05:00"
       },
       "uk": {
         "translation": "Іриска",
@@ -71713,6 +71863,19 @@
           {
             "theme": "Games Controller",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "oyunkumandasi",
+        "occurrences": [
+          {
+            "theme": "Controller",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Games Controller",
+            "reference": "Turkish"
           }
         ]
       }
@@ -73031,6 +73194,23 @@
     "shortcut": "and",
     "multiwords": [
       {
+        "multiword": "cin",
+        "occurrences": [
+          {
+            "theme": "China",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Genie",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Leprechaun",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "精灵",
         "occurrences": [
           {
@@ -73044,19 +73224,6 @@
           {
             "theme": "Leprechaun",
             "reference": "Chinese Simplified"
-          }
-        ]
-      },
-      {
-        "multiword": "cin",
-        "occurrences": [
-          {
-            "theme": "China",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Genie",
-            "reference": "Turkish"
           }
         ]
       },
@@ -73668,6 +73835,19 @@
         ]
       },
       {
+        "multiword": "hediye",
+        "occurrences": [
+          {
+            "theme": "Gift",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Present",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "regalo",
         "occurrences": [
           {
@@ -73689,7 +73869,7 @@
           },
           {
             "theme": "Present",
-            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish"
           }
         ]
       },
@@ -77596,9 +77776,9 @@
         "approved_at": "2023-08-16T04:20:08-04:00"
       },
       "tr": {
-        "translation": "Golf Sopası",
+        "translation": "Golf Klübü",
         "is_approved": true,
-        "approved_at": "2022-04-25T17:29:13-04:00"
+        "approved_at": "2025-11-18T00:46:45-05:00"
       },
       "uk": {
         "translation": "Ключка для гольфа",
@@ -77719,9 +77899,9 @@
         "approved_at": "2019-10-07T14:50:58-04:00"
       },
       "tr": {
-        "translation": "Golf Sahası",
+        "translation": "Golf Kursu",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:05:16-05:00"
+        "approved_at": "2025-11-18T00:46:51-05:00"
       },
       "uk": {
         "translation": "Поле для гольфа",
@@ -77870,7 +78050,7 @@
   {
     "id": 214433,
     "theme": "Gorilla",
-    "shortcut": "goryl",
+    "shortcut": "goril",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -77979,9 +78159,9 @@
         "approved_at": "2021-03-19T20:55:17-04:00"
       },
       "tr": {
-        "translation": "Gorilla",
+        "translation": "Goril",
         "is_approved": true,
-        "approved_at": "2020-08-23T03:28:21-04:00"
+        "approved_at": "2025-11-18T00:46:56-05:00"
       },
       "uk": {
         "translation": "Горила ",
@@ -78362,9 +78542,9 @@
         "approved_at": "2021-06-08T10:07:41-04:00"
       },
       "tr": {
-        "translation": "Çengelli Kanca",
+        "translation": "Filika Demiri",
         "is_approved": true,
-        "approved_at": "2022-04-10T21:40:50-04:00"
+        "approved_at": "2025-11-18T00:47:30-05:00"
       },
       "uk": {
         "translation": "Абордажний гак",
@@ -80176,9 +80356,9 @@
         "approved_at": "2022-06-24T11:05:54-04:00"
       },
       "tr": {
-        "translation": "Gumball",
+        "translation": "Sakız Topu",
         "is_approved": true,
-        "approved_at": "2021-09-29T17:25:16-04:00"
+        "approved_at": "2025-11-18T00:48:17-05:00"
       },
       "uk": {
         "translation": "Жуйка",
@@ -82704,9 +82884,9 @@
         "approved_at": "2023-01-29T05:02:11-05:00"
       },
       "tr": {
-        "translation": "Deltakanat ile uçuş",
+        "translation": "Yelken Kanat",
         "is_approved": true,
-        "approved_at": "2024-03-09T04:58:42-05:00"
+        "approved_at": "2025-11-18T00:48:59-05:00"
       },
       "uk": {
         "translation": "Дельтаплан",
@@ -84545,8 +84725,21 @@
   {
     "id": 214505,
     "theme": "Hedge",
-    "shortcut": "haag",
+    "shortcut": "cit",
     "multiwords": [
+      {
+        "multiword": "cit",
+        "occurrences": [
+          {
+            "theme": "Fence",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Hedge",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "haie",
         "occurrences": [
@@ -84694,9 +84887,9 @@
         "approved_at": "2019-10-07T07:49:36-04:00"
       },
       "tr": {
-        "translation": "Çalılı Çit",
+        "translation": "Çit",
         "is_approved": true,
-        "approved_at": "2023-04-18T16:54:32-04:00"
+        "approved_at": "2025-11-18T00:49:51-05:00"
       },
       "uk": {
         "translation": "Живопліт",
@@ -85819,9 +86012,9 @@
         "approved_at": "2023-08-14T17:24:41-04:00"
       },
       "tr": {
-        "translation": "Hide and Seek",
+        "translation": "Saklambaç",
         "is_approved": true,
-        "approved_at": "2020-08-20T05:46:43-04:00"
+        "approved_at": "2025-11-18T00:50:11-05:00"
       },
       "uk": {
         "translation": "Хованки",
@@ -87321,9 +87514,9 @@
         "approved_at": "2019-10-07T07:51:26-04:00"
       },
       "tr": {
-        "translation": "Holiday Lights",
+        "translation": "Yılbaşı Işıkları",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:50:12-04:00"
+        "approved_at": "2025-11-18T00:50:38-05:00"
       },
       "uk": {
         "translation": "Святкові вогні",
@@ -87458,7 +87651,7 @@
   {
     "id": 214545,
     "theme": "Homework",
-    "shortcut": "teme",
+    "shortcut": "odev",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -87567,9 +87760,9 @@
         "approved_at": "2019-09-19T11:34:09-04:00"
       },
       "tr": {
-        "translation": "Ev ödevi",
+        "translation": "Ödev",
         "is_approved": true,
-        "approved_at": "2020-08-17T12:45:22-04:00"
+        "approved_at": "2025-11-18T00:50:48-05:00"
       },
       "uk": {
         "translation": "Домашня робота",
@@ -88180,9 +88373,9 @@
         "approved_at": "2019-09-19T11:34:11-04:00"
       },
       "tr": {
-        "translation": "Boynuz",
+        "translation": "Korna",
         "is_approved": true,
-        "approved_at": "2020-08-17T12:45:42-04:00"
+        "approved_at": "2025-11-18T00:51:02-05:00"
       },
       "uk": {
         "translation": "Ріг",
@@ -88946,9 +89139,9 @@
         "approved_at": "2021-06-16T10:12:47-04:00"
       },
       "tr": {
-        "translation": "Sosisli Sandviç",
+        "translation": "Sosisli",
         "is_approved": true,
-        "approved_at": "2021-07-02T18:14:01-04:00"
+        "approved_at": "2025-11-18T00:51:12-05:00"
       },
       "uk": {
         "translation": "Хотдог",
@@ -89907,6 +90100,19 @@
             "reference": "Norwegian"
           }
         ]
+      },
+      {
+        "multiword": "engel",
+        "occurrences": [
+          {
+            "theme": "Angel",
+            "reference": "Danish / Dutch / German / Norwegian"
+          },
+          {
+            "theme": "Hurdles",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -90016,9 +90222,9 @@
         "approved_at": "2019-10-07T14:36:39-04:00"
       },
       "tr": {
-        "translation": "Engelli Koşusu",
+        "translation": "Engel",
         "is_approved": true,
-        "approved_at": "2023-07-06T10:36:12-04:00"
+        "approved_at": "2025-11-18T00:51:28-05:00"
       },
       "uk": {
         "translation": "Біг з перешкодами",
@@ -91462,9 +91668,9 @@
         "approved_at": "2024-11-11T12:44:51-05:00"
       },
       "tr": {
-        "translation": "Dondurma Kamyonu",
+        "translation": "Dondurma Arabası",
         "is_approved": true,
-        "approved_at": "2025-10-10T19:51:46-04:00"
+        "approved_at": "2025-11-17T14:00:23-05:00"
       },
       "uk": {
         "translation": "Вантажівка з морозивом",
@@ -91912,9 +92118,9 @@
         "approved_at": "2019-10-07T14:37:11-04:00"
       },
       "tr": {
-        "translation": "Buz Sarkıtı",
+        "translation": "Sivri Buz",
         "is_approved": true,
-        "approved_at": "2023-08-08T12:26:18-04:00"
+        "approved_at": "2025-11-18T00:52:03-05:00"
       },
       "uk": {
         "translation": "Крижаний шип",
@@ -92594,9 +92800,9 @@
         "approved_at": "2023-09-17T17:07:41-04:00"
       },
       "tr": {
-        "translation": "İlizyon",
+        "translation": "İllüzyon",
         "is_approved": true,
-        "approved_at": "2025-06-21T08:06:41-04:00"
+        "approved_at": "2025-11-18T00:26:44-05:00"
       },
       "uk": {
         "translation": "Ілюзія",
@@ -94808,9 +95014,9 @@
         "approved_at": "2019-10-07T14:39:20-04:00"
       },
       "tr": {
-        "translation": "Fasulye Şeklinde Jelibon",
+        "translation": "Fasulye Jelibon",
         "is_approved": true,
-        "approved_at": "2023-08-05T12:04:35-04:00"
+        "approved_at": "2025-11-18T00:52:45-05:00"
       },
       "uk": {
         "translation": "Желейні боби",
@@ -96237,9 +96443,9 @@
         "approved_at": "2019-10-08T03:38:49-04:00"
       },
       "tr": {
-        "translation": "İp Atlama",
+        "translation": "Atlama İpi",
         "is_approved": true,
-        "approved_at": "2023-08-05T12:05:40-04:00"
+        "approved_at": "2025-11-18T00:53:32-05:00"
       },
       "uk": {
         "translation": "Скакалка",
@@ -97410,6 +97616,19 @@
           {
             "theme": "Tomato Ketchup",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "ketcap",
+        "occurrences": [
+          {
+            "theme": "Ketchup",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Tomato Ketchup",
+            "reference": "Turkish"
           }
         ]
       },
@@ -103733,8 +103952,25 @@
   {
     "id": 214729,
     "theme": "Leprechaun",
-    "shortcut": "duende",
+    "shortcut": "cin",
     "multiwords": [
+      {
+        "multiword": "cin",
+        "occurrences": [
+          {
+            "theme": "China",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Genie",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Leprechaun",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "精灵",
         "occurrences": [
@@ -103886,9 +104122,9 @@
         "approved_at": "2022-05-16T05:24:36-04:00"
       },
       "tr": {
-        "translation": "Leprechaun",
+        "translation": "Cin",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:51:58-04:00"
+        "approved_at": "2025-11-18T00:55:06-05:00"
       },
       "uk": {
         "translation": "Лепрекон",
@@ -105770,9 +106006,9 @@
         "approved_at": "2023-08-14T17:24:33-04:00"
       },
       "tr": {
-        "translation": "Açık Yeşil",
+        "translation": "Misket Limon\n",
         "is_approved": true,
-        "approved_at": "2020-10-02T11:59:36-04:00"
+        "approved_at": "2025-11-18T00:55:31-05:00"
       },
       "uk": {
         "translation": "Лаймовий",
@@ -108597,9 +108833,9 @@
         "approved_at": "2022-08-15T12:54:07-04:00"
       },
       "tr": {
-        "translation": "Lucky Block",
+        "translation": "Şans Bloğu",
         "is_approved": true,
-        "approved_at": "2022-08-19T12:40:59-04:00"
+        "approved_at": "2025-11-17T13:23:08-05:00"
       },
       "uk": {
         "translation": "Щасливий блок",
@@ -109436,6 +109672,19 @@
     "theme": "Magic",
     "shortcut": "buyu",
     "multiwords": [
+      {
+        "multiword": "buyu",
+        "occurrences": [
+          {
+            "theme": "Enchant",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Magic",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "magico",
         "occurrences": [
@@ -111680,9 +111929,9 @@
         "approved_at": "2019-09-19T11:35:16-04:00"
       },
       "tr": {
-        "translation": "Konak",
+        "translation": "Malikane",
         "is_approved": true,
-        "approved_at": "2020-08-17T14:27:59-04:00"
+        "approved_at": "2025-11-18T00:56:45-05:00"
       },
       "uk": {
         "translation": "Особняк",
@@ -112130,9 +112379,9 @@
         "approved_at": "2019-10-07T14:45:09-04:00"
       },
       "tr": {
-        "translation": "İşaretleyici",
+        "translation": "İşaretleme Kalemi",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:07:19-05:00"
+        "approved_at": "2025-11-18T00:57:09-05:00"
       },
       "uk": {
         "translation": "Маркер",
@@ -113052,9 +113301,9 @@
         "approved_at": "2019-10-07T14:45:32-04:00"
       },
       "tr": {
-        "translation": "Minder",
+        "translation": "Yatak",
         "is_approved": true,
-        "approved_at": "2023-07-06T10:42:13-04:00"
+        "approved_at": "2025-11-18T00:57:28-05:00"
       },
       "uk": {
         "translation": "Матрац",
@@ -116000,7 +116249,7 @@
   {
     "id": 240764,
     "theme": "Minotaur",
-    "shortcut": "minotor",
+    "shortcut": null,
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -116109,9 +116358,9 @@
         "approved_at": "2019-09-19T11:37:39-04:00"
       },
       "tr": {
-        "translation": "Minotor",
+        "translation": "İnsan Başlı Boğa",
         "is_approved": true,
-        "approved_at": "2020-08-20T05:50:55-04:00"
+        "approved_at": "2025-11-18T00:58:25-05:00"
       },
       "uk": {
         "translation": "Мінотавр",
@@ -117114,7 +117363,7 @@
           },
           {
             "theme": "Walrus",
-            "reference": "Polish"
+            "reference": "Polish / Turkish"
           }
         ]
       }
@@ -121657,7 +121906,7 @@
   {
     "id": 214927,
     "theme": "Nail polish",
-    "shortcut": "esmalte",
+    "shortcut": "oje",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -121766,9 +122015,9 @@
         "approved_at": "2019-10-09T06:01:03-04:00"
       },
       "tr": {
-        "translation": "Tırnak cilası",
+        "translation": "Oje",
         "is_approved": true,
-        "approved_at": "2023-07-06T10:42:42-04:00"
+        "approved_at": "2025-11-18T01:00:06-05:00"
       },
       "uk": {
         "translation": "Лак для нігтів",
@@ -122210,9 +122459,9 @@
         "approved_at": "2025-02-01T00:48:34-05:00"
       },
       "tr": {
-        "translation": "Narval",
+        "translation": "Deniz Gergedanı",
         "is_approved": true,
-        "approved_at": "2025-10-17T06:49:08-04:00"
+        "approved_at": "2025-11-18T01:02:26-05:00"
       },
       "uk": {
         "translation": "Нарвал",
@@ -122513,19 +122762,6 @@
         ]
       },
       {
-        "multiword": "igne",
-        "occurrences": [
-          {
-            "theme": "Needle",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Pin",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "nadel",
         "occurrences": [
           {
@@ -122659,9 +122895,9 @@
         "approved_at": "2019-10-09T06:01:20-04:00"
       },
       "tr": {
-        "translation": "İğne",
+        "translation": "Toplu İğne",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:08:39-05:00"
+        "approved_at": "2025-11-18T01:02:54-05:00"
       },
       "uk": {
         "translation": "Голка",
@@ -123761,9 +123997,9 @@
         "approved_at": "2019-10-09T06:01:40-04:00"
       },
       "tr": {
-        "translation": "Nutcracker",
+        "translation": "Fındıkkıran",
         "is_approved": true,
-        "approved_at": "2022-01-02T03:06:00-05:00"
+        "approved_at": "2025-11-18T01:03:13-05:00"
       },
       "uk": {
         "translation": "Nutcracker",
@@ -123776,25 +124012,7 @@
     "id": 214951,
     "theme": "Oar",
     "shortcut": null,
-    "multiwords": [
-      {
-        "multiword": "kurek",
-        "occurrences": [
-          {
-            "theme": "Oar",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Shovel",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Spade",
-            "reference": "Turkish"
-          }
-        ]
-      }
-    ],
+    "multiwords": [],
     "translations": {
       "zh_cn": {
         "translation": "船桨",
@@ -123902,9 +124120,9 @@
         "approved_at": "2019-10-09T06:01:43-04:00"
       },
       "tr": {
-        "translation": "Kürek",
+        "translation": "Kayık Küreği",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:08:46-05:00"
+        "approved_at": "2025-11-18T01:03:52-05:00"
       },
       "uk": {
         "translation": "Весло",
@@ -125303,7 +125521,7 @@
           },
           {
             "theme": "Pyjamas",
-            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+            "reference": "Portuguese / Portuguese, Brazilian / Spanish / Turkish"
           }
         ]
       }
@@ -125415,9 +125633,9 @@
         "approved_at": "2022-05-16T08:26:51-04:00"
       },
       "tr": {
-        "translation": "Bebek Tulumu",
+        "translation": "Kostüm",
         "is_approved": true,
-        "approved_at": "2023-04-09T15:45:52-04:00"
+        "approved_at": "2025-11-18T01:04:38-05:00"
       },
       "uk": {
         "translation": "Комбінезон",
@@ -125661,9 +125879,9 @@
         "approved_at": "2021-03-07T10:02:41-05:00"
       },
       "tr": {
-        "translation": "Turuncu",
+        "translation": "Portakal",
         "is_approved": true,
-        "approved_at": "2020-08-16T13:14:49-04:00"
+        "approved_at": "2025-11-18T00:27:06-05:00"
       },
       "uk": {
         "translation": "Апельсин",
@@ -125798,22 +126016,8 @@
   {
     "id": 214975,
     "theme": "Orchard",
-    "shortcut": "bag",
-    "multiwords": [
-      {
-        "multiword": "bag",
-        "occurrences": [
-          {
-            "theme": "Bag",
-            "reference": "English / Norwegian / Pirate English"
-          },
-          {
-            "theme": "Orchard",
-            "reference": "Turkish"
-          }
-        ]
-      }
-    ],
+    "shortcut": "sad",
+    "multiwords": [],
     "translations": {
       "zh_cn": {
         "translation": "果园",
@@ -125921,9 +126125,9 @@
         "approved_at": "2019-10-09T05:52:06-04:00"
       },
       "tr": {
-        "translation": "Bağ",
+        "translation": "Meyve bahçesi",
         "is_approved": true,
-        "approved_at": "2023-04-09T15:46:05-04:00"
+        "approved_at": "2025-11-18T01:05:10-05:00"
       },
       "uk": {
         "translation": "Фруктовий сад",
@@ -126176,8 +126380,22 @@
   {
     "id": 214979,
     "theme": "Ornament",
-    "shortcut": "disz",
-    "multiwords": [],
+    "shortcut": "sus",
+    "multiwords": [
+      {
+        "multiword": "sus",
+        "occurrences": [
+          {
+            "theme": "Ornament",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Water",
+            "reference": "Turkish"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "装饰",
@@ -126285,9 +126503,9 @@
         "approved_at": "2019-10-09T05:52:22-04:00"
       },
       "tr": {
-        "translation": "Süsleme",
+        "translation": "Süs",
         "is_approved": true,
-        "approved_at": "2023-04-09T15:46:31-04:00"
+        "approved_at": "2025-11-18T01:05:18-05:00"
       },
       "uk": {
         "translation": "Орнамент",
@@ -128694,7 +128912,7 @@
   {
     "id": 215005,
     "theme": "Pancake",
-    "shortcut": "krep",
+    "shortcut": "crepe",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -128803,9 +129021,9 @@
         "approved_at": "2019-09-19T11:38:59-04:00"
       },
       "tr": {
-        "translation": "Krep",
+        "translation": "Pankek",
         "is_approved": true,
-        "approved_at": "2020-08-17T14:30:34-04:00"
+        "approved_at": "2025-11-18T01:06:14-05:00"
       },
       "uk": {
         "translation": "Млинець",
@@ -130332,9 +130550,9 @@
         "approved_at": "2019-10-09T06:02:56-04:00"
       },
       "tr": {
-        "translation": "Patika yol",
+        "translation": "Patika",
         "is_approved": true,
-        "approved_at": "2023-08-08T12:26:34-04:00"
+        "approved_at": "2025-11-18T01:06:49-05:00"
       },
       "uk": {
         "translation": "Стежка",
@@ -130910,9 +131128,9 @@
     "multiwords": [],
     "translations": {
       "zh_cn": {
-        "translation": "桃红色",
+        "translation": "桃子",
         "is_approved": true,
-        "approved_at": "2022-10-12T14:02:04-04:00"
+        "approved_at": "2025-11-16T09:47:50-05:00"
       },
       "zh_tw": {
         "translation": "桃紅色",
@@ -132845,9 +133063,9 @@
         "approved_at": "2024-11-11T12:45:05-05:00"
       },
       "tr": {
-        "translation": "Evcil Hayvan Mağazası",
+        "translation": "Evcil Hayvan Dükkânı",
         "is_approved": true,
-        "approved_at": "2025-06-21T08:08:48-04:00"
+        "approved_at": "2025-11-18T01:07:27-05:00"
       },
       "uk": {
         "translation": "Зоомагазин",
@@ -133337,9 +133555,9 @@
         "approved_at": "2019-10-09T06:03:32-04:00"
       },
       "tr": {
-        "translation": "Telefon şarj aleti",
+        "translation": "Telefon Şarj Cihazı",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:57:25-04:00"
+        "approved_at": "2025-11-18T01:07:42-05:00"
       },
       "uk": {
         "translation": "Зарядка до телефона",
@@ -136224,19 +136442,6 @@
           {
             "theme": "Pine Tree",
             "reference": "French / Romanian"
-          }
-        ]
-      },
-      {
-        "multiword": "igne",
-        "occurrences": [
-          {
-            "theme": "Needle",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Pin",
-            "reference": "Turkish"
           }
         ]
       },
@@ -139842,7 +140047,7 @@
           },
           {
             "theme": "Police Officer",
-            "reference": "Swedish"
+            "reference": "Swedish / Turkish"
           }
         ]
       },
@@ -140128,7 +140333,7 @@
           },
           {
             "theme": "Police Officer",
-            "reference": "Swedish"
+            "reference": "Swedish / Turkish"
           }
         ]
       },
@@ -140253,9 +140458,9 @@
         "approved_at": "2019-10-09T06:07:16-04:00"
       },
       "tr": {
-        "translation": "Polis Memuru",
+        "translation": "Polis",
         "is_approved": true,
-        "approved_at": "2022-05-16T17:13:35-04:00"
+        "approved_at": "2025-11-18T01:08:42-05:00"
       },
       "uk": {
         "translation": "Поліціянт",
@@ -141298,9 +141503,9 @@
         "approved_at": "2022-05-16T08:44:48-04:00"
       },
       "tr": {
-        "translation": "Buzlu Şeker",
+        "translation": "Meybuz",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:09:56-05:00"
+        "approved_at": "2025-11-18T01:09:21-05:00"
       },
       "uk": {
         "translation": "Фруктове морозиво",
@@ -142717,6 +142922,19 @@
         ]
       },
       {
+        "multiword": "hediye",
+        "occurrences": [
+          {
+            "theme": "Gift",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Present",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "regalo",
         "occurrences": [
           {
@@ -142738,7 +142956,7 @@
           },
           {
             "theme": "Present",
-            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish"
           }
         ]
       },
@@ -142941,9 +143159,9 @@
         "approved_at": "2019-10-09T06:17:14-04:00"
       },
       "tr": {
-        "translation": "Present",
+        "translation": "Hediye",
         "is_approved": true,
-        "approved_at": "2021-12-14T15:58:57-05:00"
+        "approved_at": "2025-11-18T01:10:11-05:00"
       },
       "uk": {
         "translation": "Подарунок",
@@ -144080,9 +144298,9 @@
         "approved_at": "2019-10-09T07:00:02-04:00"
       },
       "tr": {
-        "translation": "Hapishane hücresi",
+        "translation": "Hapis Hücresi",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:58:06-04:00"
+        "approved_at": "2025-11-18T01:10:43-05:00"
       },
       "uk": {
         "translation": "Тюремна камера",
@@ -145264,9 +145482,9 @@
         "approved_at": "2019-10-09T07:00:18-04:00"
       },
       "tr": {
-        "translation": "Köpek yavrusu",
+        "translation": "Yavru Köpek",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:10:43-05:00"
+        "approved_at": "2025-11-18T01:11:00-05:00"
       },
       "uk": {
         "translation": "Цуценя",
@@ -146163,7 +146381,7 @@
           },
           {
             "theme": "Pyjamas",
-            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+            "reference": "Portuguese / Portuguese, Brazilian / Spanish / Turkish"
           }
         ]
       }
@@ -146275,9 +146493,9 @@
         "approved_at": "2019-10-09T07:00:49-04:00"
       },
       "tr": {
-        "translation": "Pijamalar",
+        "translation": "Pijama",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:58:30-04:00"
+        "approved_at": "2025-11-18T01:11:09-05:00"
       },
       "uk": {
         "translation": "Піжама",
@@ -146521,9 +146739,9 @@
         "approved_at": "2019-10-09T07:00:53-04:00"
       },
       "tr": {
-        "translation": "Dört Tekerli ATV",
+        "translation": "Dört Tekerli Bisiklet",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:10:49-05:00"
+        "approved_at": "2025-11-18T01:11:19-05:00"
       },
       "uk": {
         "translation": "Квадроцикл",
@@ -149179,7 +149397,7 @@
   {
     "id": 215237,
     "theme": "Ravine",
-    "shortcut": "gecit",
+    "shortcut": "vadi",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -149288,9 +149506,9 @@
         "approved_at": "2019-10-09T07:01:42-04:00"
       },
       "tr": {
-        "translation": "Geçit",
+        "translation": "Vadi",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:11:08-05:00"
+        "approved_at": "2025-11-18T01:12:07-05:00"
       },
       "uk": {
         "translation": "Яр",
@@ -149425,9 +149643,9 @@
         "approved_at": "2019-10-09T07:01:44-04:00"
       },
       "tr": {
-        "translation": "Okumak",
+        "translation": "Okuma",
         "is_approved": true,
-        "approved_at": "2023-08-08T12:27:13-04:00"
+        "approved_at": "2025-11-18T01:12:11-05:00"
       },
       "uk": {
         "translation": "Читання",
@@ -150180,9 +150398,9 @@
         "approved_at": "2021-03-28T18:37:46-04:00"
       },
       "tr": {
-        "translation": "Reef",
+        "translation": "Resif",
         "is_approved": true,
-        "approved_at": "2020-09-26T06:02:23-04:00"
+        "approved_at": "2025-11-18T01:12:33-05:00"
       },
       "uk": {
         "translation": "Риф",
@@ -150706,9 +150924,9 @@
         "approved_at": "2019-10-09T07:02:29-04:00"
       },
       "tr": {
-        "translation": "Uzaktan kumanda",
+        "translation": "Kumanda",
         "is_approved": true,
-        "approved_at": "2023-08-08T12:27:15-04:00"
+        "approved_at": "2025-11-18T01:12:42-05:00"
       },
       "uk": {
         "translation": "Пульт",
@@ -152790,6 +153008,19 @@
         ]
       },
       {
+        "multiword": "roket",
+        "occurrences": [
+          {
+            "theme": "Rocket",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Rocket Ship",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "raketa",
         "occurrences": [
           {
@@ -153039,6 +153270,19 @@
         ]
       },
       {
+        "multiword": "roket",
+        "occurrences": [
+          {
+            "theme": "Rocket",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Rocket Ship",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "rakett",
         "occurrences": [
           {
@@ -153211,9 +153455,9 @@
         "approved_at": "2019-10-09T06:09:21-04:00"
       },
       "tr": {
-        "translation": "Roket Gemisi",
+        "translation": "Roket",
         "is_approved": true,
-        "approved_at": "2023-08-05T12:18:55-04:00"
+        "approved_at": "2025-11-18T01:13:21-05:00"
       },
       "uk": {
         "translation": "Ракета",
@@ -153348,7 +153592,7 @@
   {
     "id": 215277,
     "theme": "Roller Blades",
-    "shortcut": "patin",
+    "shortcut": "paten",
     "multiwords": [
       {
         "multiword": "patine",
@@ -153471,9 +153715,9 @@
         "approved_at": "2019-10-09T06:09:24-04:00"
       },
       "tr": {
-        "translation": "Patenler",
+        "translation": "Paten",
         "is_approved": true,
-        "approved_at": "2023-08-08T12:27:36-04:00"
+        "approved_at": "2025-11-18T01:13:36-05:00"
       },
       "uk": {
         "translation": "Роликові ковзани",
@@ -154342,7 +154586,7 @@
   {
     "id": 215293,
     "theme": "Rubber Band",
-    "shortcut": "elastik",
+    "shortcut": "lastik",
     "multiwords": [
       {
         "multiword": "гумка",
@@ -154358,6 +154602,19 @@
           {
             "theme": "Rubber Band",
             "reference": "Ukrainian"
+          }
+        ]
+      },
+      {
+        "multiword": "lastik",
+        "occurrences": [
+          {
+            "theme": "Rubber Band",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Tyre",
+            "reference": "Turkish"
           }
         ]
       }
@@ -154469,9 +154726,9 @@
         "approved_at": "2019-10-09T06:09:39-04:00"
       },
       "tr": {
-        "translation": "Lastik bant",
+        "translation": "Lastik",
         "is_approved": true,
-        "approved_at": "2022-06-26T17:46:01-04:00"
+        "approved_at": "2025-11-18T01:13:55-05:00"
       },
       "uk": {
         "translation": "Гумка",
@@ -156472,6 +156729,19 @@
         ]
       },
       {
+        "multiword": "kasa",
+        "occurrences": [
+          {
+            "theme": "Safe",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Vault",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "klui",
         "occurrences": [
           {
@@ -156592,9 +156862,9 @@
         "approved_at": "2021-03-07T09:44:53-05:00"
       },
       "tr": {
-        "translation": "Güvende",
+        "translation": "Kasa",
         "is_approved": true,
-        "approved_at": "2022-03-25T17:47:13-04:00"
+        "approved_at": "2025-11-18T01:14:20-05:00"
       },
       "uk": {
         "translation": "Сейф",
@@ -157978,9 +158248,9 @@
         "approved_at": "2023-08-14T17:23:22-04:00"
       },
       "tr": {
-        "translation": "Sandbox",
+        "translation": "Kum Havuzu",
         "is_approved": true,
-        "approved_at": "2020-09-26T06:02:24-04:00"
+        "approved_at": "2025-11-18T01:14:56-05:00"
       },
       "uk": {
         "translation": "Пісочниця",
@@ -158919,7 +159189,7 @@
   {
     "id": 244162,
     "theme": "Savanna",
-    "shortcut": "sabana",
+    "shortcut": "savan",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -159028,9 +159298,9 @@
         "approved_at": "2018-01-28T06:44:20-05:00"
       },
       "tr": {
-        "translation": "Savanna",
+        "translation": "Savan",
         "is_approved": true,
-        "approved_at": "2022-03-25T18:17:13-04:00"
+        "approved_at": "2025-11-18T01:15:21-05:00"
       },
       "uk": {
         "translation": "Савана",
@@ -159067,6 +159337,19 @@
           {
             "theme": "Saw",
             "reference": "Portuguese, Brazilian"
+          }
+        ]
+      },
+      {
+        "multiword": "testere",
+        "occurrences": [
+          {
+            "theme": "Chainsaw",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Saw",
+            "reference": "Turkish"
           }
         ]
       }
@@ -161613,9 +161896,9 @@
         "approved_at": "2019-10-10T16:43:23-04:00"
       },
       "tr": {
-        "translation": "Deniz ürünleri",
+        "translation": "Deniz Ürünü",
         "is_approved": true,
-        "approved_at": "2023-07-19T10:12:49-04:00"
+        "approved_at": "2025-11-18T01:15:57-05:00"
       },
       "uk": {
         "translation": "Морепродукти",
@@ -162096,6 +162379,19 @@
           {
             "theme": "Seat",
             "reference": "Dutch"
+          }
+        ]
+      },
+      {
+        "multiword": "koltuk",
+        "occurrences": [
+          {
+            "theme": "Seat",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Sofa",
+            "reference": "Turkish"
           }
         ]
       },
@@ -166336,6 +166632,19 @@
         ]
       },
       {
+        "multiword": "magaza",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "obchod",
         "occurrences": [
           {
@@ -166892,7 +167201,7 @@
   {
     "id": 215435,
     "theme": "Short",
-    "shortcut": "kisa",
+    "shortcut": "kort",
     "multiwords": [
       {
         "multiword": "kort",
@@ -166904,6 +167213,19 @@
           {
             "theme": "Short",
             "reference": "Danish / Norwegian / Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "sort",
+        "occurrences": [
+          {
+            "theme": "Short",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Shorts",
+            "reference": "Romanian / Turkish"
           }
         ]
       },
@@ -167106,9 +167428,9 @@
         "approved_at": "2019-10-10T16:45:18-04:00"
       },
       "tr": {
-        "translation": "Kısa",
+        "translation": "Şort",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:11:59-05:00"
+        "approved_at": "2025-11-18T01:17:32-05:00"
       },
       "uk": {
         "translation": "Короткий",
@@ -167122,6 +167444,19 @@
     "theme": "Shorts",
     "shortcut": "sort",
     "multiwords": [
+      {
+        "multiword": "sort",
+        "occurrences": [
+          {
+            "theme": "Short",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Shorts",
+            "reference": "Romanian / Turkish"
+          }
+        ]
+      },
       {
         "multiword": "short",
         "occurrences": [
@@ -167503,23 +167838,6 @@
         ]
       },
       {
-        "multiword": "kurek",
-        "occurrences": [
-          {
-            "theme": "Oar",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Shovel",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Spade",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "pelle",
         "occurrences": [
           {
@@ -167546,6 +167864,19 @@
           {
             "theme": "Spade",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "kurek",
+        "occurrences": [
+          {
+            "theme": "Shovel",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Spade",
+            "reference": "Turkish"
           }
         ]
       },
@@ -167872,7 +168203,7 @@
   {
     "id": 244166,
     "theme": "Shuriken",
-    "shortcut": "suriken",
+    "shortcut": null,
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -167981,9 +168312,9 @@
         "approved_at": "2023-01-29T04:32:42-05:00"
       },
       "tr": {
-        "translation": "Şuriken",
+        "translation": "Ninja Yıldızı",
         "is_approved": true,
-        "approved_at": "2023-02-03T07:41:52-05:00"
+        "approved_at": "2025-11-18T01:17:57-05:00"
       },
       "uk": {
         "translation": "Шюрікен",
@@ -169252,9 +169583,9 @@
         "approved_at": "2019-09-19T11:35:54-04:00"
       },
       "tr": {
-        "translation": "Kaykay Sürmek",
+        "translation": "Kaykay Kaymak",
         "is_approved": true,
-        "approved_at": "2020-08-17T14:14:23-04:00"
+        "approved_at": "2025-11-18T01:18:50-05:00"
       },
       "uk": {
         "translation": "Скейтбординг",
@@ -171247,9 +171578,9 @@
         "approved_at": "2019-10-09T06:12:33-04:00"
       },
       "tr": {
-        "translation": "Kaydırmak",
+        "translation": "Kaydırak",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:13:11-05:00"
+        "approved_at": "2025-11-18T01:19:12-05:00"
       },
       "uk": {
         "translation": "Гірка",
@@ -171534,9 +171865,9 @@
         "approved_at": "2019-10-09T06:12:34-04:00"
       },
       "tr": {
-        "translation": "Terlikler",
+        "translation": "Terlik",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:13:15-05:00"
+        "approved_at": "2025-11-18T01:19:17-05:00"
       },
       "uk": {
         "translation": "Капці",
@@ -173037,9 +173368,9 @@
         "approved_at": "2024-10-13T18:55:51-04:00"
       },
       "tr": {
-        "translation": "Boğulmak",
+        "translation": "Smore",
         "is_approved": true,
-        "approved_at": "2025-10-17T06:49:27-04:00"
+        "approved_at": "2025-11-18T01:19:56-05:00"
       },
       "uk": {
         "translation": "Смор",
@@ -174777,19 +175108,6 @@
         ]
       },
       {
-        "multiword": "corap",
-        "occurrences": [
-          {
-            "theme": "Socks",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Stocking",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "media",
         "occurrences": [
           {
@@ -175085,7 +175403,7 @@
           },
           {
             "theme": "Sofa",
-            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Portuguese, Brazilian / Romanian / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Portuguese, Brazilian / Romanian / Spanish / Swedish"
           }
         ]
       },
@@ -175112,6 +175430,19 @@
           {
             "theme": "Sofa",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "koltuk",
+        "occurrences": [
+          {
+            "theme": "Seat",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Sofa",
+            "reference": "Turkish"
           }
         ]
       },
@@ -175275,9 +175606,9 @@
         "approved_at": "2020-06-21T09:49:25-04:00"
       },
       "tr": {
-        "translation": "Sofa",
+        "translation": "Koltuk",
         "is_approved": true,
-        "approved_at": "2020-09-21T02:23:55-04:00"
+        "approved_at": "2025-11-18T01:20:31-05:00"
       },
       "uk": {
         "translation": "Диван",
@@ -176245,23 +176576,6 @@
         ]
       },
       {
-        "multiword": "kurek",
-        "occurrences": [
-          {
-            "theme": "Oar",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Shovel",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Spade",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "pelle",
         "occurrences": [
           {
@@ -176288,6 +176602,19 @@
           {
             "theme": "Spade",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "kurek",
+        "occurrences": [
+          {
+            "theme": "Shovel",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Spade",
+            "reference": "Turkish"
           }
         ]
       },
@@ -179015,9 +179342,9 @@
         "approved_at": "2019-10-09T07:03:32-04:00"
       },
       "tr": {
-        "translation": "Fıskiye",
+        "translation": "Fiskiye",
         "is_approved": true,
-        "approved_at": "2023-03-21T19:14:56-04:00"
+        "approved_at": "2025-11-18T01:21:28-05:00"
       },
       "uk": {
         "translation": "Розприскувач",
@@ -179029,7 +179356,7 @@
   {
     "id": 215557,
     "theme": "Sprint",
-    "shortcut": "kosma",
+    "shortcut": null,
     "multiwords": [
       {
         "multiword": "correr",
@@ -179195,9 +179522,9 @@
         "approved_at": "2019-10-09T07:03:52-04:00"
       },
       "tr": {
-        "translation": "Koşma",
+        "translation": "Hızlı Koşu",
         "is_approved": true,
-        "approved_at": "2024-03-09T05:41:57-05:00"
+        "approved_at": "2025-11-18T01:21:36-05:00"
       },
       "uk": {
         "translation": "Біг",
@@ -181518,9 +181845,9 @@
         "approved_at": "2019-10-09T07:05:00-04:00"
       },
       "tr": {
-        "translation": "Merdiven Tabure",
+        "translation": "Tabure",
         "is_approved": true,
-        "approved_at": "2023-07-09T19:01:34-04:00"
+        "approved_at": "2025-11-18T01:22:10-05:00"
       },
       "uk": {
         "translation": "Драбинка",
@@ -181655,9 +181982,9 @@
         "approved_at": "2019-10-09T07:06:03-04:00"
       },
       "tr": {
-        "translation": "Patika taşları",
+        "translation": "Taş Geçit",
         "is_approved": true,
-        "approved_at": "2023-07-09T19:01:51-04:00"
+        "approved_at": "2025-11-18T01:22:44-05:00"
       },
       "uk": {
         "translation": "Стежка з каменів",
@@ -181901,9 +182228,9 @@
         "approved_at": "2022-05-17T07:40:37-04:00"
       },
       "tr": {
-        "translation": "Yapışkanlı Not Kağıdı",
+        "translation": "Postit",
         "is_approved": true,
-        "approved_at": "2023-03-21T19:14:30-04:00"
+        "approved_at": "2025-11-18T01:22:56-05:00"
       },
       "uk": {
         "translation": "Нотатка",
@@ -182024,9 +182351,9 @@
         "approved_at": "2019-10-10T16:55:55-04:00"
       },
       "tr": {
-        "translation": "Vatoz Balığı",
+        "translation": "Vatoz",
         "is_approved": true,
-        "approved_at": "2023-07-09T19:02:31-04:00"
+        "approved_at": "2025-11-18T01:23:16-05:00"
       },
       "uk": {
         "translation": "Скат",
@@ -182050,19 +182377,6 @@
           {
             "theme": "Stocking",
             "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
-        "multiword": "corap",
-        "occurrences": [
-          {
-            "theme": "Socks",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Stocking",
-            "reference": "Turkish"
           }
         ]
       },
@@ -182200,9 +182514,9 @@
         "approved_at": "2019-10-10T16:55:58-04:00"
       },
       "tr": {
-        "translation": "Çorap",
+        "translation": "Külotlu Çorap",
         "is_approved": true,
-        "approved_at": "2021-03-29T02:25:00-04:00"
+        "approved_at": "2025-11-18T01:23:26-05:00"
       },
       "uk": {
         "translation": "Панчоха",
@@ -182695,6 +183009,19 @@
         ]
       },
       {
+        "multiword": "magaza",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "market",
         "occurrences": [
           {
@@ -182932,9 +183259,9 @@
         "approved_at": "2019-09-19T11:42:54-04:00"
       },
       "tr": {
-        "translation": "Dükkan",
+        "translation": "Mağaza",
         "is_approved": true,
-        "approved_at": "2020-08-14T18:37:16-04:00"
+        "approved_at": "2025-11-18T01:23:48-05:00"
       },
       "uk": {
         "translation": "Крамниця",
@@ -182948,6 +183275,23 @@
     "theme": "Storm",
     "shortcut": null,
     "multiwords": [
+      {
+        "multiword": "firtina",
+        "occurrences": [
+          {
+            "theme": "Storm",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunder",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunderstorm",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "orage",
         "occurrences": [
@@ -182971,19 +183315,6 @@
           {
             "theme": "Thunderstorm",
             "reference": "Hungarian"
-          }
-        ]
-      },
-      {
-        "multiword": "firtina",
-        "occurrences": [
-          {
-            "theme": "Storm",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Thunderstorm",
-            "reference": "Turkish"
           }
         ]
       },
@@ -184889,9 +185220,9 @@
         "approved_at": "2021-03-08T04:48:39-05:00"
       },
       "tr": {
-        "translation": "Kostüm",
+        "translation": "Takım Elbise",
         "is_approved": true,
-        "approved_at": "2022-05-29T15:24:19-04:00"
+        "approved_at": "2025-11-17T13:22:57-05:00"
       },
       "uk": {
         "translation": "Костюм",
@@ -185950,9 +186281,9 @@
         "approved_at": "2019-10-10T16:57:16-04:00"
       },
       "tr": {
-        "translation": "Denize Batmış Uçak",
+        "translation": "Denize Düşmüş Uçak",
         "is_approved": true,
-        "approved_at": "2022-06-23T06:49:53-04:00"
+        "approved_at": "2025-11-18T01:24:42-05:00"
       },
       "uk": {
         "translation": "Затонулий літак",
@@ -186087,9 +186418,9 @@
         "approved_at": "2019-10-10T16:57:26-04:00"
       },
       "tr": {
-        "translation": "Güneş ışığı",
+        "translation": "Gün Işığı",
         "is_approved": true,
-        "approved_at": "2022-06-23T06:50:04-04:00"
+        "approved_at": "2025-11-18T01:24:48-05:00"
       },
       "uk": {
         "translation": "Сонячне світло",
@@ -186579,9 +186910,9 @@
         "approved_at": "2022-05-17T07:58:01-04:00"
       },
       "tr": {
-        "translation": "Süper Market",
+        "translation": "Süpermarket",
         "is_approved": true,
-        "approved_at": "2022-05-07T12:33:00-04:00"
+        "approved_at": "2025-11-18T01:24:56-05:00"
       },
       "uk": {
         "translation": "Супермаркет",
@@ -188294,9 +188625,9 @@
         "approved_at": "2019-10-10T16:58:13-04:00"
       },
       "tr": {
-        "translation": "Elektrik Anahtarı",
+        "translation": "Düğme",
         "is_approved": true,
-        "approved_at": "2022-06-23T07:06:55-04:00"
+        "approved_at": "2025-11-18T01:25:14-05:00"
       },
       "uk": {
         "translation": "Перемикач",
@@ -189865,9 +190196,9 @@
         "approved_at": "2019-10-10T16:58:45-04:00"
       },
       "tr": {
-        "translation": "Uzun Boylu",
+        "translation": "Uzun Boy",
         "is_approved": true,
-        "approved_at": "2022-06-23T07:10:25-04:00"
+        "approved_at": "2025-11-18T01:25:29-05:00"
       },
       "uk": {
         "translation": "Високий",
@@ -194246,6 +194577,23 @@
     "shortcut": "aska",
     "multiwords": [
       {
+        "multiword": "firtina",
+        "occurrences": [
+          {
+            "theme": "Storm",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunder",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunderstorm",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "donder",
         "occurrences": [
           {
@@ -194392,9 +194740,9 @@
         "approved_at": "2019-09-19T11:43:56-04:00"
       },
       "tr": {
-        "translation": "Gök Gürültüsü",
+        "translation": "Fırtına",
         "is_approved": true,
-        "approved_at": "2020-08-17T14:26:31-04:00"
+        "approved_at": "2025-11-18T01:26:28-05:00"
       },
       "uk": {
         "translation": "Грім",
@@ -194408,6 +194756,23 @@
     "theme": "Thunderstorm",
     "shortcut": "orage",
     "multiwords": [
+      {
+        "multiword": "firtina",
+        "occurrences": [
+          {
+            "theme": "Storm",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunder",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Thunderstorm",
+            "reference": "Turkish"
+          }
+        ]
+      },
       {
         "multiword": "orage",
         "occurrences": [
@@ -194444,19 +194809,6 @@
           {
             "theme": "Thunderstorm",
             "reference": "Dutch"
-          }
-        ]
-      },
-      {
-        "multiword": "firtina",
-        "occurrences": [
-          {
-            "theme": "Storm",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Thunderstorm",
-            "reference": "Turkish"
           }
         ]
       },
@@ -195451,9 +195803,9 @@
         "approved_at": "2019-10-10T16:51:06-04:00"
       },
       "tr": {
-        "translation": "Teneke kutusu",
+        "translation": "Teneke Kutu",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:16:12-05:00"
+        "approved_at": "2025-11-18T01:26:44-05:00"
       },
       "uk": {
         "translation": "Консервна банка",
@@ -196398,6 +196750,19 @@
             "reference": "Portuguese / Portuguese, Brazilian / Spanish"
           }
         ]
+      },
+      {
+        "multiword": "kurbaga",
+        "occurrences": [
+          {
+            "theme": "Frog",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Toad",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -197289,6 +197654,19 @@
         ]
       },
       {
+        "multiword": "ketcap",
+        "occurrences": [
+          {
+            "theme": "Ketchup",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Tomato Ketchup",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "ketchup",
         "occurrences": [
           {
@@ -197448,9 +197826,9 @@
         "approved_at": "2019-10-10T16:52:22-04:00"
       },
       "tr": {
-        "translation": "Domates Ketçabı",
+        "translation": "Ketçap",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:15:02-05:00"
+        "approved_at": "2025-11-18T01:27:32-05:00"
       },
       "uk": {
         "translation": "Кетчуп",
@@ -199198,7 +199576,7 @@
   {
     "id": 215795,
     "theme": "Towel Rack",
-    "shortcut": null,
+    "shortcut": "havluluk",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -199307,9 +199685,9 @@
         "approved_at": "2019-10-10T16:55:40-04:00"
       },
       "tr": {
-        "translation": "Havlu Asacağı",
+        "translation": "Havluluk",
         "is_approved": true,
-        "approved_at": "2023-08-03T09:53:01-04:00"
+        "approved_at": "2025-11-18T01:27:47-05:00"
       },
       "uk": {
         "translation": "Вішалка для рушників",
@@ -199891,6 +200269,19 @@
     "shortcut": "provoz",
     "multiwords": [
       {
+        "multiword": "trafik",
+        "occurrences": [
+          {
+            "theme": "Traffic",
+            "reference": "Danish / Swedish / Turkish"
+          },
+          {
+            "theme": "Traffic Jam",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "교통",
         "occurrences": [
           {
@@ -200039,6 +200430,19 @@
             "reference": "Dutch"
           }
         ]
+      },
+      {
+        "multiword": "trafik",
+        "occurrences": [
+          {
+            "theme": "Traffic",
+            "reference": "Danish / Swedish / Turkish"
+          },
+          {
+            "theme": "Traffic Jam",
+            "reference": "Turkish"
+          }
+        ]
       }
     ],
     "translations": {
@@ -200148,9 +200552,9 @@
         "approved_at": "2019-10-10T17:00:01-04:00"
       },
       "tr": {
-        "translation": "Trafik Sıkışıklığı",
+        "translation": "Trafik",
         "is_approved": true,
-        "approved_at": "2022-05-21T19:02:29-04:00"
+        "approved_at": "2025-11-18T01:28:01-05:00"
       },
       "uk": {
         "translation": "Дорожній затор",
@@ -200394,9 +200798,9 @@
         "approved_at": "2019-10-10T17:00:05-04:00"
       },
       "tr": {
-        "translation": "Fragman",
+        "translation": "Römork",
         "is_approved": true,
-        "approved_at": "2022-12-04T15:16:21-05:00"
+        "approved_at": "2025-11-18T01:28:27-05:00"
       },
       "uk": {
         "translation": "Трейлер",
@@ -200960,7 +201364,7 @@
   {
     "id": 215815,
     "theme": "Transport",
-    "shortcut": "kuljetu",
+    "shortcut": "ulasim",
     "multiwords": [
       {
         "multiword": "транспорт",
@@ -200976,6 +201380,19 @@
           {
             "theme": "Vehicle",
             "reference": "Russian / Ukrainian"
+          }
+        ]
+      },
+      {
+        "multiword": "ulasim",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Turkish"
           }
         ]
       },
@@ -200997,7 +201414,7 @@
         "occurrences": [
           {
             "theme": "Transport",
-            "reference": "English / Czech / Danish / Dutch / French / German / Hungarian / Italian / Norwegian / Pirate English / Polish / Portuguese / Romanian / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Hungarian / Italian / Norwegian / Pirate English / Polish / Portuguese / Romanian / Spanish / Swedish"
           },
           {
             "theme": "Transportation",
@@ -201139,9 +201556,9 @@
         "approved_at": "2022-05-24T09:20:43-04:00"
       },
       "tr": {
-        "translation": "Transport",
+        "translation": "Ulaşım",
         "is_approved": true,
-        "approved_at": "2020-08-14T05:26:32-04:00"
+        "approved_at": "2025-11-18T01:28:38-05:00"
       },
       "uk": {
         "translation": "Транспорт",
@@ -201169,6 +201586,19 @@
           {
             "theme": "Vehicle",
             "reference": "Russian / Ukrainian"
+          }
+        ]
+      },
+      {
+        "multiword": "ulasim",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Turkish"
           }
         ]
       },
@@ -201203,7 +201633,7 @@
         "occurrences": [
           {
             "theme": "Transport",
-            "reference": "English / Czech / Danish / Dutch / French / German / Hungarian / Italian / Norwegian / Pirate English / Polish / Portuguese / Romanian / Spanish / Swedish / Turkish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Hungarian / Italian / Norwegian / Pirate English / Polish / Portuguese / Romanian / Spanish / Swedish"
           },
           {
             "theme": "Transportation",
@@ -203094,9 +203524,9 @@
         "approved_at": "2019-10-10T17:00:42-04:00"
       },
       "tr": {
-        "translation": "Üç Tekerlekli Bisiklet",
+        "translation": "Üç Tekerli Bisiklet",
         "is_approved": true,
-        "approved_at": "2023-08-03T09:53:53-04:00"
+        "approved_at": "2025-11-18T01:29:03-05:00"
       },
       "uk": {
         "translation": "Трицикл",
@@ -205541,6 +205971,19 @@
         ]
       },
       {
+        "multiword": "lastik",
+        "occurrences": [
+          {
+            "theme": "Rubber Band",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Tyre",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "anvelopa",
         "occurrences": [
           {
@@ -206744,9 +207187,9 @@
         "approved_at": "2019-10-10T17:02:05-04:00"
       },
       "tr": {
-        "translation": "Sirk Bisikleti",
+        "translation": "Tek Tekerli Bisiklet",
         "is_approved": true,
-        "approved_at": "2022-06-23T14:01:12-04:00"
+        "approved_at": "2025-11-18T01:29:46-05:00"
       },
       "uk": {
         "translation": "Моноцикл",
@@ -206876,7 +207319,7 @@
   {
     "id": 240806,
     "theme": "Upside Down",
-    "shortcut": "al reves",
+    "shortcut": "ter",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -206985,9 +207428,9 @@
         "approved_at": "2023-09-17T17:07:55-04:00"
       },
       "tr": {
-        "translation": "Başaşağı",
+        "translation": "Ters",
         "is_approved": true,
-        "approved_at": "2025-10-17T06:49:46-04:00"
+        "approved_at": "2025-11-18T01:29:55-05:00"
       },
       "uk": {
         "translation": "Догори дриґом",
@@ -207108,9 +207551,9 @@
         "approved_at": "2023-08-14T16:19:37-04:00"
       },
       "tr": {
-        "translation": "Vakum",
+        "translation": "Elektrikli Süpürge",
         "is_approved": true,
-        "approved_at": "2024-03-09T05:42:59-05:00"
+        "approved_at": "2025-11-18T01:30:05-05:00"
       },
       "uk": {
         "translation": "Вакуум",
@@ -207648,6 +208091,19 @@
         ]
       },
       {
+        "multiword": "kasa",
+        "occurrences": [
+          {
+            "theme": "Safe",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Vault",
+            "reference": "Turkish"
+          }
+        ]
+      },
+      {
         "multiword": "klui",
         "occurrences": [
           {
@@ -207918,7 +208374,7 @@
   {
     "id": 215879,
     "theme": "Vegetables",
-    "shortcut": "gemuse",
+    "shortcut": "sebze",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -208027,9 +208483,9 @@
         "approved_at": "2019-10-10T17:02:47-04:00"
       },
       "tr": {
-        "translation": "Sebzeler",
+        "translation": "Sebze",
         "is_approved": true,
-        "approved_at": "2022-05-19T10:01:04-04:00"
+        "approved_at": "2025-11-18T01:30:16-05:00"
       },
       "uk": {
         "translation": "Овочі",
@@ -208442,9 +208898,9 @@
         "approved_at": "2023-01-29T05:00:01-05:00"
       },
       "tr": {
-        "translation": "Video oyunları",
+        "translation": "Video oyunlar",
         "is_approved": true,
-        "approved_at": "2023-09-26T20:09:56-04:00"
+        "approved_at": "2025-11-18T01:30:20-05:00"
       },
       "uk": {
         "translation": "Відеоігри",
@@ -210403,7 +210859,7 @@
           },
           {
             "theme": "Walrus",
-            "reference": "Polish"
+            "reference": "Polish / Turkish"
           }
         ]
       },
@@ -210528,9 +210984,9 @@
         "approved_at": "2019-10-11T05:59:27-04:00"
       },
       "tr": {
-        "translation": "Denix Aygırı",
+        "translation": "Mors",
         "is_approved": true,
-        "approved_at": "2022-06-23T13:50:28-04:00"
+        "approved_at": "2025-11-18T01:30:56-05:00"
       },
       "uk": {
         "translation": "Морж",
@@ -210542,8 +210998,21 @@
   {
     "id": 215903,
     "theme": "Wand",
-    "shortcut": null,
+    "shortcut": "asa",
     "multiwords": [
+      {
+        "multiword": "asa",
+        "occurrences": [
+          {
+            "theme": "Wand",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Wings",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          }
+        ]
+      },
       {
         "multiword": "wand",
         "occurrences": [
@@ -210795,9 +211264,9 @@
         "approved_at": "2019-10-11T05:59:29-04:00"
       },
       "tr": {
-        "translation": "Değnek",
+        "translation": "Asa",
         "is_approved": true,
-        "approved_at": "2022-06-23T13:50:33-04:00"
+        "approved_at": "2025-11-18T01:31:00-05:00"
       },
       "uk": {
         "translation": "Паличка",
@@ -210988,9 +211457,9 @@
         "approved_at": "2019-10-11T05:59:49-04:00"
       },
       "tr": {
-        "translation": "Giysi dolabı",
+        "translation": "Gardırop",
         "is_approved": true,
-        "approved_at": "2023-09-26T20:10:25-04:00"
+        "approved_at": "2025-11-18T01:31:07-05:00"
       },
       "uk": {
         "translation": "Гардероб",
@@ -211623,6 +212092,19 @@
           {
             "theme": "Water",
             "reference": "Romanian"
+          }
+        ]
+      },
+      {
+        "multiword": "sus",
+        "occurrences": [
+          {
+            "theme": "Ornament",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Water",
+            "reference": "Turkish"
           }
         ]
       }
@@ -214779,9 +215261,9 @@
         "approved_at": "2019-10-11T06:00:43-04:00"
       },
       "tr": {
-        "translation": "Ön kaldırmak",
+        "translation": "Ön kaldırma",
         "is_approved": true,
-        "approved_at": "2024-03-09T05:43:14-05:00"
+        "approved_at": "2025-11-18T01:31:54-05:00"
       },
       "uk": {
         "translation": "Моноцикл",
@@ -215724,6 +216206,19 @@
     "theme": "Wings",
     "shortcut": "ala",
     "multiwords": [
+      {
+        "multiword": "asa",
+        "occurrences": [
+          {
+            "theme": "Wand",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Wings",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          }
+        ]
+      },
       {
         "multiword": "aile",
         "occurrences": [
