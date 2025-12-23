@@ -53,18 +53,21 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
             <div className="flex flex-col items-center p-2 rounded-lg hover:bg-muted/50 transition-colors">
               <div className="relative">
                 <img
-                  src={getAvatarUrl(player.uuid, 'head')}
+                  src={getAvatarUrl(player.uuid, "head")}
                   alt={`${player.username}'s avatar`}
                   className="w-8 h-8 rounded"
                   onError={(e) => {
                     // Fallback to initial letter if avatar fails to load
                     const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
+                    target.style.display = "none";
                     const fallback = target.nextElementSibling as HTMLElement;
-                    if (fallback) fallback.style.display = 'flex';
+                    if (fallback) fallback.style.display = "flex";
                   }}
                 />
-                <div className="w-8 h-8 bg-muted rounded flex items-center justify-center" style={{ display: 'none' }}>
+                <div
+                  className="w-8 h-8 bg-muted rounded flex items-center justify-center"
+                  style={{ display: "none" }}
+                >
                   <span className="text-xs font-medium">
                     {player.username.charAt(0).toUpperCase()}
                   </span>

@@ -105,7 +105,7 @@ export function StatsContent() {
       // Save to history - use UUID from stats data
       const respUuid: string | undefined = data.player?.uuid;
       const respUsername: string | undefined = data.player?.displayname;
-      
+
       if (respUuid && respUsername) {
         try {
           addToSearchHistory(respUuid, respUsername);
@@ -131,12 +131,13 @@ export function StatsContent() {
 
   const handleHistoryPlayerSelect = (uuid: string, username: string) => {
     // Normalize UUIDs for comparison (remove dashes and convert to lowercase)
-    const normalizeUuid = (uuid: string) => uuid.replace(/-/g, '').toLowerCase().trim();
-    
+    const normalizeUuid = (uuid: string) =>
+      uuid.replace(/-/g, "").toLowerCase().trim();
+
     if (stats?.uuid && normalizeUuid(stats.uuid) === normalizeUuid(uuid)) {
       return;
     }
-    
+
     setUsername(username);
     fetchStats(uuid, apiKey);
   };
@@ -258,7 +259,10 @@ export function StatsContent() {
         {stats && (
           <Card className="bg-background/95 rounded-lg w-full overflow-hidden">
             <div ref={statsRef} className="p-6">
-              <StatsDisplay stats={stats.player} lastUpdated={stats.lastUpdated} />
+              <StatsDisplay
+                stats={stats.player}
+                lastUpdated={stats.lastUpdated}
+              />
             </div>
           </Card>
         )}

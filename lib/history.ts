@@ -8,7 +8,7 @@ const HISTORY_KEY = "player_search_history";
 const MAX_HISTORY_ITEMS = 8;
 
 function normalizeUuid(uuid: string): string {
-  return uuid.replace(/-/g, '').toLowerCase().trim();
+  return uuid.replace(/-/g, "").toLowerCase().trim();
 }
 
 export function getSearchHistory(): PlayerHistory[] {
@@ -28,7 +28,9 @@ export function addToSearchHistory(uuid: string, username: string) {
   const history = getSearchHistory();
   const normalizedUuid = normalizeUuid(uuid);
 
-  const existingIndex = history.findIndex((item) => normalizeUuid(item.uuid) === normalizedUuid);
+  const existingIndex = history.findIndex(
+    (item) => normalizeUuid(item.uuid) === normalizedUuid,
+  );
   if (existingIndex !== -1) {
     history.splice(existingIndex, 1);
   }
@@ -56,7 +58,9 @@ export function removeFromSearchHistory(uuid: string) {
 
   const history = getSearchHistory();
   const normalizedUuid = normalizeUuid(uuid);
-  
-  const filteredHistory = history.filter((item) => normalizeUuid(item.uuid) !== normalizedUuid);
+
+  const filteredHistory = history.filter(
+    (item) => normalizeUuid(item.uuid) !== normalizedUuid,
+  );
   localStorage.setItem(HISTORY_KEY, JSON.stringify(filteredHistory));
 }

@@ -517,9 +517,16 @@ export default function ThemesPageContent() {
     SearchCondition[]
   >([]);
 
-  const [textCase, setTextCase] = useState<"normal" | "uppercase" | "lowercase">(() => {
+  const [textCase, setTextCase] = useState<
+    "normal" | "uppercase" | "lowercase"
+  >(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem("gtb-text-case") as "normal" | "uppercase" | "lowercase") || "normal";
+      return (
+        (localStorage.getItem("gtb-text-case") as
+          | "normal"
+          | "uppercase"
+          | "lowercase") || "normal"
+      );
     }
     return "normal";
   });
@@ -531,7 +538,9 @@ export default function ThemesPageContent() {
     return false;
   });
 
-  const handleTextCaseChange = (value: "normal" | "uppercase" | "lowercase") => {
+  const handleTextCaseChange = (
+    value: "normal" | "uppercase" | "lowercase",
+  ) => {
     setTextCase(value);
     if (typeof window !== "undefined") {
       localStorage.setItem("gtb-text-case", value);
@@ -560,22 +569,37 @@ export default function ThemesPageContent() {
   // Generate translation tips for a theme
   const generateLanguageTips = (item: TranslationItem): string => {
     // Priority order for displaying translations (common languages first)
-    const priorityOrder = ["ru", "ja", "kr", "zh_cn", "zh_tw", "fr", "pl", "ko", "de", "es", "it", "pt", "ptbr", "en"];
-    
+    const priorityOrder = [
+      "ru",
+      "ja",
+      "kr",
+      "zh_cn",
+      "zh_tw",
+      "fr",
+      "pl",
+      "ko",
+      "de",
+      "es",
+      "it",
+      "pt",
+      "ptbr",
+      "en",
+    ];
+
     // Collect all translations starting with item.theme (highest priority)
     const allTranslations: string[] = [];
-    
+
     // Add item.theme first (highest priority)
     if (item.theme) {
       allTranslations.push(item.theme);
     }
-    
+
     // Get all approved translations
     const approvedTranslations = Object.entries(item.translations)
       .filter(([_, translation]) => translation && translation.is_approved)
       .map(([lang, translation]) => ({
         lang,
-        translation: translation!.translation
+        translation: translation!.translation,
       }))
       .sort((a, b) => {
         const aIndex = priorityOrder.indexOf(a.lang);
@@ -587,7 +611,7 @@ export default function ThemesPageContent() {
       });
 
     // Add approved translations
-    allTranslations.push(...approvedTranslations.map(t => t.translation));
+    allTranslations.push(...approvedTranslations.map((t) => t.translation));
 
     if (allTranslations.length > 0) {
       // Use Set to remove duplicates while preserving order
@@ -595,7 +619,7 @@ export default function ThemesPageContent() {
       const translationsStr = uniqueTranslations.join(", ");
       return `The theme is: ${translationsStr}`;
     }
-    
+
     return "No approved translations available";
   };
 
@@ -608,7 +632,7 @@ export default function ThemesPageContent() {
     const normalizedQuery = removeAccents(query);
     const normalizedText = removeAccents(text);
     // Escape special regex characters to prevent errors when searching for them
-    const escapedQuery = normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedQuery = normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const regex = new RegExp(`(${escapedQuery})`, "gi");
     const parts = normalizedText.split(regex);
 
@@ -992,7 +1016,7 @@ export default function ThemesPageContent() {
             </Button>
           </div>
         </div>
-          
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
           {results.map((item, index) => (
             // Item Result Card
@@ -1001,10 +1025,10 @@ export default function ThemesPageContent() {
               className="w-full shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
             >
               <CardHeader className="p-4 bg-muted/50 border-b">
-                 <CardTitle className="text-lg font-medium flex items-center justify-between">
-                   <span className="truncate mr-2">
-                     {highlightMatch(applyTextCase(item.theme), searchQuery)}
-                   </span>
+                <CardTitle className="text-lg font-medium flex items-center justify-between">
+                  <span className="truncate mr-2">
+                    {highlightMatch(applyTextCase(item.theme), searchQuery)}
+                  </span>
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => handleCopy(item.theme)}
@@ -1026,21 +1050,21 @@ export default function ThemesPageContent() {
               </CardHeader>
 
               {showTips && (
-                  <div className="p-3 border-b bg-secondary/40">
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-secondary-foreground font-medium">
-                        {applyTextCase(generateLanguageTips(item))}
-                      </span>
-                      <button
-                        onClick={() => handleCopy(generateLanguageTips(item))}
-                        className="p-1 rounded-full hover:bg-secondary/50 transition-colors"
-                        title="Copy tips"
-                      >
-                        <Copy className="h-3 w-3 text-secondary-foreground" />
-                      </button>
-                    </div>
+                <div className="p-3 border-b bg-secondary/40">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-secondary-foreground font-medium">
+                      {applyTextCase(generateLanguageTips(item))}
+                    </span>
+                    <button
+                      onClick={() => handleCopy(generateLanguageTips(item))}
+                      className="p-1 rounded-full hover:bg-secondary/50 transition-colors"
+                      title="Copy tips"
+                    >
+                      <Copy className="h-3 w-3 text-secondary-foreground" />
+                    </button>
                   </div>
-                )}
+                </div>
+              )}
               <Collapsible
                 className="bg-muted/30 border-b"
                 open={openMultiwords[`item-${index}`]}
@@ -1078,7 +1102,9 @@ export default function ThemesPageContent() {
                               {highlightMatch(multiword.multiword, searchQuery)}
                             </span>
                             <button
-                              onClick={() => handleCopy(multiword.multiword, false)}
+                              onClick={() =>
+                                handleCopy(multiword.multiword, false)
+                              }
                               className="p-1 rounded-full hover:bg-muted/50 transition-colors"
                               aria-label="Copy multiword"
                             >
@@ -1095,7 +1121,8 @@ export default function ThemesPageContent() {
                                   •
                                 </span>
                                 <span>
-                                  &nbsp;{highlightMatch(
+                                  &nbsp;
+                                  {highlightMatch(
                                     occurrence.theme,
                                     searchQuery,
                                   )}
@@ -1285,7 +1312,10 @@ export default function ThemesPageContent() {
                         <div className="flex flex-wrap items-center gap-1 ml-auto">
                           <div className="flex items-center">
                             <span className="text-sm font-medium mr-1">
-                              {highlightMatch(applyTextCase(trans.translation), searchQuery)}
+                              {highlightMatch(
+                                applyTextCase(trans.translation),
+                                searchQuery,
+                              )}
                             </span>
                             <button
                               onClick={() => handleCopy(trans.translation)}
@@ -1322,10 +1352,18 @@ export default function ThemesPageContent() {
         )}
 
         {(!searchQuery || searchQuery.length < 1) && (
-          <Card className="p-6 bg-background/95 rounded-lg w-full shadow-sm">
-            <p className="text-center text-muted-foreground">
-              Enter your search query to find themes
-            </p>
+          <Card className="px-6 py-4 bg-background/95 rounded-lg w-full shadow-sm">
+            <div className="w-full h-full flex flex-col justify-center items-center">
+              <p className="text-muted-foreground">
+                Enter your search query to find themes
+              </p>
+              <Link
+                href="/themes/all"
+                className="underline underline-offset-2 text-primary mt-1.5"
+              >
+                view all themes
+              </Link>
+            </div>
           </Card>
         )}
 
@@ -1369,7 +1407,7 @@ export default function ThemesPageContent() {
               {totalResults !== 1 ? "results" : "result"})
             </p>
           )}
-          <p>Crowdin Translation Database Last Updated: {LAST_UPDATED}</p>
+          <div>Crowdin Translation Database Last Updated: {LAST_UPDATED}</div>
         </div>
 
         <div className="w-full pt-8 space-y-4">

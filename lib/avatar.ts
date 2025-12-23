@@ -13,10 +13,13 @@ export interface AvatarUrls {
  * @param size - Size of the avatar (default: 64)
  * @returns Object containing head and body avatar URLs
  */
-export function generateAvatarUrls(uuid: string, size: string = "64"): AvatarUrls {
+export function generateAvatarUrls(
+  uuid: string,
+  size: string = "64",
+): AvatarUrls {
   // Remove dashes from UUID if present
   const cleanUuid = uuid.replace(/-/g, "");
-  
+
   return {
     head: `https://mc-heads.net/avatar/${cleanUuid}/${size}`,
     body: `https://nmsr.nickac.dev/fullbody/${cleanUuid}`,
@@ -30,7 +33,11 @@ export function generateAvatarUrls(uuid: string, size: string = "64"): AvatarUrl
  * @param size - Size of the avatar (default: 64)
  * @returns Avatar URL
  */
-export function getAvatarUrl(uuid: string, type: 'head' | 'body' = 'head', size: string = "64"): string {
+export function getAvatarUrl(
+  uuid: string,
+  type: "head" | "body" = "head",
+  size: string = "64",
+): string {
   const urls = generateAvatarUrls(uuid, size);
   return urls[type];
 }

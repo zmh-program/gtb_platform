@@ -50,7 +50,8 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
     return (bbStats.score / bbStats.games_played).toFixed(2);
   }, [bbStats.score, bbStats.games_played]);
 
-  const spbPerfectBuildTimes = achievements.buildbattle_speed_builders_perfectionist || 0;
+  const spbPerfectBuildTimes =
+    achievements.buildbattle_speed_builders_perfectionist || 0;
 
   const pwValue = useMemo(() => {
     if (!spbPerfectBuildTimes || spbPerfectBuildTimes === 0) return 0;
