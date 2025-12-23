@@ -6,7 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { generateAvatarUrls } from "@/lib/avatar";
 
-export function StatsDisplay({ stats }: { stats: any }) {
+type StatsDisplayProps = {
+  stats: any;
+  lastUpdated?: number;
+};
+export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
   const bbStats = stats.stats?.BuildBattle || {};
   const achievements = stats.achievements || {};
 
@@ -77,6 +81,16 @@ export function StatsDisplay({ stats }: { stats: any }) {
     return topMode.wins > 0 ? topMode.name : null;
   }, [bbTotalWins, gtbTotalWins, spbTotalWins]);
 
+  const lastUpdateText = useMemo(() => {
+    if (!lastUpdated || Number.isNaN(lastUpdated)) return null;
+    const nowSeconds = Math.floor(Date.now() / 1000);
+    const diffSeconds = Math.max(0, nowSeconds - lastUpdated);
+    if (diffSeconds <= 20) return `now`;
+    if (diffSeconds <= 60) return `${diffSeconds}s`;
+    if (diffSeconds < 3600) return `${Math.floor(diffSeconds / 60)}min`;
+    return `${Math.floor(diffSeconds / 3600)}h`;
+  }, [lastUpdated]);
+
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -87,7 +101,6 @@ export function StatsDisplay({ stats }: { stats: any }) {
                 src={avatarUrls.head}
                 alt={`${stats.displayname}'s head`}
                 className="w-8 h-8 rounded-md flex-shrink-0"
-                // loading="lazy"
               />
             </div>
           )}
@@ -245,6 +258,13 @@ export function StatsDisplay({ stats }: { stats: any }) {
           </Card>
         </div>
       </div>
+      {lastUpdateText && (
+        <div className="flex justify-end">
+          <span className="text-xs text-muted-foreground">
+            last update: {lastUpdateText}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
