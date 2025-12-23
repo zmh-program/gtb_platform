@@ -258,7 +258,7 @@ export function StatsContent() {
         {stats && (
           <Card className="bg-background/95 rounded-lg w-full overflow-hidden">
             <div ref={statsRef} className="p-6">
-              <StatsDisplay stats={stats.player} />
+              <StatsDisplay stats={stats.player} lastUpdated={stats.lastUpdated} />
             </div>
           </Card>
         )}

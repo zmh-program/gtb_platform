@@ -45,11 +45,17 @@ export async function GET(request: Request) {
       );
     }
 
-    return NextResponse.json(statsResponse.data, {
-      headers: {
-        "Cache-Control": "public, s-maxage=120, stale-while-revalidate=60",
+    return NextResponse.json(
+      {
+        ...statsResponse.data,
+        lastUpdated: Math.floor(Date.now() / 1000),
       },
-    });
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=120, stale-while-revalidate=60",
+        },
+      },
+    );
   } catch (error) {
     console.error("Stats API error:", error);
     return NextResponse.json(
