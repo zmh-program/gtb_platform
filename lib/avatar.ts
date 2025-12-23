@@ -1,5 +1,5 @@
 /**
- * Generate Crafatar URLs for Minecraft player avatars
+ * Generate URLs for Minecraft player avatars
  */
 
 export interface AvatarUrls {
@@ -18,7 +18,7 @@ export function generateAvatarUrls(uuid: string, size: string = "64"): AvatarUrl
   const cleanUuid = uuid.replace(/-/g, "");
   
   return {
-    head: `https://crafatar.com/avatars/${cleanUuid}?size=${size}&overlay=true`,
+    head: `https://mc-heads.net/avatar/${cleanUuid}/${size}`,
     body: `https://nmsr.nickac.dev/fullbody/${cleanUuid}`,
   };
 }
