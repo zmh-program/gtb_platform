@@ -1,0 +1,151 @@
+{
+  "project_id": "128098",
+  "file_id": "499",
+  "meta_language_id": "55",
+  "target_languages": [
+    {
+      "id": "55",
+      "name": "Chinese Simplified",
+      "code": "zh_cn",
+      "file": "zh_cn.json"
+    },
+    {
+      "id": "56",
+      "name": "Chinese Traditional",
+      "code": "zh_tw",
+      "file": "zh_tw.json"
+    },
+    {
+      "id": "9",
+      "name": "Czech",
+      "code": "cs",
+      "file": "en_cs.json"
+    },
+    {
+      "id": "10",
+      "name": "Danish",
+      "code": "da",
+      "file": "en_da.json"
+    },
+    {
+      "id": "33",
+      "name": "Dutch",
+      "code": "nl",
+      "file": "en_nl.json"
+    },
+    {
+      "id": "18",
+      "name": "Finnish",
+      "code": "fi",
+      "file": "en_fi.json"
+    },
+    {
+      "id": "2",
+      "name": "French",
+      "code": "fr",
+      "file": "en_fr.json"
+    },
+    {
+      "id": "11",
+      "name": "German",
+      "code": "de",
+      "file": "en_de.json"
+    },
+    {
+      "id": "22",
+      "name": "Hungarian",
+      "code": "hu",
+      "file": "en_hu.json"
+    },
+    {
+      "id": "24",
+      "name": "Italian",
+      "code": "it",
+      "file": "en_it.json"
+    },
+    {
+      "id": "25",
+      "name": "Japanese",
+      "code": "ja",
+      "file": "en_ja.json"
+    },
+    {
+      "id": "27",
+      "name": "Korean",
+      "code": "ko",
+      "file": "en_ko.json"
+    },
+    {
+      "id": "36",
+      "name": "Norwegian",
+      "code": "no",
+      "file": "en_no.json"
+    },
+    {
+      "id": "109",
+      "name": "Pirate English",
+      "code": "en",
+      "file": "en_enpt.json"
+    },
+    {
+      "id": "38",
+      "name": "Polish",
+      "code": "pl",
+      "file": "en_pl.json"
+    },
+    {
+      "id": "40",
+      "name": "Portuguese",
+      "code": "pt",
+      "file": "en_pt.json"
+    },
+    {
+      "id": "63",
+      "name": "Portuguese, Brazilian",
+      "code": "ptbr",
+      "file": "en_ptbr.json"
+    },
+    {
+      "id": "1",
+      "name": "Romanian",
+      "code": "ro",
+      "file": "en_ro.json"
+    },
+    {
+      "id": "41",
+      "name": "Russian",
+      "code": "ru",
+      "file": "en_ru.json"
+    },
+    {
+      "id": "3",
+      "name": "Spanish",
+      "code": "es",
+      "file": "en_es.json"
+    },
+    {
+      "id": "48",
+      "name": "Swedish",
+      "code": "sv",
+      "file": "en_sv.json"
+    },
+    {
+      "id": "50",
+      "name": "Turkish",
+      "code": "tr",
+      "file": "en_tr.json"
+    },
+    {
+      "id": "52",
+      "name": "Ukrainian",
+      "code": "uk",
+      "file": "en_uk.json"
+    },
+    {
+      "id": "-1",
+      "name": "Complement",
+      "code": "co",
+      "file": "en_co.json"
+    }
+  ]
+}
