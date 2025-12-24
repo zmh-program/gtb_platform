@@ -1,4 +1,5 @@
 result/
+temp/
 
 # Python
 __pycache__/
