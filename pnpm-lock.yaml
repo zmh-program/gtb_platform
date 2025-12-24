@@ -105,9 +105,6 @@ importers:
       postcss:
         specifier: ^8
         version: 8.5.6
-      root:
-        specifier: github:glideapps/glide-data-grid
-        version: https://codeload.github.com/glideapps/glide-data-grid/tar.gz/ab7042389afd6d2cd9de2e4278580930d2f30a71
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.17
@@ -2396,10 +2393,6 @@ packages:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
-
-  root@https://codeload.github.com/glideapps/glide-data-grid/tar.gz/ab7042389afd6d2cd9de2e4278580930d2f30a71:
-    resolution: {tarball: https://codeload.github.com/glideapps/glide-data-grid/tar.gz/ab7042389afd6d2cd9de2e4278580930d2f30a71}
-    version: 6.0.4-alpha24
 
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
@@ -5193,8 +5186,6 @@ snapshots:
   rimraf@3.0.2:
     dependencies:
       glob: 7.2.3
-
-  root@https://codeload.github.com/glideapps/glide-data-grid/tar.gz/ab7042389afd6d2cd9de2e4278580930d2f30a71: {}
 
   run-parallel@1.2.0:
     dependencies:
