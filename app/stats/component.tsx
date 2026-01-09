@@ -23,6 +23,15 @@ import Link from "next/link";
 import { SearchHistory } from "@/components/search-history";
 import { addToSearchHistory } from "@/lib/history";
 
+function formatLastUpdate(timestamp: number): string {
+  const nowSeconds = Math.floor(Date.now() / 1000);
+  const diffSeconds = Math.max(0, nowSeconds - timestamp);
+  if (diffSeconds <= 20) return "now";
+  if (diffSeconds <= 60) return `${diffSeconds}s`;
+  if (diffSeconds < 3600) return `${Math.floor(diffSeconds / 60)}min`;
+  return `${Math.floor(diffSeconds / 3600)}h`;
+}
+
 function ErrorMessage({ message }: { message: string }) {
   return (
     <div className="flex items-center mt-4 gap-2 p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md break-all">
@@ -193,7 +202,7 @@ export function StatsContent() {
 
         {/* Search Card */}
         <Card className="p-6 bg-background/95 rounded-lg w-full">
-          <div className="space-y-4">
+          <div className="space-y-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               <div className="relative">
                 <User className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
@@ -257,14 +266,20 @@ export function StatsContent() {
 
         {/* Stats Card */}
         {stats && (
-          <Card className="bg-background/95 rounded-lg w-full overflow-hidden">
-            <div ref={statsRef} className="p-6">
-              <StatsDisplay
-                stats={stats.player}
-                lastUpdated={stats.lastUpdated}
-              />
-            </div>
-          </Card>
+          <>
+            {stats.lastUpdated && (
+              <div className="text-right w-full translate-y-2.5">
+                <span className="text-xs text-muted-foreground">
+                  last update: {formatLastUpdate(stats.lastUpdated)}
+                </span>
+              </div>
+            )}
+            <Card className="bg-background/95 rounded-lg w-full overflow-hidden">
+              <div ref={statsRef} className="p-6">
+                <StatsDisplay stats={stats.player} />
+              </div>
+            </Card>
+          </>
         )}
 
         <div className="w-full mt-8 space-y-4">

@@ -194,9 +194,8 @@ function getTitleInfo(score: number) {
 
 type StatsDisplayProps = {
   stats: any;
-  lastUpdated?: number;
 };
-export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
+export function StatsDisplay({ stats }: StatsDisplayProps) {
   const bbStats = stats.stats?.BuildBattle || {};
   const achievements = stats.achievements || {};
 
@@ -287,16 +286,6 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
     }
     return { currentTitle, nextTitle, progress, toGo };
   }, [bbStats.score]);
-
-  const lastUpdateText = useMemo(() => {
-    if (!lastUpdated || Number.isNaN(lastUpdated)) return null;
-    const nowSeconds = Math.floor(Date.now() / 1000);
-    const diffSeconds = Math.max(0, nowSeconds - lastUpdated);
-    if (diffSeconds <= 20) return `now`;
-    if (diffSeconds <= 60) return `${diffSeconds}s`;
-    if (diffSeconds < 3600) return `${Math.floor(diffSeconds / 60)}min`;
-    return `${Math.floor(diffSeconds / 3600)}h`;
-  }, [lastUpdated]);
 
   return (
     <div className="space-y-4">
@@ -529,7 +518,7 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
 
       <fieldset className="border rounded-lg p-3 pt-2">
         <legend className="text-sm font-medium px-1">Cosmetics</legend>
-        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 text-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
           <div>
             <span className="text-muted-foreground text-xs">Hat</span>
             <p>{formatCosmetic(bbStats.new_selected_hat, "hats_")}</p>
@@ -580,14 +569,6 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
             })}
           </div>
         </fieldset>
-      )}
-
-      {lastUpdateText && (
-        <div className="flex justify-end">
-          <span className="text-xs text-muted-foreground">
-            last update: {lastUpdateText}
-          </span>
-        </div>
       )}
     </div>
   );
