@@ -6,6 +6,157 @@ import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { generateAvatarUrls } from "@/lib/avatar";
 
+const mcColorMap: Record<string, string> = {
+  "0": "#000000",
+  "1": "#0000AA",
+  "2": "#00AA00",
+  "3": "#00AAAA",
+  "4": "#AA0000",
+  "5": "#AA00AA",
+  "6": "#FFAA00",
+  "7": "#AAAAAA",
+  "8": "#555555",
+  "9": "#5555FF",
+  a: "#55FF55",
+  b: "#55FFFF",
+  c: "#FF5555",
+  d: "#FF55FF",
+  e: "#FFFF55",
+  f: "#FFFFFF",
+};
+
+const ranks: Record<string, [string, string][]> = {
+  ADMIN: [["c", "[ADMIN]"]],
+  MODERATOR: [["2", "[MOD]"]],
+  HELPER: [["9", "[HELPER]"]],
+  JR_HELPER: [["9", "[JR HELPER]"]],
+  YOUTUBER: [
+    ["c", "["],
+    ["f", "YOUTUBE"],
+    ["c", "]"],
+  ],
+  SUPERSTAR: [
+    ["%r", "[MVP"],
+    ["%p", "++"],
+    ["%r", "]"],
+  ],
+  MVP_PLUS: [
+    ["b", "[MVP"],
+    ["%p", "+"],
+    ["b", "]"],
+  ],
+  MVP: [["b", "[MVP]"]],
+  VIP_PLUS: [
+    ["a", "[VIP"],
+    ["6", "+"],
+    ["a", "]"],
+  ],
+  VIP: [["a", "[VIP]"]],
+  DEFAULT: [["7", ""]],
+};
+
+const colorNames: Record<string, string> = {
+  BLACK: "0",
+  DARK_BLUE: "1",
+  DARK_GREEN: "2",
+  DARK_AQUA: "3",
+  DARK_RED: "4",
+  DARK_PURPLE: "5",
+  GOLD: "6",
+  GRAY: "7",
+  DARK_GRAY: "8",
+  BLUE: "9",
+  GREEN: "a",
+  AQUA: "b",
+  RED: "c",
+  LIGHT_PURPLE: "d",
+  YELLOW: "e",
+  WHITE: "f",
+};
+
+function parseMinecraftTag(tag: string): [string, string][] {
+  const result: [string, string][] = [];
+  const parts = tag.split(/§([a-f0-9])/);
+  parts.unshift("f");
+  for (let i = 0; i < parts.length; i += 2) {
+    const color = parts[i] || "f";
+    const text = parts[i + 1] || "";
+    if (text) result.push([color, text]);
+  }
+  return result;
+}
+
+function replaceCustomColors(
+  rank: [string, string][],
+  p: string,
+  r: string,
+): [string, string][] {
+  return rank.map(([color, text]) => [
+    color === "%p" ? p : color === "%r" ? r : color,
+    text,
+  ]);
+}
+
+function calcRankTag(player: any): [string, string][] {
+  if (!player || typeof player !== "object") return ranks.DEFAULT;
+  let {
+    packageRank,
+    newPackageRank,
+    monthlyPackageRank,
+    rankPlusColor,
+    monthlyRankColor,
+    rank,
+    prefix,
+  } = player;
+  if (rank === "NORMAL") rank = null;
+  if (monthlyPackageRank === "NONE") monthlyPackageRank = null;
+  if (packageRank === "NONE") packageRank = null;
+  if (newPackageRank === "NONE") newPackageRank = null;
+  if (prefix && typeof prefix === "string") return parseMinecraftTag(prefix);
+  const key = rank || monthlyPackageRank || newPackageRank || packageRank;
+  if (key && ranks[key]) {
+    const p = colorNames[rankPlusColor] || "c";
+    const r = colorNames[monthlyRankColor] || "6";
+    return replaceCustomColors(ranks[key], p, r);
+  }
+  return ranks.DEFAULT;
+}
+
+const buildBattleTitles = [
+  { req: 0, color: "#FFFFFF", name: "Rookie" },
+  { req: 100, color: "#AAAAAA", name: "Untrained" },
+  { req: 250, color: "#555555", name: "Amateur" },
+  { req: 500, color: "#55FF55", name: "Prospect" },
+  { req: 1000, color: "#00AA00", name: "Apprentice" },
+  { req: 2000, color: "#55FFFF", name: "Experienced" },
+  { req: 3500, color: "#00AAAA", name: "Seasoned" },
+  { req: 5000, color: "#5555FF", name: "Trained" },
+  { req: 7500, color: "#0000AA", name: "Skilled" },
+  { req: 10000, color: "#AA00AA", name: "Talented" },
+  { req: 15000, color: "#00AA00", name: "Professional" },
+  { req: 20000, color: "#FF5555", name: "Artisan" },
+  { req: 30000, color: "#AA0000", name: "Expert" },
+  { req: 50000, color: "#FFAA00", name: "Master" },
+  { req: 100000, color: "#55FF55", name: "Legend", bold: true },
+  { req: 200000, color: "#55FFFF", name: "Grandmaster", bold: true },
+  { req: 300000, color: "#FF55FF", name: "Celestial", bold: true },
+  { req: 400000, color: "#FF5555", name: "Divine", bold: true },
+  { req: 500000, color: "#FFAA00", name: "Ascended", bold: true },
+];
+
+function getTitleInfo(score: number) {
+  let currentTitle = buildBattleTitles[0];
+  let nextTitle = buildBattleTitles[1];
+  for (let i = buildBattleTitles.length - 1; i >= 0; i--) {
+    if (score >= buildBattleTitles[i].req) {
+      currentTitle = buildBattleTitles[i];
+      nextTitle = buildBattleTitles[i + 1] || null;
+      break;
+    }
+  }
+  return { currentTitle, nextTitle };
+}
+
 type StatsDisplayProps = {
   stats: any;
   lastUpdated?: number;
@@ -13,6 +164,12 @@ type StatsDisplayProps = {
 export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
   const bbStats = stats.stats?.BuildBattle || {};
   const achievements = stats.achievements || {};
+
+  const rankTag = useMemo(() => {
+    const tag = calcRankTag(stats);
+    if (tag.length === 1 && tag[0][1] === "") return null;
+    return tag;
+  }, [stats]);
 
   const [avatarUrls, setAvatarUrls] = useState<{
     head: string;
@@ -82,6 +239,20 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
     return topMode.wins > 0 ? topMode.name : null;
   }, [bbTotalWins, gtbTotalWins, spbTotalWins]);
 
+  const titleInfo = useMemo(() => {
+    const score = bbStats.score || 0;
+    const { currentTitle, nextTitle } = getTitleInfo(score);
+    let progress = 100;
+    let toGo = 0;
+    if (nextTitle) {
+      const range = nextTitle.req - currentTitle.req;
+      const current = score - currentTitle.req;
+      progress = Math.min(100, (current / range) * 100);
+      toGo = nextTitle.req - score;
+    }
+    return { currentTitle, nextTitle, progress, toGo };
+  }, [bbStats.score]);
+
   const lastUpdateText = useMemo(() => {
     if (!lastUpdated || Number.isNaN(lastUpdated)) return null;
     const nowSeconds = Math.floor(Date.now() / 1000);
@@ -106,6 +277,18 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
             </div>
           )}
           <h2 className="text-xl font-bold break-all whitespace-pre-wrap">
+            {rankTag && (
+              <span className="mr-1">
+                {rankTag.map(([color, text], i) => (
+                  <span
+                    key={i}
+                    style={{ color: mcColorMap[color] || "#FFFFFF" }}
+                  >
+                    {text}
+                  </span>
+                ))}
+              </span>
+            )}
             {stats.displayname}
           </h2>
         </div>
@@ -115,6 +298,51 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
           </span>
         )}
       </div>
+
+      <div className="space-y-2">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
+          <div className="flex items-center gap-1.5">
+            <span style={{ color: titleInfo.currentTitle.color }}>
+              α {titleInfo.currentTitle.name}
+            </span>
+            {titleInfo.nextTitle && (
+              <>
+                <span className="text-muted-foreground">→</span>
+                <span style={{ color: titleInfo.nextTitle.color }}>
+                  {titleInfo.nextTitle.name}
+                </span>
+              </>
+            )}
+          </div>
+          <span className="text-muted-foreground text-xs sm:text-sm">
+            {titleInfo.nextTitle
+              ? `${titleInfo.toGo.toLocaleString()} more`
+              : "MAX"}
+          </span>
+        </div>
+        <div className="flex items-center gap-0.5 md:gap-1">
+          {Array.from({ length: 10 }).map((_, i) => {
+            const segmentProgress = titleInfo.progress / 10;
+            const filled = i < Math.floor(segmentProgress);
+            const partial = i === Math.floor(segmentProgress);
+            const alpha = partial ? segmentProgress % 1 : 0;
+            let bg = "hsl(var(--secondary))";
+            if (filled) {
+              bg = "#7FFF00";
+            } else if (partial && alpha > 0) {
+              bg = `color-mix(in srgb, #7FFF00 ${alpha * 100}%, hsl(var(--secondary)))`;
+            }
+            return (
+              <div
+                key={i}
+                className="h-1.5 flex-1 rounded-sm"
+                style={{ backgroundColor: bg }}
+              />
+            );
+          })}
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Card className="p-3 space-y-1.5">
           <div className="text-sm space-y-1.5 flex flex-col h-full">
