@@ -5,6 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { generateAvatarUrls } from "@/lib/avatar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const mcColorMap: Record<string, string> = {
   "0": "#000000",
@@ -155,6 +161,20 @@ function formatLastWon(
     timeZoneName: "short",
   });
   return { ago, full };
+}
+
+function parseLoadoutItem(item: string): { name: string; id: string } {
+  if (!item || item === "AIR") return { name: "Empty", id: "air" };
+  const parts = item.split(":");
+  const baseName = parts[0].toLowerCase();
+  const displayName = parts[0]
+    .replace(/_/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return { name: displayName, id: baseName };
+}
+
+function getItemImageUrl(id: string): string {
+  return `https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.8/items/${id}.png`;
 }
 
 const buildBattleTitles = [
@@ -543,6 +563,52 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
           </div>
         </div>
       </fieldset>
+
+      {bbStats.buildbattle_loadout && (
+        <fieldset className="border rounded-lg p-3 pt-2">
+          <legend className="text-sm font-medium px-1">Loadout</legend>
+          <TooltipProvider>
+            <div className="flex flex-wrap justify-center gap-1 sm:gap-2 lg:gap-3 p-2 rounded">
+              {bbStats.buildbattle_loadout.map((item: string, i: number) => {
+                const parsed = parseLoadoutItem(item);
+                const isAir = parsed.id === "air";
+                return (
+                  <Tooltip key={i}>
+                    <TooltipTrigger asChild>
+                      <div className="w-10 h-10 bg-secondary/30 border border-border/50 rounded flex items-center justify-center">
+                        {!isAir && (
+                          <>
+                            <img
+                              src={getItemImageUrl(parsed.id)}
+                              alt={parsed.name}
+                              className="w-8 h-8 brightness-110 contrast-110"
+                              style={{ imageRendering: "pixelated" }}
+                              onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                target.style.display = "none";
+                                const fallback =
+                                  target.nextElementSibling as HTMLElement;
+                                if (fallback)
+                                  fallback.classList.remove("hidden");
+                              }}
+                            />
+                            <span className="hidden text-[8px] text-center leading-tight">
+                              {parsed.name}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p className="font-mono text-xs">{item}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                );
+              })}
+            </div>
+          </TooltipProvider>
+        </fieldset>
+      )}
 
       {bbStats.last_won && (
         <fieldset className="border rounded-lg p-3 pt-2">
