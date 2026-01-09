@@ -2,6 +2,7 @@ name: PR Diff Comment
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened]
     paths:
       - "lib/source/translations-data.json"
       - "lib/source/versions.json"
@@ -89,34 +90,22 @@ jobs:
               for (const [id, prItem] of prMap) {
                 const baseItem = baseMap.get(id);
                 if (!baseItem) {
-                  added.push({
-                    theme: prItem.theme,
-                    shortcut: prItem.shortcut,
-                    multiwords: prItem.multiwords?.map(m => m.multiword) || []
-                  });
+                  added.push(prItem);
                 } else {
                   const shortcutChanged = baseItem.shortcut !== prItem.shortcut;
-                  const baseMultiwords = (baseItem.multiwords || []).map(m => m.multiword).sort();
-                  const prMultiwords = (prItem.multiwords || []).map(m => m.multiword).sort();
-                  const multiwordsChanged = JSON.stringify(baseMultiwords) !== JSON.stringify(prMultiwords);
+                  const baseMultiwords = JSON.stringify(baseItem.multiwords || []);
+                  const prMultiwords = JSON.stringify(prItem.multiwords || []);
+                  const multiwordsChanged = baseMultiwords !== prMultiwords;
 
                   if (shortcutChanged || multiwordsChanged) {
-                    modified.push({
-                      theme: prItem.theme,
-                      shortcut: shortcutChanged ? { from: baseItem.shortcut, to: prItem.shortcut } : null,
-                      multiwords: multiwordsChanged ? { from: baseMultiwords, to: prMultiwords } : null
-                    });
+                    modified.push({ base: baseItem, pr: prItem, shortcutChanged, multiwordsChanged });
                   }
                 }
               }
 
               for (const [id, baseItem] of baseMap) {
                 if (!prMap.has(id)) {
-                  removed.push({
-                    theme: baseItem.theme,
-                    shortcut: baseItem.shortcut,
-                    multiwords: baseItem.multiwords?.map(m => m.multiword) || []
-                  });
+                  removed.push(baseItem);
                 }
               }
 
@@ -133,9 +122,9 @@ jobs:
           // Versions section
           report += '### Version Update\n\n';
           if (versionsChanged) {
-            report += '| Field | Before | After |\n';
-            report += '|-------|--------|-------|\n';
-            report += `| last_updated | \`${versionsChanged.from}\` | \`${versionsChanged.to}\` |\n`;
+            report += '| Before | After |\n';
+            report += '|--------|-------|\n';
+            report += `| \`${versionsChanged.from}\` | \`${versionsChanged.to}\` |\n`;
           } else {
             report += '_No version changes detected._\n';
           }
@@ -150,39 +139,59 @@ jobs:
           if (!hasChanges) {
             report += '_No shortcut or multiword changes detected._\n';
           } else {
-            // Summary
-            report += '#### Summary\n\n';
-            report += `| Type | Count |\n`;
-            report += `|------|-------|\n`;
-            report += `| Added | ${added.length} |\n`;
-            report += `| Removed | ${removed.length} |\n`;
-            report += `| Modified | ${modified.length} |\n`;
-            report += '\n';
+            const formatItem = (item) => {
+              return {
+                shortcut: item.shortcut || null,
+                multiwords: (item.multiwords || []).map(m => m.multiword)
+              };
+            };
+
+            const generateDiff = (base, pr, shortcutChanged, multiwordsChanged) => {
+              let diff = '```diff\n{\n';
+              if (shortcutChanged) {
+                diff += `-  "shortcut": ${JSON.stringify(base.shortcut)},\n`;
+                diff += `+  "shortcut": ${JSON.stringify(pr.shortcut)},\n`;
+              } else {
+                diff += `   "shortcut": ${JSON.stringify(pr.shortcut)},\n`;
+              }
+              if (multiwordsChanged) {
+                diff += `-  "multiwords": ${JSON.stringify(base.multiwords, null, 2).split('\n').join('\n-  ')}\n`;
+                diff += `+  "multiwords": ${JSON.stringify(pr.multiwords, null, 2).split('\n').join('\n+  ')}\n`;
+              } else {
+                diff += `   "multiwords": ${JSON.stringify(pr.multiwords)}\n`;
+              }
+              diff += '}\n```\n\n';
+              return diff;
+            };
 
             // Added themes
             if (added.length > 0) {
               report += '<details>\n';
               report += `<summary><strong>Added Themes (${added.length})</strong></summary>\n\n`;
-              report += '| Theme | Shortcut | Multiwords |\n';
-              report += '|-------|----------|------------|\n';
               for (const item of added) {
-                const mw = item.multiwords.length > 0 ? item.multiwords.join(', ') : '-';
-                report += `| ${item.theme} | \`${item.shortcut || '-'}\` | ${mw} |\n`;
+                const formatted = formatItem(item);
+                report += `**${item.theme}**\n\n`;
+                report += '```diff\n{\n';
+                report += `+  "shortcut": ${JSON.stringify(formatted.shortcut)},\n`;
+                report += `+  "multiwords": ${JSON.stringify(formatted.multiwords, null, 2).split('\n').join('\n+  ')}\n`;
+                report += '}\n```\n\n';
               }
-              report += '\n</details>\n\n';
+              report += '</details>\n\n';
             }
 
             // Removed themes
             if (removed.length > 0) {
               report += '<details>\n';
               report += `<summary><strong>Removed Themes (${removed.length})</strong></summary>\n\n`;
-              report += '| Theme | Shortcut | Multiwords |\n';
-              report += '|-------|----------|------------|\n';
               for (const item of removed) {
-                const mw = item.multiwords.length > 0 ? item.multiwords.join(', ') : '-';
-                report += `| ${item.theme} | \`${item.shortcut || '-'}\` | ${mw} |\n`;
+                const formatted = formatItem(item);
+                report += `**${item.theme}**\n\n`;
+                report += '```diff\n{\n';
+                report += `-  "shortcut": ${JSON.stringify(formatted.shortcut)},\n`;
+                report += `-  "multiwords": ${JSON.stringify(formatted.multiwords, null, 2).split('\n').join('\n-  ')}\n`;
+                report += '}\n```\n\n';
               }
-              report += '\n</details>\n\n';
+              report += '</details>\n\n';
             }
 
             // Modified themes
@@ -190,16 +199,10 @@ jobs:
               report += '<details>\n';
               report += `<summary><strong>Modified Themes (${modified.length})</strong></summary>\n\n`;
               for (const item of modified) {
-                report += `**${item.theme}**\n\n`;
-                if (item.shortcut) {
-                  report += `- Shortcut: \`${item.shortcut.from || '(empty)'}\` -> \`${item.shortcut.to || '(empty)'}\`\n`;
-                }
-                if (item.multiwords) {
-                  const fromMw = item.multiwords.from.length > 0 ? item.multiwords.from.join(', ') : '(none)';
-                  const toMw = item.multiwords.to.length > 0 ? item.multiwords.to.join(', ') : '(none)';
-                  report += `- Multiwords: ${fromMw} -> ${toMw}\n`;
-                }
-                report += '\n';
+                const baseFormatted = formatItem(item.base);
+                const prFormatted = formatItem(item.pr);
+                report += `**${item.pr.theme}**\n\n`;
+                report += generateDiff(baseFormatted, prFormatted, item.shortcutChanged, item.multiwordsChanged);
               }
               report += '</details>\n\n';
             }
