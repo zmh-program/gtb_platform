@@ -105,15 +105,8 @@ function replaceCustomColors(
 
 function calcRankTag(player: any): [string, string][] {
   if (!player || typeof player !== "object") return ranks.DEFAULT;
-  let {
-    packageRank,
-    newPackageRank,
-    monthlyPackageRank,
-    rankPlusColor,
-    monthlyRankColor,
-    rank,
-    prefix,
-  } = player;
+  const { rankPlusColor, monthlyRankColor, prefix } = player;
+  let { packageRank, newPackageRank, monthlyPackageRank, rank } = player;
   if (rank === "NORMAL") rank = null;
   if (monthlyPackageRank === "NONE") monthlyPackageRank = null;
   if (packageRank === "NONE") packageRank = null;
