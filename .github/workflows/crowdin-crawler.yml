@@ -1,0 +1,63 @@
+name: Crowdin Crawler
+
+on:
+  workflow_dispatch:
+    inputs:
+      crowdin_cookie:
+        description: "Crowdin Cookie (optional, overrides secret)"
+        required: false
+        type: string
+      crowdin_csrf_token:
+        description: "Crowdin CSRF Token (optional, overrides secret)"
+        required: false
+        type: string
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          cd crowdin_api
+          pip install -r requirements.txt || pip install requests
+
+      - name: Run crawler
+        env:
+          CROWDIN_COOKIE: ${{ inputs.crowdin_cookie || secrets.CROWDIN_COOKIE }}
+          CROWDIN_CSRF_TOKEN: ${{ inputs.crowdin_csrf_token || secrets.CROWDIN_CSRF_TOKEN }}
+        run: |
+          cd crowdin_api
+          python crawler.py
+
+      - name: Run analysis
+        run: |
+          cd crowdin_api
+          python analysis.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update db"
+          title: "chore: update db"
+          body: |
+            Automated Crowdin data update.
+
+            Co-authored-by: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          branch: crowdin-update
+          delete-branch: true
+          committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
