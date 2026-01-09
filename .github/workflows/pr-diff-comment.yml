@@ -1,0 +1,229 @@
+name: PR Diff Comment
+
+on:
+  pull_request:
+    paths:
+      - "lib/source/translations-data.json"
+      - "lib/source/versions.json"
+
+jobs:
+  diff-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+
+      - name: Checkout base branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate diff report
+        id: diff
+        run: |
+          node << 'EOF' > diff_report.md
+          const fs = require('fs');
+
+          let report = '';
+
+          // versions.json diff
+          const versionsChanged = (() => {
+            try {
+              const basePath = 'base/lib/source/versions.json';
+              const prPath = 'pr/lib/source/versions.json';
+
+              const baseExists = fs.existsSync(basePath);
+              const prExists = fs.existsSync(prPath);
+
+              if (!baseExists && !prExists) return null;
+
+              const baseData = baseExists ? JSON.parse(fs.readFileSync(basePath, 'utf8')) : {};
+              const prData = prExists ? JSON.parse(fs.readFileSync(prPath, 'utf8')) : {};
+
+              if (baseData.last_updated !== prData.last_updated) {
+                return {
+                  from: baseData.last_updated || '(empty)',
+                  to: prData.last_updated || '(empty)'
+                };
+              }
+              return null;
+            } catch (e) {
+              return null;
+            }
+          })();
+
+          // translations-data.json diff
+          const translationsChanges = (() => {
+            try {
+              const basePath = 'base/lib/source/translations-data.json';
+              const prPath = 'pr/lib/source/translations-data.json';
+
+              const baseExists = fs.existsSync(basePath);
+              const prExists = fs.existsSync(prPath);
+
+              if (!baseExists && !prExists) return { added: [], removed: [], modified: [] };
+
+              const baseData = baseExists ? JSON.parse(fs.readFileSync(basePath, 'utf8')) : [];
+              const prData = prExists ? JSON.parse(fs.readFileSync(prPath, 'utf8')) : [];
+
+              const baseMap = new Map(baseData.map(item => [item.id, item]));
+              const prMap = new Map(prData.map(item => [item.id, item]));
+
+              const added = [];
+              const removed = [];
+              const modified = [];
+
+              for (const [id, prItem] of prMap) {
+                const baseItem = baseMap.get(id);
+                if (!baseItem) {
+                  added.push({
+                    theme: prItem.theme,
+                    shortcut: prItem.shortcut,
+                    multiwords: prItem.multiwords?.map(m => m.multiword) || []
+                  });
+                } else {
+                  const shortcutChanged = baseItem.shortcut !== prItem.shortcut;
+                  const baseMultiwords = (baseItem.multiwords || []).map(m => m.multiword).sort();
+                  const prMultiwords = (prItem.multiwords || []).map(m => m.multiword).sort();
+                  const multiwordsChanged = JSON.stringify(baseMultiwords) !== JSON.stringify(prMultiwords);
+
+                  if (shortcutChanged || multiwordsChanged) {
+                    modified.push({
+                      theme: prItem.theme,
+                      shortcut: shortcutChanged ? { from: baseItem.shortcut, to: prItem.shortcut } : null,
+                      multiwords: multiwordsChanged ? { from: baseMultiwords, to: prMultiwords } : null
+                    });
+                  }
+                }
+              }
+
+              for (const [id, baseItem] of baseMap) {
+                if (!prMap.has(id)) {
+                  removed.push({
+                    theme: baseItem.theme,
+                    shortcut: baseItem.shortcut,
+                    multiwords: baseItem.multiwords?.map(m => m.multiword) || []
+                  });
+                }
+              }
+
+              return { added, removed, modified };
+            } catch (e) {
+              console.error(e);
+              return { added: [], removed: [], modified: [] };
+            }
+          })();
+
+          // Build report
+          report += '## Database Changes Report\n\n';
+
+          // Versions section
+          report += '### Version Update\n\n';
+          if (versionsChanged) {
+            report += '| Field | Before | After |\n';
+            report += '|-------|--------|-------|\n';
+            report += `| last_updated | \`${versionsChanged.from}\` | \`${versionsChanged.to}\` |\n`;
+          } else {
+            report += '_No version changes detected._\n';
+          }
+          report += '\n';
+
+          // Translations section
+          report += '### Shortcut / Multiword Changes\n\n';
+
+          const { added, removed, modified } = translationsChanges;
+          const hasChanges = added.length > 0 || removed.length > 0 || modified.length > 0;
+
+          if (!hasChanges) {
+            report += '_No shortcut or multiword changes detected._\n';
+          } else {
+            // Summary
+            report += '#### Summary\n\n';
+            report += `| Type | Count |\n`;
+            report += `|------|-------|\n`;
+            report += `| Added | ${added.length} |\n`;
+            report += `| Removed | ${removed.length} |\n`;
+            report += `| Modified | ${modified.length} |\n`;
+            report += '\n';
+
+            // Added themes
+            if (added.length > 0) {
+              report += '<details>\n';
+              report += `<summary><strong>Added Themes (${added.length})</strong></summary>\n\n`;
+              report += '| Theme | Shortcut | Multiwords |\n';
+              report += '|-------|----------|------------|\n';
+              for (const item of added) {
+                const mw = item.multiwords.length > 0 ? item.multiwords.join(', ') : '-';
+                report += `| ${item.theme} | \`${item.shortcut || '-'}\` | ${mw} |\n`;
+              }
+              report += '\n</details>\n\n';
+            }
+
+            // Removed themes
+            if (removed.length > 0) {
+              report += '<details>\n';
+              report += `<summary><strong>Removed Themes (${removed.length})</strong></summary>\n\n`;
+              report += '| Theme | Shortcut | Multiwords |\n';
+              report += '|-------|----------|------------|\n';
+              for (const item of removed) {
+                const mw = item.multiwords.length > 0 ? item.multiwords.join(', ') : '-';
+                report += `| ${item.theme} | \`${item.shortcut || '-'}\` | ${mw} |\n`;
+              }
+              report += '\n</details>\n\n';
+            }
+
+            // Modified themes
+            if (modified.length > 0) {
+              report += '<details>\n';
+              report += `<summary><strong>Modified Themes (${modified.length})</strong></summary>\n\n`;
+              for (const item of modified) {
+                report += `**${item.theme}**\n\n`;
+                if (item.shortcut) {
+                  report += `- Shortcut: \`${item.shortcut.from || '(empty)'}\` -> \`${item.shortcut.to || '(empty)'}\`\n`;
+                }
+                if (item.multiwords) {
+                  const fromMw = item.multiwords.from.length > 0 ? item.multiwords.from.join(', ') : '(none)';
+                  const toMw = item.multiwords.to.length > 0 ? item.multiwords.to.join(', ') : '(none)';
+                  report += `- Multiwords: ${fromMw} -> ${toMw}\n`;
+                }
+                report += '\n';
+              }
+              report += '</details>\n\n';
+            }
+          }
+
+          report += '---\n';
+          report += '_This comment is automatically generated._\n';
+
+          fs.writeFileSync('diff_report.md', report);
+          console.log('Report generated successfully');
+          EOF
+
+      - name: Find existing comment
+        uses: peter-evans/find-comment@v3
+        id: fc
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: "github-actions[bot]"
+          body-includes: "## Database Changes Report"
+
+      - name: Create or update comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          comment-id: ${{ steps.fc.outputs.comment-id }}
+          issue-number: ${{ github.event.pull_request.number }}
+          body-path: diff_report.md
+          edit-mode: replace
