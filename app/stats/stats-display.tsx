@@ -122,6 +122,41 @@ function calcRankTag(player: any): [string, string][] {
   return ranks.DEFAULT;
 }
 
+function formatCosmetic(value: string | undefined, prefix: string): string {
+  if (!value) return "N/A";
+  const cleaned = value.replace(prefix, "").replace(/_/g, " ");
+  if (cleaned === "none") return "N/A";
+  return cleaned.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+function formatLastWon(
+  timestamp: number | undefined,
+): { ago: string; full: string } | null {
+  if (!timestamp) return null;
+  const now = Date.now();
+  const diff = now - timestamp;
+  const seconds = Math.floor(diff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  let ago = "";
+  if (days > 0) ago = `${days}d ago`;
+  else if (hours > 0) ago = `${hours}h ago`;
+  else if (minutes > 0) ago = `${minutes}m ago`;
+  else ago = "just now";
+  const date = new Date(timestamp);
+  const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const full = date.toLocaleString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+  return { ago, full };
+}
+
 const buildBattleTitles = [
   { req: 0, color: "#FFFFFF", name: "Rookie" },
   { req: 100, color: "#AAAAAA", name: "Untrained" },
@@ -393,6 +428,10 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
               <span>{averagePoint}</span>
             </div>
             <div className="flex justify-between items-center">
+              <span className="text-muted-foreground">Super Votes</span>
+              <span>{bbStats.super_votes?.toLocaleString() || 0}</span>
+            </div>
+            <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Coins</span>
               <span>{bbStats.coins?.toLocaleString() || 0}</span>
             </div>
@@ -487,6 +526,62 @@ export function StatsDisplay({ stats, lastUpdated }: StatsDisplayProps) {
           </Card>
         </div>
       </div>
+
+      <fieldset className="border rounded-lg p-3 pt-2">
+        <legend className="text-sm font-medium px-1">Cosmetics</legend>
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-3 text-sm">
+          <div>
+            <span className="text-muted-foreground text-xs">Hat</span>
+            <p>{formatCosmetic(bbStats.new_selected_hat, "hats_")}</p>
+          </div>
+          <div>
+            <span className="text-muted-foreground text-xs">Trail</span>
+            <p>
+              {formatCosmetic(bbStats.active_movement_trail, "movement_trail_")}
+            </p>
+          </div>
+          <div>
+            <span className="text-muted-foreground text-xs">Backdrop</span>
+            <p>{formatCosmetic(bbStats.selected_backdrop, "backdrops_")}</p>
+          </div>
+          <div>
+            <span className="text-muted-foreground text-xs">Suit</span>
+            <p>{formatCosmetic(bbStats.new_suit, "suits_")}</p>
+          </div>
+          <div>
+            <span className="text-muted-foreground text-xs">Victory Dance</span>
+            <p>{formatCosmetic(bbStats.new_victory_dance, "victory_dance_")}</p>
+          </div>
+        </div>
+      </fieldset>
+
+      {bbStats.last_won && (
+        <fieldset className="border rounded-lg p-3 pt-2">
+          <legend className="text-sm font-medium px-1">Last Won</legend>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-sm">
+            {[
+              { key: "SOLO_NORMAL", label: "Solo" },
+              { key: "TEAMS_NORMAL", label: "Teams" },
+              { key: "SOLO_PRO", label: "Pro" },
+              { key: "GUESS_THE_BUILD", label: "GTB" },
+              { key: "SPEED_BUILDERS", label: "SPB" },
+            ].map(({ key, label }) => {
+              const info = formatLastWon(bbStats.last_won?.[key]);
+              return (
+                <div key={key}>
+                  <span className="text-muted-foreground text-xs">{label}</span>
+                  {info ? (
+                    <p title={info.full}>{info.ago}</p>
+                  ) : (
+                    <p className="text-muted-foreground">N/A</p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </fieldset>
+      )}
+
       {lastUpdateText && (
         <div className="flex justify-end">
           <span className="text-xs text-muted-foreground">
