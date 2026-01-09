@@ -230,8 +230,18 @@ jobs:
             if (shortcutChanges.length > 0) {
               report += '### Shortcuts\n\n';
               shortcutChanges.forEach((item, idx) => {
-                const from = item.type === 'added' ? '*n/a*' : `\`${item.from || item.value}\``;
-                const to = item.type === 'removed' ? '*n/a*' : `\`${item.to || item.value}\``;
+                const formatShortcut = (val) => val == null ? '*null*' : `\`${val}\``;
+                let from, to;
+                if (item.type === 'added') {
+                  from = '*n/a*';
+                  to = formatShortcut(item.value);
+                } else if (item.type === 'removed') {
+                  from = formatShortcut(item.value);
+                  to = '*n/a*';
+                } else {
+                  from = formatShortcut(item.from);
+                  to = formatShortcut(item.to);
+                }
                 report += `${idx + 1}. **${item.theme}**: ${from} -> ${to}\n`;
               });
               report += '\n';
