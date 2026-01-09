@@ -19,7 +19,16 @@ async function getHypixelStatsRaw(uuid: string, apiKey: string): Promise<any> {
     },
   });
 
-  const hypixelData: HypixelResponse = await hypixelRes.json();
+  const response = await hypixelRes.text();
+
+  let hypixelData: HypixelResponse;
+  try {
+    hypixelData = JSON.parse(response) as HypixelResponse;
+  } catch (error) {
+    throw new Error(
+      `Failed to parse Hypixel response: ${error}. Body: ${response}`,
+    );
+  }
 
   if (!hypixelData.success) {
     throw new Error(hypixelData.cause || "Failed to fetch Hypixel stats");
