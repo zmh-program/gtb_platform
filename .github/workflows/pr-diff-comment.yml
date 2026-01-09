@@ -120,18 +120,25 @@ jobs:
           report += '## Database Changes Report\n\n';
 
           // Versions section
-          report += '### Version Update\n\n';
           if (versionsChanged) {
-            report += '| Before | After |\n';
-            report += '|--------|-------|\n';
-            report += `| \`${versionsChanged.from}\` | \`${versionsChanged.to}\` |\n`;
-          } else {
-            report += '_No version changes detected._\n';
+            const daysDiff = (() => {
+              try {
+                const from = new Date(versionsChanged.from);
+                const to = new Date(versionsChanged.to);
+                const diff = Math.round((to - from) / (1000 * 60 * 60 * 24));
+                return diff;
+              } catch (e) {
+                return null;
+              }
+            })();
+            report += '> **Version Update:** ';
+            report += `\`${versionsChanged.from}\` → \`${versionsChanged.to}\``;
+            if (daysDiff !== null) {
+              report += ` (${daysDiff} days)`;
+            }
+            report += '\n\n';
           }
           report += '\n';
-
-          // Translations section
-          report += '### Shortcut / Multiword Changes\n\n';
 
           const { added, removed, modified } = translationsChanges;
           const hasChanges = added.length > 0 || removed.length > 0 || modified.length > 0;
@@ -139,80 +146,112 @@ jobs:
           if (!hasChanges) {
             report += '_No shortcut or multiword changes detected._\n';
           } else {
-            const formatItem = (item) => {
-              return {
-                shortcut: item.shortcut || null,
-                multiwords: (item.multiwords || []).map(m => m.multiword)
-              };
-            };
+            const shortcutChanges = [];
+            const multiwordChanges = [];
 
-            const generateDiff = (base, pr, shortcutChanged, multiwordsChanged) => {
-              let diff = '```diff\n{\n';
-              if (shortcutChanged) {
-                diff += `-  "shortcut": ${JSON.stringify(base.shortcut)},\n`;
-                diff += `+  "shortcut": ${JSON.stringify(pr.shortcut)},\n`;
-              } else {
-                diff += `   "shortcut": ${JSON.stringify(pr.shortcut)},\n`;
+            for (const item of added) {
+              if (item.shortcut) {
+                shortcutChanges.push({ theme: item.theme, type: 'added', value: item.shortcut });
               }
-              if (multiwordsChanged) {
-                diff += `-  "multiwords": ${JSON.stringify(base.multiwords, null, 2).split('\n').join('\n-  ')}\n`;
-                diff += `+  "multiwords": ${JSON.stringify(pr.multiwords, null, 2).split('\n').join('\n+  ')}\n`;
-              } else {
-                diff += `   "multiwords": ${JSON.stringify(pr.multiwords)}\n`;
+              if (item.multiwords && item.multiwords.length > 0) {
+                multiwordChanges.push({ theme: item.theme, type: 'added', value: item.multiwords });
               }
-              diff += '}\n```\n\n';
-              return diff;
-            };
-
-            // Added themes
-            if (added.length > 0) {
-              report += '<details>\n';
-              report += `<summary><strong>Added Themes (${added.length})</strong></summary>\n\n`;
-              for (const item of added) {
-                const formatted = formatItem(item);
-                report += `**${item.theme}**\n\n`;
-                report += '```diff\n{\n';
-                report += `+  "shortcut": ${JSON.stringify(formatted.shortcut)},\n`;
-                report += `+  "multiwords": ${JSON.stringify(formatted.multiwords, null, 2).split('\n').join('\n+  ')}\n`;
-                report += '}\n```\n\n';
-              }
-              report += '</details>\n\n';
             }
 
-            // Removed themes
-            if (removed.length > 0) {
-              report += '<details>\n';
-              report += `<summary><strong>Removed Themes (${removed.length})</strong></summary>\n\n`;
-              for (const item of removed) {
-                const formatted = formatItem(item);
-                report += `**${item.theme}**\n\n`;
-                report += '```diff\n{\n';
-                report += `-  "shortcut": ${JSON.stringify(formatted.shortcut)},\n`;
-                report += `-  "multiwords": ${JSON.stringify(formatted.multiwords, null, 2).split('\n').join('\n-  ')}\n`;
-                report += '}\n```\n\n';
+            for (const item of removed) {
+              if (item.shortcut) {
+                shortcutChanges.push({ theme: item.theme, type: 'removed', value: item.shortcut });
               }
-              report += '</details>\n\n';
+              if (item.multiwords && item.multiwords.length > 0) {
+                multiwordChanges.push({ theme: item.theme, type: 'removed', value: item.multiwords });
+              }
             }
 
-            // Modified themes
-            if (modified.length > 0) {
-              report += '<details>\n';
-              report += `<summary><strong>Modified Themes (${modified.length})</strong></summary>\n\n`;
-              for (const item of modified) {
-                const baseFormatted = formatItem(item.base);
-                const prFormatted = formatItem(item.pr);
-                report += `**${item.pr.theme}**\n\n`;
-                report += generateDiff(baseFormatted, prFormatted, item.shortcutChanged, item.multiwordsChanged);
+            for (const item of modified) {
+              if (item.shortcutChanged) {
+                shortcutChanges.push({
+                  theme: item.pr.theme,
+                  type: 'modified',
+                  from: item.base.shortcut,
+                  to: item.pr.shortcut
+                });
               }
-              report += '</details>\n\n';
+              if (item.multiwordsChanged) {
+                multiwordChanges.push({
+                  theme: item.pr.theme,
+                  type: 'modified',
+                  from: item.base.multiwords || [],
+                  to: item.pr.multiwords || []
+                });
+              }
+            }
+
+            const diffMultiwords = (from, to) => {
+              const fromMap = new Map(from.map(m => [m.multiword, m]));
+              const toMap = new Map(to.map(m => [m.multiword, m]));
+              const lines = [];
+              for (const m of from) {
+                if (!toMap.has(m.multiword)) {
+                  lines.push({ type: '-', content: JSON.stringify(m, null, 2) });
+                } else {
+                  lines.push({ type: ' ', content: JSON.stringify(toMap.get(m.multiword), null, 2) });
+                }
+              }
+              for (const m of to) {
+                if (!fromMap.has(m.multiword)) {
+                  lines.push({ type: '+', content: JSON.stringify(m, null, 2) });
+                }
+              }
+              return lines;
+            };
+
+            if (shortcutChanges.length > 0) {
+              report += '### Shortcuts\n\n';
+              shortcutChanges.forEach((item, idx) => {
+                const from = item.type === 'added' ? '*n/a*' : `\`${item.from || item.value}\``;
+                const to = item.type === 'removed' ? '*n/a*' : `\`${item.to || item.value}\``;
+                report += `${idx + 1}. **${item.theme}**: ${from} -> ${to}\n`;
+              });
+              report += '\n';
+            }
+
+            if (multiwordChanges.length > 0) {
+              report += '### Multiwords\n\n';
+              multiwordChanges.forEach((item, idx) => {
+                report += `${idx + 1}. **${item.theme}**\n\n`;
+                report += '```diff\n';
+                if (item.type === 'added') {
+                  for (const mw of item.value) {
+                    const lines = JSON.stringify(mw, null, 2).split('\n');
+                    for (const line of lines) {
+                      report += `+  ${line}\n`;
+                    }
+                  }
+                } else if (item.type === 'removed') {
+                  for (const mw of item.value) {
+                    const lines = JSON.stringify(mw, null, 2).split('\n');
+                    for (const line of lines) {
+                      report += `-  ${line}\n`;
+                    }
+                  }
+                } else {
+                  const diffLines = diffMultiwords(item.from, item.to);
+                  for (const d of diffLines) {
+                    const lines = d.content.split('\n');
+                    for (const line of lines) {
+                      report += `${d.type}  ${line}\n`;
+                    }
+                  }
+                }
+                report += '```\n\n';
+              });
             }
           }
 
           report += '---\n';
-          report += '_This comment is automatically generated._\n';
+          report += '_This report is automatically generated._\n';
 
           fs.writeFileSync('diff_report.md', report);
-          console.log('Report generated successfully');
           EOF
 
       - name: Find existing comment
