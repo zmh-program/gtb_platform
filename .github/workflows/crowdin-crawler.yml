@@ -48,6 +48,7 @@ jobs:
           python analysis.py
 
       - name: Create Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -61,3 +62,10 @@ jobs:
           delete-branch: true
           committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+
+      - name: Trigger PR Diff Comment
+        if: steps.cpr.outputs.pull-request-number
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          event-type: pr-diff-comment
+          client-payload: '{"pr_number": "${{ steps.cpr.outputs.pull-request-number }}"}'
