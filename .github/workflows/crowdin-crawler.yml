@@ -11,8 +11,6 @@ on:
         description: "Crowdin CSRF Token (optional, overrides secret)"
         required: false
         type: string
-  schedule:
-    - cron: "0 0 * * *"
 
 jobs:
   crawl:
