@@ -9,6 +9,9 @@
     "lint": "next lint",
     "prettier": "prettier --write ./**/*.{js,jsx,ts,tsx,json}",
     "format": "isort crowdin_api && black crowdin_api",
+    "browser": "cd crowdin_api && python browser_script.py",
+    "crawler": "cd crowdin_api && python crawler.py",
+    "analysis": "cd crowdin_api && python analysis.py",
     "ui": "npx shadcn@latest add"
   },
   "dependencies": {
