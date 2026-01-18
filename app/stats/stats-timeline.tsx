@@ -45,8 +45,8 @@ function getDiffs(current: any, previous: any): Diff[] {
     ];
 
     numericFields.forEach(({ key, label }) => {
-        const currVal = currBb[key] || 0;
-        const prevVal = prevBb[key] || 0;
+        const currVal = Number(currBb[key] || 0);
+        const prevVal = Number(prevBb[key] || 0);
 
         // If previous exists, only show changes.
         // If previous doesn't exist, show all non-zero values as initial state.

@@ -296,10 +296,10 @@ export function StatsContent() {
                 <StatsDisplay stats={stats.player} />
               </div>
             </Card>
+
+            <StatsTimeline history={history} />
           </>
         )}
-
-        <StatsTimeline history={history} />
 
         <div className="w-full mt-8 space-y-4">
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
