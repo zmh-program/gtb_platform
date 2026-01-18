@@ -4,6 +4,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUp, Clock, History } from "lucide-react";
 
+import {
+    mcColorMap,
+    colorNames,
+    buildBattleEmblems,
+} from "@/lib/hypixel-constants";
+
 type StatsSnapshot = {
     created_at: string;
     data: any;
@@ -15,7 +21,7 @@ type Diff = {
     oldValue: any;
     newValue: any;
     diff: number | string;
-    type: "number" | "string";
+    type: "number" | "string" | "element";
     isInitial?: boolean;
 };
 
@@ -74,6 +80,15 @@ function getDiffs(current: any, previous: any): Diff[] {
         }
     });
 
+    const buildBattleEmblems: Record<string, string> = {
+        ALPHA: "α",
+        OMEGA: "Ω",
+        REMINISCENCE: "≈",
+        RICH: "$",
+        PODIUM: "π",
+        FLORIN: "ƒ",
+    };
+
     const stringFields = [
         { key: "new_selected_hat", label: "Hat" },
         { key: "active_movement_trail", label: "Trail" },
@@ -119,6 +134,53 @@ function getDiffs(current: any, previous: any): Diff[] {
             });
         }
     });
+
+    // Emblem Logic
+    const currEmblem = currBb.emblem || {};
+    const prevEmblem = prevBb.emblem || {};
+
+    const currIcon = currEmblem.selected_icon;
+    const prevIcon = prevEmblem.selected_icon;
+    const currColorName = currEmblem.selected_color;
+    const prevColorName = prevEmblem.selected_color;
+
+    // Determine if we should show emblem
+    let showEmblem = false;
+    let isInit = false;
+
+    if (previous) {
+        // Show if either icon or color changed
+        if (
+            (currIcon !== prevIcon || currColorName !== prevColorName) &&
+            currIcon
+        ) {
+            showEmblem = true;
+        }
+    } else if (currIcon) {
+        // Initial state
+        showEmblem = true;
+        isInit = true;
+    }
+
+    if (showEmblem) {
+        const symbol = buildBattleEmblems[currIcon] || currIcon;
+        const colorCode = colorNames[currColorName] || "f";
+        const hexColor = mcColorMap[colorCode] || "#FFFFFF";
+
+        diffs.push({
+            key: "emblem_combined",
+            label: "Emblem",
+            oldValue: null,
+            newValue: (
+                <span style={{ color: hexColor }} title={currColorName}>
+                    {symbol}
+                </span>
+            ),
+            diff: symbol,
+            type: "element",
+            isInitial: isInit,
+        });
+    }
 
     return diffs;
 }
