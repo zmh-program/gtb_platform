@@ -340,7 +340,7 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
           <div className="flex items-center gap-1.5">
             <span style={{ color: titleInfo.currentTitle.color }}>
-              α {titleInfo.currentTitle.name}
+              {titleInfo.currentTitle.name}
             </span>
             {titleInfo.nextTitle && (
               <>

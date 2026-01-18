@@ -22,6 +22,7 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import { SearchHistory } from "@/components/search-history";
 import { addToSearchHistory } from "@/lib/history";
+import { StatsTimeline } from "./stats-timeline";
 
 function formatLastUpdate(timestamp: number): string {
   const nowSeconds = Math.floor(Date.now() / 1000);
@@ -48,6 +49,7 @@ export function StatsContent() {
   const [stats, setStats] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
   const [downloadLoading, setDownloadLoading] = useState(false);
+  const [history, setHistory] = useState<any[]>([]);
   const [refreshHistory, setRefreshHistory] = useState(0);
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -110,6 +112,21 @@ export function StatsContent() {
       }
 
       setStats(data);
+
+      // Fetch history
+      if (data.player?.uuid) {
+        try {
+          const histRes = await fetch(
+            `/api/stats/history?uuid=${data.player.uuid}`,
+          );
+          if (histRes.ok) {
+            const histData = await histRes.json();
+            setHistory(histData.history || []);
+          }
+        } catch (e) {
+          console.error("Failed to fetch history", e);
+        }
+      }
 
       // Save to history - use UUID from stats data
       const respUuid: string | undefined = data.player?.uuid;
@@ -281,6 +298,8 @@ export function StatsContent() {
             </Card>
           </>
         )}
+
+        <StatsTimeline history={history} />
 
         <div className="w-full mt-8 space-y-4">
           <Card className="bg-background/95 rounded-lg overflow-hidden hover:shadow-md transition-all duration-200">
