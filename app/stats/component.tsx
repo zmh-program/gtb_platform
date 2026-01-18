@@ -23,6 +23,8 @@ import Link from "next/link";
 import { SearchHistory } from "@/components/search-history";
 import { addToSearchHistory } from "@/lib/history";
 import { StatsTimeline } from "./stats-timeline";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 function formatLastUpdate(timestamp: number): string {
   const nowSeconds = Math.floor(Date.now() / 1000);
@@ -38,6 +40,67 @@ function ErrorMessage({ message }: { message: string }) {
     <div className="flex items-center mt-4 gap-2 p-3 text-sm text-red-500 bg-red-50 dark:bg-red-950/50 rounded-md break-all">
       <AlertCircle className="h-4 w-4 shrink-0" />
       {message}
+    </div>
+  );
+}
+
+function StatsSkeleton() {
+  return (
+    <div className="space-y-4 w-full">
+      <div className="flex justify-end">
+        <Skeleton className="h-4 w-32" />
+      </div>
+      <Card className="bg-background/95 rounded-lg w-full overflow-hidden p-6 space-y-6">
+        {/* Header Skeleton */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4 w-full">
+            <Skeleton className="h-12 w-12 rounded-lg" />
+            <div className="space-y-2 flex-1">
+              <Skeleton className="h-5 w-32" />
+              <Skeleton className="h-4 w-24" />
+            </div>
+          </div>
+          <Skeleton className="h-10 w-32" />
+        </div>
+
+        {/* Bar Skeleton */}
+        <div className="space-y-2">
+          <Skeleton className="h-4 w-full rounded-full" />
+          <div className="flex justify-between">
+            <Skeleton className="h-3 w-16" />
+            <Skeleton className="h-3 w-16" />
+          </div>
+        </div>
+
+        {/* Grid Skeleton */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Skeleton className="h-40 w-full" />
+          <div className="space-y-3">
+            <Skeleton className="h-20 w-full" />
+            <Skeleton className="h-20 w-full" />
+          </div>
+        </div>
+      </Card>
+
+      {/* Timeline Skeleton */}
+      <div className="space-y-4 mt-12">
+        <div className="flex items-center gap-2">
+          <Skeleton className="h-5 w-5 rounded-full" />
+          <Skeleton className="h-6 w-24" />
+        </div>
+        <div className="ml-3 space-y-8 pb-4">
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="pl-8 relative">
+              <div className="border-l-2 border-muted absolute left-0 top-0 h-full" />
+              <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-muted" />
+              <div className="space-y-2">
+                <Skeleton className="h-4 w-32" />
+                <Skeleton className="h-6 w-full max-w-sm" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -272,7 +335,13 @@ export function StatsContent() {
             </div>
           </div>
 
-          {error && <ErrorMessage message={error} />}
+          {error && (
+            <Alert variant="destructive" className="mt-4">
+              <AlertCircle className="h-4 w-4" />
+              <AlertTitle>Error</AlertTitle>
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
         </Card>
 
         {/* Search History */}
@@ -280,6 +349,8 @@ export function StatsContent() {
           key={refreshHistory}
           onPlayerSelect={handleHistoryPlayerSelect}
         />
+
+        {loading && !stats && <StatsSkeleton />}
 
         {/* Stats Card */}
         {stats && (

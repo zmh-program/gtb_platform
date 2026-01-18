@@ -139,8 +139,6 @@ function getItemImageUrl(id: string): string {
   return `https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.8/items/${id}.png`;
 }
 
-
-
 function getTitleInfo(score: number) {
   let currentTitle = buildBattleTitles[0];
   let nextTitle = buildBattleTitles[1];
