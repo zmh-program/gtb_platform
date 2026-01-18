@@ -101,6 +101,8 @@ export async function GET(request: Request) {
       const supabase = createAdminClient();
       const { error: dbError } = await supabase.from("gtb").insert({
         uuid: uuidResponse.id,
+        player_name: stats.displayname || username,
+        remote_addr: request.headers.get("x-forwarded-for") || "unknown", // for sentry debugging
         data: filteredData,
         created_at: new Date().toISOString(),
       });

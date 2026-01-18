@@ -15,7 +15,7 @@ export async function GET(request: Request) {
         const supabase = createAdminClient();
         const { data, error } = await supabase
             .from("gtb")
-            .select("data, created_at")
+            .select("id, data, created_at")
             .eq("uuid", uuid)
             .order("created_at", { ascending: false })
             .limit(100);

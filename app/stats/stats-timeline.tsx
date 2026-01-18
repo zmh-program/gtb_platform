@@ -11,6 +11,7 @@ import {
 } from "@/lib/hypixel-constants";
 
 type StatsSnapshot = {
+    id: number;
     created_at: string;
     data: any;
 };
@@ -226,7 +227,7 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
                     }
 
                     return (
-                        <div key={index} className="relative pl-8">
+                        <div key={snapshot.id} className="relative pl-8">
                             <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-background border-2 border-primary" />
                             <div className="flex flex-col gap-2">
                                 <div className="text-sm text-muted-foreground flex items-center gap-2">
