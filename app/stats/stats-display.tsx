@@ -12,24 +12,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-const mcColorMap: Record<string, string> = {
-  "0": "#000000",
-  "1": "#0000AA",
-  "2": "#00AA00",
-  "3": "#00AAAA",
-  "4": "#AA0000",
-  "5": "#AA00AA",
-  "6": "#FFAA00",
-  "7": "#AAAAAA",
-  "8": "#555555",
-  "9": "#5555FF",
-  a: "#55FF55",
-  b: "#55FFFF",
-  c: "#FF5555",
-  d: "#FF55FF",
-  e: "#FFFF55",
-  f: "#FFFFFF",
-};
+import {
+  mcColorMap,
+  colorNames,
+  buildBattleTitles,
+  buildBattleEmblems,
+} from "@/lib/hypixel-constants";
 
 const ranks: Record<string, [string, string][]> = {
   ADMIN: [["c", "[ADMIN]"]],
@@ -59,25 +47,6 @@ const ranks: Record<string, [string, string][]> = {
   ],
   VIP: [["a", "[VIP]"]],
   DEFAULT: [["7", ""]],
-};
-
-const colorNames: Record<string, string> = {
-  BLACK: "0",
-  DARK_BLUE: "1",
-  DARK_GREEN: "2",
-  DARK_AQUA: "3",
-  DARK_RED: "4",
-  DARK_PURPLE: "5",
-  GOLD: "6",
-  GRAY: "7",
-  DARK_GRAY: "8",
-  BLUE: "9",
-  GREEN: "a",
-  AQUA: "b",
-  RED: "c",
-  LIGHT_PURPLE: "d",
-  YELLOW: "e",
-  WHITE: "f",
 };
 
 function parseMinecraftTag(tag: string): [string, string][] {
@@ -170,27 +139,7 @@ function getItemImageUrl(id: string): string {
   return `https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.8/items/${id}.png`;
 }
 
-const buildBattleTitles = [
-  { req: 0, color: "#FFFFFF", name: "Rookie" },
-  { req: 100, color: "#AAAAAA", name: "Untrained" },
-  { req: 250, color: "#555555", name: "Amateur" },
-  { req: 500, color: "#55FF55", name: "Prospect" },
-  { req: 1000, color: "#00AA00", name: "Apprentice" },
-  { req: 2000, color: "#55FFFF", name: "Experienced" },
-  { req: 3500, color: "#00AAAA", name: "Seasoned" },
-  { req: 5000, color: "#5555FF", name: "Trained" },
-  { req: 7500, color: "#0000AA", name: "Skilled" },
-  { req: 10000, color: "#AA00AA", name: "Talented" },
-  { req: 15000, color: "#00AA00", name: "Professional" },
-  { req: 20000, color: "#FF5555", name: "Artisan" },
-  { req: 30000, color: "#AA0000", name: "Expert" },
-  { req: 50000, color: "#FFAA00", name: "Master" },
-  { req: 100000, color: "#55FF55", name: "Legend", bold: true },
-  { req: 200000, color: "#55FFFF", name: "Grandmaster", bold: true },
-  { req: 300000, color: "#FF55FF", name: "Celestial", bold: true },
-  { req: 400000, color: "#FF5555", name: "Divine", bold: true },
-  { req: 500000, color: "#FFAA00", name: "Ascended", bold: true },
-];
+
 
 function getTitleInfo(score: number) {
   let currentTitle = buildBattleTitles[0];
@@ -300,6 +249,17 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
     return { currentTitle, nextTitle, progress, toGo };
   }, [bbStats.score]);
 
+  const emblem = bbStats.emblem || {};
+  const emblemSymbol = emblem.selected_icon
+    ? buildBattleEmblems[emblem.selected_icon]
+    : null;
+  const emblemColorCode = emblem.selected_color
+    ? colorNames[emblem.selected_color]
+    : null;
+  const emblemColor = emblemColorCode
+    ? mcColorMap[emblemColorCode]
+    : titleInfo.currentTitle.color;
+
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -339,8 +299,17 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
       <div className="space-y-2">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
           <div className="flex items-center gap-1.5">
+            {emblemSymbol && (
+              <span
+                style={{ color: emblemColor }}
+                title={emblem.selected_icon}
+                className="font-bold"
+              >
+                {emblemSymbol}
+              </span>
+            )}
             <span style={{ color: titleInfo.currentTitle.color }}>
-              α {titleInfo.currentTitle.name}
+              {titleInfo.currentTitle.name}
             </span>
             {titleInfo.nextTitle && (
               <>
