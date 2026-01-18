@@ -205,6 +205,15 @@ function getTitleInfo(score: number) {
   return { currentTitle, nextTitle };
 }
 
+const buildBattleEmblems: Record<string, string> = {
+  ALPHA: "α",
+  OMEGA: "Ω",
+  REMINISCENCE: "≈",
+  RICH: "$",
+  PODIUM: "π",
+  FLORIN: "ƒ",
+};
+
 type StatsDisplayProps = {
   stats: any;
 };
@@ -300,6 +309,17 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
     return { currentTitle, nextTitle, progress, toGo };
   }, [bbStats.score]);
 
+  const emblem = bbStats.emblem || {};
+  const emblemSymbol = emblem.selected_icon
+    ? buildBattleEmblems[emblem.selected_icon]
+    : null;
+  const emblemColorCode = emblem.selected_color
+    ? colorNames[emblem.selected_color]
+    : null;
+  const emblemColor = emblemColorCode
+    ? mcColorMap[emblemColorCode]
+    : titleInfo.currentTitle.color;
+
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row items-center justify-between">
@@ -339,6 +359,15 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
       <div className="space-y-2">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
           <div className="flex items-center gap-1.5">
+            {emblemSymbol && (
+              <span
+                style={{ color: emblemColor }}
+                title={emblem.selected_icon}
+                className="font-bold"
+              >
+                {emblemSymbol}
+              </span>
+            )}
             <span style={{ color: titleInfo.currentTitle.color }}>
               {titleInfo.currentTitle.name}
             </span>
