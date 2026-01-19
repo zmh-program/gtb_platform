@@ -43,6 +43,8 @@ function getDiffs(current: any, previous: any): Diff[] {
   const diffs: Diff[] = [];
   const currBb = current?.stats?.BuildBattle || {};
   const prevBb = previous?.stats?.BuildBattle || {};
+  const currAch = current?.achievements || {};
+  const prevAch = previous?.achievements || {};
 
   const numericFields = [
     { key: "score", label: "Score" },
@@ -86,6 +88,31 @@ function getDiffs(current: any, previous: any): Diff[] {
       });
     }
   });
+
+  const currPerfectBuilds = Number(currAch.buildbattle_speed_builders_perfectionist || 0);
+  const prevPerfectBuilds = Number(prevAch.buildbattle_speed_builders_perfectionist || 0);
+  if (previous) {
+    if (currPerfectBuilds !== prevPerfectBuilds) {
+      diffs.push({
+        key: "perfect_builds",
+        label: "Perfect Build",
+        oldValue: prevPerfectBuilds,
+        newValue: currPerfectBuilds,
+        diff: currPerfectBuilds - prevPerfectBuilds,
+        type: "number",
+      });
+    }
+  } else if (currPerfectBuilds > 0) {
+    diffs.push({
+      key: "perfect_builds",
+      label: "Perfect Build",
+      oldValue: 0,
+      newValue: currPerfectBuilds,
+      diff: 0,
+      type: "number",
+      isInitial: true,
+    });
+  }
 
   const buildBattleEmblems: Record<string, string> = {
     ALPHA: "α",
@@ -211,20 +238,20 @@ function DailyStatsGroup({
   const cw = diffs.wins_guess_the_build > 0 && diffs.correct_guesses !== undefined
     ? ((diffs.correct_guesses || 0) / diffs.wins_guess_the_build).toFixed(2)
     : null;
-  const pw = diffs.wins_speed_builders > 0 && diffs.games_played !== undefined
-    ? ((diffs.wins_speed_builders || 0) / (diffs.games_played || 1) * 100).toFixed(1)
+  const pw = diffs.wins_speed_builders > 0 && diffs.perfect_builds !== undefined
+    ? ((diffs.perfect_builds || 0) / diffs.wins_speed_builders).toFixed(2)
     : null;
 
   // Calculate Lose = games - wins
   const lose = (diffs.games_played || 0) - (diffs.wins || 0);
 
   // Define display order
-  const fieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+  const fieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'perfect_builds', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
 
   const labels: Record<string, string> = {
     score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
     super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-    wins_guess_the_build: "GTB", wins_speed_builders: "SPB",
+    wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
     wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
   };
 
@@ -263,18 +290,16 @@ function DailyStatsGroup({
               </div>
               {displayDiffs.length > 0 && (
                 <div className="hidden sm:flex items-center gap-2 text-xs">
-                  {displayDiffs.slice(0, 6).map(({ key, label, diff, isNegative }) => (
+                  {displayDiffs.map(({ key, label, diff, isNegative }) => (
                     <span key={key} className="text-muted-foreground">
                       {label} <span className={cn("font-mono", isNegative ? "text-red-500 dark:text-red-400" : "text-green-600 dark:text-green-400")}>{isNegative ? `+${diff}` : formatDiff(diff)}</span>
                     </span>
                   ))}
-                  {displayDiffs.length > 6 && (
-                    <span className="text-muted-foreground">+{displayDiffs.length - 6}</span>
-                  )}
                 </div>
               )}
               {winRate && <span className="text-xs text-muted-foreground">WR <span className="font-mono text-foreground">{winRate}%</span></span>}
               {cw && <span className="text-xs text-muted-foreground">C/W <span className="font-mono text-foreground">{cw}</span></span>}
+              {pw && <span className="text-xs text-muted-foreground">P/W <span className="font-mono text-foreground">{pw}</span></span>}
               <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform", isOpen && "rotate-180")} />
             </div>
           </div>
@@ -288,7 +313,7 @@ function DailyStatsGroup({
                 const labels: Record<string, string> = {
                   score: "Score", wins: "Wins", coins: "Coins",
                   super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-                  wins_guess_the_build: "GTB", wins_speed_builders: "SPB",
+                  wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
                   wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
                 };
                 return (
@@ -314,11 +339,11 @@ function DailyStatsGroup({
                 const traceLose = (gamesPlayed?.diff as number || 0) - (winsData?.diff as number || 0);
 
                 // Build ordered display
-                const traceFieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+                const traceFieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'perfect_builds', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
                 const traceLabels: Record<string, string> = {
                   score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
                   super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-                  wins_guess_the_build: "GTB", wins_speed_builders: "SPB",
+                  wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
                   wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
                 };
 
@@ -390,6 +415,7 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
           const diffs: Record<string, number> = {};
           const latestSnapshot = group.snapshots[0];
           const latestBb = latestSnapshot?.data?.player?.stats?.BuildBattle || {};
+          const latestAch = latestSnapshot?.data?.player?.achievements || {};
 
           const latestValues: Record<string, number> = {
             score: Number(latestBb.score || 0),
@@ -398,6 +424,7 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
             coins: Number(latestBb.coins || 0),
             correct_guesses: Number(latestBb.correct_guesses || 0),
             wins_guess_the_build: Number(latestBb.wins_guess_the_build || 0),
+            perfect_builds: Number(latestAch.buildbattle_speed_builders_perfectionist || 0),
             wins_speed_builders: Number(latestBb.wins_speed_builders || 0),
           };
 
