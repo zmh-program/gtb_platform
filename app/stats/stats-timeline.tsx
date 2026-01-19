@@ -7,6 +7,12 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -408,7 +414,19 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
 
   return (
     <div className="w-full mt-12 pb-8">
-      <h3 className="text-lg font-bold mb-4">Session</h3>
+      <div className="flex items-center gap-2 mb-4">
+        <h3 className="text-lg font-bold">Session</h3>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Badge variant="outline" className="text-[10px] h-4 px-1.5 cursor-help">?</Badge>
+            </TooltipTrigger>
+            <TooltipContent className="max-w-[280px]">
+              <p>If the player has enabled "Stats Frozen" in Hypixel API Settings, API data will be frozen until they go offline. Session data may not be accurate.</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
       <div className="space-y-3">
         {groups.map((group) => {
           // Calculate daily summary
