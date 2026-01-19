@@ -14,8 +14,10 @@ import {
   ChevronRight,
   ChevronDown,
   Calendar,
+  CornerDownRight,
 } from "lucide-react";
 import { useState } from "react";
+import { cn } from "@/lib/utils";
 
 import {
   mcColorMap,
@@ -147,7 +149,6 @@ function getDiffs(current: any, previous: any): Diff[] {
     }
   });
 
-  // Emblem Logic
   const currEmblem = currBb.emblem || {};
   const prevEmblem = prevBb.emblem || {};
 
@@ -156,12 +157,10 @@ function getDiffs(current: any, previous: any): Diff[] {
   const currColorName = currEmblem.selected_color;
   const prevColorName = prevEmblem.selected_color;
 
-  // Determine if we should show emblem
   let showEmblem = false;
   let isInit = false;
 
   if (previous) {
-    // Show if either icon or color changed
     if (
       (currIcon !== prevIcon || currColorName !== prevColorName) &&
       currIcon
@@ -213,138 +212,125 @@ function formatTimeAgo(dateString: string) {
 type DailyGroup = {
   date: string;
   snapshots: StatsSnapshot[];
-  summary: {
-    score: number;
-    wins: number;
-    games: number;
-  };
 };
 
-function DailyStatsGroup({ group, history }: { group: DailyGroup, history: StatsSnapshot[] }) {
+function DailyStatsGroup({
+  group,
+  history,
+  dailyDiffs,
+  isLast
+}: {
+  group: DailyGroup,
+  history: StatsSnapshot[],
+  dailyDiffs: Diff[],
+  isLast: boolean
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Collapsible
       open={isOpen}
       onOpenChange={setIsOpen}
-      className="border rounded-md bg-background/50 overflow-hidden"
+      className="group relative pl-8 pb-8 last:pb-0"
     >
+      {/* Timeline Line: A continuous line that stops for the last item */}
+      {!isLast && (
+        <div className="absolute left-[11px] top-6 bottom-0 w-px bg-border group-last:hidden" />
+      )}
+
+      {/* Timeline Dot */}
+      <div className={cn(
+        "absolute left-0 top-3 h-[22px] w-[22px] rounded-full border-4 border-background transition-colors duration-200 z-10 box-border shadow-sm",
+        isOpen ? "bg-primary" : "bg-muted-foreground/30"
+      )} />
+
       <CollapsibleTrigger asChild>
-        <div className="flex items-center justify-between p-4 cursor-pointer hover:bg-muted/50 transition-colors">
-          <div className="flex items-center gap-4">
-            <div className="p-2 bg-primary/10 rounded-full">
-              <Calendar className="h-4 w-4 text-primary" />
-            </div>
-            <div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-md hover:bg-muted/50 transition-all cursor-pointer select-none">
+          <div className="flex items-center gap-3">
+            <div className="flex flex-col">
               <div className="font-semibold text-sm">
                 {new Date(group.date).toLocaleDateString(undefined, {
-                  weekday: 'long',
-                  year: 'numeric',
-                  month: 'long',
+                  weekday: 'short',
+                  month: 'short',
                   day: 'numeric'
                 })}
               </div>
-              <div className="text-xs text-muted-foreground mt-0.5">
-                {group.snapshots.length} updates
+              <div className="text-xs text-muted-foreground flex items-center gap-1.5 mt-0.5">
+                <span>{group.snapshots.length} traces</span>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            {(group.summary.score > 0 || group.summary.wins > 0) && (
-              <div className="hidden sm:flex items-center gap-3 text-sm">
-                {group.summary.score > 0 && (
-                  <Badge variant="outline" className="text-green-600 bg-green-500/10 border-green-500/20">
-                    Score +{group.summary.score.toLocaleString()}
-                  </Badge>
-                )}
-                {group.summary.wins > 0 && (
-                  <Badge variant="outline" className="text-blue-600 bg-blue-500/10 border-blue-500/20">
-                    Wins +{group.summary.wins.toLocaleString()}
-                  </Badge>
-                )}
+          <div className="flex items-center gap-4 mt-2 sm:mt-0">
+            {dailyDiffs.filter(d => !d.isInitial).length > 0 && (
+              <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 max-w-xl text-xs">
+                {dailyDiffs.filter(d => !d.isInitial).map((diff) => (
+                  <div key={diff.key} className="flex items-center gap-1.5 text-muted-foreground">
+                    <span>{diff.label}</span>
+                    <span className={cn(
+                      "font-mono font-medium",
+                      diff.type === 'number' ? 'text-green-600 dark:text-green-400' : 'text-foreground'
+                    )}>
+                      {diff.type === "number"
+                        ? `+${typeof diff.diff === 'number' ? diff.diff.toLocaleString() : diff.diff}`
+                        : diff.newValue}
+                    </span>
+                  </div>
+                ))}
               </div>
             )}
-            {isOpen ? <ChevronDown className="h-4 w-4 text-muted-foreground" /> : <ChevronRight className="h-4 w-4 text-muted-foreground" />}
+            <ChevronDown className={cn(
+              "h-4 w-4 text-muted-foreground transition-transform duration-200",
+              isOpen && "rotate-180"
+            )} />
           </div>
         </div>
       </CollapsibleTrigger>
 
       <CollapsibleContent>
-        <div className="p-4 pt-0 space-y-8 mt-4 border-t border-muted/50 pt-6">
-          <div className="relative border-l-2 border-muted ml-3 space-y-8 pb-2">
-            {group.snapshots.map((snapshot) => {
-              // Find this snapshot's index in the FULL history to get the global context
-              // We need global context because "previous" might be in the next day's group
-              const globalIndex = history.findIndex(h => h.id === snapshot.id);
-              const prevSnapshot = history[globalIndex + 1];
+        <div className="space-y-3 mt-3 pl-2">
+          {group.snapshots.map((snapshot) => {
+            const globalIndex = history.findIndex(h => h.id === snapshot.id);
+            const prevSnapshot = history[globalIndex + 1];
 
-              const diffs = getDiffs(
-                snapshot.data?.player,
-                prevSnapshot?.data?.player
-              );
+            const diffs = getDiffs(
+              snapshot.data?.player,
+              prevSnapshot?.data?.player
+            );
 
-              if (diffs.length === 0 && prevSnapshot) return null;
+            if (diffs.length === 0 && prevSnapshot) return null;
 
-              return (
-                <div key={snapshot.id} className="relative pl-8">
-                  <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-background border-2 border-primary" />
-                  <div className="flex flex-col gap-2">
-                    <div className="text-sm text-muted-foreground flex items-center gap-2">
-                      <Clock className="h-3 w-3" />
-                      <span className="font-medium text-foreground">
-                        {formatTimeAgo(snapshot.created_at)}
-                      </span>
-                      <span className="text-xs">
-                        ({new Date(snapshot.created_at).toLocaleTimeString()})
-                      </span>
-                      {!prevSnapshot && (
-                        <span className="text-xs bg-muted px-2 py-0.5 rounded">
-                          Initial
+            return (
+              <div key={snapshot.id} className="flex items-start gap-3 text-sm">
+                <span className="text-muted-foreground text-xs min-w-[52px] pt-0.5">
+                  {new Date(snapshot.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                </span>
+
+                <div className="flex-1 flex flex-wrap items-center gap-x-4 gap-y-1">
+                  {!prevSnapshot && (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-muted text-muted-foreground">Initial</span>
+                  )}
+                  {diffs.length > 0 ? (
+                    diffs.map((diff, i) => (
+                      <span key={diff.key} className="flex items-center gap-1">
+                        <span className="text-muted-foreground">{diff.label}</span>
+                        <span className="font-mono text-foreground">
+                          {diff.type === "number" ? diff.newValue.toLocaleString() : diff.newValue}
                         </span>
-                      )}
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {diffs.length > 0 ? (
-                        diffs.map((diff) => (
-                          <Badge
-                            key={diff.key}
-                            variant="secondary"
-                            className="text-sm py-1 px-3 flex items-center gap-2"
-                          >
-                            <span className="text-muted-foreground font-normal">
-                              {diff.label}
-                            </span>
-                            <span className="font-mono font-bold">
-                              {diff.type === "number"
-                                ? diff.newValue.toLocaleString()
-                                : diff.newValue}
-                            </span>
-                            {diff.type === "number" && !diff.isInitial && (
-                              <span className="text-green-500 text-xs flex items-center">
-                                <ArrowUp className="h-3 w-3 mr-0.5" />
-                                {formatDiff(diff.diff)}
-                              </span>
-                            )}
-                            {diff.type === "string" && !diff.isInitial && (
-                              <span className="text-muted-foreground text-xs italic">
-                                (New)
-                              </span>
-                            )}
-                          </Badge>
-                        ))
-                      ) : (
-                        <span className="text-sm text-muted-foreground italic">
-                          No changes recorded.
-                        </span>
-                      )}
-                    </div>
-                  </div>
+                        {diff.type === "number" && !diff.isInitial && (
+                          <span className="text-green-600 dark:text-green-400 text-xs">
+                            {formatDiff(diff.diff)}
+                          </span>
+                        )}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-muted-foreground/50 italic text-xs">No changes</span>
+                  )}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </CollapsibleContent>
     </Collapsible>
@@ -354,50 +340,73 @@ function DailyStatsGroup({ group, history }: { group: DailyGroup, history: Stats
 export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
   if (!history || history.length === 0) return null;
 
-  // Group history by day
   const groups: DailyGroup[] = [];
   let currentGroup: DailyGroup | null = null;
 
-  history.forEach((snapshot, index) => {
-    const date = new Date(snapshot.created_at).toDateString(); // "Mon Jan 01 2024"
-
-    // Ensure new group if date changes
+  history.forEach((snapshot) => {
+    const date = new Date(snapshot.created_at).toDateString();
     if (!currentGroup || currentGroup.date !== date) {
       currentGroup = {
         date,
         snapshots: [],
-        summary: { score: 0, wins: 0, games: 0 }
       };
       groups.push(currentGroup);
     }
-
     currentGroup.snapshots.push(snapshot);
-
-    // Calculate diff for summary
-    const prevSnapshot = history[index + 1];
-    if (prevSnapshot) {
-      const diffs = getDiffs(snapshot.data?.player, prevSnapshot.data?.player);
-      diffs.forEach(d => {
-        if (d.type === "number" && typeof d.diff === 'number' && !d.isInitial) {
-          if (d.key === "score") currentGroup!.summary.score += d.diff;
-          if (d.key === "wins") currentGroup!.summary.wins += d.diff;
-          if (d.key === "games_played") currentGroup!.summary.games += d.diff;
-        }
-      });
-    }
   });
 
   return (
-    <div className="space-y-4 mt-16 w-full">
-      <div className="flex items-center gap-2 mb-4">
-        <History className="h-5 w-5 text-muted-foreground" />
+    <div className="w-full mt-12 pb-12">
+      <div className="flex items-center gap-3 mb-2">
         <h3 className="text-lg font-bold">Session</h3>
       </div>
 
-      <div className="space-y-4">
-        {groups.map((group) => (
-          <DailyStatsGroup key={group.date} group={group} history={history} />
-        ))}
+      <div className="space-y-0">
+        {groups.map((group, idx) => {
+          // Calculate daily summary by summing all individual diffs within the day
+          const dailySummary: Record<string, { label: string; diff: number; type: 'number' | 'string' | 'element'; newValue: any }> = {};
+
+          group.snapshots.forEach((snapshot) => {
+            const globalIndex = history.findIndex(h => h.id === snapshot.id);
+            const prevSnapshot = history[globalIndex + 1];
+
+            if (prevSnapshot) {
+              const diffs = getDiffs(snapshot.data?.player, prevSnapshot.data?.player);
+              diffs.forEach(d => {
+                if (d.type === 'number' && !d.isInitial && typeof d.diff === 'number') {
+                  if (!dailySummary[d.key]) {
+                    dailySummary[d.key] = { label: d.label, diff: 0, type: 'number', newValue: d.newValue };
+                  }
+                  dailySummary[d.key].diff += d.diff;
+                  dailySummary[d.key].newValue = d.newValue; // Keep latest value
+                }
+              });
+            }
+          });
+
+          // Convert to array format for dailyDiffs
+          const dailyDiffs: Diff[] = Object.entries(dailySummary)
+            .filter(([_, v]) => v.diff !== 0)
+            .map(([key, v]) => ({
+              key,
+              label: v.label,
+              oldValue: 0,
+              newValue: v.newValue,
+              diff: v.diff,
+              type: v.type,
+              isInitial: false
+            }));
+
+          return (
+            <DailyStatsGroup
+              key={group.date}
+              group={group}
+              history={history}
+              dailyDiffs={dailyDiffs}
+              isLast={idx === groups.length - 1}
+            />
+          );
+        })}
       </div>
     </div>
   );
