@@ -246,7 +246,7 @@ function DailyStatsGroup({
   const lose = (diffs.games_played || 0) - (diffs.wins || 0);
 
   // Define display order
-  const fieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'perfect_builds', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+  const fieldOrder = ['score', 'wins', 'lose', 'coins', 'wins_guess_the_build', 'correct_guesses', 'wins_speed_builders', 'perfect_builds', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
 
   const labels: Record<string, string> = {
     score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
@@ -281,7 +281,7 @@ function DailyStatsGroup({
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CollapsibleTrigger asChild>
           <div className="flex items-center justify-between p-3 py-4 hover:bg-muted/50 transition-colors cursor-pointer select-none">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 w-full">
               <div className="text-sm font-medium">
                 {(() => {
                   const d = new Date(group.date);
@@ -300,7 +300,7 @@ function DailyStatsGroup({
               {winRate && <span className="text-xs text-muted-foreground">WR <span className="font-mono text-foreground">{winRate}%</span></span>}
               {cw && <span className="text-xs text-muted-foreground">C/W <span className="font-mono text-foreground">{cw}</span></span>}
               {pw && <span className="text-xs text-muted-foreground">P/W <span className="font-mono text-foreground">{pw}</span></span>}
-              <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform", isOpen && "rotate-180")} />
+              <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform ml-auto", isOpen && "rotate-180")} />
             </div>
           </div>
         </CollapsibleTrigger>
@@ -339,7 +339,7 @@ function DailyStatsGroup({
                 const traceLose = (gamesPlayed?.diff as number || 0) - (winsData?.diff as number || 0);
 
                 // Build ordered display
-                const traceFieldOrder = ['score', 'wins', 'lose', 'coins', 'correct_guesses', 'wins_guess_the_build', 'perfect_builds', 'wins_speed_builders', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+                const traceFieldOrder = ['score', 'wins', 'lose', 'coins', 'wins_guess_the_build', 'correct_guesses', 'wins_speed_builders', 'perfect_builds', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
                 const traceLabels: Record<string, string> = {
                   score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
                   super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
