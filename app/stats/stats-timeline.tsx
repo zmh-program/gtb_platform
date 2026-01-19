@@ -253,16 +253,14 @@ function DailyStatsGroup({
       </Badge>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CollapsibleTrigger asChild>
-          <div className="flex items-center justify-between p-3 pt-5 hover:bg-muted/50 transition-colors cursor-pointer select-none">
+          <div className="flex items-center justify-between p-3 py-4 hover:bg-muted/50 transition-colors cursor-pointer select-none">
             <div className="flex items-center gap-3">
               <div className="text-sm font-medium">
-                {new Date(group.date).toLocaleDateString(undefined, {
-                  weekday: 'short', month: 'short', day: 'numeric'
-                })}
+                {(() => {
+                  const d = new Date(group.date);
+                  return `${d.getMonth() + 1}/${d.getDate()}`;
+                })()}
               </div>
-            </div>
-
-            <div className="flex items-center gap-3">
               {displayDiffs.length > 0 && (
                 <div className="hidden sm:flex items-center gap-2 text-xs">
                   {displayDiffs.slice(0, 6).map(({ key, label, diff, isNegative }) => (
