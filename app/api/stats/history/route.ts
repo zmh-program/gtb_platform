@@ -18,7 +18,7 @@ export async function GET(request: Request) {
       .select("id, data, created_at")
       .eq("uuid", uuid)
       .order("created_at", { ascending: false })
-      .limit(100);
+      .limit(500);
 
     if (error) {
       console.error("Supabase query error:", error);

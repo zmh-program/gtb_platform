@@ -84,20 +84,19 @@ function StatsSkeleton() {
 
       {/* Timeline Skeleton */}
       <div className="space-y-4 mt-12">
-        <div className="flex items-center gap-2">
-          <Skeleton className="h-5 w-5 rounded-full" />
-          <Skeleton className="h-6 w-24" />
-        </div>
-        <div className="ml-3 space-y-8 pb-4">
+        <Skeleton className="h-7 w-24" />
+        <div className="space-y-3">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="pl-8 relative">
-              <div className="border-l-2 border-muted absolute left-0 top-0 h-full" />
-              <div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-muted" />
-              <div className="space-y-2">
+            <Card key={i} className="p-3 relative overflow-hidden">
+              <Skeleton className="absolute -left-1 -top-1 h-5 w-16" />
+              <div className="flex items-center justify-between mt-2">
                 <Skeleton className="h-4 w-32" />
-                <Skeleton className="h-6 w-full max-w-sm" />
+                <div className="flex gap-2">
+                  <Skeleton className="h-4 w-16" />
+                  <Skeleton className="h-4 w-16" />
+                </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
