@@ -244,17 +244,22 @@ function DailyStatsGroup({
     .map(key => ({ key, label: labels[key] || key, diff: allDiffs[key].diff, isNegative: allDiffs[key].isNegative }));
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden relative">
+      <Badge
+        variant="secondary"
+        className="absolute -left-1 -top-1 rounded-none rounded-br-lg px-2 py-0.5 text-[10px] z-10 shadow-sm border-none bg-muted/80 backdrop-blur-sm transition-opacity group-hover:bg-muted"
+      >
+        {group.snapshots.length} traces
+      </Badge>
       <Collapsible open={isOpen} onOpenChange={setIsOpen}>
         <CollapsibleTrigger asChild>
-          <div className="flex items-center justify-between p-3 hover:bg-muted/50 transition-colors cursor-pointer select-none">
+          <div className="flex items-center justify-between p-3 pt-5 hover:bg-muted/50 transition-colors cursor-pointer select-none">
             <div className="flex items-center gap-3">
               <div className="text-sm font-medium">
                 {new Date(group.date).toLocaleDateString(undefined, {
                   weekday: 'short', month: 'short', day: 'numeric'
                 })}
               </div>
-              <span className="text-xs text-muted-foreground">{group.snapshots.length} traces</span>
             </div>
 
             <div className="flex items-center gap-3">
