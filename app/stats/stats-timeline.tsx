@@ -95,8 +95,12 @@ function getDiffs(current: any, previous: any): Diff[] {
     }
   });
 
-  const currPerfectBuilds = Number(currAch.buildbattle_speed_builders_perfectionist || 0);
-  const prevPerfectBuilds = Number(prevAch.buildbattle_speed_builders_perfectionist || 0);
+  const currPerfectBuilds = Number(
+    currAch.buildbattle_speed_builders_perfectionist || 0,
+  );
+  const prevPerfectBuilds = Number(
+    prevAch.buildbattle_speed_builders_perfectionist || 0,
+  );
   if (previous) {
     if (currPerfectBuilds !== prevPerfectBuilds) {
       diffs.push({
@@ -186,7 +190,10 @@ function getDiffs(current: any, previous: any): Diff[] {
   let isInit = false;
 
   if (previous) {
-    if ((currIcon !== prevIcon || currColorName !== prevColorName) && currIcon) {
+    if (
+      (currIcon !== prevIcon || currColorName !== prevColorName) &&
+      currIcon
+    ) {
       showEmblem = true;
     }
   } else if (currIcon) {
@@ -240,41 +247,74 @@ function DailyStatsGroup({
 
   // Calculate rates
   const { diffs, latestValues } = summary;
-  const winRate = diffs.games_played > 0 ? ((diffs.wins || 0) / diffs.games_played * 100).toFixed(1) : null;
-  const cw = diffs.wins_guess_the_build > 0 && diffs.correct_guesses !== undefined
-    ? ((diffs.correct_guesses || 0) / diffs.wins_guess_the_build).toFixed(2)
-    : null;
-  const pw = diffs.wins_speed_builders > 0 && diffs.perfect_builds !== undefined
-    ? ((diffs.perfect_builds || 0) / diffs.wins_speed_builders).toFixed(2)
-    : null;
+  const winRate =
+    diffs.games_played > 0
+      ? (((diffs.wins || 0) / diffs.games_played) * 100).toFixed(1)
+      : null;
+  const cw =
+    diffs.wins_guess_the_build > 0 && diffs.correct_guesses !== undefined
+      ? ((diffs.correct_guesses || 0) / diffs.wins_guess_the_build).toFixed(2)
+      : null;
+  const pw =
+    diffs.wins_speed_builders > 0 && diffs.perfect_builds !== undefined
+      ? ((diffs.perfect_builds || 0) / diffs.wins_speed_builders).toFixed(2)
+      : null;
 
   // Calculate Lose = games - wins
   const lose = (diffs.games_played || 0) - (diffs.wins || 0);
 
   // Define display order
-  const fieldOrder = ['score', 'wins', 'lose', 'coins', 'wins_guess_the_build', 'correct_guesses', 'wins_speed_builders', 'perfect_builds', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+  const fieldOrder = [
+    "score",
+    "wins",
+    "lose",
+    "coins",
+    "wins_guess_the_build",
+    "correct_guesses",
+    "wins_speed_builders",
+    "perfect_builds",
+    "wins_solo_normal",
+    "wins_teams_normal",
+    "wins_solo_pro",
+    "super_votes",
+    "total_votes",
+  ];
 
   const labels: Record<string, string> = {
-    score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
-    super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-    wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
-    wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
+    score: "Score",
+    wins: "Wins",
+    lose: "Lose",
+    coins: "Coins",
+    super_votes: "SV",
+    total_votes: "Votes",
+    correct_guesses: "Correct Guess",
+    wins_guess_the_build: "GTB",
+    perfect_builds: "Perfect Build",
+    wins_speed_builders: "SPB",
+    wins_solo_normal: "Solo",
+    wins_teams_normal: "Teams",
+    wins_solo_pro: "Pro",
   };
 
   // Build displayDiffs with proper order
   const allDiffs: Record<string, { diff: number; isNegative: boolean }> = {};
   Object.entries(diffs).forEach(([key, diff]) => {
-    if (key !== 'games_played' && diff !== 0) {
+    if (key !== "games_played" && diff !== 0) {
       allDiffs[key] = { diff, isNegative: false };
     }
   });
   if (lose > 0) {
-    allDiffs['lose'] = { diff: lose, isNegative: true };
+    allDiffs["lose"] = { diff: lose, isNegative: true };
   }
 
   const displayDiffs = fieldOrder
-    .filter(key => allDiffs[key])
-    .map(key => ({ key, label: labels[key] || key, diff: allDiffs[key].diff, isNegative: allDiffs[key].isNegative }));
+    .filter((key) => allDiffs[key])
+    .map((key) => ({
+      key,
+      label: labels[key] || key,
+      diff: allDiffs[key].diff,
+      isNegative: allDiffs[key].isNegative,
+    }));
 
   return (
     <Card className="overflow-hidden relative">
@@ -298,15 +338,43 @@ function DailyStatsGroup({
                 <div className="hidden sm:flex items-center gap-2 text-xs">
                   {displayDiffs.map(({ key, label, diff, isNegative }) => (
                     <span key={key} className="text-muted-foreground">
-                      {label} <span className={cn("font-mono", isNegative ? "text-red-500 dark:text-red-400" : "text-green-600 dark:text-green-400")}>{isNegative ? `+${diff}` : formatDiff(diff)}</span>
+                      {label}{" "}
+                      <span
+                        className={cn(
+                          "font-mono",
+                          isNegative
+                            ? "text-red-500 dark:text-red-400"
+                            : "text-green-600 dark:text-green-400",
+                        )}
+                      >
+                        {isNegative ? `+${diff}` : formatDiff(diff)}
+                      </span>
                     </span>
                   ))}
                 </div>
               )}
-              {winRate && <span className="text-xs text-muted-foreground">WR <span className="font-mono text-foreground">{winRate}%</span></span>}
-              {cw && <span className="text-xs text-muted-foreground">C/W <span className="font-mono text-foreground">{cw}</span></span>}
-              {pw && <span className="text-xs text-muted-foreground">P/W <span className="font-mono text-foreground">{pw}</span></span>}
-              <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform ml-auto", isOpen && "rotate-180")} />
+              {winRate && (
+                <span className="text-xs text-muted-foreground">
+                  WR{" "}
+                  <span className="font-mono text-foreground">{winRate}%</span>
+                </span>
+              )}
+              {cw && (
+                <span className="text-xs text-muted-foreground">
+                  C/W <span className="font-mono text-foreground">{cw}</span>
+                </span>
+              )}
+              {pw && (
+                <span className="text-xs text-muted-foreground">
+                  P/W <span className="font-mono text-foreground">{pw}</span>
+                </span>
+              )}
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 text-muted-foreground transition-transform ml-auto",
+                  isOpen && "rotate-180",
+                )}
+              />
             </div>
           </div>
         </CollapsibleTrigger>
@@ -315,76 +383,163 @@ function DailyStatsGroup({
           <div className="border-t px-3 py-2 bg-muted/20">
             {/* Latest values row */}
             <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs mb-3 pb-2 border-b border-dashed">
-              {Object.entries(latestValues).filter(([key, v]) => v > 0 && key !== 'games_played').map(([key, val]) => {
-                const labels: Record<string, string> = {
-                  score: "Score", wins: "Wins", coins: "Coins",
-                  super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-                  wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
-                  wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
-                };
-                return (
-                  <span key={key} className="text-muted-foreground">
-                    {labels[key] || key}: <span className="font-mono text-foreground">{val.toLocaleString()}</span>
-                  </span>
-                );
-              })}
+              {Object.entries(latestValues)
+                .filter(([key, v]) => v > 0 && key !== "games_played")
+                .map(([key, val]) => {
+                  const labels: Record<string, string> = {
+                    score: "Score",
+                    wins: "Wins",
+                    coins: "Coins",
+                    super_votes: "SV",
+                    total_votes: "Votes",
+                    correct_guesses: "Correct Guess",
+                    wins_guess_the_build: "GTB",
+                    perfect_builds: "Perfect Build",
+                    wins_speed_builders: "SPB",
+                    wins_solo_normal: "Solo",
+                    wins_teams_normal: "Teams",
+                    wins_solo_pro: "Pro",
+                  };
+                  return (
+                    <span key={key} className="text-muted-foreground">
+                      {labels[key] || key}:{" "}
+                      <span className="font-mono text-foreground">
+                        {val.toLocaleString()}
+                      </span>
+                    </span>
+                  );
+                })}
             </div>
 
             {/* Traces */}
             <div className="space-y-1.5">
               {group.snapshots.map((snapshot) => {
-                const globalIndex = history.findIndex(h => h.id === snapshot.id);
+                const globalIndex = history.findIndex(
+                  (h) => h.id === snapshot.id,
+                );
                 const prevSnapshot = history[globalIndex + 1];
-                const rawDiffs = getDiffs(snapshot.data?.player, prevSnapshot?.data?.player);
+                const rawDiffs = getDiffs(
+                  snapshot.data?.player,
+                  prevSnapshot?.data?.player,
+                );
 
                 if (rawDiffs.length === 0 && prevSnapshot) return null;
 
                 // Calculate lose for this trace
-                const gamesPlayed = rawDiffs.find(d => d.key === 'games_played');
-                const winsData = rawDiffs.find(d => d.key === 'wins');
-                const traceLose = (gamesPlayed?.diff as number || 0) - (winsData?.diff as number || 0);
+                const gamesPlayed = rawDiffs.find(
+                  (d) => d.key === "games_played",
+                );
+                const winsData = rawDiffs.find((d) => d.key === "wins");
+                const traceLose =
+                  ((gamesPlayed?.diff as number) || 0) -
+                  ((winsData?.diff as number) || 0);
 
                 // Build ordered display
-                const traceFieldOrder = ['score', 'wins', 'lose', 'coins', 'wins_guess_the_build', 'correct_guesses', 'wins_speed_builders', 'perfect_builds', 'wins_solo_normal', 'wins_teams_normal', 'wins_solo_pro', 'super_votes', 'total_votes'];
+                const traceFieldOrder = [
+                  "score",
+                  "wins",
+                  "lose",
+                  "coins",
+                  "wins_guess_the_build",
+                  "correct_guesses",
+                  "wins_speed_builders",
+                  "perfect_builds",
+                  "wins_solo_normal",
+                  "wins_teams_normal",
+                  "wins_solo_pro",
+                  "super_votes",
+                  "total_votes",
+                ];
                 const traceLabels: Record<string, string> = {
-                  score: "Score", wins: "Wins", lose: "Lose", coins: "Coins",
-                  super_votes: "SV", total_votes: "Votes", correct_guesses: "Correct Guess",
-                  wins_guess_the_build: "GTB", perfect_builds: "Perfect Build", wins_speed_builders: "SPB",
-                  wins_solo_normal: "Solo", wins_teams_normal: "Teams", wins_solo_pro: "Pro"
+                  score: "Score",
+                  wins: "Wins",
+                  lose: "Lose",
+                  coins: "Coins",
+                  super_votes: "SV",
+                  total_votes: "Votes",
+                  correct_guesses: "Correct Guess",
+                  wins_guess_the_build: "GTB",
+                  perfect_builds: "Perfect Build",
+                  wins_speed_builders: "SPB",
+                  wins_solo_normal: "Solo",
+                  wins_teams_normal: "Teams",
+                  wins_solo_pro: "Pro",
                 };
 
-                const traceAllDiffs: Record<string, { diff: number | string; isNegative: boolean }> = {};
-                rawDiffs.filter(d => d.type === 'number' && !d.isInitial && d.key !== 'games_played').forEach(d => {
-                  traceAllDiffs[d.key] = { diff: d.diff, isNegative: false };
-                });
+                const traceAllDiffs: Record<
+                  string,
+                  { diff: number | string; isNegative: boolean }
+                > = {};
+                rawDiffs
+                  .filter(
+                    (d) =>
+                      d.type === "number" &&
+                      !d.isInitial &&
+                      d.key !== "games_played",
+                  )
+                  .forEach((d) => {
+                    traceAllDiffs[d.key] = { diff: d.diff, isNegative: false };
+                  });
                 if (traceLose > 0) {
-                  traceAllDiffs['lose'] = { diff: traceLose, isNegative: true };
+                  traceAllDiffs["lose"] = { diff: traceLose, isNegative: true };
                 }
 
                 const orderedTraceDiffs = traceFieldOrder
-                  .filter(key => traceAllDiffs[key])
-                  .map(key => ({ key, label: traceLabels[key] || key, diff: traceAllDiffs[key].diff, isNegative: traceAllDiffs[key].isNegative }));
+                  .filter((key) => traceAllDiffs[key])
+                  .map((key) => ({
+                    key,
+                    label: traceLabels[key] || key,
+                    diff: traceAllDiffs[key].diff,
+                    isNegative: traceAllDiffs[key].isNegative,
+                  }));
 
-                const stringDiffs = rawDiffs.filter(d => d.type === 'string' || d.type === 'element');
+                const stringDiffs = rawDiffs.filter(
+                  (d) => d.type === "string" || d.type === "element",
+                );
 
                 return (
-                  <div key={snapshot.id} className="flex items-center gap-2 text-xs">
+                  <div
+                    key={snapshot.id}
+                    className="flex items-center gap-2 text-xs"
+                  >
                     <span className="text-muted-foreground min-w-[45px]">
-                      {new Date(snapshot.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      {new Date(snapshot.created_at).toLocaleTimeString([], {
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}
                     </span>
-                    {!prevSnapshot && <Badge variant="outline" className="text-[10px] h-4 px-1">Init</Badge>}
+                    {!prevSnapshot && (
+                      <Badge variant="outline" className="text-[10px] h-4 px-1">
+                        Init
+                      </Badge>
+                    )}
                     <div className="flex flex-wrap gap-x-3 gap-y-0.5">
-                      {orderedTraceDiffs.length > 0 ? (
-                        orderedTraceDiffs.map(d => (
-                          <span key={d.key} className="text-muted-foreground">
-                            {d.label} <span className={cn("font-mono", d.isNegative ? "text-red-500 dark:text-red-400" : "text-green-600 dark:text-green-400")}>{d.isNegative ? `+${d.diff}` : formatDiff(d.diff)}</span>
-                          </span>
-                        ))
-                      ) : stringDiffs.map(d => (
-                        <span key={d.key} className="text-muted-foreground">
-                          {d.label}: <span className="text-foreground">{d.newValue}</span>
-                        </span>
-                      ))}
+                      {orderedTraceDiffs.length > 0
+                        ? orderedTraceDiffs.map((d) => (
+                            <span key={d.key} className="text-muted-foreground">
+                              {d.label}{" "}
+                              <span
+                                className={cn(
+                                  "font-mono",
+                                  d.isNegative
+                                    ? "text-red-500 dark:text-red-400"
+                                    : "text-green-600 dark:text-green-400",
+                                )}
+                              >
+                                {d.isNegative
+                                  ? `+${d.diff}`
+                                  : formatDiff(d.diff)}
+                              </span>
+                            </span>
+                          ))
+                        : stringDiffs.map((d) => (
+                            <span key={d.key} className="text-muted-foreground">
+                              {d.label}:{" "}
+                              <span className="text-foreground">
+                                {d.newValue}
+                              </span>
+                            </span>
+                          ))}
                     </div>
                   </div>
                 );
@@ -419,10 +574,19 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Badge variant="outline" className="text-[10px] h-4 px-1.5 cursor-help">?</Badge>
+              <Badge
+                variant="outline"
+                className="text-[10px] h-4 px-1.5 cursor-help"
+              >
+                ?
+              </Badge>
             </TooltipTrigger>
             <TooltipContent className="max-w-[280px]">
-              <p>If the player has enabled "Stats Frozen" in Hypixel API Settings, API data will be frozen until they go offline. Session data may not be accurate.</p>
+              <p>
+                If the player has enabled &quot;Stats Frozen&quot; in Hypixel
+                API Settings, API data will be frozen until they go offline.
+                Session data may not be accurate.
+              </p>
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
@@ -432,7 +596,8 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
           // Calculate daily summary
           const diffs: Record<string, number> = {};
           const latestSnapshot = group.snapshots[0];
-          const latestBb = latestSnapshot?.data?.player?.stats?.BuildBattle || {};
+          const latestBb =
+            latestSnapshot?.data?.player?.stats?.BuildBattle || {};
           const latestAch = latestSnapshot?.data?.player?.achievements || {};
 
           const latestValues: Record<string, number> = {
@@ -442,18 +607,27 @@ export function StatsTimeline({ history }: { history: StatsSnapshot[] }) {
             coins: Number(latestBb.coins || 0),
             correct_guesses: Number(latestBb.correct_guesses || 0),
             wins_guess_the_build: Number(latestBb.wins_guess_the_build || 0),
-            perfect_builds: Number(latestAch.buildbattle_speed_builders_perfectionist || 0),
+            perfect_builds: Number(
+              latestAch.buildbattle_speed_builders_perfectionist || 0,
+            ),
             wins_speed_builders: Number(latestBb.wins_speed_builders || 0),
           };
 
           group.snapshots.forEach((snapshot) => {
-            const globalIndex = history.findIndex(h => h.id === snapshot.id);
+            const globalIndex = history.findIndex((h) => h.id === snapshot.id);
             const prevSnapshot = history[globalIndex + 1];
 
             if (prevSnapshot) {
-              const snapshotDiffs = getDiffs(snapshot.data?.player, prevSnapshot.data?.player);
-              snapshotDiffs.forEach(d => {
-                if (d.type === 'number' && !d.isInitial && typeof d.diff === 'number') {
+              const snapshotDiffs = getDiffs(
+                snapshot.data?.player,
+                prevSnapshot.data?.player,
+              );
+              snapshotDiffs.forEach((d) => {
+                if (
+                  d.type === "number" &&
+                  !d.isInitial &&
+                  typeof d.diff === "number"
+                ) {
                   diffs[d.key] = (diffs[d.key] || 0) + d.diff;
                 }
               });

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
@@ -264,10 +265,13 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
         <div className="flex items-center gap-3">
           {avatarUrls && (
             <div className="flex items-center flex-shrink-0">
-              <img
+              <Image
                 src={avatarUrls.head}
                 alt={`${stats.displayname}'s head`}
-                className="w-8 h-8 rounded-md flex-shrink-0"
+                width={32}
+                height={32}
+                unoptimized
+                className="rounded-md flex-shrink-0"
               />
             </div>
           )}
@@ -406,11 +410,16 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
             </div>
 
             <div className="flex-grow" />
-            <img
-              src={avatarUrls?.body}
-              alt={`${stats.displayname}'s body`}
-              className="w-20 mx-auto pb-2"
-            />
+            {avatarUrls && (
+              <Image
+                src={avatarUrls.body}
+                alt={`${stats.displayname}'s body`}
+                width={80}
+                height={80}
+                unoptimized
+                className="mx-auto pb-2"
+              />
+            )}
           </div>
         </Card>
 
@@ -538,10 +547,13 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
                       <div className="w-10 h-10 bg-secondary/30 border border-border/50 rounded flex items-center justify-center">
                         {!isAir && (
                           <>
-                            <img
+                            <Image
                               src={getItemImageUrl(parsed.id)}
                               alt={parsed.name}
-                              className="w-8 h-8 brightness-110 contrast-110"
+                              width={32}
+                              height={32}
+                              unoptimized
+                              className="brightness-110 contrast-110"
                               style={{ imageRendering: "pixelated" }}
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
