@@ -42,8 +42,6 @@ export default function ThemesAllPage() {
 
   if (allLanguageKeys.includes("co")) languageKeys.push("co");
 
-
-
   const data: ThemeRow[] = items.map((item) => ({
     id: item.id,
     theme: item.theme,
@@ -62,9 +60,15 @@ export default function ThemesAllPage() {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-[#888] hover:text-blue-400 transition-colors group"
           >
-            <span className="text-white group-hover:text-blue-400">{TOTAL_TRANSLATIONS.toLocaleString()}</span> translations
+            <span className="text-white group-hover:text-blue-400">
+              {TOTAL_TRANSLATIONS.toLocaleString()}
+            </span>{" "}
+            translations
             <span className="text-[#444]">/</span>
-            <span className="text-white group-hover:text-blue-400">{TOTAL_THEMES.toLocaleString()}</span> themes
+            <span className="text-white group-hover:text-blue-400">
+              {TOTAL_THEMES.toLocaleString()}
+            </span>{" "}
+            themes
           </a>
           <span className="text-[#444]">|</span>
           <span className="text-[#666]">updated {LAST_UPDATED}</span>

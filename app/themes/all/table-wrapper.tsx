@@ -5,15 +5,15 @@ import { DataTable } from "./data-table";
 import { createColumns, ThemeRow } from "./columns";
 
 interface ThemesTableWrapperProps {
-    data: ThemeRow[];
-    languageKeys: string[];
+  data: ThemeRow[];
+  languageKeys: string[];
 }
 
 export function ThemesTableWrapper({
-    data,
-    languageKeys,
+  data,
+  languageKeys,
 }: ThemesTableWrapperProps) {
-    const columns = useMemo(() => createColumns(languageKeys), [languageKeys]);
+  const columns = useMemo(() => createColumns(languageKeys), [languageKeys]);
 
-    return <DataTable columns={columns} data={data} />;
+  return <DataTable columns={columns} data={data} />;
 }
