@@ -260,6 +260,7 @@ export default function ThemesPageContent() {
         performSearch();
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
 
   const handleSearch = () => {
