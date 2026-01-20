@@ -21,6 +21,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Settings2, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { languageOptionsWithComplement } from "@/components/ui/language-select";
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[];
@@ -109,23 +110,29 @@ export function DataTable<TData, TValue>({
                         </DropdownMenuTrigger>
                         <DropdownMenuContent
                             align="end"
-                            className="bg-[#1c1c1c] border-[#333] text-[#ccc] max-h-[60vh] overflow-y-auto p-1 font-sans"
+                            className="w-[200px] bg-[#1a1a1a] border-[#333] text-[#eee] max-h-[60vh] overflow-y-auto p-1.5 font-sans shadow-xl"
                         >
+                            <div className="px-2 py-1.5 text-[10px] font-semibold text-[#666] uppercase tracking-wider">
+                                Visible Columns
+                            </div>
                             {table
                                 .getAllColumns()
                                 .filter((column) => column.getCanHide())
                                 .map((column) => {
-                                    // Fix: Ensure we get a string label for the column
                                     let label = column.id;
+
                                     if (column.id === 'theme') label = 'Theme';
                                     else if (column.id === 'shortcut') label = 'Shortcut';
                                     else if (column.id === 'multiwords') label = 'Multiword';
-                                    else if (column.id.startsWith('lang_')) label = column.id.replace('lang_', '');
+                                    else if (column.id.startsWith('lang_')) {
+                                        const code = column.id.replace('lang_', '');
+                                        label = languageOptionsWithComplement[code]?.label || code;
+                                    }
 
                                     return (
                                         <DropdownMenuCheckboxItem
                                             key={column.id}
-                                            className="capitalize text-xs py-1.5 px-2 focus:bg-[#333] focus:text-white data-[state=checked]:text-blue-400 data-[state=checked]:bg-[#252525] rounded-sm cursor-pointer"
+                                            className="capitalize text-xs py-2 pl-8 pr-2 focus:bg-[#252525] focus:text-white data-[state=checked]:bg-[#252525] data-[state=checked]:text-white rounded-md cursor-pointer mb-0.5 border border-transparent data-[state=checked]:border-[#333]"
                                             checked={column.getIsVisible()}
                                             onCheckedChange={(value) =>
                                                 column.toggleVisibility(!!value)

@@ -137,7 +137,7 @@ export const createColumns = (languageKeys: string[]): ColumnDef<ThemeRow>[] => 
                 <div
                     className={cn(
                         "h-full flex items-center px-3 w-full transition-colors truncate",
-                        !isApproved ? "text-[#ccc] bg-[#222]" : "text-[#ccc] hover:text-white"
+                        !isApproved ? "text-amber-500 font-medium bg-amber-500/10" : "text-[#ccc] hover:text-white"
                     )}
                     title={t.translation}
                 >
