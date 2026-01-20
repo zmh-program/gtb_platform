@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,10 +53,13 @@ export function SearchHistory({ onPlayerSelect }: SearchHistoryProps) {
           >
             <div className="flex flex-col items-center p-2 rounded-lg hover:bg-muted/50 transition-colors">
               <div className="relative">
-                <img
+                <Image
                   src={getAvatarUrl(player.uuid, "head")}
                   alt={`${player.username}'s avatar`}
-                  className="w-8 h-8 rounded"
+                  width={32}
+                  height={32}
+                  unoptimized
+                  className="rounded"
                   onError={(e) => {
                     // Fallback to initial letter if avatar fails to load
                     const target = e.target as HTMLImageElement;
