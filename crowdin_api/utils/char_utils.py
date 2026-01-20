@@ -17,9 +17,117 @@ def is_special_string(input_str: str) -> bool:
     )
 
 
-def sort_better_shortcut(shortcut: str) -> Tuple[bool, int, str]:
+# Keyboard layout constants for typing difficulty calculation
+# Maps character -> (row, column, hand, finger)
+# Row: 0=Number, 1=Top, 2=Home, 3=Bottom
+# Hand: 0=Left, 1=Right
+# Finger: 0=Pinky, 1=Ring, 2=Middle, 3=Index
+QWERTY_LAYOUT = {
+    # Number Row
+    "1": (0, 0, 0, 0), "2": (0, 1, 0, 1), "3": (0, 2, 0, 2), "4": (0, 3, 0, 3), "5": (0, 4, 0, 3),
+    "6": (0, 5, 1, 3), "7": (0, 6, 1, 3), "8": (0, 7, 1, 2), "9": (0, 8, 1, 1), "0": (0, 9, 1, 0),
+    "-": (0, 10, 1, 0), "=": (0, 11, 1, 0),
+    
+    # Top Row
+    "q": (1, 0, 0, 0), "w": (1, 1, 0, 1), "e": (1, 2, 0, 2), "r": (1, 3, 0, 3), "t": (1, 4, 0, 3),
+    "y": (1, 5, 1, 3), "u": (1, 6, 1, 3), "i": (1, 7, 1, 2), "o": (1, 8, 1, 1), "p": (1, 9, 1, 0),
+    "[": (1, 10, 1, 0), "]": (1, 11, 1, 0), "\\": (1, 12, 1, 0),
+    
+    # Home Row
+    "a": (2, 0, 0, 0), "s": (2, 1, 0, 1), "d": (2, 2, 0, 2), "f": (2, 3, 0, 3), "g": (2, 4, 0, 3),
+    "h": (2, 5, 1, 3), "j": (2, 6, 1, 3), "k": (2, 7, 1, 2), "l": (2, 8, 1, 1), ";": (2, 9, 1, 0),
+    "'": (2, 10, 1, 0),
+    
+    # Bottom Row
+    "z": (3, 0, 0, 0), "x": (3, 1, 0, 1), "c": (3, 2, 0, 2), "v": (3, 3, 0, 3), "b": (3, 4, 0, 3),
+    "n": (3, 5, 1, 3), "m": (3, 6, 1, 3), ",": (3, 7, 1, 2), ".": (3, 8, 1, 1), "/": (3, 9, 1, 0),
+}
+
+
+def calculate_typing_complexity(shortcut: str) -> float:
+    """
+    Calculates a typing difficulty score based on QWERTY layout.
+    Lower score means easier/faster to type.
+    
+    Algorithm:
+    1. Base cost per character based on row position (Home row is easiest).
+    2. Penalties for difficult transitions:
+       - Same hand usage (+0.5)
+       - Same finger usage (+2.0) - very difficult/slow
+       - Row jumping (e.g. Top to Bottom) (+0.5 per row distance)
+    3. Bonuses/Neutrality:
+       - Alternating hands (0 penalty) - fastest typing flow
+       - Same key (double letter) (+0.1) - very fast re-press
+    4. Hand Bias:
+       - Right hand penalty (+1.1) per key (prefer Left hand as Right hand is on mouse)
+    """
+    if not shortcut:
+        return 0.0
+        
+    score = 0.0
+    prev_char_info = None
+    
+    # Row costs: Home(2)=0, Top(1)=0.5, Bot(3)=1.0, Num(0)=1.5
+    row_costs = {0: 1.5, 1: 0.5, 2: 0.0, 3: 1.0}
+    
+    normalized_shortcut = shortcut.lower()
+    
+    for i, char in enumerate(normalized_shortcut):
+        # Default difficult chars (not in map) get high penalty
+        if char not in QWERTY_LAYOUT:
+             score += 3.0
+             prev_char_info = None
+             continue
+             
+        row, col, hand, finger = QWERTY_LAYOUT[char]
+        
+        # 1. Base cost for position
+        score += row_costs.get(row, 2.0)
+        
+        # 2. Right hand penalty (user request)
+        if hand == 1:
+            score += 1.1
+        
+        # 3. Transition cost
+        if prev_char_info:
+            prev_row, prev_col, prev_hand, prev_finger = prev_char_info
+            
+            # Same key (double letter) - minimal penalty
+            if char == normalized_shortcut[i-1]:
+                score += 0.1
+            
+            # Different hand - Optimal flow (0 penalty)
+            elif hand != prev_hand:
+                pass # Alternating hands is fast
+                
+            # Same hand
+            else:
+                score += 0.5 # Same hand penalty
+                
+                # Same finger (bad!)
+                if finger == prev_finger:
+                    score += 2.0 # High penalty for same-finger contortions
+                
+                # Row jump penalty (distance > 1 row)
+                if abs(row - prev_row) > 1:
+                    score += 0.5 * abs(row - prev_row)
+                    
+                # Lateral stretch (same hand, far columns)
+                if abs(col - prev_col) > 4:
+                    score += 0.5
+                    
+        prev_char_info = (row, col, hand, finger)
+        
+    return score
+
+
+def sort_better_shortcut(shortcut: str) -> Tuple[bool, int, float]:
     """Sort key function for shortcuts."""
-    return (is_special_string(shortcut), len(shortcut), shortcut)
+    # Sort order:
+    # 1. Special strings (accented/unicode) last (True > False)
+    # 2. Length (shorter is better)
+    # 3. Typing complexity (lower score is better/faster)
+    return (is_special_string(shortcut), len(shortcut), calculate_typing_complexity(shortcut))
 
 
 def rm_accents(input_str: str) -> str:

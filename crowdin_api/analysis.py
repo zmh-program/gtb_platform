@@ -6,6 +6,7 @@ from utils.char_utils import (
     formatted_translation,
     is_special_string,
     sort_better_shortcut,
+    calculate_typing_complexity,
 )
 from utils.config_utils import (
     read_all_translations,
@@ -17,7 +18,7 @@ from utils.config_utils import (
 from utils.duplicate_utils import find_duplicate_translations
 
 
-def find_shortcut_for_theme(theme_data: Dict[str, Any]) -> Optional[str]:
+def find_shortcut_for_theme(theme_data: Dict[str, Any], duplicates: Dict[str, Any]) -> Optional[str]:
     """Find the shortest valid shortcut for a theme."""
 
     all_translations = list(
@@ -37,7 +38,15 @@ def find_shortcut_for_theme(theme_data: Dict[str, Any]) -> Optional[str]:
 
     assert all_translations, f"No translations found for theme {theme_data['theme']}"
 
-    k = min(all_translations, key=sort_better_shortcut)
+    k = min(
+        all_translations,
+        key=lambda shortcut: (
+            is_special_string(shortcut),
+            len(shortcut),
+            1 if shortcut in duplicates else 0,
+            calculate_typing_complexity(shortcut),
+        ),
+    )
 
     min_theme_len = min(len(t) for t in formatted_translation(theme_data["theme"]))
     if len(k) >= min_theme_len:
@@ -59,7 +68,7 @@ def generate_themes_json(
             {
                 "id": theme_data["id"],
                 "theme": theme_data["theme"],
-                "shortcut": find_shortcut_for_theme(theme_data),
+                "shortcut": find_shortcut_for_theme(theme_data, duplicates),
                 "multiwords": sorted(
                     [
                         {
