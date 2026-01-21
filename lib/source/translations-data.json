@@ -2,7 +2,7 @@
   {
     "id": 213567,
     "theme": "Air Horn",
-    "shortcut": "goarna",
+    "shortcut": "tromba",
     "multiwords": [
       {
         "multiword": "tromba",
@@ -343,19 +343,6 @@
         ]
       },
       {
-        "multiword": "dirigeable",
-        "occurrences": [
-          {
-            "theme": "Airship",
-            "reference": "French"
-          },
-          {
-            "theme": "Blimp",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "dirigibile",
         "occurrences": [
           {
@@ -365,6 +352,19 @@
           {
             "theme": "Blimp",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "dirigeable",
+        "occurrences": [
+          {
+            "theme": "Airship",
+            "reference": "French"
+          },
+          {
+            "theme": "Blimp",
+            "reference": "French"
           }
         ]
       },
@@ -2116,7 +2116,7 @@
   {
     "id": 212821,
     "theme": "Aquarium",
-    "shortcut": "acuario",
+    "shortcut": "aquario",
     "multiwords": [
       {
         "multiword": "aquario",
@@ -2932,19 +2932,6 @@
     "shortcut": "ok",
     "multiwords": [
       {
-        "multiword": "sip",
-        "occurrences": [
-          {
-            "theme": "Arrow",
-            "reference": "Czech"
-          },
-          {
-            "theme": "Whistle",
-            "reference": "Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "pil",
         "occurrences": [
           {
@@ -2954,6 +2941,19 @@
           {
             "theme": "Battery",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "sip",
+        "occurrences": [
+          {
+            "theme": "Arrow",
+            "reference": "Czech"
+          },
+          {
+            "theme": "Whistle",
+            "reference": "Hungarian"
           }
         ]
       },
@@ -4694,7 +4694,7 @@
   {
     "id": 212831,
     "theme": "Backpack",
-    "shortcut": "batoh",
+    "shortcut": "reppu",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -5670,7 +5670,7 @@
   {
     "id": 212835,
     "theme": "Balloon",
-    "shortcut": "balao",
+    "shortcut": "globo",
     "multiwords": [
       {
         "multiword": "globo",
@@ -6501,7 +6501,7 @@
   {
     "id": 213635,
     "theme": "Banner",
-    "shortcut": "fana",
+    "shortcut": "flag",
     "multiwords": [
       {
         "multiword": "flag",
@@ -7132,19 +7132,6 @@
         ]
       },
       {
-        "multiword": "barn",
-        "occurrences": [
-          {
-            "theme": "Barn",
-            "reference": "English / Pirate English"
-          },
-          {
-            "theme": "Kid",
-            "reference": "Danish / Norwegian / Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "lave",
         "occurrences": [
           {
@@ -7154,6 +7141,19 @@
           {
             "theme": "Lava",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "barn",
+        "occurrences": [
+          {
+            "theme": "Barn",
+            "reference": "English / Pirate English"
+          },
+          {
+            "theme": "Kid",
+            "reference": "Danish / Norwegian / Swedish"
           }
         ]
       },
@@ -7171,7 +7171,7 @@
         ]
       },
       {
-        "multiword": "сарай",
+        "multiword": "сараи",
         "occurrences": [
           {
             "theme": "Barn",
@@ -7305,7 +7305,7 @@
   {
     "id": 213643,
     "theme": "Barrel",
-    "shortcut": "sud",
+    "shortcut": "fas",
     "multiwords": [
       {
         "multiword": "fas",
@@ -11176,7 +11176,7 @@
   {
     "id": 213687,
     "theme": "Beetle",
-    "shortcut": "kever",
+    "shortcut": "bille",
     "multiwords": [
       {
         "multiword": "kafer",
@@ -11637,7 +11637,7 @@
   {
     "id": 213689,
     "theme": "Belt",
-    "shortcut": "ov",
+    "shortcut": "pa",
     "multiwords": [
       {
         "multiword": "pa",
@@ -12124,7 +12124,7 @@
   {
     "id": 213697,
     "theme": "Bicycle",
-    "shortcut": "fiet",
+    "shortcut": "kolo",
     "multiwords": [
       {
         "multiword": "kolo",
@@ -13010,7 +13010,7 @@
   {
     "id": 213705,
     "theme": "Binoculars",
-    "shortcut": "tavcso",
+    "shortcut": "kikare",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -13133,7 +13133,7 @@
   {
     "id": 212853,
     "theme": "Bird",
-    "shortcut": "ave",
+    "shortcut": "kus",
     "multiwords": [
       {
         "multiword": "kus",
@@ -14035,7 +14035,7 @@
   {
     "id": 213719,
     "theme": "Biscuit",
-    "shortcut": "kex",
+    "shortcut": "kek",
     "multiwords": [
       {
         "multiword": "kek",
@@ -14574,21 +14574,8 @@
   {
     "id": 213723,
     "theme": "Blackboard",
-    "shortcut": "tafel",
+    "shortcut": "tavle",
     "multiwords": [
-      {
-        "multiword": "tafel",
-        "occurrences": [
-          {
-            "theme": "Blackboard",
-            "reference": "German"
-          },
-          {
-            "theme": "Table",
-            "reference": "Dutch"
-          }
-        ]
-      },
       {
         "multiword": "tavle",
         "occurrences": [
@@ -14599,6 +14586,19 @@
           {
             "theme": "Whiteboard",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "tafel",
+        "occurrences": [
+          {
+            "theme": "Blackboard",
+            "reference": "German"
+          },
+          {
+            "theme": "Table",
+            "reference": "Dutch"
           }
         ]
       }
@@ -14724,7 +14724,7 @@
   {
     "id": 244098,
     "theme": "Blacksmith",
-    "shortcut": "smed",
+    "shortcut": "smid",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -15345,19 +15345,6 @@
         ]
       },
       {
-        "multiword": "dirigeable",
-        "occurrences": [
-          {
-            "theme": "Airship",
-            "reference": "French"
-          },
-          {
-            "theme": "Blimp",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "dirigibile",
         "occurrences": [
           {
@@ -15367,6 +15354,19 @@
           {
             "theme": "Blimp",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "dirigeable",
+        "occurrences": [
+          {
+            "theme": "Airship",
+            "reference": "French"
+          },
+          {
+            "theme": "Blimp",
+            "reference": "French"
           }
         ]
       },
@@ -16058,7 +16058,7 @@
   {
     "id": 212857,
     "theme": "Boat",
-    "shortcut": "bad",
+    "shortcut": "lod",
     "multiwords": [
       {
         "multiword": "bad",
@@ -16078,19 +16078,6 @@
         ]
       },
       {
-        "multiword": "bat",
-        "occurrences": [
-          {
-            "theme": "Bat",
-            "reference": "English / Pirate English"
-          },
-          {
-            "theme": "Boat",
-            "reference": "Norwegian / Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "lod",
         "occurrences": [
           {
@@ -16100,6 +16087,19 @@
           {
             "theme": "Ship",
             "reference": "Czech"
+          }
+        ]
+      },
+      {
+        "multiword": "bat",
+        "occurrences": [
+          {
+            "theme": "Bat",
+            "reference": "English / Pirate English"
+          },
+          {
+            "theme": "Boat",
+            "reference": "Norwegian / Swedish"
           }
         ]
       },
@@ -16589,7 +16589,7 @@
   {
     "id": 212859,
     "theme": "Book",
-    "shortcut": "bog",
+    "shortcut": "bok",
     "multiwords": [
       {
         "multiword": "carte",
@@ -17026,7 +17026,7 @@
   {
     "id": 213745,
     "theme": "Bookstore",
-    "shortcut": "livraria",
+    "shortcut": "libreria",
     "multiwords": [
       {
         "multiword": "libreria",
@@ -17315,6 +17315,19 @@
         ]
       },
       {
+        "multiword": "boot",
+        "occurrences": [
+          {
+            "theme": "Boat",
+            "reference": "Dutch / German"
+          },
+          {
+            "theme": "Boots",
+            "reference": "English / Pirate English"
+          }
+        ]
+      },
+      {
         "multiword": "boty",
         "occurrences": [
           {
@@ -17337,19 +17350,6 @@
           {
             "theme": "Shoes",
             "reference": "Polish"
-          }
-        ]
-      },
-      {
-        "multiword": "boot",
-        "occurrences": [
-          {
-            "theme": "Boat",
-            "reference": "Dutch / German"
-          },
-          {
-            "theme": "Boots",
-            "reference": "English / Pirate English"
           }
         ]
       },
@@ -18210,7 +18210,7 @@
   {
     "id": 213759,
     "theme": "Bowl",
-    "shortcut": "tal",
+    "shortcut": "bol",
     "multiwords": [
       {
         "multiword": "bol",
@@ -18549,7 +18549,7 @@
   {
     "id": 213763,
     "theme": "Bowling Ball",
-    "shortcut": "keilapallo",
+    "shortcut": "bowlingbal",
     "multiwords": [
       {
         "multiword": "保齡球",
@@ -18699,7 +18699,7 @@
   {
     "id": 213765,
     "theme": "Bowling Pin",
-    "shortcut": "keila",
+    "shortcut": "labut",
     "multiwords": [
       {
         "multiword": "labut",
@@ -19205,7 +19205,7 @@
   {
     "id": 213775,
     "theme": "Bracelet",
-    "shortcut": "armband",
+    "shortcut": "karkoto",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -19451,7 +19451,7 @@
   {
     "id": 212873,
     "theme": "Breakfast",
-    "shortcut": "reggeli",
+    "shortcut": "frokost",
     "multiwords": [
       {
         "multiword": "frokost",
@@ -19711,7 +19711,7 @@
   {
     "id": 212875,
     "theme": "Bridge",
-    "shortcut": "hid",
+    "shortcut": "pod",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -20419,7 +20419,7 @@
   {
     "id": 213791,
     "theme": "Bubbles",
-    "shortcut": "bulle",
+    "shortcut": "bolle",
     "multiwords": [
       {
         "multiword": "bolle",
@@ -22062,19 +22062,6 @@
         ]
       },
       {
-        "multiword": "tavsan",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "coelho",
         "occurrences": [
           {
@@ -22084,6 +22071,19 @@
           {
             "theme": "Rabbit",
             "reference": "Portuguese / Portuguese, Brazilian"
+          }
+        ]
+      },
+      {
+        "multiword": "tavsan",
+        "occurrences": [
+          {
+            "theme": "Bunny",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Rabbit",
+            "reference": "Turkish"
           }
         ]
       },
@@ -23036,7 +23036,7 @@
   {
     "id": 212885,
     "theme": "Button",
-    "shortcut": "knap",
+    "shortcut": "gomb",
     "multiwords": [
       {
         "multiword": "gomb",
@@ -23414,7 +23414,7 @@
   {
     "id": 213819,
     "theme": "Cabbage",
-    "shortcut": "kal",
+    "shortcut": "sla",
     "multiwords": [
       {
         "multiword": "sla",
@@ -23777,7 +23777,7 @@
   {
     "id": 213821,
     "theme": "Cabinet",
-    "shortcut": "kast",
+    "shortcut": "skab",
     "multiwords": [
       {
         "multiword": "armario",
@@ -23996,7 +23996,7 @@
   {
     "id": 213823,
     "theme": "Cable",
-    "shortcut": "cabo",
+    "shortcut": "cavo",
     "multiwords": [
       {
         "multiword": "cavo",
@@ -24038,19 +24038,6 @@
         ]
       },
       {
-        "multiword": "cablu",
-        "occurrences": [
-          {
-            "theme": "Cable",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Wire",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "kablo",
         "occurrences": [
           {
@@ -24060,6 +24047,19 @@
           {
             "theme": "Wire",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "cablu",
+        "occurrences": [
+          {
+            "theme": "Cable",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Wire",
+            "reference": "Romanian"
           }
         ]
       }
@@ -27002,19 +27002,6 @@
         ]
       },
       {
-        "multiword": "cap",
-        "occurrences": [
-          {
-            "theme": "Cap",
-            "reference": "English / Norwegian / Pirate English"
-          },
-          {
-            "theme": "Head",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "pet",
         "occurrences": [
           {
@@ -27037,6 +27024,19 @@
           {
             "theme": "Picture",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "cap",
+        "occurrences": [
+          {
+            "theme": "Cap",
+            "reference": "English / Norwegian / Pirate English"
+          },
+          {
+            "theme": "Head",
+            "reference": "Romanian"
           }
         ]
       },
@@ -27268,19 +27268,6 @@
         ]
       },
       {
-        "multiword": "plast",
-        "occurrences": [
-          {
-            "theme": "Cape",
-            "reference": "Czech"
-          },
-          {
-            "theme": "Cloak",
-            "reference": "Czech"
-          }
-        ]
-      },
-      {
         "multiword": "kappe",
         "occurrences": [
           {
@@ -27290,6 +27277,19 @@
           {
             "theme": "Cloak",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "plast",
+        "occurrences": [
+          {
+            "theme": "Cape",
+            "reference": "Czech"
+          },
+          {
+            "theme": "Cloak",
+            "reference": "Czech"
           }
         ]
       },
@@ -28526,7 +28526,7 @@
   {
     "id": 213869,
     "theme": "Carpet",
-    "shortcut": "hali",
+    "shortcut": "tapi",
     "multiwords": [
       {
         "multiword": "teppe",
@@ -28576,6 +28576,19 @@
         ]
       },
       {
+        "multiword": "covor",
+        "occurrences": [
+          {
+            "theme": "Carpet",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Rug",
+            "reference": "Romanian"
+          }
+        ]
+      },
+      {
         "multiword": "matta",
         "occurrences": [
           {
@@ -28598,19 +28611,6 @@
           {
             "theme": "Rug",
             "reference": "Polish"
-          }
-        ]
-      },
-      {
-        "multiword": "covor",
-        "occurrences": [
-          {
-            "theme": "Carpet",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Rug",
-            "reference": "Romanian"
           }
         ]
       },
@@ -28745,7 +28745,7 @@
         ]
       },
       {
-        "multiword": "ковёр",
+        "multiword": "ковер",
         "occurrences": [
           {
             "theme": "Carpet",
@@ -28879,25 +28879,8 @@
   {
     "id": 213871,
     "theme": "Carriage",
-    "shortcut": "vagn",
+    "shortcut": "vogn",
     "multiwords": [
-      {
-        "multiword": "vagn",
-        "occurrences": [
-          {
-            "theme": "Carriage",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Trolley",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Wagon",
-            "reference": "Swedish"
-          }
-        ]
-      },
       {
         "multiword": "vogn",
         "occurrences": [
@@ -28912,6 +28895,23 @@
           {
             "theme": "Wagon",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "vagn",
+        "occurrences": [
+          {
+            "theme": "Carriage",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Trolley",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Wagon",
+            "reference": "Swedish"
           }
         ]
       },
@@ -29674,7 +29674,7 @@
   {
     "id": 212905,
     "theme": "Castle",
-    "shortcut": "hrad",
+    "shortcut": "slot",
     "multiwords": [
       {
         "multiword": "kale",
@@ -31759,7 +31759,7 @@
   {
     "id": 213899,
     "theme": "Chair",
-    "shortcut": "szek",
+    "shortcut": "stol",
     "multiwords": [
       {
         "multiword": "stol",
@@ -32725,19 +32725,6 @@
         ]
       },
       {
-        "multiword": "koch",
-        "occurrences": [
-          {
-            "theme": "Chef",
-            "reference": "German"
-          },
-          {
-            "theme": "Cook",
-            "reference": "German"
-          }
-        ]
-      },
-      {
         "multiword": "kock",
         "occurrences": [
           {
@@ -32747,6 +32734,19 @@
           {
             "theme": "Cook",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "koch",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "German"
+          },
+          {
+            "theme": "Cook",
+            "reference": "German"
           }
         ]
       },
@@ -33784,7 +33784,7 @@
   {
     "id": 213929,
     "theme": "Chilli",
-    "shortcut": "csili",
+    "shortcut": "salsa",
     "multiwords": [
       {
         "multiword": "salsa",
@@ -33921,7 +33921,7 @@
   {
     "id": 213931,
     "theme": "Chimney",
-    "shortcut": "baca",
+    "shortcut": "pipe",
     "multiwords": [
       {
         "multiword": "camino",
@@ -33937,19 +33937,6 @@
         ]
       },
       {
-        "multiword": "chimenea",
-        "occurrences": [
-          {
-            "theme": "Chimney",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Fireplace",
-            "reference": "Spanish"
-          }
-        ]
-      },
-      {
         "multiword": "cheminee",
         "occurrences": [
           {
@@ -33959,6 +33946,19 @@
           {
             "theme": "Fireplace",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "chimenea",
+        "occurrences": [
+          {
+            "theme": "Chimney",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Fireplace",
+            "reference": "Spanish"
           }
         ]
       }
@@ -35900,7 +35900,7 @@
   {
     "id": 213957,
     "theme": "Circus",
-    "shortcut": "sirk",
+    "shortcut": "circ",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -36595,7 +36595,7 @@
   {
     "id": 213969,
     "theme": "Clay",
-    "shortcut": "lut",
+    "shortcut": "ler",
     "multiwords": [
       {
         "multiword": "ler",
@@ -36745,7 +36745,7 @@
   {
     "id": 213971,
     "theme": "Cliff",
-    "shortcut": "utes",
+    "shortcut": "klif",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -37083,7 +37083,7 @@
   {
     "id": 213975,
     "theme": "Cloak",
-    "shortcut": "capa",
+    "shortcut": "cape",
     "multiwords": [
       {
         "multiword": "capa",
@@ -37137,19 +37137,6 @@
         ]
       },
       {
-        "multiword": "plast",
-        "occurrences": [
-          {
-            "theme": "Cape",
-            "reference": "Czech"
-          },
-          {
-            "theme": "Cloak",
-            "reference": "Czech"
-          }
-        ]
-      },
-      {
         "multiword": "kappe",
         "occurrences": [
           {
@@ -37159,6 +37146,19 @@
           {
             "theme": "Cloak",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "plast",
+        "occurrences": [
+          {
+            "theme": "Cape",
+            "reference": "Czech"
+          },
+          {
+            "theme": "Cloak",
+            "reference": "Czech"
           }
         ]
       },
@@ -38074,7 +38074,7 @@
   {
     "id": 240736,
     "theme": "Clover",
-    "shortcut": "jetel",
+    "shortcut": "apila",
     "multiwords": [
       {
         "multiword": "klaver",
@@ -38893,23 +38893,6 @@
         ]
       },
       {
-        "multiword": "spindelnat",
-        "occurrences": [
-          {
-            "theme": "Cobweb",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Spider Web",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Web",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "spinnenweb",
         "occurrences": [
           {
@@ -38940,6 +38923,23 @@
           {
             "theme": "Web",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "spindelnat",
+        "occurrences": [
+          {
+            "theme": "Cobweb",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Spider Web",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Web",
+            "reference": "Swedish"
           }
         ]
       },
@@ -39663,7 +39663,7 @@
   {
     "id": 213993,
     "theme": "Coffee",
-    "shortcut": "kawa",
+    "shortcut": "cafe",
     "multiwords": [
       {
         "multiword": "cafe",
@@ -40068,7 +40068,7 @@
   {
     "id": 213387,
     "theme": "Coffin",
-    "shortcut": "bara",
+    "shortcut": "sarg",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -41776,7 +41776,7 @@
   {
     "id": 214019,
     "theme": "Cook",
-    "shortcut": "sef",
+    "shortcut": "mad",
     "multiwords": [
       {
         "multiword": "kok",
@@ -41813,19 +41813,6 @@
         ]
       },
       {
-        "multiword": "sef",
-        "occurrences": [
-          {
-            "theme": "Chef",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Cook",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "mad",
         "occurrences": [
           {
@@ -41839,15 +41826,15 @@
         ]
       },
       {
-        "multiword": "koch",
+        "multiword": "sef",
         "occurrences": [
           {
             "theme": "Chef",
-            "reference": "German"
+            "reference": "Turkish"
           },
           {
             "theme": "Cook",
-            "reference": "German"
+            "reference": "Turkish"
           }
         ]
       },
@@ -41861,6 +41848,19 @@
           {
             "theme": "Cook",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "koch",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "German"
+          },
+          {
+            "theme": "Cook",
+            "reference": "German"
           }
         ]
       },
@@ -43019,19 +43019,6 @@
         ]
       },
       {
-        "multiword": "horn",
-        "occurrences": [
-          {
-            "theme": "Corner",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Horn",
-            "reference": "English / Danish / Norwegian / Pirate English / Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "colt",
         "occurrences": [
           {
@@ -43041,6 +43028,19 @@
           {
             "theme": "Fang",
             "reference": "Romanian"
+          }
+        ]
+      },
+      {
+        "multiword": "horn",
+        "occurrences": [
+          {
+            "theme": "Corner",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Horn",
+            "reference": "English / Danish / Norwegian / Pirate English / Swedish"
           }
         ]
       },
@@ -43548,7 +43548,7 @@
   {
     "id": 214037,
     "theme": "Cow",
-    "shortcut": "ko",
+    "shortcut": "ku",
     "multiwords": [
       {
         "multiword": "kus",
@@ -43568,19 +43568,6 @@
         ]
       },
       {
-        "multiword": "ko",
-        "occurrences": [
-          {
-            "theme": "Cow",
-            "reference": "Danish / Swedish"
-          },
-          {
-            "theme": "Rock",
-            "reference": "Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "ku",
         "occurrences": [
           {
@@ -43590,6 +43577,19 @@
           {
             "theme": "Kiss",
             "reference": "Dutch"
+          }
+        ]
+      },
+      {
+        "multiword": "ko",
+        "occurrences": [
+          {
+            "theme": "Cow",
+            "reference": "Danish / Swedish"
+          },
+          {
+            "theme": "Rock",
+            "reference": "Hungarian"
           }
         ]
       },
@@ -43854,7 +43854,7 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "ковбои",
+        "multiword": "ковбой",
         "occurrences": [
           {
             "theme": "Cowboy",
@@ -44521,7 +44521,7 @@
   {
     "id": 214043,
     "theme": "Crate",
-    "shortcut": "caja",
+    "shortcut": "krat",
     "multiwords": [
       {
         "multiword": "cutie",
@@ -47219,7 +47219,7 @@
   {
     "id": 214077,
     "theme": "Cupcake",
-    "shortcut": "kapkek",
+    "shortcut": "briosa",
     "multiwords": [
       {
         "multiword": "briosa",
@@ -47395,7 +47395,7 @@
   {
     "id": 212943,
     "theme": "Curtain",
-    "shortcut": "perde",
+    "shortcut": "tenda",
     "multiwords": [
       {
         "multiword": "tenda",
@@ -47934,19 +47934,6 @@
         ]
       },
       {
-        "multiword": "far",
-        "occurrences": [
-          {
-            "theme": "Dad",
-            "reference": "Danish / Norwegian"
-          },
-          {
-            "theme": "Sheep",
-            "reference": "Danish / Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "apa",
         "occurrences": [
           {
@@ -47956,6 +47943,19 @@
           {
             "theme": "Water",
             "reference": "Romanian"
+          }
+        ]
+      },
+      {
+        "multiword": "far",
+        "occurrences": [
+          {
+            "theme": "Dad",
+            "reference": "Danish / Norwegian"
+          },
+          {
+            "theme": "Sheep",
+            "reference": "Danish / Swedish"
           }
         ]
       },
@@ -49606,7 +49606,7 @@
   {
     "id": 214105,
     "theme": "Dessert",
-    "shortcut": "tatli",
+    "shortcut": "deser",
     "multiwords": [
       {
         "multiword": "desert",
@@ -50329,7 +50329,7 @@
   {
     "id": 214113,
     "theme": "Dinner",
-    "shortcut": "cena",
+    "shortcut": "repa",
     "multiwords": [
       {
         "multiword": "repa",
@@ -51884,7 +51884,7 @@
   {
     "id": 244116,
     "theme": "Dock",
-    "shortcut": "doc",
+    "shortcut": "dok",
     "multiwords": [
       {
         "multiword": "molo",
@@ -52481,7 +52481,7 @@
   {
     "id": 214137,
     "theme": "Dog Collar",
-    "shortcut": "zgarda",
+    "shortcut": "obojek",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -53383,7 +53383,7 @@
   {
     "id": 214145,
     "theme": "Donut",
-    "shortcut": "fank",
+    "shortcut": "dona",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -53808,19 +53808,6 @@
         ]
       },
       {
-        "multiword": "duva",
-        "occurrences": [
-          {
-            "theme": "Dove",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Pigeon",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "duif",
         "occurrences": [
           {
@@ -53834,15 +53821,15 @@
         ]
       },
       {
-        "multiword": "taube",
+        "multiword": "duva",
         "occurrences": [
           {
             "theme": "Dove",
-            "reference": "German"
+            "reference": "Swedish"
           },
           {
             "theme": "Pigeon",
-            "reference": "German"
+            "reference": "Swedish"
           }
         ]
       },
@@ -53856,6 +53843,19 @@
           {
             "theme": "Pigeon",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "taube",
+        "occurrences": [
+          {
+            "theme": "Dove",
+            "reference": "German"
+          },
+          {
+            "theme": "Pigeon",
+            "reference": "German"
           }
         ]
       },
@@ -53886,19 +53886,6 @@
         ]
       },
       {
-        "multiword": "guvercin",
-        "occurrences": [
-          {
-            "theme": "Dove",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Pigeon",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "porumbel",
         "occurrences": [
           {
@@ -53908,6 +53895,19 @@
           {
             "theme": "Pigeon",
             "reference": "Romanian"
+          }
+        ]
+      },
+      {
+        "multiword": "guvercin",
+        "occurrences": [
+          {
+            "theme": "Dove",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Pigeon",
+            "reference": "Turkish"
           }
         ]
       },
@@ -54114,19 +54114,6 @@
     "shortcut": "drak",
     "multiwords": [
       {
-        "multiword": "drage",
-        "occurrences": [
-          {
-            "theme": "Dragon",
-            "reference": "Danish / Norwegian"
-          },
-          {
-            "theme": "Kite",
-            "reference": "Norwegian"
-          }
-        ]
-      },
-      {
         "multiword": "drake",
         "occurrences": [
           {
@@ -54136,6 +54123,19 @@
           {
             "theme": "Kite",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "drage",
+        "occurrences": [
+          {
+            "theme": "Dragon",
+            "reference": "Danish / Norwegian"
+          },
+          {
+            "theme": "Kite",
+            "reference": "Norwegian"
           }
         ]
       }
@@ -54384,7 +54384,7 @@
   {
     "id": 214153,
     "theme": "Dragonfly",
-    "shortcut": "wazka",
+    "shortcut": "libel",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -55856,7 +55856,7 @@
   {
     "id": 214167,
     "theme": "Dwarf",
-    "shortcut": "anao",
+    "shortcut": "cuce",
     "multiwords": [
       {
         "multiword": "cuce",
@@ -56657,7 +56657,7 @@
   {
     "id": 212969,
     "theme": "Earth",
-    "shortcut": "fold",
+    "shortcut": "erde",
     "multiwords": [
       {
         "multiword": "erde",
@@ -57954,7 +57954,7 @@
   {
     "id": 214193,
     "theme": "Elevator",
-    "shortcut": "hei",
+    "shortcut": "his",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -58357,7 +58357,7 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "смайлик",
+        "multiword": "смаилик",
         "occurrences": [
           {
             "theme": "Emoji",
@@ -60922,23 +60922,6 @@
     "shortcut": "fe",
     "multiwords": [
       {
-        "multiword": "fata",
-        "occurrences": [
-          {
-            "theme": "Face",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Fairy",
-            "reference": "Italian"
-          },
-          {
-            "theme": "Girl",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "vila",
         "occurrences": [
           {
@@ -60952,6 +60935,23 @@
           {
             "theme": "Village",
             "reference": "Portuguese, Brazilian"
+          }
+        ]
+      },
+      {
+        "multiword": "fata",
+        "occurrences": [
+          {
+            "theme": "Face",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Fairy",
+            "reference": "Italian"
+          },
+          {
+            "theme": "Girl",
+            "reference": "Romanian"
           }
         ]
       }
@@ -62016,7 +62016,7 @@
   {
     "id": 214243,
     "theme": "Feet",
-    "shortcut": "lab",
+    "shortcut": "pes",
     "multiwords": [
       {
         "multiword": "pie",
@@ -62606,7 +62606,7 @@
   {
     "id": 214253,
     "theme": "Field",
-    "shortcut": "feld",
+    "shortcut": "mezo",
     "multiwords": [
       {
         "multiword": "mezo",
@@ -63192,7 +63192,7 @@
   {
     "id": 212979,
     "theme": "Fire",
-    "shortcut": "eld",
+    "shortcut": "tuz",
     "multiwords": [
       {
         "multiword": "tuz",
@@ -63575,7 +63575,7 @@
   {
     "id": 214265,
     "theme": "Fireball",
-    "shortcut": "ildkule",
+    "shortcut": "eldklot",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -63824,19 +63824,6 @@
     "shortcut": "krb",
     "multiwords": [
       {
-        "multiword": "chimenea",
-        "occurrences": [
-          {
-            "theme": "Chimney",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Fireplace",
-            "reference": "Spanish"
-          }
-        ]
-      },
-      {
         "multiword": "cheminee",
         "occurrences": [
           {
@@ -63846,6 +63833,19 @@
           {
             "theme": "Fireplace",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "chimenea",
+        "occurrences": [
+          {
+            "theme": "Chimney",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Fireplace",
+            "reference": "Spanish"
           }
         ]
       }
@@ -66010,7 +66010,7 @@
   {
     "id": 214303,
     "theme": "Floor",
-    "shortcut": "chao",
+    "shortcut": "gulv",
     "multiwords": [
       {
         "multiword": "piano",
@@ -66393,7 +66393,7 @@
   {
     "id": 214309,
     "theme": "Flute",
-    "shortcut": "flet",
+    "shortcut": "flut",
     "multiwords": [
       {
         "multiword": "fløjte",
@@ -66819,19 +66819,6 @@
         ]
       },
       {
-        "multiword": "pasta",
-        "occurrences": [
-          {
-            "theme": "Cake",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Folder",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
         "multiword": "mappa",
         "occurrences": [
           {
@@ -66841,6 +66828,19 @@
           {
             "theme": "Map",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "pasta",
+        "occurrences": [
+          {
+            "theme": "Cake",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Folder",
+            "reference": "Portuguese / Portuguese, Brazilian"
           }
         ]
       }
@@ -66966,7 +66966,7 @@
   {
     "id": 214313,
     "theme": "Food",
-    "shortcut": "mat",
+    "shortcut": "mad",
     "multiwords": [
       {
         "multiword": "mad",
@@ -67698,19 +67698,6 @@
     "shortcut": "otsa",
     "multiwords": [
       {
-        "multiword": "testa",
-        "occurrences": [
-          {
-            "theme": "Forehead",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          },
-          {
-            "theme": "Head",
-            "reference": "Italian"
-          }
-        ]
-      },
-      {
         "multiword": "panna",
         "occurrences": [
           {
@@ -67746,6 +67733,19 @@
           {
             "theme": "Pan",
             "reference": "Danish"
+          }
+        ]
+      },
+      {
+        "multiword": "testa",
+        "occurrences": [
+          {
+            "theme": "Forehead",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          },
+          {
+            "theme": "Head",
+            "reference": "Italian"
           }
         ]
       }
@@ -67871,7 +67871,7 @@
   {
     "id": 214321,
     "theme": "Forest",
-    "shortcut": "bo",
+    "shortcut": "la",
     "multiwords": [
       {
         "multiword": "la",
@@ -68406,7 +68406,7 @@
   {
     "id": 214327,
     "theme": "Fortune Cookie",
-    "shortcut": "lykkekage",
+    "shortcut": "lykkekake",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -68802,7 +68802,7 @@
   {
     "id": 214333,
     "theme": "Fox",
-    "shortcut": "vo",
+    "shortcut": "li",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -69232,7 +69232,7 @@
   {
     "id": 214337,
     "theme": "French Fries",
-    "shortcut": "frite",
+    "shortcut": "chips",
     "multiwords": [
       {
         "multiword": "chips",
@@ -69278,19 +69278,6 @@
         ]
       },
       {
-        "multiword": "batatasfritas",
-        "occurrences": [
-          {
-            "theme": "French Fries",
-            "reference": "Portuguese"
-          },
-          {
-            "theme": "Potato Chips",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
         "multiword": "patatasfritas",
         "occurrences": [
           {
@@ -69300,6 +69287,19 @@
           {
             "theme": "Potato Chips",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "batatasfritas",
+        "occurrences": [
+          {
+            "theme": "French Fries",
+            "reference": "Portuguese"
+          },
+          {
+            "theme": "Potato Chips",
+            "reference": "Portuguese"
           }
         ]
       }
@@ -69459,19 +69459,6 @@
         ]
       },
       {
-        "multiword": "kylskap",
-        "occurrences": [
-          {
-            "theme": "Fridge",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Refrigerator",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "lodowka",
         "occurrences": [
           {
@@ -69481,6 +69468,19 @@
           {
             "theme": "Refrigerator",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "kylskap",
+        "occurrences": [
+          {
+            "theme": "Fridge",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Refrigerator",
+            "reference": "Swedish"
           }
         ]
       },
@@ -71092,7 +71092,7 @@
   {
     "id": 214355,
     "theme": "Furnace",
-    "shortcut": "ugn",
+    "shortcut": "ovn",
     "multiwords": [
       {
         "multiword": "firin",
@@ -71168,19 +71168,6 @@
         ]
       },
       {
-        "multiword": "oven",
-        "occurrences": [
-          {
-            "theme": "Furnace",
-            "reference": "Dutch / Pirate English"
-          },
-          {
-            "theme": "Oven",
-            "reference": "English / Dutch / Pirate English"
-          }
-        ]
-      },
-      {
         "multiword": "piec",
         "occurrences": [
           {
@@ -71190,6 +71177,19 @@
           {
             "theme": "Stove",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "oven",
+        "occurrences": [
+          {
+            "theme": "Furnace",
+            "reference": "Dutch / Pirate English"
+          },
+          {
+            "theme": "Oven",
+            "reference": "English / Dutch / Pirate English"
           }
         ]
       },
@@ -71737,7 +71737,7 @@
   {
     "id": 213001,
     "theme": "Game",
-    "shortcut": "hra",
+    "shortcut": "gra",
     "multiwords": [
       {
         "multiword": "gra",
@@ -71900,7 +71900,7 @@
   {
     "id": 214361,
     "theme": "Games Controller",
-    "shortcut": "peliohjain",
+    "shortcut": "controller",
     "multiwords": [
       {
         "multiword": "controller",
@@ -73080,19 +73080,6 @@
         ]
       },
       {
-        "multiword": "portar",
-        "occurrences": [
-          {
-            "theme": "Gates",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Goalkeeper",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "puerta",
         "occurrences": [
           {
@@ -73102,6 +73089,19 @@
           {
             "theme": "Gates",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "portar",
+        "occurrences": [
+          {
+            "theme": "Gates",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Goalkeeper",
+            "reference": "Romanian"
           }
         ]
       },
@@ -73253,7 +73253,7 @@
   {
     "id": 214379,
     "theme": "Genie",
-    "shortcut": "and",
+    "shortcut": "cin",
     "multiwords": [
       {
         "multiword": "cin",
@@ -73884,15 +73884,15 @@
         ]
       },
       {
-        "multiword": "cadeau",
+        "multiword": "hediye",
         "occurrences": [
           {
             "theme": "Gift",
-            "reference": "French"
+            "reference": "Turkish"
           },
           {
             "theme": "Present",
-            "reference": "French"
+            "reference": "Turkish"
           }
         ]
       },
@@ -73910,15 +73910,15 @@
         ]
       },
       {
-        "multiword": "hediye",
+        "multiword": "cadeau",
         "occurrences": [
           {
             "theme": "Gift",
-            "reference": "Turkish"
+            "reference": "French"
           },
           {
             "theme": "Present",
-            "reference": "Turkish"
+            "reference": "French"
           }
         ]
       },
@@ -74535,7 +74535,7 @@
   {
     "id": 214391,
     "theme": "Glass",
-    "shortcut": "cam",
+    "shortcut": "gla",
     "multiwords": [
       {
         "multiword": "glas",
@@ -74825,7 +74825,7 @@
   {
     "id": 213007,
     "theme": "Glasses",
-    "shortcut": "gafa",
+    "shortcut": "bril",
     "multiwords": [
       {
         "multiword": "bril",
@@ -75014,7 +75014,7 @@
   {
     "id": 214395,
     "theme": "Globe",
-    "shortcut": "glob",
+    "shortcut": "kure",
     "multiwords": [
       {
         "multiword": "kure",
@@ -75194,7 +75194,7 @@
   {
     "id": 214397,
     "theme": "Gloves",
-    "shortcut": "gant",
+    "shortcut": "luva",
     "multiwords": [
       {
         "multiword": "luva",
@@ -75481,7 +75481,7 @@
   {
     "id": 214401,
     "theme": "Gnome",
-    "shortcut": "gnom",
+    "shortcut": "cuce",
     "multiwords": [
       {
         "multiword": "cuce",
@@ -75644,7 +75644,7 @@
   {
     "id": 214403,
     "theme": "Goal",
-    "shortcut": "but",
+    "shortcut": "mal",
     "multiwords": [
       {
         "multiword": "mal",
@@ -77852,7 +77852,7 @@
   {
     "id": 214429,
     "theme": "Golf Course",
-    "shortcut": "golfbana",
+    "shortcut": "golfbane",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -77975,7 +77975,7 @@
   {
     "id": 214431,
     "theme": "Goose",
-    "shortcut": "gas",
+    "shortcut": "oca",
     "multiwords": [
       {
         "multiword": "oca",
@@ -78112,7 +78112,7 @@
   {
     "id": 214433,
     "theme": "Gorilla",
-    "shortcut": "goryl",
+    "shortcut": "goril",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -78741,7 +78741,7 @@
   {
     "id": 214443,
     "theme": "Gravel",
-    "shortcut": "kie",
+    "shortcut": "gru",
     "multiwords": [
       {
         "multiword": "gru",
@@ -79151,7 +79151,7 @@
   {
     "id": 214447,
     "theme": "Green",
-    "shortcut": "zold",
+    "shortcut": "gron",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -79542,7 +79542,7 @@
   {
     "id": 213433,
     "theme": "Grim Reaper",
-    "shortcut": "smrtka",
+    "shortcut": "kaszas",
     "multiwords": [
       {
         "multiword": "kaszas",
@@ -79597,19 +79597,6 @@
         ]
       },
       {
-        "multiword": "sensenmann",
-        "occurrences": [
-          {
-            "theme": "Grim Reaper",
-            "reference": "German"
-          },
-          {
-            "theme": "Reaper",
-            "reference": "German"
-          }
-        ]
-      },
-      {
         "multiword": "viikatemie",
         "occurrences": [
           {
@@ -79619,6 +79606,19 @@
           {
             "theme": "Reaper",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "sensenmann",
+        "occurrences": [
+          {
+            "theme": "Grim Reaper",
+            "reference": "German"
+          },
+          {
+            "theme": "Reaper",
+            "reference": "German"
           }
         ]
       },
@@ -80578,21 +80578,8 @@
   {
     "id": 214457,
     "theme": "Hair",
-    "shortcut": "har",
+    "shortcut": "haj",
     "multiwords": [
-      {
-        "multiword": "sac",
-        "occurrences": [
-          {
-            "theme": "Bag",
-            "reference": "French"
-          },
-          {
-            "theme": "Hair",
-            "reference": "Turkish"
-          }
-        ]
-      },
       {
         "multiword": "haj",
         "occurrences": [
@@ -80603,6 +80590,19 @@
           {
             "theme": "Shark",
             "reference": "Danish / Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "sac",
+        "occurrences": [
+          {
+            "theme": "Bag",
+            "reference": "French"
+          },
+          {
+            "theme": "Hair",
+            "reference": "Turkish"
           }
         ]
       },
@@ -81313,7 +81313,7 @@
   {
     "id": 214469,
     "theme": "Hallway",
-    "shortcut": "gang",
+    "shortcut": "flur",
     "multiwords": [
       {
         "multiword": "corredor",
@@ -82035,7 +82035,7 @@
   {
     "id": 214475,
     "theme": "Hammock",
-    "shortcut": "amaca",
+    "shortcut": "hamak",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -82281,7 +82281,7 @@
   {
     "id": 214479,
     "theme": "Handbag",
-    "shortcut": "bolso",
+    "shortcut": "veske",
     "multiwords": [
       {
         "multiword": "borsa",
@@ -83914,7 +83914,7 @@
   {
     "id": 214497,
     "theme": "Head",
-    "shortcut": "paa",
+    "shortcut": "cap",
     "multiwords": [
       {
         "multiword": "cap",
@@ -84230,19 +84230,6 @@
     "shortcut": "casti",
     "multiwords": [
       {
-        "multiword": "ecouteur",
-        "occurrences": [
-          {
-            "theme": "Headphones",
-            "reference": "French"
-          },
-          {
-            "theme": "Headset",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "kulaklik",
         "occurrences": [
           {
@@ -84252,6 +84239,19 @@
           {
             "theme": "Headset",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "ecouteur",
+        "occurrences": [
+          {
+            "theme": "Headphones",
+            "reference": "French"
+          },
+          {
+            "theme": "Headset",
+            "reference": "French"
           }
         ]
       },
@@ -84471,19 +84471,6 @@
     "shortcut": "cuffie",
     "multiwords": [
       {
-        "multiword": "ecouteur",
-        "occurrences": [
-          {
-            "theme": "Headphones",
-            "reference": "French"
-          },
-          {
-            "theme": "Headset",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "kulaklik",
         "occurrences": [
           {
@@ -84493,6 +84480,19 @@
           {
             "theme": "Headset",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "ecouteur",
+        "occurrences": [
+          {
+            "theme": "Headphones",
+            "reference": "French"
+          },
+          {
+            "theme": "Headset",
+            "reference": "French"
           }
         ]
       },
@@ -84709,7 +84709,7 @@
   {
     "id": 213023,
     "theme": "Heart",
-    "shortcut": "sziv",
+    "shortcut": "hart",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -85377,7 +85377,7 @@
   {
     "id": 214511,
     "theme": "Helmet",
-    "shortcut": "helm",
+    "shortcut": "kask",
     "multiwords": [
       {
         "multiword": "모자",
@@ -86537,7 +86537,7 @@
   {
     "id": 214527,
     "theme": "Hippopotamus",
-    "shortcut": "hroch",
+    "shortcut": "hippo",
     "multiwords": [],
     "translations": {
       "co": {
@@ -86665,7 +86665,7 @@
   {
     "id": 214529,
     "theme": "Hockey",
-    "shortcut": "hokej",
+    "shortcut": "hokey",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -86927,19 +86927,6 @@
         ]
       },
       {
-        "multiword": "cerdo",
-        "occurrences": [
-          {
-            "theme": "Hog",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Pig",
-            "reference": "Spanish"
-          }
-        ]
-      },
-      {
         "multiword": "domuz",
         "occurrences": [
           {
@@ -86949,6 +86936,19 @@
           {
             "theme": "Pig",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "cerdo",
+        "occurrences": [
+          {
+            "theme": "Hog",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Pig",
+            "reference": "Spanish"
           }
         ]
       },
@@ -87152,7 +87152,7 @@
   {
     "id": 214535,
     "theme": "Hole",
-    "shortcut": "gat",
+    "shortcut": "hal",
     "multiwords": [
       {
         "multiword": "kolo",
@@ -87894,7 +87894,7 @@
   {
     "id": 214547,
     "theme": "Honey",
-    "shortcut": "bal",
+    "shortcut": "mel",
     "multiwords": [
       {
         "multiword": "miel",
@@ -88507,7 +88507,7 @@
   {
     "id": 214555,
     "theme": "Horse",
-    "shortcut": "at",
+    "shortcut": "lo",
     "multiwords": [
       {
         "multiword": "lo",
@@ -89701,7 +89701,7 @@
   {
     "id": 213029,
     "theme": "House",
-    "shortcut": "ev",
+    "shortcut": "hu",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -90584,19 +90584,6 @@
         ]
       },
       {
-        "multiword": "hutte",
-        "occurrences": [
-          {
-            "theme": "Hut",
-            "reference": "German"
-          },
-          {
-            "theme": "Shack",
-            "reference": "German"
-          }
-        ]
-      },
-      {
         "multiword": "hytte",
         "occurrences": [
           {
@@ -90606,6 +90593,19 @@
           {
             "theme": "Hut",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "hutte",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "German"
+          },
+          {
+            "theme": "Shack",
+            "reference": "German"
           }
         ]
       },
@@ -92375,7 +92375,7 @@
   {
     "id": 214603,
     "theme": "Icicle",
-    "shortcut": "istap",
+    "shortcut": "sopel",
     "multiwords": [
       {
         "multiword": "jegcsap",
@@ -92688,7 +92688,7 @@
   {
     "id": 213035,
     "theme": "Igloo",
-    "shortcut": "iglu",
+    "shortcut": "iglo",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -93550,7 +93550,7 @@
   {
     "id": 214613,
     "theme": "Ironing Board",
-    "shortcut": "utu masasi",
+    "shortcut": "bugelbrett",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -94106,19 +94106,6 @@
         ]
       },
       {
-        "multiword": "gevangeni",
-        "occurrences": [
-          {
-            "theme": "Jail",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Prison",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "wiezienie",
         "occurrences": [
           {
@@ -94128,6 +94115,19 @@
           {
             "theme": "Prison",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "gevangeni",
+        "occurrences": [
+          {
+            "theme": "Jail",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Prison",
+            "reference": "Dutch"
           }
         ]
       },
@@ -94888,7 +94888,7 @@
   {
     "id": 214625,
     "theme": "Jelly",
-    "shortcut": "zele",
+    "shortcut": "gele",
     "multiwords": [
       {
         "multiword": "gele",
@@ -95670,19 +95670,6 @@
         ]
       },
       {
-        "multiword": "pussel",
-        "occurrences": [
-          {
-            "theme": "Jigsaw",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Puzzle",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "yapboz",
         "occurrences": [
           {
@@ -95692,6 +95679,19 @@
           {
             "theme": "Puzzle",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "pussel",
+        "occurrences": [
+          {
+            "theme": "Jigsaw",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Puzzle",
+            "reference": "Swedish"
           }
         ]
       },
@@ -96713,7 +96713,7 @@
   {
     "id": 214649,
     "theme": "Jungle",
-    "shortcut": "selva",
+    "shortcut": "orman",
     "multiwords": [
       {
         "multiword": "orman",
@@ -97955,7 +97955,7 @@
         ]
       },
       {
-        "multiword": "чаиник",
+        "multiword": "чайник",
         "occurrences": [
           {
             "theme": "Kettle",
@@ -98661,7 +98661,7 @@
   {
     "id": 214671,
     "theme": "Kiss",
-    "shortcut": "ky",
+    "shortcut": "ku",
     "multiwords": [
       {
         "multiword": "kus",
@@ -99011,19 +99011,6 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "drage",
-        "occurrences": [
-          {
-            "theme": "Dragon",
-            "reference": "Danish / Norwegian"
-          },
-          {
-            "theme": "Kite",
-            "reference": "Norwegian"
-          }
-        ]
-      },
-      {
         "multiword": "drake",
         "occurrences": [
           {
@@ -99033,6 +99020,19 @@
           {
             "theme": "Kite",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "drage",
+        "occurrences": [
+          {
+            "theme": "Dragon",
+            "reference": "Danish / Norwegian"
+          },
+          {
+            "theme": "Kite",
+            "reference": "Norwegian"
           }
         ]
       },
@@ -99171,7 +99171,7 @@
   {
     "id": 213047,
     "theme": "Kitten",
-    "shortcut": "cica",
+    "shortcut": "kote",
     "multiwords": [
       {
         "multiword": "고양이",
@@ -99308,7 +99308,7 @@
   {
     "id": 214675,
     "theme": "Kiwi Fruit",
-    "shortcut": "kiwi",
+    "shortcut": "kivi",
     "multiwords": [
       {
         "multiword": "kivi",
@@ -99445,7 +99445,7 @@
   {
     "id": 214677,
     "theme": "Knee",
-    "shortcut": "diz",
+    "shortcut": "kne",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -100250,7 +100250,7 @@
   {
     "id": 214685,
     "theme": "Ladder",
-    "shortcut": "scara",
+    "shortcut": "letra",
     "multiwords": [
       {
         "multiword": "stege",
@@ -101427,19 +101427,6 @@
         ]
       },
       {
-        "multiword": "latarnia",
-        "occurrences": [
-          {
-            "theme": "Lantern",
-            "reference": "Polish"
-          },
-          {
-            "theme": "Streetlamp",
-            "reference": "Polish"
-          }
-        ]
-      },
-      {
         "multiword": "linterna",
         "occurrences": [
           {
@@ -101449,6 +101436,19 @@
           {
             "theme": "Lantern",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "latarnia",
+        "occurrences": [
+          {
+            "theme": "Lantern",
+            "reference": "Polish"
+          },
+          {
+            "theme": "Streetlamp",
+            "reference": "Polish"
           }
         ]
       },
@@ -104274,7 +104274,7 @@
   {
     "id": 214731,
     "theme": "Letter",
-    "shortcut": "dopi",
+    "shortcut": "list",
     "multiwords": [
       {
         "multiword": "level",
@@ -104483,19 +104483,6 @@
         ]
       },
       {
-        "multiword": "salata",
-        "occurrences": [
-          {
-            "theme": "Lettuce",
-            "reference": "Hungarian / Polish"
-          },
-          {
-            "theme": "Salad",
-            "reference": "Hungarian / Romanian / Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "sallad",
         "occurrences": [
           {
@@ -104505,6 +104492,19 @@
           {
             "theme": "Salad",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "salata",
+        "occurrences": [
+          {
+            "theme": "Lettuce",
+            "reference": "Hungarian / Polish"
+          },
+          {
+            "theme": "Salad",
+            "reference": "Hungarian / Romanian / Turkish"
           }
         ]
       },
@@ -107005,7 +107005,7 @@
   {
     "id": 214761,
     "theme": "Living room",
-    "shortcut": "stue",
+    "shortcut": "sala",
     "multiwords": [
       {
         "multiword": "sala",
@@ -107542,7 +107542,7 @@
   {
     "id": 240758,
     "theme": "Lobby",
-    "shortcut": "lobi",
+    "shortcut": "port",
     "multiwords": [
       {
         "multiword": "port",
@@ -108602,7 +108602,7 @@
   {
     "id": 214779,
     "theme": "Lollipop",
-    "shortcut": "lizak",
+    "shortcut": "lolly",
     "multiwords": [
       {
         "multiword": "acadea",
@@ -108985,7 +108985,7 @@
   {
     "id": 214783,
     "theme": "Luggage",
-    "shortcut": "bagaz",
+    "shortcut": "bavul",
     "multiwords": [
       {
         "multiword": "bavul",
@@ -109822,7 +109822,7 @@
   {
     "id": 213065,
     "theme": "Magic",
-    "shortcut": "magi",
+    "shortcut": "buyu",
     "multiwords": [
       {
         "multiword": "buyu",
@@ -110248,19 +110248,6 @@
         ]
       },
       {
-        "multiword": "tryllestav",
-        "occurrences": [
-          {
-            "theme": "Magic Wand",
-            "reference": "Danish / Norwegian"
-          },
-          {
-            "theme": "Wand",
-            "reference": "Danish / Norwegian"
-          }
-        ]
-      },
-      {
         "multiword": "zauberstab",
         "occurrences": [
           {
@@ -110270,6 +110257,19 @@
           {
             "theme": "Wand",
             "reference": "German"
+          }
+        ]
+      },
+      {
+        "multiword": "tryllestav",
+        "occurrences": [
+          {
+            "theme": "Magic Wand",
+            "reference": "Danish / Norwegian"
+          },
+          {
+            "theme": "Wand",
+            "reference": "Danish / Norwegian"
           }
         ]
       },
@@ -110300,19 +110300,6 @@
         ]
       },
       {
-        "multiword": "bacchettamagica",
-        "occurrences": [
-          {
-            "theme": "Magic Wand",
-            "reference": "Italian"
-          },
-          {
-            "theme": "Wand",
-            "reference": "Italian"
-          }
-        ]
-      },
-      {
         "multiword": "baguettemagique",
         "occurrences": [
           {
@@ -110322,6 +110309,19 @@
           {
             "theme": "Wand",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "bacchettamagica",
+        "occurrences": [
+          {
+            "theme": "Magic Wand",
+            "reference": "Italian"
+          },
+          {
+            "theme": "Wand",
+            "reference": "Italian"
           }
         ]
       },
@@ -111364,7 +111364,7 @@
   {
     "id": 214805,
     "theme": "Mailman",
-    "shortcut": "postak",
+    "shortcut": "postas",
     "multiwords": [
       {
         "multiword": "postá",
@@ -112271,7 +112271,7 @@
   {
     "id": 214813,
     "theme": "Marbles",
-    "shortcut": "bilye",
+    "shortcut": "bille",
     "multiwords": [
       {
         "multiword": "bille",
@@ -115146,7 +115146,7 @@
   {
     "id": 214847,
     "theme": "Milkshake",
-    "shortcut": "batido",
+    "shortcut": "turmix",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -115585,19 +115585,6 @@
     "shortcut": "lore",
     "multiwords": [
       {
-        "multiword": "vagon",
-        "occurrences": [
-          {
-            "theme": "Minecart",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Wagon",
-            "reference": "Czech / Hungarian / Spanish / Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "vozik",
         "occurrences": [
           {
@@ -115607,6 +115594,19 @@
           {
             "theme": "Trolley",
             "reference": "Czech"
+          }
+        ]
+      },
+      {
+        "multiword": "vagon",
+        "occurrences": [
+          {
+            "theme": "Minecart",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Wagon",
+            "reference": "Czech / Hungarian / Spanish / Turkish"
           }
         ]
       },
@@ -117641,7 +117641,7 @@
   {
     "id": 213085,
     "theme": "Money",
-    "shortcut": "geld",
+    "shortcut": "para",
     "multiwords": [
       {
         "multiword": "para",
@@ -118654,7 +118654,7 @@
   {
     "id": 214887,
     "theme": "Morning",
-    "shortcut": "rano",
+    "shortcut": "aamu",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -118777,7 +118777,7 @@
   {
     "id": 240766,
     "theme": "Moth",
-    "shortcut": "cma",
+    "shortcut": "mot",
     "multiwords": [
       {
         "multiword": "mariposa",
@@ -119344,7 +119344,7 @@
   {
     "id": 214893,
     "theme": "Mousepad",
-    "shortcut": "egerpad",
+    "shortcut": "mauspad",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -119590,7 +119590,7 @@
   {
     "id": 214897,
     "theme": "Moustache",
-    "shortcut": "wasy",
+    "shortcut": "bart",
     "multiwords": [
       {
         "multiword": "bart",
@@ -121148,7 +121148,7 @@
   {
     "id": 214915,
     "theme": "Mushroom",
-    "shortcut": "sopp",
+    "shortcut": "pilz",
     "multiwords": [
       {
         "multiword": "svamp",
@@ -121487,7 +121487,7 @@
   {
     "id": 214917,
     "theme": "Musical",
-    "shortcut": "zenei",
+    "shortcut": "musik",
     "multiwords": [
       {
         "multiword": "musik",
@@ -121689,7 +121689,7 @@
   {
     "id": 214919,
     "theme": "Musician",
-    "shortcut": "zenesz",
+    "shortcut": "musico",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -122885,7 +122885,7 @@
   {
     "id": 214937,
     "theme": "Needle",
-    "shortcut": "ac",
+    "shortcut": "tu",
     "multiwords": [
       {
         "multiword": "tu",
@@ -124792,7 +124792,7 @@
   {
     "id": 213097,
     "theme": "Octopus",
-    "shortcut": "pulpo",
+    "shortcut": "polvo",
     "multiwords": [
       {
         "multiword": "kraken",
@@ -125170,7 +125170,7 @@
   {
     "id": 213479,
     "theme": "Ogre",
-    "shortcut": "ocu",
+    "shortcut": "ogr",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -127419,7 +127419,7 @@
   {
     "id": 214987,
     "theme": "Packet",
-    "shortcut": "paket",
+    "shortcut": "pakke",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -127542,7 +127542,7 @@
   {
     "id": 213105,
     "theme": "Paint",
-    "shortcut": "boya",
+    "shortcut": "mala",
     "multiwords": [
       {
         "multiword": "quadro",
@@ -128305,7 +128305,7 @@
   {
     "id": 213107,
     "theme": "Painting",
-    "shortcut": "tavla",
+    "shortcut": "resim",
     "multiwords": [
       {
         "multiword": "quadro",
@@ -128502,7 +128502,7 @@
   {
     "id": 214999,
     "theme": "Palace",
-    "shortcut": "palad",
+    "shortcut": "palas",
     "multiwords": [
       {
         "multiword": "palas",
@@ -128660,7 +128660,7 @@
   {
     "id": 213109,
     "theme": "Palm Tree",
-    "shortcut": "palma",
+    "shortcut": "palme",
     "multiwords": [
       {
         "multiword": "palme",
@@ -128839,19 +128839,6 @@
         ]
       },
       {
-        "multiword": "pande",
-        "occurrences": [
-          {
-            "theme": "Forehead",
-            "reference": "Danish"
-          },
-          {
-            "theme": "Pan",
-            "reference": "Danish"
-          }
-        ]
-      },
-      {
         "multiword": "panev",
         "occurrences": [
           {
@@ -128861,6 +128848,19 @@
           {
             "theme": "Pan",
             "reference": "Czech"
+          }
+        ]
+      },
+      {
+        "multiword": "pande",
+        "occurrences": [
+          {
+            "theme": "Forehead",
+            "reference": "Danish"
+          },
+          {
+            "theme": "Pan",
+            "reference": "Danish"
           }
         ]
       },
@@ -129952,7 +129952,7 @@
   {
     "id": 240772,
     "theme": "Parking Lot",
-    "shortcut": "otopark",
+    "shortcut": "parking",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -131412,7 +131412,7 @@
   {
     "id": 215035,
     "theme": "Peacock",
-    "shortcut": "pav",
+    "shortcut": "paw",
     "multiwords": [
       {
         "multiword": "paw",
@@ -132332,7 +132332,7 @@
   {
     "id": 213117,
     "theme": "Pencil",
-    "shortcut": "tuzka",
+    "shortcut": "penna",
     "multiwords": [
       {
         "multiword": "kalem",
@@ -133365,7 +133365,7 @@
   {
     "id": 244152,
     "theme": "Phoenix",
-    "shortcut": "fenix",
+    "shortcut": "fonix",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -134372,7 +134372,7 @@
   {
     "id": 215069,
     "theme": "Pickle",
-    "shortcut": "tursu",
+    "shortcut": "picle",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -134668,19 +134668,6 @@
         ]
       },
       {
-        "multiword": "resim",
-        "occurrences": [
-          {
-            "theme": "Painting",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Picture",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "bilde",
         "occurrences": [
           {
@@ -134690,6 +134677,19 @@
           {
             "theme": "Picture",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "resim",
+        "occurrences": [
+          {
+            "theme": "Painting",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Picture",
+            "reference": "Turkish"
           }
         ]
       },
@@ -135015,23 +135015,6 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "pai",
-        "occurrences": [
-          {
-            "theme": "Dad",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          },
-          {
-            "theme": "Pie",
-            "reference": "Norwegian"
-          },
-          {
-            "theme": "Straw",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "pie",
         "occurrences": [
           {
@@ -135045,6 +135028,23 @@
           {
             "theme": "Pie",
             "reference": "English / Pirate English"
+          }
+        ]
+      },
+      {
+        "multiword": "pai",
+        "occurrences": [
+          {
+            "theme": "Dad",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          },
+          {
+            "theme": "Pie",
+            "reference": "Norwegian"
+          },
+          {
+            "theme": "Straw",
+            "reference": "Romanian"
           }
         ]
       },
@@ -135213,7 +135213,7 @@
   {
     "id": 215073,
     "theme": "Pier",
-    "shortcut": "dig",
+    "shortcut": "cai",
     "multiwords": [
       {
         "multiword": "cai",
@@ -135405,19 +135405,6 @@
         ]
       },
       {
-        "multiword": "cerdo",
-        "occurrences": [
-          {
-            "theme": "Hog",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Pig",
-            "reference": "Spanish"
-          }
-        ]
-      },
-      {
         "multiword": "domuz",
         "occurrences": [
           {
@@ -135427,6 +135414,19 @@
           {
             "theme": "Pig",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "cerdo",
+        "occurrences": [
+          {
+            "theme": "Hog",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Pig",
+            "reference": "Spanish"
           }
         ]
       },
@@ -135646,19 +135646,6 @@
         ]
       },
       {
-        "multiword": "duva",
-        "occurrences": [
-          {
-            "theme": "Dove",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Pigeon",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "duif",
         "occurrences": [
           {
@@ -135672,15 +135659,15 @@
         ]
       },
       {
-        "multiword": "taube",
+        "multiword": "duva",
         "occurrences": [
           {
             "theme": "Dove",
-            "reference": "German"
+            "reference": "Swedish"
           },
           {
             "theme": "Pigeon",
-            "reference": "German"
+            "reference": "Swedish"
           }
         ]
       },
@@ -135694,6 +135681,19 @@
           {
             "theme": "Pigeon",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "taube",
+        "occurrences": [
+          {
+            "theme": "Dove",
+            "reference": "German"
+          },
+          {
+            "theme": "Pigeon",
+            "reference": "German"
           }
         ]
       },
@@ -135724,19 +135724,6 @@
         ]
       },
       {
-        "multiword": "guvercin",
-        "occurrences": [
-          {
-            "theme": "Dove",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Pigeon",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "porumbel",
         "occurrences": [
           {
@@ -135746,6 +135733,19 @@
           {
             "theme": "Pigeon",
             "reference": "Romanian"
+          }
+        ]
+      },
+      {
+        "multiword": "guvercin",
+        "occurrences": [
+          {
+            "theme": "Dove",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Pigeon",
+            "reference": "Turkish"
           }
         ]
       },
@@ -137259,7 +137259,7 @@
   {
     "id": 215097,
     "theme": "Pinecone",
-    "shortcut": "toboz",
+    "shortcut": "pigna",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -137628,7 +137628,7 @@
   {
     "id": 215105,
     "theme": "Pirate Ship",
-    "shortcut": "kalozhajo",
+    "shortcut": "piratskib",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -141044,19 +141044,6 @@
         ]
       },
       {
-        "multiword": "zwembad",
-        "occurrences": [
-          {
-            "theme": "Pool",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Swimming Pool",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "piscina",
         "occurrences": [
           {
@@ -141066,6 +141053,19 @@
           {
             "theme": "Swimming Pool",
             "reference": "Italian / Portuguese / Portuguese, Brazilian / Romanian / Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "zwembad",
+        "occurrences": [
+          {
+            "theme": "Pool",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Swimming Pool",
+            "reference": "Dutch"
           }
         ]
       },
@@ -141148,7 +141148,7 @@
         ]
       },
       {
-        "multiword": "бассеин",
+        "multiword": "бассейн",
         "occurrences": [
           {
             "theme": "Pool",
@@ -142376,7 +142376,7 @@
   {
     "id": 213143,
     "theme": "Potato",
-    "shortcut": "tater",
+    "shortcut": "potet",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -142545,19 +142545,6 @@
         ]
       },
       {
-        "multiword": "batatasfritas",
-        "occurrences": [
-          {
-            "theme": "French Fries",
-            "reference": "Portuguese"
-          },
-          {
-            "theme": "Potato Chips",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
         "multiword": "patatasfritas",
         "occurrences": [
           {
@@ -142567,6 +142554,19 @@
           {
             "theme": "Potato Chips",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "batatasfritas",
+        "occurrences": [
+          {
+            "theme": "French Fries",
+            "reference": "Portuguese"
+          },
+          {
+            "theme": "Potato Chips",
+            "reference": "Portuguese"
           }
         ]
       },
@@ -143056,15 +143056,15 @@
         ]
       },
       {
-        "multiword": "cadeau",
+        "multiword": "hediye",
         "occurrences": [
           {
             "theme": "Gift",
-            "reference": "French"
+            "reference": "Turkish"
           },
           {
             "theme": "Present",
-            "reference": "French"
+            "reference": "Turkish"
           }
         ]
       },
@@ -143082,15 +143082,15 @@
         ]
       },
       {
-        "multiword": "hediye",
+        "multiword": "cadeau",
         "occurrences": [
           {
             "theme": "Gift",
-            "reference": "Turkish"
+            "reference": "French"
           },
           {
             "theme": "Present",
-            "reference": "Turkish"
+            "reference": "French"
           }
         ]
       },
@@ -143566,7 +143566,7 @@
   {
     "id": 215173,
     "theme": "Prince",
-    "shortcut": "pren",
+    "shortcut": "prin",
     "multiwords": [
       {
         "multiword": "prince",
@@ -143703,7 +143703,7 @@
   {
     "id": 213145,
     "theme": "Princess",
-    "shortcut": "prense",
+    "shortcut": "prince",
     "multiwords": [
       {
         "multiword": "prince",
@@ -144097,19 +144097,6 @@
         ]
       },
       {
-        "multiword": "gevangeni",
-        "occurrences": [
-          {
-            "theme": "Jail",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Prison",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "wiezienie",
         "occurrences": [
           {
@@ -144119,6 +144106,19 @@
           {
             "theme": "Prison",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "gevangeni",
+        "occurrences": [
+          {
+            "theme": "Jail",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Prison",
+            "reference": "Dutch"
           }
         ]
       },
@@ -144828,7 +144828,7 @@
   {
     "id": 215187,
     "theme": "Pudding",
-    "shortcut": "pudim",
+    "shortcut": "pudin",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -145088,7 +145088,7 @@
   {
     "id": 240778,
     "theme": "Puffin",
-    "shortcut": "lunde",
+    "shortcut": "marti",
     "multiwords": [
       {
         "multiword": "marti",
@@ -145849,7 +145849,7 @@
         ]
       },
       {
-        "multiword": "кошелек",
+        "multiword": "кошелёк",
         "occurrences": [
           {
             "theme": "Purse",
@@ -145999,19 +145999,6 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "pussel",
-        "occurrences": [
-          {
-            "theme": "Jigsaw",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Puzzle",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "yapboz",
         "occurrences": [
           {
@@ -146021,6 +146008,19 @@
           {
             "theme": "Puzzle",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "pussel",
+        "occurrences": [
+          {
+            "theme": "Jigsaw",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Puzzle",
+            "reference": "Swedish"
           }
         ]
       },
@@ -146318,19 +146318,6 @@
         ]
       },
       {
-        "multiword": "cubo magico",
-        "occurrences": [
-          {
-            "theme": "Puzzle Cube",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          },
-          {
-            "theme": "Rubiks Cube",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
         "multiword": "cubodirubik",
         "occurrences": [
           {
@@ -146340,6 +146327,19 @@
           {
             "theme": "Rubiks Cube",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "cubo magico",
+        "occurrences": [
+          {
+            "theme": "Puzzle Cube",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          },
+          {
+            "theme": "Rubiks Cube",
+            "reference": "Portuguese / Portuguese, Brazilian"
           }
         ]
       },
@@ -147036,7 +147036,7 @@
   {
     "id": 215209,
     "theme": "Quicksand",
-    "shortcut": "kviksand",
+    "shortcut": "bataklik",
     "multiwords": [
       {
         "multiword": "bataklik",
@@ -147325,19 +147325,6 @@
         ]
       },
       {
-        "multiword": "tavsan",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "coelho",
         "occurrences": [
           {
@@ -147347,6 +147334,19 @@
           {
             "theme": "Rabbit",
             "reference": "Portuguese / Portuguese, Brazilian"
+          }
+        ]
+      },
+      {
+        "multiword": "tavsan",
+        "occurrences": [
+          {
+            "theme": "Bunny",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Rabbit",
+            "reference": "Turkish"
           }
         ]
       },
@@ -147537,7 +147537,7 @@
   {
     "id": 215215,
     "theme": "Raccoon",
-    "shortcut": "myval",
+    "shortcut": "raton",
     "multiwords": [
       {
         "multiword": "raton",
@@ -147850,7 +147850,7 @@
   {
     "id": 215219,
     "theme": "Race Track",
-    "shortcut": "racebaan",
+    "shortcut": "circuito",
     "multiwords": [
       {
         "multiword": "circuito",
@@ -149872,19 +149872,6 @@
         ]
       },
       {
-        "multiword": "sensenmann",
-        "occurrences": [
-          {
-            "theme": "Grim Reaper",
-            "reference": "German"
-          },
-          {
-            "theme": "Reaper",
-            "reference": "German"
-          }
-        ]
-      },
-      {
         "multiword": "viikatemie",
         "occurrences": [
           {
@@ -149894,6 +149881,19 @@
           {
             "theme": "Reaper",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "sensenmann",
+        "occurrences": [
+          {
+            "theme": "Grim Reaper",
+            "reference": "German"
+          },
+          {
+            "theme": "Reaper",
+            "reference": "German"
           }
         ]
       },
@@ -150601,19 +150601,6 @@
         ]
       },
       {
-        "multiword": "kylskap",
-        "occurrences": [
-          {
-            "theme": "Fridge",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Refrigerator",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "lodowka",
         "occurrences": [
           {
@@ -150623,6 +150610,19 @@
           {
             "theme": "Refrigerator",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "kylskap",
+        "occurrences": [
+          {
+            "theme": "Fridge",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Refrigerator",
+            "reference": "Swedish"
           }
         ]
       },
@@ -151344,7 +151344,7 @@
   {
     "id": 215255,
     "theme": "Ribbon",
-    "shortcut": "laco",
+    "shortcut": "band",
     "multiwords": [
       {
         "multiword": "band",
@@ -152247,19 +152247,6 @@
         ]
       },
       {
-        "multiword": "vag",
-        "occurrences": [
-          {
-            "theme": "Road",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Wave",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "tie",
         "occurrences": [
           {
@@ -152269,6 +152256,19 @@
           {
             "theme": "Tie",
             "reference": "English / Pirate English"
+          }
+        ]
+      },
+      {
+        "multiword": "vag",
+        "occurrences": [
+          {
+            "theme": "Road",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Wave",
+            "reference": "Swedish"
           }
         ]
       },
@@ -153105,7 +153105,7 @@
   {
     "id": 215273,
     "theme": "Rocket",
-    "shortcut": "fusee",
+    "shortcut": "roket",
     "multiwords": [
       {
         "multiword": "raket",
@@ -153181,19 +153181,6 @@
         ]
       },
       {
-        "multiword": "raketa",
-        "occurrences": [
-          {
-            "theme": "Missile",
-            "reference": "Hungarian"
-          },
-          {
-            "theme": "Rocket",
-            "reference": "Czech / Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "rakett",
         "occurrences": [
           {
@@ -153203,6 +153190,19 @@
           {
             "theme": "Rocket Ship",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "raketa",
+        "occurrences": [
+          {
+            "theme": "Missile",
+            "reference": "Hungarian"
+          },
+          {
+            "theme": "Rocket",
+            "reference": "Czech / Hungarian"
           }
         ]
       },
@@ -153367,7 +153367,7 @@
   {
     "id": 215275,
     "theme": "Rocket Ship",
-    "shortcut": "fusee",
+    "shortcut": "roket",
     "multiwords": [
       {
         "multiword": "raket",
@@ -154012,7 +154012,7 @@
   {
     "id": 215281,
     "theme": "Roof",
-    "shortcut": "dak",
+    "shortcut": "tak",
     "multiwords": [
       {
         "multiword": "tag",
@@ -154166,7 +154166,7 @@
   {
     "id": 215283,
     "theme": "Room",
-    "shortcut": "oda",
+    "shortcut": "rom",
     "multiwords": [
       {
         "multiword": "sala",
@@ -154566,7 +154566,7 @@
   {
     "id": 215291,
     "theme": "Rowboat",
-    "shortcut": "robad",
+    "shortcut": "kajak",
     "multiwords": [
       {
         "multiword": "kajak",
@@ -155387,19 +155387,6 @@
         ]
       },
       {
-        "multiword": "cubo magico",
-        "occurrences": [
-          {
-            "theme": "Puzzle Cube",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          },
-          {
-            "theme": "Rubiks Cube",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
         "multiword": "cubodirubik",
         "occurrences": [
           {
@@ -155409,6 +155396,19 @@
           {
             "theme": "Rubiks Cube",
             "reference": "Italian"
+          }
+        ]
+      },
+      {
+        "multiword": "cubo magico",
+        "occurrences": [
+          {
+            "theme": "Puzzle Cube",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          },
+          {
+            "theme": "Rubiks Cube",
+            "reference": "Portuguese / Portuguese, Brazilian"
           }
         ]
       },
@@ -155649,6 +155649,19 @@
         ]
       },
       {
+        "multiword": "covor",
+        "occurrences": [
+          {
+            "theme": "Carpet",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Rug",
+            "reference": "Romanian"
+          }
+        ]
+      },
+      {
         "multiword": "matta",
         "occurrences": [
           {
@@ -155671,19 +155684,6 @@
           {
             "theme": "Rug",
             "reference": "Polish"
-          }
-        ]
-      },
-      {
-        "multiword": "covor",
-        "occurrences": [
-          {
-            "theme": "Carpet",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Rug",
-            "reference": "Romanian"
           }
         ]
       },
@@ -155818,7 +155818,7 @@
         ]
       },
       {
-        "multiword": "ковёр",
+        "multiword": "ковер",
         "occurrences": [
           {
             "theme": "Carpet",
@@ -157175,19 +157175,6 @@
         ]
       },
       {
-        "multiword": "salata",
-        "occurrences": [
-          {
-            "theme": "Lettuce",
-            "reference": "Hungarian / Polish"
-          },
-          {
-            "theme": "Salad",
-            "reference": "Hungarian / Romanian / Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "sallad",
         "occurrences": [
           {
@@ -157197,6 +157184,19 @@
           {
             "theme": "Salad",
             "reference": "Swedish"
+          }
+        ]
+      },
+      {
+        "multiword": "salata",
+        "occurrences": [
+          {
+            "theme": "Lettuce",
+            "reference": "Hungarian / Polish"
+          },
+          {
+            "theme": "Salad",
+            "reference": "Hungarian / Romanian / Turkish"
           }
         ]
       },
@@ -158422,7 +158422,7 @@
   {
     "id": 213163,
     "theme": "Sandcastle",
-    "shortcut": "sandburg",
+    "shortcut": "sandslot",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -158545,7 +158545,7 @@
   {
     "id": 212871,
     "theme": "Sandwich",
-    "shortcut": "kanapka",
+    "shortcut": "sandvic",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -159881,7 +159881,7 @@
   {
     "id": 215353,
     "theme": "Scale",
-    "shortcut": "waga",
+    "shortcut": "vaha",
     "multiwords": [
       {
         "multiword": "vaha",
@@ -160154,7 +160154,7 @@
   {
     "id": 215355,
     "theme": "Scared",
-    "shortcut": "radd",
+    "shortcut": "redd",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -160426,7 +160426,7 @@
   {
     "id": 213165,
     "theme": "School Bus",
-    "shortcut": "autobuz",
+    "shortcut": "skolbus",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -162070,7 +162070,7 @@
   {
     "id": 215379,
     "theme": "Seagull",
-    "shortcut": "mage",
+    "shortcut": "make",
     "multiwords": [
       {
         "multiword": "marti",
@@ -162344,7 +162344,7 @@
   {
     "id": 215383,
     "theme": "Seal",
-    "shortcut": "sal",
+    "shortcut": "sel",
     "multiwords": [
       {
         "multiword": "sal",
@@ -162690,7 +162690,7 @@
   {
     "id": 215387,
     "theme": "Seaweed",
-    "shortcut": "alge",
+    "shortcut": "alga",
     "multiwords": [
       {
         "multiword": "alga",
@@ -163151,7 +163151,7 @@
   {
     "id": 215393,
     "theme": "Seesaw",
-    "shortcut": "wippe",
+    "shortcut": "vippe",
     "multiwords": [
       {
         "multiword": "vippe",
@@ -163232,7 +163232,7 @@
         ]
       },
       {
-        "multiword": "гоидалка",
+        "multiword": "гойдалка",
         "occurrences": [
           {
             "theme": "Seesaw",
@@ -163749,7 +163749,7 @@
   {
     "id": 215399,
     "theme": "Shack",
-    "shortcut": "tono",
+    "shortcut": "skur",
     "multiwords": [
       {
         "multiword": "小屋",
@@ -163845,19 +163845,6 @@
         ]
       },
       {
-        "multiword": "buda",
-        "occurrences": [
-          {
-            "theme": "Kennel",
-            "reference": "Polish"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Polish"
-          }
-        ]
-      },
-      {
         "multiword": "skur",
         "occurrences": [
           {
@@ -163867,6 +163854,19 @@
           {
             "theme": "Shed",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "buda",
+        "occurrences": [
+          {
+            "theme": "Kennel",
+            "reference": "Polish"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Polish"
           }
         ]
       },
@@ -164180,7 +164180,7 @@
   {
     "id": 215401,
     "theme": "Shampoo",
-    "shortcut": "sjampo",
+    "shortcut": "shampo",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -164426,7 +164426,7 @@
   {
     "id": 215405,
     "theme": "Shark",
-    "shortcut": "hai",
+    "shortcut": "haj",
     "multiwords": [
       {
         "multiword": "capa",
@@ -164787,7 +164787,7 @@
         ]
       },
       {
-        "multiword": "сарай",
+        "multiword": "сараи",
         "occurrences": [
           {
             "theme": "Barn",
@@ -165796,7 +165796,7 @@
   {
     "id": 215417,
     "theme": "Shield",
-    "shortcut": "stit",
+    "shortcut": "pajz",
     "multiwords": [
       {
         "multiword": "schild",
@@ -166714,19 +166714,6 @@
         ]
       },
       {
-        "multiword": "bolt",
-        "occurrences": [
-          {
-            "theme": "Arrow",
-            "reference": "Pirate English"
-          },
-          {
-            "theme": "Shop",
-            "reference": "Hungarian"
-          }
-        ]
-      },
-      {
         "multiword": "loja",
         "occurrences": [
           {
@@ -166736,6 +166723,19 @@
           {
             "theme": "Store",
             "reference": "Portuguese / Portuguese, Brazilian"
+          }
+        ]
+      },
+      {
+        "multiword": "bolt",
+        "occurrences": [
+          {
+            "theme": "Arrow",
+            "reference": "Pirate English"
+          },
+          {
+            "theme": "Shop",
+            "reference": "Hungarian"
           }
         ]
       },
@@ -166766,19 +166766,6 @@
         ]
       },
       {
-        "multiword": "tienda",
-        "occurrences": [
-          {
-            "theme": "Shop",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Store",
-            "reference": "Spanish"
-          }
-        ]
-      },
-      {
         "multiword": "kauppa",
         "occurrences": [
           {
@@ -166788,6 +166775,19 @@
           {
             "theme": "Store",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "tienda",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Spanish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Spanish"
           }
         ]
       },
@@ -166818,19 +166818,6 @@
         ]
       },
       {
-        "multiword": "magaza",
-        "occurrences": [
-          {
-            "theme": "Shop",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Store",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "butikk",
         "occurrences": [
           {
@@ -166840,6 +166827,19 @@
           {
             "theme": "Store",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "magaza",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Turkish"
           }
         ]
       },
@@ -167361,7 +167361,7 @@
   {
     "id": 215435,
     "theme": "Short",
-    "shortcut": "kurz",
+    "shortcut": "sort",
     "multiwords": [
       {
         "multiword": "sort",
@@ -168028,19 +168028,6 @@
         ]
       },
       {
-        "multiword": "schep",
-        "occurrences": [
-          {
-            "theme": "Shovel",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Spade",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "spade",
         "occurrences": [
           {
@@ -168076,6 +168063,19 @@
           {
             "theme": "Spade",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "schep",
+        "occurrences": [
+          {
+            "theme": "Shovel",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Spade",
+            "reference": "Dutch"
           }
         ]
       },
@@ -169247,7 +169247,7 @@
   {
     "id": 240786,
     "theme": "Silver",
-    "shortcut": "prata",
+    "shortcut": "plata",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -170293,7 +170293,7 @@
   {
     "id": 215461,
     "theme": "Skiing",
-    "shortcut": "sci",
+    "shortcut": "ski",
     "multiwords": [
       {
         "multiword": "kayak",
@@ -171374,7 +171374,7 @@
   {
     "id": 215473,
     "theme": "Sleeping Bag",
-    "shortcut": "spacak",
+    "shortcut": "spiwor",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -172209,19 +172209,6 @@
         ]
       },
       {
-        "multiword": "snigel",
-        "occurrences": [
-          {
-            "theme": "Slug",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Snail",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "slimak",
         "occurrences": [
           {
@@ -172231,6 +172218,19 @@
           {
             "theme": "Snail",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "snigel",
+        "occurrences": [
+          {
+            "theme": "Slug",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Snail",
+            "reference": "Swedish"
           }
         ]
       },
@@ -172778,7 +172778,7 @@
   {
     "id": 215491,
     "theme": "Smile",
-    "shortcut": "smil",
+    "shortcut": "lach",
     "multiwords": [
       {
         "multiword": "lach",
@@ -173022,7 +173022,7 @@
         ]
       },
       {
-        "multiword": "смайлик",
+        "multiword": "смаилик",
         "occurrences": [
           {
             "theme": "Emoji",
@@ -173547,7 +173547,7 @@
   {
     "id": 213177,
     "theme": "Snail",
-    "shortcut": "slak",
+    "shortcut": "melc",
     "multiwords": [
       {
         "multiword": "melc",
@@ -173589,19 +173589,6 @@
         ]
       },
       {
-        "multiword": "snigel",
-        "occurrences": [
-          {
-            "theme": "Slug",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Snail",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "slimak",
         "occurrences": [
           {
@@ -173611,6 +173598,19 @@
           {
             "theme": "Snail",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "snigel",
+        "occurrences": [
+          {
+            "theme": "Slug",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Snail",
+            "reference": "Swedish"
           }
         ]
       },
@@ -173749,7 +173749,7 @@
   {
     "id": 213179,
     "theme": "Snake",
-    "shortcut": "had",
+    "shortcut": "orm",
     "multiwords": [
       {
         "multiword": "orm",
@@ -174233,7 +174233,7 @@
   {
     "id": 215503,
     "theme": "Snowball",
-    "shortcut": "sniezka",
+    "shortcut": "snoboll",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -174602,7 +174602,7 @@
   {
     "id": 215509,
     "theme": "Snowing",
-    "shortcut": "snoar",
+    "shortcut": "snieg",
     "multiwords": [
       {
         "multiword": "눈",
@@ -176771,19 +176771,6 @@
         ]
       },
       {
-        "multiword": "schep",
-        "occurrences": [
-          {
-            "theme": "Shovel",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Spade",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "spade",
         "occurrences": [
           {
@@ -176819,6 +176806,19 @@
           {
             "theme": "Spade",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "schep",
+        "occurrences": [
+          {
+            "theme": "Shovel",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Spade",
+            "reference": "Dutch"
           }
         ]
       },
@@ -178031,23 +178031,6 @@
         ]
       },
       {
-        "multiword": "spindelnat",
-        "occurrences": [
-          {
-            "theme": "Cobweb",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Spider Web",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Web",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "spinnenweb",
         "occurrences": [
           {
@@ -178078,6 +178061,23 @@
           {
             "theme": "Web",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "spindelnat",
+        "occurrences": [
+          {
+            "theme": "Cobweb",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Spider Web",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Web",
+            "reference": "Swedish"
           }
         ]
       },
@@ -180518,7 +180518,7 @@
   {
     "id": 215569,
     "theme": "Stage",
-    "shortcut": "scen",
+    "shortcut": "lava",
     "multiwords": [
       {
         "multiword": "lava",
@@ -180668,7 +180668,7 @@
   {
     "id": 215571,
     "theme": "Staircase",
-    "shortcut": "scari",
+    "shortcut": "scala",
     "multiwords": [
       {
         "multiword": "scala",
@@ -181249,7 +181249,7 @@
   {
     "id": 215577,
     "theme": "Statue",
-    "shortcut": "patsa",
+    "shortcut": "socha",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -181372,7 +181372,7 @@
   {
     "id": 215579,
     "theme": "Steak",
-    "shortcut": "stek",
+    "shortcut": "file",
     "multiwords": [
       {
         "multiword": "biff",
@@ -181388,19 +181388,6 @@
         ]
       },
       {
-        "multiword": "bife",
-        "occurrences": [
-          {
-            "theme": "Beef",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          },
-          {
-            "theme": "Steak",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
         "multiword": "file",
         "occurrences": [
           {
@@ -181410,6 +181397,19 @@
           {
             "theme": "Traffic Jam",
             "reference": "Dutch"
+          }
+        ]
+      },
+      {
+        "multiword": "bife",
+        "occurrences": [
+          {
+            "theme": "Beef",
+            "reference": "Portuguese / Portuguese, Brazilian"
+          },
+          {
+            "theme": "Steak",
+            "reference": "Portuguese"
           }
         ]
       },
@@ -183148,6 +183148,19 @@
         ]
       },
       {
+        "multiword": "kauppa",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Finnish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Finnish"
+          }
+        ]
+      },
+      {
         "multiword": "tienda",
         "occurrences": [
           {
@@ -183170,19 +183183,6 @@
           {
             "theme": "Store",
             "reference": "Pirate English"
-          }
-        ]
-      },
-      {
-        "multiword": "kauppa",
-        "occurrences": [
-          {
-            "theme": "Shop",
-            "reference": "Finnish"
-          },
-          {
-            "theme": "Store",
-            "reference": "Finnish"
           }
         ]
       },
@@ -183213,19 +183213,6 @@
         ]
       },
       {
-        "multiword": "magaza",
-        "occurrences": [
-          {
-            "theme": "Shop",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Store",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
         "multiword": "butikk",
         "occurrences": [
           {
@@ -183235,6 +183222,19 @@
           {
             "theme": "Store",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "magaza",
+        "occurrences": [
+          {
+            "theme": "Shop",
+            "reference": "Turkish"
+          },
+          {
+            "theme": "Store",
+            "reference": "Turkish"
           }
         ]
       },
@@ -183458,19 +183458,6 @@
         ]
       },
       {
-        "multiword": "orage",
-        "occurrences": [
-          {
-            "theme": "Storm",
-            "reference": "French"
-          },
-          {
-            "theme": "Thunderstorm",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "vihar",
         "occurrences": [
           {
@@ -183480,6 +183467,19 @@
           {
             "theme": "Thunderstorm",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "orage",
+        "occurrences": [
+          {
+            "theme": "Storm",
+            "reference": "French"
+          },
+          {
+            "theme": "Thunderstorm",
+            "reference": "French"
           }
         ]
       },
@@ -184786,19 +184786,6 @@
         ]
       },
       {
-        "multiword": "twierdza",
-        "occurrences": [
-          {
-            "theme": "Fortress",
-            "reference": "Polish"
-          },
-          {
-            "theme": "Stronghold",
-            "reference": "Polish"
-          }
-        ]
-      },
-      {
         "multiword": "masmorra",
         "occurrences": [
           {
@@ -184808,6 +184795,19 @@
           {
             "theme": "Stronghold",
             "reference": "Portuguese"
+          }
+        ]
+      },
+      {
+        "multiword": "twierdza",
+        "occurrences": [
+          {
+            "theme": "Fortress",
+            "reference": "Polish"
+          },
+          {
+            "theme": "Stronghold",
+            "reference": "Polish"
           }
         ]
       },
@@ -185404,7 +185404,7 @@
   {
     "id": 215627,
     "theme": "Suitcase",
-    "shortcut": "kufr",
+    "shortcut": "mala",
     "multiwords": [
       {
         "multiword": "mala",
@@ -188083,19 +188083,6 @@
         ]
       },
       {
-        "multiword": "zwembad",
-        "occurrences": [
-          {
-            "theme": "Pool",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Swimming Pool",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
         "multiword": "piscina",
         "occurrences": [
           {
@@ -188105,6 +188092,19 @@
           {
             "theme": "Swimming Pool",
             "reference": "Italian / Portuguese / Portuguese, Brazilian / Romanian / Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "zwembad",
+        "occurrences": [
+          {
+            "theme": "Pool",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Swimming Pool",
+            "reference": "Dutch"
           }
         ]
       },
@@ -188187,7 +188187,7 @@
         ]
       },
       {
-        "multiword": "бассеин",
+        "multiword": "бассейн",
         "occurrences": [
           {
             "theme": "Pool",
@@ -188415,7 +188415,7 @@
         ]
       },
       {
-        "multiword": "гоидалка",
+        "multiword": "гойдалка",
         "occurrences": [
           {
             "theme": "Seesaw",
@@ -189365,7 +189365,7 @@
   {
     "id": 215673,
     "theme": "Table",
-    "shortcut": "stul",
+    "shortcut": "masa",
     "multiwords": [
       {
         "multiword": "bord",
@@ -190149,19 +190149,6 @@
         ]
       },
       {
-        "multiword": "svan",
-        "occurrences": [
-          {
-            "theme": "Swan",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Tail",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "cola",
         "occurrences": [
           {
@@ -190171,6 +190158,19 @@
           {
             "theme": "Tail",
             "reference": "Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "svan",
+        "occurrences": [
+          {
+            "theme": "Swan",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Tail",
+            "reference": "Swedish"
           }
         ]
       }
@@ -190643,7 +190643,7 @@
   {
     "id": 215687,
     "theme": "Target",
-    "shortcut": "cil",
+    "shortcut": "cel",
     "multiwords": [
       {
         "multiword": "mal",
@@ -191454,7 +191454,7 @@
         ]
       },
       {
-        "multiword": "чаиник",
+        "multiword": "чайник",
         "occurrences": [
           {
             "theme": "Kettle",
@@ -191957,7 +191957,7 @@
   {
     "id": 215705,
     "theme": "Teeth",
-    "shortcut": "zuby",
+    "shortcut": "dent",
     "multiwords": [
       {
         "multiword": "dent",
@@ -192418,7 +192418,7 @@
   {
     "id": 215711,
     "theme": "Telescope",
-    "shortcut": "telescop",
+    "shortcut": "teleskop",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -193114,7 +193114,7 @@
   {
     "id": 215719,
     "theme": "Tennis Court",
-    "shortcut": "tennisbaan",
+    "shortcut": "teniskortu",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -193743,7 +193743,7 @@
   {
     "id": 215727,
     "theme": "The End",
-    "shortcut": "end",
+    "shortcut": "son",
     "multiwords": [
       {
         "multiword": "son",
@@ -194990,7 +194990,7 @@
   {
     "id": 215741,
     "theme": "Thunderstorm",
-    "shortcut": "orage",
+    "shortcut": "vihar",
     "multiwords": [
       {
         "multiword": "firtina",
@@ -195010,19 +195010,6 @@
         ]
       },
       {
-        "multiword": "orage",
-        "occurrences": [
-          {
-            "theme": "Storm",
-            "reference": "French"
-          },
-          {
-            "theme": "Thunderstorm",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "vihar",
         "occurrences": [
           {
@@ -195032,6 +195019,19 @@
           {
             "theme": "Thunderstorm",
             "reference": "Hungarian"
+          }
+        ]
+      },
+      {
+        "multiword": "orage",
+        "occurrences": [
+          {
+            "theme": "Storm",
+            "reference": "French"
+          },
+          {
+            "theme": "Thunderstorm",
+            "reference": "French"
           }
         ]
       },
@@ -197751,7 +197751,7 @@
   {
     "id": 215777,
     "theme": "Tomato",
-    "shortcut": "rosie",
+    "shortcut": "tomat",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -200502,7 +200502,7 @@
   {
     "id": 215803,
     "theme": "Traffic",
-    "shortcut": "trafic",
+    "shortcut": "trafik",
     "multiwords": [
       {
         "multiword": "trafik",
@@ -200652,7 +200652,7 @@
   {
     "id": 215805,
     "theme": "Traffic Jam",
-    "shortcut": "stau",
+    "shortcut": "file",
     "multiwords": [
       {
         "multiword": "file",
@@ -201048,7 +201048,7 @@
   {
     "id": 213291,
     "theme": "Train Station",
-    "shortcut": "gare",
+    "shortcut": "gara",
     "multiwords": [
       {
         "multiword": "gara",
@@ -201322,7 +201322,7 @@
   {
     "id": 215813,
     "theme": "Trains",
-    "shortcut": "tog",
+    "shortcut": "tag",
     "multiwords": [
       {
         "multiword": "tag",
@@ -201463,7 +201463,7 @@
   {
     "id": 213235,
     "theme": "Trampoline",
-    "shortcut": "trambulin",
+    "shortcut": "trampolin",
     "multiwords": [
       {
         "multiword": "trampolin",
@@ -202560,7 +202560,7 @@
   {
     "id": 215823,
     "theme": "Treadmill",
-    "shortcut": "esteira",
+    "shortcut": "futopad",
     "multiwords": [
       {
         "multiword": "tapisroulant",
@@ -203779,25 +203779,8 @@
   {
     "id": 215833,
     "theme": "Trolley",
-    "shortcut": "vagn",
+    "shortcut": "vogn",
     "multiwords": [
-      {
-        "multiword": "vagn",
-        "occurrences": [
-          {
-            "theme": "Carriage",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Trolley",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Wagon",
-            "reference": "Swedish"
-          }
-        ]
-      },
       {
         "multiword": "vogn",
         "occurrences": [
@@ -203812,6 +203795,23 @@
           {
             "theme": "Wagon",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "vagn",
+        "occurrences": [
+          {
+            "theme": "Carriage",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Trolley",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Wagon",
+            "reference": "Swedish"
           }
         ]
       },
@@ -204412,7 +204412,7 @@
   {
     "id": 215839,
     "theme": "Trumpet",
-    "shortcut": "trabka",
+    "shortcut": "tromba",
     "multiwords": [
       {
         "multiword": "tromba",
@@ -205132,7 +205132,7 @@
   {
     "id": 215847,
     "theme": "Tuna",
-    "shortcut": "ton",
+    "shortcut": "tun",
     "multiwords": [
       {
         "multiword": "ton",
@@ -205528,7 +205528,7 @@
   {
     "id": 215853,
     "theme": "Turret",
-    "shortcut": "tarn",
+    "shortcut": "torn",
     "multiwords": [
       {
         "multiword": "robot",
@@ -205914,7 +205914,7 @@
   {
     "id": 215855,
     "theme": "Twig",
-    "shortcut": "dal",
+    "shortcut": "tak",
     "multiwords": [
       {
         "multiword": "tak",
@@ -206610,7 +206610,7 @@
   {
     "id": 213245,
     "theme": "Umbrella",
-    "shortcut": "paragua",
+    "shortcut": "umbrela",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -208312,7 +208312,7 @@
   {
     "id": 215877,
     "theme": "Vault",
-    "shortcut": "seif",
+    "shortcut": "kasa",
     "multiwords": [
       {
         "multiword": "tresor",
@@ -209786,7 +209786,7 @@
   {
     "id": 213297,
     "theme": "Volcano",
-    "shortcut": "vulcao",
+    "shortcut": "vulkan",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -210032,7 +210032,7 @@
   {
     "id": 215893,
     "theme": "Vulture",
-    "shortcut": "sep",
+    "shortcut": "gam",
     "multiwords": [
       {
         "multiword": "vultur",
@@ -210308,23 +210308,6 @@
     "shortcut": "vagn",
     "multiwords": [
       {
-        "multiword": "vagn",
-        "occurrences": [
-          {
-            "theme": "Carriage",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Trolley",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Wagon",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "vogn",
         "occurrences": [
           {
@@ -210338,6 +210321,23 @@
           {
             "theme": "Wagon",
             "reference": "Danish / Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "vagn",
+        "occurrences": [
+          {
+            "theme": "Carriage",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Trolley",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Wagon",
+            "reference": "Swedish"
           }
         ]
       },
@@ -210824,7 +210824,7 @@
         ]
       },
       {
-        "multiword": "кошелек",
+        "multiword": "кошелёк",
         "occurrences": [
           {
             "theme": "Purse",
@@ -211281,19 +211281,6 @@
         ]
       },
       {
-        "multiword": "tryllestav",
-        "occurrences": [
-          {
-            "theme": "Magic Wand",
-            "reference": "Danish / Norwegian"
-          },
-          {
-            "theme": "Wand",
-            "reference": "Danish / Norwegian"
-          }
-        ]
-      },
-      {
         "multiword": "zauberstab",
         "occurrences": [
           {
@@ -211303,6 +211290,19 @@
           {
             "theme": "Wand",
             "reference": "German"
+          }
+        ]
+      },
+      {
+        "multiword": "tryllestav",
+        "occurrences": [
+          {
+            "theme": "Magic Wand",
+            "reference": "Danish / Norwegian"
+          },
+          {
+            "theme": "Wand",
+            "reference": "Danish / Norwegian"
           }
         ]
       },
@@ -211333,19 +211333,6 @@
         ]
       },
       {
-        "multiword": "bacchettamagica",
-        "occurrences": [
-          {
-            "theme": "Magic Wand",
-            "reference": "Italian"
-          },
-          {
-            "theme": "Wand",
-            "reference": "Italian"
-          }
-        ]
-      },
-      {
         "multiword": "baguettemagique",
         "occurrences": [
           {
@@ -211355,6 +211342,19 @@
           {
             "theme": "Wand",
             "reference": "French"
+          }
+        ]
+      },
+      {
+        "multiword": "bacchettamagica",
+        "occurrences": [
+          {
+            "theme": "Magic Wand",
+            "reference": "Italian"
+          },
+          {
+            "theme": "Wand",
+            "reference": "Italian"
           }
         ]
       },
@@ -211835,7 +211835,7 @@
   {
     "id": 215909,
     "theme": "Washing Machine",
-    "shortcut": "pracka",
+    "shortcut": "pralka",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -213469,7 +213469,7 @@
   {
     "id": 215929,
     "theme": "Wave",
-    "shortcut": "ola",
+    "shortcut": "vag",
     "multiwords": [
       {
         "multiword": "val",
@@ -213844,23 +213844,6 @@
         ]
       },
       {
-        "multiword": "spindelnat",
-        "occurrences": [
-          {
-            "theme": "Cobweb",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Spider Web",
-            "reference": "Swedish"
-          },
-          {
-            "theme": "Web",
-            "reference": "Swedish"
-          }
-        ]
-      },
-      {
         "multiword": "spinnenweb",
         "occurrences": [
           {
@@ -213891,6 +213874,23 @@
           {
             "theme": "Web",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "spindelnat",
+        "occurrences": [
+          {
+            "theme": "Cobweb",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Spider Web",
+            "reference": "Swedish"
+          },
+          {
+            "theme": "Web",
+            "reference": "Swedish"
           }
         ]
       },
@@ -214823,7 +214823,7 @@
     "shortcut": "wester",
     "multiwords": [
       {
-        "multiword": "ковбои",
+        "multiword": "ковбой",
         "occurrences": [
           {
             "theme": "Cowboy",
@@ -214957,7 +214957,7 @@
   {
     "id": 213261,
     "theme": "Whale",
-    "shortcut": "wal",
+    "shortcut": "val",
     "multiwords": [
       {
         "multiword": "val",
@@ -216445,7 +216445,7 @@
   {
     "id": 215957,
     "theme": "Wings",
-    "shortcut": "ala",
+    "shortcut": "asa",
     "multiwords": [
       {
         "multiword": "asa",
@@ -216731,7 +216731,7 @@
   {
     "id": 215961,
     "theme": "Winter",
-    "shortcut": "tel",
+    "shortcut": "kis",
     "multiwords": [
       {
         "multiword": "kis",
@@ -216897,19 +216897,6 @@
         ]
       },
       {
-        "multiword": "cable",
-        "occurrences": [
-          {
-            "theme": "Cable",
-            "reference": "English / French / Pirate English / Spanish"
-          },
-          {
-            "theme": "Wire",
-            "reference": "French"
-          }
-        ]
-      },
-      {
         "multiword": "lanka",
         "occurrences": [
           {
@@ -216919,6 +216906,19 @@
           {
             "theme": "Wire",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "cable",
+        "occurrences": [
+          {
+            "theme": "Cable",
+            "reference": "English / French / Pirate English / Spanish"
+          },
+          {
+            "theme": "Wire",
+            "reference": "French"
           }
         ]
       },
@@ -216936,19 +216936,6 @@
         ]
       },
       {
-        "multiword": "cablu",
-        "occurrences": [
-          {
-            "theme": "Cable",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Wire",
-            "reference": "Romanian"
-          }
-        ]
-      },
-      {
         "multiword": "kablo",
         "occurrences": [
           {
@@ -216958,6 +216945,19 @@
           {
             "theme": "Wire",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "cablu",
+        "occurrences": [
+          {
+            "theme": "Cable",
+            "reference": "Romanian"
+          },
+          {
+            "theme": "Wire",
+            "reference": "Romanian"
           }
         ]
       },
@@ -218241,7 +218241,7 @@
   {
     "id": 213561,
     "theme": "Worm",
-    "shortcut": "ver",
+    "shortcut": "orm",
     "multiwords": [
       {
         "multiword": "orm",
@@ -219801,7 +219801,7 @@
   {
     "id": 215999,
     "theme": "Zipper",
-    "shortcut": "zip",
+    "shortcut": "rit",
     "multiwords": [
       {
         "multiword": "rit",
