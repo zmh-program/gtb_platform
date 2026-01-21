@@ -240,7 +240,7 @@ def formatted_translation(raw_text: str, is_completion: bool = False) -> List[st
         text[:-1] if could_remove_suffix else text,
     ]
 
-    return list(set(collections))
+    return list(dict.fromkeys(collections))
 
 
 def is_match_clean_translation(text: str, clean_text: str) -> bool:

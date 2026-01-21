@@ -102,6 +102,7 @@ def generate_themes_json(
                     key=lambda x: (
                         -len(x["occurrences"]),
                         sort_better_shortcut(x["multiword"]),
+                        x["multiword"],
                     ),
                 ),
                 "translations": {

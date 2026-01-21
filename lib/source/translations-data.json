@@ -1359,8 +1359,8 @@
       },
       "fi": {
         "translation": "Viruksenesto",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:13:48-05:00"
       },
       "fr": {
         "translation": "Antivirus",
@@ -1431,6 +1431,11 @@
         "translation": "Antivirus",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:22-05:00"
+      },
+      "sv": {
+        "translation": "Antivirus",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Anti-Virüs",
@@ -2149,7 +2154,7 @@
         "occurrences": [
           {
             "theme": "Aquarium",
-            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Romanian / Swedish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Romanian"
           },
           {
             "theme": "Fish Bowl",
@@ -2286,9 +2291,9 @@
         "approved_at": "2025-02-01T00:47:20-05:00"
       },
       "sv": {
-        "translation": "Aquarium",
-        "is_approved": true,
-        "approved_at": "2019-04-07T05:51:14-04:00"
+        "translation": "Akvarium",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Akvaryum",
@@ -2653,6 +2658,11 @@
         "translation": "Ártico",
         "is_approved": true,
         "approved_at": "2025-04-04T11:47:43-04:00"
+      },
+      "sv": {
+        "translation": "Arktisk",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Arktik",
@@ -3592,6 +3602,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:25-05:00"
       },
+      "sv": {
+        "translation": "Atom\n",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Atom",
         "is_approved": true,
@@ -4366,6 +4381,11 @@
         "translation": "Ajolote",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:25-05:00"
+      },
+      "sv": {
+        "translation": "Axolotl",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Axolotl",
@@ -7171,7 +7191,7 @@
         ]
       },
       {
-        "multiword": "сараи",
+        "multiword": "сарай",
         "occurrences": [
           {
             "theme": "Barn",
@@ -7928,6 +7948,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:29-05:00"
       },
+      "sv": {
+        "translation": "Basebollhandske",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Beyzbol Eldiveni",
         "is_approved": true,
@@ -8387,8 +8412,8 @@
       },
       "fi": {
         "translation": "Linnake",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:13:51-05:00"
       },
       "fr": {
         "translation": "Bastion",
@@ -8459,6 +8484,11 @@
         "translation": "Bastión",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:31-05:00"
+      },
+      "sv": {
+        "translation": "Bastion",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kale",
@@ -11622,6 +11652,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:27-05:00"
       },
+      "sv": {
+        "translation": "Paprika",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Dolmalık Biber",
         "is_approved": true,
@@ -12272,7 +12307,7 @@
     "shortcut": "elyeti",
     "multiwords": [
       {
-        "multiword": "иети",
+        "multiword": "йети",
         "occurrences": [
           {
             "theme": "Bigfoot",
@@ -12508,6 +12543,11 @@
         "translation": "Paso de Bicicletas",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:29-05:00"
+      },
+      "sv": {
+        "translation": "Cykelbana",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Bisiklet Yolu",
@@ -13376,6 +13416,11 @@
         "translation": "Bañera para Pájaros",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:32-05:00"
+      },
+      "sv": {
+        "translation": "Fågelbad",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kuş Banyosu",
@@ -14392,7 +14437,7 @@
         "approved_at": null
       },
       "ko": {
-        "translation": "바이슨",
+        "translation": "들소",
         "is_approved": false,
         "approved_at": null
       },
@@ -14435,6 +14480,11 @@
         "translation": "Bisonte",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:35-05:00"
+      },
+      "sv": {
+        "translation": "Bison",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Bizon",
@@ -15847,8 +15897,8 @@
       },
       "fi": {
         "translation": "Rakennussuunnitelma",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:14:11-05:00"
       },
       "fr": {
         "translation": "Plan de projet",
@@ -15919,6 +15969,11 @@
         "translation": "Plano de Proyecto",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:37-05:00"
+      },
+      "sv": {
+        "translation": "planritning",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Şablon",
@@ -21945,8 +22000,8 @@
       },
       "fi": {
         "translation": "Bunkkeri",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:14:13-05:00"
       },
       "fr": {
         "translation": "Bunker",
@@ -22017,6 +22072,11 @@
         "translation": "Búnker",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:38-05:00"
+      },
+      "sv": {
+        "translation": "Bunker",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Sığınak",
@@ -27549,8 +27609,8 @@
       },
       "fi": {
         "translation": "Kapybara",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:14:41-05:00"
       },
       "fr": {
         "translation": "Capybara",
@@ -27621,6 +27681,11 @@
         "translation": "Capibara",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:41-05:00"
+      },
+      "sv": {
+        "translation": "Vattensvin",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kapibara",
@@ -28745,7 +28810,7 @@
         ]
       },
       {
-        "multiword": "ковер",
+        "multiword": "ковёр",
         "occurrences": [
           {
             "theme": "Carpet",
@@ -31079,6 +31144,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:47-05:00"
       },
+      "sv": {
+        "translation": "Cementblandare",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Çimento Karıştırıcısı",
         "is_approved": true,
@@ -31456,6 +31526,11 @@
         "translation": "Caja de Cereales",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:37-05:00"
+      },
+      "sv": {
+        "translation": "Flingpaket",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Mısır Gevreği Kutusu",
@@ -32148,6 +32223,11 @@
         "translation": "Candelabro",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:38-05:00"
+      },
+      "sv": {
+        "translation": "kristallkrona",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Avize",
@@ -40053,6 +40133,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:48-05:00"
       },
+      "sv": {
+        "translation": "Café",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Kafe",
         "is_approved": true,
@@ -47635,6 +47720,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:39-05:00"
       },
+      "sv": {
+        "translation": "Skärbräda",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Kesme Tahtası",
         "is_approved": true,
@@ -50645,8 +50735,8 @@
       },
       "fi": {
         "translation": "Diplomi",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:14:46-05:00"
       },
       "fr": {
         "translation": "Diplôme",
@@ -50717,6 +50807,11 @@
         "translation": "Diploma",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:50-05:00"
+      },
+      "sv": {
+        "translation": "Diplom",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Diploma",
@@ -52039,6 +52134,11 @@
         "translation": "Base",
         "is_approved": true,
         "approved_at": "2025-02-01T00:47:51-05:00"
+      },
+      "sv": {
+        "translation": "Brygga",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Rıhtım",
@@ -58357,7 +58457,7 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "смаилик",
+        "multiword": "смайлик",
         "occurrences": [
           {
             "theme": "Emoji",
@@ -60801,8 +60901,8 @@
     "translations": {
       "zh_cn": {
         "translation": "集市",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2025-12-30T09:25:13-05:00"
       },
       "zh_tw": {
         "translation": "公正的",
@@ -61741,6 +61841,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:03-05:00"
       },
+      "sv": {
+        "translation": "Modevisning",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Defile",
         "is_approved": true,
@@ -61937,9 +62042,9 @@
         "approved_at": "2022-08-19T16:08:06-04:00"
       },
       "hu": {
-        "translation": "Kövér",
+        "translation": "Masszív",
         "is_approved": true,
-        "approved_at": "2022-08-10T20:39:26-04:00"
+        "approved_at": "2026-01-15T01:35:15-05:00"
       },
       "it": {
         "translation": "Grosso",
@@ -64387,7 +64492,7 @@
         "occurrences": [
           {
             "theme": "Aquarium",
-            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Romanian / Swedish"
+            "reference": "English / Czech / Danish / Dutch / French / German / Norwegian / Pirate English / Polish / Portuguese / Romanian"
           },
           {
             "theme": "Fish Bowl",
@@ -67439,6 +67544,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:05-05:00"
       },
+      "sv": {
+        "translation": "Amerikansk Fotbollsplan",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Futbol Sahası",
         "is_approved": true,
@@ -67484,8 +67594,8 @@
       },
       "fi": {
         "translation": "Jalkapallokypärä",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:14:48-05:00"
       },
       "fr": {
         "translation": "Casque de football américain",
@@ -67556,6 +67666,11 @@
         "translation": "Casco de Fútbol",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:06-05:00"
+      },
+      "sv": {
+        "translation": "Amerikansk Fotbollshjälm",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Futbol Kaskı",
@@ -68229,6 +68344,19 @@
           {
             "theme": "Stronghold",
             "reference": "Polish"
+          }
+        ]
+      },
+      {
+        "multiword": "linnoitu",
+        "occurrences": [
+          {
+            "theme": "Fortress",
+            "reference": "Finnish"
+          },
+          {
+            "theme": "Stronghold",
+            "reference": "Finnish"
           }
         ]
       },
@@ -70502,7 +70630,7 @@
         "approved_at": "2025-02-26T14:21:46-05:00"
       },
       "fi": {
-        "translation": "Hedelmäpunssi",
+        "translation": "Hedelmäpommi",
         "is_approved": false,
         "approved_at": null
       },
@@ -70532,7 +70660,7 @@
         "approved_at": null
       },
       "ko": {
-        "translation": "과일 펀치",
+        "translation": "화채",
         "is_approved": false,
         "approved_at": null
       },
@@ -70575,6 +70703,11 @@
         "translation": "Ponche de Frutas",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:08-05:00"
+      },
+      "sv": {
+        "translation": "Fruktbål",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Meyveli İçki",
@@ -77591,6 +77724,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:45-05:00"
       },
+      "sv": {
+        "translation": "Golfboll",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Golf Topu",
         "is_approved": true,
@@ -79526,6 +79664,11 @@
         "translation": "Grifo",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:10-05:00"
+      },
+      "sv": {
+        "translation": "Grip",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Grifin",
@@ -83411,6 +83554,11 @@
         "translation": "Casco de Seguridad",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:49-05:00"
+      },
+      "sv": {
+        "translation": "skyddshjälm",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Baret",
@@ -91132,6 +91280,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:11-05:00"
       },
+      "sv": {
+        "translation": "Istiden",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Buz Devri",
         "is_approved": true,
@@ -91786,6 +91939,11 @@
         "translation": "Camión de Helados",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:51-05:00"
+      },
+      "sv": {
+        "translation": "Glassbil",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Dondurma Arabası",
@@ -94433,6 +94591,11 @@
         "translation": "Conserje",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:13-05:00"
+      },
+      "sv": {
+        "translation": "Vaktmästare",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Hademe",
@@ -97458,6 +97621,19 @@
         ]
       },
       {
+        "multiword": "merileva",
+        "occurrences": [
+          {
+            "theme": "Kelp",
+            "reference": "Finnish"
+          },
+          {
+            "theme": "Seaweed",
+            "reference": "Finnish"
+          }
+        ]
+      },
+      {
         "multiword": "водоросли",
         "occurrences": [
           {
@@ -97499,8 +97675,8 @@
       },
       "fi": {
         "translation": "Merilevä",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:15:25-05:00"
       },
       "fr": {
         "translation": "Algue",
@@ -97571,6 +97747,11 @@
         "translation": "Alga",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:52-05:00"
+      },
+      "sv": {
+        "translation": "kelp",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Yosun",
@@ -102455,6 +102636,11 @@
         "is_approved": true,
         "approved_at": "2025-02-07T01:07:52-05:00"
       },
+      "sv": {
+        "translation": "Grässpel",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Bahçe Oyunları",
         "is_approved": true,
@@ -103554,6 +103740,11 @@
         "translation": "Aula",
         "is_approved": true,
         "approved_at": "2025-02-06T21:55:33-05:00"
+      },
+      "sv": {
+        "translation": "Föreläsningssal",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Amfi",
@@ -111900,6 +112091,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:54-05:00"
       },
+      "sv": {
+        "translation": "skyltdocka",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Manken",
         "is_approved": true,
@@ -113852,6 +114048,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:31-05:00"
       },
+      "sv": {
+        "translation": "Äng",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Çayır",
         "is_approved": true,
@@ -115287,9 +115488,9 @@
     ],
     "translations": {
       "zh_cn": {
-        "translation": "银河",
+        "translation": "银河系",
         "is_approved": true,
-        "approved_at": "2018-02-13T03:18:23-05:00"
+        "approved_at": "2025-12-30T09:20:29-05:00"
       },
       "zh_tw": {
         "translation": "銀河",
@@ -118894,6 +119095,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:55-05:00"
       },
+      "sv": {
+        "translation": "Fjäril",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Güve",
         "is_approved": true,
@@ -119011,6 +119217,11 @@
         "translation": "Motocicleta",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:57-05:00"
+      },
+      "sv": {
+        "translation": "Motorcykel",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Motosiklet",
@@ -122610,6 +122821,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:34-05:00"
       },
+      "sv": {
+        "translation": "narval",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Deniz Gergedanı",
         "is_approved": true,
@@ -123735,7 +123951,7 @@
         "approved_at": null
       },
       "ko": {
-        "translation": "북극광",
+        "translation": "오로라",
         "is_approved": false,
         "approved_at": null
       },
@@ -123778,6 +123994,11 @@
         "translation": "Aurora Boreal",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:58-05:00"
+      },
+      "sv": {
+        "translation": "Norrsken",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kuzey Işıkları",
@@ -126394,6 +126615,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:45-05:00"
       },
+      "sv": {
+        "translation": "Orkidé",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Orkide",
         "is_approved": true,
@@ -127143,6 +127369,11 @@
         "translation": "Horno",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:46-05:00"
+      },
+      "sv": {
+        "translation": "Ugn",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Fırın",
@@ -130054,6 +130285,11 @@
         "translation": "Estacionamiento",
         "is_approved": true,
         "approved_at": "2024-11-11T12:45:02-05:00"
+      },
+      "sv": {
+        "translation": "Parkeringsplats",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Otopark",
@@ -133154,8 +133390,8 @@
       },
       "fi": {
         "translation": "Eläinkauppa",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:15:30-05:00"
       },
       "fr": {
         "translation": "Animalerie",
@@ -133226,6 +133462,11 @@
         "translation": "Tienda de Mascotas",
         "is_approved": true,
         "approved_at": "2024-11-11T12:45:05-05:00"
+      },
+      "sv": {
+        "translation": "Djuraffär",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Evcil Hayvan Dükkânı",
@@ -134924,8 +135165,8 @@
       },
       "fi": {
         "translation": "Valokuvakehys",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:15:32-05:00"
       },
       "fr": {
         "translation": "Cadre photo",
@@ -134996,6 +135237,11 @@
         "translation": "Marco de Fotos",
         "is_approved": true,
         "approved_at": "2024-11-11T12:45:40-05:00"
+      },
+      "sv": {
+        "translation": "Bildram",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Resim Çerçevesi",
@@ -136045,7 +136291,7 @@
       "ru": {
         "translation": "Копилка",
         "is_approved": true,
-        "approved_at": "2020-04-12T04:42:28-04:00"
+        "approved_at": "2025-12-31T10:39:34-05:00"
       },
       "es": {
         "translation": "Alcancía",
@@ -139398,6 +139644,11 @@
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:50-05:00"
       },
+      "sv": {
+        "translation": "Rörmokare",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Tesisatçı",
         "is_approved": true,
@@ -141135,7 +141386,7 @@
         ]
       },
       {
-        "multiword": "басеин",
+        "multiword": "басейн",
         "occurrences": [
           {
             "theme": "Pool",
@@ -145204,6 +145455,11 @@
         "translation": "Frailecillo",
         "is_approved": true,
         "approved_at": "2024-11-11T12:46:53-05:00"
+      },
+      "sv": {
+        "translation": "Lunnefågel",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Martı",
@@ -150223,9 +150479,9 @@
         "approved_at": "2024-10-11T03:34:03-04:00"
       },
       "fi": {
-        "translation": "Pikkupanda",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Kultapanda",
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:16:37-05:00"
       },
       "fr": {
         "translation": "Panda roux",
@@ -150296,6 +150552,11 @@
         "translation": "Panda Rojo",
         "is_approved": true,
         "approved_at": "2024-11-11T12:46:54-05:00"
+      },
+      "sv": {
+        "translation": "Kattbjörn\n",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Kırmızı Panda",
@@ -155818,7 +156079,7 @@
         ]
       },
       {
-        "multiword": "ковер",
+        "multiword": "ковёр",
         "occurrences": [
           {
             "theme": "Carpet",
@@ -162771,6 +163032,19 @@
         ]
       },
       {
+        "multiword": "merileva",
+        "occurrences": [
+          {
+            "theme": "Kelp",
+            "reference": "Finnish"
+          },
+          {
+            "theme": "Seaweed",
+            "reference": "Finnish"
+          }
+        ]
+      },
+      {
         "multiword": "водоросли",
         "occurrences": [
           {
@@ -164787,7 +165061,7 @@
         ]
       },
       {
-        "multiword": "сараи",
+        "multiword": "сарай",
         "occurrences": [
           {
             "theme": "Barn",
@@ -168569,8 +168843,8 @@
       },
       "fi": {
         "translation": "Sirppi",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:16:42-05:00"
       },
       "fr": {
         "translation": "Faucille",
@@ -168641,6 +168915,11 @@
         "translation": "Hoz",
         "is_approved": true,
         "approved_at": "2024-11-11T12:46:57-05:00"
+      },
+      "sv": {
+        "translation": "Skära",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Orak",
@@ -173022,7 +173301,7 @@
         ]
       },
       {
-        "multiword": "смаилик",
+        "multiword": "смайлик",
         "occurrences": [
           {
             "theme": "Emoji",
@@ -173459,8 +173738,8 @@
       },
       "fi": {
         "translation": "Smore",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:01-05:00"
       },
       "fr": {
         "translation": "S'more",
@@ -178544,8 +178823,8 @@
       },
       "fi": {
         "translation": "Kierreportaat",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:03-05:00"
       },
       "fr": {
         "translation": "Escalier en colimaçon",
@@ -178616,6 +178895,11 @@
         "translation": "Escalera en Espiral",
         "is_approved": true,
         "approved_at": "2024-11-11T12:46:59-05:00"
+      },
+      "sv": {
+        "translation": "Spiral Trappuppgång",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Spiral Merdiven",
@@ -184812,6 +185096,19 @@
         ]
       },
       {
+        "multiword": "linnoitu",
+        "occurrences": [
+          {
+            "theme": "Fortress",
+            "reference": "Finnish"
+          },
+          {
+            "theme": "Stronghold",
+            "reference": "Finnish"
+          }
+        ]
+      },
+      {
         "multiword": "fortaleza",
         "occurrences": [
           {
@@ -184892,8 +185189,8 @@
       },
       "fi": {
         "translation": "Linnoitus",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:14-05:00"
       },
       "fr": {
         "translation": "Forteresse",
@@ -184964,6 +185261,11 @@
         "translation": "Fortaleza",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:01-05:00"
+      },
+      "sv": {
+        "translation": "Fäste",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Stronghold",
@@ -185606,9 +185908,9 @@
         "approved_at": "2020-02-16T14:08:25-05:00"
       },
       "fr": {
-        "translation": "Eté",
+        "translation": "Été",
         "is_approved": true,
-        "approved_at": "2021-07-22T08:43:17-04:00"
+        "approved_at": "2026-01-20T17:42:00-05:00"
       },
       "de": {
         "translation": "Sommer",
@@ -188174,7 +188476,7 @@
         ]
       },
       {
-        "multiword": "басеин",
+        "multiword": "басейн",
         "occurrences": [
           {
             "theme": "Pool",
@@ -203567,7 +203869,7 @@
         "approved_at": "2024-10-12T10:42:30-04:00"
       },
       "fi": {
-        "translation": "Temppu laukaus",
+        "translation": "Temppulaukaus",
         "is_approved": false,
         "approved_at": null
       },
@@ -203640,6 +203942,11 @@
         "translation": "Disparo con Efecto",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:23-05:00"
+      },
+      "sv": {
+        "translation": "Trickskott",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Taktikli Atış",
@@ -204921,8 +205228,8 @@
       },
       "fi": {
         "translation": "Tuuba",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:46-05:00"
       },
       "fr": {
         "translation": "Tuba",
@@ -204993,6 +205300,11 @@
         "translation": "Tuba",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:26-05:00"
+      },
+      "sv": {
+        "translation": "Tuba",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Tuba",
@@ -206522,8 +206834,8 @@
       },
       "fi": {
         "translation": "Ukulele",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:47-05:00"
       },
       "fr": {
         "translation": "Ukulélé",
@@ -206594,6 +206906,11 @@
         "translation": "Ukelele",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:27-05:00"
+      },
+      "sv": {
+        "translation": "Ukulele",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Ukulele",
@@ -207544,6 +207861,11 @@
         "translation": "Universidad",
         "is_approved": true,
         "approved_at": "2024-11-11T12:44:16-05:00"
+      },
+      "sv": {
+        "translation": "Universitet",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Üniversite",
@@ -209771,6 +210093,11 @@
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:36-05:00"
       },
+      "sv": {
+        "translation": "Virtuell Verklighet",
+        "is_approved": false,
+        "approved_at": null
+      },
       "tr": {
         "translation": "Sanal Gerçeklik",
         "is_approved": true,
@@ -211001,8 +211328,8 @@
       },
       "fi": {
         "translation": "Tapetti",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:17:49-05:00"
       },
       "fr": {
         "translation": "Papier peint",
@@ -211073,6 +211400,11 @@
         "translation": "Fondo de pantalla",
         "is_approved": true,
         "approved_at": "2025-02-01T00:48:52-05:00"
+      },
+      "sv": {
+        "translation": "Tapet",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Duvar Kağıdı",
@@ -219035,7 +219367,7 @@
         ]
       },
       {
-        "multiword": "иети",
+        "multiword": "йети",
         "occurrences": [
           {
             "theme": "Bigfoot",
@@ -219075,9 +219407,9 @@
         "approved_at": "2024-10-12T10:43:25-04:00"
       },
       "fi": {
-        "translation": "Jeti",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "Lumimies",
+        "is_approved": true,
+        "approved_at": "2026-01-18T14:18:12-05:00"
       },
       "fr": {
         "translation": "Yéti",
@@ -219148,6 +219480,11 @@
         "translation": "Yeti",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:37-05:00"
+      },
+      "sv": {
+        "translation": "Snömannen",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Yeti",
@@ -219266,6 +219603,11 @@
         "translation": "Yogur",
         "is_approved": true,
         "approved_at": "2024-11-11T12:47:38-05:00"
+      },
+      "sv": {
+        "translation": "Yoghurt",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Yoğurt",
