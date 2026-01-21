@@ -1,4 +1,5 @@
 import unicodedata
+from difflib import SequenceMatcher
 from typing import List, Tuple
 
 
@@ -44,78 +45,122 @@ QWERTY_LAYOUT = {
 }
 
 
-def calculate_typing_complexity(shortcut: str) -> float:
+def calculate_typing_complexity(shortcut: str, reference_text: str = None) -> float:
     """
     Calculates a typing difficulty score based on QWERTY layout.
-    Lower score means easier/faster to type.
     
-    Algorithm:
-    1. Base cost per character based on row position (Home row is easiest).
-    2. Penalties for difficult transitions:
-       - Same hand usage (+0.5)
-       - Same finger usage (+2.0) - very difficult/slow
-       - Row jumping (e.g. Top to Bottom) (+0.5 per row distance)
-    3. Bonuses/Neutrality:
-       - Alternating hands (0 penalty) - fastest typing flow
-       - Same key (double letter) (+0.1) - very fast re-press
-    4. Hand Bias:
-       - Right hand penalty (+1.1) per key (prefer Left hand as Right hand is on mouse)
+    Algorithm considers:
+    1. Base Key Costs: Home row < Top row < Bottom row < Number row.
+    2. Hand Bias: Right hand penalty (+1.1) as left hand is preferred.
+    3. Transition Costs:
+       - Hand Swaps: Optimal (0 cost).
+       - Same Hand:
+         - Inward Rolls (Pinky->Index): Fast (-0.2 bonus).
+         - Outward Rolls (Index->Pinky): Slow (+0.3 penalty).
+         - Same Finger: Very Slow (+2.0 penalty).
+         - Row Jumps: Penalty based on distance.
+         - Lateral Stretches: Penalty for long reaches.
+    4. "Enter" Key:
+       - Every shortcut effectively ends with an Enter press.
+       - Enter is Right Hand, Pinky, Home Row (approx).
+    5. Reflex/Familiarity Bonus:
+       - If shortcut is similar to reference_text (common English word),
+         apply a bonus (negative score) to represent muscle memory.
     """
     if not shortcut:
         return 0.0
         
     score = 0.0
+    
+    # 0. Reflex/Familiarity Bonus
+    if reference_text:
+        # Calculate similarity (0.0 to 1.0)
+        # Using SequenceMatcher to capture subsequence/typo similarity (e.g. "orage" ~ "orange")
+        matcher = SequenceMatcher(None, shortcut.lower(), reference_text.lower())
+        similarity = matcher.ratio()
+        
+        # Apply bonus if similarity is significant
+        # Weight can be adjusted. 5.0 is a strong bonus (offsets length/complexity).
+        if similarity > 0.5:
+            score -= (similarity * 5.0)
+    
+    # Define Enter key properties: Row 2 (Home), Col 11.5, Right Hand, Pinky
+    ENTER_KEY = (2, 11, 1, 0) 
+    
+    # Prepare sequence: shortcut characters + Enter
+    sequence_chars = list(shortcut.lower())
+    
+    # Tracking state
     prev_char_info = None
     
-    # Row costs: Home(2)=0, Top(1)=0.5, Bot(3)=1.0, Num(0)=1.5
-    row_costs = {0: 1.5, 1: 0.5, 2: 0.0, 3: 1.0}
+    # Row costs: Home(2)=0, Top(1)=0.5, Bot(3)=1.0, Num(0)=2.0
+    row_costs = {0: 2.0, 1: 0.5, 2: 0.0, 3: 1.0}
     
-    normalized_shortcut = shortcut.lower()
-    
-    for i, char in enumerate(normalized_shortcut):
-        # Default difficult chars (not in map) get high penalty
-        if char not in QWERTY_LAYOUT:
-             score += 3.0
-             prev_char_info = None
-             continue
-             
-        row, col, hand, finger = QWERTY_LAYOUT[char]
+    for i, char in enumerate(sequence_chars + ["MATCH_ENTER"]):
+        is_enter = (char == "MATCH_ENTER")
         
-        # 1. Base cost for position
+        if is_enter:
+            row, col, hand, finger = ENTER_KEY
+        elif char not in QWERTY_LAYOUT:
+            # Unknown char - high penalty
+            score += 3.0
+            prev_char_info = None
+            continue
+        else:
+            row, col, hand, finger = QWERTY_LAYOUT[char]
+        
+        # 1. Base cost for position (Finger travel distance from home position)
         score += row_costs.get(row, 2.0)
         
-        # 2. Right hand penalty (user request)
+        # 2. Right hand penalty
         if hand == 1:
-            score += 1.1
-        
-        # 3. Transition cost
+            score *= 1.2
+            
+        # 3. Transition Logic
         if prev_char_info:
             prev_row, prev_col, prev_hand, prev_finger = prev_char_info
             
-            # Same key (double letter) - minimal penalty
-            if char == normalized_shortcut[i-1]:
+            # Same Key (Double tap) - Fast
+            if not is_enter and i > 0 and char == sequence_chars[i-1]:
                 score += 0.1
-            
-            # Different hand - Optimal flow (0 penalty)
+                
+            # Hand Swap - Fastest Flow
             elif hand != prev_hand:
-                pass # Alternating hands is fast
+                pass # 0 cost
                 
-            # Same hand
+            # Same Hand Transitions
             else:
-                score += 0.5 # Same hand penalty
+                base_same_hand_penalty = 0.5
                 
-                # Same finger (bad!)
+                # Finger Logic
                 if finger == prev_finger:
-                    score += 2.0 # High penalty for same-finger contortions
-                
-                # Row jump penalty (distance > 1 row)
-                if abs(row - prev_row) > 1:
-                    score += 0.5 * abs(row - prev_row)
+                    # Same finger = very bad (unless same key, handled above)
+                    score += 2.0 
+                else:
+                    # Rolling Logic
+                    # Finger indices: 0=Pinky, 1=Ring, 2=Middle, 3=Index
+                    # Inward roll: lower -> higher index (Pinky -> Index)
+                    # Outward roll: higher -> lower index (Index -> Pinky)
                     
-                # Lateral stretch (same hand, far columns)
-                if abs(col - prev_col) > 4:
-                    score += 0.5
-                    
+                    if finger > prev_finger:
+                        # Inward roll (good)
+                        base_same_hand_penalty -= 0.2
+                    else:
+                        # Outward roll (bad)
+                        base_same_hand_penalty += 0.3
+                        
+                # Row Jumps (e.g. Top to Bottom)
+                row_diff = abs(row - prev_row)
+                if row_diff > 0:
+                     base_same_hand_penalty += (0.3 * row_diff)
+                     
+                # Lateral Stretches (Col distance)
+                col_diff = abs(col - prev_col)
+                if col_diff > 0:
+                     base_same_hand_penalty += (0.1 * col_diff)
+
+                score += base_same_hand_penalty
+
         prev_char_info = (row, col, hand, finger)
         
     return score
@@ -123,10 +168,7 @@ def calculate_typing_complexity(shortcut: str) -> float:
 
 def sort_better_shortcut(shortcut: str) -> Tuple[bool, int, float]:
     """Sort key function for shortcuts."""
-    # Sort order:
-    # 1. Special strings (accented/unicode) last (True > False)
-    # 2. Length (shorter is better)
-    # 3. Typing complexity (lower score is better/faster)
+    # This is a legacy/default wrapper. For context-aware sorting, use appropriate lambda.
     return (is_special_string(shortcut), len(shortcut), calculate_typing_complexity(shortcut))
 
 

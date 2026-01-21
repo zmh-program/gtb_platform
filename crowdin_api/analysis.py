@@ -38,15 +38,31 @@ def find_shortcut_for_theme(theme_data: Dict[str, Any], duplicates: Dict[str, An
 
     assert all_translations, f"No translations found for theme {theme_data['theme']}"
 
-    k = min(
-        all_translations,
-        key=lambda shortcut: (
+    def get_sort_key(shortcut: str):
+        index_cost = 999  # Default: Not in duplicates (Best, better than 0)
+        
+        if shortcut in duplicates:
+            # Find index of current theme in the duplicates list
+            # duplicates[shortcut] = List[Tuple[theme, lang, text]]
+            # We want to find the first occurrence of this theme
+            try:
+                # Get the list of themes for this shortcut
+                themes_in_duplicate = [d[0] for d in duplicates[shortcut]]
+                # Find current theme's index
+                idx = themes_in_duplicate.index(theme_data["theme"])
+                index_cost = idx
+            except ValueError:
+                # Should not happen if logic is correct, but safe fallback
+                index_cost = 999 
+
+        return (
             is_special_string(shortcut),
             len(shortcut),
-            1 if shortcut in duplicates else 0,
-            calculate_typing_complexity(shortcut),
-        ),
-    )
+            index_cost,
+            calculate_typing_complexity(shortcut, theme_data["theme"]),
+        )
+
+    k = min(all_translations, key=get_sort_key)
 
     min_theme_len = min(len(t) for t in formatted_translation(theme_data["theme"]))
     if len(k) >= min_theme_len:
