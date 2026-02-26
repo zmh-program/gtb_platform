@@ -2350,8 +2350,8 @@
       },
       "de": {
         "translation": "Spielhalle",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-31T16:12:26-05:00"
       },
       "hu": {
         "translation": "Arcade",
@@ -15971,7 +15971,7 @@
         "approved_at": "2025-02-01T00:47:37-05:00"
       },
       "sv": {
-        "translation": "planritning",
+        "translation": "Planritning",
         "is_approved": false,
         "approved_at": null
       },
@@ -51045,9 +51045,9 @@
         "approved_at": "2022-09-15T09:51:26-04:00"
       },
       "ru": {
-        "translation": "Диско",
+        "translation": "Дискотека",
         "is_approved": true,
-        "approved_at": "2020-02-07T19:01:08-05:00"
+        "approved_at": "2026-02-15T03:47:39-05:00"
       },
       "es": {
         "translation": "Disco",
@@ -63437,6 +63437,11 @@
     "shortcut": "paloauto",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "firetruck",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "消防车",
         "is_approved": true,
@@ -70630,7 +70635,7 @@
         "approved_at": "2025-02-26T14:21:46-05:00"
       },
       "fi": {
-        "translation": "Hedelmäpommi",
+        "translation": "Hedelmäpunssi",
         "is_approved": false,
         "approved_at": null
       },
@@ -74056,6 +74061,19 @@
         ]
       },
       {
+        "multiword": "ajandek",
+        "occurrences": [
+          {
+            "theme": "Gift",
+            "reference": "Hungarian"
+          },
+          {
+            "theme": "Present",
+            "reference": "Hungarian"
+          }
+        ]
+      },
+      {
         "multiword": "present",
         "occurrences": [
           {
@@ -74064,7 +74082,7 @@
           },
           {
             "theme": "Present",
-            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish"
+            "reference": "English / Czech / Dutch / Finnish / Norwegian / Pirate English / Polish / Spanish / Swedish"
           }
         ]
       },
@@ -83432,7 +83450,7 @@
         "occurrences": [
           {
             "theme": "Hard Hat",
-            "reference": "Portuguese / Portuguese, Brazilian"
+            "reference": "Portuguese"
           },
           {
             "theme": "Helmet",
@@ -83536,9 +83554,9 @@
         "approved_at": "2024-10-27T10:48:18-04:00"
       },
       "ptbr": {
-        "translation": "Capacete",
+        "translation": "Capacete de proteção",
         "is_approved": true,
-        "approved_at": "2024-10-06T11:18:18-04:00"
+        "approved_at": "2026-02-18T09:22:41-05:00"
       },
       "ro": {
         "translation": "Pălărie Tare",
@@ -83556,7 +83574,7 @@
         "approved_at": "2024-11-11T12:44:49-05:00"
       },
       "sv": {
-        "translation": "skyddshjälm",
+        "translation": "Skyddshjälm",
         "is_approved": false,
         "approved_at": null
       },
@@ -85562,7 +85580,7 @@
         "occurrences": [
           {
             "theme": "Hard Hat",
-            "reference": "Portuguese / Portuguese, Brazilian"
+            "reference": "Portuguese"
           },
           {
             "theme": "Helmet",
@@ -97749,7 +97767,7 @@
         "approved_at": "2024-11-11T12:44:52-05:00"
       },
       "sv": {
-        "translation": "kelp",
+        "translation": "Kelp",
         "is_approved": false,
         "approved_at": null
       },
@@ -115347,7 +115365,7 @@
   {
     "id": 214847,
     "theme": "Milkshake",
-    "shortcut": "turmix",
+    "shortcut": "batido",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -115391,9 +115409,9 @@
         "approved_at": "2017-08-13T11:08:23-04:00"
       },
       "hu": {
-        "translation": "Turmix",
+        "translation": "Tejturmix",
         "is_approved": true,
-        "approved_at": "2022-08-31T07:21:18-04:00"
+        "approved_at": "2026-02-11T16:58:02-05:00"
       },
       "it": {
         "translation": "Milkshake",
@@ -122822,7 +122840,7 @@
         "approved_at": "2025-02-01T00:48:34-05:00"
       },
       "sv": {
-        "translation": "narval",
+        "translation": "Narval",
         "is_approved": false,
         "approved_at": null
       },
@@ -126187,9 +126205,9 @@
         "approved_at": "2017-07-03T19:26:04-04:00"
       },
       "hu": {
-        "translation": "Narancs",
+        "translation": "Narancssárga",
         "is_approved": true,
-        "approved_at": "2024-05-26T13:55:36-04:00"
+        "approved_at": "2026-02-11T16:39:33-05:00"
       },
       "it": {
         "translation": "Arancione",
@@ -143346,6 +143364,19 @@
         ]
       },
       {
+        "multiword": "ajandek",
+        "occurrences": [
+          {
+            "theme": "Gift",
+            "reference": "Hungarian"
+          },
+          {
+            "theme": "Present",
+            "reference": "Hungarian"
+          }
+        ]
+      },
+      {
         "multiword": "present",
         "occurrences": [
           {
@@ -143354,7 +143385,7 @@
           },
           {
             "theme": "Present",
-            "reference": "English / Czech / Dutch / Finnish / Hungarian / Norwegian / Pirate English / Polish / Spanish / Swedish"
+            "reference": "English / Czech / Dutch / Finnish / Norwegian / Pirate English / Polish / Spanish / Swedish"
           }
         ]
       },
@@ -143492,9 +143523,9 @@
         "approved_at": "2018-02-06T12:48:55-05:00"
       },
       "hu": {
-        "translation": "Present",
+        "translation": "Ajándék",
         "is_approved": true,
-        "approved_at": "2022-06-01T12:58:19-04:00"
+        "approved_at": "2026-02-11T16:27:00-05:00"
       },
       "it": {
         "translation": "Regalo",
@@ -169830,8 +169861,8 @@
       },
       "de": {
         "translation": "Waschbecken",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-01-31T16:12:29-05:00"
       },
       "hu": {
         "translation": "Mosogató",
@@ -173810,6 +173841,11 @@
         "translation": "Sándwich de Malvavisco Tostado",
         "is_approved": true,
         "approved_at": "2024-10-13T18:55:51-04:00"
+      },
+      "sv": {
+        "translation": "Kex med choklad och marshmallow",
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
         "translation": "Smore",
@@ -185908,7 +185944,7 @@
         "approved_at": "2020-02-16T14:08:25-05:00"
       },
       "fr": {
-        "translation": "Été",
+        "translation": "Eté",
         "is_approved": true,
         "approved_at": "2026-01-20T17:42:00-05:00"
       },
