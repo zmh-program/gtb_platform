@@ -21,13 +21,13 @@ It is used to:
 
 ### 1. Sync the GTB Database
 
-> Please ensure you have joined the `Simplified Chinese` translation group for the [Hypixel Translation Team](https://crowdin.com/project/hypixel) on Crowdin.
->
-> This script requires an existing language translation group to retrieve data for all languages. In theory, another language group could work, but `conf/config.json` currently hardcodes `meta_language_id = 55` (Simplified Chinese) for stability across maintainers.
->
-> If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel Simplified Chinese Translation Team (approval typically takes 1-5 days).
->
-> If your existing account contains important data/value, use an alternate account for running this script.
+**You must join the `Simplified Chinese` translation group** for the [Hypixel Translation Team](https://crowdin.com/project/hypixel) on Crowdin before running this workflow.
+
+This script requires an existing language translation group to retrieve data for all languages. In theory, another language group could work, but `conf/config.json` currently hardcodes **`meta_language_id = 55` (Simplified Chinese)** for stability across maintainers.
+
+If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel Simplified Chinese Translation Team (**approval typically takes 1-5 days**).
+
+If your existing account contains important data/value, **use an alternate account** for running this script.
 
 ### Step 1. Capture Crowdin Session Credentials (Cookie + CSRF)
 
@@ -99,31 +99,45 @@ Review checklist:
 
 After merge, the database is up to date.
 
-### 2. Maintain Config / Data Rules
+**After modifying any file in Sections 2-5 below, re-run the GitHub Actions workflow in Step 2** (`crowdin-crawler.yml`) to rebuild data and open/update the PR.
 
-#### `conf/themes.json`
+### 2. Create / Delete / Modify Theme
 
-- GTB theme whitelist
-- Only themes listed here are kept in final output (case-insensitive match in analysis)
+- File: `conf/themes.json`
+- Link: [crowdin_api/conf/themes.json](https://github.com/zmh-program/gtb_platform/blob/main/crowdin_api/conf/themes.json)
+- Purpose: GTB theme whitelist
+- Rule: Only themes listed here are kept in final output (case-insensitive match in analysis)
+- Action:
+  - Create: add a new GTB theme to the list
+  - Delete: remove a theme from the list
+  - Modify: rename/adjust a theme entry
+- Note: Theme entries are matched case-insensitively in analysis
+- Note: If the change creates duplicate Crowdin-key edge cases (for example, `Palm Tree` vs `Palm tree`), also update `conf/exclude.json`
 
-#### `conf/exclude.json`
+### 3. Exclude Duplicate / Invalid Crowdin Keys
 
-- Excludes duplicate or invalid Crowdin keys after filtering with `conf/themes.json`
-- Used for edge cases such as duplicate keys differing only by case (for example, `Palm Tree` vs `Palm tree`)
-- Ensures final output remains stable and contains only valid GTB themes
+- File: `conf/exclude.json`
+- Link: [crowdin_api/conf/exclude.json](https://github.com/zmh-program/gtb_platform/blob/main/crowdin_api/conf/exclude.json)
+- Purpose: Exclude duplicate or invalid Crowdin keys after filtering with `conf/themes.json`
+- Use case: Edge cases where Crowdin contains duplicate keys differing only by case (for example, `Palm Tree` vs `Palm tree`)
+- Result: Keeps final output stable and ensures only valid GTB themes remain
 
-#### `conf/completions.json`
+### 4. Add or Modify Completion / Alias
 
-- Manual completion / alias mapping (injected as pseudo-language `co`)
+- File: `conf/completions.json`
+- Link: [crowdin_api/conf/completions.json](https://github.com/zmh-program/gtb_platform/blob/main/crowdin_api/conf/completions.json)
+- Purpose: Manual completion / alias mapping (injected as pseudo-language `co`)
 - Example entries:
   - `"vr": ["Virtual Reality"]`
   - `"bbq": ["Barbeque"]`
 
-#### `conf/polyfill.json`
+### 5. Add or Modify Multiword Polyfill
 
-- Multiword analysis patch data
-- Helps multiword detection for special language cases
-- Typically used for languages that no longer exist in Crowdin (for example, Greek) but still exist in actual GTB behavior/data
+- File: `conf/polyfill.json`
+- Link: [crowdin_api/conf/polyfill.json](https://github.com/zmh-program/gtb_platform/blob/main/crowdin_api/conf/polyfill.json)
+- Purpose: Multiword analysis patch data
+- Use case: Helps multiword detection for special language cases
+- Typical case: Languages that no longer exist in Crowdin (for example, Greek) but still exist in actual GTB behavior/data
 
 ## For Nerds
 
