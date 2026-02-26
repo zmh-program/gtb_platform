@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       crowdin_cookie:
-        description: "Crowdin Cookie (optional, overrides secret)"
+        description: "Crowdin Cookie"
         required: false
         type: string
       crowdin_csrf_token:
-        description: "Crowdin CSRF Token (optional, overrides secret)"
+        description: "Crowdin CSRF Token"
         required: false
         type: string
 
