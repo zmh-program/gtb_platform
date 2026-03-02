@@ -25,5 +25,6 @@
   "checkers": ["Checkerboard"],
   "firetruck": ["Fire Engine"],
   "theater": ["Cinema"],
-  "rotary": ["Roundabout"]
+  "rotary": ["Roundabout"],
+  "motorbike": ["Motorcycle"]
 }
