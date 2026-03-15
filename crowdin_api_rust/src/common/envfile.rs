@@ -8,8 +8,8 @@ pub fn update_env_file(path: &Path, updates: &BTreeMap<String, String>) -> Resul
     let mut found = BTreeMap::<String, bool>::new();
 
     if path.exists() {
-        let content =
-            fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
+        let content = fs::read_to_string(path)
+            .with_context(|| format!("failed to read {}", path.display()))?;
         for line in content.lines() {
             let key = line.split_once('=').map(|(k, _)| k.trim().to_string());
             if let Some(k) = key {
@@ -67,4 +67,3 @@ mod tests {
         let _ = fs::remove_file(&tmp);
     }
 }
-

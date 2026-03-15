@@ -1,4 +1,4 @@
-use crate::analysis::types::{Config, DuplicatesMap, DuplicateEntry, SourceTheme};
+use crate::analysis::types::{Config, DuplicateEntry, DuplicatesMap, SourceTheme};
 use crate::analysis::typing::cmp_shortcut;
 use crate::text::{
     clean_translation, formatted_raw_translation, formatted_translation, is_accented,
@@ -44,7 +44,9 @@ fn get_useless_multiwords(duplicates: &DuplicatesMap) -> Vec<String> {
     matched_keys.into_iter().collect()
 }
 
-fn get_special_duplicates(duplicates: &DuplicatesMap) -> BTreeMap<Vec<String>, Vec<DuplicateEntry>> {
+fn get_special_duplicates(
+    duplicates: &DuplicatesMap,
+) -> BTreeMap<Vec<String>, Vec<DuplicateEntry>> {
     let mut accent_keys: BTreeMap<String, Vec<String>> = BTreeMap::new();
 
     for key in duplicates.keys() {
@@ -70,7 +72,10 @@ fn get_special_duplicates(duplicates: &DuplicatesMap) -> BTreeMap<Vec<String>, V
             }
         }
 
-        let themes: HashSet<&str> = elements.iter().map(|(theme, _, _)| theme.as_str()).collect();
+        let themes: HashSet<&str> = elements
+            .iter()
+            .map(|(theme, _, _)| theme.as_str())
+            .collect();
         if themes.len() > 1 {
             special_duplicates.insert(keys, elements);
         }
@@ -95,10 +100,11 @@ pub fn find_duplicate_translations(
         let theme = &theme_data.theme;
 
         for normalized_text in formatted_translation(Some(theme), false) {
-            duplicates
-                .entry(normalized_text)
-                .or_default()
-                .push((theme.clone(), "English".to_string(), theme.clone()));
+            duplicates.entry(normalized_text).or_default().push((
+                theme.clone(),
+                "English".to_string(),
+                theme.clone(),
+            ));
         }
 
         for (lang_name, polyfill_translations) in polyfill {
@@ -113,7 +119,9 @@ pub fn find_duplicate_translations(
         }
 
         for trans in &theme_data.translations {
-            let Some(text) = trans.text.as_ref() else { continue };
+            let Some(text) = trans.text.as_ref() else {
+                continue;
+            };
             if !trans.is_approved {
                 continue;
             }
@@ -149,10 +157,11 @@ pub fn find_duplicate_translations(
                     continue;
                 }
                 if is_match_clean_translation(dup_text, &special_key) {
-                    duplicates
-                        .entry(special_key.clone())
-                        .or_default()
-                        .push((dup_theme.clone(), dup_lang.clone(), dup_text.clone()));
+                    duplicates.entry(special_key.clone()).or_default().push((
+                        dup_theme.clone(),
+                        dup_lang.clone(),
+                        dup_text.clone(),
+                    ));
                     db_themes.insert(dup_theme.clone());
                 }
             }
@@ -175,7 +184,10 @@ pub fn find_duplicate_translations(
     for (norm_text, entries) in filtered_duplicates {
         let mut theme_lang_map: BTreeMap<String, Vec<(String, String)>> = BTreeMap::new();
         for (theme, lang, orig_text) in entries {
-            theme_lang_map.entry(theme).or_default().push((lang, orig_text));
+            theme_lang_map
+                .entry(theme)
+                .or_default()
+                .push((lang, orig_text));
         }
 
         let mut combined_entries: Vec<DuplicateEntry> = Vec::new();
@@ -228,4 +240,3 @@ mod tests {
         assert!(useless.contains(&"cats".to_string()));
     }
 }
-

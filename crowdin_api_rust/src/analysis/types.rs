@@ -80,4 +80,3 @@ pub struct AnalysisPaths {
     pub output_translations: PathBuf,
     pub output_versions: PathBuf,
 }
-

@@ -50,11 +50,10 @@ fn parse_args() -> Result<Args> {
             "--open" => args.open = true,
             "--print-only" => args.print_only = true,
             "--env-file" => {
-                args.env_file = Some(PathBuf::from(
-                    raw.get(i + 1)
-                        .cloned()
-                        .ok_or_else(|| anyhow::anyhow!("--env-file requires a path"))?,
-                ));
+                args.env_file =
+                    Some(PathBuf::from(raw.get(i + 1).cloned().ok_or_else(|| {
+                        anyhow::anyhow!("--env-file requires a path")
+                    })?));
                 i += 1;
             }
             "--help" | "-h" => {
@@ -116,9 +115,20 @@ fn format_expiry(exp: Option<i64>) -> String {
     let hours = diff.num_hours() % 24;
     let mins = diff.num_minutes() % 60;
     if days > 0 {
-        format!("{}d {}h {}m (until {})", days, hours, mins, exp_dt.to_rfc3339())
+        format!(
+            "{}d {}h {}m (until {})",
+            days,
+            hours,
+            mins,
+            exp_dt.to_rfc3339()
+        )
     } else {
-        format!("{}h {}m (until {})", diff.num_hours(), mins, exp_dt.to_rfc3339())
+        format!(
+            "{}h {}m (until {})",
+            diff.num_hours(),
+            mins,
+            exp_dt.to_rfc3339()
+        )
     }
 }
 
@@ -146,8 +156,12 @@ fn main() -> Result<()> {
         .or_else(|| env::var("CROWDIN_CSRF_TOKEN").ok());
 
     if cookie.is_none() && csrf.is_none() {
-        println!("No credentials provided. Use --cookie/--csrf-token or set environment variables.");
-        println!("Tip: run with --open to open Crowdin, then copy credentials manually from DevTools.");
+        println!(
+            "No credentials provided. Use --cookie/--csrf-token or set environment variables."
+        );
+        println!(
+            "Tip: run with --open to open Crowdin, then copy credentials manually from DevTools."
+        );
         return Ok(());
     }
 
@@ -210,4 +224,3 @@ mod tests {
         assert_eq!(quote_env_value("a'b"), "'a''b'");
     }
 }
-

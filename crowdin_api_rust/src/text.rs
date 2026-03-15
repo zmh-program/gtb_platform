@@ -162,4 +162,3 @@ mod tests {
         assert!(v.contains(&"schoolbus".to_string()));
     }
 }
-

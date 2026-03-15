@@ -36,21 +36,27 @@ fn parse_args() -> Result<Args> {
             "--dry-run" => dry_run = true,
             "--json" => json = true,
             "--out-dir" => {
-                out_dir = Some(PathBuf::from(
-                    raw.get(i + 1)
-                        .ok_or_else(|| anyhow::anyhow!("--out-dir requires a path"))?,
-                ));
+                out_dir =
+                    Some(PathBuf::from(raw.get(i + 1).ok_or_else(|| {
+                        anyhow::anyhow!("--out-dir requires a path")
+                    })?));
                 i += 1;
             }
             "--help" | "-h" => {
-                println!("Usage: cargo run --bin analysis -- [--dry-run] [--json] [--out-dir <dir>]");
+                println!(
+                    "Usage: cargo run --bin analysis -- [--dry-run] [--json] [--out-dir <dir>]"
+                );
                 std::process::exit(0);
             }
             other => bail!("Unknown argument: {}", other),
         }
         i += 1;
     }
-    Ok(Args { dry_run, json, out_dir })
+    Ok(Args {
+        dry_run,
+        json,
+        out_dir,
+    })
 }
 
 fn main() -> Result<()> {
@@ -96,4 +102,3 @@ fn main() -> Result<()> {
 
     Ok(())
 }
-

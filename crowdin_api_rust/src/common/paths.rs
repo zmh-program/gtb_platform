@@ -13,7 +13,12 @@ impl RepoPaths {
     pub fn from_cwd() -> Result<Self> {
         let cwd = env::current_dir().context("failed to read current directory")?;
 
-        if cwd.join("crowdin_api").join("conf").join("config.json").exists() {
+        if cwd
+            .join("crowdin_api")
+            .join("conf")
+            .join("config.json")
+            .exists()
+        {
             return Ok(Self {
                 repo_root: cwd.clone(),
                 crowdin_api_dir: cwd.join("crowdin_api"),
@@ -45,4 +50,3 @@ impl RepoPaths {
         );
     }
 }
-

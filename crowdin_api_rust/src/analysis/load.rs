@@ -9,14 +9,12 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 fn read_json_file<T: for<'de> serde::Deserialize<'de>>(path: &Path) -> Result<T> {
-    let text = fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
+    let text =
+        fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
     serde_json::from_str(&text).with_context(|| format!("failed to parse JSON {}", path.display()))
 }
 
-pub fn resolve_analysis_paths(
-    repo: &RepoPaths,
-    out_dir: Option<&Path>,
-) -> Result<AnalysisPaths> {
+pub fn resolve_analysis_paths(repo: &RepoPaths, out_dir: Option<&Path>) -> Result<AnalysisPaths> {
     let source_input = repo.crowdin_api_dir.join("result").join("source.json");
     let (output_translations, output_versions) = if let Some(out_dir) = out_dir {
         let cwd = env::current_dir().context("failed to read current dir")?;
@@ -25,17 +23,31 @@ pub fn resolve_analysis_paths(
         } else {
             cwd.join(out_dir)
         };
-        (base.join("translations-data.json"), base.join("versions.json"))
+        (
+            base.join("translations-data.json"),
+            base.join("versions.json"),
+        )
     } else if let Ok(translations_path) = env::var("GTB_RUST_OUTPUT_TRANSLATIONS") {
         let translations = PathBuf::from(translations_path);
         let versions = env::var("GTB_RUST_OUTPUT_VERSIONS")
             .map(PathBuf::from)
-            .unwrap_or_else(|_| repo.repo_root.join("lib").join("source").join("versions.json"));
+            .unwrap_or_else(|_| {
+                repo.repo_root
+                    .join("lib")
+                    .join("source")
+                    .join("versions.json")
+            });
         (translations, versions)
     } else {
         (
-            repo.repo_root.join("lib").join("source").join("translations-data.json"),
-            repo.repo_root.join("lib").join("source").join("versions.json"),
+            repo.repo_root
+                .join("lib")
+                .join("source")
+                .join("translations-data.json"),
+            repo.repo_root
+                .join("lib")
+                .join("source")
+                .join("versions.json"),
         )
     };
 
@@ -103,7 +115,10 @@ fn filter_and_mix_translations(
 ) -> Vec<SourceTheme> {
     let mut out: Vec<SourceTheme> = raw
         .iter()
-        .filter(|t| themes_whitelist.contains(&t.theme.to_lowercase()) && !excluded_themes.contains(&t.theme))
+        .filter(|t| {
+            themes_whitelist.contains(&t.theme.to_lowercase())
+                && !excluded_themes.contains(&t.theme)
+        })
         .map(|t| mix_completions(t, completions))
         .collect();
     out.sort_by(|a, b| a.theme.to_lowercase().cmp(&b.theme.to_lowercase()));
@@ -136,4 +151,3 @@ pub fn load_inputs(repo: &RepoPaths, paths: &AnalysisPaths) -> Result<AnalysisIn
         all_translations,
     })
 }
-

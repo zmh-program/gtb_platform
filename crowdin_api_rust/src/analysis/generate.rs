@@ -1,5 +1,6 @@
 use crate::analysis::types::{
-    Config, DuplicatesMap, MultiwordOutput, OccurrenceOutput, OutputTheme, OutputTranslation, SourceTheme,
+    Config, DuplicatesMap, MultiwordOutput, OccurrenceOutput, OutputTheme, OutputTranslation,
+    SourceTheme,
 };
 use crate::analysis::typing::{cmp_shortcut, cmp_shortcut_with_theme};
 use crate::text::{formatted_translation, is_special_string, unique_preserve_order};
@@ -17,7 +18,10 @@ fn duplicate_index_cost(shortcut: &str, duplicates: &DuplicatesMap, theme_name: 
         .unwrap_or(999)
 }
 
-pub fn find_shortcut_for_theme(theme_data: &SourceTheme, duplicates: &DuplicatesMap) -> Option<String> {
+pub fn find_shortcut_for_theme(
+    theme_data: &SourceTheme,
+    duplicates: &DuplicatesMap,
+) -> Option<String> {
     let mut all_candidates = Vec::new();
 
     for translation in &theme_data.translations {
@@ -140,7 +144,8 @@ pub fn write_json_pretty<T: serde::Serialize>(path: &Path, value: &T) -> Result<
             .with_context(|| format!("failed to create directory {}", parent.display()))?;
     }
 
-    let file = fs::File::create(path).with_context(|| format!("failed to create {}", path.display()))?;
+    let file =
+        fs::File::create(path).with_context(|| format!("failed to create {}", path.display()))?;
     serde_json::to_writer_pretty(file, value)
         .with_context(|| format!("failed to write JSON {}", path.display()))
 }
