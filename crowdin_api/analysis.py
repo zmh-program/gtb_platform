@@ -36,7 +36,10 @@ def find_shortcut_for_theme(theme_data: Dict[str, Any], duplicates: Dict[str, An
         )
     )
 
-    assert all_translations, f"No translations found for theme {theme_data['theme']}"
+    # assert all_translations, f"No translations found for theme {theme_data['theme']}"
+    if not all_translations or len(all_translations) == 0:
+        # skip themes without translations
+        return None
 
     def get_sort_key(shortcut: str):
         index_cost = 999  # Default: Not in duplicates (Best, better than 0)
@@ -80,6 +83,7 @@ def generate_themes_json(
     lang_map = {lang["id"]: lang["code"] for lang in config["target_languages"]}
 
     for theme_data in all_translations:
+        is_polyfill = not theme_data["translations"]
         themes_data.append(
             {
                 "id": theme_data["id"],
