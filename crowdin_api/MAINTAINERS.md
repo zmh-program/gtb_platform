@@ -21,11 +21,11 @@ It is used to:
 
 ### 1. Sync the GTB Database
 
-**You must join the `Simplified Chinese` translation group** for the [Hypixel Translation Team](https://crowdin.com/project/hypixel) on Crowdin before running this workflow.
+**You must join any one translation group** for the [Hypixel Translation Team](https://crowdin.com/project/hypixel) on Crowdin before running this workflow.
 
-This script requires an existing language translation group to retrieve data for all languages. In theory, another language group could work, but `conf/config.json` currently hardcodes **`meta_language_id = 55` (Simplified Chinese)** for stability across maintainers.
+This script requires an existing language translation group to retrieve data for all languages.
 
-If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel Simplified Chinese Translation Team (**approval typically takes 1-5 days**).
+If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel One of the Translation Groups like Russian, German, etc. (**approval typically takes 7-21 days for new accounts**).
 
 If your existing account contains important data/value, **use an alternate account** for running this script.
 
@@ -152,7 +152,7 @@ After merge, the database is up to date.
 - Key fields:
   - `project_id`: Crowdin project ID
   - `file_id`: Crowdin file ID to crawl
-  - `meta_language_id`: language ID used when fetching phrase pages (current config uses Simplified Chinese)
+  - `meta_language_id`: language ID used when fetching phrase pages (current config uses Russian)
   - `target_languages`: list of language mappings
     - `id`: Crowdin language ID
     - `name`: display name (used in analysis/duplicate labeling)

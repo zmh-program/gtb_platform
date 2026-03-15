@@ -468,6 +468,17 @@ fn read_json_file<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T> {
     serde_json::from_str(&raw).with_context(|| format!("failed to parse JSON {}", path.display()))
 }
 
+fn parse_meta_language_id(raw: &str) -> String {
+    if let Some(start) = raw.rfind('(') {
+        if let Some(end) = raw.rfind(')') {
+            if start < end {
+                return raw[start + 1..end].to_string();
+            }
+        }
+    }
+    raw.to_string()
+}
+
 fn resolve_paths() -> Result<Paths> {
     let cwd = env::current_dir().context("failed to read current directory")?;
 
@@ -536,7 +547,10 @@ async fn main() -> Result<()> {
     println!("Using env: {}", paths.env_file.display());
     println!("Output path: {}", paths.output_file.display());
 
-    let config: Config = read_json_file(&paths.config_file)?;
+    let mut config: Config = read_json_file(&paths.config_file)?;
+    if let Ok(raw) = env::var("META_LANGUAGE_ID") {
+        config.meta_language_id = parse_meta_language_id(&raw);
+    }
     let creds = load_credentials(&paths.env_file)?;
 
     let crawler = CrowdinCrawler::new(Arc::new(config), Arc::new(creds))?;

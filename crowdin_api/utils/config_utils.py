@@ -1,4 +1,6 @@
 import json
+import os
+import re
 from typing import Any, Dict, List, Set
 
 
@@ -27,8 +29,17 @@ def read_json_file(file_path: str) -> Any:
         return json.load(f)
 
 
+def parse_meta_language_id(value: str) -> str:
+    m = re.search(r"\((\d+)\)", value)
+    return m.group(1) if m else value
+
+
 def read_config() -> Dict:
-    return read_json_file("conf/config.json")
+    config = read_json_file("conf/config.json")
+    meta_language_id_override = os.getenv("META_LANGUAGE_ID")
+    if meta_language_id_override:
+        config["meta_language_id"] = parse_meta_language_id(meta_language_id_override)
+    return config
 
 
 def read_themes() -> List[str]:

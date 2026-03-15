@@ -11,6 +11,35 @@ on:
         description: "Crowdin CSRF Token"
         required: false
         type: string
+      meta_language_id:
+        description: "Meta Language (the one you've joined)"
+        required: false
+        type: choice
+        default: "Russian (41)"
+        options:
+          - "Russian (41)"
+          - "Chinese Simplified (55)"
+          - "Chinese Traditional (56)"
+          - "Czech (9)"
+          - "Danish (10)"
+          - "Dutch (33)"
+          - "Finnish (18)"
+          - "French (2)"
+          - "German (11)"
+          - "Hungarian (22)"
+          - "Italian (24)"
+          - "Japanese (25)"
+          - "Korean (27)"
+          - "Norwegian (36)"
+          - "Pirate English (109)"
+          - "Polish (38)"
+          - "Portuguese (40)"
+          - "Portuguese, Brazilian (63)"
+          - "Romanian (1)"
+          - "Spanish (3)"
+          - "Swedish (48)"
+          - "Turkish (50)"
+          - "Ukrainian (52)"
 
 jobs:
   crawl:
@@ -48,6 +77,7 @@ jobs:
         env:
           CROWDIN_COOKIE: ${{ inputs.crowdin_cookie || secrets.CROWDIN_COOKIE }}
           CROWDIN_CSRF_TOKEN: ${{ inputs.crowdin_csrf_token || secrets.CROWDIN_CSRF_TOKEN }}
+          META_LANGUAGE_ID: ${{ inputs.meta_language_id || 'Russian (41)' }}
         run: pnpm crawler
 
       - name: Run analysis
