@@ -548,9 +548,9 @@ async fn main() -> Result<()> {
     println!("Output path: {}", paths.output_file.display());
 
     let mut config: Config = read_json_file(&paths.config_file)?;
-    if let Ok(raw) = env::var("META_LANGUAGE_ID") {
-        config.meta_language_id = parse_meta_language_id(&raw);
-    }
+    config.meta_language_id = parse_meta_language_id(
+        &env::var("META_LANGUAGE_ID").unwrap_or(config.meta_language_id),
+    );
     let creds = load_credentials(&paths.env_file)?;
 
     let crawler = CrowdinCrawler::new(Arc::new(config), Arc::new(creds))?;

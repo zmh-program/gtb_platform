@@ -12,7 +12,7 @@ on:
         required: false
         type: string
       meta_language_id:
-        description: "Meta Language (the one you've joined)"
+        description: "Meta Language (the language translation group that you've joined)"
         required: false
         type: choice
         default: "Russian (41)"

@@ -30,15 +30,17 @@ def read_json_file(file_path: str) -> Any:
 
 
 def parse_meta_language_id(value: str) -> str:
+    if value.isdigit():
+        return value
     m = re.search(r"\((\d+)\)", value)
     return m.group(1) if m else value
 
 
 def read_config() -> Dict:
     config = read_json_file("conf/config.json")
-    meta_language_id_override = os.getenv("META_LANGUAGE_ID")
-    if meta_language_id_override:
-        config["meta_language_id"] = parse_meta_language_id(meta_language_id_override)
+    config["meta_language_id"] = parse_meta_language_id(
+        os.getenv("META_LANGUAGE_ID") or config["meta_language_id"]
+    )
     return config
 
 
