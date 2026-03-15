@@ -10468,9 +10468,9 @@
         "approved_at": "2022-04-19T16:55:28-04:00"
       },
       "ru": {
-        "translation": "Бивер",
+        "translation": "Бобр",
         "is_approved": true,
-        "approved_at": "2022-04-23T16:09:40-04:00"
+        "approved_at": "2026-02-27T06:06:47-05:00"
       },
       "es": {
         "translation": "Beaver",
@@ -22091,247 +22091,6 @@
     }
   },
   {
-    "id": 212881,
-    "theme": "Bunny",
-    "shortcut": "hase",
-    "multiwords": [
-      {
-        "multiword": "lapin",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "French"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "French"
-          }
-        ]
-      },
-      {
-        "multiword": "kanin",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Danish / Norwegian / Swedish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Danish / Norwegian / Swedish"
-          }
-        ]
-      },
-      {
-        "multiword": "coelho",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Portuguese, Brazilian"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
-        "multiword": "tavsan",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
-        "multiword": "konijn",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
-        "multiword": "兔子",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Chinese Simplified"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Chinese Simplified / Chinese Traditional"
-          }
-        ]
-      },
-      {
-        "multiword": "토끼",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Korean"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Korean"
-          }
-        ]
-      },
-      {
-        "multiword": "ウサギ",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Japanese"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Japanese"
-          }
-        ]
-      },
-      {
-        "multiword": "кролик",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Russian / Ukrainian"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Russian / Ukrainian"
-          }
-        ]
-      }
-    ],
-    "translations": {
-      "zh_cn": {
-        "translation": "兔子",
-        "is_approved": true,
-        "approved_at": "2021-10-12T07:42:13-04:00"
-      },
-      "zh_tw": {
-        "translation": "兔兔",
-        "is_approved": true,
-        "approved_at": "2024-09-17T08:13:07-04:00"
-      },
-      "cs": {
-        "translation": "Zajíc",
-        "is_approved": true,
-        "approved_at": "2020-08-31T10:38:49-04:00"
-      },
-      "da": {
-        "translation": "Kanin",
-        "is_approved": true,
-        "approved_at": "2020-03-18T06:55:17-04:00"
-      },
-      "nl": {
-        "translation": "Konijn",
-        "is_approved": true,
-        "approved_at": "2024-05-29T09:18:27-04:00"
-      },
-      "fi": {
-        "translation": "Pupu",
-        "is_approved": true,
-        "approved_at": "2020-02-28T05:48:55-05:00"
-      },
-      "fr": {
-        "translation": "Lapin",
-        "is_approved": true,
-        "approved_at": "2017-11-14T12:32:14-05:00"
-      },
-      "de": {
-        "translation": "Hase",
-        "is_approved": true,
-        "approved_at": "2018-04-01T06:00:15-04:00"
-      },
-      "hu": {
-        "translation": "Nyuszi",
-        "is_approved": true,
-        "approved_at": "2022-05-17T12:37:37-04:00"
-      },
-      "it": {
-        "translation": "Coniglietto",
-        "is_approved": true,
-        "approved_at": "2019-09-02T08:39:19-04:00"
-      },
-      "ja": {
-        "translation": "ウサギ",
-        "is_approved": true,
-        "approved_at": "2018-09-04T06:03:06-04:00"
-      },
-      "ko": {
-        "translation": "토끼",
-        "is_approved": true,
-        "approved_at": "2017-08-15T11:29:58-04:00"
-      },
-      "no": {
-        "translation": "Kanin",
-        "is_approved": true,
-        "approved_at": "2020-07-05T19:35:11-04:00"
-      },
-      "en": {
-        "translation": "Bunny",
-        "is_approved": true,
-        "approved_at": "2019-11-06T14:02:06-05:00"
-      },
-      "pl": {
-        "translation": "Zajączek",
-        "is_approved": true,
-        "approved_at": "2020-06-30T12:10:00-04:00"
-      },
-      "pt": {
-        "translation": "Coelhinho",
-        "is_approved": true,
-        "approved_at": "2020-03-23T08:40:45-04:00"
-      },
-      "ptbr": {
-        "translation": "Coelho",
-        "is_approved": true,
-        "approved_at": "2018-11-14T14:41:52-05:00"
-      },
-      "ro": {
-        "translation": "Iepuraș",
-        "is_approved": true,
-        "approved_at": "2022-05-12T14:41:31-04:00"
-      },
-      "ru": {
-        "translation": "Кролик",
-        "is_approved": true,
-        "approved_at": "2020-03-30T11:56:43-04:00"
-      },
-      "es": {
-        "translation": "Conejito",
-        "is_approved": true,
-        "approved_at": "2022-12-08T22:53:16-05:00"
-      },
-      "sv": {
-        "translation": "Kanin",
-        "is_approved": true,
-        "approved_at": "2017-07-11T12:57:43-04:00"
-      },
-      "tr": {
-        "translation": "Tavşan",
-        "is_approved": true,
-        "approved_at": "2020-08-13T16:11:42-04:00"
-      },
-      "uk": {
-        "translation": "Кролик",
-        "is_approved": true,
-        "approved_at": "2020-10-26T15:32:14-04:00"
-      }
-    }
-  },
-  {
     "id": 213807,
     "theme": "Burger",
     "shortcut": null,
@@ -23605,232 +23364,6 @@
         "translation": "Капуста",
         "is_approved": true,
         "approved_at": "2020-11-25T15:36:45-05:00"
-      }
-    }
-  },
-  {
-    "id": 212887,
-    "theme": "Cabin",
-    "shortcut": null,
-    "multiwords": [
-      {
-        "multiword": "小屋",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Shed",
-            "reference": "Japanese"
-          }
-        ]
-      },
-      {
-        "multiword": "хижина",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Russian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Russian"
-          },
-          {
-            "theme": "Log Cabin",
-            "reference": "Russian"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Russian"
-          }
-        ]
-      },
-      {
-        "multiword": "cabana",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Portuguese / Spanish"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
-        "multiword": "хатина",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Ukrainian"
-          }
-        ]
-      },
-      {
-        "multiword": "chata",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Czech"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Polish"
-          }
-        ]
-      },
-      {
-        "multiword": "hytte",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Norwegian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Danish / Norwegian"
-          }
-        ]
-      }
-    ],
-    "translations": {
-      "zh_cn": {
-        "translation": "小屋",
-        "is_approved": true,
-        "approved_at": "2019-11-17T12:23:05-05:00"
-      },
-      "zh_tw": {
-        "translation": "小屋",
-        "is_approved": true,
-        "approved_at": "2020-07-30T03:29:17-04:00"
-      },
-      "cs": {
-        "translation": "Chata",
-        "is_approved": true,
-        "approved_at": "2020-04-27T04:12:43-04:00"
-      },
-      "da": {
-        "translation": "Kabine",
-        "is_approved": true,
-        "approved_at": "2020-05-15T03:19:10-04:00"
-      },
-      "nl": {
-        "translation": "Cabine",
-        "is_approved": true,
-        "approved_at": "2018-02-16T16:26:41-05:00"
-      },
-      "fi": {
-        "translation": "Mökki",
-        "is_approved": true,
-        "approved_at": "2021-04-15T07:54:46-04:00"
-      },
-      "fr": {
-        "translation": "Cabine",
-        "is_approved": true,
-        "approved_at": "2018-02-04T07:18:33-05:00"
-      },
-      "de": {
-        "translation": "Kabine",
-        "is_approved": true,
-        "approved_at": "2018-01-31T13:36:57-05:00"
-      },
-      "hu": {
-        "translation": "Fülke",
-        "is_approved": true,
-        "approved_at": "2022-05-18T15:52:49-04:00"
-      },
-      "it": {
-        "translation": "Cabina",
-        "is_approved": true,
-        "approved_at": "2019-09-07T08:31:47-04:00"
-      },
-      "ja": {
-        "translation": "小屋",
-        "is_approved": true,
-        "approved_at": "2020-03-04T08:02:50-05:00"
-      },
-      "ko": {
-        "translation": "객실",
-        "is_approved": true,
-        "approved_at": "2017-12-28T02:43:46-05:00"
-      },
-      "no": {
-        "translation": "Hytte",
-        "is_approved": true,
-        "approved_at": "2021-09-12T15:31:13-04:00"
-      },
-      "en": {
-        "translation": "Cabin",
-        "is_approved": true,
-        "approved_at": "2020-12-15T11:34:04-05:00"
-      },
-      "pl": {
-        "translation": "Kabina",
-        "is_approved": true,
-        "approved_at": "2018-12-16T11:51:32-05:00"
-      },
-      "pt": {
-        "translation": "Cabana",
-        "is_approved": true,
-        "approved_at": "2020-02-03T19:33:39-05:00"
-      },
-      "ptbr": {
-        "translation": "Cabine",
-        "is_approved": true,
-        "approved_at": "2018-11-20T20:01:23-05:00"
-      },
-      "ro": {
-        "translation": "Cabină",
-        "is_approved": true,
-        "approved_at": "2022-10-15T05:15:17-04:00"
-      },
-      "ru": {
-        "translation": "Хижина",
-        "is_approved": true,
-        "approved_at": "2023-08-19T10:52:10-04:00"
-      },
-      "es": {
-        "translation": "Cabaña",
-        "is_approved": true,
-        "approved_at": "2019-07-11T07:32:11-04:00"
-      },
-      "sv": {
-        "translation": "Stuga",
-        "is_approved": true,
-        "approved_at": "2019-10-05T20:23:25-04:00"
-      },
-      "tr": {
-        "translation": "Kabin",
-        "is_approved": true,
-        "approved_at": "2020-08-14T04:58:01-04:00"
-      },
-      "uk": {
-        "translation": "Хатина",
-        "is_approved": true,
-        "approved_at": "2024-11-01T19:04:45-04:00"
       }
     }
   },
@@ -25358,7 +24891,7 @@
   {
     "id": 212895,
     "theme": "Campfire",
-    "shortcut": "falo",
+    "shortcut": "fogata",
     "multiwords": [],
     "translations": {
       "zh_cn": {
@@ -25407,9 +24940,9 @@
         "approved_at": "2022-08-10T19:55:13-04:00"
       },
       "it": {
-        "translation": "Falò",
+        "translation": "Fuoco da Campo",
         "is_approved": true,
-        "approved_at": "2020-07-05T20:30:10-04:00"
+        "approved_at": "2026-03-10T10:41:33-04:00"
       },
       "ja": {
         "translation": "焚き火",
@@ -35623,6 +35156,19 @@
         ]
       },
       {
+        "multiword": "theater",
+        "occurrences": [
+          {
+            "theme": "Cinema",
+            "reference": "Complement"
+          },
+          {
+            "theme": "Theater",
+            "reference": "English / Dutch / German / Pirate English"
+          }
+        ]
+      },
+      {
         "multiword": "biograf",
         "occurrences": [
           {
@@ -35702,6 +35248,11 @@
       }
     ],
     "translations": {
+      "co": {
+        "translation": "theater",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "电影院",
         "is_approved": true,
@@ -80608,10 +80159,6 @@
             "reference": "Romanian"
           },
           {
-            "theme": "Living room",
-            "reference": "Spanish"
-          },
-          {
             "theme": "Room",
             "reference": "Portuguese, Brazilian"
           }
@@ -90651,10 +90198,6 @@
         "multiword": "小屋",
         "occurrences": [
           {
-            "theme": "Cabin",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
             "theme": "Hut",
             "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           },
@@ -90672,10 +90215,6 @@
         "multiword": "хижина",
         "occurrences": [
           {
-            "theme": "Cabin",
-            "reference": "Russian"
-          },
-          {
             "theme": "Hut",
             "reference": "Russian"
           },
@@ -90690,40 +90229,6 @@
         ]
       },
       {
-        "multiword": "cabana",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Portuguese / Spanish"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
-        "multiword": "хатина",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Ukrainian"
-          }
-        ]
-      },
-      {
         "multiword": "hut",
         "occurrences": [
           {
@@ -90733,32 +90238,6 @@
           {
             "theme": "Hut",
             "reference": "English / Dutch / Pirate English"
-          }
-        ]
-      },
-      {
-        "multiword": "chata",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Czech"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Polish"
-          }
-        ]
-      },
-      {
-        "multiword": "hytte",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Norwegian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Danish / Norwegian"
           }
         ]
       },
@@ -90785,6 +90264,19 @@
           {
             "theme": "Shack",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "cabana",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Portuguese"
           }
         ]
       },
@@ -90824,6 +90316,19 @@
           {
             "theme": "Shack",
             "reference": "Korean"
+          }
+        ]
+      },
+      {
+        "multiword": "хатина",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "Ukrainian"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Ukrainian"
           }
         ]
       }
@@ -91858,6 +91363,11 @@
     "shortcut": "isbil",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "ice cream vane",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "冰淇淋车",
         "is_approved": true,
@@ -107212,33 +106722,16 @@
     }
   },
   {
-    "id": 214761,
-    "theme": "Living room",
-    "shortcut": "sala",
+    "id": 250927,
+    "theme": "Living Room",
+    "shortcut": "stue",
     "multiwords": [
-      {
-        "multiword": "sala",
-        "occurrences": [
-          {
-            "theme": "Gym",
-            "reference": "Romanian"
-          },
-          {
-            "theme": "Living room",
-            "reference": "Spanish"
-          },
-          {
-            "theme": "Room",
-            "reference": "Portuguese, Brazilian"
-          }
-        ]
-      },
       {
         "multiword": "salon",
         "occurrences": [
           {
-            "theme": "Living room",
-            "reference": "French / Polish"
+            "theme": "Living Room",
+            "reference": "French / Spanish"
           },
           {
             "theme": "Saloon",
@@ -107251,117 +106744,117 @@
       "zh_cn": {
         "translation": "客厅",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:41:48-05:00"
+        "approved_at": "2025-02-20T02:19:50-05:00"
       },
       "zh_tw": {
         "translation": "客廳",
         "is_approved": true,
-        "approved_at": "2020-08-16T01:56:56-04:00"
+        "approved_at": "2025-11-26T21:28:55-05:00"
       },
       "cs": {
-        "translation": "Obývák",
-        "is_approved": true,
-        "approved_at": "2020-07-08T07:09:11-04:00"
+        "translation": "Obývací pokoj",
+        "is_approved": false,
+        "approved_at": null
       },
       "da": {
         "translation": "Stue",
         "is_approved": true,
-        "approved_at": "2020-06-16T10:50:24-04:00"
+        "approved_at": "2025-02-20T12:14:13-05:00"
       },
       "nl": {
         "translation": "Woonkamer",
         "is_approved": true,
-        "approved_at": "2018-02-15T11:42:00-05:00"
+        "approved_at": "2025-02-20T13:52:12-05:00"
       },
       "fi": {
         "translation": "Olohuone",
         "is_approved": true,
-        "approved_at": "2021-04-22T06:06:59-04:00"
+        "approved_at": "2026-01-18T14:19:28-05:00"
       },
       "fr": {
         "translation": "Salon",
         "is_approved": true,
-        "approved_at": "2018-03-24T17:15:12-04:00"
+        "approved_at": "2025-03-06T09:18:37-05:00"
       },
       "de": {
         "translation": "Wohnzimmer",
         "is_approved": true,
-        "approved_at": "2018-02-06T10:38:44-05:00"
+        "approved_at": "2025-02-19T19:07:32-05:00"
       },
       "hu": {
         "translation": "Nappali",
         "is_approved": true,
-        "approved_at": "2022-05-18T08:36:48-04:00"
+        "approved_at": "2025-04-07T09:43:01-04:00"
       },
       "it": {
         "translation": "Soggiorno",
         "is_approved": true,
-        "approved_at": "2019-11-04T09:01:31-05:00"
+        "approved_at": "2025-02-21T08:24:05-05:00"
       },
       "ja": {
         "translation": "リビングルーム",
-        "is_approved": true,
-        "approved_at": "2018-03-28T04:52:12-04:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "ko": {
         "translation": "거실",
-        "is_approved": true,
-        "approved_at": "2017-12-28T03:02:11-05:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "no": {
         "translation": "Stue",
         "is_approved": true,
-        "approved_at": "2021-10-31T06:06:51-04:00"
+        "approved_at": "2026-01-12T18:32:15-05:00"
       },
       "en": {
-        "translation": "Livin' room",
+        "translation": "Livin' Room",
         "is_approved": true,
-        "approved_at": "2021-07-03T19:41:43-04:00"
+        "approved_at": "2025-03-06T00:39:11-05:00"
       },
       "pl": {
         "translation": "Salon",
-        "is_approved": true,
-        "approved_at": "2018-05-12T03:37:15-04:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "pt": {
         "translation": "Sala de estar",
         "is_approved": true,
-        "approved_at": "2019-04-06T16:23:23-04:00"
+        "approved_at": "2025-02-26T17:06:06-05:00"
       },
       "ptbr": {
         "translation": "Sala de estar",
         "is_approved": true,
-        "approved_at": "2019-07-01T15:30:23-04:00"
+        "approved_at": "2025-02-20T06:26:22-05:00"
       },
       "ro": {
         "translation": "Sufragerie",
         "is_approved": true,
-        "approved_at": "2022-10-25T16:40:06-04:00"
+        "approved_at": "2025-04-08T15:19:26-04:00"
       },
       "ru": {
         "translation": "Гостиная",
         "is_approved": true,
-        "approved_at": "2020-04-11T06:16:30-04:00"
+        "approved_at": "2025-02-20T04:54:18-05:00"
       },
       "es": {
-        "translation": "Sala",
+        "translation": "Salón",
         "is_approved": true,
-        "approved_at": "2019-07-11T09:34:07-04:00"
+        "approved_at": "2025-03-15T01:52:15-04:00"
       },
       "sv": {
         "translation": "Vardagsrum",
-        "is_approved": true,
-        "approved_at": "2019-10-07T14:40:47-04:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "tr": {
-        "translation": "Oturma odası",
+        "translation": "Oturma Odası",
         "is_approved": true,
-        "approved_at": "2022-05-21T18:53:21-04:00"
+        "approved_at": "2025-06-21T08:10:13-04:00"
       },
       "uk": {
         "translation": "Вітальня",
         "is_approved": true,
-        "approved_at": "2023-08-21T05:45:34-04:00"
+        "approved_at": "2025-02-20T10:21:23-05:00"
       }
     }
   },
@@ -108645,10 +108138,6 @@
       {
         "multiword": "хижина",
         "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Russian"
-          },
           {
             "theme": "Hut",
             "reference": "Russian"
@@ -119136,6 +118625,11 @@
     "shortcut": "moto",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "motorbike",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "摩托车",
         "is_approved": true,
@@ -147584,125 +147078,7 @@
     "id": 215213,
     "theme": "Rabbit",
     "shortcut": "kani",
-    "multiwords": [
-      {
-        "multiword": "lapin",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "French"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "French"
-          }
-        ]
-      },
-      {
-        "multiword": "kanin",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Danish / Norwegian / Swedish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Danish / Norwegian / Swedish"
-          }
-        ]
-      },
-      {
-        "multiword": "coelho",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Portuguese, Brazilian"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Portuguese / Portuguese, Brazilian"
-          }
-        ]
-      },
-      {
-        "multiword": "tavsan",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Turkish"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Turkish"
-          }
-        ]
-      },
-      {
-        "multiword": "konijn",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
-        "multiword": "兔子",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Chinese Simplified"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Chinese Simplified / Chinese Traditional"
-          }
-        ]
-      },
-      {
-        "multiword": "토끼",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Korean"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Korean"
-          }
-        ]
-      },
-      {
-        "multiword": "ウサギ",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Japanese"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Japanese"
-          }
-        ]
-      },
-      {
-        "multiword": "кролик",
-        "occurrences": [
-          {
-            "theme": "Bunny",
-            "reference": "Russian / Ukrainian"
-          },
-          {
-            "theme": "Rabbit",
-            "reference": "Russian / Ukrainian"
-          }
-        ]
-      }
-    ],
+    "multiwords": [],
     "translations": {
       "zh_cn": {
         "translation": "兔子",
@@ -154468,10 +153844,6 @@
             "reference": "Romanian"
           },
           {
-            "theme": "Living room",
-            "reference": "Spanish"
-          },
-          {
             "theme": "Room",
             "reference": "Portuguese, Brazilian"
           }
@@ -154738,6 +154110,11 @@
     "shortcut": "rondo",
     "multiwords": [],
     "translations": {
+      "co": {
+        "translation": "rotary",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "zh_cn": {
         "translation": "环岛",
         "is_approved": true,
@@ -157940,8 +157317,8 @@
         "multiword": "salon",
         "occurrences": [
           {
-            "theme": "Living room",
-            "reference": "French / Polish"
+            "theme": "Living Room",
+            "reference": "French / Spanish"
           },
           {
             "theme": "Saloon",
@@ -164057,12 +163434,25 @@
     "shortcut": "skur",
     "multiwords": [
       {
-        "multiword": "小屋",
+        "multiword": "schuur",
         "occurrences": [
           {
-            "theme": "Cabin",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
+            "theme": "Barn",
+            "reference": "Dutch"
           },
+          {
+            "theme": "Shack",
+            "reference": "Dutch"
+          },
+          {
+            "theme": "Shed",
+            "reference": "Dutch"
+          }
+        ]
+      },
+      {
+        "multiword": "小屋",
+        "occurrences": [
           {
             "theme": "Hut",
             "reference": "Chinese Simplified / Chinese Traditional / Japanese"
@@ -164081,10 +163471,6 @@
         "multiword": "хижина",
         "occurrences": [
           {
-            "theme": "Cabin",
-            "reference": "Russian"
-          },
-          {
             "theme": "Hut",
             "reference": "Russian"
           },
@@ -164095,57 +163481,6 @@
           {
             "theme": "Shack",
             "reference": "Russian"
-          }
-        ]
-      },
-      {
-        "multiword": "cabana",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Portuguese / Spanish"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Portuguese"
-          }
-        ]
-      },
-      {
-        "multiword": "schuur",
-        "occurrences": [
-          {
-            "theme": "Barn",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Dutch"
-          },
-          {
-            "theme": "Shed",
-            "reference": "Dutch"
-          }
-        ]
-      },
-      {
-        "multiword": "хатина",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Ukrainian"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Ukrainian"
           }
         ]
       },
@@ -164202,6 +163537,19 @@
         ]
       },
       {
+        "multiword": "cabana",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Portuguese"
+          }
+        ]
+      },
+      {
         "multiword": "kunyho",
         "occurrences": [
           {
@@ -164237,6 +163585,19 @@
           {
             "theme": "Shack",
             "reference": "Korean"
+          }
+        ]
+      },
+      {
+        "multiword": "хатина",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "Ukrainian"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Ukrainian"
           }
         ]
       }
@@ -165015,27 +164376,6 @@
     "shortcut": null,
     "multiwords": [
       {
-        "multiword": "小屋",
-        "occurrences": [
-          {
-            "theme": "Cabin",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Hut",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Shack",
-            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
-          },
-          {
-            "theme": "Shed",
-            "reference": "Japanese"
-          }
-        ]
-      },
-      {
         "multiword": "schuur",
         "occurrences": [
           {
@@ -165049,6 +164389,23 @@
           {
             "theme": "Shed",
             "reference": "Dutch"
+          }
+        ]
+      },
+      {
+        "multiword": "小屋",
+        "occurrences": [
+          {
+            "theme": "Hut",
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
+          },
+          {
+            "theme": "Shack",
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
+          },
+          {
+            "theme": "Shed",
+            "reference": "Japanese"
           }
         ]
       },
@@ -194219,7 +193576,21 @@
     "id": 215729,
     "theme": "Theater",
     "shortcut": "teatr",
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "theater",
+        "occurrences": [
+          {
+            "theme": "Cinema",
+            "reference": "Complement"
+          },
+          {
+            "theme": "Theater",
+            "reference": "English / Dutch / German / Pirate English"
+          }
+        ]
+      }
+    ],
     "translations": {
       "zh_cn": {
         "translation": "剧院",
