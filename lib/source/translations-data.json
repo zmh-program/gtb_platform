@@ -10528,8 +10528,8 @@
       },
       "zh_cn": {
         "translation": "起床战争",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:14-04:00"
       },
       "zh_tw": {
         "translation": "床戰",
@@ -10765,21 +10765,7 @@
     "id": 212847,
     "theme": "Bee",
     "shortcut": "bi",
-    "multiwords": [
-      {
-        "multiword": "Μέλισσα",
-        "occurrences": [
-          {
-            "theme": "Bee",
-            "reference": "Greek"
-          },
-          {
-            "theme": "Bumblebee",
-            "reference": "Greek"
-          }
-        ]
-      }
-    ],
+    "multiwords": [],
     "translations": {
       "ru": {
         "translation": "Пчела",
@@ -21576,21 +21562,7 @@
     "id": 213801,
     "theme": "Bumblebee",
     "shortcut": "dongo",
-    "multiwords": [
-      {
-        "multiword": "Μέλισσα",
-        "occurrences": [
-          {
-            "theme": "Bee",
-            "reference": "Greek"
-          },
-          {
-            "theme": "Bumblebee",
-            "reference": "Greek"
-          }
-        ]
-      }
-    ],
+    "multiwords": [],
     "translations": {
       "ru": {
         "translation": "Шмель",
@@ -25038,9 +25010,9 @@
         "approved_at": "2020-03-31T09:20:31-04:00"
       },
       "zh_cn": {
-        "translation": "野营地",
+        "translation": "营地",
         "is_approved": true,
-        "approved_at": "2018-02-13T03:06:21-05:00"
+        "approved_at": "2026-03-22T11:43:27-04:00"
       },
       "zh_tw": {
         "translation": "露營區",
@@ -32451,6 +32423,19 @@
         ]
       },
       {
+        "multiword": "厨师",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "廚師",
         "occurrences": [
           {
@@ -32472,8 +32457,8 @@
       },
       "zh_cn": {
         "translation": "厨师",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-21T16:01:30-04:00"
       },
       "zh_tw": {
         "translation": "廚師",
@@ -41621,6 +41606,19 @@
         ]
       },
       {
+        "multiword": "厨师",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "廚師",
         "occurrences": [
           {
@@ -42856,6 +42854,10 @@
           {
             "theme": "Marshmallow",
             "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
           }
         ]
       }
@@ -92920,8 +92922,8 @@
       },
       "zh_cn": {
         "translation": "铁",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:35-04:00"
       },
       "zh_tw": {
         "translation": "鐵",
@@ -93686,9 +93688,9 @@
         "approved_at": "2025-01-30T15:34:25-05:00"
       },
       "zh_cn": {
-        "translation": "看门人",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "清洁工",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:27:50-04:00"
       },
       "zh_tw": {
         "translation": "守衛",
@@ -96334,8 +96336,8 @@
       },
       "zh_cn": {
         "translation": "卡拉OK",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:27:28-04:00"
       },
       "zh_tw": {
         "translation": "卡拉 OK ",
@@ -100007,8 +100009,8 @@
       },
       "zh_cn": {
         "translation": "湖",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:26:26-04:00"
       },
       "zh_tw": {
         "translation": "湖泊",
@@ -101485,8 +101487,8 @@
       },
       "zh_cn": {
         "translation": "熔岩桶",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:40-04:00"
       },
       "zh_tw": {
         "translation": "熔岩桶",
@@ -104924,9 +104926,9 @@
         "approved_at": "2023-08-15T08:10:27-04:00"
       },
       "zh_cn": {
-        "translation": "闪电强袭",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "雷击",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:52-04:00"
       },
       "zh_tw": {
         "translation": "雷神天罰",
@@ -109237,9 +109239,9 @@
         "approved_at": "2023-08-14T16:53:09-04:00"
       },
       "zh_cn": {
-        "translation": "魔法帽子",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "魔法帽",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:00-04:00"
       },
       "zh_tw": {
         "translation": "魔術帽",
@@ -111106,8 +111108,8 @@
       },
       "zh_cn": {
         "translation": "府邸",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:10-04:00"
       },
       "zh_tw": {
         "translation": "大廈",
@@ -111955,6 +111957,10 @@
           {
             "theme": "Marshmallow",
             "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
           }
         ]
       }
@@ -138279,9 +138285,9 @@
         "approved_at": "2023-02-18T03:33:19-05:00"
       },
       "zh_cn": {
-        "translation": "游乐场",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "操场",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:31-04:00"
       },
       "zh_tw": {
         "translation": "遊樂場",
@@ -151806,8 +151812,8 @@
       },
       "zh_cn": {
         "translation": "岩石",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:09-04:00"
       },
       "zh_tw": {
         "translation": "石頭",
@@ -155929,9 +155935,9 @@
         "approved_at": "2023-08-24T13:07:30-04:00"
       },
       "zh_cn": {
-        "translation": "游猎",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "狩猎",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:31:55-04:00"
       },
       "zh_tw": {
         "translation": "狩獵",
@@ -156097,8 +156103,8 @@
       },
       "zh_cn": {
         "translation": "保险柜",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:13-04:00"
       },
       "zh_tw": {
         "translation": "保險櫃",
@@ -172609,7 +172615,25 @@
     "id": 240790,
     "theme": "Smore",
     "shortcut": null,
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "棉花糖",
+        "occurrences": [
+          {
+            "theme": "Cotton Candy",
+            "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Marshmallow",
+            "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      }
+    ],
     "translations": {
       "ru": {
         "translation": "Смор",
@@ -172617,9 +172641,9 @@
         "approved_at": "2024-10-02T16:35:58-04:00"
       },
       "zh_cn": {
-        "translation": "棉花糖巧克力夹心饼",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "棉花糖",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:25-04:00"
       },
       "zh_tw": {
         "translation": "烤棉花糖巧克力夾心餅",
@@ -178900,8 +178924,8 @@
       },
       "zh_cn": {
         "translation": "正方形",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:36-04:00"
       },
       "zh_tw": {
         "translation": "正方形",
@@ -191779,8 +191803,8 @@
       },
       "zh_cn": {
         "translation": "寺庙",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:31:40-04:00"
       },
       "zh_tw": {
         "translation": "寺廟",
@@ -206825,8 +206849,8 @@
       },
       "zh_cn": {
         "translation": "吸尘器",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:25:15-04:00"
       },
       "zh_tw": {
         "translation": "吸塵器",
