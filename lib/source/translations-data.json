@@ -10528,8 +10528,8 @@
       },
       "zh_cn": {
         "translation": "起床战争",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:14-04:00"
       },
       "zh_tw": {
         "translation": "床戰",
@@ -16504,19 +16504,6 @@
     "theme": "Bone",
     "shortcut": "o",
     "multiwords": [
-      {
-        "multiword": "o",
-        "occurrences": [
-          {
-            "theme": "Bone",
-            "reference": "French / Romanian"
-          },
-          {
-            "theme": "Island",
-            "reference": "Swedish"
-          }
-        ]
-      },
       {
         "multiword": "kost",
         "occurrences": [
@@ -25051,9 +25038,9 @@
         "approved_at": "2020-03-31T09:20:31-04:00"
       },
       "zh_cn": {
-        "translation": "野营地",
+        "translation": "营地",
         "is_approved": true,
-        "approved_at": "2018-02-13T03:06:21-05:00"
+        "approved_at": "2026-03-22T11:43:27-04:00"
       },
       "zh_tw": {
         "translation": "露營區",
@@ -32464,6 +32451,19 @@
         ]
       },
       {
+        "multiword": "厨师",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "廚師",
         "occurrences": [
           {
@@ -32485,8 +32485,8 @@
       },
       "zh_cn": {
         "translation": "厨师",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-21T16:01:30-04:00"
       },
       "zh_tw": {
         "translation": "廚師",
@@ -41634,6 +41634,19 @@
         ]
       },
       {
+        "multiword": "厨师",
+        "occurrences": [
+          {
+            "theme": "Chef",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Cook",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "廚師",
         "occurrences": [
           {
@@ -42869,6 +42882,10 @@
           {
             "theme": "Marshmallow",
             "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
           }
         ]
       }
@@ -65277,7 +65294,7 @@
             "reference": "French"
           },
           {
-            "theme": "Palm Tree",
+            "theme": "Palm tree",
             "reference": "German"
           }
         ]
@@ -92933,8 +92950,8 @@
       },
       "zh_cn": {
         "translation": "铁",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:35-04:00"
       },
       "zh_tw": {
         "translation": "鐵",
@@ -93163,143 +93180,6 @@
         "translation": "Прасувальна дошка",
         "is_approved": true,
         "approved_at": "2023-08-19T19:02:29-04:00"
-      }
-    }
-  },
-  {
-    "id": 213037,
-    "theme": "Island",
-    "shortcut": "o",
-    "multiwords": [
-      {
-        "multiword": "o",
-        "occurrences": [
-          {
-            "theme": "Bone",
-            "reference": "French / Romanian"
-          },
-          {
-            "theme": "Island",
-            "reference": "Swedish"
-          }
-        ]
-      }
-    ],
-    "translations": {
-      "ru": {
-        "translation": "Остров",
-        "is_approved": true,
-        "approved_at": "2020-04-11T05:40:08-04:00"
-      },
-      "zh_cn": {
-        "translation": "岛屿",
-        "is_approved": true,
-        "approved_at": "2017-06-24T05:49:20-04:00"
-      },
-      "zh_tw": {
-        "translation": "島嶼",
-        "is_approved": true,
-        "approved_at": "2019-08-14T04:15:34-04:00"
-      },
-      "cs": {
-        "translation": "Ostrov",
-        "is_approved": true,
-        "approved_at": "2020-01-22T16:03:50-05:00"
-      },
-      "da": {
-        "translation": "Ø",
-        "is_approved": true,
-        "approved_at": "2020-03-25T06:27:14-04:00"
-      },
-      "nl": {
-        "translation": "Eiland",
-        "is_approved": true,
-        "approved_at": "2017-06-23T09:03:56-04:00"
-      },
-      "fi": {
-        "translation": "Saari",
-        "is_approved": true,
-        "approved_at": "2020-07-21T06:38:53-04:00"
-      },
-      "fr": {
-        "translation": "île",
-        "is_approved": true,
-        "approved_at": "2018-01-30T10:47:07-05:00"
-      },
-      "de": {
-        "translation": "Insel",
-        "is_approved": true,
-        "approved_at": "2018-01-31T00:17:40-05:00"
-      },
-      "hu": {
-        "translation": "Sziget",
-        "is_approved": true,
-        "approved_at": "2022-05-18T08:24:00-04:00"
-      },
-      "it": {
-        "translation": "Isola",
-        "is_approved": true,
-        "approved_at": "2019-09-07T06:08:30-04:00"
-      },
-      "ja": {
-        "translation": "島",
-        "is_approved": true,
-        "approved_at": "2019-08-26T00:47:03-04:00"
-      },
-      "ko": {
-        "translation": "섬",
-        "is_approved": true,
-        "approved_at": "2017-08-15T11:26:20-04:00"
-      },
-      "no": {
-        "translation": "Øy",
-        "is_approved": true,
-        "approved_at": "2020-05-12T09:01:02-04:00"
-      },
-      "en": {
-        "translation": "Island",
-        "is_approved": true,
-        "approved_at": "2020-01-29T12:51:08-05:00"
-      },
-      "pl": {
-        "translation": "Wyspa",
-        "is_approved": true,
-        "approved_at": "2017-07-27T10:46:33-04:00"
-      },
-      "pt": {
-        "translation": "Ilha",
-        "is_approved": true,
-        "approved_at": "2019-07-21T14:08:12-04:00"
-      },
-      "ptbr": {
-        "translation": "Ilha",
-        "is_approved": true,
-        "approved_at": "2018-09-11T21:26:53-04:00"
-      },
-      "ro": {
-        "translation": "Insulă",
-        "is_approved": true,
-        "approved_at": "2022-04-18T16:07:15-04:00"
-      },
-      "es": {
-        "translation": "Isla",
-        "is_approved": true,
-        "approved_at": "2017-07-02T21:40:34-04:00"
-      },
-      "sv": {
-        "translation": "Ö",
-        "is_approved": true,
-        "approved_at": "2017-07-11T13:02:11-04:00"
-      },
-      "tr": {
-        "translation": "Ada",
-        "is_approved": true,
-        "approved_at": "2020-08-14T18:40:17-04:00"
-      },
-      "uk": {
-        "translation": "Острів",
-        "is_approved": true,
-        "approved_at": "2020-08-18T19:50:33-04:00"
       }
     }
   },
@@ -93836,9 +93716,9 @@
         "approved_at": "2025-01-30T15:34:25-05:00"
       },
       "zh_cn": {
-        "translation": "看门人",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "清洁工",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:27:50-04:00"
       },
       "zh_tw": {
         "translation": "守衛",
@@ -96484,8 +96364,8 @@
       },
       "zh_cn": {
         "translation": "卡拉OK",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:27:28-04:00"
       },
       "zh_tw": {
         "translation": "卡拉 OK ",
@@ -100157,8 +100037,8 @@
       },
       "zh_cn": {
         "translation": "湖",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:26:26-04:00"
       },
       "zh_tw": {
         "translation": "湖泊",
@@ -101635,8 +101515,8 @@
       },
       "zh_cn": {
         "translation": "熔岩桶",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:40-04:00"
       },
       "zh_tw": {
         "translation": "熔岩桶",
@@ -105074,9 +104954,9 @@
         "approved_at": "2023-08-15T08:10:27-04:00"
       },
       "zh_cn": {
-        "translation": "闪电强袭",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "雷击",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:17:52-04:00"
       },
       "zh_tw": {
         "translation": "雷神天罰",
@@ -106416,141 +106296,11 @@
     }
   },
   {
-    "id": 250927,
-    "theme": "Living Room",
-    "shortcut": "stue",
-    "multiwords": [
-      {
-        "multiword": "salon",
-        "occurrences": [
-          {
-            "theme": "Living Room",
-            "reference": "French / Spanish"
-          },
-          {
-            "theme": "Saloon",
-            "reference": "Czech / Danish / Dutch / German / Spanish / Turkish"
-          }
-        ]
-      }
-    ],
-    "translations": {
-      "ru": {
-        "translation": "Гостиная",
-        "is_approved": true,
-        "approved_at": "2025-02-20T04:54:18-05:00"
-      },
-      "zh_cn": {
-        "translation": "客厅",
-        "is_approved": true,
-        "approved_at": "2025-02-20T02:19:50-05:00"
-      },
-      "zh_tw": {
-        "translation": "客廳",
-        "is_approved": true,
-        "approved_at": "2025-11-26T21:28:55-05:00"
-      },
-      "cs": {
-        "translation": "Obývací pokoj",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "da": {
-        "translation": "Stue",
-        "is_approved": true,
-        "approved_at": "2025-02-20T12:14:13-05:00"
-      },
-      "nl": {
-        "translation": "Woonkamer",
-        "is_approved": true,
-        "approved_at": "2025-02-20T13:52:12-05:00"
-      },
-      "fi": {
-        "translation": "Olohuone",
-        "is_approved": true,
-        "approved_at": "2026-01-18T14:19:28-05:00"
-      },
-      "fr": {
-        "translation": "Salon",
-        "is_approved": true,
-        "approved_at": "2025-03-06T09:18:37-05:00"
-      },
-      "de": {
-        "translation": "Wohnzimmer",
-        "is_approved": true,
-        "approved_at": "2025-02-19T19:07:32-05:00"
-      },
-      "hu": {
-        "translation": "Nappali",
-        "is_approved": true,
-        "approved_at": "2025-04-07T09:43:01-04:00"
-      },
-      "it": {
-        "translation": "Soggiorno",
-        "is_approved": true,
-        "approved_at": "2025-02-21T08:24:05-05:00"
-      },
-      "ja": {
-        "translation": "リビングルーム",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "ko": {
-        "translation": "거실",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "no": {
-        "translation": "Stue",
-        "is_approved": true,
-        "approved_at": "2026-01-12T18:32:15-05:00"
-      },
-      "en": {
-        "translation": "Livin' Room",
-        "is_approved": true,
-        "approved_at": "2025-03-06T00:39:11-05:00"
-      },
-      "pl": {
-        "translation": "Salon",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "pt": {
-        "translation": "Sala de estar",
-        "is_approved": true,
-        "approved_at": "2025-02-26T17:06:06-05:00"
-      },
-      "ptbr": {
-        "translation": "Sala de estar",
-        "is_approved": true,
-        "approved_at": "2025-02-20T06:26:22-05:00"
-      },
-      "ro": {
-        "translation": "Sufragerie",
-        "is_approved": true,
-        "approved_at": "2025-04-08T15:19:26-04:00"
-      },
-      "es": {
-        "translation": "Salón",
-        "is_approved": true,
-        "approved_at": "2025-03-15T01:52:15-04:00"
-      },
-      "sv": {
-        "translation": "Vardagsrum",
-        "is_approved": false,
-        "approved_at": null
-      },
-      "tr": {
-        "translation": "Oturma Odası",
-        "is_approved": true,
-        "approved_at": "2025-06-21T08:10:13-04:00"
-      },
-      "uk": {
-        "translation": "Вітальня",
-        "is_approved": true,
-        "approved_at": "2025-02-20T10:21:23-05:00"
-      }
-    }
+    "id": -1,
+    "theme": "Living room",
+    "shortcut": null,
+    "multiwords": [],
+    "translations": {}
   },
   {
     "id": 214763,
@@ -109387,9 +109137,9 @@
         "approved_at": "2023-08-14T16:53:09-04:00"
       },
       "zh_cn": {
-        "translation": "魔法帽子",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "魔法帽",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:00-04:00"
       },
       "zh_tw": {
         "translation": "魔術帽",
@@ -111256,8 +111006,8 @@
       },
       "zh_cn": {
         "translation": "府邸",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:10-04:00"
       },
       "zh_tw": {
         "translation": "大廈",
@@ -112105,6 +111855,10 @@
           {
             "theme": "Marshmallow",
             "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
           }
         ]
       }
@@ -124024,9 +123778,9 @@
         "approved_at": "2020-04-11T09:04:59-04:00"
       },
       "zh_cn": {
-        "translation": "八角形",
+        "translation": "八边形",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:30:46-05:00"
+        "approved_at": "2026-03-24T13:06:37-04:00"
       },
       "zh_tw": {
         "translation": "八邊形",
@@ -128028,8 +127782,8 @@
     }
   },
   {
-    "id": 213109,
-    "theme": "Palm Tree",
+    "id": 215001,
+    "theme": "Palm tree",
     "shortcut": "palme",
     "multiwords": [
       {
@@ -128040,7 +127794,7 @@
             "reference": "French"
           },
           {
-            "theme": "Palm Tree",
+            "theme": "Palm tree",
             "reference": "German"
           }
         ]
@@ -128050,117 +127804,117 @@
       "ru": {
         "translation": "Пальма",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:26:47-04:00"
+        "approved_at": "2020-04-12T04:32:29-04:00"
       },
       "zh_cn": {
         "translation": "棕榈树",
         "is_approved": true,
-        "approved_at": "2023-08-15T00:17:40-04:00"
+        "approved_at": "2018-02-14T06:28:33-05:00"
       },
       "zh_tw": {
         "translation": "棕櫚樹",
         "is_approved": true,
-        "approved_at": "2023-08-15T04:42:03-04:00"
+        "approved_at": "2020-08-16T02:07:33-04:00"
       },
       "cs": {
         "translation": "Palma",
         "is_approved": true,
-        "approved_at": "2023-09-01T15:53:19-04:00"
+        "approved_at": "2020-07-09T06:36:18-04:00"
       },
       "da": {
         "translation": "Palmetræ",
         "is_approved": true,
-        "approved_at": "2023-08-15T07:25:49-04:00"
+        "approved_at": "2020-06-16T10:54:07-04:00"
       },
       "nl": {
         "translation": "Palmboom",
         "is_approved": true,
-        "approved_at": "2023-09-16T10:47:01-04:00"
+        "approved_at": "2018-02-15T11:46:02-05:00"
       },
       "fi": {
         "translation": "Palmu",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:00:05-04:00"
+        "approved_at": "2021-04-22T06:12:18-04:00"
       },
       "fr": {
         "translation": "Palmier",
         "is_approved": true,
-        "approved_at": "2023-08-18T03:18:08-04:00"
+        "approved_at": "2018-03-25T09:27:46-04:00"
       },
       "de": {
         "translation": "Palme",
         "is_approved": true,
-        "approved_at": "2023-08-15T13:12:24-04:00"
+        "approved_at": "2018-02-05T18:05:59-05:00"
       },
       "hu": {
         "translation": "Pálmafa",
         "is_approved": true,
-        "approved_at": "2023-09-01T03:59:34-04:00"
+        "approved_at": "2022-05-17T03:17:42-04:00"
       },
       "it": {
         "translation": "Palma",
         "is_approved": true,
-        "approved_at": "2023-08-15T08:03:39-04:00"
+        "approved_at": "2020-01-28T06:35:07-05:00"
       },
       "ja": {
         "translation": "ヤシの木",
         "is_approved": true,
-        "approved_at": "2023-09-05T05:46:40-04:00"
+        "approved_at": "2018-03-28T06:47:59-04:00"
       },
       "ko": {
         "translation": "야자수",
         "is_approved": true,
-        "approved_at": "2023-08-19T00:59:14-04:00"
+        "approved_at": "2017-12-28T03:04:22-05:00"
       },
       "no": {
         "translation": "Palmetre",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:38:11-04:00"
+        "approved_at": "2021-10-24T11:47:58-04:00"
       },
       "en": {
-        "translation": "Palm Tree",
+        "translation": "Palm tree",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:37:48-04:00"
+        "approved_at": "2021-07-30T12:47:33-04:00"
       },
       "pl": {
         "translation": "Palma",
         "is_approved": true,
-        "approved_at": "2023-08-16T11:20:23-04:00"
+        "approved_at": "2023-11-08T20:26:23-05:00"
       },
       "pt": {
         "translation": "Palmeira",
         "is_approved": true,
-        "approved_at": "2023-08-17T07:56:03-04:00"
+        "approved_at": "2019-04-06T17:13:57-04:00"
       },
       "ptbr": {
         "translation": "Palmeira",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:42:16-04:00"
+        "approved_at": "2019-07-01T10:12:18-04:00"
       },
       "ro": {
         "translation": "Palmier",
         "is_approved": true,
-        "approved_at": "2023-08-28T11:07:19-04:00"
+        "approved_at": "2022-11-03T15:45:46-04:00"
       },
       "es": {
         "translation": "Palmera",
         "is_approved": true,
-        "approved_at": "2023-12-30T17:19:42-05:00"
+        "approved_at": "2019-07-31T07:52:31-04:00"
       },
       "sv": {
         "translation": "Palmträd",
         "is_approved": true,
-        "approved_at": "2023-08-14T16:10:10-04:00"
+        "approved_at": "2019-10-09T05:54:13-04:00"
       },
       "tr": {
-        "translation": "Palmiye",
+        "translation": "Palmiye Ağacı",
         "is_approved": true,
-        "approved_at": "2023-09-26T20:06:03-04:00"
+        "approved_at": "2022-05-16T17:11:46-04:00"
       },
       "uk": {
         "translation": "Пальма",
         "is_approved": true,
-        "approved_at": "2023-08-15T17:22:14-04:00"
+        "approved_at": "2023-08-21T17:42:44-04:00"
       }
     }
   },
@@ -132125,9 +131879,9 @@
         "approved_at": "2020-04-12T04:40:05-04:00"
       },
       "zh_cn": {
-        "translation": "五角形",
+        "translation": "五边形",
         "is_approved": true,
-        "approved_at": "2018-02-14T06:29:17-05:00"
+        "approved_at": "2026-03-24T13:06:38-04:00"
       },
       "zh_tw": {
         "translation": "五邊形",
@@ -138429,9 +138183,9 @@
         "approved_at": "2023-02-18T03:33:19-05:00"
       },
       "zh_cn": {
-        "translation": "游乐场",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "操场",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:18:31-04:00"
       },
       "zh_tw": {
         "translation": "遊樂場",
@@ -140683,127 +140437,11 @@
     }
   },
   {
-    "id": 213307,
-    "theme": "Pool Table",
-    "shortcut": "poolbord",
+    "id": -1,
+    "theme": "Pool table",
+    "shortcut": null,
     "multiwords": [],
-    "translations": {
-      "ru": {
-        "translation": "Бильярдный стол",
-        "is_approved": true,
-        "approved_at": "2023-08-15T03:42:17-04:00"
-      },
-      "zh_cn": {
-        "translation": "台球桌",
-        "is_approved": true,
-        "approved_at": "2023-08-15T00:17:41-04:00"
-      },
-      "zh_tw": {
-        "translation": "撞球桌",
-        "is_approved": true,
-        "approved_at": "2023-08-15T04:42:45-04:00"
-      },
-      "cs": {
-        "translation": "Kulečníkový stůl",
-        "is_approved": true,
-        "approved_at": "2023-09-01T15:53:41-04:00"
-      },
-      "da": {
-        "translation": "Poolbord",
-        "is_approved": true,
-        "approved_at": "2023-08-15T07:27:26-04:00"
-      },
-      "nl": {
-        "translation": "Biljarttafel",
-        "is_approved": true,
-        "approved_at": "2023-09-17T16:32:14-04:00"
-      },
-      "fi": {
-        "translation": "Biljardipöytä",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:00:10-04:00"
-      },
-      "fr": {
-        "translation": "Table de billard",
-        "is_approved": true,
-        "approved_at": "2023-08-18T03:18:56-04:00"
-      },
-      "de": {
-        "translation": "Poolbillardtisch",
-        "is_approved": true,
-        "approved_at": "2023-08-15T13:18:19-04:00"
-      },
-      "hu": {
-        "translation": "Billiárdasztal",
-        "is_approved": true,
-        "approved_at": "2024-05-26T14:30:21-04:00"
-      },
-      "it": {
-        "translation": "Tavolo da Biliardo",
-        "is_approved": true,
-        "approved_at": "2023-08-15T08:04:14-04:00"
-      },
-      "ja": {
-        "translation": "ビリヤード台",
-        "is_approved": true,
-        "approved_at": "2023-09-05T05:46:44-04:00"
-      },
-      "ko": {
-        "translation": "당구대",
-        "is_approved": true,
-        "approved_at": "2023-08-19T00:59:15-04:00"
-      },
-      "no": {
-        "translation": "Biljardbord",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:38:51-04:00"
-      },
-      "en": {
-        "translation": "Pool Table",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:37:49-04:00"
-      },
-      "pl": {
-        "translation": "Stół bilardowy",
-        "is_approved": true,
-        "approved_at": "2023-08-16T11:20:18-04:00"
-      },
-      "pt": {
-        "translation": "Mesa de bilhar",
-        "is_approved": true,
-        "approved_at": "2023-08-17T07:56:12-04:00"
-      },
-      "ptbr": {
-        "translation": "Mesa de bilhar",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:47:28-04:00"
-      },
-      "ro": {
-        "translation": "Masă de Biliard",
-        "is_approved": true,
-        "approved_at": "2023-08-28T11:07:20-04:00"
-      },
-      "es": {
-        "translation": "Mesa de Billar",
-        "is_approved": true,
-        "approved_at": "2023-12-30T17:19:45-05:00"
-      },
-      "sv": {
-        "translation": "Biljardbord",
-        "is_approved": true,
-        "approved_at": "2023-08-14T16:10:14-04:00"
-      },
-      "tr": {
-        "translation": "Bilardo Masası",
-        "is_approved": true,
-        "approved_at": "2023-09-26T20:06:18-04:00"
-      },
-      "uk": {
-        "translation": "Більярдний стіл",
-        "is_approved": true,
-        "approved_at": "2023-08-15T17:27:09-04:00"
-      }
-    }
+    "translations": {}
   },
   {
     "id": 213139,
@@ -151956,8 +151594,8 @@
       },
       "zh_cn": {
         "translation": "岩石",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:09-04:00"
       },
       "zh_tw": {
         "translation": "石頭",
@@ -156079,9 +155717,9 @@
         "approved_at": "2023-08-24T13:07:30-04:00"
       },
       "zh_cn": {
-        "translation": "游猎",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "狩猎",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:31:55-04:00"
       },
       "zh_tw": {
         "translation": "狩獵",
@@ -156247,8 +155885,8 @@
       },
       "zh_cn": {
         "translation": "保险柜",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:13-04:00"
       },
       "zh_tw": {
         "translation": "保險櫃",
@@ -156965,19 +156603,6 @@
           {
             "theme": "Saloon",
             "reference": "Swedish"
-          }
-        ]
-      },
-      {
-        "multiword": "salon",
-        "occurrences": [
-          {
-            "theme": "Living Room",
-            "reference": "French / Spanish"
-          },
-          {
-            "theme": "Saloon",
-            "reference": "Czech / Danish / Dutch / German / Spanish / Turkish"
           }
         ]
       },
@@ -172759,7 +172384,25 @@
     "id": 240790,
     "theme": "Smore",
     "shortcut": null,
-    "multiwords": [],
+    "multiwords": [
+      {
+        "multiword": "棉花糖",
+        "occurrences": [
+          {
+            "theme": "Cotton Candy",
+            "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Marshmallow",
+            "reference": "Chinese Simplified / Chinese Traditional"
+          },
+          {
+            "theme": "Smore",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      }
+    ],
     "translations": {
       "ru": {
         "translation": "Смор",
@@ -172767,9 +172410,9 @@
         "approved_at": "2024-10-02T16:35:58-04:00"
       },
       "zh_cn": {
-        "translation": "棉花糖巧克力夹心饼",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "棉花糖",
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:25-04:00"
       },
       "zh_tw": {
         "translation": "烤棉花糖巧克力夾心餅",
@@ -179050,8 +178693,8 @@
       },
       "zh_cn": {
         "translation": "正方形",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:22:36-04:00"
       },
       "zh_tw": {
         "translation": "正方形",
@@ -191929,8 +191572,8 @@
       },
       "zh_cn": {
         "translation": "寺庙",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:31:40-04:00"
       },
       "zh_tw": {
         "translation": "寺廟",
@@ -206881,7 +206524,7 @@
         "approved_at": "2023-09-16T06:01:05-04:00"
       },
       "fr": {
-        "translation": "À l'envers",
+        "translation": "A l'envers",
         "is_approved": true,
         "approved_at": "2024-10-23T02:30:14-04:00"
       },
@@ -206975,8 +206618,8 @@
       },
       "zh_cn": {
         "translation": "吸尘器",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-03-22T10:25:15-04:00"
       },
       "zh_tw": {
         "translation": "吸塵器",
