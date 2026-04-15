@@ -25,7 +25,7 @@ It is used to:
 
 This script requires an existing language translation group to retrieve data for all languages.
 
-If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel One of the Translation Groups like Russian, German, etc. (**approval typically takes 7-21 days for new accounts**).
+If you have not joined the translation team yet, register on Crowdin and apply to the Hypixel One of the Translation Groups like Chinese Simplified, German, etc. (**approval typically takes 7-21 days for new accounts**).
 
 If your existing account contains important data/value, **use an alternate account** for running this script.
 
@@ -152,7 +152,7 @@ After merge, the database is up to date.
 - Key fields:
   - `project_id`: Crowdin project ID
   - `file_id`: Crowdin file ID to crawl
-  - `meta_language_id`: language ID used when fetching phrase pages (current config uses Russian)
+  - `meta_language_id`: language ID used when fetching phrase pages (current config uses Chinese Simplified)
   - `target_languages`: list of language mappings
     - `id`: Crowdin language ID
     - `name`: display name (used in analysis/duplicate labeling)

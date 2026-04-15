@@ -57,6 +57,12 @@ struct Config {
     project_id: String,
     file_id: String,
     meta_language_id: String,
+    target_languages: Vec<TargetLanguage>,
+}
+
+#[derive(Debug, Clone, Deserialize)]
+struct TargetLanguage {
+    id: String,
 }
 
 #[derive(Debug, Clone)]
@@ -76,6 +82,7 @@ struct Credentials {
 struct CrowdinCrawler {
     client: Client,
     config: Arc<Config>,
+    language_order: Arc<HashMap<String, usize>>,
 }
 
 #[derive(Debug, Clone)]
@@ -128,10 +135,17 @@ impl CrowdinCrawler {
             .default_headers(headers)
             .build()
             .context("failed to build HTTP client")?;
+        let language_order = config
+            .target_languages
+            .iter()
+            .enumerate()
+            .map(|(index, language)| (language.id.clone(), index))
+            .collect();
 
         Ok(Self {
             client,
             config,
+            language_order: Arc::new(language_order),
         })
     }
 
@@ -213,7 +227,11 @@ impl CrowdinCrawler {
             .context("failed to read all_languages response body")?;
 
         if !status.is_success() {
-            bail!("HTTP error {} from all_languages endpoint: {}", status, text);
+            bail!(
+                "HTTP error {} from all_languages endpoint: {}",
+                status,
+                text
+            );
         }
 
         let root: Value =
@@ -244,13 +262,34 @@ impl CrowdinCrawler {
             bail!("Crowdin all_languages `data.success` error: {}", msg);
         }
 
+        let assistance = data_obj
+            .get("assistance")
+            .and_then(Value::as_array)
+            .cloned()
+            .unwrap_or_default();
         let other = data_obj
             .get("other")
             .and_then(Value::as_array)
             .cloned()
             .ok_or_else(|| anyhow!("Missing `data.other` array in all_languages response"))?;
+        let mut deduped = HashMap::new();
 
-        Ok(other)
+        for item in assistance.into_iter().chain(other) {
+            let Some(language_id) = item.get("language_id").and_then(value_to_string_ref) else {
+                continue;
+            };
+            deduped.entry(language_id).or_insert(item);
+        }
+
+        let mut merged: Vec<Value> = deduped.into_values().collect();
+        merged.sort_by_key(|item| {
+            item.get("language_id")
+                .and_then(value_to_string_ref)
+                .and_then(|language_id| self.language_order.get(&language_id).copied())
+                .unwrap_or(self.language_order.len())
+        });
+
+        Ok(merged)
     }
 
     async fn crawl(&self) -> Result<Vec<OutputTheme>> {
@@ -265,8 +304,13 @@ impl CrowdinCrawler {
         let mut meta_items = Vec::new();
         let mut meta_translations: HashMap<String, OutputTranslation> = HashMap::new();
 
-        parse_page_phrases(&first_page, &mut meta_items, &mut meta_translations)
-            .context("failed to parse first page phrases")?;
+        parse_page_phrases(
+            &first_page,
+            &self.config.meta_language_id,
+            &mut meta_items,
+            &mut meta_translations,
+        )
+        .context("failed to parse first page phrases")?;
         println!("Fetched metadata page 1/{}.", total_pages);
 
         if total_pages > 1 {
@@ -283,13 +327,21 @@ impl CrowdinCrawler {
             let mut page_results = page_results;
             page_results.sort_by_key(|(page, _)| *page);
             for (page, data) in page_results {
-                parse_page_phrases(&data, &mut meta_items, &mut meta_translations)
-                    .with_context(|| format!("failed to parse phrases page {}", page))?;
+                parse_page_phrases(
+                    &data,
+                    &self.config.meta_language_id,
+                    &mut meta_items,
+                    &mut meta_translations,
+                )
+                .with_context(|| format!("failed to parse phrases page {}", page))?;
                 println!("Fetched metadata page {}/{}.", page, total_pages);
             }
         }
 
-        println!("Metadata fetch complete. {} items queued.", meta_items.len());
+        println!(
+            "Metadata fetch complete. {} items queued.",
+            meta_items.len()
+        );
 
         let items = Arc::new(meta_items);
         let meta_map = Arc::new(meta_translations);
@@ -299,28 +351,36 @@ impl CrowdinCrawler {
                 let crawler = self.clone();
                 let meta_map = meta_map.clone();
                 async move {
-                    let meta_translation = meta_map
-                        .get(&item.id)
-                        .cloned()
-                        .ok_or_else(|| anyhow!("missing meta translation for item id {}", item.id))?;
+                    let meta_translation = meta_map.get(&item.id).cloned().ok_or_else(|| {
+                        anyhow!("missing meta translation for item id {}", item.id)
+                    })?;
                     let others = crawler
                         .get_all_languages_for_translation(&item.id)
                         .await
                         .with_context(|| format!("failed all_languages for id {}", item.id))?;
-                    build_output_theme(item, meta_translation, others)
+                    build_output_theme(
+                        item,
+                        meta_translation,
+                        others,
+                        crawler.language_order.as_ref(),
+                    )
                 }
             })
             .buffer_unordered(MAX_CONCURRENCY)
             .try_collect()
             .await?;
 
-        println!("All-language fetch complete. {} items built.", crawled.len());
+        println!(
+            "All-language fetch complete. {} items built.",
+            crawled.len()
+        );
         Ok(crawled)
     }
 }
 
 fn parse_page_phrases(
     page_data: &Value,
+    meta_language_id: &str,
     meta_items: &mut Vec<MetaItem>,
     meta_translations: &mut HashMap<String, OutputTranslation>,
 ) -> Result<()> {
@@ -357,7 +417,10 @@ fn parse_page_phrases(
             .cloned()
             .unwrap_or_default();
 
-        let suggestion = suggestions.get(0).cloned().unwrap_or(Value::Object(Default::default()));
+        let suggestion = suggestions
+            .get(0)
+            .cloned()
+            .unwrap_or(Value::Object(Default::default()));
         let validation = suggestion
             .get("validations")
             .and_then(|v| v.get("2"))
@@ -367,14 +430,7 @@ fn parse_page_phrases(
         let item = OutputTranslation {
             id: suggestion.get("id").and_then(value_to_string_ref),
             text: suggestion.get("text").and_then(value_to_string_ref),
-            language_id: translation
-                .get("target_language_id")
-                .and_then(value_to_string_ref)
-                .or_else(|| {
-                    translation
-                        .get("language_id")
-                        .and_then(value_to_string_ref)
-                }),
+            language_id: Some(meta_language_id.to_string()),
             is_approved: validation
                 .get("approved")
                 .and_then(Value::as_bool)
@@ -395,6 +451,7 @@ fn build_output_theme(
     item: MetaItem,
     meta_translation: OutputTranslation,
     others: Vec<Value>,
+    language_order: &HashMap<String, usize>,
 ) -> Result<OutputTheme> {
     let mut translations = Vec::with_capacity(others.len() + 1);
     translations.push(meta_translation);
@@ -420,6 +477,13 @@ fn build_output_theme(
                 .and_then(value_to_string_ref),
         });
     }
+    translations.sort_by_key(|translation| {
+        translation
+            .language_id
+            .as_ref()
+            .and_then(|language_id| language_order.get(language_id).copied())
+            .unwrap_or(language_order.len())
+    });
 
     Ok(OutputTheme {
         id: parse_id_value(&item.id),
@@ -464,7 +528,8 @@ fn extract_positive_usize(v: &Value, key: &str) -> Result<usize> {
 }
 
 fn read_json_file<T: for<'de> Deserialize<'de>>(path: &Path) -> Result<T> {
-    let raw = fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
+    let raw =
+        fs::read_to_string(path).with_context(|| format!("failed to read {}", path.display()))?;
     serde_json::from_str(&raw).with_context(|| format!("failed to parse JSON {}", path.display()))
 }
 
@@ -482,8 +547,17 @@ fn parse_meta_language_id(raw: &str) -> String {
 fn resolve_paths() -> Result<Paths> {
     let cwd = env::current_dir().context("failed to read current directory")?;
 
-    let cwd_root_layout = cwd.join("crowdin_api").join("conf").join("config.json").exists();
-    let cwd_rust_layout = cwd.join("..").join("crowdin_api").join("conf").join("config.json").exists();
+    let cwd_root_layout = cwd
+        .join("crowdin_api")
+        .join("conf")
+        .join("config.json")
+        .exists();
+    let cwd_rust_layout = cwd
+        .join("..")
+        .join("crowdin_api")
+        .join("conf")
+        .join("config.json")
+        .exists();
 
     if cwd_root_layout {
         return Ok(Paths {
@@ -496,7 +570,11 @@ fn resolve_paths() -> Result<Paths> {
     if cwd_rust_layout {
         return Ok(Paths {
             env_file: cwd.join("..").join("crowdin_api").join(".env"),
-            config_file: cwd.join("..").join("crowdin_api").join("conf").join("config.json"),
+            config_file: cwd
+                .join("..")
+                .join("crowdin_api")
+                .join("conf")
+                .join("config.json"),
             output_file: cwd
                 .join("..")
                 .join("crowdin_api")
@@ -534,7 +612,8 @@ fn write_output(path: &Path, data: &[OutputTheme]) -> Result<()> {
             .with_context(|| format!("failed to create output dir {}", parent.display()))?;
     }
 
-    let file = fs::File::create(path).with_context(|| format!("failed to create {}", path.display()))?;
+    let file =
+        fs::File::create(path).with_context(|| format!("failed to create {}", path.display()))?;
     serde_json::to_writer_pretty(file, data)
         .with_context(|| format!("failed to write JSON {}", path.display()))?;
     Ok(())
@@ -548,15 +627,18 @@ async fn main() -> Result<()> {
     println!("Output path: {}", paths.output_file.display());
 
     let mut config: Config = read_json_file(&paths.config_file)?;
-    config.meta_language_id = parse_meta_language_id(
-        &env::var("META_LANGUAGE_ID").unwrap_or(config.meta_language_id),
-    );
+    config.meta_language_id =
+        parse_meta_language_id(&env::var("META_LANGUAGE_ID").unwrap_or(config.meta_language_id));
     let creds = load_credentials(&paths.env_file)?;
 
     let crawler = CrowdinCrawler::new(Arc::new(config), Arc::new(creds))?;
     let data = crawler.crawl().await?;
     write_output(&paths.output_file, &data)?;
 
-    println!("Done. Wrote {} items to {}", data.len(), paths.output_file.display());
+    println!(
+        "Done. Wrote {} items to {}",
+        data.len(),
+        paths.output_file.display()
+    );
     Ok(())
 }
