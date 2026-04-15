@@ -34,6 +34,8 @@ fn get_useless_multiwords(duplicates: &DuplicatesMap) -> Vec<String> {
             for j in (i + 1)..keys.len() {
                 let source = duplicates.get(&keys[i]).expect("key exists");
                 let target = duplicates.get(&keys[j]).expect("key exists");
+                // If one normalized key already covers every theme of a longer variant,
+                // keep the broader key and drop the narrower duplicate.
                 if is_match_ref(source, target) {
                     matched_keys.insert(keys[j].clone());
                 }
@@ -99,6 +101,7 @@ pub fn find_duplicate_translations(
     for theme_data in all_translations {
         let theme = &theme_data.theme;
 
+        // Theme names always participate in duplicate detection.
         for normalized_text in formatted_translation(Some(theme), false) {
             duplicates.entry(normalized_text).or_default().push((
                 theme.clone(),
@@ -107,6 +110,7 @@ pub fn find_duplicate_translations(
             ));
         }
 
+        // polyfill.json restores duplicate coverage for filtered or missing entries.
         for (lang_name, polyfill_translations) in polyfill {
             for (polyfill_theme, polyfill_translation) in polyfill_translations {
                 if theme.eq_ignore_ascii_case(polyfill_theme) {
@@ -128,6 +132,7 @@ pub fn find_duplicate_translations(
             let Some(lang_name) = lang_map.get(trans.language_id.as_str()) else {
                 continue;
             };
+            // `Complement` is injected from completions.json.
             let is_completion = *lang_name == "Complement";
             for normalized_text in formatted_translation(Some(text), is_completion) {
                 duplicates.entry(normalized_text).or_default().push((
@@ -142,6 +147,7 @@ pub fn find_duplicate_translations(
     let special_duplicates = get_special_duplicates(&duplicates);
     for (apply_keys, special_duplicate) in special_duplicates {
         for special_key in apply_keys {
+            // Accent variants should share the same theme coverage once their normalized text matches.
             let mut db_themes: HashSet<String> = duplicates
                 .get(&special_key)
                 .map(|entries| entries.iter().map(|(theme, _, _)| theme.clone()).collect())
@@ -188,6 +194,7 @@ pub fn find_duplicate_translations(
         let mut combined_entries: Vec<DuplicateEntry> = Vec::new();
         for (theme, lang_entries) in theme_lang_map {
             if lang_entries.len() > 1 {
+                // Multi-language hits are rendered as `Lang A / Lang B`.
                 let langs = lang_entries
                     .iter()
                     .map(|(lang, _)| lang.clone())

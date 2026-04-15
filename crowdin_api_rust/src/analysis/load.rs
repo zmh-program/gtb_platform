@@ -1,7 +1,7 @@
 use crate::analysis::types::{
     AnalysisInputs, AnalysisPaths, Config, SourceTheme, SourceTranslation,
 };
-use crate::common::paths::RepoPaths;
+use crate::common::repo_root;
 use anyhow::{bail, Context, Result};
 use std::collections::{HashMap, HashSet};
 use std::env;
@@ -14,8 +14,12 @@ fn read_json_file<T: for<'de> serde::Deserialize<'de>>(path: &Path) -> Result<T>
     serde_json::from_str(&text).with_context(|| format!("failed to parse JSON {}", path.display()))
 }
 
-pub fn resolve_analysis_paths(repo: &RepoPaths, out_dir: Option<&Path>) -> Result<AnalysisPaths> {
-    let source_input = repo.crowdin_api_dir.join("result").join("source.json");
+pub fn resolve_analysis_paths(out_dir: Option<&Path>) -> Result<AnalysisPaths> {
+    let repo_root = repo_root()?;
+    let source_input = repo_root
+        .join("crowdin_api")
+        .join("result")
+        .join("source.json");
     let (output_translations, output_versions) = if let Some(out_dir) = out_dir {
         let cwd = env::current_dir().context("failed to read current dir")?;
         let base = if out_dir.is_absolute() {
@@ -31,23 +35,15 @@ pub fn resolve_analysis_paths(repo: &RepoPaths, out_dir: Option<&Path>) -> Resul
         let translations = PathBuf::from(translations_path);
         let versions = env::var("GTB_RUST_OUTPUT_VERSIONS")
             .map(PathBuf::from)
-            .unwrap_or_else(|_| {
-                repo.repo_root
-                    .join("lib")
-                    .join("source")
-                    .join("versions.json")
-            });
+            .unwrap_or_else(|_| repo_root.join("lib").join("source").join("versions.json"));
         (translations, versions)
     } else {
         (
-            repo.repo_root
+            repo_root
                 .join("lib")
                 .join("source")
                 .join("translations-data.json"),
-            repo.repo_root
-                .join("lib")
-                .join("source")
-                .join("versions.json"),
+            repo_root.join("lib").join("source").join("versions.json"),
         )
     };
 
@@ -87,6 +83,7 @@ fn mix_completions(theme: &SourceTheme, completions: &HashMap<String, Vec<String
     for (completion, themes) in completions {
         if themes.iter().any(|t| t == &theme.theme) {
             let mut translations = Vec::with_capacity(theme.translations.len() + 1);
+            // completions.json is injected as pseudo-language `-1` / Complement.
             translations.push(SourceTranslation {
                 id: "-1".to_string(),
                 text: Some(completion.clone()),
@@ -116,6 +113,7 @@ fn filter_and_mix_translations(
         .iter()
         .map(|theme| theme.to_lowercase())
         .collect();
+    // themes.json is the allowlist; exclude.json trims keys that should stay out of output.
     let mut out: Vec<SourceTheme> = raw
         .iter()
         .filter(|t| {
@@ -141,6 +139,7 @@ fn filter_and_mix_translations(
             println!("  - {}", theme);
         }
 
+        // Keep missing allowlist themes in output so generated JSON stays shape-stable.
         out.extend(missing.into_iter().map(|theme| SourceTheme {
             id: serde_json::Value::from(-1),
             theme,
@@ -152,7 +151,7 @@ fn filter_and_mix_translations(
     out
 }
 
-pub fn load_inputs(repo: &RepoPaths, paths: &AnalysisPaths) -> Result<AnalysisInputs> {
+pub fn load_inputs(crowdin_api_dir: &Path, paths: &AnalysisPaths) -> Result<AnalysisInputs> {
     if !paths.source_input.exists() {
         bail!(
             "Missing source crawl file: {} (run crawler first)",
@@ -160,11 +159,11 @@ pub fn load_inputs(repo: &RepoPaths, paths: &AnalysisPaths) -> Result<AnalysisIn
         );
     }
 
-    let config = read_config(&repo.crowdin_api_dir)?;
-    let valid_themes = read_themes(&repo.crowdin_api_dir)?;
-    let excluded_themes = read_excluded_themes(&repo.crowdin_api_dir)?;
-    let completions = read_completions(&repo.crowdin_api_dir)?;
-    let polyfill = read_polyfill(&repo.crowdin_api_dir)?;
+    let config = read_config(crowdin_api_dir)?;
+    let valid_themes = read_themes(crowdin_api_dir)?;
+    let excluded_themes = read_excluded_themes(crowdin_api_dir)?;
+    let completions = read_completions(crowdin_api_dir)?;
+    let polyfill = read_polyfill(crowdin_api_dir)?;
     let raw = read_source(&paths.source_input)?;
     let all_translations =
         filter_and_mix_translations(raw, &valid_themes, &excluded_themes, &completions);

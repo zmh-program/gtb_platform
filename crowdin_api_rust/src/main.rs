@@ -1,4 +1,5 @@
 use anyhow::{anyhow, bail, Context, Result};
+use crowdin_api_rust::common::crowdin_api_dir;
 use futures::{stream, StreamExt, TryStreamExt};
 use reqwest::{header, Client};
 use serde::{Deserialize, Serialize};
@@ -14,6 +15,7 @@ const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_
 const MAX_CONCURRENCY: usize = 10;
 
 fn custom_filter_payload() -> String {
+    // Keep this payload aligned with the request shape Crowdin accepts for bulk phrase queries.
     json!({
         "added_from": "",
         "added_to": "",
@@ -262,6 +264,7 @@ impl CrowdinCrawler {
             bail!("Crowdin all_languages `data.success` error: {}", msg);
         }
 
+        // Crowdin can split joined-language results into `assistance` and `other`.
         let assistance = data_obj
             .get("assistance")
             .and_then(Value::as_array)
@@ -282,6 +285,7 @@ impl CrowdinCrawler {
         }
 
         let mut merged: Vec<Value> = deduped.into_values().collect();
+        // Preserve the configured target language order so downstream JSON stays diff-stable.
         merged.sort_by_key(|item| {
             item.get("language_id")
                 .and_then(value_to_string_ref)
@@ -404,7 +408,7 @@ fn parse_page_phrases(
             .unwrap_or_default();
 
         let suggestion = suggestions
-            .get(0)
+            .first()
             .cloned()
             .unwrap_or(Value::Object(Default::default()));
         let validation = suggestion
@@ -440,6 +444,7 @@ fn build_output_theme(
     language_order: &HashMap<String, usize>,
 ) -> Result<OutputTheme> {
     let mut translations = Vec::with_capacity(others.len() + 1);
+    // The phrases endpoint only gives the meta language suggestion for the current context.
     translations.push(meta_translation);
 
     for other in others {
@@ -531,49 +536,11 @@ fn parse_meta_language_id(raw: &str) -> String {
 }
 
 fn resolve_paths() -> Result<Paths> {
-    let cwd = env::current_dir().context("failed to read current directory")?;
-
-    let cwd_root_layout = cwd
-        .join("crowdin_api")
-        .join("conf")
-        .join("config.json")
-        .exists();
-    let cwd_rust_layout = cwd
-        .join("..")
-        .join("crowdin_api")
-        .join("conf")
-        .join("config.json")
-        .exists();
-
-    if cwd_root_layout {
-        return Ok(Paths {
-            env_file: cwd.join("crowdin_api").join(".env"),
-            config_file: cwd.join("crowdin_api").join("conf").join("config.json"),
-            output_file: cwd.join("crowdin_api").join("result").join("source.json"),
-        });
-    }
-
-    if cwd_rust_layout {
-        return Ok(Paths {
-            env_file: cwd.join("..").join("crowdin_api").join(".env"),
-            config_file: cwd
-                .join("..")
-                .join("crowdin_api")
-                .join("conf")
-                .join("config.json"),
-            output_file: cwd
-                .join("..")
-                .join("crowdin_api")
-                .join("result")
-                .join("source.json"),
-        });
-    }
-
-    // Fallback: local standalone layout inside crowdin_api_rust
+    let crowdin_api_dir = crowdin_api_dir()?;
     Ok(Paths {
-        env_file: cwd.join(".env"),
-        config_file: cwd.join("conf").join("config.json"),
-        output_file: cwd.join("result").join("source.json"),
+        env_file: crowdin_api_dir.join(".env"),
+        config_file: crowdin_api_dir.join("conf").join("config.json"),
+        output_file: crowdin_api_dir.join("result").join("source.json"),
     })
 }
 
@@ -585,9 +552,9 @@ fn load_credentials(env_file: &Path) -> Result<Credentials> {
     }
 
     let cookie = env::var("CROWDIN_COOKIE")
-        .context("missing CROWDIN_COOKIE (run browser_script.py or set env manually)")?;
+        .context("missing CROWDIN_COOKIE (run credentials first or set env manually)")?;
     let csrf_token = env::var("CROWDIN_CSRF_TOKEN")
-        .context("missing CROWDIN_CSRF_TOKEN (run browser_script.py or set env manually)")?;
+        .context("missing CROWDIN_CSRF_TOKEN (run credentials first or set env manually)")?;
 
     Ok(Credentials { cookie, csrf_token })
 }

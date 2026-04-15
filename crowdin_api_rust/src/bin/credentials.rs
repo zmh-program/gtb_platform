@@ -3,13 +3,11 @@ use base64::engine::general_purpose::URL_SAFE;
 use base64::Engine;
 use chrono::{DateTime, Duration, TimeZone, Utc};
 use cookie_scoop::{
-    get_cookies, to_cookie_header, BrowserName, CookieHeaderOptions, CookieMode,
-    GetCookiesOptions,
+    get_cookies, to_cookie_header, BrowserName, CookieHeaderOptions, CookieMode, GetCookiesOptions,
 };
-use crowdin_api_rust::common::envfile::update_env_file;
-use crowdin_api_rust::common::paths::RepoPaths;
+use crowdin_api_rust::common::{crowdin_api_dir, repo_root, update_env_file};
 use futures::{SinkExt, StreamExt};
-use reqwest::header::{COOKIE, CONTENT_TYPE};
+use reqwest::header::{CONTENT_TYPE, COOKIE};
 use serde::Deserialize;
 use serde_json::{json, Value};
 use std::collections::BTreeMap;
@@ -75,7 +73,10 @@ impl BrowserProcess {
 
     fn ensure_running(&mut self) -> Result<()> {
         if let Some(child) = &mut self.child {
-            if let Some(status) = child.try_wait().context("failed to inspect browser process")? {
+            if let Some(status) = child
+                .try_wait()
+                .context("failed to inspect browser process")?
+            {
                 bail!("browser process exited early with status {}", status);
             }
         }
@@ -93,7 +94,9 @@ impl Drop for BrowserProcess {
 }
 
 struct CdpConnection {
-    stream: tokio_tungstenite::WebSocketStream<tokio_tungstenite::MaybeTlsStream<tokio::net::TcpStream>>,
+    stream: tokio_tungstenite::WebSocketStream<
+        tokio_tungstenite::MaybeTlsStream<tokio::net::TcpStream>,
+    >,
     next_id: u64,
 }
 
@@ -109,7 +112,9 @@ impl CdpConnection {
         let id = self.next_id;
         self.next_id += 1;
         self.stream
-            .send(Message::Text(json!({"id": id, "method": method, "params": params}).to_string()))
+            .send(Message::Text(
+                json!({"id": id, "method": method, "params": params}).to_string(),
+            ))
             .await
             .with_context(|| format!("failed to send devtools command {method}"))?;
 
@@ -236,12 +241,12 @@ fn parse_browser_mode(raw: Option<&str>) -> Result<BrowserMode> {
     }
 }
 
-fn default_user_data_dir(repo_paths: &RepoPaths, args: &Args) -> PathBuf {
+fn default_user_data_dir(repo_root: &Path, args: &Args) -> PathBuf {
     args.user_data_dir
         .clone()
         .or_else(|| env::var("CROWDIN_USER_DATA_DIR").ok().map(PathBuf::from))
-        // Match browser_script.py so the browser login profile is shared across Python and Rust.
-        .unwrap_or_else(|| repo_paths.repo_root.join(".tmp").join("crowdin_pw_profile"))
+        // Keep one persistent profile so repeated logins reuse the same Crowdin session.
+        .unwrap_or_else(|| repo_root.join(".tmp").join("crowdin_pw_profile"))
 }
 
 fn crowdin_url() -> String {
@@ -264,7 +269,8 @@ fn decode_jwt_payload(token: &str) -> Option<Value> {
 
 fn extract_exp(token: &str) -> Option<i64> {
     let exp = decode_jwt_payload(token)?.get("exp")?.clone();
-    exp.as_i64().or_else(|| exp.as_f64().map(|value| value as i64))
+    exp.as_i64()
+        .or_else(|| exp.as_f64().map(|value| value as i64))
 }
 
 fn format_expiry(exp: Option<i64>) -> String {
@@ -283,9 +289,20 @@ fn format_expiry(exp: Option<i64>) -> String {
     let hours = diff.num_hours() % 24;
     let mins = diff.num_minutes() % 60;
     if days > 0 {
-        format!("{}d {}h {}m (until {})", days, hours, mins, exp_dt.to_rfc3339())
+        format!(
+            "{}d {}h {}m (until {})",
+            days,
+            hours,
+            mins,
+            exp_dt.to_rfc3339()
+        )
     } else {
-        format!("{}h {}m (until {})", diff.num_hours(), mins, exp_dt.to_rfc3339())
+        format!(
+            "{}h {}m (until {})",
+            diff.num_hours(),
+            mins,
+            exp_dt.to_rfc3339()
+        )
     }
 }
 
@@ -345,8 +362,12 @@ fn extract_credentials_from_cookies(cookies: &[Value]) -> Option<(String, String
 }
 
 fn find_free_port() -> Result<u16> {
-    let listener = TcpListener::bind((DEVTOOLS_HOST, 0)).context("failed to reserve a free port")?;
-    let port = listener.local_addr().context("failed to inspect free port")?.port();
+    let listener =
+        TcpListener::bind((DEVTOOLS_HOST, 0)).context("failed to reserve a free port")?;
+    let port = listener
+        .local_addr()
+        .context("failed to inspect free port")?
+        .port();
     drop(listener);
     Ok(port)
 }
@@ -365,10 +386,7 @@ fn find_in_path(candidates: &[&str]) -> Option<PathBuf> {
             continue;
         }
         let stdout = String::from_utf8_lossy(&output.stdout).into_owned();
-        let Some(line) = stdout
-            .lines()
-            .find(|line| !line.trim().is_empty())
-        else {
+        let Some(line) = stdout.lines().find(|line| !line.trim().is_empty()) else {
             continue;
         };
         let path = PathBuf::from(line.trim());
@@ -403,8 +421,17 @@ fn resolve_browser_executable(mode: BrowserMode) -> Result<PathBuf> {
     }
 
     let linux = match mode {
-        BrowserMode::Chrome => vec!["google-chrome", "google-chrome-stable", "chromium", "chromium-browser"],
-        BrowserMode::Edge => vec!["microsoft-edge", "microsoft-edge-stable", "microsoft-edge-beta"],
+        BrowserMode::Chrome => vec![
+            "google-chrome",
+            "google-chrome-stable",
+            "chromium",
+            "chromium-browser",
+        ],
+        BrowserMode::Edge => vec![
+            "microsoft-edge",
+            "microsoft-edge-stable",
+            "microsoft-edge-beta",
+        ],
         _ => Vec::new(),
     };
     if let Some(path) = find_in_path(&linux) {
@@ -479,7 +506,11 @@ async fn fetch_targets(port: u16) -> Result<Vec<DevtoolsTarget>> {
         .context("failed to parse browser targets JSON")
 }
 
-async fn wait_for_page_target(port: u16, crowdin_url: &str, deadline: std::time::Instant) -> Result<DevtoolsTarget> {
+async fn wait_for_page_target(
+    port: u16,
+    crowdin_url: &str,
+    deadline: std::time::Instant,
+) -> Result<DevtoolsTarget> {
     loop {
         if std::time::Instant::now() >= deadline {
             bail!("timed out waiting for browser page target")
@@ -488,7 +519,10 @@ async fn wait_for_page_target(port: u16, crowdin_url: &str, deadline: std::time:
         if let Some(target) = targets.into_iter().find(|target| {
             target.kind == "page"
                 && target.websocket_debugger_url.is_some()
-                && (target.url.contains("crowdin.com") || target.url == "about:blank" || target.url.is_empty() || target.url == crowdin_url)
+                && (target.url.contains("crowdin.com")
+                    || target.url == "about:blank"
+                    || target.url.is_empty()
+                    || target.url == crowdin_url)
         }) {
             return Ok(target);
         }
@@ -498,16 +532,21 @@ async fn wait_for_page_target(port: u16, crowdin_url: &str, deadline: std::time:
 
 async fn open_controlled_browser(
     mode: BrowserMode,
-    repo_paths: &RepoPaths,
+    repo_root: &Path,
     args: &Args,
     crowdin_url: &str,
 ) -> Result<(BrowserProcess, u16)> {
-    let user_data_dir = default_user_data_dir(repo_paths, args);
+    let user_data_dir = default_user_data_dir(repo_root, args);
     fs::create_dir_all(&user_data_dir)
         .with_context(|| format!("failed to create {}", user_data_dir.display()))?;
     let port = find_free_port()?;
     let executable = resolve_browser_executable(mode)?;
-    let launch = launch_args(crowdin_url, port, &user_data_dir, args.chrome_profile.as_deref());
+    let launch = launch_args(
+        crowdin_url,
+        port,
+        &user_data_dir,
+        args.chrome_profile.as_deref(),
+    );
     let process = BrowserProcess::spawn(&executable, &launch)?;
     Ok((process, port))
 }
@@ -542,7 +581,9 @@ async fn wait_for_cdp_credentials(
             let _ = client.command("Page.enable", json!({})).await?;
             let _ = client.command("Network.enable", json!({})).await?;
             if target.url != crowdin_url {
-                let _ = client.command("Page.navigate", json!({"url": crowdin_url})).await?;
+                let _ = client
+                    .command("Page.navigate", json!({"url": crowdin_url}))
+                    .await?;
             }
             connection = Some(client);
         }
@@ -566,7 +607,10 @@ async fn wait_for_cdp_credentials(
     }
 }
 
-async fn wait_for_cookie_store_credentials(args: &Args, crowdin_url: &str) -> Result<(String, String)> {
+async fn wait_for_cookie_store_credentials(
+    args: &Args,
+    crowdin_url: &str,
+) -> Result<(String, String)> {
     if args.open {
         webbrowser::open(crowdin_url).context("failed to open browser")?;
     }
@@ -621,14 +665,17 @@ async fn wait_for_cookie_store_credentials(args: &Args, crowdin_url: &str) -> Re
     }
 }
 
-async fn wait_for_browser_credentials(args: &Args, repo_paths: &RepoPaths) -> Result<(String, String)> {
+async fn wait_for_browser_credentials(args: &Args, repo_root: &Path) -> Result<(String, String)> {
     let crowdin_url = crowdin_url();
     match parse_browser_mode(args.browser.as_deref())? {
         mode @ (BrowserMode::Chrome | BrowserMode::Edge) => {
-            let (mut process, port) = open_controlled_browser(mode, repo_paths, args, &crowdin_url).await?;
+            // Chrome / Edge provide the most stable DevTools cookie path here.
+            let (mut process, port) =
+                open_controlled_browser(mode, repo_root, args, &crowdin_url).await?;
             wait_for_cdp_credentials(&mut process, port, &crowdin_url, args.timeout_secs).await
         }
         BrowserMode::Firefox | BrowserMode::Safari | BrowserMode::All => {
+            // Firefox / Safari rely on cookie stores because DevTools coverage varies by build.
             wait_for_cookie_store_credentials(args, &crowdin_url).await
         }
     }
@@ -648,8 +695,15 @@ async fn fetch_project_languages(cookie: &str, csrf_token: &str) -> Result<Vec<V
     let response = response
         .error_for_status()
         .context("project info request failed")?;
-    let root: Value = response.json().await.context("failed to parse project info JSON")?;
-    if !root.get("success").and_then(Value::as_bool).unwrap_or(false) {
+    let root: Value = response
+        .json()
+        .await
+        .context("failed to parse project info JSON")?;
+    if !root
+        .get("success")
+        .and_then(Value::as_bool)
+        .unwrap_or(false)
+    {
         bail!("Crowdin project info returned unsuccessful response");
     }
 
@@ -677,7 +731,12 @@ fn joined_groups(languages: &[Value]) -> Vec<String> {
     languages
         .iter()
         // Hypixel access is tied to joining at least one target language group.
-        .filter(|language| !language.get("can_join").and_then(Value::as_bool).unwrap_or(true))
+        .filter(|language| {
+            !language
+                .get("can_join")
+                .and_then(Value::as_bool)
+                .unwrap_or(true)
+        })
         .filter_map(|language| {
             Some(format!(
                 "{} ({})",
@@ -691,11 +750,11 @@ fn joined_groups(languages: &[Value]) -> Vec<String> {
 #[tokio::main]
 async fn main() -> Result<()> {
     let args = parse_args()?;
-    let repo_paths = RepoPaths::from_cwd()?;
+    let repo_root = repo_root()?;
     let env_file = args
         .env_file
         .clone()
-        .unwrap_or_else(|| repo_paths.crowdin_api_dir.join(".env"));
+        .unwrap_or_else(|| crowdin_api_dir().unwrap().join(".env"));
 
     if env_file.exists() {
         let _ = dotenvy::from_path(&env_file);
@@ -703,7 +762,10 @@ async fn main() -> Result<()> {
         let _ = dotenvy::dotenv();
     }
 
-    let mut cookie = args.cookie.clone().or_else(|| env::var("CROWDIN_COOKIE").ok());
+    let mut cookie = args
+        .cookie
+        .clone()
+        .or_else(|| env::var("CROWDIN_COOKIE").ok());
     let mut csrf = args
         .csrf_token
         .clone()
@@ -714,7 +776,8 @@ async fn main() -> Result<()> {
         if !wait_args.open {
             wait_args.open = true;
         }
-        let (detected_cookie, detected_csrf) = wait_for_browser_credentials(&wait_args, &repo_paths).await?;
+        let (detected_cookie, detected_csrf) =
+            wait_for_browser_credentials(&wait_args, &repo_root).await?;
         cookie.get_or_insert(detected_cookie);
         csrf.get_or_insert(detected_csrf);
     }
@@ -800,7 +863,10 @@ mod tests {
     #[test]
     fn test_launch_args() {
         let mut dir = std::env::temp_dir();
-        let nanos = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_nanos();
+        let nanos = SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap()
+            .as_nanos();
         dir.push(format!("crowdin_browser_profile_{}", nanos));
         let args = launch_args("https://crowdin.com/", 9222, &dir, Some("Default"));
         assert!(args.iter().any(|arg| arg == "--remote-debugging-port=9222"));

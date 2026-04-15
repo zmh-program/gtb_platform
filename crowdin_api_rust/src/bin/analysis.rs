@@ -2,7 +2,7 @@ use anyhow::{bail, Context, Result};
 use crowdin_api_rust::analysis::duplicates::find_duplicate_translations;
 use crowdin_api_rust::analysis::generate::{generate_output, write_json_pretty, write_versions};
 use crowdin_api_rust::analysis::load::{load_inputs, resolve_analysis_paths};
-use crowdin_api_rust::common::paths::RepoPaths;
+use crowdin_api_rust::common::crowdin_api_dir;
 use serde::Serialize;
 use std::env;
 use std::path::PathBuf;
@@ -61,10 +61,10 @@ fn parse_args() -> Result<Args> {
 
 fn main() -> Result<()> {
     let args = parse_args()?;
-    let repo = RepoPaths::from_cwd()?;
-    let paths = resolve_analysis_paths(&repo, args.out_dir.as_deref())?;
+    let crowdin_api_dir = crowdin_api_dir()?;
+    let paths = resolve_analysis_paths(args.out_dir.as_deref())?;
 
-    let inputs = load_inputs(&repo, &paths).context("failed to load analysis inputs")?;
+    let inputs = load_inputs(&crowdin_api_dir, &paths).context("failed to load analysis inputs")?;
     let duplicates =
         find_duplicate_translations(&inputs.all_translations, &inputs.config, &inputs.polyfill);
     let output = generate_output(&inputs.all_translations, &inputs.config, &duplicates);

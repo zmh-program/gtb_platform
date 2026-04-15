@@ -1,7 +1,27 @@
-use anyhow::{Context, Result};
+use anyhow::{anyhow, bail, Context, Result};
 use std::collections::BTreeMap;
 use std::fs;
-use std::path::Path;
+use std::path::{Path, PathBuf};
+
+pub fn repo_root() -> Result<PathBuf> {
+    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .canonicalize()
+        .context("failed to resolve crowdin_api_rust directory")?
+        .parent()
+        .map(PathBuf::from)
+        .ok_or_else(|| anyhow!("failed to resolve repository root"))
+}
+
+pub fn crowdin_api_dir() -> Result<PathBuf> {
+    let path = repo_root()?.join("crowdin_api");
+    if !path.join("conf").join("config.json").exists() {
+        bail!(
+            "Could not locate crowdin_api/conf/config.json under {}",
+            path.display()
+        );
+    }
+    Ok(path)
+}
 
 pub fn update_env_file(path: &Path, updates: &BTreeMap<String, String>) -> Result<()> {
     let mut final_lines = Vec::new();

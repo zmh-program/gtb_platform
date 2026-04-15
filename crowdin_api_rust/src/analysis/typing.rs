@@ -2,6 +2,8 @@ use crate::text::is_special_string;
 use crate::text::lcs_ratio;
 use std::cmp::Ordering;
 
+// Home row is cheapest, right hand is penalized, same-finger transitions are expensive,
+// and every shortcut implicitly ends with Enter.
 fn qwerty_layout(c: char) -> Option<(i32, i32, i32, i32)> {
     match c {
         '1' => Some((0, 0, 0, 0)),
@@ -105,7 +107,6 @@ pub fn calculate_typing_complexity(shortcut: &str, reference_text: Option<&str>)
             if !is_enter && i > 0 && cur == Some(sequence[i - 1]) {
                 score += 0.1;
             } else if hand != prev_hand {
-                // hand swap = no penalty
             } else {
                 let mut penalty = 0.5;
                 if finger == prev_finger {
