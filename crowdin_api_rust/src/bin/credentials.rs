@@ -751,6 +751,15 @@ fn print_joined_groups(languages: &[Value]) {
     println!("Meta Language options: {}", joined.join(", "));
 }
 
+fn language_id_string(language: &Value) -> Option<String> {
+    let id = language.get("id")?;
+    match id {
+        Value::String(value) => Some(value.clone()),
+        Value::Number(value) => Some(value.to_string()),
+        _ => None,
+    }
+}
+
 fn joined_groups(languages: &[Value]) -> Vec<String> {
     languages
         .iter()
@@ -765,7 +774,7 @@ fn joined_groups(languages: &[Value]) -> Vec<String> {
             Some(format!(
                 "{} ({})",
                 language.get("name")?.as_str()?,
-                language.get("id")?.as_i64()?
+                language_id_string(language)?
             ))
         })
         .collect()
@@ -869,6 +878,21 @@ mod tests {
             serde_json::json!({"name": "German", "id": 11, "can_join": true}),
         ]);
         assert_eq!(groups, vec!["Chinese Simplified (55)".to_string()]);
+    }
+
+    #[test]
+    fn test_joined_groups_with_string_id() {
+        let groups = joined_groups(&[
+            serde_json::json!({"name": "Chinese Simplified", "id": "55", "can_join": false}),
+            serde_json::json!({"name": "Chinese Traditional", "id": "56", "can_join": false}),
+        ]);
+        assert_eq!(
+            groups,
+            vec![
+                "Chinese Simplified (55)".to_string(),
+                "Chinese Traditional (56)".to_string()
+            ]
+        );
     }
 
     #[test]

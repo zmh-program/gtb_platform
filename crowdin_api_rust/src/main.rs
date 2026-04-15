@@ -8,11 +8,15 @@ use std::collections::HashMap;
 use std::env;
 use std::fs;
 use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
+use std::time::Instant;
 
 const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases/phrases_with_suggestions";
 const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_languages";
 const MAX_CONCURRENCY: usize = 10;
+const PAGE_PROGRESS_STEP: usize = 5;
+const THEME_PROGRESS_STEP: usize = 100;
 
 fn custom_filter_payload() -> String {
     // Keep this payload aligned with the request shape Crowdin accepts for bulk phrase queries.
@@ -297,6 +301,7 @@ impl CrowdinCrawler {
     }
 
     async fn crawl(&self) -> Result<Vec<OutputTheme>> {
+        let started_at = Instant::now();
         let first_page = self.get_crowdin_page(1).await?;
         let total_pages = extract_positive_usize(&first_page, "pages")
             .context("invalid `pages` in first phrases response")?;
@@ -314,12 +319,23 @@ impl CrowdinCrawler {
         )
         .context("failed to parse first page phrases")?;
 
+        eprintln!("crawler: fetched phrase pages 1/{total_pages}");
+
         if total_pages > 1 {
             let pages: Vec<usize> = (2..=total_pages).collect();
+            let page_progress = Arc::new(AtomicUsize::new(1));
             let page_results: Vec<(usize, Value)> = stream::iter(pages)
-                .map(|page| async move {
-                    let data = self.get_crowdin_page(page).await?;
-                    Ok::<(usize, Value), anyhow::Error>((page, data))
+                .map(|page| {
+                    let crawler = self.clone();
+                    let page_progress = page_progress.clone();
+                    async move {
+                        let data = crawler.get_crowdin_page(page).await?;
+                        let done = page_progress.fetch_add(1, Ordering::Relaxed) + 1;
+                        if should_log_progress(done, total_pages, PAGE_PROGRESS_STEP) {
+                            eprintln!("crawler: fetched phrase pages {done}/{total_pages}");
+                        }
+                        Ok::<(usize, Value), anyhow::Error>((page, data))
+                    }
                 })
                 .buffer_unordered(MAX_CONCURRENCY)
                 .try_collect()
@@ -340,11 +356,16 @@ impl CrowdinCrawler {
 
         let items = Arc::new(meta_items);
         let meta_map = Arc::new(meta_translations);
+        let theme_total = items.len();
+        let theme_progress = Arc::new(AtomicUsize::new(0));
+
+        eprintln!("crawler: fetching translations for {theme_total} themes");
 
         let crawled: Vec<OutputTheme> = stream::iter(items.iter().cloned())
             .map(|item| {
                 let crawler = self.clone();
                 let meta_map = meta_map.clone();
+                let theme_progress = theme_progress.clone();
                 async move {
                     let meta_translation = meta_map.get(&item.id).cloned().ok_or_else(|| {
                         anyhow!("missing meta translation for item id {}", item.id)
@@ -353,19 +374,33 @@ impl CrowdinCrawler {
                         .get_all_languages_for_translation(&item.id)
                         .await
                         .with_context(|| format!("failed all_languages for id {}", item.id))?;
-                    build_output_theme(
+                    let output = build_output_theme(
                         item,
                         meta_translation,
                         others,
                         crawler.language_order.as_ref(),
-                    )
+                    )?;
+                    let done = theme_progress.fetch_add(1, Ordering::Relaxed) + 1;
+                    if should_log_progress(done, theme_total, THEME_PROGRESS_STEP) {
+                        eprintln!("crawler: fetched theme translations {done}/{theme_total}");
+                    }
+                    Ok::<OutputTheme, anyhow::Error>(output)
                 }
             })
             .buffer_unordered(MAX_CONCURRENCY)
             .try_collect()
             .await?;
+        eprintln!(
+            "crawler: completed {} themes in {:.1}s",
+            crawled.len(),
+            started_at.elapsed().as_secs_f32()
+        );
         Ok(crawled)
     }
+}
+
+fn should_log_progress(done: usize, total: usize, step: usize) -> bool {
+    done == 1 || done == total || done.is_multiple_of(step)
 }
 
 fn parse_page_phrases(
