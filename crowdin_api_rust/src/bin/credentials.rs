@@ -310,6 +310,30 @@ fn quote_env_value(value: &str) -> String {
     format!("'{}'", value.replace('\'', "''"))
 }
 
+fn cookie_value<'a>(cookie_header: &'a str, name: &str) -> Option<&'a str> {
+    cookie_header
+        .split(';')
+        .map(str::trim)
+        .find_map(|part| part.strip_prefix(&format!("{name}=")))
+}
+
+fn credentials_are_fresh(cookie: Option<&str>, csrf: Option<&str>) -> bool {
+    let Some(cookie) = cookie else {
+        return false;
+    };
+    let Some(csrf) = csrf else {
+        return false;
+    };
+    let Some(token) = cookie_value(cookie, "token") else {
+        return false;
+    };
+
+    let now = Utc::now().timestamp();
+    let token_valid = extract_exp(token).is_some_and(|exp| exp > now);
+    let csrf_valid = extract_exp(csrf).map(|exp| exp > now).unwrap_or(true);
+    token_valid && csrf_valid
+}
+
 fn build_cookie_header(cookies: &[Value]) -> Option<String> {
     let parts: Vec<String> = cookies
         .iter()
@@ -771,15 +795,17 @@ async fn main() -> Result<()> {
         .clone()
         .or_else(|| env::var("CROWDIN_CSRF_TOKEN").ok());
 
-    if cookie.is_none() || csrf.is_none() {
+    let should_refresh = args.open || !credentials_are_fresh(cookie.as_deref(), csrf.as_deref());
+
+    if should_refresh {
         let mut wait_args = args.clone();
         if !wait_args.open {
             wait_args.open = true;
         }
         let (detected_cookie, detected_csrf) =
             wait_for_browser_credentials(&wait_args, &repo_root).await?;
-        cookie.get_or_insert(detected_cookie);
-        csrf.get_or_insert(detected_csrf);
+        cookie = Some(detected_cookie);
+        csrf = Some(detected_csrf);
     }
 
     let cookie = cookie.ok_or_else(|| anyhow!("missing Crowdin cookie"))?;
@@ -858,6 +884,34 @@ mod tests {
         assert!(cookie.contains("token="));
         assert!(cookie.contains("csrf_token="));
         assert_eq!(csrf_value, csrf);
+    }
+
+    #[test]
+    fn test_cookie_value() {
+        let header = "a=1; token=abc; csrf_token=def";
+        assert_eq!(cookie_value(header, "token"), Some("abc"));
+        assert_eq!(cookie_value(header, "csrf_token"), Some("def"));
+        assert_eq!(cookie_value(header, "missing"), None);
+    }
+
+    #[test]
+    fn test_credentials_are_fresh() {
+        let token = "eyJhbGciOiJub25lIn0.eyJleHAiOjQxMDI0NDQ4MDB9.";
+        let csrf = "eyJhbGciOiJub25lIn0.eyJleHAiOjQxMDI0NDQ4MDB9.";
+        let expired = "eyJhbGciOiJub25lIn0.eyJleHAiOjEwMDAwMDAwMDB9.";
+
+        assert!(credentials_are_fresh(
+            Some(&format!("token={token}; other=1")),
+            Some(csrf)
+        ));
+        assert!(!credentials_are_fresh(
+            Some(&format!("token={expired}; other=1")),
+            Some(csrf)
+        ));
+        assert!(!credentials_are_fresh(
+            Some(&format!("token={token}; other=1")),
+            Some(expired)
+        ));
     }
 
     #[test]
