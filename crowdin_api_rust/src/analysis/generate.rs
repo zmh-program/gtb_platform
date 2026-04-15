@@ -3,11 +3,12 @@ use crate::analysis::types::{
     SourceTheme,
 };
 use crate::analysis::typing::{cmp_shortcut, cmp_shortcut_with_theme};
-use crate::text::{formatted_translation, is_special_string, unique_preserve_order};
+use crate::text::{formatted_translation, is_special_string};
 use anyhow::{Context, Result};
 use chrono::Local;
+use indexmap::IndexMap;
 use serde_json::{Map, Value};
-use std::collections::{BTreeMap, HashMap};
+use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::Path;
 
@@ -22,7 +23,8 @@ pub fn find_shortcut_for_theme(
     theme_data: &SourceTheme,
     duplicates: &DuplicatesMap,
 ) -> Option<String> {
-    let mut all_candidates = Vec::new();
+    let mut best: Option<String> = None;
+    let mut seen = HashSet::new();
 
     for translation in &theme_data.translations {
         if !translation.is_approved {
@@ -33,22 +35,24 @@ pub fn find_shortcut_for_theme(
             if candidate.trim().is_empty() || is_special_string(&candidate) {
                 continue;
             }
-            all_candidates.push(candidate);
+            if !seen.insert(candidate.clone()) {
+                continue;
+            }
+            let replace = best
+                .as_ref()
+                .map(|current| {
+                    cmp_shortcut_with_theme(&candidate, current, &theme_data.theme, |k| {
+                        duplicate_index_cost(k, duplicates, &theme_data.theme)
+                    })
+                    .is_lt()
+                })
+                .unwrap_or(true);
+            if replace {
+                best = Some(candidate);
+            }
         }
     }
-
-    if all_candidates.is_empty() {
-        return None;
-    }
-
-    let mut all_candidates = unique_preserve_order(all_candidates);
-    all_candidates.sort_by(|a, b| {
-        cmp_shortcut_with_theme(a, b, &theme_data.theme, |k| {
-            duplicate_index_cost(k, duplicates, &theme_data.theme)
-        })
-    });
-
-    let best = all_candidates.first()?.clone();
+    let best = best?;
     let min_theme_len = formatted_translation(Some(&theme_data.theme), false)
         .into_iter()
         .map(|t| t.len())
@@ -108,19 +112,16 @@ pub fn generate_output(
                     .then_with(|| a.multiword.cmp(&b.multiword))
             });
 
-            let mut translations = BTreeMap::new();
+            let mut translations = IndexMap::new();
             for translation in &theme_data.translations {
                 let Some(code) = lang_map.get(translation.language_id.as_str()) else {
-                    continue;
-                };
-                let Some(text) = translation.text.clone() else {
                     continue;
                 };
 
                 translations.insert(
                     (*code).to_string(),
                     OutputTranslation {
-                        translation: text,
+                        translation: translation.text.clone(),
                         is_approved: translation.is_approved,
                         approved_at: translation.approved_at.clone(),
                     },

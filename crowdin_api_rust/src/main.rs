@@ -296,10 +296,8 @@ impl CrowdinCrawler {
         let first_page = self.get_crowdin_page(1).await?;
         let total_pages = extract_positive_usize(&first_page, "pages")
             .context("invalid `pages` in first phrases response")?;
-        let found = extract_positive_usize(&first_page, "found")
+        extract_positive_usize(&first_page, "found")
             .context("invalid `found` in first phrases response")?;
-
-        println!("Found {} phrases across {} pages.", found, total_pages);
 
         let mut meta_items = Vec::new();
         let mut meta_translations: HashMap<String, OutputTranslation> = HashMap::new();
@@ -311,7 +309,6 @@ impl CrowdinCrawler {
             &mut meta_translations,
         )
         .context("failed to parse first page phrases")?;
-        println!("Fetched metadata page 1/{}.", total_pages);
 
         if total_pages > 1 {
             let pages: Vec<usize> = (2..=total_pages).collect();
@@ -334,14 +331,8 @@ impl CrowdinCrawler {
                     &mut meta_translations,
                 )
                 .with_context(|| format!("failed to parse phrases page {}", page))?;
-                println!("Fetched metadata page {}/{}.", page, total_pages);
             }
         }
-
-        println!(
-            "Metadata fetch complete. {} items queued.",
-            meta_items.len()
-        );
 
         let items = Arc::new(meta_items);
         let meta_map = Arc::new(meta_translations);
@@ -369,11 +360,6 @@ impl CrowdinCrawler {
             .buffer_unordered(MAX_CONCURRENCY)
             .try_collect()
             .await?;
-
-        println!(
-            "All-language fetch complete. {} items built.",
-            crawled.len()
-        );
         Ok(crawled)
     }
 }
@@ -622,10 +608,6 @@ fn write_output(path: &Path, data: &[OutputTheme]) -> Result<()> {
 #[tokio::main]
 async fn main() -> Result<()> {
     let paths = resolve_paths()?;
-    println!("Using config: {}", paths.config_file.display());
-    println!("Using env: {}", paths.env_file.display());
-    println!("Output path: {}", paths.output_file.display());
-
     let mut config: Config = read_json_file(&paths.config_file)?;
     config.meta_language_id =
         parse_meta_language_id(&env::var("META_LANGUAGE_ID").unwrap_or(config.meta_language_id));
@@ -634,11 +616,5 @@ async fn main() -> Result<()> {
     let crawler = CrowdinCrawler::new(Arc::new(config), Arc::new(creds))?;
     let data = crawler.crawl().await?;
     write_output(&paths.output_file, &data)?;
-
-    println!(
-        "Done. Wrote {} items to {}",
-        data.len(),
-        paths.output_file.display()
-    );
     Ok(())
 }

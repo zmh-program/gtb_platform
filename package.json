@@ -9,9 +9,12 @@
     "lint": "next lint",
     "prettier": "prettier --write ./**/*.{js,jsx,ts,tsx,json}",
     "format": "isort crowdin_api && black crowdin_api",
-    "browser": "cd crowdin_api && python browser_script.py",
-    "crawler": "cd crowdin_api && python crawler.py",
-    "analysis": "cd crowdin_api && python analysis.py",
+    "browser": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin credentials -- --open",
+    "browser:py": "cd crowdin_api && python browser_script.py",
+    "crawler": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin crowdin_api_rust",
+    "crawler:py": "cd crowdin_api && python crawler.py",
+    "analysis": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin analysis",
+    "analysis:py": "cd crowdin_api && python analysis.py",
     "ui": "npx shadcn@latest add"
   },
   "dependencies": {

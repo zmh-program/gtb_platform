@@ -15,16 +15,16 @@ pub fn rm_accents(input: &str) -> String {
     }
 
     input
-        .replace('谋', "i")
-        .replace('艂', "l")
-        .replace('艁', "l")
+        .replace('ı', "i")
+        .replace('ł', "l")
+        .replace('Ł', "l")
         .nfkd()
         .filter(|c| !is_combining_mark(*c))
         .collect()
 }
 
 pub fn formatted_raw_translation(raw_text: &str) -> String {
-    raw_text.to_lowercase().replace('谋', "i")
+    raw_text.to_lowercase().replace('ı', "i")
 }
 
 pub fn is_accented(input: &str) -> bool {
@@ -37,7 +37,7 @@ pub fn is_special_string(input: &str) -> bool {
         || input
             .chars()
             .any(|c| (0x0400..=0x04FF).contains(&(c as u32)))
-        || input.chars().any(|c| "酶忙氓脴脝脜".contains(c))
+        || input.chars().any(|c| "øæåØÆÅ".contains(c))
 }
 
 pub fn get_all_remove_spaces_translations(raw_text: &str) -> Vec<String> {
@@ -88,14 +88,14 @@ pub fn formatted_translation(raw_text: Option<&str>, is_completion: bool) -> Vec
 }
 
 pub fn clean_translation(raw_text: &str) -> String {
-    let mut text = raw_text.to_lowercase().replace('谋', "i");
+    let mut text = raw_text.to_lowercase().replace('ı', "i");
     text = rm_accents(&text).replace(' ', "");
     text.trim_end_matches('s').to_string()
 }
 
 pub fn is_match_clean_translation(text: &str, clean_text: &str) -> bool {
-    let text = text.to_lowercase().replace('谋', "i");
-    let clean_text = clean_text.to_lowercase().replace('谋', "i");
+    let text = text.to_lowercase().replace('ı', "i");
+    let clean_text = clean_text.to_lowercase().replace('ı', "i");
 
     text == clean_text
         || rm_accents(&text) == rm_accents(&clean_text)

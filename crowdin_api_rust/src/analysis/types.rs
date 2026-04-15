@@ -1,6 +1,7 @@
+use indexmap::IndexMap;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
-use std::collections::{BTreeMap, HashMap, HashSet};
+use std::collections::HashMap;
 use std::path::PathBuf;
 
 #[derive(Debug, Clone, Deserialize)]
@@ -39,7 +40,7 @@ pub struct OutputTheme {
     pub theme: String,
     pub shortcut: Option<String>,
     pub multiwords: Vec<MultiwordOutput>,
-    pub translations: BTreeMap<String, OutputTranslation>,
+    pub translations: IndexMap<String, OutputTranslation>,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -56,20 +57,17 @@ pub struct OccurrenceOutput {
 
 #[derive(Debug, Clone, Serialize)]
 pub struct OutputTranslation {
-    pub translation: String,
+    pub translation: Option<String>,
     pub is_approved: bool,
     pub approved_at: Option<String>,
 }
 
 pub type DuplicateEntry = (String, String, String); // (theme, language/ref, original_text)
-pub type DuplicatesMap = BTreeMap<String, Vec<DuplicateEntry>>;
+pub type DuplicatesMap = IndexMap<String, Vec<DuplicateEntry>>;
 
 #[derive(Debug, Clone)]
 pub struct AnalysisInputs {
     pub config: Config,
-    pub themes_whitelist: HashSet<String>,
-    pub excluded_themes: HashSet<String>,
-    pub completions: HashMap<String, Vec<String>>,
     pub polyfill: HashMap<String, HashMap<String, String>>,
     pub all_translations: Vec<SourceTheme>,
 }

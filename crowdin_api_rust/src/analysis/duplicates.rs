@@ -1,9 +1,9 @@
 use crate::analysis::types::{Config, DuplicateEntry, DuplicatesMap, SourceTheme};
 use crate::analysis::typing::cmp_shortcut;
 use crate::text::{
-    clean_translation, formatted_raw_translation, formatted_translation, is_accented,
-    is_match_clean_translation,
+    clean_translation, formatted_translation, is_accented, is_match_clean_translation,
 };
+use indexmap::IndexMap;
 use std::collections::{BTreeMap, BTreeSet, HashMap, HashSet};
 
 fn is_match_ref(source: &[DuplicateEntry], target: &[DuplicateEntry]) -> bool {
@@ -89,7 +89,7 @@ pub fn find_duplicate_translations(
     config: &Config,
     polyfill: &HashMap<String, HashMap<String, String>>,
 ) -> DuplicatesMap {
-    let mut duplicates: BTreeMap<String, Vec<DuplicateEntry>> = BTreeMap::new();
+    let mut duplicates: DuplicatesMap = IndexMap::new();
     let lang_map: HashMap<&str, &str> = config
         .target_languages
         .iter()
@@ -128,11 +128,6 @@ pub fn find_duplicate_translations(
             let Some(lang_name) = lang_map.get(trans.language_id.as_str()) else {
                 continue;
             };
-
-            if is_accented(&formatted_raw_translation(text)) {
-                // Python version stores this for analysis; Rust re-derives special cases directly via duplicates map.
-            }
-
             let is_completion = *lang_name == "Complement";
             for normalized_text in formatted_translation(Some(text), is_completion) {
                 duplicates.entry(normalized_text).or_default().push((
@@ -177,12 +172,12 @@ pub fn find_duplicate_translations(
         .collect();
 
     for k in get_useless_multiwords(&filtered_duplicates) {
-        filtered_duplicates.remove(&k);
+        filtered_duplicates.shift_remove(&k);
     }
 
-    let mut theme_grouped = BTreeMap::new();
+    let mut theme_grouped: Vec<(String, Vec<DuplicateEntry>)> = Vec::new();
     for (norm_text, entries) in filtered_duplicates {
-        let mut theme_lang_map: BTreeMap<String, Vec<(String, String)>> = BTreeMap::new();
+        let mut theme_lang_map: IndexMap<String, Vec<(String, String)>> = IndexMap::new();
         for (theme, lang, orig_text) in entries {
             theme_lang_map
                 .entry(theme)
@@ -210,11 +205,12 @@ pub fn find_duplicate_translations(
             .collect::<HashSet<_>>()
             .len();
         if theme_count > 1 {
-            theme_grouped.insert(norm_text, combined_entries);
+            theme_grouped.push((norm_text, combined_entries));
         }
     }
 
-    theme_grouped
+    theme_grouped.sort_by(|a, b| a.0.cmp(&b.0));
+    theme_grouped.into_iter().collect()
 }
 
 #[cfg(test)]
@@ -223,7 +219,7 @@ mod tests {
 
     #[test]
     fn test_get_useless_multiwords_prefers_broader_match() {
-        let mut d: DuplicatesMap = BTreeMap::new();
+        let mut d: DuplicatesMap = IndexMap::new();
         d.insert(
             "cat".into(),
             vec![

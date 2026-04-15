@@ -150,7 +150,6 @@ pub fn cmp_shortcut(a: &str, b: &str) -> Ordering {
     ka.0.cmp(&kb.0)
         .then(ka.1.cmp(&kb.1))
         .then_with(|| ka.2.partial_cmp(&kb.2).unwrap_or(Ordering::Equal))
-        .then_with(|| a.cmp(b))
 }
 
 pub fn cmp_shortcut_with_theme(
@@ -176,7 +175,6 @@ pub fn cmp_shortcut_with_theme(
         .then(ka.1.cmp(&kb.1))
         .then(ka.2.cmp(&kb.2))
         .then_with(|| ka.3.partial_cmp(&kb.3).unwrap_or(Ordering::Equal))
-        .then_with(|| a.cmp(b))
 }
 
 #[cfg(test)]

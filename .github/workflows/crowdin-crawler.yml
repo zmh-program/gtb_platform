@@ -51,11 +51,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -67,21 +62,29 @@ jobs:
           node-version: "20"
           cache: "pnpm"
 
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: crowdin_api_rust
+
       - name: Install dependencies
-        run: |
-          cd crowdin_api
-          pip install -r requirements.txt || pip install requests
-          pnpm install
+        run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
+
+      - name: Build Rust binaries
+        run: cargo build --manifest-path crowdin_api_rust/Cargo.toml --quiet --locked --bin crowdin_api_rust --bin analysis
 
       - name: Run crawler
         env:
           CROWDIN_COOKIE: ${{ inputs.crowdin_cookie || secrets.CROWDIN_COOKIE }}
           CROWDIN_CSRF_TOKEN: ${{ inputs.crowdin_csrf_token || secrets.CROWDIN_CSRF_TOKEN }}
           META_LANGUAGE_ID: ${{ inputs.meta_language_id || 'Chinese Simplified (55)' }}
-        run: pnpm crawler
+        run: ./crowdin_api_rust/target/debug/crowdin_api_rust
 
       - name: Run analysis
-        run: pnpm analysis
+        run: ./crowdin_api_rust/target/debug/analysis
 
       - name: Run prettier
         run: pnpm prettier
@@ -99,46 +102,56 @@ jobs:
         if: steps.check_changes.outputs.has_changes == 'true'
         id: change_summary
         run: |
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import json
-          import subprocess
-          from pathlib import Path
+          node - <<'NODE' >> "$GITHUB_OUTPUT"
+          const fs = require("fs");
+          const { execFileSync } = require("child_process");
 
-          current = json.loads(Path("lib/source/translations-data.json").read_text(encoding="utf-8"))
+          const current = JSON.parse(fs.readFileSync("lib/source/translations-data.json", "utf8"));
+          let previous = [];
+          try {
+            previous = JSON.parse(
+              execFileSync("git", ["show", "HEAD:lib/source/translations-data.json"], {
+                encoding: "utf8",
+              })
+            );
+          } catch {}
 
-          try:
-              previous = json.loads(
-                  subprocess.check_output(
-                      ["git", "show", "HEAD:lib/source/translations-data.json"],
-                      text=True,
-                  )
-              )
-          except subprocess.CalledProcessError:
-              previous = []
+          const currentMap = new Map(current.map((item) => [item.theme, item]));
+          const previousMap = new Map(previous.map((item) => [item.theme, item]));
+          const themes = [...new Set([...currentMap.keys(), ...previousMap.keys()])].sort();
 
-          current_map = {item["theme"]: item for item in current}
-          previous_map = {item["theme"]: item for item in previous}
+          let changedThemes = 0;
+          let changedTranslations = 0;
 
-          changed_themes = 0
-          changed_translations = 0
+          for (const theme of themes) {
+            const currentItem = currentMap.get(theme);
+            const previousItem = previousMap.get(theme);
 
-          for theme in sorted(set(current_map) | set(previous_map)):
-              current_item = current_map.get(theme)
-              previous_item = previous_map.get(theme)
+            if (JSON.stringify(currentItem) !== JSON.stringify(previousItem)) {
+              changedThemes += 1;
+            }
 
-              if current_item != previous_item:
-                  changed_themes += 1
+            const currentTranslations = currentItem?.translations ?? {};
+            const previousTranslations = previousItem?.translations ?? {};
+            const languages = new Set([
+              ...Object.keys(currentTranslations),
+              ...Object.keys(previousTranslations),
+            ]);
 
-              current_translations = (current_item or {}).get("translations", {})
-              previous_translations = (previous_item or {}).get("translations", {})
+            for (const language of languages) {
+              if (
+                JSON.stringify(currentTranslations[language]) !==
+                JSON.stringify(previousTranslations[language])
+              ) {
+                changedTranslations += 1;
+              }
+            }
+          }
 
-              for language in set(current_translations) | set(previous_translations):
-                  if current_translations.get(language) != previous_translations.get(language):
-                      changed_translations += 1
-
-          summary = f"{changed_themes} themes, {changed_translations} translations"
-          print(f"commit_message=chore(crowdin): sync translations db ({summary})")
-          PY
+          process.stdout.write(
+            `commit_message=chore(crowdin): sync translations db (${changedThemes} themes, ${changedTranslations} translations)\n`
+          );
+          NODE
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'

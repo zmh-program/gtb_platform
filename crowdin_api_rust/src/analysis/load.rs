@@ -62,9 +62,8 @@ fn read_config(crowdin_api_dir: &Path) -> Result<Config> {
     read_json_file(&crowdin_api_dir.join("conf").join("config.json"))
 }
 
-fn read_themes(crowdin_api_dir: &Path) -> Result<HashSet<String>> {
-    let themes: Vec<String> = read_json_file(&crowdin_api_dir.join("conf").join("themes.json"))?;
-    Ok(themes.into_iter().map(|t| t.to_lowercase()).collect())
+fn read_themes(crowdin_api_dir: &Path) -> Result<Vec<String>> {
+    read_json_file(&crowdin_api_dir.join("conf").join("themes.json"))
 }
 
 fn read_excluded_themes(crowdin_api_dir: &Path) -> Result<HashSet<String>> {
@@ -109,18 +108,46 @@ fn mix_completions(theme: &SourceTheme, completions: &HashMap<String, Vec<String
 
 fn filter_and_mix_translations(
     raw: Vec<SourceTheme>,
-    themes_whitelist: &HashSet<String>,
+    valid_themes: &[String],
     excluded_themes: &HashSet<String>,
     completions: &HashMap<String, Vec<String>>,
 ) -> Vec<SourceTheme> {
+    let valid_lower: HashSet<String> = valid_themes
+        .iter()
+        .map(|theme| theme.to_lowercase())
+        .collect();
     let mut out: Vec<SourceTheme> = raw
         .iter()
         .filter(|t| {
-            themes_whitelist.contains(&t.theme.to_lowercase())
-                && !excluded_themes.contains(&t.theme)
+            valid_lower.contains(&t.theme.to_lowercase()) && !excluded_themes.contains(&t.theme)
         })
         .map(|t| mix_completions(t, completions))
         .collect();
+    let found_lower: HashSet<String> = out.iter().map(|theme| theme.theme.to_lowercase()).collect();
+    let missing: Vec<String> = valid_themes
+        .iter()
+        .filter(|theme| {
+            !found_lower.contains(&theme.to_lowercase()) && !excluded_themes.contains(*theme)
+        })
+        .cloned()
+        .collect();
+
+    if !missing.is_empty() {
+        println!(
+            "Missing {} themes from Crowdin (polyfilled):",
+            missing.len()
+        );
+        for theme in &missing {
+            println!("  - {}", theme);
+        }
+
+        out.extend(missing.into_iter().map(|theme| SourceTheme {
+            id: serde_json::Value::from(-1),
+            theme,
+            translations: Vec::new(),
+        }));
+    }
+
     out.sort_by(|a, b| a.theme.to_lowercase().cmp(&b.theme.to_lowercase()));
     out
 }
@@ -134,19 +161,16 @@ pub fn load_inputs(repo: &RepoPaths, paths: &AnalysisPaths) -> Result<AnalysisIn
     }
 
     let config = read_config(&repo.crowdin_api_dir)?;
-    let themes_whitelist = read_themes(&repo.crowdin_api_dir)?;
+    let valid_themes = read_themes(&repo.crowdin_api_dir)?;
     let excluded_themes = read_excluded_themes(&repo.crowdin_api_dir)?;
     let completions = read_completions(&repo.crowdin_api_dir)?;
     let polyfill = read_polyfill(&repo.crowdin_api_dir)?;
     let raw = read_source(&paths.source_input)?;
     let all_translations =
-        filter_and_mix_translations(raw, &themes_whitelist, &excluded_themes, &completions);
+        filter_and_mix_translations(raw, &valid_themes, &excluded_themes, &completions);
 
     Ok(AnalysisInputs {
         config,
-        themes_whitelist,
-        excluded_themes,
-        completions,
         polyfill,
         all_translations,
     })
