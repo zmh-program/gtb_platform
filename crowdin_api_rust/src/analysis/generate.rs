@@ -7,6 +7,7 @@ use crate::text::{formatted_translation, is_special_string};
 use anyhow::{Context, Result};
 use chrono::Local;
 use indexmap::IndexMap;
+use rayon::prelude::*;
 use serde_json::{Map, Value};
 use std::collections::{HashMap, HashSet};
 use std::fs;
@@ -17,6 +18,35 @@ fn duplicate_index_cost(shortcut: &str, duplicates: &DuplicatesMap, theme_name: 
         .get(shortcut)
         .and_then(|items| items.iter().position(|(theme, _, _)| theme == theme_name))
         .unwrap_or(999)
+}
+
+fn build_multiwords_by_theme(duplicates: &DuplicatesMap) -> HashMap<&str, Vec<MultiwordOutput>> {
+    let mut grouped = HashMap::new();
+
+    for (multiword, occurrences) in duplicates {
+        let output = MultiwordOutput {
+            multiword: multiword.clone(),
+            occurrences: occurrences
+                .iter()
+                .map(|(theme, reference, _)| OccurrenceOutput {
+                    theme: theme.clone(),
+                    reference: reference.clone(),
+                })
+                .collect(),
+        };
+        let mut seen = HashSet::new();
+
+        for (theme, _, _) in occurrences {
+            if seen.insert(theme.as_str()) {
+                grouped
+                    .entry(theme.as_str())
+                    .or_insert_with(Vec::new)
+                    .push(output.clone());
+            }
+        }
+    }
+
+    grouped
 }
 
 pub fn find_shortcut_for_theme(
@@ -76,33 +106,16 @@ pub fn generate_output(
         .iter()
         .map(|lang| (lang.id.as_str(), lang.code.as_str()))
         .collect();
+    let multiwords_by_theme = build_multiwords_by_theme(duplicates);
 
     all_translations
-        .iter()
+        .par_iter()
         .map(|theme_data| {
             let shortcut = find_shortcut_for_theme(theme_data, duplicates);
-
-            let mut multiwords: Vec<MultiwordOutput> = duplicates
-                .iter()
-                .filter_map(|(mw, occurrences)| {
-                    let contains_theme = occurrences
-                        .iter()
-                        .any(|(theme, _, _)| theme.eq_ignore_ascii_case(&theme_data.theme));
-                    if !contains_theme {
-                        return None;
-                    }
-                    Some(MultiwordOutput {
-                        multiword: mw.clone(),
-                        occurrences: occurrences
-                            .iter()
-                            .map(|(theme, reference, _)| OccurrenceOutput {
-                                theme: theme.clone(),
-                                reference: reference.clone(),
-                            })
-                            .collect(),
-                    })
-                })
-                .collect();
+            let mut multiwords = multiwords_by_theme
+                .get(theme_data.theme.as_str())
+                .cloned()
+                .unwrap_or_default();
 
             multiwords.sort_by(|a, b| {
                 b.occurrences
