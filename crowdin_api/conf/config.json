@@ -4,6 +4,12 @@
   "meta_language_id": "55",
   "target_languages": [
     {
+      "id": "41",
+      "name": "Russian",
+      "code": "ru",
+      "file": "en_ru.json"
+    },
+    {
       "id": "55",
       "name": "Chinese Simplified",
       "code": "zh_cn",
@@ -110,12 +116,6 @@
       "name": "Romanian",
       "code": "ro",
       "file": "en_ro.json"
-    },
-    {
-      "id": "41",
-      "name": "Russian",
-      "code": "ru",
-      "file": "en_ru.json"
     },
     {
       "id": "3",

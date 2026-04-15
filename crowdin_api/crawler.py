@@ -144,7 +144,15 @@ def get_crowdin_filed_all_languages(
     if not res.get("success", True):
         raise Exception(res.get("msg", "Unknown error"))
 
-    return res.get("other", [])
+    merged = [*res.get("assistance", []), *res.get("other", [])]
+    deduped = {}
+    for item in merged:
+        language_id = item.get("language_id")
+        if language_id is None or language_id in deduped:
+            continue
+        deduped[language_id] = item
+
+    return list(deduped.values())
 
 
 def get_total_pages(project_id, file_id, cookie, csrf_token, target_language_id):
@@ -294,8 +302,12 @@ def fetch_crowdin_all_languages(
     csrf_token: str,
     meta: List[Dict],
     meta_translations: Dict[str, str],
+    target_languages: List[Dict],
 ) -> List[Dict]:
     parsed_items = []
+    language_order = {
+        str(language["id"]): index for index, language in enumerate(target_languages)
+    }
 
     with Progress(
         SpinnerColumn(),
@@ -315,12 +327,25 @@ def fetch_crowdin_all_languages(
                 csrf_token,
             )
 
-            return parse_all_languages(
+            parsed = parse_all_languages(
                 item["id"],
                 item["theme"],
                 result,
                 meta_translation,
             )
+
+            parsed["translations"] = sorted(
+                parsed["translations"],
+                key=lambda translation: (
+                    language_order.get(
+                        str(translation["language_id"]),
+                        len(language_order),
+                    ),
+                    str(translation["language_id"]),
+                ),
+            )
+
+            return parsed
 
         with ThreadPoolExecutor(max_workers=10) as executor:
             futures = [
@@ -346,6 +371,7 @@ def store_all_translations(
     cookie: str,
     csrf_token: str,
     meta_language_id: str,
+    target_languages: List[Dict],
     **kwargs,
 ) -> Dict[str, float]:
     meta, meta_translations = fetch_crowdin_translations(
@@ -363,6 +389,7 @@ def store_all_translations(
         csrf_token,
         meta,
         meta_translations,
+        target_languages,
     )
 
 
