@@ -1,12 +1,14 @@
 use anyhow::{anyhow, bail, Context, Result};
 use crowdin_api_rust::common::crowdin_api_dir;
 use futures::{stream, StreamExt, TryStreamExt};
+use indicatif::{ProgressBar, ProgressStyle};
 use reqwest::{header, Client};
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::collections::HashMap;
 use std::env;
 use std::fs;
+use std::io::{self, IsTerminal};
 use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
@@ -14,9 +16,32 @@ use std::time::Instant;
 
 const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases/phrases_with_suggestions";
 const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_languages";
-const MAX_CONCURRENCY: usize = 10;
+const DEFAULT_CONCURRENCY: usize = 16;
+const MAX_CONCURRENCY: usize = 64;
 const PAGE_PROGRESS_STEP: usize = 5;
 const THEME_PROGRESS_STEP: usize = 100;
+
+fn progress_bar(total: usize, template: &str) -> ProgressBar {
+    let progress = if io::stderr().is_terminal() {
+        ProgressBar::new(total as u64)
+    } else {
+        ProgressBar::hidden()
+    };
+    progress.set_style(
+        ProgressStyle::with_template(template)
+            .expect("valid progress template")
+            .progress_chars("=> "),
+    );
+    progress
+}
+
+fn crawler_concurrency() -> usize {
+    env::var("CROWDIN_MAX_CONCURRENCY")
+        .ok()
+        .and_then(|value| value.parse::<usize>().ok())
+        .map(|value| value.clamp(1, MAX_CONCURRENCY))
+        .unwrap_or(DEFAULT_CONCURRENCY)
+}
 
 fn custom_filter_payload() -> String {
     // Keep this payload aligned with the request shape Crowdin accepts for bulk phrase queries.
@@ -302,6 +327,8 @@ impl CrowdinCrawler {
 
     async fn crawl(&self) -> Result<Vec<OutputTheme>> {
         let started_at = Instant::now();
+        let interactive = io::stderr().is_terminal();
+        let concurrency = crawler_concurrency();
         let first_page = self.get_crowdin_page(1).await?;
         let total_pages = extract_positive_usize(&first_page, "pages")
             .context("invalid `pages` in first phrases response")?;
@@ -319,25 +346,37 @@ impl CrowdinCrawler {
         )
         .context("failed to parse first page phrases")?;
 
-        eprintln!("crawler: fetched phrase pages 1/{total_pages}");
+        let page_bar = progress_bar(
+            total_pages,
+            "pages  [{bar:32.cyan/blue}] {pos:>3}/{len:3} {elapsed_precise}",
+        );
+        page_bar.set_position(1);
+        if !interactive {
+            eprintln!("crawler: using concurrency {concurrency}");
+            eprintln!("crawler: fetched phrase pages 1/{total_pages}");
+        }
 
         if total_pages > 1 {
             let pages: Vec<usize> = (2..=total_pages).collect();
             let page_progress = Arc::new(AtomicUsize::new(1));
+            let page_bar = page_bar.clone();
             let page_results: Vec<(usize, Value)> = stream::iter(pages)
                 .map(|page| {
                     let crawler = self.clone();
                     let page_progress = page_progress.clone();
+                    let page_bar = page_bar.clone();
                     async move {
                         let data = crawler.get_crowdin_page(page).await?;
                         let done = page_progress.fetch_add(1, Ordering::Relaxed) + 1;
-                        if should_log_progress(done, total_pages, PAGE_PROGRESS_STEP) {
+                        if interactive {
+                            page_bar.set_position(done as u64);
+                        } else if should_log_progress(done, total_pages, PAGE_PROGRESS_STEP) {
                             eprintln!("crawler: fetched phrase pages {done}/{total_pages}");
                         }
                         Ok::<(usize, Value), anyhow::Error>((page, data))
                     }
                 })
-                .buffer_unordered(MAX_CONCURRENCY)
+                .buffer_unordered(concurrency)
                 .try_collect()
                 .await?;
 
@@ -353,19 +392,29 @@ impl CrowdinCrawler {
                 .with_context(|| format!("failed to parse phrases page {}", page))?;
             }
         }
+        if interactive {
+            page_bar.finish_with_message(format!("pages  done ({total_pages} pages)"));
+        }
 
         let items = Arc::new(meta_items);
         let meta_map = Arc::new(meta_translations);
         let theme_total = items.len();
         let theme_progress = Arc::new(AtomicUsize::new(0));
+        let theme_bar = progress_bar(
+            theme_total,
+            "themes [{bar:32.green/blue}] {pos:>4}/{len:4} {elapsed_precise}",
+        );
 
-        eprintln!("crawler: fetching translations for {theme_total} themes");
+        if !interactive {
+            eprintln!("crawler: fetching translations for {theme_total} themes");
+        }
 
         let crawled: Vec<OutputTheme> = stream::iter(items.iter().cloned())
             .map(|item| {
                 let crawler = self.clone();
                 let meta_map = meta_map.clone();
                 let theme_progress = theme_progress.clone();
+                let theme_bar = theme_bar.clone();
                 async move {
                     let meta_translation = meta_map.get(&item.id).cloned().ok_or_else(|| {
                         anyhow!("missing meta translation for item id {}", item.id)
@@ -381,15 +430,24 @@ impl CrowdinCrawler {
                         crawler.language_order.as_ref(),
                     )?;
                     let done = theme_progress.fetch_add(1, Ordering::Relaxed) + 1;
-                    if should_log_progress(done, theme_total, THEME_PROGRESS_STEP) {
+                    if interactive {
+                        theme_bar.set_position(done as u64);
+                    } else if should_log_progress(done, theme_total, THEME_PROGRESS_STEP) {
                         eprintln!("crawler: fetched theme translations {done}/{theme_total}");
                     }
                     Ok::<OutputTheme, anyhow::Error>(output)
                 }
             })
-            .buffer_unordered(MAX_CONCURRENCY)
+            .buffer_unordered(concurrency)
             .try_collect()
             .await?;
+        if interactive {
+            theme_bar.finish_with_message(format!(
+                "themes done ({} themes, {:.1}s)",
+                crawled.len(),
+                started_at.elapsed().as_secs_f32()
+            ));
+        }
         eprintln!(
             "crawler: completed {} themes in {:.1}s",
             crawled.len(),

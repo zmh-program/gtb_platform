@@ -2,6 +2,7 @@ use anyhow::{anyhow, bail, Context, Result};
 use base64::engine::general_purpose::URL_SAFE;
 use base64::Engine;
 use chrono::{DateTime, Duration, TimeZone, Utc};
+use console::{style, Term};
 use cookie_scoop::{
     get_cookies, to_cookie_header, BrowserName, CookieHeaderOptions, CookieMode, GetCookiesOptions,
 };
@@ -16,12 +17,15 @@ use std::fs;
 use std::net::TcpListener;
 use std::path::{Path, PathBuf};
 use std::process::{Child, Command, Stdio};
+use textwrap::wrap;
 use tokio::time::{sleep, Duration as TokioDuration};
 use tokio_tungstenite::{connect_async, tungstenite::Message};
 
 const CROWDIN_URL: &str = "https://crowdin.com/";
 const CROWDIN_PROJECT_INFO_URL: &str = "https://crowdin.com/backend/project/hypixel/info";
 const DEVTOOLS_HOST: &str = "127.0.0.1";
+const OUTPUT_MIN_WIDTH: usize = 72;
+const OUTPUT_MAX_WIDTH: usize = 120;
 
 #[derive(Debug, Clone)]
 struct Args {
@@ -43,6 +47,15 @@ enum BrowserMode {
     Firefox,
     Safari,
     All,
+}
+
+#[derive(Clone, Copy)]
+enum Tone {
+    Blue,
+    Green,
+    Yellow,
+    Red,
+    Cyan,
 }
 
 #[derive(Debug, Deserialize)]
@@ -91,6 +104,151 @@ impl Drop for BrowserProcess {
             let _ = child.wait();
         }
     }
+}
+
+fn terminal_width() -> usize {
+    usize::from(Term::stdout().size().1).clamp(OUTPUT_MIN_WIDTH, OUTPUT_MAX_WIDTH)
+}
+
+fn paint(text: &str, tone: Tone, bold: bool) -> String {
+    let styled = match tone {
+        Tone::Blue => style(text).blue(),
+        Tone::Green => style(text).green(),
+        Tone::Yellow => style(text).yellow(),
+        Tone::Red => style(text).red(),
+        Tone::Cyan => style(text).cyan(),
+    };
+    if bold {
+        styled.bold().to_string()
+    } else {
+        styled.to_string()
+    }
+}
+
+fn divider(title: &str, tone: Tone, fill: char) -> String {
+    let width = terminal_width();
+    let label = format!(" {title} ");
+    let fill_count = width.saturating_sub(label.chars().count());
+    let left = fill_count / 2;
+    let right = fill_count.saturating_sub(left);
+    paint(
+        &format!(
+            "{}{}{}",
+            fill.to_string().repeat(left),
+            label,
+            fill.to_string().repeat(right)
+        ),
+        tone,
+        true,
+    )
+}
+
+fn wrap_lines(lines: &[String], width: usize) -> Vec<String> {
+    let mut out = Vec::new();
+    for line in lines {
+        if line.is_empty() {
+            out.push(String::new());
+            continue;
+        }
+        for part in wrap(line, width) {
+            out.push(part.into_owned());
+        }
+    }
+    out
+}
+
+fn render_section(title: &str, lines: &[String], tone: Tone, fill: char) -> String {
+    let wrapped = wrap_lines(lines, terminal_width());
+    let mut out = Vec::with_capacity(wrapped.len() + 1);
+    out.push(divider(title, tone, fill));
+    out.extend(wrapped);
+    out.join("\n")
+}
+
+fn token_expiry_from_cookie(cookie: &str) -> Option<i64> {
+    cookie_value(cookie, "token").and_then(extract_exp)
+}
+
+fn env_block(path: &Path) -> Vec<String> {
+    let mut lines = vec![format!("Path: {}", path.display())];
+    match fs::read_to_string(path) {
+        Ok(content) => {
+            lines.push(String::new());
+            lines.extend(content.lines().map(str::to_string));
+        }
+        Err(error) => lines.push(format!("Failed to read file: {error}")),
+    }
+    lines
+}
+
+fn detail_block(cookie: &str, csrf: &str, env_file: &Path, wrote_env: bool) -> Vec<String> {
+    vec![
+        format!("Captured at (UTC): {}", Utc::now().to_rfc3339()),
+        format!(
+            "Session token expiry: {}",
+            format_expiry(token_expiry_from_cookie(cookie))
+        ),
+        format!("CSRF token expiry: {}", format_expiry(extract_exp(csrf))),
+        format!("Env file: {}", env_file.display()),
+        format!("Updated: {}", if wrote_env { "yes" } else { "no" }),
+    ]
+}
+
+fn print_credentials_report(
+    cookie: &str,
+    csrf: &str,
+    env_file: &Path,
+    wrote_env: bool,
+    joined: &[String],
+    project_error: Option<&str>,
+) {
+    println!();
+    println!(
+        "{}",
+        render_section(".env", &env_block(env_file), Tone::Blue, '=')
+    );
+    println!();
+    println!(
+        "{}",
+        render_section(
+            "Credentials",
+            &detail_block(cookie, csrf, env_file, wrote_env),
+            Tone::Green,
+            '-'
+        )
+    );
+    println!();
+    if let Some(error) = project_error {
+        println!(
+            "{}",
+            render_section(
+                "Project Info Warning",
+                &[format!("Failed to fetch project info: {error}")],
+                Tone::Yellow,
+                '-'
+            )
+        );
+        return;
+    }
+    if joined.is_empty() {
+        println!(
+            "{}",
+            render_section(
+                "Translation Group",
+                &[
+                    "No joined translation group found for Crowdin project Hypixel.".to_string(),
+                    "Join the required group in Crowdin before running the crawler.".to_string(),
+                ],
+                Tone::Red,
+                '-'
+            )
+        );
+        return;
+    }
+    println!(
+        "{}",
+        render_section("Joined Languages", joined, Tone::Cyan, '-')
+    );
 }
 
 struct CdpConnection {
@@ -691,6 +849,18 @@ async fn wait_for_cookie_store_credentials(
 
 async fn wait_for_browser_credentials(args: &Args, repo_root: &Path) -> Result<(String, String)> {
     let crowdin_url = crowdin_url();
+    eprintln!(
+        "{}",
+        render_section(
+            "Browser Session",
+            &[
+                format!("Opening Crowdin at {crowdin_url}"),
+                "Waiting for fresh credentials from the browser session.".to_string(),
+            ],
+            Tone::Blue,
+            '-'
+        )
+    );
     match parse_browser_mode(args.browser.as_deref())? {
         mode @ (BrowserMode::Chrome | BrowserMode::Edge) => {
             // Chrome / Edge provide the most stable DevTools cookie path here.
@@ -738,17 +908,6 @@ async fn fetch_project_languages(cookie: &str, csrf_token: &str) -> Result<Vec<V
         .and_then(Value::as_array)
         .cloned()
         .unwrap_or_default())
-}
-
-fn print_joined_groups(languages: &[Value]) {
-    let joined = joined_groups(languages);
-
-    if joined.is_empty() {
-        println!("No joined translation group found for Crowdin project Hypixel.");
-        return;
-    }
-
-    println!("Meta Language options: {}", joined.join(", "));
 }
 
 fn language_id_string(language: &Value) -> Option<String> {
@@ -819,32 +978,30 @@ async fn main() -> Result<()> {
 
     let cookie = cookie.ok_or_else(|| anyhow!("missing Crowdin cookie"))?;
     let csrf = csrf.ok_or_else(|| anyhow!("missing Crowdin CSRF token"))?;
-
-    println!(
-        "Crowdin session token expiry: {}",
-        format_expiry(
-            cookie
-                .split(';')
-                .map(str::trim)
-                .find(|part| part.starts_with("token="))
-                .and_then(|part| part.split_once('=').map(|(_, value)| value))
-                .and_then(extract_exp)
-        )
-    );
-    println!("CSRF token expiry: {}", format_expiry(extract_exp(&csrf)));
+    let wrote_env = !args.print_only;
 
     if !args.print_only {
         let mut updates = BTreeMap::new();
         updates.insert("CROWDIN_COOKIE".to_string(), quote_env_value(&cookie));
         updates.insert("CROWDIN_CSRF_TOKEN".to_string(), quote_env_value(&csrf));
         update_env_file(&env_file, &updates)?;
-        println!("Updated credentials file: {}", env_file.display());
     }
 
-    match fetch_project_languages(&cookie, &csrf).await {
-        Ok(languages) => print_joined_groups(&languages),
-        Err(error) => eprintln!("Warning: failed to fetch project info: {error}"),
-    }
+    let project_info = fetch_project_languages(&cookie, &csrf).await;
+    let joined = project_info
+        .as_ref()
+        .map(|languages| joined_groups(languages))
+        .unwrap_or_default();
+    let project_error = project_info.err().map(|error| error.to_string());
+
+    print_credentials_report(
+        &cookie,
+        &csrf,
+        &env_file,
+        wrote_env,
+        &joined,
+        project_error.as_deref(),
+    );
     Ok(())
 }
 
