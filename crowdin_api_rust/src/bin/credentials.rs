@@ -8,15 +8,22 @@ use cookie_scoop::{
 };
 use crowdin_api_rust::common::envfile::update_env_file;
 use crowdin_api_rust::common::paths::RepoPaths;
+use futures::{SinkExt, StreamExt};
 use reqwest::header::{COOKIE, CONTENT_TYPE};
-use serde_json::Value;
+use serde::Deserialize;
+use serde_json::{json, Value};
 use std::collections::BTreeMap;
 use std::env;
-use std::path::PathBuf;
+use std::fs;
+use std::net::TcpListener;
+use std::path::{Path, PathBuf};
+use std::process::{Child, Command, Stdio};
 use tokio::time::{sleep, Duration as TokioDuration};
+use tokio_tungstenite::{connect_async, tungstenite::Message};
 
 const CROWDIN_URL: &str = "https://crowdin.com/";
 const CROWDIN_PROJECT_INFO_URL: &str = "https://crowdin.com/backend/project/hypixel/info";
+const DEVTOOLS_HOST: &str = "127.0.0.1";
 
 #[derive(Debug, Clone)]
 struct Args {
@@ -27,7 +34,106 @@ struct Args {
     print_only: bool,
     browser: Option<String>,
     chrome_profile: Option<String>,
+    user_data_dir: Option<PathBuf>,
     timeout_secs: u64,
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum BrowserMode {
+    Chrome,
+    Edge,
+    Firefox,
+    Safari,
+    All,
+}
+
+#[derive(Debug, Deserialize)]
+struct DevtoolsTarget {
+    #[serde(rename = "type")]
+    kind: String,
+    url: String,
+    #[serde(rename = "webSocketDebuggerUrl")]
+    websocket_debugger_url: Option<String>,
+}
+
+#[derive(Debug)]
+struct BrowserProcess {
+    child: Option<Child>,
+}
+
+impl BrowserProcess {
+    fn spawn(executable: &Path, args: &[String]) -> Result<Self> {
+        let child = Command::new(executable)
+            .args(args)
+            .stdin(Stdio::null())
+            .stdout(Stdio::null())
+            .stderr(Stdio::null())
+            .spawn()
+            .with_context(|| format!("failed to launch browser {}", executable.display()))?;
+        Ok(Self { child: Some(child) })
+    }
+
+    fn ensure_running(&mut self) -> Result<()> {
+        if let Some(child) = &mut self.child {
+            if let Some(status) = child.try_wait().context("failed to inspect browser process")? {
+                bail!("browser process exited early with status {}", status);
+            }
+        }
+        Ok(())
+    }
+}
+
+impl Drop for BrowserProcess {
+    fn drop(&mut self) {
+        if let Some(child) = &mut self.child {
+            let _ = child.kill();
+            let _ = child.wait();
+        }
+    }
+}
+
+struct CdpConnection {
+    stream: tokio_tungstenite::WebSocketStream<tokio_tungstenite::MaybeTlsStream<tokio::net::TcpStream>>,
+    next_id: u64,
+}
+
+impl CdpConnection {
+    async fn connect(ws_url: &str) -> Result<Self> {
+        let (stream, _) = connect_async(ws_url)
+            .await
+            .with_context(|| format!("failed to connect to devtools target {ws_url}"))?;
+        Ok(Self { stream, next_id: 1 })
+    }
+
+    async fn command(&mut self, method: &str, params: Value) -> Result<Value> {
+        let id = self.next_id;
+        self.next_id += 1;
+        self.stream
+            .send(Message::Text(json!({"id": id, "method": method, "params": params}).to_string()))
+            .await
+            .with_context(|| format!("failed to send devtools command {method}"))?;
+
+        while let Some(message) = self.stream.next().await {
+            let message = message.context("failed to receive devtools response")?;
+            match message {
+                Message::Text(text) => {
+                    let value: Value = serde_json::from_str(&text)
+                        .with_context(|| format!("failed to parse devtools JSON for {method}"))?;
+                    if value.get("id").and_then(Value::as_u64) != Some(id) {
+                        continue;
+                    }
+                    if let Some(error) = value.get("error") {
+                        bail!("devtools command {method} failed: {error}");
+                    }
+                    return Ok(value.get("result").cloned().unwrap_or(Value::Null));
+                }
+                Message::Close(_) => bail!("devtools connection closed while waiting for {method}"),
+                _ => {}
+            }
+        }
+
+        bail!("devtools connection ended while waiting for {method}")
+    }
 }
 
 fn parse_args() -> Result<Args> {
@@ -39,6 +145,7 @@ fn parse_args() -> Result<Args> {
         print_only: false,
         browser: None,
         chrome_profile: None,
+        user_data_dir: None,
         timeout_secs: 300,
     };
 
@@ -88,6 +195,14 @@ fn parse_args() -> Result<Args> {
                 );
                 i += 1;
             }
+            "--user-data-dir" => {
+                args.user_data_dir = Some(PathBuf::from(
+                    raw.get(i + 1)
+                        .cloned()
+                        .ok_or_else(|| anyhow!("--user-data-dir requires a path"))?,
+                ));
+                i += 1;
+            }
             "--timeout" => {
                 args.timeout_secs = raw
                     .get(i + 1)
@@ -98,7 +213,7 @@ fn parse_args() -> Result<Args> {
             }
             "--help" | "-h" => {
                 println!(
-                    "Usage: cargo run --bin credentials -- [--open] [--browser chrome|edge|firefox|safari|all] [--chrome-profile <name>] [--timeout <secs>] [--cookie <value>] [--csrf-token <value>] [--print-only]"
+                    "Usage: cargo run --bin credentials -- [--open] [--browser chrome|edge|firefox|safari|all] [--chrome-profile <name>] [--user-data-dir <dir>] [--timeout <secs>] [--cookie <value>] [--csrf-token <value>] [--print-only]"
                 );
                 std::process::exit(0);
             }
@@ -108,6 +223,29 @@ fn parse_args() -> Result<Args> {
     }
 
     Ok(args)
+}
+
+fn parse_browser_mode(raw: Option<&str>) -> Result<BrowserMode> {
+    match raw.unwrap_or("chrome").trim().to_lowercase().as_str() {
+        "chrome" | "chromium" => Ok(BrowserMode::Chrome),
+        "edge" => Ok(BrowserMode::Edge),
+        "firefox" => Ok(BrowserMode::Firefox),
+        "safari" => Ok(BrowserMode::Safari),
+        "all" => Ok(BrowserMode::All),
+        other => bail!("Unsupported browser: {}", other),
+    }
+}
+
+fn default_user_data_dir(repo_paths: &RepoPaths, args: &Args) -> PathBuf {
+    args.user_data_dir
+        .clone()
+        .or_else(|| env::var("CROWDIN_USER_DATA_DIR").ok().map(PathBuf::from))
+        // Match browser_script.py so the browser login profile is shared across Python and Rust.
+        .unwrap_or_else(|| repo_paths.repo_root.join(".tmp").join("crowdin_pw_profile"))
+}
+
+fn crowdin_url() -> String {
+    env::var("CROWDIN_URL").unwrap_or_else(|_| CROWDIN_URL.to_string())
 }
 
 fn decode_jwt_payload(token: &str) -> Option<Value> {
@@ -145,20 +283,9 @@ fn format_expiry(exp: Option<i64>) -> String {
     let hours = diff.num_hours() % 24;
     let mins = diff.num_minutes() % 60;
     if days > 0 {
-        format!(
-            "{}d {}h {}m (until {})",
-            days,
-            hours,
-            mins,
-            exp_dt.to_rfc3339()
-        )
+        format!("{}d {}h {}m (until {})", days, hours, mins, exp_dt.to_rfc3339())
     } else {
-        format!(
-            "{}h {}m (until {})",
-            diff.num_hours(),
-            mins,
-            exp_dt.to_rfc3339()
-        )
+        format!("{}h {}m (until {})", diff.num_hours(), mins, exp_dt.to_rfc3339())
     }
 }
 
@@ -166,79 +293,344 @@ fn quote_env_value(value: &str) -> String {
     format!("'{}'", value.replace('\'', "''"))
 }
 
-fn parse_browsers(raw: Option<&str>) -> Result<Vec<BrowserName>> {
-    let raw = raw.unwrap_or("chrome");
-    let mut browsers = Vec::new();
-    for value in raw.split(',').map(|value| value.trim().to_lowercase()) {
-        match value.as_str() {
-            "chrome" => browsers.push(BrowserName::Chrome),
-            "edge" => browsers.push(BrowserName::Edge),
-            "firefox" => browsers.push(BrowserName::Firefox),
-            "safari" => browsers.push(BrowserName::Safari),
-            "all" => {
-                browsers.extend([
-                    BrowserName::Chrome,
-                    BrowserName::Edge,
-                    BrowserName::Firefox,
-                    BrowserName::Safari,
-                ]);
-            }
-            "" => {}
-            other => bail!("Unsupported browser: {}", other),
-        }
+fn build_cookie_header(cookies: &[Value]) -> Option<String> {
+    let parts: Vec<String> = cookies
+        .iter()
+        .filter(|cookie| {
+            cookie
+                .get("domain")
+                .and_then(Value::as_str)
+                .is_some_and(|domain| domain.ends_with("crowdin.com"))
+        })
+        .filter_map(|cookie| {
+            Some(format!(
+                "{}={}",
+                cookie.get("name")?.as_str()?,
+                cookie.get("value")?.as_str()?
+            ))
+        })
+        .collect();
+
+    if parts.is_empty() {
+        None
+    } else {
+        Some(parts.join("; "))
     }
-    if browsers.is_empty() {
-        bail!("No browser selected");
-    }
-    Ok(browsers)
 }
 
-async fn wait_for_browser_credentials(args: &Args) -> Result<(String, String)> {
-    if args.open {
-        webbrowser::open(CROWDIN_URL).context("failed to open browser")?;
+fn extract_credentials_from_cookies(cookies: &[Value]) -> Option<(String, String)> {
+    let cookie_header = build_cookie_header(cookies)?;
+    let token = cookies.iter().find_map(|cookie| {
+        (cookie.get("name").and_then(Value::as_str) == Some("token"))
+            .then(|| cookie.get("value").and_then(Value::as_str))
+            .flatten()
+            .map(str::to_string)
+    })?;
+    let csrf = cookies.iter().find_map(|cookie| {
+        (cookie.get("name").and_then(Value::as_str) == Some("csrf_token"))
+            .then(|| cookie.get("value").and_then(Value::as_str))
+            .flatten()
+            .map(str::to_string)
+    })?;
+
+    let now = Utc::now().timestamp();
+    let token_valid = extract_exp(&token).is_some_and(|exp| exp > now);
+    let csrf_valid = extract_exp(&csrf).map(|exp| exp > now).unwrap_or(true);
+
+    if token_valid && csrf_valid {
+        Some((cookie_header, csrf))
+    } else {
+        None
+    }
+}
+
+fn find_free_port() -> Result<u16> {
+    let listener = TcpListener::bind((DEVTOOLS_HOST, 0)).context("failed to reserve a free port")?;
+    let port = listener.local_addr().context("failed to inspect free port")?.port();
+    drop(listener);
+    Ok(port)
+}
+
+fn first_existing(paths: &[&str]) -> Option<PathBuf> {
+    paths.iter().map(PathBuf::from).find(|path| path.exists())
+}
+
+fn find_in_path(candidates: &[&str]) -> Option<PathBuf> {
+    let resolver = if cfg!(windows) { "where" } else { "which" };
+    for candidate in candidates {
+        let Ok(output) = Command::new(resolver).arg(candidate).output() else {
+            continue;
+        };
+        if !output.status.success() {
+            continue;
+        }
+        let stdout = String::from_utf8_lossy(&output.stdout).into_owned();
+        let Some(line) = stdout
+            .lines()
+            .find(|line| !line.trim().is_empty())
+        else {
+            continue;
+        };
+        let path = PathBuf::from(line.trim());
+        if path.exists() {
+            return Some(path);
+        }
+    }
+    None
+}
+
+fn resolve_browser_executable(mode: BrowserMode) -> Result<PathBuf> {
+    if let Ok(path) = env::var("CROWDIN_BROWSER_PATH") {
+        let path = PathBuf::from(path);
+        if path.exists() {
+            return Ok(path);
+        }
     }
 
-    let browsers = parse_browsers(args.browser.as_deref())?;
+    let mac = match mode {
+        BrowserMode::Chrome => vec![
+            "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+            "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
+        ],
+        BrowserMode::Edge => vec![
+            "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+            "/Applications/Microsoft Edge Beta.app/Contents/MacOS/Microsoft Edge Beta",
+        ],
+        _ => Vec::new(),
+    };
+    if let Some(path) = first_existing(&mac) {
+        return Ok(path);
+    }
+
+    let linux = match mode {
+        BrowserMode::Chrome => vec!["google-chrome", "google-chrome-stable", "chromium", "chromium-browser"],
+        BrowserMode::Edge => vec!["microsoft-edge", "microsoft-edge-stable", "microsoft-edge-beta"],
+        _ => Vec::new(),
+    };
+    if let Some(path) = find_in_path(&linux) {
+        return Ok(path);
+    }
+
+    #[cfg(target_os = "windows")]
+    {
+        let windows = match mode {
+            BrowserMode::Chrome => vec![
+                r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+                r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+            ],
+            BrowserMode::Edge => vec![
+                r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+                r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+            ],
+            _ => Vec::new(),
+        };
+        if let Some(path) = first_existing(&windows) {
+            return Ok(path);
+        }
+    }
+
+    bail!("failed to locate a supported browser executable")
+}
+
+fn launch_args(url: &str, port: u16, user_data_dir: &Path, profile: Option<&str>) -> Vec<String> {
+    let mut args = vec![
+        format!("--remote-debugging-port={port}"),
+        format!("--user-data-dir={}", user_data_dir.display()),
+        "--no-first-run".to_string(),
+        "--no-default-browser-check".to_string(),
+        "--disable-blink-features=AutomationControlled".to_string(),
+        "--disable-features=DialMediaRouteProvider".to_string(),
+        url.to_string(),
+    ];
+    if let Some(profile) = profile {
+        args.push(format!("--profile-directory={profile}"));
+    }
+    args
+}
+
+async fn wait_for_devtools(port: u16, deadline: std::time::Instant) -> Result<()> {
+    let client = reqwest::Client::new();
+    let url = format!("http://{DEVTOOLS_HOST}:{port}/json/version");
+
+    loop {
+        if std::time::Instant::now() >= deadline {
+            bail!("timed out waiting for browser devtools endpoint")
+        }
+        if let Ok(response) = client.get(&url).send().await {
+            if response.status().is_success() {
+                return Ok(());
+            }
+        }
+        sleep(TokioDuration::from_millis(250)).await;
+    }
+}
+
+async fn fetch_targets(port: u16) -> Result<Vec<DevtoolsTarget>> {
+    let url = format!("http://{DEVTOOLS_HOST}:{port}/json/list");
+    reqwest::Client::new()
+        .get(url)
+        .send()
+        .await
+        .context("failed to query browser targets")?
+        .error_for_status()
+        .context("browser targets request failed")?
+        .json::<Vec<DevtoolsTarget>>()
+        .await
+        .context("failed to parse browser targets JSON")
+}
+
+async fn wait_for_page_target(port: u16, crowdin_url: &str, deadline: std::time::Instant) -> Result<DevtoolsTarget> {
+    loop {
+        if std::time::Instant::now() >= deadline {
+            bail!("timed out waiting for browser page target")
+        }
+        let targets = fetch_targets(port).await?;
+        if let Some(target) = targets.into_iter().find(|target| {
+            target.kind == "page"
+                && target.websocket_debugger_url.is_some()
+                && (target.url.contains("crowdin.com") || target.url == "about:blank" || target.url.is_empty() || target.url == crowdin_url)
+        }) {
+            return Ok(target);
+        }
+        sleep(TokioDuration::from_millis(250)).await;
+    }
+}
+
+async fn open_controlled_browser(
+    mode: BrowserMode,
+    repo_paths: &RepoPaths,
+    args: &Args,
+    crowdin_url: &str,
+) -> Result<(BrowserProcess, u16)> {
+    let user_data_dir = default_user_data_dir(repo_paths, args);
+    fs::create_dir_all(&user_data_dir)
+        .with_context(|| format!("failed to create {}", user_data_dir.display()))?;
+    let port = find_free_port()?;
+    let executable = resolve_browser_executable(mode)?;
+    let launch = launch_args(crowdin_url, port, &user_data_dir, args.chrome_profile.as_deref());
+    let process = BrowserProcess::spawn(&executable, &launch)?;
+    Ok((process, port))
+}
+
+async fn wait_for_cdp_credentials(
+    process: &mut BrowserProcess,
+    port: u16,
+    crowdin_url: &str,
+    timeout_secs: u64,
+) -> Result<(String, String)> {
+    let deadline = std::time::Instant::now() + std::time::Duration::from_secs(timeout_secs);
+    wait_for_devtools(port, deadline).await?;
+
+    let mut websocket_url = String::new();
+    let mut connection = None;
+
+    loop {
+        process.ensure_running()?;
+        if std::time::Instant::now() >= deadline {
+            bail!("Timed out waiting for Crowdin credentials in controlled browser")
+        }
+
+        let target = wait_for_page_target(port, crowdin_url, deadline).await?;
+        let target_ws = target
+            .websocket_debugger_url
+            .clone()
+            .ok_or_else(|| anyhow!("missing page websocket URL"))?;
+
+        if websocket_url != target_ws {
+            websocket_url = target_ws.clone();
+            let mut client = CdpConnection::connect(&target_ws).await?;
+            let _ = client.command("Page.enable", json!({})).await?;
+            let _ = client.command("Network.enable", json!({})).await?;
+            if target.url != crowdin_url {
+                let _ = client.command("Page.navigate", json!({"url": crowdin_url})).await?;
+            }
+            connection = Some(client);
+        }
+
+        let client = connection
+            .as_mut()
+            .ok_or_else(|| anyhow!("missing devtools connection"))?;
+        let result = client
+            .command("Network.getCookies", json!({"urls": [crowdin_url]}))
+            .await?;
+        let cookies = result
+            .get("cookies")
+            .and_then(Value::as_array)
+            .cloned()
+            .unwrap_or_default();
+        if let Some(credentials) = extract_credentials_from_cookies(&cookies) {
+            return Ok(credentials);
+        }
+
+        sleep(TokioDuration::from_secs(1)).await;
+    }
+}
+
+async fn wait_for_cookie_store_credentials(args: &Args, crowdin_url: &str) -> Result<(String, String)> {
+    if args.open {
+        webbrowser::open(crowdin_url).context("failed to open browser")?;
+    }
+
+    let browsers = match parse_browser_mode(args.browser.as_deref())? {
+        BrowserMode::Chrome => vec![BrowserName::Chrome],
+        BrowserMode::Edge => vec![BrowserName::Edge],
+        BrowserMode::Firefox => vec![BrowserName::Firefox],
+        BrowserMode::Safari => vec![BrowserName::Safari],
+        BrowserMode::All => vec![
+            BrowserName::Chrome,
+            BrowserName::Edge,
+            BrowserName::Firefox,
+            BrowserName::Safari,
+        ],
+    };
     let deadline = std::time::Instant::now() + std::time::Duration::from_secs(args.timeout_secs);
 
     loop {
-        let mut options = GetCookiesOptions::new(CROWDIN_URL)
-            .browsers(browsers.clone())
-            .mode(CookieMode::First)
-            .names(vec!["token".into(), "csrf_token".into()]);
-        if let Some(profile) = &args.chrome_profile {
-            options = options.chrome_profile(profile.clone());
-        }
-
-        let result = get_cookies(options).await;
+        let result = get_cookies(
+            GetCookiesOptions::new(crowdin_url)
+                .browsers(browsers.clone())
+                .mode(CookieMode::First)
+                .names(vec!["token".into(), "csrf_token".into()]),
+        )
+        .await;
         let cookie_header = to_cookie_header(&result.cookies, &CookieHeaderOptions::default());
-        let mut token = None;
-        let mut csrf = None;
+        let cookies: Vec<Value> = result
+            .cookies
+            .into_iter()
+            .map(|cookie| {
+                json!({
+                    "name": cookie.name,
+                    "value": cookie.value,
+                    "domain": cookie.domain,
+                    "path": cookie.path,
+                })
+            })
+            .collect();
 
-        for cookie in result.cookies {
-            match cookie.name.as_str() {
-                "token" => token = Some(cookie.value),
-                "csrf_token" => csrf = Some(cookie.value),
-                _ => {}
-            }
-        }
-
-        if let (Some(token), Some(csrf_token)) = (token, csrf) {
-            let token_exp = extract_exp(&token);
-            let csrf_exp = extract_exp(&csrf_token);
-            let token_valid = token_exp.is_some_and(|exp| exp > Utc::now().timestamp());
-            let csrf_valid =
-                csrf_exp.map(|exp| exp > Utc::now().timestamp()).unwrap_or(true);
-            if token_valid && csrf_valid && !cookie_header.is_empty() {
-                return Ok((cookie_header, csrf_token));
+        if let Some((_, csrf)) = extract_credentials_from_cookies(&cookies) {
+            if !cookie_header.is_empty() {
+                return Ok((cookie_header, csrf));
             }
         }
 
         if std::time::Instant::now() >= deadline {
-            bail!("Timed out waiting for Crowdin credentials in browser cookies");
+            bail!("Timed out waiting for Crowdin credentials in browser cookies")
         }
 
         sleep(TokioDuration::from_secs(1)).await;
+    }
+}
+
+async fn wait_for_browser_credentials(args: &Args, repo_paths: &RepoPaths) -> Result<(String, String)> {
+    let crowdin_url = crowdin_url();
+    match parse_browser_mode(args.browser.as_deref())? {
+        mode @ (BrowserMode::Chrome | BrowserMode::Edge) => {
+            let (mut process, port) = open_controlled_browser(mode, repo_paths, args, &crowdin_url).await?;
+            wait_for_cdp_credentials(&mut process, port, &crowdin_url, args.timeout_secs).await
+        }
+        BrowserMode::Firefox | BrowserMode::Safari | BrowserMode::All => {
+            wait_for_cookie_store_credentials(args, &crowdin_url).await
+        }
     }
 }
 
@@ -284,6 +676,7 @@ fn print_joined_groups(languages: &[Value]) {
 fn joined_groups(languages: &[Value]) -> Vec<String> {
     languages
         .iter()
+        // Hypixel access is tied to joining at least one target language group.
         .filter(|language| !language.get("can_join").and_then(Value::as_bool).unwrap_or(true))
         .filter_map(|language| {
             Some(format!(
@@ -310,10 +703,7 @@ async fn main() -> Result<()> {
         let _ = dotenvy::dotenv();
     }
 
-    let mut cookie = args
-        .cookie
-        .clone()
-        .or_else(|| env::var("CROWDIN_COOKIE").ok());
+    let mut cookie = args.cookie.clone().or_else(|| env::var("CROWDIN_COOKIE").ok());
     let mut csrf = args
         .csrf_token
         .clone()
@@ -324,7 +714,7 @@ async fn main() -> Result<()> {
         if !wait_args.open {
             wait_args.open = true;
         }
-        let (detected_cookie, detected_csrf) = wait_for_browser_credentials(&wait_args).await?;
+        let (detected_cookie, detected_csrf) = wait_for_browser_credentials(&wait_args, &repo_paths).await?;
         cookie.get_or_insert(detected_cookie);
         csrf.get_or_insert(detected_csrf);
     }
@@ -363,6 +753,7 @@ async fn main() -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::time::{SystemTime, UNIX_EPOCH};
 
     #[test]
     fn test_decode_invalid_jwt() {
@@ -376,12 +767,10 @@ mod tests {
     }
 
     #[test]
-    fn test_parse_browsers() {
-        assert_eq!(parse_browsers(None).unwrap(), vec![BrowserName::Chrome]);
-        assert_eq!(
-            parse_browsers(Some("chrome,firefox")).unwrap(),
-            vec![BrowserName::Chrome, BrowserName::Firefox]
-        );
+    fn test_parse_browser_mode() {
+        assert_eq!(parse_browser_mode(None).unwrap(), BrowserMode::Chrome);
+        assert_eq!(parse_browser_mode(Some("edge")).unwrap(), BrowserMode::Edge);
+        assert_eq!(parse_browser_mode(Some("all")).unwrap(), BrowserMode::All);
     }
 
     #[test]
@@ -391,5 +780,31 @@ mod tests {
             serde_json::json!({"name": "German", "id": 11, "can_join": true}),
         ]);
         assert_eq!(groups, vec!["Chinese Simplified (55)".to_string()]);
+    }
+
+    #[test]
+    fn test_extract_credentials_from_cdp_cookies() {
+        let token = "eyJhbGciOiJub25lIn0.eyJleHAiOjQxMDI0NDQ4MDB9.";
+        let csrf = "eyJhbGciOiJub25lIn0.eyJleHAiOjQxMDI0NDQ4MDB9.";
+        let cookies = vec![
+            json!({"name": "token", "value": token, "domain": ".crowdin.com"}),
+            json!({"name": "csrf_token", "value": csrf, "domain": ".crowdin.com"}),
+            json!({"name": "other", "value": "1", "domain": ".crowdin.com"}),
+        ];
+        let (cookie, csrf_value) = extract_credentials_from_cookies(&cookies).unwrap();
+        assert!(cookie.contains("token="));
+        assert!(cookie.contains("csrf_token="));
+        assert_eq!(csrf_value, csrf);
+    }
+
+    #[test]
+    fn test_launch_args() {
+        let mut dir = std::env::temp_dir();
+        let nanos = SystemTime::now().duration_since(UNIX_EPOCH).unwrap().as_nanos();
+        dir.push(format!("crowdin_browser_profile_{}", nanos));
+        let args = launch_args("https://crowdin.com/", 9222, &dir, Some("Default"));
+        assert!(args.iter().any(|arg| arg == "--remote-debugging-port=9222"));
+        assert!(args.iter().any(|arg| arg.contains("--user-data-dir=")));
+        assert!(args.iter().any(|arg| arg == "--profile-directory=Default"));
     }
 }

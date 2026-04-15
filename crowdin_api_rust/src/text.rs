@@ -15,6 +15,7 @@ pub fn rm_accents(input: &str) -> String {
     }
 
     input
+        // Keep Turkish dotless i and Polish ł/Ł aligned with the Python pipeline.
         .replace('ı', "i")
         .replace('ł', "l")
         .replace('Ł', "l")
@@ -37,6 +38,7 @@ pub fn is_special_string(input: &str) -> bool {
         || input
             .chars()
             .any(|c| (0x0400..=0x04FF).contains(&(c as u32)))
+        // Keep Nordic letters in the special bucket like the Python pipeline: ø æ å Ø Æ Å.
         || input.chars().any(|c| "øæåØÆÅ".contains(c))
 }
 
