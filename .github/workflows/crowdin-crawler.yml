@@ -11,6 +11,11 @@ on:
         description: "Crowdin CSRF Token"
         required: false
         type: string
+      max_concurrency:
+        description: "Crawler max concurrency"
+        required: false
+        type: string
+        default: "32"
       meta_language_id:
         description: "Meta Language (the language translation group that you've joined)"
         required: false
@@ -47,6 +52,7 @@ jobs:
     env:
       CARGO_INCREMENTAL: 0
       CARGO_TERM_COLOR: always
+      CROWDIN_MAX_CONCURRENCY: ${{ inputs.max_concurrency || '32' }}
       RUSTFLAGS: -C debuginfo=0
     permissions:
       contents: write
@@ -54,17 +60,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "pnpm"
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -74,11 +69,8 @@ jobs:
         with:
           workspaces: crowdin_api -> target
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
-
       - name: Build Rust binaries
-        run: cargo build --manifest-path crowdin_api/Cargo.toml --quiet --locked --bin crawler --bin analysis
+        run: cargo build --manifest-path crowdin_api/Cargo.toml --quiet --locked --bin crawler --bin analysis --bin summary
 
       - name: Run crawler
         env:
@@ -89,9 +81,6 @@ jobs:
 
       - name: Run analysis
         run: ./crowdin_api/target/debug/analysis
-
-      - name: Run prettier
-        run: pnpm exec prettier --write lib/source/translations-data.json lib/source/versions.json
 
       - name: Check for translations-data changes
         id: check_changes
@@ -106,56 +95,12 @@ jobs:
         if: steps.check_changes.outputs.has_changes == 'true'
         id: change_summary
         run: |
-          node - <<'NODE' >> "$GITHUB_OUTPUT"
-          const fs = require("fs");
-          const { execFileSync } = require("child_process");
-
-          const current = JSON.parse(fs.readFileSync("lib/source/translations-data.json", "utf8"));
-          let previous = [];
-          try {
-            previous = JSON.parse(
-              execFileSync("git", ["show", "HEAD:lib/source/translations-data.json"], {
-                encoding: "utf8",
-              })
-            );
-          } catch {}
-
-          const currentMap = new Map(current.map((item) => [item.theme, item]));
-          const previousMap = new Map(previous.map((item) => [item.theme, item]));
-          const themes = [...new Set([...currentMap.keys(), ...previousMap.keys()])].sort();
-
-          let changedThemes = 0;
-          let changedTranslations = 0;
-
-          for (const theme of themes) {
-            const currentItem = currentMap.get(theme);
-            const previousItem = previousMap.get(theme);
-
-            if (JSON.stringify(currentItem) !== JSON.stringify(previousItem)) {
-              changedThemes += 1;
-            }
-
-            const currentTranslations = currentItem?.translations ?? {};
-            const previousTranslations = previousItem?.translations ?? {};
-            const languages = new Set([
-              ...Object.keys(currentTranslations),
-              ...Object.keys(previousTranslations),
-            ]);
-
-            for (const language of languages) {
-              if (
-                JSON.stringify(currentTranslations[language]) !==
-                JSON.stringify(previousTranslations[language])
-              ) {
-                changedTranslations += 1;
-              }
-            }
-          }
-
-          process.stdout.write(
-            `commit_message=chore(crowdin): sync translations db (${changedThemes} themes, ${changedTranslations} translations)\n`
-          );
-          NODE
+          previous_file="$(mktemp)"
+          if ! git show HEAD:lib/source/translations-data.json > "$previous_file" 2>/dev/null; then
+            printf '[]\n' > "$previous_file"
+          fi
+          ./crowdin_api/target/debug/summary --current lib/source/translations-data.json --previous "$previous_file" >> "$GITHUB_OUTPUT"
+          rm -f "$previous_file"
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'

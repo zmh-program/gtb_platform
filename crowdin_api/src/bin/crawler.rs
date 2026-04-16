@@ -16,7 +16,7 @@ use std::time::Instant;
 
 const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases/phrases_with_suggestions";
 const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_languages";
-const DEFAULT_CONCURRENCY: usize = 16;
+const DEFAULT_CONCURRENCY: usize = 32;
 const MAX_CONCURRENCY: usize = 64;
 const PAGE_PROGRESS_STEP: usize = 5;
 const THEME_PROGRESS_STEP: usize = 100;

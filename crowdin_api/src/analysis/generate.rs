@@ -11,6 +11,7 @@ use rayon::prelude::*;
 use serde_json::{Map, Value};
 use std::collections::{HashMap, HashSet};
 use std::fs;
+use std::io::Write;
 use std::path::Path;
 
 fn duplicate_index_cost(shortcut: &str, duplicates: &DuplicatesMap, theme_name: &str) -> usize {
@@ -158,10 +159,12 @@ pub fn write_json_pretty<T: serde::Serialize>(path: &Path, value: &T) -> Result<
             .with_context(|| format!("failed to create directory {}", parent.display()))?;
     }
 
-    let file =
+    let mut file =
         fs::File::create(path).with_context(|| format!("failed to create {}", path.display()))?;
-    serde_json::to_writer_pretty(file, value)
-        .with_context(|| format!("failed to write JSON {}", path.display()))
+    serde_json::to_writer_pretty(&mut file, value)
+        .with_context(|| format!("failed to write JSON {}", path.display()))?;
+    file.write_all(b"\n")
+        .with_context(|| format!("failed to finalize JSON {}", path.display()))
 }
 
 pub fn write_versions(path: &Path) -> Result<()> {
