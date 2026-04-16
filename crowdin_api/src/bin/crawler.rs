@@ -2,7 +2,7 @@ use anyhow::{anyhow, bail, Context, Result};
 use crowdin_api::common::crowdin_api_dir;
 use futures::{stream, StreamExt, TryStreamExt};
 use indicatif::{ProgressBar, ProgressStyle};
-use reqwest::{header, Client};
+use reqwest::{header, Client, StatusCode};
 use serde::{Deserialize, Serialize};
 use serde_json::{json, Value};
 use std::collections::HashMap;
@@ -13,11 +13,15 @@ use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Arc;
 use std::time::Instant;
+use tokio::time::{sleep, Duration};
 
 const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases/phrases_with_suggestions";
 const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_languages";
 const DEFAULT_CONCURRENCY: usize = 32;
 const MAX_CONCURRENCY: usize = 64;
+const DEFAULT_MAX_RETRIES: usize = 6;
+const DEFAULT_RETRY_BASE_MS: u64 = 1500;
+const MAX_RETRY_DELAY_MS: u64 = 30_000;
 const PAGE_PROGRESS_STEP: usize = 5;
 const THEME_PROGRESS_STEP: usize = 100;
 
@@ -41,6 +45,30 @@ fn crawler_concurrency() -> usize {
         .and_then(|value| value.parse::<usize>().ok())
         .map(|value| value.clamp(1, MAX_CONCURRENCY))
         .unwrap_or(DEFAULT_CONCURRENCY)
+}
+
+fn crawler_max_retries() -> usize {
+    env::var("CROWDIN_MAX_RETRIES")
+        .ok()
+        .and_then(|value| value.parse::<usize>().ok())
+        .unwrap_or(DEFAULT_MAX_RETRIES)
+}
+
+fn crawler_retry_base_ms() -> u64 {
+    env::var("CROWDIN_RETRY_BASE_MS")
+        .ok()
+        .and_then(|value| value.parse::<u64>().ok())
+        .unwrap_or(DEFAULT_RETRY_BASE_MS)
+}
+
+fn retry_delay_ms(attempt: usize, retry_after_ms: Option<u64>) -> u64 {
+    if let Some(delay_ms) = retry_after_ms {
+        return delay_ms.min(MAX_RETRY_DELAY_MS);
+    }
+    let multiplier = 1_u64 << attempt.min(10);
+    crawler_retry_base_ms()
+        .saturating_mul(multiplier)
+        .min(MAX_RETRY_DELAY_MS)
 }
 
 fn custom_filter_payload() -> String {
@@ -189,42 +217,102 @@ impl CrowdinCrawler {
         Ok(headers)
     }
 
-    async fn get_crowdin_page(&self, page: usize) -> Result<Value> {
-        let payload = [
-            ("project_id", self.config.project_id.clone()),
-            ("target_language_id", self.config.meta_language_id.clone()),
-            ("file_id", self.config.file_id.clone()),
-            ("page", page.to_string()),
-            ("filter", "0".to_string()),
-            ("custom_filter", custom_filter_payload()),
-            ("query", "".to_string()),
-            ("request", "3".to_string()),
-            ("search_option", "0".to_string()),
-            ("case_sensitive", "false".to_string()),
-            ("search_full_match", "false".to_string()),
-            ("search_strict", "false".to_string()),
-            ("view_in_context", "0".to_string()),
-            ("multilingual_without_languages", "0".to_string()),
-        ];
+    async fn post_form_text_with_retry(
+        &self,
+        url: &str,
+        label: &str,
+        payload: &[(String, String)],
+    ) -> Result<String> {
+        let max_retries = crawler_max_retries();
 
-        let resp = self
-            .client
-            .post(CROWDIN_PHRASES_URL)
-            .headers(self.request_headers()?)
-            .form(&payload)
-            .send()
-            .await
-            .context("request to phrases_with_suggestions failed")?;
+        for attempt in 0..=max_retries {
+            let response = self
+                .client
+                .post(url)
+                .headers(self.request_headers()?)
+                .form(payload)
+                .send()
+                .await;
 
-        let status = resp.status();
-        let text = resp
-            .text()
-            .await
-            .context("failed to read phrases response body")?;
+            match response {
+                Ok(resp) => {
+                    let status = resp.status();
+                    let retry_after_ms = retry_after_ms(resp.headers());
+                    let text = resp
+                        .text()
+                        .await
+                        .with_context(|| format!("failed to read {} response body", label))?;
 
-        if !status.is_success() {
-            bail!("HTTP error {} from phrases endpoint: {}", status, text);
+                    if status.is_success() {
+                        return Ok(text);
+                    }
+
+                    if attempt < max_retries && should_retry_status(status) {
+                        let delay_ms = retry_delay_ms(attempt, retry_after_ms);
+                        eprintln!(
+                            "crawler: retrying {} after status {} in {}ms ({}/{})",
+                            label,
+                            status,
+                            delay_ms,
+                            attempt + 1,
+                            max_retries
+                        );
+                        sleep(Duration::from_millis(delay_ms)).await;
+                        continue;
+                    }
+
+                    bail!("HTTP error {} from {} endpoint: {}", status, label, text);
+                }
+                Err(err) => {
+                    if attempt < max_retries {
+                        let delay_ms = retry_delay_ms(attempt, None);
+                        eprintln!(
+                            "crawler: retrying {} after request error in {}ms ({}/{}): {}",
+                            label,
+                            delay_ms,
+                            attempt + 1,
+                            max_retries,
+                            err
+                        );
+                        sleep(Duration::from_millis(delay_ms)).await;
+                        continue;
+                    }
+
+                    return Err(err).with_context(|| format!("request to {} failed", label));
+                }
+            }
         }
+
+        bail!("retry loop exhausted for {}", label)
+    }
+
+    async fn get_crowdin_page(&self, page: usize) -> Result<Value> {
+        let payload = vec![
+            ("project_id".to_string(), self.config.project_id.clone()),
+            (
+                "target_language_id".to_string(),
+                self.config.meta_language_id.clone(),
+            ),
+            ("file_id".to_string(), self.config.file_id.clone()),
+            ("page".to_string(), page.to_string()),
+            ("filter".to_string(), "0".to_string()),
+            ("custom_filter".to_string(), custom_filter_payload()),
+            ("query".to_string(), "".to_string()),
+            ("request".to_string(), "3".to_string()),
+            ("search_option".to_string(), "0".to_string()),
+            ("case_sensitive".to_string(), "false".to_string()),
+            ("search_full_match".to_string(), "false".to_string()),
+            ("search_strict".to_string(), "false".to_string()),
+            ("view_in_context".to_string(), "0".to_string()),
+            (
+                "multilingual_without_languages".to_string(),
+                "0".to_string(),
+            ),
+        ];
+        let label = format!("phrases page {}", page);
+        let text = self
+            .post_form_text_with_retry(CROWDIN_PHRASES_URL, &label, &payload)
+            .await?;
 
         let root: Value =
             serde_json::from_str(&text).context("failed to parse phrases endpoint JSON")?;
@@ -246,35 +334,19 @@ impl CrowdinCrawler {
     }
 
     async fn get_all_languages_for_translation(&self, translation_id: &str) -> Result<Vec<Value>> {
-        let payload = [
-            ("project_id", self.config.project_id.clone()),
-            ("translation_id", translation_id.to_string()),
-            ("plural_id", "-1".to_string()),
-            ("target_language_id", self.config.meta_language_id.clone()),
+        let payload = vec![
+            ("project_id".to_string(), self.config.project_id.clone()),
+            ("translation_id".to_string(), translation_id.to_string()),
+            ("plural_id".to_string(), "-1".to_string()),
+            (
+                "target_language_id".to_string(),
+                self.config.meta_language_id.clone(),
+            ),
         ];
-
-        let resp = self
-            .client
-            .post(CROWDIN_ALL_LANG_URL)
-            .headers(self.request_headers()?)
-            .form(&payload)
-            .send()
-            .await
-            .context("request to all_languages failed")?;
-
-        let status = resp.status();
-        let text = resp
-            .text()
-            .await
-            .context("failed to read all_languages response body")?;
-
-        if !status.is_success() {
-            bail!(
-                "HTTP error {} from all_languages endpoint: {}",
-                status,
-                text
-            );
-        }
+        let label = format!("all_languages for id {}", translation_id);
+        let text = self
+            .post_form_text_with_retry(CROWDIN_ALL_LANG_URL, &label, &payload)
+            .await?;
 
         let root: Value =
             serde_json::from_str(&text).context("failed to parse all_languages JSON")?;
@@ -466,6 +538,18 @@ impl CrowdinCrawler {
         );
         Ok(crawled)
     }
+}
+
+fn should_retry_status(status: StatusCode) -> bool {
+    status == StatusCode::TOO_MANY_REQUESTS || status.is_server_error()
+}
+
+fn retry_after_ms(headers: &header::HeaderMap) -> Option<u64> {
+    headers
+        .get(header::RETRY_AFTER)
+        .and_then(|value| value.to_str().ok())
+        .and_then(|value| value.parse::<u64>().ok())
+        .map(|seconds| seconds.saturating_mul(1000))
 }
 
 fn should_log_progress(done: usize, total: usize, step: usize) -> bool {
