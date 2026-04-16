@@ -1,7 +1,7 @@
 use crate::analysis::types::{
     AnalysisInputs, AnalysisPaths, Config, SourceTheme, SourceTranslation,
 };
-use crate::common::repo_root;
+use crate::common::{crowdin_api_dir, repo_root};
 use anyhow::{bail, Context, Result};
 use std::collections::{HashMap, HashSet};
 use std::env;
@@ -16,10 +16,7 @@ fn read_json_file<T: for<'de> serde::Deserialize<'de>>(path: &Path) -> Result<T>
 
 pub fn resolve_analysis_paths(out_dir: Option<&Path>) -> Result<AnalysisPaths> {
     let repo_root = repo_root()?;
-    let source_input = repo_root
-        .join("crowdin_api")
-        .join("result")
-        .join("source.json");
+    let source_input = crowdin_api_dir()?.join("result").join("source.json");
     let (output_translations, output_versions) = if let Some(out_dir) = out_dir {
         let cwd = env::current_dir().context("failed to read current dir")?;
         let base = if out_dir.is_absolute() {

@@ -1,5 +1,5 @@
 use anyhow::{anyhow, bail, Context, Result};
-use crowdin_api_rust::common::crowdin_api_dir;
+use crowdin_api::common::crowdin_api_dir;
 use futures::{stream, StreamExt, TryStreamExt};
 use indicatif::{ProgressBar, ProgressStyle};
 use reqwest::{header, Client};
@@ -112,6 +112,7 @@ struct Credentials {
 #[derive(Debug, Clone)]
 struct CrowdinCrawler {
     client: Client,
+    creds: Arc<Credentials>,
     config: Arc<Config>,
     language_order: Arc<HashMap<String, usize>>,
 }
@@ -141,6 +142,25 @@ struct OutputTranslation {
 
 impl CrowdinCrawler {
     fn new(config: Arc<Config>, creds: Arc<Credentials>) -> Result<Self> {
+        let client = Client::builder()
+            .build()
+            .context("failed to build HTTP client")?;
+        let language_order = config
+            .target_languages
+            .iter()
+            .enumerate()
+            .map(|(index, language)| (language.id.clone(), index))
+            .collect();
+
+        Ok(Self {
+            client,
+            creds,
+            config,
+            language_order: Arc::new(language_order),
+        })
+    }
+
+    fn request_headers(&self) -> Result<header::HeaderMap> {
         let mut headers = header::HeaderMap::new();
         headers.insert(
             header::USER_AGENT,
@@ -153,31 +173,20 @@ impl CrowdinCrawler {
             header::HeaderValue::from_static("application/json, text/javascript, */*"),
         );
         headers.insert(
+            header::CONTENT_TYPE,
+            header::HeaderValue::from_static("application/x-www-form-urlencoded"),
+        );
+        headers.insert(
             "x-csrf-token",
-            header::HeaderValue::from_str(&creds.csrf_token)
+            header::HeaderValue::from_str(&self.creds.csrf_token)
                 .context("invalid csrf token header value")?,
         );
         headers.insert(
             header::COOKIE,
-            header::HeaderValue::from_str(&creds.cookie).context("invalid cookie header value")?,
+            header::HeaderValue::from_str(&self.creds.cookie)
+                .context("invalid cookie header value")?,
         );
-
-        let client = Client::builder()
-            .default_headers(headers)
-            .build()
-            .context("failed to build HTTP client")?;
-        let language_order = config
-            .target_languages
-            .iter()
-            .enumerate()
-            .map(|(index, language)| (language.id.clone(), index))
-            .collect();
-
-        Ok(Self {
-            client,
-            config,
-            language_order: Arc::new(language_order),
-        })
+        Ok(headers)
     }
 
     async fn get_crowdin_page(&self, page: usize) -> Result<Value> {
@@ -201,6 +210,7 @@ impl CrowdinCrawler {
         let resp = self
             .client
             .post(CROWDIN_PHRASES_URL)
+            .headers(self.request_headers()?)
             .form(&payload)
             .send()
             .await
@@ -246,6 +256,7 @@ impl CrowdinCrawler {
         let resp = self
             .client
             .post(CROWDIN_ALL_LANG_URL)
+            .headers(self.request_headers()?)
             .form(&payload)
             .send()
             .await

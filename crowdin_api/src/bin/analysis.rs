@@ -1,8 +1,8 @@
 use anyhow::{bail, Context, Result};
-use crowdin_api_rust::analysis::duplicates::find_duplicate_translations;
-use crowdin_api_rust::analysis::generate::{generate_output, write_json_pretty, write_versions};
-use crowdin_api_rust::analysis::load::{load_inputs, resolve_analysis_paths};
-use crowdin_api_rust::common::crowdin_api_dir;
+use crowdin_api::analysis::duplicates::find_duplicate_translations;
+use crowdin_api::analysis::generate::{generate_output, write_json_pretty, write_versions};
+use crowdin_api::analysis::load::{load_inputs, resolve_analysis_paths};
+use crowdin_api::common::crowdin_api_dir;
 use serde::Serialize;
 use std::env;
 use std::path::PathBuf;

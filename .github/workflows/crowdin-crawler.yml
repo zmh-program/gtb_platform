@@ -44,6 +44,10 @@ on:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    env:
+      CARGO_INCREMENTAL: 0
+      CARGO_TERM_COLOR: always
+      RUSTFLAGS: -C debuginfo=0
     permissions:
       contents: write
       pull-requests: write
@@ -68,26 +72,26 @@ jobs:
       - name: Cache Rust
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: crowdin_api_rust
+          workspaces: crowdin_api -> target
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --prefer-offline --ignore-scripts
 
       - name: Build Rust binaries
-        run: cargo build --manifest-path crowdin_api_rust/Cargo.toml --quiet --locked --bin crowdin_api_rust --bin analysis
+        run: cargo build --manifest-path crowdin_api/Cargo.toml --quiet --locked --bin crawler --bin analysis
 
       - name: Run crawler
         env:
           CROWDIN_COOKIE: ${{ inputs.crowdin_cookie || secrets.CROWDIN_COOKIE }}
           CROWDIN_CSRF_TOKEN: ${{ inputs.crowdin_csrf_token || secrets.CROWDIN_CSRF_TOKEN }}
           META_LANGUAGE_ID: ${{ inputs.meta_language_id || 'Chinese Simplified (55)' }}
-        run: ./crowdin_api_rust/target/debug/crowdin_api_rust
+        run: ./crowdin_api/target/debug/crawler
 
       - name: Run analysis
-        run: ./crowdin_api_rust/target/debug/analysis
+        run: ./crowdin_api/target/debug/analysis
 
       - name: Run prettier
-        run: pnpm prettier
+        run: pnpm exec prettier --write lib/source/translations-data.json lib/source/versions.json
 
       - name: Check for translations-data changes
         id: check_changes

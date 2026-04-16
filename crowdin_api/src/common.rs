@@ -4,21 +4,18 @@ use std::fs;
 use std::path::{Path, PathBuf};
 
 pub fn repo_root() -> Result<PathBuf> {
-    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .canonicalize()
-        .context("failed to resolve crowdin_api_rust directory")?
+    crowdin_api_dir()?
         .parent()
         .map(PathBuf::from)
         .ok_or_else(|| anyhow!("failed to resolve repository root"))
 }
 
 pub fn crowdin_api_dir() -> Result<PathBuf> {
-    let path = repo_root()?.join("crowdin_api");
+    let path = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+        .canonicalize()
+        .context("failed to resolve crowdin_api directory")?;
     if !path.join("conf").join("config.json").exists() {
-        bail!(
-            "Could not locate crowdin_api/conf/config.json under {}",
-            path.display()
-        );
+        bail!("Could not locate conf/config.json under {}", path.display());
     }
     Ok(path)
 }
@@ -70,7 +67,7 @@ mod tests {
             .duration_since(UNIX_EPOCH)
             .unwrap()
             .as_nanos();
-        tmp.push(format!("crowdin_api_rust_env_test_{}.env", nanos));
+        tmp.push(format!("crowdin_api_env_test_{}.env", nanos));
 
         fs::write(&tmp, "A=1\nB=2\n").unwrap();
 

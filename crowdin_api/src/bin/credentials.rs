@@ -6,7 +6,7 @@ use console::{style, Term};
 use cookie_scoop::{
     get_cookies, to_cookie_header, BrowserName, CookieHeaderOptions, CookieMode, GetCookiesOptions,
 };
-use crowdin_api_rust::common::{crowdin_api_dir, repo_root, update_env_file};
+use crowdin_api::common::{crowdin_api_dir, repo_root, update_env_file};
 use futures::{SinkExt, StreamExt};
 use reqwest::header::{CONTENT_TYPE, COOKIE};
 use serde::Deserialize;
@@ -157,11 +157,21 @@ fn wrap_lines(lines: &[String], width: usize) -> Vec<String> {
     out
 }
 
-fn render_section(title: &str, lines: &[String], tone: Tone, fill: char) -> String {
-    let wrapped = wrap_lines(lines, terminal_width());
-    let mut out = Vec::with_capacity(wrapped.len() + 1);
+fn render_section(
+    title: &str,
+    lines: &[String],
+    tone: Tone,
+    fill: char,
+    wrap_content: bool,
+) -> String {
+    let content = if wrap_content {
+        wrap_lines(lines, terminal_width())
+    } else {
+        lines.to_vec()
+    };
+    let mut out = Vec::with_capacity(content.len() + 1);
     out.push(divider(title, tone, fill));
-    out.extend(wrapped);
+    out.extend(content);
     out.join("\n")
 }
 
@@ -205,7 +215,7 @@ fn print_credentials_report(
     println!();
     println!(
         "{}",
-        render_section(".env", &env_block(env_file), Tone::Blue, '=')
+        render_section(".env", &env_block(env_file), Tone::Blue, '=', false)
     );
     println!();
     println!(
@@ -214,7 +224,8 @@ fn print_credentials_report(
             "Credentials",
             &detail_block(cookie, csrf, env_file, wrote_env),
             Tone::Green,
-            '-'
+            '-',
+            true
         )
     );
     println!();
@@ -225,7 +236,8 @@ fn print_credentials_report(
                 "Project Info Warning",
                 &[format!("Failed to fetch project info: {error}")],
                 Tone::Yellow,
-                '-'
+                '-',
+                true
             )
         );
         return;
@@ -240,14 +252,15 @@ fn print_credentials_report(
                     "Join the required group in Crowdin before running the crawler.".to_string(),
                 ],
                 Tone::Red,
-                '-'
+                '-',
+                true
             )
         );
         return;
     }
     println!(
         "{}",
-        render_section("Joined Languages", joined, Tone::Cyan, '-')
+        render_section("Joined Languages", joined, Tone::Cyan, '-', true)
     );
 }
 
@@ -858,7 +871,8 @@ async fn wait_for_browser_credentials(args: &Args, repo_root: &Path) -> Result<(
                 "Waiting for fresh credentials from the browser session.".to_string(),
             ],
             Tone::Blue,
-            '-'
+            '-',
+            true
         )
     );
     match parse_browser_mode(args.browser.as_deref())? {

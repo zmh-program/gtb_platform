@@ -1,5 +1,5 @@
 [package]
-name = "crowdin_api_rust"
+name = "crowdin_api"
 version = "0.1.0"
 edition = "2021"
 

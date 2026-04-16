@@ -31,27 +31,19 @@ If your existing account contains important data/value, **use an alternate accou
 
 ### Step 1. Capture Crowdin Session Credentials (Cookie + CSRF)
 
-#### Before Running the Browser Script
+#### Run the Browser Tool
 
 ```bash
-cd crowdin_api
-pip install -r requirements.txt
-python -m playwright install chromium
+pnpm browser
 ```
 
-#### Run
-
-```bash
-python browser_script.py
-```
-
-What the script does:
+What the tool does:
 
 1. Opens a browser automatically (tries local Chrome first)
 2. Navigates to [crowdin.com](https://crowdin.com/) (can be overridden)
 3. Waits for you to log in manually
 4. Closes the browser after login is detected
-5. Extracts Crowdin `Cookie` and `csrf_token`, then prints them in the terminal
+5. Extracts Crowdin `Cookie` and `csrf_token`, then writes them into `crowdin_api/.env`
 
 ![credentials](docs/credentials.png)
 
@@ -148,7 +140,7 @@ After merge, the database is up to date.
 #### `conf/config.json` (Usually does not need modification)
 
 - Core Crowdin and language mapping configuration
-- Used by both `crawler.py` and `analysis.py`
+- Used by both `src/bin/crawler.rs` and `src/bin/analysis.rs`
 - Key fields:
   - `project_id`: Crowdin project ID
   - `file_id`: Crowdin file ID to crawl
@@ -157,27 +149,27 @@ After merge, the database is up to date.
     - `id`: Crowdin language ID
     - `name`: display name (used in analysis/duplicate labeling)
     - `code`: language code used in frontend output (`zh_cn`, `ru`, `ja`, etc.)
-    - `file`: metadata field (currently not directly used by the Python pipeline)
+    - `file`: metadata field (currently not directly used by generated output)
 - Special entry:
   - `id = -1`, `code = co` means `Complement` (manual completion data, not a real Crowdin language)
 
 ### Codebase
 
-#### `browser_script.py`
+#### `src/bin/credentials.rs`
 
-- Opens Crowdin in a browser via Playwright
+- Opens Crowdin in a browser session
 - Waits for manual login
 - Extracts `CROWDIN_COOKIE` and `CROWDIN_CSRF_TOKEN`
 - Writes them into `crowdin_api/.env`
 
-#### `crawler.py`
+#### `src/bin/crawler.rs`
 
 - Reads Crowdin config from `conf/config.json`
 - Fetches phrase metadata pages first
 - Fetches all-language translation suggestions per phrase
 - Writes raw crawl results to `result/source.json`
 
-#### `analysis.py`
+#### `src/bin/analysis.rs`
 
 - Reads `result/source.json`
 - Applies filtering, completion injection, and duplicate analysis

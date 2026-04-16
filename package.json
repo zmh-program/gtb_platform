@@ -8,13 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write ./**/*.{js,jsx,ts,tsx,json}",
-    "format": "isort crowdin_api && black crowdin_api",
-    "browser": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin credentials -- --open",
-    "browser:py": "cd crowdin_api && python browser_script.py",
-    "crawler": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin crowdin_api_rust",
-    "crawler:py": "cd crowdin_api && python crawler.py",
-    "analysis": "cargo run --manifest-path crowdin_api_rust/Cargo.toml --quiet --bin analysis",
-    "analysis:py": "cd crowdin_api && python analysis.py",
+    "format": "pnpm prettier && cargo fmt --manifest-path crowdin_api/Cargo.toml --all",
+    "browser": "cargo run --manifest-path crowdin_api/Cargo.toml --quiet --bin credentials -- --open",
+    "crawler": "cargo run --manifest-path crowdin_api/Cargo.toml --quiet --bin crawler",
+    "analysis": "cargo run --manifest-path crowdin_api/Cargo.toml --quiet --bin analysis",
+    "crowdin:check": "cargo test --manifest-path crowdin_api/Cargo.toml --quiet && cargo clippy --manifest-path crowdin_api/Cargo.toml --all-targets -- -D warnings",
     "ui": "npx shadcn@latest add"
   },
   "dependencies": {
