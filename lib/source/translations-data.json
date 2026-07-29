@@ -1150,8 +1150,8 @@
       },
       "ja": {
         "translation": "動物",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:58:43-04:00"
       },
       "ko": {
         "translation": "동물",
@@ -1396,8 +1396,8 @@
       },
       "ja": {
         "translation": "アンチウイルス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:21:04-04:00"
       },
       "ko": {
         "translation": "안티 바이러스",
@@ -2377,8 +2377,8 @@
       },
       "ja": {
         "translation": "アーケード",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:58:44-04:00"
       },
       "ko": {
         "translation": "아케이드",
@@ -2623,8 +2623,8 @@
       },
       "ja": {
         "translation": "北極",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:14:56-04:00"
       },
       "ko": {
         "translation": "북극",
@@ -3573,8 +3573,8 @@
       },
       "ja": {
         "translation": "原子",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:14:57-04:00"
       },
       "ko": {
         "translation": "원자",
@@ -4184,9 +4184,9 @@
         "approved_at": "2017-08-10T20:27:19-04:00"
       },
       "zh_tw": {
-        "translation": "斧頭",
+        "translation": "斧",
         "is_approved": true,
-        "approved_at": "2020-07-30T03:20:15-04:00"
+        "approved_at": "2026-07-10T22:09:57-04:00"
       },
       "cs": {
         "translation": "Sekera",
@@ -4230,8 +4230,8 @@
       },
       "ja": {
         "translation": "斧",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:58:46-04:00"
       },
       "ko": {
         "translation": "도끼",
@@ -4353,8 +4353,8 @@
       },
       "ja": {
         "translation": "ウーパールーパー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:14:59-04:00"
       },
       "ko": {
         "translation": "아홀로틀",
@@ -7926,8 +7926,8 @@
       },
       "ja": {
         "translation": "野球グローブ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:00-04:00"
       },
       "ko": {
         "translation": "야구 글러브",
@@ -8463,8 +8463,8 @@
       },
       "ja": {
         "translation": "砦",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:01-04:00"
       },
       "ko": {
         "translation": "능보",
@@ -8896,8 +8896,8 @@
       },
       "ja": {
         "translation": "お風呂",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:02-04:00"
       },
       "ko": {
         "translation": "욕조",
@@ -9726,8 +9726,8 @@
       },
       "ja": {
         "translation": "ビーチパーティー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:07-04:00"
       },
       "ko": {
         "translation": "해변 파티",
@@ -10455,8 +10455,8 @@
       },
       "ja": {
         "translation": "ビーバー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:08-04:00"
       },
       "ko": {
         "translation": "비버",
@@ -11630,8 +11630,8 @@
       },
       "ja": {
         "translation": "ピーマン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:10-04:00"
       },
       "ko": {
         "translation": "피망",
@@ -12522,8 +12522,8 @@
       },
       "ja": {
         "translation": "自転車道",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:13-04:00"
       },
       "ko": {
         "translation": "자전거 도로",
@@ -13395,8 +13395,8 @@
       },
       "ja": {
         "translation": "バードバス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:16-04:00"
       },
       "ko": {
         "translation": "새 목욕",
@@ -13518,8 +13518,8 @@
       },
       "ja": {
         "translation": "鳥かご",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:17-04:00"
       },
       "ko": {
         "translation": "새장",
@@ -13655,8 +13655,8 @@
       },
       "ja": {
         "translation": "鳥の巣箱",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:26-04:00"
       },
       "ko": {
         "translation": "새집",
@@ -13982,9 +13982,9 @@
     "multiwords": [],
     "translations": {
       "ru": {
-        "translation": "Вечеринка в честь дня рождения",
+        "translation": "Вечеринка на день рождения",
         "is_approved": true,
-        "approved_at": "2020-03-30T04:30:30-04:00"
+        "approved_at": "2026-07-17T17:43:23-04:00"
       },
       "zh_cn": {
         "translation": "生日派对",
@@ -14459,8 +14459,8 @@
       },
       "ja": {
         "translation": "バイソン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:18-04:00"
       },
       "ko": {
         "translation": "들소",
@@ -15948,8 +15948,8 @@
       },
       "ja": {
         "translation": "設計図",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:19-04:00"
       },
       "ko": {
         "translation": "청사진",
@@ -17362,21 +17362,8 @@
   {
     "id": 213749,
     "theme": "Boots",
-    "shortcut": "sko",
+    "shortcut": null,
     "multiwords": [
-      {
-        "multiword": "sko",
-        "occurrences": [
-          {
-            "theme": "Boots",
-            "reference": "Norwegian"
-          },
-          {
-            "theme": "Shoes",
-            "reference": "Danish / Norwegian"
-          }
-        ]
-      },
       {
         "multiword": "boot",
         "occurrences": [
@@ -17510,9 +17497,9 @@
         "approved_at": "2017-08-16T02:49:17-04:00"
       },
       "no": {
-        "translation": "Sko",
-        "is_approved": true,
-        "approved_at": "2021-09-20T07:14:31-04:00"
+        "translation": "Støvler",
+        "is_approved": false,
+        "approved_at": null
       },
       "en": {
         "translation": "Boots",
@@ -22045,8 +22032,8 @@
       },
       "ja": {
         "translation": "バンカー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:20-04:00"
       },
       "ko": {
         "translation": "벙커",
@@ -24793,8 +24780,8 @@
       },
       "zh_cn": {
         "translation": "迷彩",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2019-09-06T21:21:30-04:00"
       },
       "zh_tw": {
         "translation": "迷彩",
@@ -25963,8 +25950,8 @@
       },
       "zh_cn": {
         "translation": "拐杖糖",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2023-12-17T01:05:52-05:00"
       },
       "zh_tw": {
         "translation": "拐杖糖",
@@ -26699,6 +26686,19 @@
             "reference": "Polish"
           }
         ]
+      },
+      {
+        "multiword": "帽子",
+        "occurrences": [
+          {
+            "theme": "Cap",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Hat",
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
+          }
+        ]
       }
     ],
     "translations": {
@@ -26759,8 +26759,8 @@
       },
       "ja": {
         "translation": "帽子",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:23-04:00"
       },
       "ko": {
         "translation": "모자",
@@ -27187,8 +27187,8 @@
       },
       "ja": {
         "translation": "カピバラ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:24-04:00"
       },
       "ko": {
         "translation": "카피바라",
@@ -28076,8 +28076,8 @@
       },
       "ja": {
         "translation": "カーペンター",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:28-04:00"
       },
       "ko": {
         "translation": "목수",
@@ -30656,8 +30656,8 @@
       },
       "ja": {
         "translation": "セメントミキサー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:30-04:00"
       },
       "ko": {
         "translation": "시멘트 믹서",
@@ -31039,8 +31039,8 @@
       },
       "ja": {
         "translation": "シリアルボックス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:31-04:00"
       },
       "ko": {
         "translation": "시리얼 상자",
@@ -31736,8 +31736,8 @@
       },
       "ja": {
         "translation": "シャンデリア",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:31-04:00"
       },
       "ko": {
         "translation": "샹들리에",
@@ -32658,8 +32658,8 @@
       },
       "ja": {
         "translation": "シェフの帽子",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:32-04:00"
       },
       "ko": {
         "translation": "요리사 모자",
@@ -35250,6 +35250,19 @@
         ]
       },
       {
+        "multiword": "映画館",
+        "occurrences": [
+          {
+            "theme": "Cinema",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Movie Theatre",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "电影院",
         "occurrences": [
           {
@@ -35352,8 +35365,8 @@
       },
       "ja": {
         "translation": "映画館",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:58:51-04:00"
       },
       "ko": {
         "translation": "영화관",
@@ -39683,8 +39696,8 @@
       },
       "ja": {
         "translation": "コーヒーショップ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:33-04:00"
       },
       "ko": {
         "translation": "커피숍",
@@ -42331,8 +42344,8 @@
       },
       "ja": {
         "translation": "サンゴ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:35-04:00"
       },
       "ko": {
         "translation": "산호색",
@@ -43105,6 +43118,19 @@
           {
             "theme": "Sofa",
             "reference": "Korean"
+          }
+        ]
+      },
+      {
+        "multiword": "ソファー",
+        "occurrences": [
+          {
+            "theme": "Couch",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Sofa",
+            "reference": "Japanese"
           }
         ]
       },
@@ -44853,8 +44879,8 @@
       },
       "ja": {
         "translation": "クリーパー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:36-04:00"
       },
       "ko": {
         "translation": "크리퍼",
@@ -45049,8 +45075,8 @@
       },
       "zh_cn": {
         "translation": "板球",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2018-03-01T08:09:58-05:00"
       },
       "zh_tw": {
         "translation": "板球",
@@ -46129,8 +46155,8 @@
       },
       "ja": {
         "translation": "クルーズ船",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:37-04:00"
       },
       "ko": {
         "translation": "유람선",
@@ -47287,8 +47313,8 @@
       },
       "ja": {
         "translation": "まな板",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:37-04:00"
       },
       "ko": {
         "translation": "도마",
@@ -47744,8 +47770,8 @@
       },
       "ja": {
         "translation": "パパ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:38-04:00"
       },
       "ko": {
         "translation": "아빠",
@@ -50375,8 +50401,8 @@
       },
       "ja": {
         "translation": "卒業証書",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:46-04:00"
       },
       "ko": {
         "translation": "졸업장",
@@ -51702,8 +51728,8 @@
       },
       "ja": {
         "translation": "ドック",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:49-04:00"
       },
       "ko": {
         "translation": "독",
@@ -55120,8 +55146,8 @@
       },
       "ja": {
         "translation": "アヒル",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:51-04:00"
       },
       "ko": {
         "translation": "오리",
@@ -57608,8 +57634,8 @@
       },
       "ja": {
         "translation": "ゾウ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:58:56-04:00"
       },
       "ko": {
         "translation": "코끼리",
@@ -61415,8 +61441,8 @@
       },
       "ja": {
         "translation": "ファッションショー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:52-04:00"
       },
       "ko": {
         "translation": "패션쇼",
@@ -62005,8 +62031,8 @@
       },
       "ja": {
         "translation": "フェンス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:53-04:00"
       },
       "ko": {
         "translation": "울타리",
@@ -63575,6 +63601,19 @@
             "reference": "Spanish"
           }
         ]
+      },
+      {
+        "multiword": "暖炉",
+        "occurrences": [
+          {
+            "theme": "Fireplace",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Stove",
+            "reference": "Japanese"
+          }
+        ]
       }
     ],
     "translations": {
@@ -63635,8 +63674,8 @@
       },
       "ja": {
         "translation": "暖炉",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:00:49-04:00"
       },
       "ko": {
         "translation": "벽난로",
@@ -63684,9 +63723,9 @@
         "approved_at": "2022-12-12T16:55:56-05:00"
       },
       "tr": {
-        "translation": "Fireplace",
-        "is_approved": true,
-        "approved_at": "2022-12-12T22:30:31-05:00"
+        "translation": "Şömine",
+        "is_approved": false,
+        "approved_at": null
       },
       "uk": {
         "translation": "Камін",
@@ -63712,9 +63751,9 @@
         "approved_at": "2018-02-13T04:09:44-05:00"
       },
       "zh_tw": {
-        "translation": "煙火",
+        "translation": "煙火秀",
         "is_approved": true,
-        "approved_at": "2019-05-26T08:16:01-04:00"
+        "approved_at": "2026-06-29T16:34:52-04:00"
       },
       "cs": {
         "translation": "Ohňostroj",
@@ -66915,7 +66954,7 @@
         "occurrences": [
           {
             "theme": "Football",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified"
           },
           {
             "theme": "Soccer",
@@ -66955,8 +66994,8 @@
       },
       "zh_tw": {
         "translation": "足球",
-        "is_approved": true,
-        "approved_at": "2019-04-22T07:02:14-04:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "cs": {
         "translation": "Football",
@@ -67000,8 +67039,8 @@
       },
       "ja": {
         "translation": "フットボール",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:00-04:00"
       },
       "ko": {
         "translation": "축구",
@@ -67130,8 +67169,8 @@
       },
       "ja": {
         "translation": "フットボール用ヘルメット",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:57-04:00"
       },
       "ko": {
         "translation": "축구 헬멧",
@@ -67897,11 +67936,11 @@
         "occurrences": [
           {
             "theme": "Fortress",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           },
           {
             "theme": "Stronghold",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           }
         ]
       },
@@ -67977,8 +68016,8 @@
       },
       "ja": {
         "translation": "要塞",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:58-04:00"
       },
       "ko": {
         "translation": "요새",
@@ -68223,8 +68262,8 @@
       },
       "ja": {
         "translation": "化石",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:15:59-04:00"
       },
       "ko": {
         "translation": "화석",
@@ -69675,8 +69714,8 @@
       },
       "ja": {
         "translation": "カエル",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:00-04:00"
       },
       "ko": {
         "translation": "개구리",
@@ -70167,8 +70206,8 @@
       },
       "ja": {
         "translation": "フルーツポンチ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:01-04:00"
       },
       "ko": {
         "translation": "화채",
@@ -77200,8 +77239,8 @@
       },
       "ja": {
         "translation": "ゴルフボール",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:02-04:00"
       },
       "ko": {
         "translation": "골프공",
@@ -77829,8 +77868,8 @@
       },
       "ja": {
         "translation": "ゴリラ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:03-04:00"
       },
       "ko": {
         "translation": "고릴라",
@@ -78345,8 +78384,8 @@
       },
       "no": {
         "translation": "Gresshoppe",
-        "is_approved": true,
-        "approved_at": "2021-01-14T05:28:33-05:00"
+        "is_approved": false,
+        "approved_at": null
       },
       "en": {
         "translation": "Grasshopper",
@@ -78822,9 +78861,9 @@
         "approved_at": "2023-12-11T08:25:09-05:00"
       },
       "zh_tw": {
-        "translation": "綠",
+        "translation": "綠色",
         "is_approved": true,
-        "approved_at": "2021-04-30T08:21:59-04:00"
+        "approved_at": "2026-07-13T04:22:42-04:00"
       },
       "cs": {
         "translation": "Zelená",
@@ -79141,8 +79180,8 @@
       },
       "ja": {
         "translation": "グリフィン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:03-04:00"
       },
       "ko": {
         "translation": "그리핀",
@@ -82574,8 +82613,8 @@
       },
       "ja": {
         "translation": "ハンググライディング",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:08-04:00"
       },
       "ko": {
         "translation": "행글라이딩",
@@ -82697,8 +82736,8 @@
       },
       "ja": {
         "translation": "ハッピー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:04-04:00"
       },
       "ko": {
         "translation": "행복",
@@ -83272,6 +83311,19 @@
           {
             "theme": "Hat",
             "reference": "Turkish"
+          }
+        ]
+      },
+      {
+        "multiword": "帽子",
+        "occurrences": [
+          {
+            "theme": "Cap",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Hat",
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           }
         ]
       }
@@ -85700,7 +85752,7 @@
         "approved_at": "2019-09-06T21:21:37-04:00"
       },
       "zh_tw": {
-        "translation": "躲貓貓",
+        "translation": "捉迷藏",
         "is_approved": true,
         "approved_at": "2019-04-27T03:36:40-04:00"
       },
@@ -85746,8 +85798,8 @@
       },
       "ja": {
         "translation": "かくれんぼ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:18-04:00"
       },
       "ko": {
         "translation": "숨바꼭질",
@@ -90587,8 +90639,8 @@
       },
       "ja": {
         "translation": "氷河期",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:21-04:00"
       },
       "ko": {
         "translation": "빙하 시대",
@@ -91252,8 +91304,8 @@
       },
       "ja": {
         "translation": "アイスクリームトラック",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:23-04:00"
       },
       "ko": {
         "translation": "아이스크림 트럭",
@@ -92138,8 +92190,8 @@
       },
       "ja": {
         "translation": "凍える",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:24-04:00"
       },
       "ko": {
         "translation": "얼음",
@@ -92384,8 +92436,8 @@
       },
       "ja": {
         "translation": "イリュージョン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:05-04:00"
       },
       "ko": {
         "translation": "환상",
@@ -92999,9 +93051,9 @@
         "approved_at": "2019-08-28T09:41:38-04:00"
       },
       "ja": {
-        "translation": "鉄",
+        "translation": "アイアン",
         "is_approved": true,
-        "approved_at": "2018-03-28T04:32:36-04:00"
+        "approved_at": "2026-06-18T21:06:07-04:00"
       },
       "ko": {
         "translation": "철",
@@ -93767,8 +93819,8 @@
       },
       "ja": {
         "translation": "清掃員",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:25-04:00"
       },
       "ko": {
         "translation": "관리인",
@@ -95151,6 +95203,19 @@
           {
             "theme": "Puzzle",
             "reference": "Norwegian"
+          }
+        ]
+      },
+      {
+        "multiword": "拼图",
+        "occurrences": [
+          {
+            "theme": "Jigsaw",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Puzzle",
+            "reference": "Chinese Simplified"
           }
         ]
       },
@@ -96923,8 +96988,8 @@
       },
       "ja": {
         "translation": "コンブ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:29-04:00"
       },
       "ko": {
         "translation": "켈프",
@@ -98118,9 +98183,9 @@
         "approved_at": "2018-02-14T06:42:51-05:00"
       },
       "zh_tw": {
-        "translation": "親吻",
+        "translation": "接吻",
         "is_approved": true,
-        "approved_at": "2020-08-16T01:18:30-04:00"
+        "approved_at": "2026-06-03T07:39:59-04:00"
       },
       "cs": {
         "translation": "Polibek",
@@ -99586,8 +99651,8 @@
       },
       "ja": {
         "translation": "実験室",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:00:12-04:00"
       },
       "ko": {
         "translation": "실험실",
@@ -101688,8 +101753,8 @@
       },
       "ja": {
         "translation": "ラバランプ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:05-04:00"
       },
       "ko": {
         "translation": "용암 램프",
@@ -101761,8 +101826,8 @@
       },
       "zh_cn": {
         "translation": "草坪游戏",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-07-02T18:13:32-04:00"
       },
       "zh_tw": {
         "translation": "草坪遊戲",
@@ -101811,8 +101876,8 @@
       },
       "ja": {
         "translation": "芝生ゲーム",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:33-04:00"
       },
       "ko": {
         "translation": "잔디밭 게임",
@@ -102583,8 +102648,8 @@
       },
       "ja": {
         "translation": "革",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:32-04:00"
       },
       "ko": {
         "translation": "가죽",
@@ -102916,8 +102981,8 @@
       },
       "ja": {
         "translation": "講堂",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:33-04:00"
       },
       "ko": {
         "translation": "강당",
@@ -103274,9 +103339,9 @@
         "approved_at": "2023-10-25T15:18:40-04:00"
       },
       "zh_tw": {
-        "translation": "檸檬汁小販",
+        "translation": "檸檬水攤",
         "is_approved": true,
-        "approved_at": "2020-08-16T01:20:41-04:00"
+        "approved_at": "2026-06-30T02:51:25-04:00"
       },
       "cs": {
         "translation": "Stánek s limonádou",
@@ -104458,8 +104523,8 @@
       },
       "ja": {
         "translation": "ライト",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:16:43-04:00"
       },
       "ko": {
         "translation": "가벼운",
@@ -104868,8 +104933,8 @@
       },
       "ja": {
         "translation": "灯台",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:06-04:00"
       },
       "ko": {
         "translation": "등대",
@@ -105342,9 +105407,9 @@
         "approved_at": "2019-04-04T19:50:25-04:00"
       },
       "zh_tw": {
-        "translation": "淺綠",
+        "translation": "淺綠色",
         "is_approved": true,
-        "approved_at": "2024-03-08T19:55:19-05:00"
+        "approved_at": "2026-07-11T19:59:05-04:00"
       },
       "cs": {
         "translation": "Světle zelená",
@@ -110320,8 +110385,8 @@
       },
       "ja": {
         "translation": "ポスト",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:46-04:00"
       },
       "ko": {
         "translation": "우편함",
@@ -110734,8 +110799,8 @@
       },
       "ja": {
         "translation": "マンモス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:45-04:00"
       },
       "ko": {
         "translation": "거대한",
@@ -110876,8 +110941,8 @@
       },
       "ja": {
         "translation": "マネキン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:50-04:00"
       },
       "ko": {
         "translation": "마네킹",
@@ -112683,8 +112748,8 @@
       },
       "ja": {
         "translation": "迷宮",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:08-04:00"
       },
       "ko": {
         "translation": "미로",
@@ -112837,8 +112902,8 @@
       },
       "ja": {
         "translation": "牧草地",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:00:00-04:00"
       },
       "ko": {
         "translation": "목초지",
@@ -117891,8 +117956,8 @@
       },
       "ja": {
         "translation": "蛾",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:53-04:00"
       },
       "ko": {
         "translation": "나방",
@@ -118019,8 +118084,8 @@
       },
       "ja": {
         "translation": "オートバイ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:54-04:00"
       },
       "ko": {
         "translation": "오토바이",
@@ -118273,7 +118338,7 @@
           },
           {
             "theme": "Rat",
-            "reference": "Chinese Simplified"
+            "reference": "Chinese Simplified / Chinese Traditional"
           }
         ]
       }
@@ -119193,6 +119258,19 @@
           {
             "theme": "Movie Theatre",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "映画館",
+        "occurrences": [
+          {
+            "theme": "Cinema",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Movie Theatre",
+            "reference": "Japanese"
           }
         ]
       },
@@ -120417,6 +120495,19 @@
         ]
       },
       {
+        "multiword": "音楽",
+        "occurrences": [
+          {
+            "theme": "Music",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Musical",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "음악",
         "occurrences": [
           {
@@ -120619,6 +120710,19 @@
         ]
       },
       {
+        "multiword": "音楽",
+        "occurrences": [
+          {
+            "theme": "Music",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Musical",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "음악",
         "occurrences": [
           {
@@ -120716,8 +120820,8 @@
       },
       "ja": {
         "translation": "音楽",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:55-04:00"
       },
       "ko": {
         "translation": "음악",
@@ -121657,8 +121761,8 @@
       },
       "ja": {
         "translation": "イッカク",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:57-04:00"
       },
       "ko": {
         "translation": "외뿔고래",
@@ -122831,8 +122935,8 @@
       },
       "ja": {
         "translation": "オーロラ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:01:59-04:00"
       },
       "ko": {
         "translation": "오로라",
@@ -123460,8 +123564,8 @@
       },
       "ja": {
         "translation": "オアシス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:00-04:00"
       },
       "ko": {
         "translation": "오아시스",
@@ -124330,8 +124434,8 @@
       },
       "ja": {
         "translation": "オーガ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:04:53-04:00"
       },
       "ko": {
         "translation": "오우거",
@@ -124530,9 +124634,9 @@
         "approved_at": "2017-06-24T06:03:54-04:00"
       },
       "zh_tw": {
-        "translation": "奧林匹克",
+        "translation": "奧運",
         "is_approved": true,
-        "approved_at": "2020-08-16T02:07:02-04:00"
+        "approved_at": "2026-06-03T08:49:21-04:00"
       },
       "cs": {
         "translation": "Olympiáda",
@@ -124836,8 +124940,8 @@
       },
       "ja": {
         "translation": "ワンジー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:02-04:00"
       },
       "ko": {
         "translation": "유아용옷",
@@ -125056,9 +125160,9 @@
         "approved_at": "2021-01-12T07:52:52-05:00"
       },
       "fi": {
-        "translation": "Oranssi",
+        "translation": "Appelsiini",
         "is_approved": true,
-        "approved_at": "2020-07-20T04:53:00-04:00"
+        "approved_at": "2026-06-03T13:52:46-04:00"
       },
       "fr": {
         "translation": "Orange",
@@ -125082,8 +125186,8 @@
       },
       "ja": {
         "translation": "オレンジ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:12-04:00"
       },
       "ko": {
         "translation": "오렌지",
@@ -125465,8 +125569,8 @@
       },
       "ja": {
         "translation": "ラン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:08-04:00"
       },
       "ko": {
         "translation": "난초",
@@ -126220,8 +126324,8 @@
       },
       "ja": {
         "translation": "オーブン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:10-04:00"
       },
       "ko": {
         "translation": "오븐",
@@ -126357,8 +126461,8 @@
       },
       "ja": {
         "translation": "フクロウ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:14-04:00"
       },
       "ko": {
         "translation": "올빼미",
@@ -127144,7 +127248,7 @@
         "approved_at": "2017-07-06T08:01:32-04:00"
       },
       "zh_tw": {
-        "translation": "漆彈大戰",
+        "translation": "漆彈戰役",
         "is_approved": true,
         "approved_at": "2019-06-21T00:10:52-04:00"
       },
@@ -127190,8 +127294,8 @@
       },
       "ja": {
         "translation": "ペイントボール",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:11-04:00"
       },
       "ko": {
         "translation": "페인트볼",
@@ -128384,8 +128488,8 @@
       },
       "ja": {
         "translation": "パンダ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:12-04:00"
       },
       "ko": {
         "translation": "판다",
@@ -129136,8 +129240,8 @@
       },
       "ja": {
         "translation": "駐車場",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:13-04:00"
       },
       "ko": {
         "translation": "주차장",
@@ -132313,8 +132417,8 @@
       },
       "ja": {
         "translation": "ペットショップ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:14-04:00"
       },
       "ko": {
         "translation": "애완동물 가게",
@@ -134088,8 +134192,8 @@
       },
       "ja": {
         "translation": "写真立て",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:15-04:00"
       },
       "ko": {
         "translation": "액자",
@@ -138494,8 +138598,8 @@
       },
       "ja": {
         "translation": "配管工",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:17-04:00"
       },
       "ko": {
         "translation": "배관공",
@@ -141340,9 +141444,9 @@
         "approved_at": "2020-01-28T06:49:48-05:00"
       },
       "ja": {
-        "translation": "黄金の壺",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "金の壺",
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:24-04:00"
       },
       "ko": {
         "translation": "금 항아리",
@@ -142298,8 +142402,8 @@
       },
       "ja": {
         "translation": "プレゼント",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:02:26-04:00"
       },
       "ko": {
         "translation": "선물",
@@ -144203,8 +144307,8 @@
       },
       "ja": {
         "translation": "パフィン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:10-04:00"
       },
       "ko": {
         "translation": "바다오리",
@@ -145149,6 +145253,19 @@
         ]
       },
       {
+        "multiword": "拼图",
+        "occurrences": [
+          {
+            "theme": "Jigsaw",
+            "reference": "Chinese Simplified"
+          },
+          {
+            "theme": "Puzzle",
+            "reference": "Chinese Simplified"
+          }
+        ]
+      },
+      {
         "multiword": "拼圖",
         "occurrences": [
           {
@@ -145196,8 +145313,8 @@
       },
       "zh_cn": {
         "translation": "拼图",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-07-03T19:12:53-04:00"
       },
       "zh_tw": {
         "translation": "拼圖",
@@ -147813,8 +147930,8 @@
       },
       "ja": {
         "translation": "虹",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:17-04:00"
       },
       "ko": {
         "translation": "무지개",
@@ -148366,7 +148483,7 @@
           },
           {
             "theme": "Rat",
-            "reference": "Chinese Simplified"
+            "reference": "Chinese Simplified / Chinese Traditional"
           }
         ]
       }
@@ -148383,9 +148500,9 @@
         "approved_at": "2018-02-14T04:49:21-05:00"
       },
       "zh_tw": {
-        "translation": "鼠",
+        "translation": "老鼠",
         "is_approved": true,
-        "approved_at": "2020-02-15T05:55:35-05:00"
+        "approved_at": "2026-07-10T22:13:29-04:00"
       },
       "cs": {
         "translation": "Krysa",
@@ -149189,8 +149306,8 @@
       },
       "ja": {
         "translation": "レッサーパンダ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:11-04:00"
       },
       "ko": {
         "translation": "레서판다",
@@ -149403,9 +149520,9 @@
         "approved_at": "2023-10-24T04:02:35-04:00"
       },
       "zh_tw": {
-        "translation": "暗礁之地",
-        "is_approved": true,
-        "approved_at": "2019-08-05T10:22:01-04:00"
+        "translation": "珊瑚礁",
+        "is_approved": false,
+        "approved_at": null
       },
       "cs": {
         "translation": "Reef",
@@ -149449,8 +149566,8 @@
       },
       "ja": {
         "translation": "岩礁",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:12-04:00"
       },
       "ko": {
         "translation": "암초",
@@ -151643,9 +151760,9 @@
         "approved_at": "2019-08-28T09:37:20-04:00"
       },
       "ja": {
-        "translation": "ロック",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "岩",
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:34-04:00"
       },
       "ko": {
         "translation": "바위",
@@ -154953,8 +155070,8 @@
       },
       "ja": {
         "translation": "遺跡",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:36-04:00"
       },
       "ko": {
         "translation": "유적",
@@ -155935,8 +156052,8 @@
       },
       "ja": {
         "translation": "金庫",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:37-04:00"
       },
       "ko": {
         "translation": "안전함",
@@ -157307,9 +157424,9 @@
         "approved_at": "2019-08-26T03:43:54-04:00"
       },
       "ja": {
-        "translation": "サンドボックス",
-        "is_approved": false,
-        "approved_at": null
+        "translation": "砂場",
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:42-04:00"
       },
       "ko": {
         "translation": "샌드박스",
@@ -157431,8 +157548,8 @@
       },
       "ja": {
         "translation": "砂の城",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:20-04:00"
       },
       "ko": {
         "translation": "모래성",
@@ -159040,8 +159157,8 @@
       },
       "ja": {
         "translation": "かかし",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:04:56-04:00"
       },
       "ko": {
         "translation": "허수아비",
@@ -163063,8 +163180,8 @@
       },
       "ja": {
         "translation": "影",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:43-04:00"
       },
       "ko": {
         "translation": "그림자",
@@ -165450,19 +165567,6 @@
     "shortcut": "sko",
     "multiwords": [
       {
-        "multiword": "sko",
-        "occurrences": [
-          {
-            "theme": "Boots",
-            "reference": "Norwegian"
-          },
-          {
-            "theme": "Shoes",
-            "reference": "Danish / Norwegian"
-          }
-        ]
-      },
-      {
         "multiword": "boty",
         "occurrences": [
           {
@@ -166481,8 +166585,8 @@
       },
       "ja": {
         "translation": "短い",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:45-04:00"
       },
       "ko": {
         "translation": "반바지",
@@ -167541,8 +167645,8 @@
       },
       "ja": {
         "translation": "草刈り鎌",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:47-04:00"
       },
       "ko": {
         "translation": "낫",
@@ -168395,8 +168499,8 @@
       },
       "ja": {
         "translation": "歌唱",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:03:51-04:00"
       },
       "ko": {
         "translation": "노래",
@@ -168518,8 +168622,8 @@
       },
       "ja": {
         "translation": "シンク",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:09-04:00"
       },
       "ko": {
         "translation": "싱크대",
@@ -170082,7 +170186,7 @@
         "approved_at": "2017-07-06T08:02:10-04:00"
       },
       "zh_tw": {
-        "translation": "空島戰爭",
+        "translation": "空島作戰",
         "is_approved": true,
         "approved_at": "2022-07-04T18:37:07-04:00"
       },
@@ -171058,8 +171162,8 @@
       },
       "ja": {
         "translation": "ナマケモノ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:10-04:00"
       },
       "ko": {
         "translation": "나무늘보",
@@ -172461,8 +172565,8 @@
       },
       "ja": {
         "translation": "焼きマシュマロ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:11-04:00"
       },
       "ko": {
         "translation": "스모어",
@@ -174091,7 +174195,7 @@
         "occurrences": [
           {
             "theme": "Football",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified"
           },
           {
             "theme": "Soccer",
@@ -174628,6 +174732,19 @@
         ]
       },
       {
+        "multiword": "ソファー",
+        "occurrences": [
+          {
+            "theme": "Couch",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Sofa",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "диван",
         "occurrences": [
           {
@@ -174699,8 +174816,8 @@
       },
       "ja": {
         "translation": "ソファー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:18-04:00"
       },
       "ko": {
         "translation": "소파",
@@ -177428,8 +177545,8 @@
       },
       "ja": {
         "translation": "螺旋階段",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:19-04:00"
       },
       "ko": {
         "translation": "나선형 계단",
@@ -177505,7 +177622,7 @@
         "approved_at": "2018-02-14T06:13:03-05:00"
       },
       "zh_tw": {
-        "translation": "掘一死戰",
+        "translation": "Spleef",
         "is_approved": true,
         "approved_at": "2020-08-16T02:35:18-04:00"
       },
@@ -182534,6 +182651,19 @@
             "reference": "Spanish"
           }
         ]
+      },
+      {
+        "multiword": "暖炉",
+        "occurrences": [
+          {
+            "theme": "Fireplace",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Stove",
+            "reference": "Japanese"
+          }
+        ]
       }
     ],
     "translations": {
@@ -183714,11 +183844,11 @@
         "occurrences": [
           {
             "theme": "Fortress",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           },
           {
             "theme": "Stronghold",
-            "reference": "Chinese Simplified / Chinese Traditional"
+            "reference": "Chinese Simplified / Chinese Traditional / Japanese"
           }
         ]
       },
@@ -183794,8 +183924,8 @@
       },
       "ja": {
         "translation": "要塞",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:20-04:00"
       },
       "ko": {
         "translation": "요새",
@@ -184509,8 +184639,8 @@
       },
       "ja": {
         "translation": "夏",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:21-04:00"
       },
       "ko": {
         "translation": "여름",
@@ -184646,8 +184776,8 @@
       },
       "ja": {
         "translation": "相撲",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:23-04:00"
       },
       "ko": {
         "translation": "스모",
@@ -185798,8 +185928,8 @@
       },
       "ja": {
         "translation": "スーパーヒーロー",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:00:17-04:00"
       },
       "ko": {
         "translation": "슈퍼히어로",
@@ -186167,8 +186297,8 @@
       },
       "ja": {
         "translation": "サーフィン",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:24-04:00"
       },
       "ko": {
         "translation": "서핑",
@@ -186474,9 +186604,9 @@
         "approved_at": "2017-08-15T11:40:15-04:00"
       },
       "no": {
-        "translation": "Myr",
-        "is_approved": true,
-        "approved_at": "2021-06-05T08:09:24-04:00"
+        "translation": "Sump",
+        "is_approved": false,
+        "approved_at": null
       },
       "en": {
         "translation": "Swamp",
@@ -188941,8 +189071,8 @@
       },
       "ja": {
         "translation": "タコス",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:25-04:00"
       },
       "ko": {
         "translation": "타코",
@@ -189267,8 +189397,8 @@
       },
       "ja": {
         "translation": "背の高い",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:26-04:00"
       },
       "ko": {
         "translation": "긴 것",
@@ -195448,8 +195578,8 @@
       },
       "ja": {
         "translation": "タイタニック",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:26-04:00"
       },
       "ko": {
         "translation": "거대한",
@@ -196463,8 +196593,8 @@
       },
       "ja": {
         "translation": "トイレ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:28-04:00"
       },
       "ko": {
         "translation": "변기",
@@ -197827,9 +197957,9 @@
         "approved_at": "2017-07-15T08:40:46-04:00"
       },
       "zh_cn": {
-        "translation": "高帽",
+        "translation": "高礼帽",
         "is_approved": true,
-        "approved_at": "2018-02-13T23:18:24-05:00"
+        "approved_at": "2026-05-23T17:46:51-04:00"
       },
       "zh_tw": {
         "translation": "大禮帽",
@@ -198312,6 +198442,19 @@
           {
             "theme": "Turtle",
             "reference": "Finnish"
+          }
+        ]
+      },
+      {
+        "multiword": "カメ",
+        "occurrences": [
+          {
+            "theme": "Tortoise",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Turtle",
+            "reference": "Japanese"
           }
         ]
       },
@@ -200577,6 +200720,19 @@
         ]
       },
       {
+        "multiword": "輸送",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "运输",
         "occurrences": [
           {
@@ -200648,8 +200804,8 @@
       },
       "ja": {
         "translation": "輸送",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:29-04:00"
       },
       "ko": {
         "translation": "운송",
@@ -200792,6 +200948,19 @@
           {
             "theme": "Transportation",
             "reference": "Portuguese / Portuguese, Brazilian / Spanish"
+          }
+        ]
+      },
+      {
+        "multiword": "輸送",
+        "occurrences": [
+          {
+            "theme": "Transport",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Transportation",
+            "reference": "Japanese"
           }
         ]
       },
@@ -202503,8 +202672,8 @@
       },
       "ja": {
         "translation": "トリックショット",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:29-04:00"
       },
       "ko": {
         "translation": "트릭 샷",
@@ -203259,8 +203428,8 @@
       },
       "ja": {
         "translation": "トラック",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:24-04:00"
       },
       "ko": {
         "translation": "트럭",
@@ -203861,8 +204030,8 @@
       },
       "ja": {
         "translation": "チューバ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:30-04:00"
       },
       "ko": {
         "translation": "튜바",
@@ -204682,6 +204851,19 @@
         ]
       },
       {
+        "multiword": "カメ",
+        "occurrences": [
+          {
+            "theme": "Tortoise",
+            "reference": "Japanese"
+          },
+          {
+            "theme": "Turtle",
+            "reference": "Japanese"
+          }
+        ]
+      },
+      {
         "multiword": "海龟",
         "occurrences": [
           {
@@ -204766,8 +204948,8 @@
       },
       "ja": {
         "translation": "カメ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:31-04:00"
       },
       "ko": {
         "translation": "거북이",
@@ -205467,8 +205649,8 @@
       },
       "ja": {
         "translation": "ウクレレ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:32-04:00"
       },
       "ko": {
         "translation": "우쿨렐레",
@@ -206422,8 +206604,8 @@
       },
       "ja": {
         "translation": "大学",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:04:20-04:00"
       },
       "ko": {
         "translation": "대학교",
@@ -206545,8 +206727,8 @@
       },
       "ja": {
         "translation": "逆さま",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:33-04:00"
       },
       "ko": {
         "translation": "거꾸로",
@@ -206668,8 +206850,8 @@
       },
       "ja": {
         "translation": "バキューム",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:33-04:00"
       },
       "ko": {
         "translation": "진공 청소기",
@@ -207476,9 +207658,9 @@
         "approved_at": "2020-01-28T06:45:26-05:00"
       },
       "ja": {
-        "translation": "野菜園",
+        "translation": "家庭菜園",
         "is_approved": true,
-        "approved_at": "2018-03-28T20:58:03-04:00"
+        "approved_at": "2026-06-24T03:04:17-04:00"
       },
       "ko": {
         "translation": "채소밭",
@@ -208015,8 +208197,8 @@
       },
       "ja": {
         "translation": "テレビゲーム",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:34-04:00"
       },
       "ko": {
         "translation": "비디오 게임",
@@ -208653,8 +208835,8 @@
       },
       "ja": {
         "translation": "仮想現実",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:35-04:00"
       },
       "ko": {
         "translation": "가상 현실",
@@ -208776,8 +208958,8 @@
       },
       "ja": {
         "translation": "火山",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T02:59:25-04:00"
       },
       "ko": {
         "translation": "화산",
@@ -209961,8 +210143,8 @@
       },
       "ja": {
         "translation": "壁紙",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:37-04:00"
       },
       "ko": {
         "translation": "벽지",
@@ -210830,8 +211012,8 @@
       },
       "ja": {
         "translation": "洗濯機",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:39-04:00"
       },
       "ko": {
         "translation": "세탁기",
@@ -214009,9 +214191,9 @@
         "approved_at": "2022-07-15T06:08:39-04:00"
       },
       "es": {
-        "translation": "Whale",
+        "translation": "Ballena",
         "is_approved": true,
-        "approved_at": "2017-07-17T01:19:51-04:00"
+        "approved_at": "2026-07-26T00:44:04-04:00"
       },
       "sv": {
         "translation": "Val",
@@ -214187,9 +214369,9 @@
         "approved_at": "2020-01-28T12:35:34-05:00"
       },
       "zh_cn": {
-        "translation": "轮",
+        "translation": "车轮",
         "is_approved": true,
-        "approved_at": "2018-02-28T23:09:37-05:00"
+        "approved_at": "2026-05-29T14:59:38-04:00"
       },
       "zh_tw": {
         "translation": "輪",
@@ -216254,8 +216436,8 @@
       },
       "ja": {
         "translation": "魔女",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-02T03:00:23-04:00"
       },
       "ko": {
         "translation": "마녀",
@@ -216976,8 +217158,8 @@
       },
       "ja": {
         "translation": "羊毛",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:41-04:00"
       },
       "ko": {
         "translation": "양털",
@@ -217113,8 +217295,8 @@
       },
       "ja": {
         "translation": "作業場",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:44-04:00"
       },
       "ko": {
         "translation": "작업장",
@@ -218041,8 +218223,8 @@
       },
       "ja": {
         "translation": "イエティ",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:46-04:00"
       },
       "ko": {
         "translation": "예티",
@@ -218164,8 +218346,8 @@
       },
       "ja": {
         "translation": "ヨーグルト",
-        "is_approved": false,
-        "approved_at": null
+        "is_approved": true,
+        "approved_at": "2026-06-03T09:16:47-04:00"
       },
       "ko": {
         "translation": "요거트",
