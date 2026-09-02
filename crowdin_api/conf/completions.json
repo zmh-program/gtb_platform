@@ -27,5 +27,6 @@
   "theater": ["Cinema"],
   "rotary": ["Roundabout"],
   "motorbike": ["Motorcycle"],
-  "ice cream van": ["Ice Cream Truck"]
+  "ice cream van": ["Ice Cream Truck"],
+  "pajamas": ["Pyjamas"]
 }
