@@ -123251,7 +123251,7 @@
         "approved_at": "2018-03-11T06:40:35-04:00"
       },
       "ja": {
-        "translation": "くるみ割り人形",
+        "translation": "くるみ割り器",
         "is_approved": false,
         "approved_at": null
       },
@@ -145658,6 +145658,11 @@
       }
     ],
     "translations": {
+      "co": {
+        "translation": "pajamas",
+        "is_approved": true,
+        "approved_at": ""
+      },
       "ru": {
         "translation": "Пижама",
         "is_approved": true,
