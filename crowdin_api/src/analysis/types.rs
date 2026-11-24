@@ -25,7 +25,7 @@ pub struct SourceTheme {
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct SourceTranslation {
-    pub id: String,
+    pub id: Option<String>,
     pub text: Option<String>,
     pub language_id: String,
     #[serde(default)]

@@ -15,7 +15,10 @@ use std::sync::Arc;
 use std::time::Instant;
 use tokio::time::{sleep, Duration};
 
-const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases/phrases_with_suggestions";
+const CROWDIN_PHRASES_URL: &str = "https://crowdin.com/backend/phrases";
+const CROWDIN_PHRASES_COUNT_URL: &str = "https://crowdin.com/backend/phrases/bilingual_count";
+const CROWDIN_PHRASES_WITH_SUGGESTIONS_URL: &str =
+    "https://crowdin.com/backend/phrases/phrases_with_suggestions";
 const CROWDIN_ALL_LANG_URL: &str = "https://crowdin.com/backend/suggestions/all_languages";
 const DEFAULT_CONCURRENCY: usize = 32;
 const MAX_CONCURRENCY: usize = 64;
@@ -286,8 +289,8 @@ impl CrowdinCrawler {
         bail!("retry loop exhausted for {}", label)
     }
 
-    async fn get_crowdin_page(&self, page: usize) -> Result<Value> {
-        let payload = vec![
+    async fn get_crowdin_phrase_data(&self, url: &str, page: usize) -> Result<Value> {
+        let mut payload = vec![
             ("project_id".to_string(), self.config.project_id.clone()),
             (
                 "target_language_id".to_string(),
@@ -298,21 +301,28 @@ impl CrowdinCrawler {
             ("filter".to_string(), "0".to_string()),
             ("custom_filter".to_string(), custom_filter_payload()),
             ("query".to_string(), "".to_string()),
-            ("request".to_string(), "3".to_string()),
             ("search_option".to_string(), "0".to_string()),
             ("case_sensitive".to_string(), "false".to_string()),
             ("search_full_match".to_string(), "false".to_string()),
             ("search_strict".to_string(), "false".to_string()),
-            ("view_in_context".to_string(), "0".to_string()),
-            (
-                "multilingual_without_languages".to_string(),
-                "0".to_string(),
-            ),
+            ("show_contextual_strings".to_string(), "false".to_string()),
         ];
-        let label = format!("phrases page {}", page);
-        let text = self
-            .post_form_text_with_retry(CROWDIN_PHRASES_URL, &label, &payload)
-            .await?;
+        let label = match url {
+            CROWDIN_PHRASES_COUNT_URL => "phrase count".to_string(),
+            CROWDIN_PHRASES_WITH_SUGGESTIONS_URL => {
+                payload.extend([
+                    ("request".to_string(), "3".to_string()),
+                    ("view_in_context".to_string(), "0".to_string()),
+                    ("multilingual_without_languages".to_string(), "0".to_string()),
+                ]);
+                format!("phrases with suggestions page {}", page)
+            }
+            _ => {
+                payload.push(("request".to_string(), "1".to_string()));
+                format!("phrases page {}", page)
+            }
+        };
+        let text = self.post_form_text_with_retry(url, &label, &payload).await?;
 
         let root: Value =
             serde_json::from_str(&text).context("failed to parse phrases endpoint JSON")?;
@@ -412,11 +422,25 @@ impl CrowdinCrawler {
         let started_at = Instant::now();
         let interactive = io::stderr().is_terminal();
         let concurrency = crawler_concurrency();
-        let first_page = self.get_crowdin_page(1).await?;
-        let total_pages = extract_positive_usize(&first_page, "pages")
-            .context("invalid `pages` in first phrases response")?;
-        extract_positive_usize(&first_page, "found")
-            .context("invalid `found` in first phrases response")?;
+        let count = self
+            .get_crowdin_phrase_data(CROWDIN_PHRASES_COUNT_URL, 1)
+            .await?;
+        let total_pages = extract_positive_usize(&count, "pages")
+            .context("invalid `pages` in phrase count response")?;
+        extract_positive_usize(&count, "found").context("invalid `found` in phrase count response")?;
+        let first_page = self.get_crowdin_phrase_data(CROWDIN_PHRASES_URL, 1).await?;
+        // The editor's detailed listing includes approval timestamps for the meta language.
+        // The count comes from a separate endpoint even when the detailed listing is available.
+        let detailed_page = self
+            .get_crowdin_phrase_data(CROWDIN_PHRASES_WITH_SUGGESTIONS_URL, 1)
+            .await
+            .ok()
+            .filter(|data| matches_phrase_page(&first_page, data));
+        let (phrases_url, first_page) = match detailed_page {
+            Some(data) => (CROWDIN_PHRASES_WITH_SUGGESTIONS_URL, data),
+            None => (CROWDIN_PHRASES_URL, first_page),
+        };
+        eprintln!("crawler: using phrase listing at {phrases_url}");
 
         let mut meta_items = Vec::new();
         let mut meta_translations: HashMap<String, OutputTranslation> = HashMap::new();
@@ -449,7 +473,7 @@ impl CrowdinCrawler {
                     let page_progress = page_progress.clone();
                     let page_bar = page_bar.clone();
                     async move {
-                        let data = crawler.get_crowdin_page(page).await?;
+                        let data = crawler.get_crowdin_phrase_data(phrases_url, page).await?;
                         let done = page_progress.fetch_add(1, Ordering::Relaxed) + 1;
                         if interactive {
                             page_bar.set_position(done as u64);
@@ -556,6 +580,19 @@ fn should_log_progress(done: usize, total: usize, step: usize) -> bool {
     done == 1 || done == total || done.is_multiple_of(step)
 }
 
+fn matches_phrase_page(flat: &Value, detailed: &Value) -> bool {
+    let (Some(flat), Some(detailed)) = (flat["phrases"].as_array(), detailed["phrases"].as_array())
+    else {
+        return false;
+    };
+    !detailed.is_empty()
+        && detailed.len() == flat.len()
+        && flat.iter().zip(detailed).all(|(flat, detailed)| {
+            value_to_string_ref(&flat["id"]) == value_to_string_ref(&detailed["translation"]["id"])
+        })
+        && detailed.iter().any(|phrase| phrase["suggestions"].is_array())
+}
+
 fn parse_page_phrases(
     page_data: &Value,
     meta_language_id: &str,
@@ -570,8 +607,8 @@ fn parse_page_phrases(
     for phrase in phrases {
         let translation = phrase
             .get("translation")
-            .and_then(Value::as_object)
-            .ok_or_else(|| anyhow!("phrase missing `translation` object"))?;
+            .filter(|value| value.is_object())
+            .unwrap_or(phrase);
 
         let id_value = translation
             .get("id")
@@ -589,33 +626,37 @@ fn parse_page_phrases(
             theme,
         });
 
-        let suggestions = phrase
+        let suggestion = phrase
             .get("suggestions")
             .and_then(Value::as_array)
-            .cloned()
-            .unwrap_or_default();
-
-        let suggestion = suggestions
-            .first()
-            .cloned()
-            .unwrap_or(Value::Object(Default::default()));
+            .and_then(|suggestions| suggestions.first());
         let validation = suggestion
-            .get("validations")
-            .and_then(|v| v.get("2"))
-            .cloned()
-            .unwrap_or(Value::Object(Default::default()));
+            .and_then(|suggestion| suggestion.get("validations"))
+            .and_then(|validations| validations.get("2"));
+        let phrase_approved = phrase.get("is_fully_approved").and_then(Value::as_u64) == Some(1);
 
         let item = OutputTranslation {
-            id: suggestion.get("id").and_then(value_to_string_ref),
-            text: suggestion.get("text").and_then(value_to_string_ref),
+            id: suggestion
+                .and_then(|suggestion| suggestion.get("id"))
+                .and_then(value_to_string_ref),
+            text: suggestion
+                .and_then(|suggestion| suggestion.get("text"))
+                .and_then(value_to_string_ref)
+                .or_else(|| {
+                    phrase
+                        .get("top_suggestion_text")
+                        .and_then(value_to_string_ref)
+                }),
             language_id: Some(meta_language_id.to_string()),
             is_approved: validation
-                .get("approved")
+                .and_then(|validation| validation.get("approved"))
                 .and_then(Value::as_bool)
-                .unwrap_or(false),
-            approved_by: validation.get("approved_by").and_then(value_to_string_ref),
+                .unwrap_or(phrase_approved),
+            approved_by: validation
+                .and_then(|validation| validation.get("approved_by"))
+                .and_then(value_to_string_ref),
             approved_at: validation
-                .get("approved_date_iso")
+                .and_then(|validation| validation.get("approved_date_iso"))
                 .and_then(value_to_string_ref),
         };
 
