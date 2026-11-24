@@ -82,7 +82,7 @@ fn mix_completions(theme: &SourceTheme, completions: &HashMap<String, Vec<String
             let mut translations = Vec::with_capacity(theme.translations.len() + 1);
             // completions.json is injected as pseudo-language `-1` / Complement.
             translations.push(SourceTranslation {
-                id: "-1".to_string(),
+                id: Some("-1".to_string()),
                 text: Some(completion.clone()),
                 language_id: "-1".to_string(),
                 is_approved: true,
